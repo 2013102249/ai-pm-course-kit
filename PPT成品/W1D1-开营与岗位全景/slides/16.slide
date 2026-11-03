@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D1</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>16 / 18</Text>
+    <Box style={{ flexDirection: 'column', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>八周路线图：每周产出</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Text style={{ fontSize: 18, color: '#64748B', marginTop: 36 }}>本页配合现场工具投屏讲解（AI 产品全链路 · 交互式架构图）</Text>
+    <Box style={{ marginTop: 20, background: '#F5F3FF', borderRadius: 12, padding: '20px 28px' }}>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>投屏内容：AI 产品全链路 Tab——每周核心课、周末产出与验收标准在工具中逐周展开</Text>
+    </Box>
+    <Box style={{ marginTop: 36, flexDirection: 'column', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>本周课表摘要（W1）</Text>
+        <Box style={{ flexDirection: 'row', gap: 14 }}>
+            <Box style={{ flex: 1, background: '#7C3AED', borderRadius: 10, padding: 16, alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>周一</Text>
+                <Text style={{ fontSize: 15, color: '#FFFFFF', textAlign: 'center' }}>开营与岗位全景</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: 16, alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>周二</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', textAlign: 'center' }}>大模型原理通识</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: 16, alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>周三</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', textAlign: 'center' }}>提示词与上下文工程</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: 16, alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>周四</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', textAlign: 'center' }}>AI 产品形态拆解</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: 16, alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>周五</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', textAlign: 'center' }}>行业选择与职业规划</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

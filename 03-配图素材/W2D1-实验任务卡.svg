@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">对比实验任务卡</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">三个任务 × 四个观察维度 · 念完即切真实模型对话窗口</text>
+<text x="30" y="104" font-size="14" font-weight="700" fill="#7C3AED">三个任务</text>
+<!-- 任务一 -->
+<rect x="30" y="116" width="360" height="150" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<rect x="50" y="136" width="64" height="24" rx="12" fill="#7C3AED"/>
+<text x="82" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">任务一</text>
+<text x="50" y="192" font-size="18" font-weight="700" fill="#221E33">摘要</text>
+<text x="50" y="220" font-size="13" fill="#4A4560">给一篇约 800 字的文章</text>
+<text x="50" y="242" font-size="13" fill="#4A4560">产出 3 句话摘要</text>
+<!-- 任务二 -->
+<rect x="420" y="116" width="360" height="150" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<rect x="440" y="136" width="64" height="24" rx="12" fill="#7C3AED"/>
+<text x="472" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">任务二</text>
+<text x="440" y="192" font-size="18" font-weight="700" fill="#221E33">逻辑推理</text>
+<text x="440" y="220" font-size="13" fill="#4A4560">一道多步推理题</text>
+<text x="440" y="242" font-size="13" fill="#4A4560">要求写出推理步骤</text>
+<!-- 任务三 -->
+<rect x="810" y="116" width="360" height="150" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<rect x="830" y="136" width="64" height="24" rx="12" fill="#7C3AED"/>
+<text x="862" y="153" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">任务三</text>
+<text x="830" y="192" font-size="18" font-weight="700" fill="#221E33">带约束写作</text>
+<text x="830" y="220" font-size="13" fill="#4A4560">100 字以内产品文案</text>
+<text x="830" y="242" font-size="13" fill="#4A4560">必须包含 3 个指定关键词</text>
+<text x="30" y="316" font-size="14" font-weight="700" fill="#2563EB">四个观察维度</text>
+<!-- 维度1 -->
+<rect x="30" y="330" width="262" height="190" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<circle cx="64" cy="364" r="14" fill="#E8EFFD"/>
+<text x="64" y="369" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">1</text>
+<text x="90" y="370" font-size="17" font-weight="700" fill="#221E33">正确性</text>
+<text x="50" y="406" font-size="13" fill="#4A4560">答案对不对</text>
+<text x="50" y="430" font-size="13" fill="#4A4560">有没有编造事实</text>
+<!-- 维度2 -->
+<rect x="316" y="330" width="262" height="190" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<circle cx="350" cy="364" r="14" fill="#E8EFFD"/>
+<text x="350" y="369" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">2</text>
+<text x="376" y="370" font-size="17" font-weight="700" fill="#221E33">速度</text>
+<text x="336" y="406" font-size="13" fill="#4A4560">首字耗时体感</text>
+<text x="336" y="430" font-size="13" fill="#4A4560">全文耗时体感</text>
+<!-- 维度3 -->
+<rect x="602" y="330" width="262" height="190" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<circle cx="636" cy="364" r="14" fill="#E8EFFD"/>
+<text x="636" y="369" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">3</text>
+<text x="662" y="370" font-size="17" font-weight="700" fill="#221E33">消耗</text>
+<text x="622" y="406" font-size="13" fill="#4A4560">Token 用量多少</text>
+<text x="622" y="430" font-size="13" fill="#4A4560">折算费用档位</text>
+<!-- 维度4 高亮 -->
+<rect x="888" y="330" width="262" height="190" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="2"/>
+<rect x="1032" y="318" width="118" height="26" rx="13" fill="#7C3AED"/>
+<text x="1091" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">新手最容易忽略</text>
+<circle cx="922" cy="364" r="14" fill="#FFFFFF"/>
+<text x="922" y="369" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">4</text>
+<text x="948" y="370" font-size="17" font-weight="700" fill="#221E33">失败方式</text>
+<text x="908" y="406" font-size="13" fill="#4A4560">错了会不会明示</text>
+<text x="908" y="430" font-size="13" fill="#4A4560">还是错得理直气壮</text>
+<text x="30" y="586" font-size="13" fill="#6B7280">提示：每个任务四个维度都过一遍；重点记录失败方式——错得理直气壮最危险。</text>
+</svg>

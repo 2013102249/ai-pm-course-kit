@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W3 周一《Agent 架构原理》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl cur" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W3-物料/W3D1-Agent架构原理 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W3 周一《Agent 架构原理》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业；求职挑战层自测，第八周面试课复用。<br />
+本课考点：四要素辨析、场景适配判断（该不该上 Agent）。<br />
+所有题目附参考答案与评分标准。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 关于 Agent 与普通对话产品的区别，理解最准确的是：</strong><br />
+A. Agent 用的模型更大，所以更聪明<br />
+B. Agent 交付的是「办事结果」：拆任务、用工具、拿结果、担责任<br />
+C. Agent 就是对话产品加了一个好看的界面<br />
+D. Agent 不需要提示词</p>
+<p><strong>2. Agent 四要素中，「规划」的产品职责是：</strong><br />
+A. 让模型回复得更快<br />
+B. 定义任务边界与成功标准、设计步数上限与重试策略<br />
+C. 负责模型的训练与微调<br />
+D. 把长文本压缩成短文本</p>
+<p><strong>3. 关于 Agent 的记忆，说法正确的是：</strong><br />
+A. 记忆越多越好，越多越聪明<br />
+B. 长期记忆应全量保存用户所有对话，方便随时调用<br />
+C. 记忆需要设计写入与遗忘策略，且用户应能查看和删除<br />
+D. 记忆是技术模块，与产品经理无关</p>
+<p><strong>4. 「工具的描述文案是提示词的一部分」，这句话的意思是：</strong><br />
+A. 工具描述要写得像广告文案一样吸引人<br />
+B. 模型靠工具描述决定何时调用、传什么参数，描述质量直接影响调用准确率<br />
+C. 工具描述越长越好，细节越多越好<br />
+D. 工具描述由法务审核即可</p>
+<p><strong>5. 以下哪个动作，Agent 可以不经人工确认直接执行？</strong><br />
+A. 用户授权额度内的支付下单<br />
+B. 向客户发送商务邮件<br />
+C. 生成一份竞品对比草稿（仅本地保存，可随时修改删除）<br />
+D. 删除数据库中的用户记录</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 用「从答题到办事」的框架，向非技术同事解释 Agent 与 ChatGPT 类产品的区别（不超过 3 句话）。</strong></p>
+<p><strong>7. MCP 解决了什么问题？用「USB 接口」类比说明，并写出它对产品经理的一个直接影响。</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>8. 场景适配判断（50 分）</strong><br />
+下面 4 个场景，请逐一判断：该上 Agent（自主拆解执行）、该用固定工作流（流程编排）、还是根本不该用 AI。每个判断给出至少两条理由。</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>你的判断</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 每周一 9 点自动拉取竞品官网与公众号更新，生成固定格式的周报</td>
+<td>Agent / 工作流 / 不用 AI</td>
+<td></td>
+</tr>
+<tr>
+<td>② 用户说「帮我调研适合我团队的协作工具，对比后给推荐报告」，需求模糊、路径不固定</td>
+<td>Agent / 工作流 / 不用 AI</td>
+<td></td>
+</tr>
+<tr>
+<td>③ 客服机器人回答公司的退款政策（政策每月更新）</td>
+<td>Agent / 工作流 / 不用 AI</td>
+<td></td>
+</tr>
+<tr>
+<td>④ 帮用户在外卖平台下单并完成支付</td>
+<td>Agent / 工作流 / 不用 AI</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>9. 主项目 Agent 边界设计（50 分）</strong><br />
+基于你自己主项目的核心场景，完成一份「Agent 边界设计卡」，必须包含 5 项：① 任务边界（它做什么、不做什么）② 具体工具清单（3–5 个，含权限说明）③ 步数上限与成本上限（具体数字）④ 人工接管点（什么时刻交还人类，至少 2 个）⑤ 不可逆动作清单及确认方式。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>10. 面试真题：要不要上 Agent？（30 分）</strong><br />
+面试官：「我们想给内部运营做一个『自动分析销售数据并直接调整投放预算』的系统，你觉得该做成 Agent 吗？为什么？」<br />
+要求：先给结论，再给两条理由，最后给出一个替代或折中方案。</p>
+<p><strong>11. 案例分析：Agent 跑飞了（30 分）</strong><br />
+你负责的调研 Agent 上线后，用户投诉集中在两类：① 有用户发现同一个任务花费是平时的 8 倍，查日志发现 Agent 在两步之间反复重试了 40 多次；② 有用户发现 Agent 在未确认的情况下，把报告自动发送到了公司大群。<br />
+请给出：问题各自的根因、对应的产品改进动作（至少 3 条），以及如何向业务方解释「为什么不能追求 100% 全自动」。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 A 得 3 分（只看到模型层面）</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；能补充「遗忘也是设计」加 5 分</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；能说明 A/B/D 均不可逆或有外部后果加 5 分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>答题给答案、对错自己把关；办事拆任务、调工具、交付结果并承担责任（类比：问路 vs 代驾）</td>
+<td>框架准确 15 分 + 类比或例子贴切 10 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>M 个模型接 N 个工具：无统一协议需 M×N 套适配，MCP 统一后为 M+N；类比「USB 统一了所有外设接口」；直接影响：接新工具成本下降、工具生态成为选型考量</td>
+<td>M×N→M+N 10 分 + 类比准确 8 分 + 产品影响 7 分</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 8 题参考答案</strong>：<br />
+① 固定工作流——路径完全固定、无需自主决策，Agent 反而增加成本与不确定性；<br />
+② Agent——需求开放、路径不固定，需要自主拆解与工具调用；<br />
+③ 都不用 Agent——知识问答用 RAG 即可（衔接 W3D3），不需要自主执行；<br />
+④ 不该直接放手——涉及支付不可逆动作，必须人工确认闸门；顶多做「准备好订单，等用户一键确认」。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>4 个判断中 3 个正确，每题至少 1 条理由</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>4 个判断全对，理由体现「路径是否固定 / 是否不可逆」两个框架</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外指出「③ 应联想到 RAG」「④ 给出订单确认的折中设计」等方案层思考</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 9 题参考答案（要点）</strong>：工具清单具体到名称与权限（如「只读知识库、可写草稿箱、不可直接对外发送」）；步数上限给出具体数字（如 15–25 步）并说明超限后交还人类；接管点至少含「置信度低 / 预算触顶 / 不可逆动作前」中的两类；不可逆动作与确认方式一一对应。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>5 项齐全，数字与清单具体</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>工具有权限说明，接管点能对应到自己项目的真实场景</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外设计回滚 / 补偿机制、执行日志留痕，或给出接管点的交互呈现方式</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 10 题参考答案</strong>：结论=不直接做全自动 Agent。理由 1：「调整预算」是高风险不可逆动作，直接影响真金白银，必须有人工确认；理由 2：任务结构其实可拆为「数据分析（固定）+ 建议生成（AI）+ 决策执行（人类）」，不需要端到端自主。折中方案：Agent 只做分析与建议输出，预算调整由运营一键确认执行——即「AI 建议、人类拍板」。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>结论正确（不全自动），有两条说得通的理由</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>理由包含「不可逆动作需人工确认」框架，方案可落地</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>把任务拆成「分析 / 建议 / 决策」三段并明确人机分工，或提到成本上限与审计日志</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 11 题参考答案</strong>：根因 1：无步数上限与重试策略（失败后无脑重试）；改进：设 max steps、失败 N 次即暂停交还、单任务成本上限熔断。根因 2：对外发送动作无人工确认闸门；改进：发送类动作强制确认 + 执行日志留痕可审计。向业务方的解释：全自动的隐含代价是「错误也全自动」，接管点不是能力不足，而是把责任留在该在的位置——可靠性优先于自动化率。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>两个根因定位正确，改进动作至少 3 条</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>改进动作具体到参数（步数上限、熔断阈值、确认交互）</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>额外给出「可靠性 vs 自动化率」的表述框架，或设计 badcase 回流与监控指标（单任务成本、重试率）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

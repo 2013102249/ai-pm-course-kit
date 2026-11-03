@@ -1,0 +1,31 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, borderRadius: 2, background: '#7C3AED' }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>08 / 16</Text>
+
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场生成演示：文生图</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+
+        <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '18px 28px', marginTop: 36 }}>
+            <Text style={{ fontSize: 18, color: '#64748B' }}>本页配合真实生成工具投屏演示</Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', gap: 20, marginTop: 36 }}>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: '24px 28px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>真实生成</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10 }}>现场输入提示词，看真实输出</Text>
+            </Box>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: '24px 28px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>现场数秒</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10 }}>一起数一数生成等待了多少秒</Text>
+            </Box>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: '24px 28px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>观察瑕疵</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10 }}>生成结果哪里不对劲，当场指出</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<defs>
+<marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker>
+<marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+</defs>
+<rect x="48" y="44" width="4" height="22" fill="#7C3AED"/>
+<text x="62" y="61" font-size="20" font-weight="700" fill="#221E33">海投 vs 深耕路径对比图</text>
+<text x="62" y="82" font-size="12" fill="#6B7280">路径起点相同：同期入学、背景相仿——差别只在路径</text>
+
+<!-- 起点 -->
+<circle cx="92" cy="350" r="10" fill="#5B21B6"/>
+<text x="92" y="386" text-anchor="middle" font-size="12" fill="#6B7280">起点：同期入学、背景相仿</text>
+
+<!-- 海投路径（上，灰） -->
+<text x="170" y="130" font-size="14" font-weight="700" fill="#A5A1B8">海投路径</text>
+<line x1="100" y1="342" x2="164" y2="178" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arrG)"/>
+<rect x="170" y="142" width="180" height="56" rx="10" fill="#F1F0F5" stroke="#A5A1B8" stroke-width="1.6"/>
+<text x="260" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">行业不限</text>
+<line x1="354" y1="170" x2="392" y2="170" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arrG)"/>
+<rect x="400" y="142" width="180" height="56" rx="10" fill="#F1F0F5" stroke="#A5A1B8" stroke-width="1.6"/>
+<text x="490" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">主项目泛泛</text>
+<line x1="584" y1="170" x2="622" y2="170" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arrG)"/>
+<rect x="630" y="142" width="180" height="56" rx="10" fill="#F1F0F5" stroke="#A5A1B8" stroke-width="1.6"/>
+<text x="720" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">简历没有行业话语权</text>
+<line x1="814" y1="170" x2="852" y2="170" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arrG)"/>
+<rect x="860" y="142" width="180" height="56" rx="10" fill="#F1F0F5" stroke="#A5A1B8" stroke-width="1.6"/>
+<text x="950" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">面试聊不出深度</text>
+<line x1="1044" y1="170" x2="1066" y2="170" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arrG)"/>
+<circle cx="1092" cy="170" r="20" fill="none" stroke="#A5A1B8" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="1092" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#A5A1B8">空转</text>
+
+<!-- 中间竖排大字 -->
+<text x="600" y="262" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">海</text>
+<text x="600" y="290" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">投</text>
+<text x="600" y="318" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">是</text>
+<text x="600" y="346" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">求</text>
+<text x="600" y="374" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">职</text>
+<text x="600" y="402" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">最</text>
+<text x="600" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">大</text>
+<text x="600" y="458" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">的</text>
+<text x="600" y="486" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">浪</text>
+<text x="600" y="514" text-anchor="middle" font-size="24" font-weight="700" fill="#7C3AED">费</text>
+
+<!-- 深耕路径（下，紫） -->
+<text x="170" y="502" font-size="14" font-weight="700" fill="#5B21B6">深耕路径</text>
+<line x1="100" y1="358" x2="164" y2="532" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<rect x="170" y="504" width="180" height="56" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="260" y="538" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">选定教育赛道</text>
+<line x1="354" y1="532" x2="392" y2="532" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<rect x="400" y="504" width="180" height="56" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="490" y="538" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">主项目落在赛道内</text>
+<line x1="584" y1="532" x2="622" y2="532" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<rect x="630" y="504" width="180" height="56" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="720" y="538" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">简历有行业叙事</text>
+<line x1="814" y1="532" x2="852" y2="532" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<rect x="860" y="504" width="180" height="56" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="950" y="538" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">面试能聊 20 分钟</text>
+<line x1="1044" y1="532" x2="1066" y2="532" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<polygon points="0,-22 5.3,-7.3 20.9,-6.8 8.6,2.8 12.9,17.8 0,9 -12.9,17.8 -8.6,2.8 -20.9,-6.8 -5.3,-7.3" transform="translate(1092,532)" fill="#7C3AED"/>
+<text x="1092" y="580" text-anchor="middle" font-size="14" font-weight="700" fill="#7C3AED">offer</text>
+
+<text x="600" y="660" text-anchor="middle" font-size="11" fill="#7A7590">图中不出现具体人名、公司名与薪资数字；路径节点均为行为描述，不作结果承诺</text>
+</svg>

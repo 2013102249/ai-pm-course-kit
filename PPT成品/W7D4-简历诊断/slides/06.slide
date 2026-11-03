@@ -1,0 +1,35 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D4</Text>
+    </Box>
+    <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 8</Text>
+    </Box>
+    <Box style={{ flexDirection: 'column', height: '100%' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>高频问题 Top10</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+        <Box style={{ flexDirection: 'row', gap: 24, marginTop: 28 }}>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+                {['项目经历太薄，怎么撑起简历', '转行没有相关经验，怎么写', '要不要写「精通」', '没有上线项目，怎么体现 AI 能力', '自我评价写不写、写什么'].map((q, i) => (
+                    <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 16, border: '1px solid #E5E7EB', borderRadius: 12, padding: '0 20px', height: 82 }}>
+                        <Box style={{ width: 36, height: 36, background: '#7C3AED', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>{i + 1}</Text>
+                        </Box>
+                        <Text style={{ fontSize: 20, color: '#1E1B4B', flex: 1 }}>{q}</Text>
+                    </Box>
+                ))}
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+                {['简历一页还是两页', '断档期与频繁跳槽怎么处理', '课程作业、副业算不算项目经历', '没有量化数据，数字从哪来', '用不用花哨的简历模板与设计'].map((q, i) => (
+                    <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 16, border: '1px solid #E5E7EB', borderRadius: 12, padding: '0 20px', height: 82 }}>
+                        <Box style={{ width: 36, height: 36, background: '#2563EB', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>{i + 6}</Text>
+                        </Box>
+                        <Text style={{ fontSize: 20, color: '#1E1B4B', flex: 1 }}>{q}</Text>
+                    </Box>
+                ))}
+            </Box>
+        </Box>
+    </Box>
+</Slide>

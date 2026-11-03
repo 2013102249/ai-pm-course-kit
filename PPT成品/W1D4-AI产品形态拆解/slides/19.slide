@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>19 / 20</Text>
+    <Box style={{ marginBottom: 20 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>本课小结</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', gap: 24, marginBottom: 18 }}>
+        <Box style={{ width: 660, height: 385, background: '#F5F3FF', borderRadius: 12, padding: 10 }}>
+            <Image src="assets/six-forms-table.svg" style={{ width: 640, height: 365, objectFit: 'contain' }} />
+        </Box>
+        <Box style={{ flex: 1, justifyContent: 'center', gap: 20 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center', marginTop: 4 }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>六大形态一口清：从对话式助手到自主 Agent</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center', marginTop: 4 }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>三维拆解：用户价值 × 技术依赖 × 商业模式</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center', marginTop: 4 }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>商业模式匹配：形态决定靠什么收钱</Text>
+            </Box>
+        </Box>
+    </Box>
+    <Box style={{ background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, padding: '20px 28px', alignItems: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center' }}>判别口诀：看人在回路中的位置</Text>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', marginTop: 6 }}>形态没有高下，匹配才对</Text>
+    </Box>
+</Slide>

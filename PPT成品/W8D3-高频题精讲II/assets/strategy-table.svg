@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="40" y="34" width="4" height="22" fill="#7C3AED"/>
+<text x="54" y="52" font-size="20" font-weight="700" fill="#221E33">题型-应答策略对照表</text>
+<text x="54" y="74" font-size="12" fill="#6B7280">五大题型 · 典型问法 / 框架 / 金句 / 高频失误 · 全天挂板速查</text>
+<!-- 表头 -->
+<rect x="36" y="110" width="1128" height="46" fill="#7C3AED"/>
+<text x="96" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">题型</text>
+<text x="286" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">典型问法</text>
+<text x="581" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">框架</text>
+<text x="856" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">金句</text>
+<text x="1065" y="139" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">高频失误</text>
+<!-- 行底色 -->
+<rect x="36" y="156" width="120" height="460" fill="#F7F6FB"/>
+<rect x="746" y="156" width="220" height="460" fill="#F1EBFD"/>
+<rect x="966" y="156" width="3" height="460" fill="#DC2626"/>
+<!-- 行1 技术理解题 -->
+<text x="96" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">技术理解题</text>
+<text x="166" y="182" font-size="12" fill="#221E33">RAG 和微调怎么选？</text>
+<text x="166" y="202" font-size="12" fill="#221E33">幻觉怎么治理？</text>
+<text x="166" y="222" font-size="12" fill="#221E33">模型选型看什么？</text>
+<text x="426" y="182" font-size="12" fill="#221E33">说人话三步法：</text>
+<text x="426" y="202" font-size="12" fill="#221E33">一句结论 → 一个生活类比 → 一个取舍判断</text>
+<text x="426" y="222" font-size="12" fill="#221E33">30 秒答结论，90 秒答权衡</text>
+<text x="766" y="196" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">技术题答的是深度，</text>
+<text x="766" y="218" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">更是边界</text>
+<text x="982" y="192" font-size="12" fill="#DC2626">堆术语；答「看场景」</text>
+<text x="982" y="214" font-size="12" fill="#DC2626">不给判断</text>
+<!-- 行2 数据题 -->
+<text x="96" y="298" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">数据题</text>
+<text x="166" y="278" font-size="12" fill="#221E33">指标怎么设计？</text>
+<text x="166" y="300" font-size="12" fill="#221E33">指标跌了 20% 怎么排查？</text>
+<text x="426" y="274" font-size="12" fill="#221E33">指标 = 北极星 + 过程 + 护栏，</text>
+<text x="426" y="294" font-size="12" fill="#221E33">必带口径；</text>
+<text x="426" y="314" font-size="12" fill="#221E33">异动 = 拆样本结构 → 查口径 → 下结论</text>
+<text x="766" y="288" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">指标设计先报口径，</text>
+<text x="766" y="310" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">再报数字</text>
+<text x="982" y="288" font-size="12" fill="#DC2626">背理论不结合项目；</text>
+<text x="982" y="310" font-size="12" fill="#DC2626">没口径就报数字</text>
+<!-- 行3 开放行为题 -->
+<text x="96" y="390" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">开放行为题</text>
+<text x="166" y="376" font-size="12" fill="#221E33">讲一个你踩过的坑 /</text>
+<text x="166" y="398" font-size="12" fill="#221E33">成功的说服经历</text>
+<text x="426" y="372" font-size="12" fill="#221E33">STAR：S/T 各一句，</text>
+<text x="426" y="392" font-size="12" fill="#221E33">A 占一半以上，R 用数字 + 复盘；</text>
+<text x="426" y="412" font-size="12" fill="#221E33">结论先行变体：R → A → S/T</text>
+<text x="766" y="380" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">行为题讲的是证据链，</text>
+<text x="766" y="402" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">不是小说</text>
+<text x="982" y="380" font-size="12" fill="#DC2626">讲成小说；</text>
+<text x="982" y="402" font-size="12" fill="#DC2626">只有情节没有数字</text>
+<!-- 行4 反问题 -->
+<text x="96" y="482" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">反问题</text>
+<text x="166" y="474" font-size="12" fill="#221E33">「你有什么想问我的？」</text>
+<text x="426" y="464" font-size="12" fill="#221E33">问岗位产出（前三个月最重要的</text>
+<text x="426" y="484" font-size="12" fill="#221E33">产出是什么）、问团队与业务方向；</text>
+<text x="426" y="504" font-size="12" fill="#221E33">提前备 2 个</text>
+<text x="766" y="484" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">反问是最后一道送分题</text>
+<text x="982" y="474" font-size="12" fill="#DC2626">问薪资加班；</text>
+<text x="982" y="496" font-size="12" fill="#DC2626">说「没有问题了」</text>
+<!-- 行5 压力题 -->
+<text x="96" y="574" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">压力题</text>
+<text x="166" y="566" font-size="12" fill="#221E33">「你这数据是不是太好看了？」</text>
+<text x="426" y="556" font-size="12" fill="#221E33">不接情绪，只给证据：</text>
+<text x="426" y="576" font-size="12" fill="#221E33">口径 → 评测过程 → 线上验证，逐条摆事实</text>
+<text x="766" y="576" font-size="13" font-weight="700" font-style="italic" fill="#5B21B6">情绪到位不如证据到位</text>
+<text x="982" y="566" font-size="12" fill="#DC2626">当场辩解激动；</text>
+<text x="982" y="588" font-size="12" fill="#DC2626">顺着质疑自我否定</text>
+<!-- 网格线 -->
+<line x1="156" y1="110" x2="156" y2="616" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="416" y1="110" x2="416" y2="616" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="746" y1="110" x2="746" y2="616" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="966" y1="110" x2="966" y2="616" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="248" x2="1164" y2="248" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="340" x2="1164" y2="340" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="432" x2="1164" y2="432" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="524" x2="1164" y2="524" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="36" y="110" width="1128" height="506" fill="none" stroke="#C9C2DE" stroke-width="1.2"/>
+<!-- 注释 -->
+<text x="40" y="650" font-size="12" fill="#6B7280">30 秒版 = 结论 + 类比；90 秒版 = 结论 + 展开 + 取舍</text>
+</svg>

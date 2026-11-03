@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W2 周四《AI 合规与安全（国内岗刚需）》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl cur" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W2-物料/W2D4-AI合规与安全 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W2 周四《AI 合规与安全（国内岗刚需）》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好，今天是第二周的周四。明天，你们就要交主项目立项报告了。立项报告有一张可行性评估表，四个维度：技术、数据、竞争，还有一个，就是今天要讲的——合规。</p>
+<p>我知道很多同学听到「合规」两个字，心里已经开始犯困了。觉得这是法务的事，是律师的事，跟产品经理没什么关系。我先说一个判断，你们记住：在国内做 AI 产品，合规不是加分项，是准入证。一个产品经理，如果面试的时候被问「你这个功能的合规风险在哪」，答不上来，前面聊得再好都会被打折扣。反过来，你能把备案流程、内容安全、数据合规讲清楚，你会立刻跟 90% 的候选人拉开差距——因为绝大多数人没准备过这一块。</p>
+<p>今天 90 分钟，终点有三个：第一，你能说清楚国内 AI 产品上线前要办哪些手续；第二，你能带走一份《AI 产品合规检查清单》，五个模块，它将从明天起跟着你的主项目走完整个八周；第三，我们请到了一位有备案实操经验的企业嘉宾，连线 30 分钟，你们有机会直接问真实的一线做法。</p>
+<p>【停】</p>
+<h2>导入：一个被下架的功能（3–5 分钟）</h2>
+<p>上课之前，先讲一个事故。注意，我讲的是一类被反复发生的、概括性的情况，不针对任何具体公司。</p>
+<p>【故事】某团队做了一个 AI 对话功能，效果不错，快速上线面向公众提供服务。问题在于：上线之前，既没有完成备案手续，也没有接入内容审核机制。运行一段时间后，有用户诱导它输出了不适宜的内容，被投诉举报。监管部门介入，产品被要求下架整改。团队花了两周补手续、补审核、补文档，才重新上线。这两周里，用户流失、口碑受损，团队所有排期全部作废。</p>
+<p>【问】我问大家一个问题：这个功能，技术上有什么问题？【停，点 1–2 名学员】</p>
+<p>对，有同学说到了——技术上可能没什么问题，模型甚至挺强。它死在哪？死在没有办手续、没有装「刹车」。这就是今天的第一课：<strong>国内 AI 产品，合规是门槛，不是选择题。</strong>技术做得再好，门槛迈不过去，一切归零。</p>
+<h2>环节一：国内 AI 合规法规地图（5–20 分钟）</h2>
+<p>那这个门槛具体是什么？我们把国内的 AI 合规法规地图铺开看。</p>
+<p>先说明一点：今天我引用的，全部是公开可查的法规名称和施行时间，要点也是公开文件里的表述。我们不逐条背法条——产品经理背法条没有意义，我们要做的是把每条法规翻译成产品动作。法条交给法务，动作才是你的。</p>
+<p>【操作：投屏法规时间轴，建议手绘或用 PPT 第 5 页】</p>
+<p>这个地图，大家按时间顺序记四部基础法律加一部专门办法。</p>
+<p>讲地图之前，先回答一个很多同学心里的疑问：我不是法务，为什么产品经理要懂这些？三个现实原因。第一，你是需求的源头——产品做什么、怎么交互、提示词怎么写，这些决定直接决定合规风险的大小，法务审的是你递过去的东西。第二，面试必考——国内 AI 产品经理的 JD 里，「合规意识」已经是高频关键词，面试官问「你这个功能有什么合规风险」，是项目深挖环节的保留题。第三，责任在前排——出了问题，第一个被叫去复盘会议的就是产品经理，不是法务。所以今天这节课，你学的不是法条，是你自己的岗位护城河。</p>
+<p>第一部，《网络安全法》，2017 年 6 月 1 日施行。网络空间的基础法，一切的前提。</p>
+<p>第二部，《数据安全法》，2021 年 9 月 1 日施行。数据怎么分类分级、怎么保护。</p>
+<p>第三部，《个人信息保护法》，业内叫它「个保法」，2021 年 11 月 1 日施行。这是今天后半段数据合规的主角，先记住名字和日期。</p>
+<p>第四部，《未成年人保护法》，2021 年 6 月 1 日起施行的新修订版，里面专门设了「网络保护」一章。它决定了未成年人保护这个模块。</p>
+<p>然后是专门针对我们的那部——《生成式人工智能服务管理暂行办法》，由国家网信办等七部门于 2023 年 7 月公布，<strong>2023 年 8 月 15 日施行</strong>。这是全球范围内较早专门针对生成式 AI 的规范性文件，它是我们今天这节课的核心参照。</p>
+<p>在这之前，还有两个规定大家记一下名字：《互联网信息服务算法推荐管理规定》，2022 年 3 月 1 日施行，管的是算法推荐，备案制度就是从它来的；《互联网信息服务深度合成管理规定》，2023 年 1 月 10 日施行，管的是深度合成，也就是 AI 换脸、语音克隆这类技术。再往后，《人工智能生成合成内容标识办法》，2025 年 9 月 1 日施行，管的是 AI 内容打标识。这套体系是一步步长出来的，越晚的规定越具体。</p>
+<p>【停，环视】</p>
+<p>《生成式人工智能服务管理暂行办法》的要点，我给大家提炼成产品经理听得懂的几句话。第一，适用范围：利用生成式人工智能技术向境内公众提供生成文本、图片、音频、视频等内容的服务，就归它管——注意「向境内公众」这五个字，待会儿要考。第二，内容导向：生成内容要合法合规，不得生成法律法规禁止的内容。第三，防止歧视：训练数据选择、算法设计上要防范民族、信仰、性别等方面的歧视。第四，尊重知识产权和他人合法权益。第五，保护个人信息，这个跟个保法衔接。第六，提供安全、稳定、持续的服务，建立投诉举报机制。</p>
+<p>【问】我问一个马上要用的问题：我们主项目是面向国内用户的，如果直接调用一个没有在国内完成备案的境外模型 API，行不行？【停，让学员讨论 30 秒】</p>
+<p>有同学说不行，有同学说看情况。答案是：只要你是<strong>面向境内公众</strong>提供生成式 AI 服务，就要满足国内这套要求——不管你底下的模型是谁家的。这就是为什么我刚才让大家注意「向境内公众」五个字。所以明天立项选模型的时候，你们要多看一眼：这个模型在国内有没有完成备案。要么直接选已备案的模型，要么走与持牌方合作的路径。这是立项评估里合规维度的第一项。</p>
+<p>【操作：打开《AI 产品全链路图》】</p>
+<p>最后用这张图定位一下。大家看，我们的 AI 产品全链路里，数据从左边进来，内容从右边出去。合规就卡在两端：<strong>数据进模型的一端，是数据合规；内容出模型的一端，是内容安全</strong>。中间的备案手续，管的是这个服务本身能不能开门营业。记住这个「两端一门」的结构，今天的内容就不乱了。</p>
+<h2>环节二：上线三道手续与内容安全（20–33 分钟）</h2>
+<p>接下来讲上线要办的手续。这一块是三个概念，学员最容易混，我们用一张对比表彻底解决。</p>
+<p>【操作：投屏备案对比表，PPT 第 7–8 页】</p>
+<p><strong>第一个概念，算法备案。</strong>依据是《互联网信息服务算法推荐管理规定》。什么样的算法要备案？具有舆论属性或者社会动员能力的算法推荐服务。备案在哪办？通过官方的互联网信息服务算法备案系统在线填报。这是最老牌的一道手续，2022 年就开始了。</p>
+<p><strong>第二个概念，大模型备案。</strong>面向公众提供生成式 AI 服务，涉及大模型的，按现行要求要完成备案，配套的还有安全评估。这一步通常由模型方牵头做，周期不短，要准备的材料包括模型情况、安全评估情况、语料合规情况等。</p>
+<p><strong>第三个概念，应用登记。</strong>如果你的应用是<strong>基于已备案的大模型</strong>做的，比如套壳开发一个面向特定场景的产品，按现行要求要完成登记，流程比备案轻很多。这一层，就是多数应用型产品经理要面对的。</p>
+<p>三个概念，一句话口诀：<strong>自己训模型做大模型备案，用别人模型做应用登记，算法推荐上系统备案。</strong></p>
+<p>这里再补两个上线前容易漏的动作。第一个是安全评估：面向公众提供服务，上线前要按现行要求完成安全评估，评的是模型和产品的安全能力，材料里就包括你测试集里的违规内容测试情况——所以内容安全的负例测试，不只是产品要求，还是手续材料的一部分。第二个是投诉举报机制：办法里明确要求提供投诉举报渠道，落到产品上就是一个「举报」按钮加处理流程，别小看它，这是用户找你的正规通道，也是监管检查时的必看项。</p>
+<p>【问】那备案号应该出现在产品的哪个位置？去哪能查？【停】</p>
+<p>对，有同学预习的时候已经查到了——产品官网的底部、或者「关于」页面上，应用商店详情页里也会有公示；官方的备案系统官网可以查询公示信息。这就是你们的预习任务，待会儿我抽查两位，说说你查的是哪款产品、备案信息长什么样。【停，点 2 位学员，每人 30 秒】</p>
+<p>好。手续办完，是不是就万事大吉了？不是。<strong>手续是静态的，内容是动态的。</strong>每一条生成出来的内容，都要过内容安全这一关。</p>
+<p>内容安全怎么做？行业标准做法是三道防线。第一道，机器审核：用内容安全模型对输入和输出做实时过滤，敏感词、违规内容、诱导攻击，拦在第一线。第二道，人工复审：机器拿不准的、被判高风险的，进人工审核队列，人工复核之后再决定放不放。第三道，拒答兜底：遇到高风险话题——比如医疗诊断、法律意见、投资建议——与其冒险生成，不如设计成拒答或者转人工，加一句「建议咨询专业人士」。</p>
+<p>【金句】这里送大家今天第一句面试金句：<strong>内容安全不是过滤器，是产品的一部分——拒答设计得好，本身就是专业度。</strong></p>
+<p>还有一件事，很多同学容易漏：生成内容要打标识。《人工智能生成合成内容标识办法》2025 年 9 月 1 日开始施行，要求对 AI 生成的文本、图片、音频、视频添加标识，显式的、隐式的都有要求。显式的，就是大家平时看到的「AI 生成」标签和水印；隐式的，藏在文件的元数据里。</p>
+<p>【问】你在手机上见过 AI 生成的图片带标识吗？为什么要强制打标识？【停】</p>
+<p>对，为了让人能分清哪些是 AI 造的、哪些是真实的。防造假、防误导，也保护真实内容的可信度——这条要求保护的，首先是每一个看内容的人。落到你的产品上，就是一句自查：我的产品每一条 AI 输出，有没有清晰标注「内容由 AI 生成」？标在哪、用户能不能一眼看到？这两个问题的答案，写进你的清单模块五。</p>
+<p>好，33 分钟之前的内容到这里。我们休息 5 分钟，休息期间我连线嘉宾，大家回来直接进入访谈环节。助教注意，先把提问规则页投上去。</p>
+<p>【操作：课间与嘉宾完成连线测试，确认麦克风、投屏；学员回来后切到嘉宾介绍页】</p>
+<h2>环节三：企业嘉宾连线（38–68 分钟）</h2>
+<p>欢迎回来。接下来的 30 分钟，交给我们的企业嘉宾。嘉宾的做法都是一线的真实做法，比我讲十遍都有用。</p>
+<p><strong>（连线第 0–2 分钟：介绍与规则）</strong></p>
+<p>我先介绍一下今天的嘉宾。嘉宾长期在 AI 产品一线，负责过备案与合规落地的完整流程，有从零把产品送上线的实操经验。具体身份信息以公开可介绍的范围为准，我不多展开。嘉宾，先用一分钟介绍一下自己。</p>
+<p>【停，嘉宾自我介绍 1 分钟】</p>
+<p>谢谢嘉宾。开始之前，我把提问规则跟大家过一遍：待会儿学员提问环节，先举手或由助教递麦；被点到后先报「姓名加一句话背景」；一人一问、不超过 40 秒，先复述问题再等回答；问流程、问做法、问坑，不问薪资、不问嘉宾公司未公开的信息；导学案「嘉宾问答记录区」边听边记，每人课后至少整理 3 条要点。都清楚了，我们开始。</p>
+<p><strong>（连线第 2–17 分钟：讲师访谈 5 问）</strong></p>
+<p>第一个问题，也是大家最关心的：您所在团队的产品是怎么完成备案或者登记手续的？整个流程大概多长时间，最容易卡住的环节是哪里？</p>
+<p>【停，嘉宾回答约 3 分钟；追问方向：材料准备用什么角色主导、产品经理承担哪部分】</p>
+<p>第二个问题：内容安全审核在真实产品里是怎么落地的？机器审核和人工复审怎么分工，出现漏判之后怎么补救？</p>
+<p>【停，嘉宾回答约 3 分钟；追问方向：审核规则谁来定、漏判之后规则怎么迭代】</p>
+<p>第三个问题：产品会收集用户对话数据，在个人信息保护的要求下，你们怎么做用户授权和脱敏？踩过什么坑？</p>
+<p>【停，嘉宾回答约 3 分钟；追问方向：授权文案谁写、模型训练用途怎么单独拿授权】</p>
+<p>第四个问题：您印象最深的一次「因合规被要求整改」，是什么情况？当时产品经理做了什么，或者应该做什么？</p>
+<p>【停，嘉宾回答约 3 分钟；追问方向：整改周期、对排期的影响、复盘输出物】</p>
+<p>第五个问题：您面试或者带教 AI 产品经理的时候，最希望候选人在合规上具备什么能力？</p>
+<p>【停，嘉宾回答约 3 分钟；这个问题是给学员的求职情报，提醒所有人记录】</p>
+<p><strong>（连线第 17–27 分钟：学员提问，10 分钟）</strong></p>
+<p>好，下面把时间交给同学们。按规则来，举手或者递纸条给助教。来，第一排那位同学。</p>
+<p>【停，执行学员提问环节；讲师主持职责：复述问题、控制 40 秒、防止追问超轮；冷场时从助教预收纸条中递补；控制在 5–6 个问题】</p>
+<p><strong>（连线第 27–30 分钟：总结致谢）</strong></p>
+<p>还有最后半分钟，我来做个收束。今天嘉宾的分享，对应到我们的五模块清单上，三句话：第一，备案登记是流程活，材料靠平时积累，产品经理要全程跟；第二，内容安全是规则活，规则要迭代，拒答要设计；第三，数据合规是授权活，授权链路清清楚楚，训练用途单独拿授权。嘉宾分享的要点我们会整理进课后资料。让我们用掌声感谢嘉宾。</p>
+<p>【操作：结束连线，切回合规检查清单图】</p>
+<h2>环节四：合规检查清单五模块精讲（68–84 分钟）</h2>
+<p>嘉宾的时间给了我们一线的做法，现在把这 30 分钟沉淀下来的东西，落成你们每个人手里的工具——《AI 产品合规检查清单》，五个模块。大家打开导学案，我讲一个模块，你们对照自己的主项目填一项。</p>
+<p><strong>模块一，算法备案。</strong>法规依据一句话：《互联网信息服务算法推荐管理规定》，2022 年 3 月 1 日施行，具有舆论属性或社会动员能力的算法推荐服务要备案。产品动作三条：第一，确认你用的模型是否已备案；第二，查产品官网和应用商店的备案号公示；第三，基于已备案模型的应用，按现行要求完成登记。你的主项目自查问题就一个：我的产品要不要备案？用谁的已备案模型？现在填。【停 2 分钟，巡视】</p>
+<p><strong>模块二，内容安全。</strong>依据：《生成式人工智能服务管理暂行办法》，2023 年 8 月 15 日施行。产品动作三条：上线前完成安全评估；接入机器加人工的双审核；设计拒答与转人工兜底，产品内提供举报入口。自查问题：你的评测集里有没有内容安全负例？还记得 W2 周三讲的评测集吗——如果 50 条里全是正例，你的评测就是半张卷子。举报入口放在哪个页面？填。【停 2 分钟】</p>
+<p><strong>模块三，数据合规。</strong>依据：个保法，2021 年 11 月 1 日施行。核心原则四个字：<strong>最小必要</strong>。产品动作三条：梳理数据清单——收集什么、存多久、给谁用；训练用途单独授权，不能拿「同意用户协议」一句话打包；给用户提供删除和注销通道；调外部模型前签数据协议。</p>
+<p>【问】我用一个问题拷问大家：用户上传的身份证照片，AI 产品必须存下来吗？【停】</p>
+<p>对——不必须。能实时校验就不落库，能脱敏就不存原图，真要存就要有期限、有用途绑定。最小必要的意思是：每收集一个字段，都要能回答「不收集行不行」。回答不了，就是过度收集。填你的清单。【停 2 分钟】</p>
+<p><strong>模块四，未成年人保护。</strong>依据：《未成年人保护法》网络保护专章。产品动作三条：先判断目标用户是否包含未成年人；包含就要加适龄提示、内容分级从严；对易沉迷的产品形态设置防沉迷机制；未成年人个人信息处理从严，监护人同意这些要求要进需求文档。</p>
+<p>【问】一款给中小学生用的 AI 学习助手，除了内容安全，还要多做什么？【停】</p>
+<p>对，有同学答得很全——适龄、防沉迷、信息从严。这里我要提醒一个立项技巧：如果你的主项目目标用户写的是「所有人」，明天立项评审时合规这一栏会被问住。想清楚用户画像，合规才有边界。填。【停 1 分钟】</p>
+<p><strong>模块五，责任标识。</strong>依据：《人工智能生成合成内容标识办法》，2025 年 9 月 1 日施行。产品动作三条：AI 生成内容打显式标识；对话界面标注「内容由 AI 生成」；保留隐式标识不被去除；配上免责声明和客服通道。自查问题：我的产品每一条 AI 输出都有标识吗？标在哪？填。【停 1 分钟】</p>
+<p>【金句】五个模块，送大家一句口诀，也是今天的核心金句：<strong>备得上、审得出、收得少、护得住、标得清——合规五关，一关都不能少。</strong></p>
+<p><strong>责任边界</strong>这个难点，我再单独讲三句。AI 生成的内容出了错、造成了损失，责任是模型厂商的还是我们的？【停】有同学说看情况。正确姿势是分层看：模型厂商提供的是通用能力，而你，做了场景选择、做了产品编排、对用户做了承诺——面对用户，<strong>产品方是第一责任人</strong>。跟供应商的合同里可以约定追责，但用户只会找你。这就是为什么产品经理必须懂合规：你是那个站在责任最前排的人。</p>
+<h2>总结与作业（84–90 分钟）</h2>
+<p>今天的内容收束成三句话。</p>
+<p>第一，合规是上线门槛：面向境内公众提供生成式 AI 服务，备案登记、安全评估这些手续要先办，选模型先看有没有备案。</p>
+<p>第二，合规落在产品动作上：五模块清单——备案、内容安全、数据合规、未成年人保护、责任标识，每一条都对应具体的产品设计工作。</p>
+<p>第三，产品方是责任第一排：拒答是你设计的，标识是你排的，授权是你写的——合规能力就是产品能力。</p>
+<p>最后来一道场景快答热身，答对的下课：客服机器人直接回答用户医疗用药建议，有什么合规风险？至少说一条整改动作。【停，点 1 名学员】</p>
+<p>对——医疗是高风险领域，无资质输出用药建议风险极高，要设拒答、转人工或者就医提示，输出加「不构成医疗建议」标识。</p>
+<p>今晚的作业三件事：第一，把《AI 产品合规检查清单》五个模块全部补全，标注「已具备、待补齐、不适用」，明天直接粘进立项报告；第二，完成分层习题，重点做第三层的五个场景判断题；第三，把嘉宾问答记录区整理出 3 条要点，周五评审我会随机问。</p>
+<p>明天，主项目立项，见证你们八周长跑的起点。下课。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>国内做 AI 产品，合规不是加分项，是准入证。</li>
+<li>合规卡在「两端一门」：数据进模型是数据合规，内容出模型是内容安全，备案手续管开门营业。</li>
+<li>自己训模型做大模型备案，用别人模型做应用登记，算法推荐上系统备案。</li>
+<li>内容安全不是过滤器，是产品的一部分——拒答设计得好，本身就是专业度。</li>
+<li>最小必要的意思是：每收集一个字段，都要能回答「不收集行不行」。</li>
+<li>备得上、审得出、收得少、护得住、标得清——合规五关，一关都不能少。</li>
+<li>面对用户，产品方是责任第一排。</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「提示一下——回想你们的预习任务，备案号是在产品哪个位置看到的？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个观察有价值，先记下来。我们回到这个问题——它问的是上线前的手续，不是上线后的运营。」</td>
+</tr>
+<tr>
+<td>学员答对但不敢说全</td>
+<td>「对，第一条完全正确。大胆一点，第二条呢？这题面试很可能考。」</td>
+</tr>
+<tr>
+<td>法规内容枯燥走神</td>
+<td>「大家不用背法条，记住一句人话就行：这一条，翻译成产品动作就是……」</td>
+</tr>
+<tr>
+<td>嘉宾回答时间过长</td>
+<td>「嘉宾这个点特别重要，时间关系我先记下来，待会儿学员提问环节可以展开。我们进入下一问。」</td>
+</tr>
+<tr>
+<td>学员提问环节冷场</td>
+<td>「助教这里已经收了几张纸条，我念一张：一位同学想问……」</td>
+</tr>
+<tr>
+<td>时间不够要压缩清单精讲</td>
+<td>「五模块里备案和数据合规展开讲，其余三个模块对照清单自己填，回放里我逐条补讲。」</td>
+</tr>
+</tbody>
+</table>
+<h2>附录三：嘉宾连线主持串词（完整版）</h2>
+<p><strong>开场引入</strong>：「接下来的 30 分钟，我们不讲 PPT，讲真东西。嘉宾长期在 AI 产品一线，从零走完过备案上线的全流程。今天 30 分钟分三段：我先代表大家问五个问题，15 分钟；然后同学提问，10 分钟；最后 5 分钟总结。我把提纲投屏了，大家可以边听边在记录区记。」</p>
+<p><strong>每问之间的承接</strong>：<br />
+- 问 2 前：「刚才说的是流程，接下来问落地——备案拿下来之后，日常怎么守住。」<br />
+- 问 3 前：「内容守住了，还有一端是数据。接下来这个问题，问的是很多团队都踩过的坑。」<br />
+- 问 4 前：「前面都是正面做法，接下来问一个反面教材——出过事的团队，是怎么补课的。」<br />
+- 问 5 前：「最后一个问题，是替在座各位求职问的，请大家务必记录。」</p>
+<p><strong>学员提问环节主持</strong>：「好，规则再提一遍：报名字、一问一句、40 秒内。来，这位同学。」／「这个问题很典型，我帮嘉宾重复一遍：他问的是……」／「追问可以，但只限一轮，让后面同学也有机会。」</p>
+<p><strong>致谢收束</strong>：「时间关系，今天的连线到这里。三句话收束：备案是流程活、内容安全是规则活、数据合规是授权活。掌声感谢嘉宾，要点会整理进课后资料。我们回到清单五模块。」</p>
+<p><strong>嘉宾连线故障口径</strong>：「如果连线中断，讲师口径：『信号问题，我们请嘉宾稍后把回答要点整理成文字发群里。先回到清单，这一问的答案我先用公开信息补上。』」</p>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

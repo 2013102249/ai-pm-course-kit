@@ -1,0 +1,28 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>04 / 20</Text>
+    <Box style={{ marginBottom: 20 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>本课框架：三维拆解法</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+    </Box>
+    <Box style={{ flex: 1, gap: 20 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED', width: 220 }}>用户价值</Text>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>这个形态为谁、解决什么问题</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#EFF6FF', borderRadius: 12, padding: '24px 28px' }}>
+            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#2563EB', width: 220 }}>技术依赖</Text>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>这个形态的能力从哪里来</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED', width: 220 }}>商业模式</Text>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>这个形态靠什么收费</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', background: '#4C1D95', borderRadius: 12, padding: '18px 28px', marginTop: 4 }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>用户价值 × 技术依赖 × 商业模式 —— 每个形态都过一遍这三个维度</Text>
+        </Box>
+    </Box>
+</Slide>

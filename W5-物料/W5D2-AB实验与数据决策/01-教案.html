@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W5 周二《AB 实验与数据决策》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl cur" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W5-物料/W5D2-AB实验与数据决策 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W5 周二《AB 实验与数据决策》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第五周第二天 · 90 分钟（2 课时）· 讲师版</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段三 · 产品硬功（Week 5）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>AB 实验与数据决策</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，中间不安排休息，环节间走动式过渡）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>转行 / 进阶层学员（已完成 W4 需求分析与 PRD，昨天完成主项目增长方案）</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>W4 指标体系（北极星指标、过程指标）、W5D1 增长方案（AARRR、冷启动动作）</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>主项目 2 个 AB 实验设计方案（假设 / 指标 / 样本 / 周期四要素齐全，含护栏指标与判读标准）</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏；本课无专用交互页，采用导学案 + 工作坊组织</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能针对自己主项目的任意一个增长动作，写出完整的实验设计方案：可证伪假设、1 个成功指标 + 至少 1 个护栏指标、样本量判断（含在线计算器口径）、实验周期（完整周覆盖），四要素齐全（对应课堂产出 + 周五中期评审）。</li>
+<li>能识别三大陷阱——偷看指标、辛普森悖论、多重比较——在给定的实验描述中指出违反了哪一条，并说出规避动作（对应陷阱识别练习 + 习题）。</li>
+<li>能对一个给定的「指标异动」现象写出排查思路：先拆样本结构、再查指标口径、最后下结论（对应习题 + 面试高频题）。</li>
+<li>能说出无实验条件下的 3 种替代决策法（前后对照 / 灰度观察 / 用户访谈三角验证）及各自的适用前提与弱点（对应课堂提问 + 作业）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点</strong>：实验设计四要素的教学顺序——假设（可证伪）→ 指标（成功 + 护栏）→ 样本量（够不够再开跑）→ 周期（完整周覆盖）。每个要素都落到学员自己的主项目上，不允许只听不写。</li>
+<li><strong>难点一</strong>：样本量。学员没有统计基础，讲不了公式，只讲直觉判断与工具口径：「预期提升越小、日常波动越大，需要的样本越大；具体数字用在线样本量计算器」。</li>
+<li><strong>难点二</strong>：辛普森悖论。用极简教学化数字例子让学员「亲眼看见」整体赢、分组全输，理解样本结构不均衡的危害。</li>
+<li><strong>难点三</strong>：从「显著」到「决策」。学员易把「实验成功」等同于「全量上线」，要补上护栏指标、成本、可逆性三道闸。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实验流程图（待制）</td>
+<td>环节一总览：假设→设计→灰度→全量→决策</td>
+<td>05-配图清单</td>
+</tr>
+<tr>
+<td>三陷阱示意图（待制）</td>
+<td>环节三：三大陷阱对照记忆</td>
+<td>05-配图清单</td>
+</tr>
+<tr>
+<td>导学案（含 2 个实验设计空白模板）</td>
+<td>课上全程填写 + 工作坊互审载体</td>
+<td>03-导学案</td>
+</tr>
+<tr>
+<td>学员昨日的增长方案作业</td>
+<td>工作坊素材：从方案里挑 2 个动作做实验化</td>
+<td>飞书作业区</td>
+</tr>
+<tr>
+<td>在线样本量计算器（任选一款公开工具）</td>
+<td>样本量环节现场演示输入口径</td>
+<td>讲师提前打开</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8 min</td>
+<td>导入：被「偷看指标」毁掉的实验</td>
+<td>讲教学化示例：实验第 3 天 B 组领先就提前下结论，第 7 天反转——周一上新的人在 B 组占比偏高，样本结构歪了；提问「错在哪一步」</td>
+<td>故事冲击 + 提问</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–20 min</td>
+<td>环节一：从增长方案到实验验证</td>
+<td>回扣昨日作业：增长方案里哪个动作你敢说「一定有效」？讲 AB 实验本质（对照 + 随机）与五步流程图</td>
+<td>讲授 + 图示 + 提问</td>
+<td>导学案写下「我要验证的假设」</td>
+</tr>
+<tr>
+<td>20–45 min</td>
+<td>环节二：实验设计四要素精讲（核心）</td>
+<td>① 假设可证伪：给定模板，改写不可证伪的反例；② 指标：1 个成功指标 + 护栏指标，讲「为什么只能一个主指标」；③ 样本量：三问直觉判断 + 计算器现场演示；④ 周期：完整周覆盖，避开大促与发版</td>
+<td>讲授 + 板书 + 演示 + 逐要素填写</td>
+<td>导学案实验设计表前四行</td>
+</tr>
+<tr>
+<td>45–62 min</td>
+<td>环节三：三大陷阱逐个拆解</td>
+<td>陷阱一偷看指标（导入故事深化：开跑前冻结判据）；陷阱二辛普森悖论（极简数字例子：整体 5.2% 赢 5.0%，两个分组 A 全赢）；陷阱三多重比较（20 张彩票故事：看了 20 个指标总有一个「显著」）</td>
+<td>讲授 + 数字推演 + 提问</td>
+<td>导学案陷阱识别练习区</td>
+</tr>
+<tr>
+<td>62–74 min</td>
+<td>环节四：结果解读与决策 + 无实验条件怎么办</td>
+<td>结果解读三道闸：显著了吗→护栏守住了吗→成本可逆性算过吗；无实验条件三种替代法：前后对照（选平稳期）/ 灰度观察（逐级放量）/ 用户访谈三角验证（数据 + 访谈 + 客服反馈交叉印证），每种都写明弱点</td>
+<td>讲授 + 案例对照</td>
+<td>导学案判读标准行</td>
+</tr>
+<tr>
+<td>74–88 min</td>
+<td>环节五：实验设计工作坊</td>
+<td>个人完善方案 5 分钟 → 两两互审 6 分钟（四要素逐项挑战）→ 讲师点评 3 分钟（点评框架见 07 文件）</td>
+<td>工作坊 + 互审</td>
+<td>主项目实验设计方案 1.0 版</td>
+</tr>
+<tr>
+<td>88–90 min</td>
+<td>总结与作业</td>
+<td>三句话收束 + 布置作业（完善 2 个实验方案）+ 预告明日商业化</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>时间合计：8 + 12 + 25 + 17 + 12 + 14 + 2 = 90 分钟。</p>
+<h2>六、四要素逐个教学设计（讲师备课细案）</h2>
+<h3>要素① 假设——必须可证伪</h3>
+<table>
+<thead>
+<tr>
+<th>教学动作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反例先行</td>
+<td>「我觉得新版首页更好看」——学员判断：为什么没法做实验？（好看没有判据，对了错了都无法检验）</td>
+</tr>
+<tr>
+<td>模板教学</td>
+<td>「因为【洞察】，我们相信【具体改动】，会让【目标用户】的【指标】提升【幅度】，判据是【成功/失败的标准】」</td>
+</tr>
+<tr>
+<td>正面对照</td>
+<td>「把新用户首屏改为一句价值主张，预期次日留存从 25% 提升到 27% 以上」——指出四个可检验点：改动明确、人群明确、指标明确、幅度明确</td>
+</tr>
+<tr>
+<td>课堂动作</td>
+<td>学员把预习假设按模板改写一遍，同桌交换检查「能不能被证伪」</td>
+</tr>
+<tr>
+<td>判据口诀</td>
+<td>写假设时问自己：如果数据打脸，我承认吗？不敢写「承认条件」的假设都是口号</td>
+</tr>
+</tbody>
+</table>
+<h3>要素② 指标——1 个成功指标 + 护栏指标</h3>
+<table>
+<thead>
+<tr>
+<th>教学动作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>追问导入</td>
+<td>「实验同时看留存、时长、分享率、付费，哪个说了算？」——引出决策需要单一判据</td>
+</tr>
+<tr>
+<td>成功指标</td>
+<td>只选 1 个，与假设中的指标一致；选离改动因果链最近的指标，而不是挂得最远的北极星</td>
+</tr>
+<tr>
+<td>护栏指标</td>
+<td>防止「赢了 A 输了 B」：留存类实验的护栏 = 加载时长、崩溃率、取消率；增长类实验的护栏 = 投诉率、退订率</td>
+</tr>
+<tr>
+<td>教学化示例</td>
+<td>推送实验让次日留存涨 2 个点，但退订率涨了 3 个点——净效果为负。没有护栏指标，这个代价看不见</td>
+</tr>
+<tr>
+<td>课堂动作</td>
+<td>每人给自己实验填 1 个成功指标 + 至少 1 个护栏指标，讲师巡场抽查「成功指标是否离因果链太远」</td>
+</tr>
+</tbody>
+</table>
+<h3>要素③ 样本量——「够不够」再开跑</h3>
+<table>
+<thead>
+<tr>
+<th>教学动作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三问直觉</td>
+<td>① 这个指标的日常波动有多大？② 改动预期能带来多大相对提升？③ 每天能进多少流量？——预期提升越小、日常波动越大，需要的样本越大</td>
+</tr>
+<tr>
+<td>工具口径</td>
+<td>明确口径：不给公式，用在线样本量计算器——输入基线转化率与最小可接受的提升幅度，直接得到需要的样本量</td>
+</tr>
+<tr>
+<td>直觉锚点</td>
+<td>小提升（如 20% 到 21%）往往需要几万级样本；大改动（如 20% 到 25%）几百上千人就能看出方向</td>
+</tr>
+<tr>
+<td>「够不够再开跑」</td>
+<td>开跑前先算两笔账：需要多少样本 × 按日流量要跑多少天。算出来要跑 90 天，结论不是硬跑，而是砍实验或换更大的改动</td>
+</tr>
+<tr>
+<td>课堂动作</td>
+<td>讲师现场用计算器演示一组输入，学员在导学案记录自己的「样本量判断 + 依据」</td>
+</tr>
+</tbody>
+</table>
+<h3>要素④ 周期——完整周覆盖</h3>
+<table>
+<thead>
+<tr>
+<th>教学动作</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>追问导入</td>
+<td>「周三上新、周六看结果，行不行？」——工作日与周末的用户结构、行为节奏完全不同</td>
+</tr>
+<tr>
+<td>基本口径</td>
+<td>至少覆盖 1–2 个完整自然周；用户在不同日期进入实验，行为模式不同，只跑半周等于只测了半类用户</td>
+</tr>
+<tr>
+<td>避雷清单</td>
+<td>避开大促、版本发布、节假日、运营活动撞车——任何外部事件都会污染实验</td>
+</tr>
+<tr>
+<td>新老分开</td>
+<td>新用户与老用户对改动的反应差异巨大，判读时分层看</td>
+</tr>
+<tr>
+<td>课堂动作</td>
+<td>每人写下自己实验的起止日期，同桌检查「是否完整周 + 是否有撞车事件」</td>
+</tr>
+</tbody>
+</table>
+<h2>七、三大陷阱逐个教学设计（每个配一个概括性小故事）</h2>
+<table>
+<thead>
+<tr>
+<th>陷阱</th>
+<th>概括性小故事（课堂讲授版）</th>
+<th>教学要点</th>
+<th>规避动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>偷看指标</td>
+<td>某团队做按钮改版实验，第 3 天 B 组点击领先 8%，团队在群里发庆功表情，第 5 天直接全量。第 7 天数据反转，最终 B 组反而更低——复盘发现：周一上新用户多，恰好大量落进 B 组，样本结构歪了。</td>
+<td>提前下结论时看到的是「半成品数据」；样本结构在跑动中会变，早期领先不代表终局。</td>
+<td>开跑前冻结两件事：判读日期 + 成败标准；数据未到齐不看、不报、不拍板</td>
+</tr>
+<tr>
+<td>辛普森悖论</td>
+<td>教学化数字例子（板书推演）：A 版 1000 人转化 50 人（5.0%），B 版 1000 人转化 52 人（5.2%），整体 B 赢；但拆开看，iOS 端 A 8% 对 B 7%，Android 端 A 3% 对 B 2.5%——两个分组里 A 全赢。原因：B 组里 iOS 用户占六成，而 iOS 用户天然转化高。</td>
+<td>整体数字会被样本结构「骗」；分组占比不均衡时，加总结论可能与每个分组的真实结论相反。</td>
+<td>判读前先按关键维度（平台 / 新老 / 渠道）分层看一遍；两组结构差异大时先配平</td>
+</tr>
+<tr>
+<td>多重比较</td>
+<td>某团队一次实验设了 20 个指标，会后汇报「夜间时段的分享率提升 15%，显著」，宣布成功。复跑一遍，提升消失。原因：同时买 20 张彩票，总有一张中奖——看的指标越多，纯靠运气出现「显著」的概率越高。</td>
+<td>显著性是概率游戏，指标越多越容易被运气命中。</td>
+<td>先定指标再看数（预注册思维）；如果确实要看多个指标，显著性门槛要相应收紧，或交给统计口径把关</td>
+</tr>
+</tbody>
+</table>
+<h2>八、无实验条件的替代决策法（教学细案）</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>怎么做</th>
+<th>适用前提</th>
+<th>必须写明的弱点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前后对照</td>
+<td>上线前 1–2 周指标基线 vs 上线后同期对比</td>
+<td>平稳期（无大促、无发版、无季节性波动）</td>
+<td>时间本身在变：外部事件、版本迭代都可能混入，因果强度最弱</td>
+</tr>
+<tr>
+<td>灰度观察</td>
+<td>按小比例放给部分用户，观察指标与反馈后再逐级放量</td>
+<td>产品有分流能力；改动可回滚</td>
+<td>灰度组与全量用户结构可能有差异；观察期短，长期效应看不见</td>
+</tr>
+<tr>
+<td>用户访谈三角验证</td>
+<td>数据异动 + 用户访谈 + 客服反馈三路证据互相印证后决策</td>
+<td>样本小、跑不了实验的新功能早期</td>
+<td>访谈样本小、有表达偏差，只能验证「方向」不能验证「幅度」</td>
+</tr>
+</tbody>
+</table>
+<p>讲授要点：三种方法不是二选一，实战里常常组合用；但无论哪种，决策文档里必须写「这个方法的弱点是什么」——这是本课给学员的职业习惯，也是面试加分点。</p>
+<h2>九、课堂提问设计（7 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「昨天你们写的增长方案里，哪个动作你敢拍胸脯说『它一定有效』？」</td>
+<td>导入</td>
+<td>没有人敢——增长动作在验证之前都只是猜测；引出：方案的价值不在写得漂亮，在验证得扎实</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「为什么不能今天上 A 版、明天上 B 版，直接比两天的数据？」</td>
+<td>环节一</td>
+<td>时间不同，用户结构、外部事件都不同；变量没控制住，比出来的差异不归功于版本</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「一个实验同时看留存、时长、分享率、付费，哪个说了算？」</td>
+<td>要素②</td>
+<td>决策需要单一判据——只定 1 个成功指标；其他只能当护栏或观察项，否则多指标打架 + 多重比较陷阱</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「护栏指标是防什么的？给你自己的实验配一个。」</td>
+<td>要素②</td>
+<td>防副作用：成功指标涨了但加载变慢、投诉变多也不能全量；如留存实验护栏=加载时长与取消率</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「你的实验按日流量一算，要跑 60 天才有足够样本，怎么办？」</td>
+<td>要素③</td>
+<td>三选一：砍掉这个实验（改动太小不值得）；换更大的改动让预期提升变大从而降样本；或接受更弱证据用替代法</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「实验周期为什么要覆盖完整自然周？」</td>
+<td>要素④</td>
+<td>工作日与周末用户结构、行为节奏不同；只跑半周等于只测了半类用户，结论以偏概全</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「实验显著、护栏也守住了，就一定全量上线吗？」</td>
+<td>环节四</td>
+<td>不一定——还要算成本与可逆性：服务器成本、维护成本、回滚难度；数据是决策输入之一，不是全部</td>
+</tr>
+</tbody>
+</table>
+<h2>十、板书要点</h2>
+<pre><code>AB 实验 = 对照 + 随机。没跑完 = 没跑。
+
+四要素：假设（可证伪）→ 指标（1 成功 + 护栏）→ 样本量（够不够再开跑，用在线计算器）→ 周期（完整周覆盖）
+
+三陷阱：
+① 偷看指标 —— 开跑前冻结判据：日期 + 标准
+② 辛普森悖论 —— 整体赢 ≠ 分组赢，先拆结构再下结论
+③ 多重比较 —— 指标看得越多，门槛越要高
+
+无实验条件：前后对照 / 灰度观察 / 访谈三角验证——每个都要写明弱点
+
+决策三道闸：显著了吗 → 护栏守住了吗 → 成本与可逆性算过吗
+</code></pre>
+<h2>十一、课堂练习参考答案（工作坊互审示例）</h2>
+<p>以「首屏改版提升新用户次日留存」为例，一份合格方案的样子：</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>合格示例</th>
+<th>常见不合格写法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>假设</td>
+<td>因为新用户首屏看不懂产品价值，把首屏改为一句价值主张，预期新用户次日留存从 25% 提升到 27% 以上</td>
+<td>「新版首页更好看」（不可证伪）</td>
+</tr>
+<tr>
+<td>成功指标</td>
+<td>新用户次日留存率</td>
+<td>「用户满意度」（离因果链太远）</td>
+</tr>
+<tr>
+<td>护栏指标</td>
+<td>首屏加载时长 ≤ 原版 +5%；跳出率不显著上升</td>
+<td>无护栏</td>
+</tr>
+<tr>
+<td>样本量</td>
+<td>用在线计算器，按基线 25%、最小提升 2 个点算得所需样本；按日流量约需 X 天</td>
+<td>「跑两天看看」</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>下一个完整自然周（周一 0 点至周日 24 点），避开本周五的发版</td>
+<td>「周三上新周六看」</td>
+</tr>
+<tr>
+<td>判读标准</td>
+<td>跑满周期后统一判读：成功指标达标且护栏守住→申请全量；未达标→保留结论、进入下一轮假设</td>
+<td>「数据好看就上」</td>
+</tr>
+</tbody>
+</table>
+<h2>十二、学员易错点预判与应对</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把「改进版」当结论</td>
+<td>设计实验时已经认定 B 版一定赢，判读标准含糊</td>
+<td>开场即点破：实验的目的是「可能证明自己错」；要求判读标准必须同时写「不达标怎么办」</td>
+</tr>
+<tr>
+<td>偷看指标提前下结论</td>
+<td>跑到第 3 天就在群里报喜、催全量</td>
+<td>用导入故事反复回扣；导学案模板强制填「判读日期」，冻结才有仪式感</td>
+</tr>
+<tr>
+<td>只看成功指标不看护栏</td>
+<td>方案里没有护栏指标行；或护栏形同虚设</td>
+<td>模板把护栏设为必填项；工作坊互审第一条就是「挑战对方的护栏选得对不对」</td>
+</tr>
+<tr>
+<td>样本量拍脑袋</td>
+<td>「跑两天看看」「几百人差不多吧」</td>
+<td>只给直觉锚点与计算器口径，不给公式；让学员现场算自己的项目，数字一算就露怯</td>
+</tr>
+<tr>
+<td>不显著当成「证明无效」</td>
+<td>实验没跑出显著差异，直接说「这个功能没用」</td>
+<td>区分「证据不足」与「证明无效」：样本不够或周期不够时，结论只能是「未观察到效果」，不是「没有效果」</td>
+</tr>
+<tr>
+<td>多个指标挑好的说</td>
+<td>汇报时从 20 个指标里挑涨的那个</td>
+<td>用「20 张彩票」故事建立警觉；要求方案里事先列全观察指标，事后不许加</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

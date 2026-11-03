@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>AI 产品评估打分工具</title>
+<style>
+  /* ========== 基础与主题变量 ========== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --purple: #7C3AED;
+    --purple-dark: #5B21B6;
+    --purple-bg: #F1EBFD;
+    --blue: #2563EB;
+    --blue-bg: #E8EFFD;
+    --page-bg: #F7F6FB;
+    --card-bg: #FFFFFF;
+    --border: #E8E5F1;
+    --text: #221E33;
+    --text-2: #7A7590;
+    --green: #059669;
+    --orange: #B45309;
+    --orange-bg: #FDF3E3;
+    --red: #DC2626;
+  }
+  html, body { background: var(--page-bg); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #E3D6FA; }
+  .hidden { display: none !important; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  /* ========== 顶部栏 ========== */
+  .topbar { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+  .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 42px; height: 42px; border-radius: 11px; flex-shrink: 0;
+    background: linear-gradient(135deg, #7C3AED, #5B21B6);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 15px; letter-spacing: .5px;
+  }
+  h1 { font-size: 19px; font-weight: 700; line-height: 1.3; }
+  .subtitle { color: var(--text-2); font-size: 12.5px; margin-top: 1px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ========== 按钮 ========== */
+  .btn {
+    font: inherit; border: none; cursor: pointer; border-radius: 8px;
+    padding: 8px 16px; font-size: 13.5px; font-weight: 500;
+    transition: background .15s, color .15s, border-color .15s;
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  }
+  .btn:focus-visible { outline: 2px solid rgba(124, 58, 237, .5); outline-offset: 1px; }
+  .btn-primary { background: var(--purple); color: #fff; }
+  .btn-primary:hover { background: var(--purple-dark); }
+  .btn-outline { background: #fff; color: var(--purple); border: 1px solid var(--purple); }
+  .btn-outline:hover { background: var(--purple-bg); }
+  .btn-danger-ghost { background: #fff; color: var(--orange); border: 1px solid #EADFC9; }
+  .btn-danger-ghost:hover { background: var(--orange-bg); }
+  .btn-warn-solid { background: var(--orange); color: #fff; }
+  .btn-warn-solid:hover { background: #92400E; }
+  .btn-ghost { background: transparent; color: var(--text-2); }
+  .btn-ghost:hover { background: #F1EFF7; color: var(--text); }
+  .btn-sm { padding: 6px 13px; font-size: 13px; }
+
+  /* ========== 清空数据二次确认条 ========== */
+  .confirm-bar { background: var(--orange-bg); border-bottom: 1px solid #F0DCC0; }
+  .confirm-inner { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 13px; color: var(--orange); flex-wrap: wrap; }
+  .confirm-inner .confirm-text { flex: 1; min-width: 200px; font-weight: 500; }
+
+  /* ========== 卡片 ========== */
+  .card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 22px; margin: 18px 0; box-shadow: 0 1px 3px rgba(34, 30, 51, .04);
+  }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .card-title { font-size: 15.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .card-title::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--purple); }
+  .card-desc { font-size: 12.5px; color: var(--text-2); margin-top: 3px; }
+
+  /* ========== 表单 ========== */
+  .form-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .field label { display: block; font-size: 12.5px; color: var(--text-2); margin-bottom: 6px; }
+  input[type="text"], input[type="date"], textarea {
+    width: 100%; border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font: inherit; font-size: 13.5px; color: var(--text); background: #fff;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(124, 58, 237, .12); }
+  input::placeholder, textarea::placeholder { color: #A9A4BC; }
+  textarea { resize: vertical; min-height: 58px; line-height: 1.55; }
+
+  /* ========== 维度管理 ========== */
+  .dim-section { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .side-title { font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+  .dim-count { color: var(--text-2); font-weight: 400; font-size: 12px; margin-left: 6px; }
+  .dim-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dim-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--purple-bg); border: 1px solid #E3D6FA; border-radius: 999px;
+    padding: 5px 6px 5px 12px; font-size: 13px;
+  }
+  .dim-avg {
+    background: #fff; color: var(--purple-dark); font-weight: 700; font-size: 12px;
+    border-radius: 999px; padding: 1px 8px; min-width: 36px; text-align: center;
+  }
+  .dim-del {
+    border: none; background: transparent; color: #A79FCB; cursor: pointer;
+    width: 18px; height: 18px; border-radius: 50%; font-size: 14px; line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center; padding: 0;
+  }
+  .dim-del:hover { background: #FDE8E8; color: var(--red); }
+  .dim-add { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+  .dim-add input { max-width: 260px; }
+  .dim-add-hint { font-size: 12px; color: var(--text-2); }
+
+  /* ========== 用例列表 ========== */
+  .case-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; background: #fff; }
+  .case-item.open { border-color: #D6C8F5; box-shadow: 0 2px 10px rgba(124, 58, 237, .08); }
+  .case-head {
+    display: flex; align-items: center; gap: 10px; padding: 11px 14px;
+    cursor: pointer; user-select: none; background: #FCFBFE;
+  }
+  .case-item.open .case-head { background: var(--purple-bg); }
+  .case-head:focus-visible { outline: 2px solid rgba(124, 58, 237, .5); outline-offset: -2px; }
+  .case-no {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px; font-weight: 700; color: var(--purple-dark);
+    background: #fff; border: 1px solid #E3D6FA; padding: 2px 8px; border-radius: 6px; flex-shrink: 0;
+  }
+  .case-preview { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13.5px; }
+  .badge-bad { background: var(--orange-bg); color: var(--orange); border: 1px solid #F0DCC0; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px; flex-shrink: 0; }
+  .case-avg { font-size: 12.5px; color: var(--text-2); white-space: nowrap; flex-shrink: 0; }
+  .case-avg b { color: var(--purple-dark); }
+  .case-time { font-size: 12px; color: var(--text-2); white-space: nowrap; flex-shrink: 0; }
+  .chev { color: var(--text-2); display: inline-flex; transition: transform .2s; flex-shrink: 0; }
+  .case-item.open .chev { transform: rotate(180deg); }
+
+  .case-body { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; padding: 16px; border-top: 1px solid var(--border); animation: slideDown .18s ease; }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } }
+  .case-field { margin-bottom: 12px; }
+  .case-field:last-child { margin-bottom: 0; }
+  .case-field label { font-size: 12.5px; color: var(--text-2); display: block; margin-bottom: 5px; }
+  .score-row { display: flex; align-items: center; gap: 10px; padding: 5px 0; }
+  .score-dim-name { width: 78px; font-size: 13px; flex-shrink: 0; }
+  .stars { display: inline-flex; gap: 3px; }
+  .star { background: none; border: none; padding: 0; cursor: pointer; line-height: 0; }
+  .star-ic { display: block; }
+  .star-ic path { fill: #DAD5E8; transition: fill .1s; }
+  .star.on .star-ic path { fill: var(--purple); }
+  .star:hover .star-ic path { fill: #A78BFA; }
+  .star.on:hover .star-ic path { fill: var(--purple-dark); }
+  .star:focus-visible { outline: 2px solid rgba(124, 58, 237, .5); outline-offset: 1px; border-radius: 3px; }
+  .score-val { font-size: 12px; color: var(--text-2); min-width: 46px; }
+  .score-val.has { color: var(--purple-dark); font-weight: 600; }
+  .badcase-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 14px 0 0; padding: 10px 12px; background: #FAF9FD; border-radius: 10px; font-size: 13px; }
+  .seg { display: inline-flex; background: #EFEDF6; border-radius: 8px; padding: 2px; }
+  .seg button { border: none; background: transparent; padding: 5px 14px; border-radius: 6px; font: inherit; font-size: 12.5px; color: var(--text-2); cursor: pointer; }
+  .seg button.on-no { background: #fff; color: var(--text); font-weight: 600; }
+  .seg button.on-yes { background: var(--orange-bg); color: var(--orange); font-weight: 600; }
+  .case-actions { display: flex; gap: 10px; margin-top: 14px; }
+
+  .empty-state {
+    text-align: center; color: var(--text-2); padding: 36px 16px;
+    border: 1px dashed var(--border); border-radius: 12px; font-size: 13.5px; background: #FCFBFE;
+  }
+
+  /* ========== 统计面板 ========== */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat-tile { border-radius: 12px; padding: 14px 16px; }
+  .stat-tile .num { font-size: 24px; font-weight: 700; line-height: 1.25; font-variant-numeric: tabular-nums; }
+  .stat-tile .lbl { font-size: 12.5px; color: var(--text-2); margin-top: 2px; }
+  .tile-blue { background: var(--blue-bg); } .tile-blue .num { color: var(--blue); }
+  .tile-orange { background: var(--orange-bg); } .tile-orange .num { color: var(--orange); }
+  .tile-orange.danger { background: #FDECEC; } .tile-orange.danger .num { color: var(--red); }
+  .tile-purple { background: var(--purple-bg); } .tile-purple .num { color: var(--purple-dark); }
+  .stats-main { display: grid; grid-template-columns: 400px 1fr; gap: 22px; align-items: start; }
+  .panel-title { font-size: 13.5px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 7px; }
+  .panel-title::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--purple); }
+  .radar-box { display: flex; justify-content: center; align-items: center; min-height: 300px; }
+  .radar-box svg { width: 100%; max-width: 380px; height: auto; }
+  .radar-empty { text-align: center; color: var(--text-2); font-size: 13px; line-height: 1.9; }
+  .radar-empty span { font-size: 12px; color: #A9A4BC; }
+  .rl { font-size: 12px; fill: #221E33; font-weight: 600; }
+  .rs { font-size: 12px; fill: #7C3AED; font-weight: 700; }
+  .rempty { font-size: 12px; fill: #7A7590; }
+
+  .pass-head { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; }
+  .pass-num { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pass-track { height: 10px; background: #EFEDF6; border-radius: 999px; overflow: hidden; }
+  .pass-fill { height: 100%; border-radius: 999px; transition: width .4s ease; background: var(--purple); }
+  .pass-fill.good { background: var(--green); }
+  .pass-fill.mid { background: var(--orange); }
+  .pass-fill.low { background: var(--red); }
+  .pass-note { font-size: 12px; color: var(--text-2); margin-top: 8px; }
+
+  .conclusion { margin-top: 18px; background: var(--purple-bg); border-left: 3px solid var(--purple); border-radius: 8px; padding: 14px 16px; }
+  .conclusion-title { font-size: 13px; font-weight: 700; color: var(--purple-dark); margin-bottom: 6px; }
+  .conclusion p { font-size: 13.5px; }
+  .conclusion-warn { color: var(--red); font-weight: 600; margin-top: 6px; }
+
+  /* ========== 模态框 ========== */
+  .modal-mask { position: fixed; inset: 0; background: rgba(34, 30, 51, .45); display: flex; align-items: center; justify-content: center; z-index: 100; padding: 20px; animation: fadeIn .18s ease; }
+  @keyframes fadeIn { from { opacity: 0; } }
+  .modal { background: #fff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 88vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(34, 30, 51, .25); animation: popIn .18s ease; }
+  @keyframes popIn { from { opacity: 0; transform: translateY(8px) scale(.98); } }
+  .modal-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  .modal-title { font-size: 16px; font-weight: 700; }
+  .modal-close { width: 30px; height: 30px; border-radius: 8px; border: none; background: transparent; font-size: 17px; color: var(--text-2); cursor: pointer; line-height: 1; }
+  .modal-close:hover { background: #F1EFF7; color: var(--text); }
+  .modal-body { padding: 20px; overflow: auto; }
+  .report-pre {
+    background: #F7F6FB; border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px; line-height: 1.75; white-space: pre-wrap; word-break: break-word;
+    max-height: 55vh; overflow: auto; color: var(--text);
+  }
+  .modal-foot { display: flex; justify-content: flex-end; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+
+  /* ========== 轻提示 ========== */
+  .toast {
+    position: fixed; top: 18px; left: 50%; transform: translateX(-50%) translateY(-12px);
+    background: var(--text); color: #fff; padding: 10px 18px; border-radius: 10px;
+    font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+    z-index: 200; display: flex; align-items: center; gap: 8px; max-width: 82vw;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: #A78BFA; }
+  .toast.success .dot { background: #4ADE80; }
+  .toast.warn .dot { background: #FBBF24; }
+  .toast.error .dot { background: #F87171; }
+
+  /* ========== 页脚 ========== */
+  .footer { text-align: center; color: var(--text-2); font-size: 12px; padding: 8px 0 28px; }
+
+  /* ========== 响应式：≤720px 单栏 ========== */
+  @media (max-width: 720px) {
+    .wrap { padding: 0 14px; }
+    .topbar-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px 0; }
+    .actions { width: 100%; }
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    .stats-main { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .case-body { grid-template-columns: 1fr; }
+    .card { padding: 16px; margin: 14px 0; }
+    .case-time { display: none; }
+    .score-dim-name { width: 66px; }
+    .dim-add input { max-width: none; flex: 1; }
+    .dim-add-hint { display: none; }
+  }
+  @media (max-width: 480px) {
+    .form-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 顶部：标题 + 操作按钮 ========== -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">AI</div>
+      <div>
+        <h1>AI 产品评估打分工具</h1>
+        <p class="subtitle">产品经理的模型验收武器</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-primary" id="btn-sample">加载示例数据</button>
+      <button type="button" class="btn btn-outline" id="btn-export">导出评测报告</button>
+      <button type="button" class="btn btn-danger-ghost" id="btn-clear">清空数据</button>
+    </div>
+  </div>
+  <!-- 清空数据的页面内二次确认条（不使用 confirm） -->
+  <div class="confirm-bar hidden" id="confirm-bar">
+    <div class="wrap confirm-inner">
+      <span class="confirm-text">确定要清空所有数据吗？清空后不可恢复。</span>
+      <button type="button" class="btn btn-sm btn-warn-solid" id="confirm-yes">确认清空</button>
+      <button type="button" class="btn btn-sm btn-ghost" id="confirm-no">取消</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ========== B. 评测任务配置区 ========== -->
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">评测任务配置</div>
+        <div class="card-desc">配置被测产品与评测基本信息，并管理评测维度</div>
+      </div>
+    </div>
+    <div class="form-grid">
+      <div class="field">
+        <label for="in-product">产品名称</label>
+        <input type="text" id="in-product" placeholder="如：智能客服知识库">
+      </div>
+      <div class="field">
+        <label for="in-module">功能模块</label>
+        <input type="text" id="in-module" placeholder="如：订单查询">
+      </div>
+      <div class="field">
+        <label for="in-evaluator">评测人</label>
+        <input type="text" id="in-evaluator" placeholder="如：学员姓名">
+      </div>
+      <div class="field">
+        <label for="in-date">评测日期</label>
+        <input type="date" id="in-date">
+      </div>
+    </div>
+    <div class="dim-section">
+      <div class="side-title">评测维度<span class="dim-count" id="dim-count"></span></div>
+      <div class="dim-list" id="dim-list"></div>
+      <div class="dim-add">
+        <input type="text" id="dim-input" maxlength="8" placeholder="输入自定义维度名称，回车添加">
+        <span class="dim-add-hint">回车即可添加，3-8 个维度</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== C. 用例录入区 ========== -->
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">用例录入</div>
+        <div class="card-desc">每条用例记录测试输入、期望与实际输出，并对各维度点击星星打分（1-5 分）</div>
+      </div>
+      <button type="button" class="btn btn-primary" id="btn-add-case">添加用例</button>
+    </div>
+    <div id="case-list"></div>
+  </section>
+
+  <!-- ========== D. 统计面板 ========== -->
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-title">统计与结论</div>
+        <div class="card-desc">数据实时更新，结论与建议自动生成</div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-tile tile-blue"><div class="num" id="stat-total">0</div><div class="lbl">用例总数</div></div>
+      <div class="stat-tile tile-orange"><div class="num" id="stat-bad">0</div><div class="lbl">badcase 数</div></div>
+      <div class="stat-tile tile-orange" id="tile-rate"><div class="num" id="stat-rate">—</div><div class="lbl">badcase 率</div></div>
+      <div class="stat-tile tile-purple"><div class="num" id="stat-overall">—</div><div class="lbl">综合均分（满分 5）</div></div>
+    </div>
+    <div class="stats-main">
+      <div class="radar-panel">
+        <div class="panel-title">各维度雷达图</div>
+        <div class="radar-box" id="radar-box"></div>
+      </div>
+      <div class="right-panel">
+        <div class="panel-title">通过率</div>
+        <div class="pass-wrap">
+          <div class="pass-head"><span>单条通过率</span><span class="pass-num" id="pass-num">暂无数据</span></div>
+          <div class="pass-track"><div class="pass-fill" id="pass-fill" style="width:0%"></div></div>
+          <div class="pass-note">通过定义：该用例所有维度评分均 ≥ 4 分，且未标记 badcase</div>
+        </div>
+        <div class="conclusion">
+          <div class="conclusion-title">自动结论</div>
+          <div id="conclusion-body"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer">数据仅保存在当前浏览器的 localStorage 中，刷新不丢失，清除浏览器数据前请先导出报告。</p>
+</main>
+
+<!-- ========== E. 评测报告模态框 ========== -->
+<div class="modal-mask hidden" id="modal-mask">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <div class="modal-title" id="modal-title">评测报告预览（Markdown）</div>
+      <button type="button" class="modal-close" id="modal-close" aria-label="关闭报告">×</button>
+    </div>
+    <div class="modal-body">
+      <pre class="report-pre" id="report-pre"></pre>
+    </div>
+    <div class="modal-foot">
+      <button type="button" class="btn btn-outline btn-sm" id="btn-copy">复制到剪贴板</button>
+      <button type="button" class="btn btn-primary btn-sm" id="btn-download">下载 .md</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="modal-close-2">关闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- 轻提示 -->
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ================= 常量 ================= */
+  var STORAGE_KEY = 'ai-eval-tool-v1';
+  var DEFAULT_DIMS = ['准确性', '有帮助性', '安全性', '格式规范性', '响应体验'];
+  var MIN_DIMS = 3;   // 雷达图最少维度数
+  var MAX_DIMS = 8;   // 雷达图最多维度数
+  // 各短板维度对应的优化建议
+  var SUGGESTIONS = {
+    '准确性': '建议优先补充该场景的训练数据，并复核知识库与事实来源的覆盖情况',
+    '有帮助性': '建议优化回答的完整度与引导性，补充用户下一步的操作提示',
+    '安全性': '建议加强敏感场景的拒答策略与合规过滤，并补充红队测试用例',
+    '格式规范性': '建议补充输出格式约束（模板化、结构化输出），并在提示词中明确格式要求',
+    '响应体验': '建议优化首字延迟与回答长度控制，提升回答的可读性与加载体验'
+  };
+  var STAR_SVG = '<svg class="star-ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>';
+  var CHEV_SVG = '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  /* ================= 工具函数 ================= */
+  function $(sel) { return document.querySelector(sel); }
+  function uid() { return 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+  function pad3(n) { return n < 10 ? '00' + n : n < 100 ? '0' + n : '' + n; }
+  // HTML 转义，防止用户输入破坏页面结构
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+    });
+  }
+  function fmt1(n) { return (Math.round(n * 10) / 10).toFixed(1); }
+  function todayStr() { var d = new Date(); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); }
+  function timeStr(ts) { var d = new Date(ts); return pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()) + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes()); }
+  function fullTimeStr() { var d = new Date(); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()) + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes()); }
+  function findCase(id) { for (var i = 0; i < state.cases.length; i++) if (state.cases[i].id === id) return state.cases[i]; return null; }
+  // 用例编号：取当前最大编号 +1
+  function nextNo() {
+    var max = 0;
+    state.cases.forEach(function (c) {
+      var m = /^TC-(\d+)$/.exec(c.no || '');
+      if (m) { var n = parseInt(m[1], 10); if (n > max) max = n; }
+    });
+    return 'TC-' + pad3(max + 1);
+  }
+
+  /* ================= 轻提示（替代 alert） ================= */
+  var toastTimer = null;
+  function toast(msg, type) {
+    type = type || 'info';
+    var el = $('#toast');
+    el.innerHTML = '<span class="dot"></span><span>' + esc(msg) + '</span>';
+    el.className = 'toast show ' + type;
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.className = 'toast ' + type; }, 2400);
+  }
+
+  /* ================= 状态管理 ================= */
+  function defaultState() {
+    return {
+      task: { product: '智能客服知识库', module: '订单查询', evaluator: '学员姓名', date: todayStr() },
+      dimensions: DEFAULT_DIMS.map(function (n) { return { id: uid(), name: n }; }),
+      cases: []
+    };
+  }
+  // 读取 localStorage，带容错与数据清洗
+  function loadState() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (!data || typeof data !== 'object') return null;
+      var base = defaultState();
+      var t = data.task || {};
+      var task = {
+        product: typeof t.product === 'string' ? t.product : base.task.product,
+        module: typeof t.module === 'string' ? t.module : base.task.module,
+        evaluator: typeof t.evaluator === 'string' ? t.evaluator : base.task.evaluator,
+        date: (typeof t.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(t.date)) ? t.date : base.task.date
+      };
+      var dims = (Array.isArray(data.dimensions) ? data.dimensions : [])
+        .filter(function (d) { return d && typeof d.name === 'string' && d.name.trim(); })
+        .map(function (d) { return { id: String(d.id || uid()), name: d.name.trim() }; });
+      if (!dims.length) dims = base.dimensions;
+      var dimIds = {};
+      dims.forEach(function (d) { dimIds[d.id] = true; });
+      var cases = (Array.isArray(data.cases) ? data.cases : []).map(function (c) {
+        if (!c || typeof c !== 'object') return null;
+        var scores = {};
+        if (c.scores && typeof c.scores === 'object') {
+          Object.keys(c.scores).forEach(function (k) {
+            var v = Number(c.scores[k]);
+            if (dimIds[k] && v >= 1 && v <= 5) scores[k] = Math.round(v);
+          });
+        }
+        return {
+          id: String(c.id || uid()),
+          no: typeof c.no === 'string' ? c.no : 'TC-001',
+          input: typeof c.input === 'string' ? c.input : '',
+          expected: typeof c.expected === 'string' ? c.expected : '',
+          actual: typeof c.actual === 'string' ? c.actual : '',
+          scores: scores,
+          badcase: !!c.badcase,
+          remark: typeof c.remark === 'string' ? c.remark : '',
+          updatedAt: Number(c.updatedAt) || Date.now()
+        };
+      }).filter(Boolean);
+      return { task: task, dimensions: dims, cases: cases };
+    } catch (e) {
+      return null;
+    }
+  }
+  // 写入 localStorage，带容错
+  function persist() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      return true;
+    } catch (e) {
+      toast('数据保存失败：浏览器存储不可用或空间不足', 'error');
+      return false;
+    }
+  }
+
+  var state = loadState() || defaultState();
+  var openCases = {}; // 记录用例展开状态：id -> true
+
+  /* ================= 统计计算 ================= */
+  // 某维度的均分（仅统计已打分用例）
+  function dimAvg(dimId) {
+    var vals = state.cases.map(function (c) { return c.scores[dimId]; })
+      .filter(function (v) { return typeof v === 'number' && v >= 1; });
+    if (!vals.length) return null;
+    var s = 0; vals.forEach(function (v) { s += v; });
+    return s / vals.length;
+  }
+  // 单条用例的均分
+  function caseAvg(c) {
+    var vals = state.dimensions.map(function (d) { return c.scores[d.id]; })
+      .filter(function (v) { return typeof v === 'number' && v >= 1; });
+    if (!vals.length) return null;
+    var s = 0; vals.forEach(function (v) { s += v; });
+    return s / vals.length;
+  }
+  // 单条通过 = 所有维度 ≥ 4 分且非 badcase
+  function isPass(c) {
+    if (c.badcase) return false;
+    for (var i = 0; i < state.dimensions.length; i++) {
+      if ((c.scores[state.dimensions[i].id] || 0) < 4) return false;
+    }
+    return true;
+  }
+  function computeStats() {
+    var total = state.cases.length;
+    var bad = state.cases.filter(function (c) { return c.badcase; }).length;
+    var badRate = total ? bad / total : 0;
+    var dims = state.dimensions.map(function (d) { return { id: d.id, name: d.name, avg: dimAvg(d.id) }; });
+    var scored = dims.filter(function (d) { return d.avg !== null; });
+    var overall = null;
+    if (scored.length) { var s = 0; scored.forEach(function (d) { s += d.avg; }); overall = s / scored.length; }
+    var pass = state.cases.filter(isPass).length;
+    var passRate = total ? pass / total : 0;
+    return { total: total, bad: bad, badRate: badRate, dims: dims, overall: overall, pass: pass, passRate: passRate };
+  }
+
+  /* ================= 渲染：任务配置输入框 ================= */
+  function fillTaskInputs() {
+    $('#in-product').value = state.task.product;
+    $('#in-module').value = state.task.module;
+    $('#in-evaluator').value = state.task.evaluator;
+    $('#in-date').value = state.task.date;
+  }
+
+  /* ================= 渲染：维度 chips ================= */
+  function renderDims() {
+    $('#dim-count').textContent = '（当前 ' + state.dimensions.length + ' / ' + MAX_DIMS + ' 个）';
+    $('#dim-list').innerHTML = state.dimensions.map(function (d) {
+      var avg = dimAvg(d.id);
+      return '<span class="dim-chip">' +
+        '<span class="dim-name">' + esc(d.name) + '</span>' +
+        '<span class="dim-avg">' + (avg === null ? '—' : fmt1(avg)) + '</span>' +
+        '<button type="button" class="dim-del" data-dim-del="' + d.id + '" title="删除维度「' + esc(d.name) + '」" aria-label="删除维度">×</button>' +
+        '</span>';
+    }).join('');
+  }
+
+  /* ================= 渲染：用例列表 ================= */
+  function renderCases() {
+    var list = $('#case-list');
+    if (!state.cases.length) {
+      list.innerHTML = '<div class="empty-state">还没有用例，点击右上角加载示例数据或添加用例</div>';
+      return;
+    }
+    var sorted = state.cases.slice().sort(function (a, b) { return b.updatedAt - a.updatedAt; });
+    list.innerHTML = sorted.map(caseHTML).join('');
+  }
+  function caseHTML(c) {
+    var open = !!openCases[c.id];
+    var avg = caseAvg(c);
+    var h = '<div class="case-item' + (open ? ' open' : '') + '" data-case-item="' + c.id + '">';
+    // 头部摘要行（点击展开/收起）
+    h += '<div class="case-head" data-toggle="' + c.id + '" tabindex="0" role="button" aria-expanded="' + open + '">';
+    h += '<span class="case-no">' + esc(c.no) + '</span>';
+    h += '<span class="case-preview" data-preview="' + c.id + '">' + esc(c.input || '（未填写测试输入）') + '</span>';
+    if (c.badcase) h += '<span class="badge-bad">badcase</span>';
+    h += '<span class="case-avg" data-caseavg="' + c.id + '">' + (avg === null ? '未评分' : '均分 <b>' + fmt1(avg) + '</b>') + '</span>';
+    h += '<span class="case-time">' + timeStr(c.updatedAt) + '</span>';
+    h += '<span class="chev">' + CHEV_SVG + '</span>';
+    h += '</div>';
+    if (open) h += caseBodyHTML(c);
+    h += '</div>';
+    return h;
+  }
+  function caseBodyHTML(c) {
+    var h = '<div class="case-body">';
+    // 左栏：文本字段
+    h += '<div class="case-fields">';
+    h += caseField('测试输入', c.id, 'input', c.input, 3, '如：我的订单到哪了？订单号 8829');
+    h += caseField('期望输出', c.id, 'expected', c.expected, 3, '如：提供物流状态与预计送达时间');
+    h += caseField('实际输出', c.id, 'actual', c.actual, 3, '粘贴模型的实际回答');
+    h += '<div class="case-field"><label>备注</label>' +
+      '<input type="text" data-field="remark" data-case="' + c.id + '" value="' + esc(c.remark) + '" placeholder="补充说明，如问题定位、修复建议"></div>';
+    h += '</div>';
+    // 右栏：维度打分 + badcase 开关 + 操作
+    h += '<div class="case-side">';
+    h += '<div class="side-title">维度评分（1-5 分，点击星星打分）</div>';
+    state.dimensions.forEach(function (d) {
+      var v = c.scores[d.id] || 0;
+      h += '<div class="score-row"><span class="score-dim-name">' + esc(d.name) + '</span><span class="stars">';
+      for (var n = 1; n <= 5; n++) {
+        h += '<button type="button" class="star' + (n <= v ? ' on' : '') + '" data-case="' + c.id + '" data-dim="' + d.id + '" data-score="' + n + '" title="' + n + ' 分" aria-label="' + esc(d.name) + ' ' + n + ' 分">' + STAR_SVG + '</button>';
+      }
+      h += '</span><span class="score-val' + (v ? ' has' : '') + '" data-scoreval="' + c.id + '|' + d.id + '">' + (v ? v + ' 分' : '未评分') + '</span></div>';
+    });
+    h += '<div class="badcase-row"><span>是否 badcase</span><span class="seg">' +
+      '<button type="button" data-bad="' + c.id + '" data-val="1" class="' + (c.badcase ? 'on-yes' : '') + '">是</button>' +
+      '<button type="button" data-bad="' + c.id + '" data-val="0" class="' + (!c.badcase ? 'on-no' : '') + '">否</button>' +
+      '</span></div>';
+    h += '<div class="case-actions">' +
+      '<button type="button" class="btn btn-primary btn-sm" data-save="' + c.id + '">保存</button>' +
+      '<button type="button" class="btn btn-danger-ghost btn-sm" data-del="' + c.id + '">删除</button>' +
+      '</div>';
+    h += '</div></div>';
+    return h;
+  }
+  function caseField(label, cid, name, val, rows, placeholder) {
+    return '<div class="case-field"><label>' + label + '</label>' +
+      '<textarea rows="' + rows + '" data-field="' + name + '" data-case="' + cid + '" placeholder="' + esc(placeholder) + '">' + esc(val) + '</textarea></div>';
+  }
+
+  /* ================= 渲染：统计面板 ================= */
+  function renderStats() {
+    var s = computeStats();
+    // 总览数字
+    $('#stat-total').textContent = s.total;
+    $('#stat-bad').textContent = s.bad;
+    $('#stat-rate').textContent = s.total ? (s.badRate * 100).toFixed(1) + '%' : '—';
+    $('#tile-rate').classList.toggle('danger', s.total > 0 && s.badRate > 0.3);
+    $('#stat-overall').textContent = s.overall === null ? '—' : fmt1(s.overall);
+    // 雷达图（有打分才绘制数据多边形）
+    var anyScored = s.dims.some(function (d) { return d.avg !== null; });
+    $('#radar-box').innerHTML = anyScored
+      ? radarSVG(s.dims)
+      : '<div class="radar-empty">暂无评分数据<br><span>添加用例并打分后，将显示维度雷达图</span></div>';
+    // 通过率
+    var pct = s.total ? Math.round(s.passRate * 1000) / 10 : 0;
+    $('#pass-num').textContent = s.total ? pct.toFixed(1) + '%（' + s.pass + ' / ' + s.total + '）' : '暂无数据';
+    var fill = $('#pass-fill');
+    fill.style.width = pct + '%';
+    fill.className = 'pass-fill' + (s.total ? (pct >= 80 ? ' good' : pct >= 50 ? ' mid' : ' low') : '');
+    // 自动结论
+    $('#conclusion-body').innerHTML = conclusionHTML(s);
+  }
+  // 内联 SVG 雷达图：支持 3-8 维自适应
+  function radarSVG(dims) {
+    var n = dims.length;
+    var size = 360, cx = 180, cy = 180, R = 104;
+    function pt(i, ratio) {
+      var ang = -Math.PI / 2 + i * 2 * Math.PI / n;
+      return [cx + R * ratio * Math.cos(ang), cy + R * ratio * Math.sin(ang)];
+    }
+    function ringPoints(ratio) {
+      var pts = [];
+      for (var i = 0; i < n; i++) { var p = pt(i, ratio); pts.push(p[0].toFixed(1) + ',' + p[1].toFixed(1)); }
+      return pts.join(' ');
+    }
+    var svg = '<svg viewBox="0 0 ' + size + ' ' + size + '" role="img" aria-label="各维度评分雷达图">';
+    // 背景网格：5 圈
+    for (var lv = 5; lv >= 1; lv--) {
+      svg += '<polygon points="' + ringPoints(lv / 5) + '" fill="' + (lv === 5 ? '#FBFAFE' : 'none') + '" stroke="#E8E5F1" stroke-width="1"/>';
+    }
+    // 轴线
+    for (var i = 0; i < n; i++) {
+      var p = pt(i, 1);
+      svg += '<line x1="' + cx + '" y1="' + cy + '" x2="' + p[0].toFixed(1) + '" y2="' + p[1].toFixed(1) + '" stroke="#E8E5F1" stroke-width="1"/>';
+    }
+    // 数据多边形（紫色半透明填充）
+    var dpts = [];
+    for (var j = 0; j < n; j++) {
+      var dp = pt(j, (dims[j].avg || 0) / 5);
+      dpts.push(dp[0].toFixed(1) + ',' + dp[1].toFixed(1));
+    }
+    svg += '<polygon points="' + dpts.join(' ') + '" fill="rgba(124,58,237,0.22)" stroke="#7C3AED" stroke-width="2" stroke-linejoin="round"/>';
+    for (var k = 0; k < n; k++) {
+      var vp = pt(k, (dims[k].avg || 0) / 5);
+      svg += '<circle cx="' + vp[0].toFixed(1) + '" cy="' + vp[1].toFixed(1) + '" r="3.5" fill="#7C3AED"/>';
+    }
+    // 维度名称 + 分数标注
+    for (var m = 0; m < n; m++) {
+      var ang = -Math.PI / 2 + m * 2 * Math.PI / n;
+      var cos = Math.cos(ang);
+      var lx = cx + (R + 26) * cos;
+      var ly = cy + (R + 26) * Math.sin(ang) + 4;
+      var anchor = Math.abs(cos) < 0.35 ? 'middle' : (cos > 0 ? 'start' : 'end');
+      var scoreTxt = dims[m].avg === null ? '—' : fmt1(dims[m].avg);
+      svg += '<text x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '" text-anchor="' + anchor + '" class="rl">' + esc(dims[m].name) +
+        '<tspan x="' + lx.toFixed(1) + '" dy="14" class="rs">' + scoreTxt + '</tspan></text>';
+    }
+    svg += '</svg>';
+    return svg;
+  }
+
+  /* ================= 自动结论 ================= */
+  function conclusionParts(s) {
+    if (!s.total) return { main: '暂无数据：添加用例或加载示例数据后，将自动生成结论与建议。', warn: '' };
+    var scored = s.dims.filter(function (d) { return d.avg !== null; });
+    if (!scored.length) return { main: '已有 ' + s.total + ' 条用例，但尚未打分：完成各维度评分后，将自动生成结论与建议。', warn: '' };
+    var lowest = scored[0];
+    scored.forEach(function (d) { if (d.avg < lowest.avg) lowest = d; });
+    var warn = '';
+    if (s.badRate > 0.3) warn = 'badcase 率 ' + (s.badRate * 100).toFixed(1) + '%，高于 30% 警戒线，建议暂缓上线，优先修复已标记的 badcase。';
+    if (lowest.avg >= 4) {
+      var main = '各维度均分均不低于 4 分，整体表现较好';
+      main += s.bad > 0 ? '，但存在 ' + s.bad + ' 条 badcase，建议修复后再进入上线流程。' : '，且未发现 badcase，可进入灰度发布流程。';
+      return { main: main, warn: warn };
+    }
+    var sug = SUGGESTIONS[lowest.name] || '建议围绕该维度补充专项测试用例，并推动定向优化';
+    return { main: '「' + lowest.name + '」均分 ' + fmt1(lowest.avg) + '，是当前最大短板，' + sug + '。', warn: warn };
+  }
+  function conclusionHTML(s) {
+    var p = conclusionParts(s);
+    var h = '<p>' + esc(p.main) + '</p>';
+    if (p.warn) h += '<p class="conclusion-warn">' + esc(p.warn) + '</p>';
+    return h;
+  }
+
+  /* ================= 用例交互 ================= */
+  function refreshCaseHead(c) {
+    var item = document.querySelector('[data-case-item="' + c.id + '"]');
+    if (!item) return;
+    var avgEl = item.querySelector('[data-caseavg]');
+    var avg = caseAvg(c);
+    if (avgEl) avgEl.innerHTML = avg === null ? '未评分' : '均分 <b>' + fmt1(avg) + '</b>';
+    var tm = item.querySelector('.case-time');
+    if (tm) tm.textContent = timeStr(c.updatedAt);
+  }
+  // 点击星星打分
+  function handleStar(btn) {
+    var cid = btn.getAttribute('data-case');
+    var did = btn.getAttribute('data-dim');
+    var score = parseInt(btn.getAttribute('data-score'), 10);
+    var c = findCase(cid);
+    if (!c) return;
+    c.scores[did] = score;
+    c.updatedAt = Date.now();
+    persist();
+    // 局部更新星星点亮状态，避免整页重绘丢失焦点
+    var stars = document.querySelectorAll('.star[data-case="' + cid + '"][data-dim="' + did + '"]');
+    Array.prototype.forEach.call(stars, function (s) {
+      s.classList.toggle('on', parseInt(s.getAttribute('data-score'), 10) <= score);
+    });
+    var valEl = document.querySelector('[data-scoreval="' + cid + '|' + did + '"]');
+    if (valEl) { valEl.textContent = score + ' 分'; valEl.classList.add('has'); }
+    refreshCaseHead(c);
+    renderDims();
+    renderStats();
+  }
+  // badcase 是/否开关
+  function handleBad(btn) {
+    var cid = btn.getAttribute('data-bad');
+    var c = findCase(cid);
+    if (!c) return;
+    c.badcase = btn.getAttribute('data-val') === '1';
+    c.updatedAt = Date.now();
+    persist();
+    var segs = document.querySelectorAll('[data-bad="' + cid + '"]');
+    Array.prototype.forEach.call(segs, function (b) {
+      var v = b.getAttribute('data-val') === '1';
+      b.className = c.badcase ? (v ? 'on-yes' : '') : (v ? '' : 'on-no');
+    });
+    var item = document.querySelector('[data-case-item="' + cid + '"]');
+    if (item) {
+      var head = item.querySelector('.case-head');
+      var avgEl = item.querySelector('.case-avg');
+      var badge = head.querySelector('.badge-bad');
+      if (c.badcase && !badge) {
+        badge = document.createElement('span');
+        badge.className = 'badge-bad';
+        badge.textContent = 'badcase';
+        head.insertBefore(badge, avgEl);
+      } else if (!c.badcase && badge) {
+        badge.parentNode.removeChild(badge);
+      }
+    }
+    refreshCaseHead(c);
+    renderStats();
+  }
+  // 保存：确认并折叠
+  function handleSave(cid) {
+    var c = findCase(cid);
+    if (!c) return;
+    c.updatedAt = Date.now();
+    persist();
+    delete openCases[cid];
+    renderCases();
+    renderStats();
+    toast('已保存 ' + c.no, 'success');
+  }
+  // 删除用例
+  function handleDel(cid) {
+    var c = findCase(cid);
+    state.cases = state.cases.filter(function (x) { return x.id !== cid; });
+    delete openCases[cid];
+    persist();
+    renderCases();
+    renderStats();
+    renderDims();
+    toast('已删除 ' + (c ? c.no : '用例'), 'success');
+  }
+  // 展开/收起
+  function toggleCase(cid) {
+    var item = document.querySelector('[data-case-item="' + cid + '"]');
+    if (!item) return;
+    var c = findCase(cid);
+    if (!c) return;
+    var head = item.querySelector('.case-head');
+    if (item.classList.contains('open')) {
+      item.classList.remove('open');
+      delete openCases[cid];
+      head.setAttribute('aria-expanded', 'false');
+      var body = item.querySelector('.case-body');
+      if (body) body.parentNode.removeChild(body);
+    } else {
+      item.classList.add('open');
+      openCases[cid] = true;
+      head.setAttribute('aria-expanded', 'true');
+      item.insertAdjacentHTML('beforeend', caseBodyHTML(c));
+    }
+  }
+
+  /* ================= 示例数据与清空 ================= */
+  function loadSample() {
+    var dims = DEFAULT_DIMS.map(function (n) { return { id: uid(), name: n }; });
+    function sid(name) { for (var i = 0; i < dims.length; i++) if (dims[i].name === name) return dims[i].id; return null; }
+    // 按维度名打包分数字典
+    function sc(map) { var o = {}; Object.keys(map).forEach(function (k) { o[sid(k)] = map[k]; }); return o; }
+    var t = Date.now();
+    state = {
+      task: { product: '智能客服知识库', module: '订单查询', evaluator: '学员姓名', date: todayStr() },
+      dimensions: dims,
+      cases: [
+        {
+          id: uid(), no: 'TC-001',
+          input: '我的订单到哪了？订单号 8829',
+          expected: '提供该订单的物流状态与预计送达时间',
+          actual: '已为您查到订单 8829 的最新物流：包裹于 10 月 20 日 18:32 到达「杭州转运中心」，预计 10 月 22 日 18:00 前送达，配送员王师傅 138****2210，请保持电话畅通。',
+          scores: sc({ '准确性': 5, '有帮助性': 4, '安全性': 5, '格式规范性': 4, '响应体验': 4 }),
+          badcase: false,
+          remark: '物流节点、预计送达时间与配送员信息均准确，回答完整可直接采纳。',
+          updatedAt: t - 30 * 60 * 1000
+        },
+        {
+          id: uid(), no: 'TC-002',
+          input: '你们支持无理由退款吗？我想退掉上周买的耳机',
+          expected: '说明 7 天无理由退货政策：签收后 7 天内、未激活且附件齐全可申请退货，拆封或激活后不支持',
+          actual: '支持的。我们提供 72 小时无条件退款，任何商品未拆封即可全额退款，退款将在 2 小时内原路退回到您的支付账户，手续费全免。',
+          scores: sc({ '准确性': 1, '有帮助性': 2, '安全性': 3, '格式规范性': 4, '响应体验': 4 }),
+          badcase: true,
+          remark: '实际输出编造了不存在的「72 小时无条件退款」政策，与真实政策（7 天无理由、激活或拆封后不支持）严重不符，涉嫌误导用户并带来合规风险，需优先修复。',
+          updatedAt: t - 18 * 60 * 1000
+        },
+        {
+          id: uid(), no: 'TC-003',
+          input: '把上周的订单按金额从高到低整理成一个表格',
+          expected: '以 Markdown 表格输出订单号、金额、状态三列，并按金额降序排列',
+          actual: '为您找到上周共 3 笔订单：第一笔订单号 5501，金额 1299 元，状态已签收；第二笔订单号 5502，金额 459 元，状态运输中；第三笔订单号 5503，金额 89 元，状态已完成。已按金额从高到低为您排好。',
+          scores: sc({ '准确性': 4, '有帮助性': 4, '安全性': 5, '格式规范性': 2, '响应体验': 3 }),
+          badcase: false,
+          remark: '多轮上下文理解与金额排序正确，但明确要求的 Markdown 表格退化为纯文本罗列，格式规范性不达标。',
+          updatedAt: t - 6 * 60 * 1000
+        }
+      ]
+    };
+    openCases = {};
+    persist();
+    fillTaskInputs();
+    renderDims();
+    renderCases();
+    renderStats();
+    toast('已加载 3 条示例数据（原有数据已替换）', 'success');
+  }
+  function clearAll() {
+    state = defaultState();
+    openCases = {};
+    persist();
+    fillTaskInputs();
+    renderDims();
+    renderCases();
+    renderStats();
+    toast('已清空所有数据', 'success');
+  }
+
+  /* ================= 导出评测报告 ================= */
+  var currentReport = '';
+  function rating(v) { return v >= 4.5 ? '优秀' : v >= 4 ? '良好' : v >= 3 ? '及格' : v >= 2 ? '待改进' : '不合格'; }
+  // Markdown 单元格清洗：竖线转义、换行拍平
+  function mdCell(s) { return String(s || '—').replace(/\|/g, '\\|').replace(/\r?\n/g, ' ').trim() || '—'; }
+  function buildReport() {
+    var s = computeStats();
+    var p = conclusionParts(s);
+    var L = [];
+    L.push('# AI 产品评测报告');
+    L.push('');
+    L.push('## 一、任务信息');
+    L.push('');
+    L.push('| 项目 | 内容 |');
+    L.push('| --- | --- |');
+    L.push('| 产品名称 | ' + mdCell(state.task.product) + ' |');
+    L.push('| 功能模块 | ' + mdCell(state.task.module) + ' |');
+    L.push('| 评测人 | ' + mdCell(state.task.evaluator) + ' |');
+    L.push('| 评测日期 | ' + mdCell(state.task.date) + ' |');
+    L.push('| 用例总数 | ' + s.total + ' |');
+    L.push('| badcase 数 | ' + s.bad + ' |');
+    L.push('| badcase 率 | ' + (s.total ? (s.badRate * 100).toFixed(1) + '%' : '—') + ' |');
+    L.push('| 综合均分 | ' + (s.overall === null ? '—' : fmt1(s.overall) + ' / 5') + ' |');
+    L.push('| 通过率 | ' + (s.total ? (s.passRate * 100).toFixed(1) + '%（' + s.pass + ' / ' + s.total + '）' : '—') + ' |');
+    L.push('');
+    L.push('## 二、各维度均分');
+    L.push('');
+    L.push('| 维度 | 均分 | 评级 |');
+    L.push('| --- | --- | --- |');
+    s.dims.forEach(function (d) {
+      L.push('| ' + mdCell(d.name) + ' | ' + (d.avg === null ? '—' : fmt1(d.avg)) + ' | ' + (d.avg === null ? '未评分' : rating(d.avg)) + ' |');
+    });
+    L.push('');
+    L.push('## 三、badcase 清单');
+    L.push('');
+    var bads = state.cases.filter(function (c) { return c.badcase; });
+    if (!bads.length) {
+      L.push('本次评测未发现 badcase。');
+    } else {
+      bads.forEach(function (c, i) {
+        L.push('### ' + (i + 1) + '. ' + c.no + '（均分 ' + (caseAvg(c) === null ? '—' : fmt1(caseAvg(c))) + '）');
+        L.push('');
+        L.push('- 测试输入：' + mdCell(c.input));
+        L.push('- 期望输出：' + mdCell(c.expected));
+        L.push('- 实际输出：' + mdCell(c.actual));
+        if (c.remark) L.push('- 备注：' + mdCell(c.remark));
+        L.push('');
+      });
+    }
+    L.push('## 四、结论与建议');
+    L.push('');
+    L.push(p.main);
+    if (p.warn) L.push('');
+    if (p.warn) L.push(p.warn);
+    L.push('');
+    L.push('---');
+    L.push('');
+    L.push('> 本报告由「AI 产品评估打分工具」生成，生成时间：' + fullTimeStr());
+    return L.join('\n');
+  }
+  // 复制到剪贴板（含降级方案）
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+  function legacyCopy(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-999px';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  }
+  // 下载 .md 文件
+  function downloadReport() {
+    try {
+      var blob = new Blob([currentReport], { type: 'text/markdown;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'AI产品评测报告_' + (state.task.product || '未命名产品') + '_' + state.task.date + '.md';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 800);
+      toast('报告已开始下载', 'success');
+    } catch (e) {
+      toast('下载失败：' + e.message, 'error');
+    }
+  }
+
+  /* ================= 事件绑定 ================= */
+  // 任务配置输入
+  ['product', 'module', 'evaluator', 'date'].forEach(function (key) {
+    $('#in-' + key).addEventListener('input', function () {
+      state.task[key] = this.value;
+      persist();
+    });
+  });
+  // 添加自定义维度（回车）
+  $('#dim-input').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    var name = this.value.trim();
+    if (!name) { toast('请输入维度名称', 'warn'); return; }
+    if (name.length > 8) { toast('维度名称不超过 8 个字', 'warn'); return; }
+    if (state.dimensions.some(function (d) { return d.name === name; })) { toast('维度「' + name + '」已存在', 'warn'); return; }
+    if (state.dimensions.length >= MAX_DIMS) { toast('最多添加 ' + MAX_DIMS + ' 个维度', 'warn'); return; }
+    state.dimensions.push({ id: uid(), name: name });
+    this.value = '';
+    persist();
+    renderDims();
+    renderCases();
+    renderStats();
+    toast('已添加维度「' + name + '」', 'success');
+  });
+  // 删除维度（事件委托）
+  $('#dim-list').addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-dim-del]');
+    if (!btn) return;
+    var id = btn.getAttribute('data-dim-del');
+    if (state.dimensions.length <= MIN_DIMS) { toast('至少保留 ' + MIN_DIMS + ' 个维度', 'warn'); return; }
+    var dim = null;
+    state.dimensions.forEach(function (d) { if (d.id === id) dim = d; });
+    state.dimensions = state.dimensions.filter(function (d) { return d.id !== id; });
+    // 同步移除各用例中该维度的评分
+    state.cases.forEach(function (c) { delete c.scores[id]; });
+    persist();
+    renderDims();
+    renderCases();
+    renderStats();
+    toast('已删除维度「' + (dim ? dim.name : '') + '」，相关评分已同步移除', 'success');
+  });
+  // 添加用例
+  $('#btn-add-case').addEventListener('click', function () {
+    var c = { id: uid(), no: nextNo(), input: '', expected: '', actual: '', scores: {}, badcase: false, remark: '', updatedAt: Date.now() };
+    state.cases.push(c);
+    openCases[c.id] = true;
+    persist();
+    renderCases();
+    renderStats();
+    var el = document.querySelector('[data-case-item="' + c.id + '"]');
+    if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    toast('已添加用例 ' + c.no + '，请填写评测内容', 'success');
+  });
+  // 用例列表：点击（事件委托）
+  $('#case-list').addEventListener('click', function (e) {
+    var t = e.target;
+    var star = t.closest('.star');
+    if (star) { handleStar(star); return; }
+    var bad = t.closest('[data-bad]');
+    if (bad) { handleBad(bad); return; }
+    var save = t.closest('[data-save]');
+    if (save) { handleSave(save.getAttribute('data-save')); return; }
+    var del = t.closest('[data-del]');
+    if (del) { handleDel(del.getAttribute('data-del')); return; }
+    var head = t.closest('.case-head');
+    if (head) { toggleCase(head.getAttribute('data-toggle')); }
+  });
+  // 用例列表：文本编辑实时生效
+  $('#case-list').addEventListener('input', function (e) {
+    var el = e.target;
+    var field = el.getAttribute && el.getAttribute('data-field');
+    if (!field) return;
+    var c = findCase(el.getAttribute('data-case'));
+    if (!c) return;
+    c[field] = el.value;
+    c.updatedAt = Date.now();
+    persist();
+    if (field === 'input') {
+      var pv = document.querySelector('[data-preview="' + c.id + '"]');
+      if (pv) pv.textContent = c.input || '（未填写测试输入）';
+    }
+    refreshCaseHead(c);
+  });
+  // 用例列表：键盘展开/收起
+  $('#case-list').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var head = e.target.closest && e.target.closest('.case-head');
+    if (head) { e.preventDefault(); toggleCase(head.getAttribute('data-toggle')); }
+  });
+  // 顶部按钮
+  $('#btn-sample').addEventListener('click', loadSample);
+  $('#btn-clear').addEventListener('click', function () { $('#confirm-bar').classList.remove('hidden'); });
+  $('#confirm-no').addEventListener('click', function () { $('#confirm-bar').classList.add('hidden'); });
+  $('#confirm-yes').addEventListener('click', function () {
+    clearAll();
+    $('#confirm-bar').classList.add('hidden');
+  });
+  // 报告模态框
+  $('#btn-export').addEventListener('click', function () {
+    currentReport = buildReport();
+    $('#report-pre').textContent = currentReport;
+    $('#modal-mask').classList.remove('hidden');
+  });
+  function closeModal() { $('#modal-mask').classList.add('hidden'); }
+  $('#modal-close').addEventListener('click', closeModal);
+  $('#modal-close-2').addEventListener('click', closeModal);
+  $('#modal-mask').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  $('#btn-copy').addEventListener('click', function () {
+    copyText(currentReport).then(function (ok) {
+      toast(ok ? '报告已复制到剪贴板' : '复制失败，请手动选中报告文本复制', ok ? 'success' : 'error');
+    });
+  });
+  $('#btn-download').addEventListener('click', downloadReport);
+
+  /* ================= 初始化 ================= */
+  fillTaskInputs();
+  renderDims();
+  renderCases();
+  renderStats();
+})();
+</script>
+</body>
+</html>

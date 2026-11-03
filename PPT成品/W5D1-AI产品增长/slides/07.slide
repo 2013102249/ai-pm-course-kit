@@ -1,0 +1,13 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'relative', flex: 1, alignItems: 'center', justifyContent: 'center', gap: 34 }}>
+        <Text style={{ fontSize: 48, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', lineHeight: 1.4 }}>
+            aha 时刻，是用户<span style={{ color: '#C4B5FD' }}>首次</span>体验到<br />核心价值的最短路径上的那个瞬间
+        </Text>
+        <Box style={{ flexDirection: 'row', gap: 40 }}>
+            <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)' }}>关键词一：首次</Text>
+            <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)' }}>关键词二：核心价值</Text>
+            <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)' }}>关键词三：最短路径</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }}>它是体验到的瞬间，不是功能名称</Text>
+    </Box>
+</Slide>

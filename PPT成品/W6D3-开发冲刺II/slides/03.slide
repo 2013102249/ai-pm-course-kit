@@ -1,0 +1,55 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>W6D3 · 开发冲刺 II</Text>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 8</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三态设计标准总表</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
+
+  <Box style={{ flexDirection: 'row', gap: 28, width: '100%', alignItems: 'flex-start' }}>
+    <Box style={{ width: 650, border: '1px solid #E5E7EB', borderRadius: 12, padding: 6, background: '#FFFFFF' }}>
+      <Table
+        style={{ width: '100%', height: 252 }}
+        defaultTextStyle={{ fontSize: 18, textAlign: 'center', color: '#1E1B4B' }}
+        defaultCellStyle={{
+          border: { bottom: { width: 1, color: '#7C3AED' } },
+          verticalAlign: 'middle',
+        }}
+        cells={[
+          [
+            { text: '状态', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+            { text: '必备要素一', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+            { text: '必备要素二', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+            { text: '必备要素三', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+          ],
+          [
+            { text: '空态', textStyle: { bold: true, color: '#7C3AED' } },
+            '图标',
+            '人话',
+            '下一步动作',
+          ],
+          [
+            { text: '错态', textStyle: { bold: true, color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
+            { text: '发生了什么', cellStyle: { background: { color: '#F5F3FF' } } },
+            { text: '能做什么', cellStyle: { background: { color: '#F5F3FF' } } },
+            { text: '重试入口', cellStyle: { background: { color: '#F5F3FF' } } },
+          ],
+          [
+            { text: '加载态', textStyle: { bold: true, color: '#7C3AED' } },
+            '即时反馈',
+            '进度感知',
+            '防重复',
+          ],
+        ]}
+      />
+    </Box>
+    <Box style={{ flex: 1, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, padding: 14, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/three_states.svg" style={{ width: 440, height: 286, objectFit: 'contain' }} />
+    </Box>
+  </Box>
+
+  <Text style={{ marginTop: 24, fontSize: 16, color: '#64748B' }}>空态 · 错态 · 加载态：每种状态都必须配齐三要素，缺一项即记走查不通过</Text>
+</Slide>

@@ -1,0 +1,41 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>16 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>作业与预告</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 30, flexDirection: 'row', gap: 40 }}>
+        <Box style={{ width: 660, gap: 20 }}>
+            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>课后作业</Text>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 16, padding: '20px 24px', background: '#F5F3FF', borderRadius: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>修订增长方案，并入周五中期答辩材料</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 16, padding: '20px 24px', background: '#EFF6FF', borderRadius: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>完成分层习题，第 8 题即正式版前 1000 用户计划</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 16, padding: '20px 24px', background: '#F5F3FF', borderRadius: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>听播客《AI 产品怎么冷启动》</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, padding: '36px 32px', background: '#7C3AED', borderRadius: 16, justifyContent: 'center', gap: 14 }}>
+            <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }}>下节课预告 · W5 周二</Text>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF' }}>《AB 实验与数据决策》</Text>
+            <Text style={{ fontSize: 17, color: 'rgba(255,255,255,0.85)', lineHeight: 1.55 }}>今天的假设，明天学怎么验证。</Text>
+        </Box>
+    </Box>
+</Slide>

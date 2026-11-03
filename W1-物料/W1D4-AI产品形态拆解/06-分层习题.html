@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W1 周四《AI 产品形态拆解》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl cur" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料/W1D4-AI产品形态拆解 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W1 周四《AI 产品形态拆解》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业；求职挑战层自测，第八周面试课复用。<br />
+本课考点：<strong>形态归类</strong>、<strong>商业模式匹配</strong>。所有题目附参考答案与评分标准。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 以下产品中，属于「工作流编排」形态的是：</strong><br />
+A. 豆包<br />
+B. 扣子（Coze）<br />
+C. 即梦<br />
+D. Manus</p>
+<p><strong>2. 关于「知识库问答」形态，下列说法正确的是：</strong><br />
+A. 不依赖任何外部资料，全靠模型记忆<br />
+B. 答案基于指定资料生成，通常带出处<br />
+C. 必须先对模型做微调才能使用<br />
+D. 只适用于 C 端个人用户</p>
+<p><strong>3. 判断一个 AI 产品是什么形态，最可靠的依据是：</strong><br />
+A. 开发公司的大小<br />
+B. 底层用了哪家模型<br />
+C. 人在回路中的位置与交办深度<br />
+D. 界面好不好看</p>
+<p><strong>4. 「Copilot 副驾」与「自主 Agent」的核心差异是：</strong><br />
+A. Copilot 更贵<br />
+B. Agent 由人只给目标并验收，Copilot 全程由人主导<br />
+C. Copilot 不能调用任何工具<br />
+D. Agent 不需要大模型</p>
+<p><strong>5. 多模态生成产品普遍按积分或生成量计费，主要原因是：</strong><br />
+A. 防止内容被盗版<br />
+B. 单次生成的算力成本高，按量计费与成本结构匹配<br />
+C. 积分制看起来更高级<br />
+D. 用户更喜欢积分</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 用一句话解释「形态没有高下，匹配才对」，并举一个「大材小用」的例子（用轻形态就能满足的场景，硬上了重形态）。</strong></p>
+<p><strong>7. 列出「用户价值 × 技术依赖 × 商业模式」三个维度，各用一句话说明它回答什么问题。</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>8. 形态归类报告（50 分）</strong></p>
+<p>以下三段是三个产品的客观功能描述（不透露产品名）。请对每个产品写出：主形态（若跨形态，补一个副形态）、一条判断依据、一个推断出的商业模式加收费依据。</p>
+<ul>
+<li>产品一：App 形态，用户通过多轮对话提问、改文案、翻译文档；回答为对话流式输出，无流程编排界面。</li>
+<li>产品二：平台形态，用户以拖拽节点方式配置「表单收集 → 调用模型 → 写入表格 → 发送通知」的自动化流程，可保存并重复运行，有运行日志。</li>
+<li>产品三：嵌在邮箱客户端里的写作助手，用户写邮件时实时给出改写与补全建议，是否采纳由用户决定。</li>
+</ul>
+<p><strong>9. 商业模式匹配设计（50 分）</strong></p>
+<p>你负责一款「跨境电商选品知识库问答」产品：买家把选品报告、平台规则、竞品数据放进知识库，运营团队用自然语言提问，答案带资料出处。请设计商业模式：目标客户是谁、选什么收费模式、收费依据是什么、为什么不选另外两种模式（按生成量计费、免费加广告导流）。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>10. 面试真题：形态归类的追问（30 分）</strong></p>
+<p>面试官：「你说你拆过豆包，它算什么形态？和 ChatGPT 比，差别在哪？」<br />
+要求：先给归类，再给一条判断依据，最后补一个「显专业」的补充观点。</p>
+<p><strong>11. 面试真题：场景设计题（30 分）</strong></p>
+<p>面试官：「老板让你给公司做一个 AI 产品，需求就一句话——『让客服团队每天少加点班』。你怎么选形态？商业模式怎么配？」<br />
+要求：先说出你要向老板问清楚的两件事，再给形态选择与两条理由，最后给商业模式与收费依据。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；扣子的核心交互是拖拽节点配置流程，属工作流编排</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能说出「出处」是关键判别特征</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；选 D 得 3 分（直觉对但不构成方法）</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能用「副驾与代驾」类比表述额外加分</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能从成本结构倒推收费依据额外加分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>一句话讲清「形态选择从场景出发，不从技术时髦出发」；例子合理（如问天气用 Agent、查公司制度用花哨 Agent 而非知识库）</td>
+<td>句意准确 15 分 + 例子贴切 10 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>用户价值=解决什么问题；技术依赖=靠什么成立；商业模式=凭什么收钱</td>
+<td>每维度 8 分 + 表述准确 1 分，意思对即可</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 8 题参考答案</strong>：产品一=对话式助手，依据是「人问一句 AI 答一句、无流程界面」，商业模式推断为免费加会员订阅；产品二=工作流编排，依据是「人先画流程、AI 按节点跑、有运行日志」，商业模式推断为平台订阅或按量计费；产品三=Copilot 副驾，依据是「嵌入宿主软件、只建议不执行、采纳权在人」，商业模式推断为按席位订阅。三个产品的收费依据分别对应：对话边际成本低可免费导流、省下的人力可计量可按量、按人头提升效率按人头收。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>三个产品主形态全部归类正确，各给一条判断依据</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>归类与依据齐备，且能识别产品三「只建议不执行」的 Copilot 本质</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外给出副形态判断（如产品一兼有文档解析能力）、收费依据写清「凭什么收这个钱」</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 9 题参考答案</strong>：目标客户=有选品数据资产的中小跨境电商团队与运营部门；收费模式=席位订阅加用量分档；收费依据=替代的运营检索与新人培训时间可计量，价值按人头兑现。不选按生成量：问答边际成本低，按量会把「敢不敢问」变成成本焦虑，反而压制使用；不选免费加广告：B 端决策链上没人看广告，且选品数据敏感，免费模式拿不到信任。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>目标客户具体，收费模式明确，有一条收费依据</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>能从成本结构倒推收费依据，两种「不选」都给出理由</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外考虑分档策略（团队规模、知识库容量）或与按量模式的组合，体现商业敏感度</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 10 题参考答案</strong>：归类=对话式助手（大众定位的通用对话入口）。判断依据=交互以多轮对话为主，人问一句 AI 答一句，无流程编排与自动执行。专业补充：同形态可不同定位——豆包卡「全场景免费入口」，ChatGPT 卡「全球通用助手 + 插件生态」；形态归类只答到「对话式」是及格，能补出定位差异才显功底；也可补一句「先问交办深度，再看技术特长」。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>结论正确，判断依据说清</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>依据带「人在回路中的位置」这类框架表述</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>补上定位差异对比或「主形态加副形态」表述法，体现系统视角</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 11 题参考答案</strong>：先问清两件事——① 客服每天的重复劳动具体是什么（查政策、写回复、还是转工单）；② 出错代价有多大（答错政策会不会引发赔付）。形态选择：以知识库问答为主形态（客服回答公司政策，答案带出处可追责），复杂场景升级为工作流编排（查知识库 → 生成回复 → 转人工确认 → 写工单全自动）。理由一：知识库替代的是可计量的检索与培训时间，直接对应「少加班」；理由二：答案带出处满足客服场景的追责要求。商业模式：若对内=按席位订阅（客服人头），若对外卖=订阅加用量分档；收费依据=按人头提升效率就按人头收。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>先问需求边界，形态选择合理，有一条理由</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>形态含「主 + 副」组合判断，理由对应「少加班」的价值量化</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>问到出错代价与追责，商业模式给出收费依据，体现「成本结构倒推」思维</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

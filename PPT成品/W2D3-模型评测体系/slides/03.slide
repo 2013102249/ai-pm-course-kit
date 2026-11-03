@@ -1,0 +1,26 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D3</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 18</Text>
+    <Box style={{ flexDirection: 'column', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>事故复盘：上线前没人发现它会编</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 36, alignItems: 'flex-start' }}>
+        <Box style={{ width: 420, flexDirection: 'column', gap: 24 }}>
+            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 14 }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>事故链</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.7 }}>客服 AI 编造<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>「72 小时退款」</span>承诺 → 冲上热搜 → 产品下线整改。</Text>
+            </Box>
+            <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 14 }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>新视角</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.7 }}>模型能力问题 W1D2 已经讲过——今天换个视角问：<span style={{ fontWeight: 'bold', color: '#2563EB' }}>上线前为什么没人测出来？</span></Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Image src="assets/hallucination-case.svg" style={{ width: 560, height: 300, borderRadius: 12, border: '1px solid #E5E7EB' }} />
+        </Box>
+    </Box>
+</Slide>

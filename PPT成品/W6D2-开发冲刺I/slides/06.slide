@@ -1,0 +1,44 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, flexDirection: 'column' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D2</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 8</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三个最常卡住的点</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ width: '100%', marginTop: 32, border: '1px solid #E5E7EB', borderRadius: 12, padding: 12, background: '#FFFFFF' }}>
+    <Table
+      style={{ width: '100%', height: 384 }}
+      defaultTextStyle={{ fontSize: 18, textAlign: 'center', color: '#1E1B4B' }}
+      defaultCellStyle={{
+        border: {
+          left: { width: 1, color: '#E5E7EB' },
+          right: { width: 1, color: '#E5E7EB' },
+          top: { width: 1, color: '#E5E7EB' },
+          bottom: { width: 1, color: '#E5E7EB' },
+        },
+      }}
+      cells={[
+        [
+          { text: '卡点类型', textStyle: { bold: true, color: '#FFFFFF', fontSize: 18 }, cellStyle: { background: { color: '#7C3AED' } } },
+          { text: '首查动作', textStyle: { bold: true, color: '#FFFFFF', fontSize: 18 }, cellStyle: { background: { color: '#7C3AED' } } },
+        ],
+        [
+          { text: '环境配置', textStyle: { bold: true, color: '#7C3AED', fontSize: 19 } },
+          { text: '先跑通官方最小示例，确认依赖与版本装齐', textStyle: { textAlign: 'left' }, cellStyle: { paddingLeft: 24 } },
+        ],
+        [
+          { text: 'API 密钥', textStyle: { bold: true, color: '#7C3AED', fontSize: 19 }, cellStyle: { background: { color: '#F5F3FF' } } },
+          { text: '确认 Key 配在环境变量，先用一次真实调用验证', textStyle: { textAlign: 'left' }, cellStyle: { background: { color: '#F5F3FF' }, paddingLeft: 24 } },
+        ],
+        [
+          { text: '联调 CORS 与权限', textStyle: { bold: true, color: '#7C3AED', fontSize: 19 }, cellStyle: { background: { color: '#EFF6FF' } } },
+          { text: '先看浏览器 Console 报错，检查跨域来源与权限配置', textStyle: { textAlign: 'left' }, cellStyle: { background: { color: '#EFF6FF' }, paddingLeft: 24 } },
+        ],
+      ]}
+    />
+  </Box>
+  <Text style={{ fontSize: 16, color: '#64748B', marginTop: 24 }}>只查首查动作，完整排查步骤见《冲刺任务书》教案</Text>
+</Slide>

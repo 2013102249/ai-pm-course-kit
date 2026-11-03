@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W3 周二《Agent 产品设计与工作流实操》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl cur" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W3-物料/W3D2-Agent产品设计与工作流实操 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W3 周二《Agent 产品设计与工作流实操》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 实操课口径：讲授段（0–30 min）可照读，实操段（30–80 min）为陪跑指令<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投屏操作指令 【巡场】巡场要点 【金句】面试金句（放慢语速重复一遍）<br />
+教学红线：所有 Dify / Coze 操作均为通用化描述（节点类型、连线逻辑），不绑定特定版本界面细节，统一口径「以当前版本界面为准」。</p>
+</blockquote>
+<hr />
+<h2>开场与导入（0–3 分钟）</h2>
+<p>大家好，昨天我们讲了 Agent 的架构原理——规划、记忆、工具、执行四要素，还有 ReAct 循环。今天不讲新概念，今天动手：用 Dify 或者 Coze（扣子），把你主项目的工作流原型搭出来。周五就是原型评审 I，里程碑 ②，今天是直接前置。</p>
+<p>先花 30 秒复习。Agent 四要素，规划、记忆、工具、执行；ReAct 循环，思考、行动、观察，转圈直到完成任务。齐了，往下走。</p>
+<p>【问】上课先抛一个两难案例：同样是「帮用户安排出差」，为什么有的产品做成 Agent，让模型自己规划；有的产品做成固定流程，一步步点下一步？【停，点 1–2 名学员】</p>
+<p>有同学说到自由度，有同学说到可控——都对，但都不完整。今天的第一个任务，就是把这个「感觉」变成一把可以量化的尺子。</p>
+<h2>环节一：Agent vs 工作流决策框架（3–13 分钟）</h2>
+<p>【操作：打开配图《工作流编排示意图》，先只看主链路：开始 → LLM 节点 → 工具节点 → 条件分支 → 输出】</p>
+<p>这就是一条最典型的工作流：五个节点，一条主链路，每一步做什么、输入输出是什么，事先全部定死。而 Agent 呢，只有一个起点和一个目标，中间怎么走，模型自己决定。</p>
+<p>那产品经理怎么选？三个维度，一个一个过。</p>
+<p><strong>第一维，任务确定性。</strong> 问自己一个问题：这个任务的流程图，你画得出来吗？画得出、步骤和顺序都能预先定义——用工作流。画不出、路径要模型现场规划——才考虑 Agent。</p>
+<p><strong>第二维，步骤数。</strong> 数得出来的，常见三到八步，固定有限——工作流。数不出来、随输入动态伸缩的——Agent。</p>
+<p><strong>第三维，容错要求。</strong> 出错的代价是什么？如果是钱、信任、不可逆操作，低容错，用工作流，而且要加人工把关。如果是可以重来、试错成本低的事，Agent 的多轮自我修正反而是优势。</p>
+<p>【问】用这把尺子判断：让 AI 自由规划一次旅行行程可以放手，为什么让它审核报销单就不行？【停】</p>
+<p>对——行程错了代价低，重跑就是；报销涉及钱和合规，错一步有真实损失。这就是容错维度在说话。</p>
+<p>好，现场快判四个场景，我说场景，你们喊答案。</p>
+<p>每天定时抓取五个指定网站新闻，摘要后发邮件——【停】工作流，步骤固定可数。用户一句话「帮我安排下周去上海出差」，要查日程、订票、订酒店、写行程——【停】Agent，步骤数不定，路径依赖用户日程。客服工单按固定字段分类打标、路由到对应团队——【停】工作流，规则明确，要求稳定可审计。开放式「帮我调研一个竞品并写分析报告」——【停】Agent，子任务要动态拆解，事先无法穷举。</p>
+<p>【金句】把这四题的判断逻辑收成一句话，今天最重要的一句：<strong>能用工作流解决的事，别用 Agent——确定性是产品的好朋友。</strong> 面试被问「什么场景该用 Agent」，先反问确定性，你就赢了一半。</p>
+<h2>环节二：人机协同与失败兜底（13–30 分钟）</h2>
+<p>选好了形态，下一个问题：哪些环节交给机器，哪些环节留给人？</p>
+<p>人机接管点分三类，按时间轴记。</p>
+<p><strong>第一类，审批型，事前。</strong> 高风险、不可逆操作执行之前——对外发邮件、下单付款、删除数据。产品上要展示「AI 准备做什么、依据是什么」，人一键确认或修改。</p>
+<p>【问】如果让 Agent 直接给用户发退款，你会在哪个点设人工接管？【停】</p>
+<p>对，审批型：执行前展示金额和依据，人工确认；金额超阈值强制人审。</p>
+<p><strong>第二类，纠错型，事中。</strong> 模型输出置信度低、两次输出不一致的时候，转人工复核队列。设定一个置信度阈值，低于它就走人。</p>
+<p><strong>第三类，兜底型，事后。</strong> 重试和降级都失败了，转人工。注意一个细节：转人工必须携带完整上下文，不能让用户把问题重新描述一遍——那是最伤体验的一刀。</p>
+<p>设计原则一句话：接管成本要对冲风险损失。每个接管点都要回答三个问题：人工来了看什么、能改什么、改完流程怎么继续。</p>
+<p>再说失败兜底，三件套，顺序不能乱。</p>
+<p><strong>第一件，重试，管瞬时失败。</strong> 超时、网络抖动、限流，自动重试一到两次，前提是节点幂等——重跑不产生副作用。</p>
+<p><strong>第二件，降级，管持续失败。</strong> 主模型、主工具持续不可用，切备用模型、退化为简化逻辑、返回缓存结果，或者礼貌拒答，但要明确告知「结果可能不完整」。</p>
+<p><strong>第三件，转人工，是最终出口。</strong> 前两件都失败，或涉及高风险决策，生成工单，带上对话上下文和已执行步骤，承诺响应时限。</p>
+<p>现在讲一个反面案例。【停，放慢】某团队做了一个客服工作流：用户提问，LLM 节点理解意图，工具节点查订单系统，输出节点回复。上线第一天跑得挺好。第三天，订单系统升级，接口超时。工作流里没有失败分支——工具节点一挂，整条链路中断，用户端的表现是：无限转圈。当天下午投诉翻倍，晚上产品被紧急下线。复盘报告就一句话：<strong>我们设计了所有顺利的路径，没有设计任何一条不顺利的。</strong></p>
+<p>【问】工具调用超时，自动重试两次还失败，产品上用户应该看到什么？【停】</p>
+<p>对——降级或转人工，给明确反馈，不能无限转圈。</p>
+<p>【金句】记住这句：<strong>兜底设计不是技术问题，是产品承诺——用户不在乎错在哪个节点，只在乎坏了之后谁负责。</strong></p>
+<p>好，前 30 分钟讲完，从现在开始，剩下 50 分钟全部动手。</p>
+<h2>环节三：实操陪跑（30–80 分钟，核心环节）</h2>
+<p>先说规矩：我投屏，大家跟做；每一步我演示三到五分钟，然后你们动手，助教巡场；每一步都有完成标志，卡住了举手，别自己耗。五步：建应用、加节点、配工具、调提示词、测运行。界面细节以你们手上当前版本为准，我讲的是节点类型和连线逻辑，产品思路不挑版本。</p>
+<h3>第①步 建应用（30–38 分钟）</h3>
+<p>【操作：投屏演示在 Dify 或 Coze 中创建工作流应用的通用入口：新建应用 → 选择「工作流」类型 → 填写名称与基本信息】</p>
+<p>看投屏：新建一个应用，类型选工作流——注意，不是聊天助手、不是 Agent，选工作流。命名建议用「主项目名-workflow-v1」，比如「售后助手-workflow-v1」。创建成功后进入编排画布。</p>
+<p>【巡场】这一步的典型卡点是找不到「工作流」类型入口，助教直接指。</p>
+<p>完成标志：你的画布打开了。打开的举手，我扫一眼——好，全军过线，30 秒之内我们进第二步。</p>
+<h3>第②步 加节点（38–48 分钟）</h3>
+<p>【操作：投屏演示四类节点的连线逻辑：开始节点 → LLM 节点 → 条件分支节点 → 输出节点；演示从上游节点的输出变量连到下游节点的输入变量】</p>
+<p>现在搭主链路，四类节点。开始节点，定义这条工作流的输入——比如用户的问题。LLM 节点，接大模型，理解和生成。条件分支节点，按条件走向不同路径。输出节点，把结果交给用户。</p>
+<p>连线逻辑就一条：下游节点的输入，来自上游节点的输出变量。你在画布上连的每根线，本质都是一次「变量传递」。</p>
+<p>【问】大家边连边想：如果 LLM 节点的输出格式乱掉，下游会发生什么？【停】</p>
+<p>对——下游解析失败，全链路中断。所以这一步就埋下伏笔：等会儿第④步，我们会用提示词强约束输出格式，再补一条失败分支。</p>
+<p>学员任务：按导学案的设计表，搭出主链路四类节点。硬性要求：至少一个条件分支。失败分支不急着连，第⑤步专门处理。</p>
+<p>完成标志：画布上出现完整主链路连线。</p>
+<h3>第③步 配工具（48–58 分钟）</h3>
+<p>【操作：投屏演示给节点挂载工具或插件的通用配置：选择工具 → 填入 API 凭证或启用内置插件 → 配置输入参数映射 → 单节点试运行】</p>
+<p>光有 LLM 不够，工作流的价值在「能干活」。给节点挂工具：联网搜索、知识库检索，或者你自己接的 API。通用配置四件事：选工具、填凭证或启用插件、把上游变量映射到工具的输入参数、单节点试运行一次。</p>
+<p>【巡场】这一步报错最集中：凭证没填、参数没映射。助教优先处理「红色报错」，其次处理「跑通了但结果不对」。</p>
+<p>学员任务：至少给一个节点配上工具调用。</p>
+<p>完成标志：工具节点单独测试通过。</p>
+<h3>第④步 调提示词（58–68 分钟）</h3>
+<p>【操作：投屏演示在 LLM 节点内写提示词：角色 + 任务 + 输出格式约束；现场先演示一个不限格式的版本跑一次，再改成强约束版本跑一次，对比输出】</p>
+<p>现在回到第②步埋的伏笔。LLM 节点的提示词，三段式：角色、任务、输出格式约束。格式约束怎么写？给它模板——「严格按以下 JSON 结构输出，不要输出任何其他内容」，字段名列清楚。</p>
+<p>【操作：故意跑一次不限格式的版本，让下游条件分支报错】</p>
+<p>看到了吗？输出是自由文本，条件分支读不懂字段，直接断。改完之后——跑通了。这就是「先制造失败，再修复失败」，比背十条最佳姿势都管用。</p>
+<p>学员任务：完成自己 LLM 节点的提示词，明确输出格式。</p>
+<p>完成标志：单节点试运行，输出符合你定义的格式。</p>
+<h3>第⑤步 测运行（68–80 分钟）</h3>
+<p>【操作：投屏演示整条工作流运行；然后故意制造一次失败——临时断开工具或输入乱码文本，展示失败分支如何接住】</p>
+<p>最后一步，也是最容易被跳过的一步：测异常。跑三类输入——正常输入，验主链路；边界输入，比如超长文本、空字段；异常输入，比如完全无关的问题、故意断工具。硬性要求：补上失败分支，异常输入不崩，用户端要有明确反馈。</p>
+<p>【问】如果你的工具节点超时、自动重试两次还失败，你的失败分支应该把用户引到哪？【停】</p>
+<p>对，降级或转人工——就是第 13 分钟讲的兜底三件套，现在落到你自己的画布上。</p>
+<p>完成标志：整条链路，三类输入均可运行。</p>
+<h2>收尾（80–90 分钟）</h2>
+<p>停下手里的活，我们收尾。</p>
+<p>先看作品。请两到三位同学投屏自己的工作流，一分钟讲清楚：解决什么问题、几个节点、失败分支怎么设计的。【停，学员分享，讲师各点评一句：先肯定，再指出一个接管点建议】</p>
+<p>分享完，做一个人机接管自查，三个问题：第一，我的工作流里，风险最高的那一步是什么？第二，它在执行前，有人确认吗？第三，它失败之后，用户看到的最后一条消息是什么？这三个问题答不上来，回去补。</p>
+<p>【金句】最后再重复一遍今天的口诀，抄到导学案上：<strong>能用工作流解决的事，别用 Agent——确定性是产品的好朋友。</strong></p>
+<p>课后作业：完成主项目工作流 V1，把编排画布和三类输入的运行结果截图，归档到项目文件夹。周五原型评审 I，我们按今天的三条线验收：主链路跑通、失败分支存在、接管点明确。今天搭得越完整，周五越轻松。</p>
+<p>下课。</p>
+<hr />
+<h2>附录一：巡场提问清单（助教用）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>巡场时机</th>
+<th>提问</th>
+<th>预设答案 / 判断标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>第②步连线时</td>
+<td>「你这根线，传的是哪个变量？」</td>
+<td>能说出上游输出 → 下游输入的对应关系</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第②步收尾</td>
+<td>「你的条件分支，条件是什么？走两条路分别去哪？」</td>
+<td>条件明确，两条路径去向清晰</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第③步</td>
+<td>「这个工具的输入参数，来自哪个节点？」</td>
+<td>参数映射指向明确的上游变量</td>
+</tr>
+<tr>
+<td>4</td>
+<td>第④步</td>
+<td>「你的输出格式约束，下游靠哪个字段做判断？」</td>
+<td>格式约束里有可供条件分支读取的字段</td>
+</tr>
+<tr>
+<td>5</td>
+<td>第⑤步</td>
+<td>「你的失败分支，用户最后看到什么？」</td>
+<td>有明确反馈文案，不是转圈</td>
+</tr>
+<tr>
+<td>6</td>
+<td>全程通用</td>
+<td>「这一步如果失败，重试安全吗？」</td>
+<td>知道幂等概念，重跑无副作用</td>
+</tr>
+</tbody>
+</table>
+<h2>附录二：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>能用工作流解决的事，别用 Agent——确定性是产品的好朋友。</li>
+<li>Agent 用自主性换灵活性，工作流用确定性换可控性——产品经理的活儿，就是替用户选对这一边。</li>
+<li>兜底设计不是技术问题，是产品承诺——用户不在乎错在哪个节点，只在乎坏了之后谁负责。</li>
+<li>我们设计了所有顺利的路径，没有设计任何一条不顺利的——这就是没有失败分支的产品死法。</li>
+<li>接管成本要对冲风险损失；每个接管点都要回答：人工来了看什么、能改什么、改完流程怎么继续。</li>
+</ol>
+<h2>附录三：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「提示一下——昨天讲的四要素里，哪个要素负责『自己决定下一步』？那不用它决定的东西叫什么？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个角度先记下来。回到问题本身——它问的是确定性，你搭的这条流程，确定性在哪？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「对，完全正确。大声再说一遍，让大家听到——这句面试能直接用。」</td>
+</tr>
+<tr>
+<td>实操环节集体卡住</td>
+<td>「停一下手。我看至少一半同学卡在同一步，我统一讲——不是你的问题，是这一步确实有个坑。」</td>
+</tr>
+<tr>
+<td>个别学员进度过快</td>
+<td>「快的人做加法：给你的工作流再补一个接管点，想想加在哪。」</td>
+</tr>
+<tr>
+<td>个别学员进度过慢</td>
+<td>「别追步骤了，先把主链路四类节点连上，失败分支跟着助教走。」</td>
+</tr>
+<tr>
+<td>平台加载卡住</td>
+<td>「正好，这就是今天要讲的——工具会崩，产品要有兜底。我们先看架构图，等它转完。」</td>
+</tr>
+<tr>
+<td>时间不够要压缩分享</td>
+<td>「分享环节收三个名额，没分享的把作品截图发群里，我逐个点评。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

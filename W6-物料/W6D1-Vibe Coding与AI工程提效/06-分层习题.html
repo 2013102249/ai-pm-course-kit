@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W6 周一《Vibe Coding 与 AI 工程提效》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl cur" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W6-物料/W6D1-Vibe Coding与AI工程提效 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W6 周一《Vibe Coding 与 AI 工程提效》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+本课核心考点：<strong>工具场景匹配</strong>——给定任务，能选出对的工具并论证。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业（周二课前交）；求职挑战层自测，W8 面试课复用。<br />
+所有题目附参考答案与评分标准。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 关于 Vibe Coding 的理解，正确的是：</strong><br />
+A. Vibe Coding 是不写代码，完全交给 AI 自由发挥<br />
+B. Vibe Coding 是用自然语言说清需求、AI 生成代码、人负责验收与迭代<br />
+C. Vibe Coding 只能做玩具 Demo，没有任何职业价值<br />
+D. Vibe Coding 要求产品经理先学会读全部生成代码</p>
+<p><strong>2. 以下场景最适合用 Vibe Coding 的是：</strong><br />
+A. 银行核心交易系统的支付链路<br />
+B. 周五路演前夜，快速搭一个可点击的产品演示页<br />
+C. 需要扛百万并发的生产服务<br />
+D. 要过等保测评的正式系统</p>
+<p><strong>3. 按课堂的派别划分，WorkBuddy 与豆包属于：</strong><br />
+A. 工程派，适合项目级持续迭代<br />
+B. 对话派，零门槛适合演示与原型<br />
+C. 编译派，负责代码检查<br />
+D. 评测派，负责跑分验收</p>
+<p><strong>4. 关于规则文件（AGENTS.md），理解正确的是：</strong><br />
+A. 它是给编译器用的配置文件<br />
+B. 它是放在项目根目录、用自然语言给 AI 智能体立的项目规矩<br />
+C. 它只对某一款特定工具有效，换工具即失效<br />
+D. 它只用来记录 bug</p>
+<p><strong>5. 「一主两辅」原则的含义是：</strong><br />
+A. 一个项目用三种编程语言<br />
+B. 一款主力工具吃透 + 两款备用工具补位，避免工具集邮<br />
+C. 一位主讲师 + 两位助教<br />
+D. 主力工具只用一天，备用工具用两天</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 用一句话向非技术同事解释「什么是 Vibe Coding」，并配一个生活类比。</strong></p>
+<p><strong>7. 写出给 AI 工具下指令的「五段式」结构（五个要素各 2 分，共 10 分），并任选其中一段说明它防住什么失控（15 分）。</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>8. 给定任务选工具并论证（50 分）——本课核心考点</strong></p>
+<p>你是主项目的负责人，团队只有你一个人，MVP 周五路演、周四要接至少 10 名真实用户试用。现有五个国产工具可选：WorkBuddy、豆包、Trae、通义灵码、CodeBuddy。请为下列四个任务分别选出最合适的工具，并给出<strong>两条理由 + 一条风险与对策</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>任务场景</th>
+<th>我选的工具</th>
+<th>理由一</th>
+<th>理由二</th>
+<th>风险与对策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 周五路演前夜，需要 5 分钟内看到演示页</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B. 周二到周四，持续迭代 MVP 核心页面</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C. 你有熟悉的编辑器使用习惯，想给存量代码提速</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D. 想把「整理纪要 → 生成页面 → 跑脚本」串成一条自动化流</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>补充一问（10 分）：你的「一主两辅」组合是什么？为什么不让五款工具都上？</p>
+<p><strong>9. 规则文件设计（50 分）</strong></p>
+<p>为你的主项目设计规则文件（AGENTS.md）大纲，按「项目背景 / 技术约定 / 输出规范 / 红线」四块组织，共 10 条。要求：<br />
+- 每块至少 1 条，红线至少 2 条；<br />
+- 标注你认为最重要的 3 条（序号即可），并说明为什么这 3 条不能省。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>10. 面试真题：你不会写代码，怎么做 Demo？（30 分）</strong></p>
+<p>面试官：「我看你简历写主导了 AI 产品 MVP，但你是运营转岗的——你不会写代码，这个 Demo 到底是不是你自己做的？你平时用什么工具？」<br />
+要求：先给结论，再讲方法论（含工具与边界），最后补一个「显专业」的补充观点。</p>
+<p><strong>11. 案例分析：路演前夜，Demo 翻车（30 分）</strong></p>
+<p>周五路演当天，你提前 10 分钟到场，发现演示页在会场电脑上打不开——页面依赖了一个本地服务和一个只有你电脑有的字体文件；更糟的是，你昨晚刚让 AI「优化」过一轮，按钮交互变了。评委已经在座位上。<br />
+请给出：① 现场的应急动作（按优先级）；② 复盘——这类事故靠什么机制提前防住（至少两条，对应今天所学）。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 A 得 3 分（知道交给 AI 但漏掉「人负责验收」这个关键）</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能说明 A/C/D 属于「核心层 / 生产级 / 强合规」加 5 分</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能顺带说出工程派三款加 5 分</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 C 得 5 分（方向对但结论反——AGENTS.md 通用性正是其价值）</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「用自然语言说清需求、AI 生成代码、人负责验收迭代」+ 类比合理（带实习生 / 甲方提需求）</td>
+<td>一句话准确 15 分 + 类比贴切 10 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>五段式：是什么 / 给谁用 / 包含什么 / 长什么样 / 不能怎样</td>
+<td>五要素每个 2 分；「不能怎样」防自由发挥、「长什么样」防风格漂移，意思对即可得 15 分</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 8 题参考答案</strong>：<br />
+- A：WorkBuddy 或豆包。理由：对话派零门槛、不装环境，一句话到页面；路演前夜时间最贵。风险与对策：生成质量不稳定——提前把五段式指令存成模板，出问题换备用工具重放。<br />
+- B：Trae。理由：AI 原生 IDE，项目级工程可连续迭代；工程派支持调试与工具扩展。风险与对策：上手有项目概念门槛——周三前把规则文件立好，减少返工。<br />
+- C：通义灵码或 CodeBuddy。理由：插件形态，装在熟悉的编辑器里，不迁移工作习惯；个人有免费额度。风险与对策：插件能力边界——补一款对话派工具做演示层。<br />
+- D：WorkBuddy。理由：智能体形态，可读写文件、执行命令，串得起多步任务流。风险与对策：自动化链路要设人工确认点，避免误操作。<br />
+- 补充问：一主两辅组合，忌五款全上——理由围绕「注意力是最稀缺资源」「每多一款工具多一套学习与故障成本」。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>四个任务都选了工具，理由基本成立；组合题有结论</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>每个任务两条理由到位且区分了对话派 / 工程派；风险与对策具体可执行</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>补充问答出「一主两辅」的资源逻辑（如「注意力稀缺」「故障成本」），或提到「提前备好指令模板」等工程习惯</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 9 题参考答案</strong>：四块齐全、红线 ≥2 条、标注最重要的 3 条。最重要的 3 条通常应包含：一条红线（不许调用未经验证接口 / 不许改核心计算逻辑）、一条技术约定（单文件 / 无外部依赖 / 配色统一）、一条输出规范（改完必须运行验证）。理由指向：安全兜底、一致性、可验收。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>四块结构完整，10 条写完，红线不少于 2 条</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>条目具体可执行（无「注意代码质量」式空话），标注的 3 条理由说清</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>规则体现本项目特有风险（如数据接口、配色规范、禁止事项与周四真实用户试用联动）</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 10 题参考答案</strong>：结论=「是我主导做的，我的代码是提示词和工作流」。方法论：五段式写指令、五步循环快速迭代、工具一主两辅按场景匹配、边界两层分离（演示层快跑，核心层慢验）。专业补充：「选工具看生态匹配——国内团队、国内合规，工具链也长在国内」或「AI 生成的代码必须过人工验收关，我不追一次生成对，我追迭代速度」。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>结论清晰，讲清 Vibe Coding 方法论，答出用什么工具</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>理由带「提示词 + 工作流 = 我的代码」的框架表述，提到边界分层</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>补上「工具选型看生态 / 合规匹配」或「人工验收关」等显专业观点，表达有结构</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 11 题参考答案</strong>：应急动作优先级：① 改用手机 / 备用设备打开已缓存的静态版本，先保证「有东西可演」；② 会前 3 分钟向评委说明情况，用截图版流程讲；③ 不当场 debug。复盘机制：① 环境标准化——演示页必须是「零依赖单文件 + 系统字体 + 可离线打开」，写进规则文件红线；② 改动管控——路演前 24 小时冻结需求，AI 的每次「优化」必须跑通验收后才允许保存；③ 提前彩排——按会场设备完整走一遍。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>按优先级给出应急动作，含「不当场 debug」意识</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>复盘机制两条以上，且对应到今天所学（规则文件 / 验收 / 边界）</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>机制上升到流程（如改动冻结、彩排清单），体现「Demo 可移植性」的产品意识</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1180" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="1180" fill="#FFFFFF"/>
+
+<!-- 标题栏 -->
+<rect x="0" y="0" width="1200" height="84" fill="#7C3AED"/>
+<text x="600" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">提示词五要素检查卡</text>
+<text x="600" y="66" text-anchor="middle" font-size="13" fill="#F1EBFD">写完任何一条提示词，五项逐行打勾再提交</text>
+
+<!-- 行1 角色 -->
+<rect x="48" y="108" width="1104" height="180" rx="10" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+<rect x="54" y="118" width="6" height="160" rx="3" fill="#7C3AED"/>
+<text x="84" y="152" font-size="18" font-weight="700" fill="#221E33">角色</text>
+<text x="140" y="151" font-size="14" fill="#6B7280">让模型换一副眼镜看任务</text>
+<rect x="84" y="172" width="44" height="22" rx="11" fill="#F3F4F6"/>
+<text x="106" y="187" text-anchor="middle" font-size="12" fill="#6B7280">反例</text>
+<text x="140" y="188" font-size="14" fill="#6B7280">「你是一个有用的助手」</text>
+<rect x="84" y="212" width="44" height="22" rx="11" fill="#F1EBFD"/>
+<text x="106" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">正例</text>
+<text x="140" y="228" font-size="14" font-weight="600" fill="#5B21B6">「你是一名拥有 10 年经验的企业会议纪要专家，语言专业、克制，不做主观评价」</text>
+
+<!-- 行2 任务 -->
+<rect x="48" y="304" width="1104" height="180" rx="10" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+<rect x="54" y="314" width="6" height="160" rx="3" fill="#2563EB"/>
+<text x="84" y="348" font-size="18" font-weight="700" fill="#221E33">任务</text>
+<text x="140" y="347" font-size="14" fill="#6B7280">把任务写到可验收</text>
+<rect x="84" y="368" width="44" height="22" rx="11" fill="#F3F4F6"/>
+<text x="106" y="383" text-anchor="middle" font-size="12" fill="#6B7280">反例</text>
+<text x="140" y="384" font-size="14" fill="#6B7280">「总结一下」</text>
+<rect x="84" y="408" width="44" height="22" rx="11" fill="#F1EBFD"/>
+<text x="106" y="423" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">正例</text>
+<text x="140" y="424" font-size="14" font-weight="600" fill="#5B21B6">「请将以下会议记录整理成一份结构化会议纪要」</text>
+
+<!-- 行3 约束 -->
+<rect x="48" y="500" width="1104" height="180" rx="10" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+<rect x="54" y="510" width="6" height="160" rx="3" fill="#5B21B6"/>
+<text x="84" y="544" font-size="18" font-weight="700" fill="#221E33">约束</text>
+<text x="140" y="543" font-size="14" fill="#6B7280">划清边界，堵住异常</text>
+<rect x="84" y="564" width="44" height="22" rx="11" fill="#F3F4F6"/>
+<text x="106" y="579" text-anchor="middle" font-size="12" fill="#6B7280">反例</text>
+<text x="140" y="580" font-size="14" fill="#6B7280">「请好好写」</text>
+<rect x="84" y="604" width="44" height="22" rx="11" fill="#F1EBFD"/>
+<text x="106" y="619" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">正例</text>
+<text x="140" y="620" font-size="14" font-weight="600" fill="#5B21B6">「只根据原文整理，不要添加原文没有的信息；总篇幅不超过 300 字」</text>
+
+<!-- 行4 输出格式 -->
+<rect x="48" y="696" width="1104" height="180" rx="10" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+<rect x="54" y="706" width="6" height="160" rx="3" fill="#8B5CF6"/>
+<text x="84" y="740" font-size="18" font-weight="700" fill="#221E33">输出格式</text>
+<text x="168" y="739" font-size="14" fill="#6B7280">定到字段级，下游才能用</text>
+<rect x="84" y="760" width="44" height="22" rx="11" fill="#F3F4F6"/>
+<text x="106" y="775" text-anchor="middle" font-size="12" fill="#6B7280">反例</text>
+<text x="140" y="776" font-size="14" fill="#6B7280">「格式清晰一点」</text>
+<rect x="84" y="800" width="44" height="22" rx="11" fill="#F1EBFD"/>
+<text x="106" y="815" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">正例</text>
+<text x="140" y="816" font-size="14" font-weight="600" fill="#5B21B6">「按会议信息、关键结论、待办事项、风险提示四部分输出；待办用表格，含负责人和截止时间」</text>
+
+<!-- 行5 示例 -->
+<rect x="48" y="892" width="1104" height="180" rx="10" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+<rect x="54" y="902" width="6" height="160" rx="3" fill="#1E40AF"/>
+<text x="84" y="936" font-size="18" font-weight="700" fill="#221E33">示例</text>
+<text x="140" y="935" font-size="14" fill="#6B7280">给一个照着画的样板</text>
+<rect x="84" y="956" width="44" height="22" rx="11" fill="#F3F4F6"/>
+<text x="106" y="971" text-anchor="middle" font-size="12" fill="#6B7280">反例</text>
+<text x="140" y="972" font-size="14" fill="#6B7280">（无示例，格式与风格每次飘）</text>
+<rect x="84" y="996" width="44" height="22" rx="11" fill="#F1EBFD"/>
+<text x="106" y="1011" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">正例</text>
+<text x="140" y="1012" font-size="14" font-weight="600" fill="#5B21B6">「参考示例：输入：本周完成客服知识库 30 篇文档整理，修复 2 个高频咨询入口。</text>
+<text x="140" y="1038" font-size="14" font-weight="600" fill="#5B21B6">输出：一、本周核心进展：交付类——完成客服知识库 30 篇文档整理，覆盖退换货与物流两类高频咨询。」</text>
+
+<!-- 口诀条 -->
+<rect x="48" y="1092" width="1104" height="56" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.2"/>
+<text x="600" y="1127" text-anchor="middle" font-size="17" font-weight="700" fill="#5B21B6">先入戏，再说事，划边界，定格式，给样板——前四项是骨架，示例是稳定器</text>
+</svg>

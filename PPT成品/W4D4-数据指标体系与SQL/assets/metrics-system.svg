@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="720" fill="#F7F6FB"/>
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <rect x="48" y="34" width="4" height="22" fill="#7C3AED"/>
+  <text x="62" y="52" font-size="20" font-weight="700" fill="#221E33">AI 产品指标体系（三层金字塔）</text>
+  <text x="62" y="76" font-size="12" fill="#6B7280">最上面一个数，中间五个格子，最下面一条护栏 · 实线箭头 = 拆解关系，虚线 = 护栏关系</text>
+
+  <!-- 第一层：北极星 -->
+  <text x="60" y="140" font-size="12" font-weight="700" fill="#7C3AED">第一层 · 北极星（1 个数）</text>
+  <rect x="360" y="116" width="480" height="116" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="2"/>
+  <text x="600" y="154" text-anchor="middle" font-size="18" font-weight="700" fill="#5B21B6">北极星指标</text>
+  <text x="600" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">每周生成并被采纳 ≥3 次的用户数</text>
+  <rect x="770" y="106" width="70" height="22" rx="11" fill="#7C3AED"/>
+  <text x="805" y="121" text-anchor="middle" font-size="11" fill="#FFFFFF">教学示例</text>
+
+  <!-- 拆解箭头（实线） -->
+  <line x1="600" y1="234" x2="195" y2="294" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="600" y1="234" x2="400" y2="294" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="600" y1="234" x2="600" y2="294" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="600" y1="234" x2="805" y2="294" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="600" y1="234" x2="1010" y2="294" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <!-- 第二层：一级指标 ×5 -->
+  <text x="60" y="292" font-size="12" font-weight="700" fill="#7C3AED">第二层 · 一级指标（五大核心指标）</text>
+  <rect x="100" y="300" width="190" height="124" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.4"/>
+  <text x="195" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">采纳率</text>
+  <text x="195" y="370" text-anchor="middle" font-size="11.5" fill="#6B7280">被采纳生成 / 总生成</text>
+
+  <rect x="305" y="300" width="190" height="124" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.4"/>
+  <text x="400" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">解决率</text>
+  <text x="400" y="364" text-anchor="middle" font-size="11.5" fill="#6B7280">无人工介入自然结束会话</text>
+  <text x="400" y="384" text-anchor="middle" font-size="11.5" fill="#6B7280">/ 总问题会话</text>
+
+  <rect x="510" y="300" width="190" height="124" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.4"/>
+  <text x="605" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">幻觉率</text>
+  <text x="605" y="370" text-anchor="middle" font-size="11.5" fill="#6B7280">幻觉判定数 / 抽检总数</text>
+
+  <rect x="715" y="300" width="190" height="124" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.4"/>
+  <text x="810" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">留存</text>
+  <text x="810" y="364" text-anchor="middle" font-size="11.5" fill="#6B7280">第 N 日仍活跃新增</text>
+  <text x="810" y="384" text-anchor="middle" font-size="11.5" fill="#6B7280">/ 当日新增</text>
+
+  <rect x="920" y="300" width="190" height="124" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.4"/>
+  <text x="1015" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">单次成本</text>
+  <text x="1015" y="370" text-anchor="middle" font-size="11.5" fill="#6B7280">当期成本 / 有效请求次数</text>
+
+  <!-- 护栏连接（虚线 = 约束关系） -->
+  <line x1="305" y1="424" x2="305" y2="484" stroke="#A5A1B8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <line x1="605" y1="424" x2="605" y2="484" stroke="#A5A1B8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <line x1="905" y1="424" x2="905" y2="484" stroke="#A5A1B8" stroke-width="1.4" stroke-dasharray="5 4"/>
+
+  <!-- 第三层：护栏 -->
+  <text x="60" y="480" font-size="12" font-weight="700" fill="#7C3AED">第三层 · 护栏指标（约束，非分解）</text>
+  <rect x="60" y="492" width="1080" height="96" rx="12" fill="#2A2440"/>
+  <text x="600" y="532" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">护栏指标——防止北极星被『歪』着做上去</text>
+  <text x="600" y="564" text-anchor="middle" font-size="13" fill="#D8D2EE">重试率 ｜ 单次成本 ｜ 幻觉率抽检 ｜ 推送退订率</text>
+
+  <!-- 底部注记 -->
+  <text x="60" y="660" font-size="11" fill="#7A7590">示例值需按业务校准</text>
+  <text x="1140" y="660" text-anchor="end" font-size="11" fill="#7A7590">图例：实线箭头 = 拆解关系 · 虚线 = 护栏关系</text>
+</svg>

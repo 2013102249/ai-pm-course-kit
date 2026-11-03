@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="750" fill="#FFFFFF"/>
+  <rect x="30" y="36" width="4" height="22" fill="#7C3AED"/>
+  <text x="42" y="54" font-size="20" font-weight="700" fill="#221E33">路演评分标准 · 四维各 25 分 · 总分 100 · 75 分通过</text>
+  <text x="42" y="76" font-size="12" fill="#6B7280">规则宣讲投屏 · 颁奖前复现 · W6D5</text>
+
+  <!-- ===== 左侧：四维三档评分表 ===== -->
+  <rect x="30" y="100" width="670" height="40" fill="#F1EBFD"/>
+  <text x="80" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">维度</text>
+  <rect x="130" y="100" width="190" height="40" fill="#7C3AED"/>
+  <text x="225" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">优秀 22–25</text>
+  <rect x="320" y="100" width="190" height="40" fill="#2563EB"/>
+  <text x="415" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">良好 18–21</text>
+  <rect x="510" y="100" width="190" height="40" fill="#7A7590"/>
+  <text x="605" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">合格 15–17</text>
+
+  <rect x="130" y="230" width="670" height="90" fill="#FBFAFD"/>
+  <rect x="130" y="410" width="670" height="90" fill="#FBFAFD"/>
+
+  <g stroke="#E8E5F1" stroke-width="1">
+    <line x1="130" y1="140" x2="130" y2="500"/>
+    <line x1="320" y1="140" x2="320" y2="500"/>
+    <line x1="510" y1="140" x2="510" y2="500"/>
+    <line x1="30" y1="230" x2="700" y2="230"/>
+    <line x1="30" y1="320" x2="700" y2="320"/>
+    <line x1="30" y1="410" x2="700" y2="410"/>
+  </g>
+  <rect x="30" y="100" width="670" height="400" fill="none" stroke="#C9C2DE" stroke-width="1.4"/>
+
+  <!-- 行 1 演示效果 -->
+  <text x="80" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">演示效果</text>
+  <text x="225" y="180" text-anchor="middle" font-size="11.5" fill="#221E33">主流程 5 分钟完整跑通，</text>
+  <text x="225" y="200" text-anchor="middle" font-size="11.5" fill="#221E33">节奏有设计</text>
+  <text x="415" y="180" text-anchor="middle" font-size="11.5" fill="#221E33">跑通但节奏前松后紧</text>
+  <text x="415" y="200" text-anchor="middle" font-size="11.5" fill="#221E33">或路径绕</text>
+  <text x="605" y="180" text-anchor="middle" font-size="11.5" fill="#221E33">有明显卡顿跳步，</text>
+  <text x="605" y="200" text-anchor="middle" font-size="11.5" fill="#221E33">靠讲解弥补</text>
+
+  <!-- 行 2 数据支撑 -->
+  <text x="80" y="280" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">数据支撑</text>
+  <text x="225" y="270" text-anchor="middle" font-size="11.5" fill="#221E33">≥10 人试用 + 前后对比</text>
+  <text x="225" y="290" text-anchor="middle" font-size="11.5" fill="#221E33">+ 用户原声</text>
+  <text x="415" y="270" text-anchor="middle" font-size="11.5" fill="#221E33">有数据但缺对比</text>
+  <text x="415" y="290" text-anchor="middle" font-size="11.5" fill="#221E33">或缺原声</text>
+  <text x="605" y="270" text-anchor="middle" font-size="11.5" fill="#221E33">只有演示</text>
+  <text x="605" y="290" text-anchor="middle" font-size="11.5" fill="#221E33">没有试用数据</text>
+
+  <!-- 行 3 思考深度 -->
+  <text x="80" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">思考深度</text>
+  <text x="225" y="360" text-anchor="middle" font-size="11.5" fill="#221E33">说清一次取舍及理由，</text>
+  <text x="225" y="380" text-anchor="middle" font-size="11.5" fill="#221E33">反思到环节</text>
+  <text x="415" y="360" text-anchor="middle" font-size="11.5" fill="#221E33">取舍理由笼统，</text>
+  <text x="415" y="380" text-anchor="middle" font-size="11.5" fill="#221E33">反思停在表层</text>
+  <text x="605" y="360" text-anchor="middle" font-size="11.5" fill="#221E33">只讲做了什么，</text>
+  <text x="605" y="380" text-anchor="middle" font-size="11.5" fill="#221E33">无取舍无反思</text>
+
+  <!-- 行 4 答辩表现 -->
+  <text x="80" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">答辩表现</text>
+  <text x="225" y="450" text-anchor="middle" font-size="11.5" fill="#221E33">结论先行，不会的说</text>
+  <text x="225" y="470" text-anchor="middle" font-size="11.5" fill="#221E33">『不知道』+ 验证思路</text>
+  <text x="415" y="450" text-anchor="middle" font-size="11.5" fill="#221E33">能答但结构松，</text>
+  <text x="415" y="470" text-anchor="middle" font-size="11.5" fill="#221E33">偶有防御辩解</text>
+  <text x="605" y="450" text-anchor="middle" font-size="11.5" fill="#221E33">答非所问、</text>
+  <text x="605" y="470" text-anchor="middle" font-size="11.5" fill="#221E33">回避或争辩</text>
+
+  <text x="365" y="524" text-anchor="middle" font-size="11" fill="#6B7280">完整三档描述见评分表（导学案）</text>
+
+  <!-- ===== 右侧：四维雷达示意 ===== -->
+  <line x1="945" y1="160" x2="945" y2="440" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="805" y1="300" x2="1085" y2="300" stroke="#E8E5F1" stroke-width="1.2"/>
+  <path d="M945,160 L1085,300 L945,440 L805,300 Z" fill="none" stroke="#C9C2DE" stroke-width="1.4" stroke-dasharray="5,4"/>
+  <path d="M945,171 L1074,300 L945,429 L816,300 Z" fill="#7C3AED" fill-opacity="0.14" stroke="#7C3AED" stroke-width="2"/>
+  <path d="M945,213 L1032,300 L945,387 L858,300 Z" fill="#7A7590" fill-opacity="0.15" stroke="#7A7590" stroke-width="2"/>
+  <text x="945" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#221E33">演示效果</text>
+  <text x="1095" y="304" font-size="12" font-weight="700" fill="#221E33">数据支撑</text>
+  <text x="945" y="462" text-anchor="middle" font-size="12" font-weight="700" fill="#221E33">思考深度</text>
+  <text x="795" y="304" text-anchor="end" font-size="12" font-weight="700" fill="#221E33">答辩表现</text>
+
+  <line x1="770" y1="491" x2="792" y2="491" stroke="#7C3AED" stroke-width="2.5"/>
+  <text x="798" y="495" font-size="11" fill="#6B7280">优秀项目</text>
+  <line x1="880" y1="491" x2="902" y2="491" stroke="#7A7590" stroke-width="2.5"/>
+  <text x="908" y="495" font-size="11" fill="#6B7280">合格项目</text>
+  <line x1="990" y1="491" x2="1012" y2="491" stroke="#C9C2DE" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <text x="1018" y="495" font-size="11" fill="#6B7280">满分轮廓（100%）</text>
+  <text x="945" y="528" text-anchor="middle" font-size="10.5" fill="#6B7280">形状示意 · 非真实数据：优秀项目四维撑开，偏科项目总有一维塌回去</text>
+
+  <!-- ===== 底部：评委留言区 ===== -->
+  <text x="30" y="562" font-size="13" font-weight="700" fill="#221E33">评委留言区</text>
+  <text x="30" y="596" font-size="12" font-weight="700" fill="#5B21B6">最大的亮点</text>
+  <line x1="140" y1="592" x2="760" y2="592" stroke="#C9C2DE" stroke-width="1.5"/>
+  <text x="30" y="634" font-size="12" font-weight="700" fill="#5B21B6">最需要改进的一点</text>
+  <line x1="160" y1="630" x2="760" y2="630" stroke="#C9C2DE" stroke-width="1.5"/>
+  <text x="30" y="672" font-size="12" font-weight="700" fill="#5B21B6">一句行业建议</text>
+  <line x1="140" y1="668" x2="760" y2="668" stroke="#C9C2DE" stroke-width="1.5"/>
+
+  <rect x="790" y="556" width="380" height="130" rx="10" fill="#F1EBFD"/>
+  <text x="810" y="586" font-size="13" font-weight="700" fill="#5B21B6">企业嘉宾面试意向（三选一）</text>
+  <rect x="810" y="604" width="92" height="28" rx="14" fill="#7C3AED"/>
+  <text x="856" y="623" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">值得深聊</text>
+  <rect x="914" y="604" width="64" height="28" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="946" y="623" text-anchor="middle" font-size="12" fill="#7C3AED">待定</text>
+  <rect x="990" y="604" width="64" height="28" rx="14" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.4"/>
+  <text x="1022" y="623" text-anchor="middle" font-size="12" fill="#6B7280">暂不</text>
+
+  <text x="30" y="718" font-size="11" fill="#6B7280">评委构成：讲师 + 往期学员 + 企业嘉宾；去最高最低取平均</text>
+</svg>

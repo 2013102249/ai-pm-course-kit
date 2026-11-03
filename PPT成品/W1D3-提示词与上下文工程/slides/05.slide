@@ -1,0 +1,56 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>05 / 18</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>提示词五要素总览</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
+
+  <Box style={{ flexDirection: 'row', gap: 36, width: '100%', flex: 1 }}>
+    <Box style={{ flexDirection: 'column', width: 590, gap: 12 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>角色</Text>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>——你是谁</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>任务</Text>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>——做什么</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>约束</Text>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>——不许做什么</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+        </Box>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>输出格式</Text>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>——长什么样</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+        </Box>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>示例</Text>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>——照着画的样板</Text>
+      </Box>
+      <Box style={{ background: '#7C3AED', borderRadius: 12, padding: '18px 26px', marginTop: 14, alignItems: 'center' }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#FFFFFF', letterSpacing: 1 }}>先入戏，再说事，划边界，定格式，给样板</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/prompt_five_elements_card.svg" style={{ width: 500, height: 492, borderRadius: 12, border: '1px solid #E5E7EB' }} />
+    </Box>
+  </Box>
+</Slide>

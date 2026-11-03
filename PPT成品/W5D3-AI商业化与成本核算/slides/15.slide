@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D3</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>15 / 18</Text>
+    <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>教学示例，以官网实时价格为准</Text>
+    <Box style={{ flex: 1, flexDirection: 'column' }}>
+        <Box style={{ flexDirection: 'column', gap: 18 }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>单位经济模型：LTV 与 CAC</Text>
+            <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 24 }}>
+            <Text style={{ fontSize: 24, color: '#1E1B4B', letterSpacing: 1 }}>LTV = 定价 × 生命周期 × 毛利率</Text>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F5F3FF', borderRadius: 12, padding: '28px 36px', gap: 40 }}>
+                <Box style={{ flexDirection: 'column', gap: 6 }}>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>LTV</Text>
+                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>≈ 121 元</Text>
+                </Box>
+                <Box style={{ width: 1, height: 72, background: '#E5E7EB' }} />
+                <Box style={{ flexDirection: 'column', gap: 6 }}>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>CAC</Text>
+                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>40 元</Text>
+                </Box>
+                <Box style={{ width: 1, height: 72, background: '#E5E7EB' }} />
+                <Box style={{ flexDirection: 'column', gap: 6 }}>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>LTV / CAC</Text>
+                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>≈ 3.0</Text>
+                </Box>
+            </Box>
+            <Box style={{ border: '2px solid #DC2626', borderRadius: 12, padding: '18px 28px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#DC2626' }}>圈重点：× 毛利率——收 159 不等于赚 159</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

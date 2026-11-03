@@ -1,0 +1,16 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', position: 'relative' }}>
+  <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 48 }}>
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 22 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#F5F3FF', borderRadius: 999, paddingLeft: 22, paddingRight: 22, paddingTop: 9, paddingBottom: 9 }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>主线项目里程碑 ②</Text>
+      </Box>
+      <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)' }}>AI 产品经理实战训练营</Text>
+      <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#FFFFFF' }}>原型评审 I</Text>
+      <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)' }}>W3 周五 · 互评 + 点评 + 带走 V1.5 迭代计划</Text>
+    </Box>
+    <Box style={{ width: 470, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/capability-profile.svg" style={{ width: 470, height: 273, objectFit: 'contain', borderRadius: 12 }} />
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', marginTop: 20 }}>讲师：张小培</Text>
+</Slide>

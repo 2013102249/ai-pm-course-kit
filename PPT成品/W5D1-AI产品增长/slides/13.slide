@@ -1,0 +1,50 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>13 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>裂变：四条设计底线</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 28, flexDirection: 'row', gap: 36 }}>
+        <Box style={{ width: 700, gap: 18 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, padding: '20px 26px', background: '#F5F3FF', borderRadius: 12, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 32, height: 32, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>绑核心价值</Text>
+                <Text style={{ fontSize: 16, color: '#64748B' }}>邀请动作本身就是一次价值使用</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, padding: '20px 26px', background: '#FFFFFF', borderRadius: 12, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 32, height: 32, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>双向收益</Text>
+                <Text style={{ fontSize: 16, color: '#64748B' }}>邀请者与被邀请者都要得到价值</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, padding: '20px 26px', background: '#F5F3FF', borderRadius: 12, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 32, height: 32, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>防薅羊毛</Text>
+                <Text style={{ fontSize: 16, color: '#64748B' }}>奖励优先给产品权益，而不是现金</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, padding: '20px 26px', background: '#FFFFFF', borderRadius: 12, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 32, height: 32, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>排在留存之后</Text>
+                <Text style={{ fontSize: 16, color: '#64748B' }}>漏斗没修好就裂变，只会加速流失</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, padding: '32px 30px', background: '#EFF6FF', borderRadius: 16, justifyContent: 'center', gap: 14 }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>K 因子怎么看</Text>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.6 }}>K 因子只用来做方向判断，数值为示例值，需按业务校准。</Text>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5 }}>配套指标：邀请发送率、被邀请者激活率。</Text>
+        </Box>
+    </Box>
+</Slide>

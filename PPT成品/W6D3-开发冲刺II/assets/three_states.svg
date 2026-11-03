@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+  <rect x="30" y="36" width="4" height="22" fill="#7C3AED"/>
+  <text x="42" y="54" font-size="20" font-weight="700" fill="#221E33">三态设计示意图</text>
+  <text x="42" y="76" font-size="12" fill="#6B7280">空态 · 错态 · 加载态 —— 正例与反例对照 · W6D3 走查标准</text>
+
+  <!-- ===== 左栏 空态 ===== -->
+  <text x="30" y="112" font-size="20" font-weight="700" fill="#221E33">空态</text>
+  <text x="30" y="134" font-size="12" fill="#6B7280">首次无数据 / 搜索无结果 / 功能未开启</text>
+  <line x1="30" y1="146" x2="394" y2="146" stroke="#E8E5F1" stroke-width="1.2"/>
+
+  <rect x="30" y="158" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+  <rect x="336" y="166" width="48" height="22" rx="11" fill="#7C3AED"/>
+  <text x="360" y="181" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">正例</text>
+  <rect x="48" y="186" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2"/>
+  <circle cx="62" cy="196" r="3" fill="#C9C2DE"/><circle cx="72" cy="196" r="3" fill="#C9C2DE"/><circle cx="82" cy="196" r="3" fill="#C9C2DE"/>
+  <line x1="48" y1="206" x2="376" y2="206" stroke="#C9C2DE" stroke-width="1"/>
+  <circle cx="212" cy="240" r="14" fill="none" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="222" y1="250" x2="234" y2="262" stroke="#7C3AED" stroke-width="2"/>
+  <text x="212" y="286" text-anchor="middle" font-size="12" fill="#221E33">没有找到与『退款』相关的结果</text>
+  <text x="212" y="304" text-anchor="middle" font-size="11" fill="#6B7280">试试更短的关键词，或更换同义词</text>
+  <rect x="164" y="308" width="96" height="24" rx="12" fill="#7C3AED"/>
+  <text x="212" y="324" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">清空重搜</text>
+  <text x="212" y="386" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">说清现状 + 给建议 + 给动作</text>
+
+  <rect x="30" y="430" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.4"/>
+  <rect x="336" y="438" width="48" height="22" rx="11" fill="#7A7590"/>
+  <text x="360" y="453" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">反例</text>
+  <rect x="48" y="458" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.2"/>
+  <circle cx="62" cy="468" r="3" fill="#C9C2DE"/><circle cx="72" cy="468" r="3" fill="#C9C2DE"/><circle cx="82" cy="468" r="3" fill="#C9C2DE"/>
+  <line x1="48" y1="478" x2="376" y2="478" stroke="#A5A1B8" stroke-width="1"/>
+  <text x="212" y="540" text-anchor="middle" font-size="14" fill="#7A7590">暂无数据</text>
+  <text x="212" y="648" text-anchor="middle" font-size="12" fill="#6B7280">用户知道空了，但不知道下一步做什么</text>
+
+  <rect x="30" y="702" width="364" height="32" rx="8" fill="#7C3AED"/>
+  <text x="212" y="723" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">合格线｜说清现状 + 给建议 + 给动作</text>
+
+  <!-- ===== 中栏 错态 ===== -->
+  <text x="418" y="112" font-size="20" font-weight="700" fill="#221E33">错态</text>
+  <text x="418" y="134" font-size="12" fill="#6B7280">网络失败 / 服务超时 / 输入非法</text>
+  <line x1="418" y1="146" x2="782" y2="146" stroke="#E8E5F1" stroke-width="1.2"/>
+
+  <rect x="418" y="158" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+  <rect x="724" y="166" width="48" height="22" rx="11" fill="#7C3AED"/>
+  <text x="748" y="181" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">正例</text>
+  <rect x="436" y="186" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2"/>
+  <circle cx="450" cy="196" r="3" fill="#C9C2DE"/><circle cx="460" cy="196" r="3" fill="#C9C2DE"/><circle cx="470" cy="196" r="3" fill="#C9C2DE"/>
+  <line x1="436" y1="206" x2="764" y2="206" stroke="#C9C2DE" stroke-width="1"/>
+  <line x1="560" y1="238" x2="586" y2="238" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="614" y1="238" x2="640" y2="238" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="594" y1="231" x2="606" y2="245" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="606" y1="231" x2="594" y2="245" stroke="#7C3AED" stroke-width="2"/>
+  <text x="600" y="278" text-anchor="middle" font-size="12" fill="#221E33">网络开小差了，回答生成中断</text>
+  <rect x="540" y="290" width="68" height="24" rx="12" fill="#7C3AED"/>
+  <text x="574" y="306" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">重试</text>
+  <text x="620" y="306" font-size="11" fill="#2563EB">查看历史记录</text>
+  <text x="600" y="330" text-anchor="middle" font-size="10" fill="#6B7280">你的问题已保留，重试不会丢失</text>
+  <text x="600" y="386" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">人话说明 + 有路可走 + 内容不丢</text>
+
+  <rect x="418" y="430" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.4"/>
+  <rect x="724" y="438" width="48" height="22" rx="11" fill="#7A7590"/>
+  <text x="748" y="453" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">反例</text>
+  <rect x="436" y="458" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.2"/>
+  <circle cx="450" cy="468" r="3" fill="#C9C2DE"/><circle cx="460" cy="468" r="3" fill="#C9C2DE"/><circle cx="470" cy="468" r="3" fill="#C9C2DE"/>
+  <line x1="436" y1="478" x2="764" y2="478" stroke="#A5A1B8" stroke-width="1"/>
+  <text x="456" y="504" font-size="11" fill="#7A7590">Error: 500 Internal Server Error</text>
+  <text x="456" y="524" font-size="10" fill="#A5A1B8">at handler (app.js:128)</text>
+  <text x="456" y="540" font-size="10" fill="#A5A1B8">at route (server.js:47)</text>
+  <text x="456" y="576" font-size="11" fill="#7A7590" text-decoration="underline">返回首页</text>
+  <text x="600" y="648" text-anchor="middle" font-size="12" fill="#6B7280">技术细节甩给用户 = 信任崩塌</text>
+
+  <rect x="418" y="702" width="364" height="32" rx="8" fill="#7C3AED"/>
+  <text x="600" y="723" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">合格线｜人话说明 + 有路可走 + 内容不丢</text>
+
+  <!-- ===== 右栏 加载态 ===== -->
+  <text x="806" y="112" font-size="20" font-weight="700" fill="#221E33">加载态</text>
+  <text x="806" y="134" font-size="12" fill="#6B7280">任何超过 1 秒的操作</text>
+  <line x1="806" y1="146" x2="1170" y2="146" stroke="#E8E5F1" stroke-width="1.2"/>
+
+  <rect x="806" y="158" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+  <rect x="1112" y="166" width="48" height="22" rx="11" fill="#7C3AED"/>
+  <text x="1136" y="181" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">正例</text>
+  <rect x="824" y="186" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2"/>
+  <circle cx="838" cy="196" r="3" fill="#C9C2DE"/><circle cx="848" cy="196" r="3" fill="#C9C2DE"/><circle cx="858" cy="196" r="3" fill="#C9C2DE"/>
+  <line x1="824" y1="206" x2="1152" y2="206" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="844" y="220" width="280" height="10" rx="5" fill="#E8E5F1"/>
+  <rect x="844" y="220" width="70" height="10" rx="5" fill="#F7F6FB"/>
+  <rect x="844" y="238" width="240" height="10" rx="5" fill="#E8E5F1"/>
+  <rect x="844" y="256" width="260" height="10" rx="5" fill="#E8E5F1"/>
+  <text x="984" y="288" text-anchor="middle" font-size="12" fill="#221E33">正在生成回答，约需 10 秒</text>
+  <rect x="844" y="298" width="280" height="8" rx="4" fill="#E8E5F1"/>
+  <rect x="844" y="298" width="168" height="8" rx="4" fill="#2563EB"/>
+  <rect x="854" y="314" width="64" height="24" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="886" y="330" text-anchor="middle" font-size="12" fill="#7C3AED">取消</text>
+  <rect x="934" y="314" width="88" height="24" rx="12" fill="#E8E5F1"/>
+  <text x="978" y="330" text-anchor="middle" font-size="12" fill="#A5A1B8">重新生成</text>
+  <text x="988" y="386" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">即时反馈 + 进度感知 + 防重复提交</text>
+
+  <rect x="806" y="430" width="364" height="260" rx="10" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.4"/>
+  <rect x="1112" y="438" width="48" height="22" rx="11" fill="#7A7590"/>
+  <text x="1136" y="453" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">反例</text>
+  <rect x="824" y="458" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.2"/>
+  <circle cx="838" cy="468" r="3" fill="#C9C2DE"/><circle cx="848" cy="468" r="3" fill="#C9C2DE"/><circle cx="858" cy="468" r="3" fill="#C9C2DE"/>
+  <line x1="824" y1="478" x2="1152" y2="478" stroke="#A5A1B8" stroke-width="1"/>
+  <text x="988" y="516" text-anchor="middle" font-size="11" fill="#A5A1B8">（画面静止，无任何反馈）</text>
+  <rect x="854" y="556" width="72" height="26" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="890" y="574" text-anchor="middle" font-size="12" fill="#7C3AED">生成</text>
+  <circle cx="962" cy="569" r="12" fill="none" stroke="#7A7590" stroke-width="1.6"/>
+  <line x1="962" y1="569" x2="962" y2="561" stroke="#7A7590" stroke-width="1.6"/>
+  <line x1="962" y1="569" x2="969" y2="569" stroke="#7A7590" stroke-width="1.6"/>
+  <text x="982" y="573" font-size="11" fill="#7A7590">3 秒无反应</text>
+  <text x="988" y="648" text-anchor="middle" font-size="12" fill="#6B7280">用户以为坏了，会重复点击</text>
+
+  <rect x="806" y="702" width="364" height="32" rx="8" fill="#7C3AED"/>
+  <text x="988" y="723" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">合格线｜即时反馈 + 进度感知 + 防重复提交</text>
+
+  <!-- 页脚 -->
+  <text x="30" y="766" font-size="11" fill="#6B7280">三态设计示意图 · 正例 / 反例对照</text>
+  <text x="1170" y="766" text-anchor="end" font-size="11" fill="#6B7280">AI 产品经理就业训练营 · W6D3</text>
+</svg>

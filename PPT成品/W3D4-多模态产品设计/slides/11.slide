@@ -1,0 +1,33 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, borderRadius: 2, background: '#7C3AED' }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>11 / 16</Text>
+
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>成本测算：按次计费口径</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+
+        <Box style={{ background: '#EFF6FF', borderRadius: 14, border: '2px solid #2563EB', padding: '40px 32px', marginTop: 40, alignItems: 'center' }}>
+            <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>
+                日成本 = <span style={{ color: '#7C3AED' }}>日调用次数</span> × <span style={{ color: '#2563EB' }}>单次价格</span> ×（1 + <span style={{ color: '#DC2626' }}>失败重试率</span>）
+            </Text>
+        </Box>
+
+        <Box style={{ flexDirection: 'row', gap: 20, marginTop: 36 }}>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>日调用次数</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>用户每天会真实调用多少次，量大是失控的第一来源</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>单次价格</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>以官网实时价格为准，测算时截图存档、可回溯</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#DC2626' }}>失败重试率</Text>
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>失败后重试同样按次计费，重试越多成本越高</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

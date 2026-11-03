@@ -1,0 +1,19 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#FFFFFF' }}>今晚作业与明日预告</Text>
+  <Box style={{ flexDirection: 'column', gap: 12, marginTop: 8 }}>
+    <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 20px' }}>
+      <Text style={{ fontSize: 22, color: '#FFFFFF' }}>① 看录像三遍，对照「改进清单 V1」填完 ≥9 条</Text>
+    </Box>
+    <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 20px' }}>
+      <Text style={{ fontSize: 22, color: '#FFFFFF' }}>② 按清单逐条整改</Text>
+    </Box>
+    <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 20px' }}>
+      <Text style={{ fontSize: 22, color: '#FFFFFF' }}>③ 明早前，薄弱题口头过一遍</Text>
+    </Box>
+  </Box>
+  <Box style={{ border: '1px solid rgba(255,255,255,0.4)', borderRadius: 10, padding: '12px 20px', marginTop: 6 }}>
+    <Text style={{ fontSize: 20, color: '#FFFFFF', opacity: 0.9 }}>明日预告 · W8D5：二轮定向模拟 + 谈薪 + 结营</Text>
+  </Box>
+  <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#FFFFFF', marginTop: 20 }}>今天暴露，好过面试现场暴露</Text>
+  <Text style={{ fontSize: 14, color: '#FFFFFF', opacity: 0.7, marginTop: 14 }}>录像存入课程云盘（权限受控），30 天后统一删除</Text>
+</Slide>

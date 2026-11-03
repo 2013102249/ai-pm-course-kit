@@ -1,0 +1,57 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D5</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>04 / 10</Text>
+  </Box>
+  <Box style={{ height: '100%', flexDirection: 'column', gap: 16 }}>
+    <Text style={{ fontSize: 34, color: '#1E1B4B', fontWeight: 'bold' }}>答辩流程与计时</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    <Box style={{ flex: 1, flexDirection: 'row', gap: 28, marginTop: 8 }}>
+      <Box style={{ width: 340, background: 'linear-gradient(160deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 14, padding: 36, justifyContent: 'center', gap: 14 }}>
+        <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)' }}>分组 4–6 人 · 每人</Text>
+        <Text style={{ fontSize: 84, color: '#FFFFFF', fontWeight: 'bold', lineHeight: 1.1 }}>6+4</Text>
+        <Text style={{ fontSize: 22, color: '#FFFFFF', fontWeight: 'bold' }}>分钟 · 陈述 + 质询</Text>
+        <Box style={{ width: 48, height: 3, background: 'rgba(255,255,255,0.5)', borderRadius: 2, margin: '10px 0' }} />
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>每句结论配一个数字</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '0 28' }}>
+          <Text style={{ fontSize: 20, color: '#7C3AED', fontWeight: 'bold', width: 120 }}>陈述 6 分钟</Text>
+          <Box style={{ flexDirection: 'column', gap: 4 }}>
+            <Text style={{ fontSize: 20, color: '#1E1B4B', fontWeight: 'bold' }}>三段 × 2 分钟</Text>
+            <Text style={{ fontSize: 16, color: '#64748B' }}>问题与方案 / 数据验证 / 成本与计划</Text>
+          </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '0 28' }}>
+          <Text style={{ fontSize: 20, color: '#2563EB', fontWeight: 'bold', width: 120 }}>质询 4 分钟</Text>
+          <Text style={{ fontSize: 20, color: '#1E1B4B', fontWeight: 'bold' }}>接住投资人五问，追问不断线</Text>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '0 28' }}>
+          <Text style={{ fontSize: 20, color: '#7C3AED', fontWeight: 'bold', width: 120 }}>计时牌</Text>
+          <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+              <Text style={{ fontSize: 20, color: '#1E1B4B' }}>黄牌 · 剩 </Text>
+              <Text style={{ fontSize: 34, color: '#1E1B4B', fontWeight: 'bold' }}>1</Text>
+              <Text style={{ fontSize: 20, color: '#1E1B4B' }}> 分钟</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+              <Text style={{ fontSize: 20, color: '#DC2626', fontWeight: 'bold' }}>红牌 · </Text>
+              <Text style={{ fontSize: 34, color: '#DC2626', fontWeight: 'bold' }}>即停</Text>
+            </Box>
+          </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '0 28' }}>
+          <Text style={{ fontSize: 20, color: '#2563EB', fontWeight: 'bold', width: 120 }}>评分汇总</Text>
+          <Box style={{ flexDirection: 'row', alignItems: 'baseline', gap: 8 }}>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>组内 </Text>
+            <Text style={{ fontSize: 34, color: '#1E1B4B', fontWeight: 'bold' }}>5</Text>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}> 分钟评分汇总</Text>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

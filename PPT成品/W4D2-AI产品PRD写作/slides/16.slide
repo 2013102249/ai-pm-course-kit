@@ -1,0 +1,56 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D2</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>16 / 18</Text>
+  </Box>
+  <Box>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>片段改错：找出 5 处问题</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  </Box>
+  <Box style={{ flex: 1, flexDirection: 'row', gap: 32, marginTop: 22 }}>
+    <Box style={{ width: 500, background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 14, padding: '22px 28px', gap: 14 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#7C3AED', borderRadius: 999, padding: '4px 14px' }}>
+        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>改错片段 · 教学示例</Text>
+      </Box>
+      <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.7 }}>1. 本机器人需要支持智能问答。</Text>
+      <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.7 }}>2. 回答要尽量准确、好用。</Text>
+      <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.7 }}>3. 出错时提示用户重试即可。</Text>
+      <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.7 }}>4. 知识库没有的答案，让模型自己发挥补上。</Text>
+      <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.7 }}>5. 成本由运维关注，上线后看看用户反馈再说。</Text>
+    </Box>
+    <Box style={{ flex: 1, gap: 16 }}>
+      <Text style={{ fontSize: 15, color: '#64748B' }}>个人改错 5 分钟 · 逐处公布答案</Text>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>没有评测标准：缺指标名 / 数字门槛 / 数据来源</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>只有「重试」，缺少四级降级链</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>鼓励模型编造答案，幻觉失控</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>无成本预算：单次成本 / 日上限 / 月预算缺失</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>无数据回流：badcase 未回流评测集</Text>
+      </Box>
+    </Box>
+  </Box>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, marginTop: 20 }}>
+    <Box style={{ background: '#EFF6FF', borderRadius: 999, padding: '8px 22px' }}>
+      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>标准答案见分层习题第 8 题</Text>
+    </Box>
+    <Box style={{ background: '#FEF2F2', borderRadius: 999, padding: '8px 22px' }}>
+      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#DC2626' }}>第 3 处鼓励编造是原则性错误</Text>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,48 @@
+<Slide width={1280} height={720} style={{ width: 1280, height: 720, padding: '60px 60px 60px 60px', background: '#FFFFFF', flexDirection: 'column' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', top: 670, right: 60, fontSize: 14, color: '#64748B' }}>16 / 20</Text>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>知识库产品设计三要素</Text>
+    <Box style={{ background: '#7C3AED', borderRadius: 14, padding: '6px 18px' }}>
+      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>主项目验收标准</Text>
+    </Box>
+  </Box>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+  <Box style={{ flexDirection: 'row', gap: 36, marginTop: 30, alignItems: 'flex-start' }}>
+    <Box style={{ width: 420, flexDirection: 'column', gap: 18 }}>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '18px 22px', flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>更新机制</Text>
+          <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>文档改了，库要跟着改</Text>
+        </Box>
+      </Box>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '18px 22px', flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>权限与安全</Text>
+          <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>谁能看什么，必须管住</Text>
+        </Box>
+      </Box>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '18px 22px', flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>溯源呈现</Text>
+          <Text style={{ fontSize: 15, color: '#64748B', marginTop: 4 }}>每个答案都能点回原文</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ width: 700, height: 390, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/pipeline.svg" style={{ width: 680, height: 380 }} />
+    </Box>
+  </Box>
+</Slide>

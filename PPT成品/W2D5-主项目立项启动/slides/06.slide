@@ -1,0 +1,24 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei','PingFang SC',sans-serif" }}>
+  <Box style={{ position: 'absolute', top: 26, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D5</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 22, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 14</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>好选题在三环交集里</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+  <Box style={{ flexDirection: 'row', gap: 36, marginTop: 22, alignItems: 'center' }}>
+    <Box style={{ width: 440, flexDirection: 'column', gap: 22 }}>
+      <Box style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 12, padding: '26px 28px', gap: 10 }}>
+        <Text style={{ fontSize: 15, color: '#64748B' }}>三环交集</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>交集区 = 合格选题</Text>
+      </Box>
+      <Box style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 12, padding: '26px 28px', gap: 10 }}>
+        <Text style={{ fontSize: 15, color: '#64748B' }}>三环之外 · 月牙区</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#475569' }}>月牙区 = 三种悬空选题</Text>
+      </Box>
+    </Box>
+    <Image src="assets/venn.svg" style={{ width: 620, height: 403 }} />
+  </Box>
+</Slide>

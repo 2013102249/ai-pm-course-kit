@@ -1,0 +1,9 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
+  <Box style={{ flex: 1, justifyContent: 'center', gap: 30 }}>
+    <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', letterSpacing: 2 }}>差异一 · 评测标准</Text>
+    <Text style={{ fontSize: 26, color: 'rgba(255,255,255,0.95)' }}>功能验收 → 效果验收</Text>
+    <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.3 }}>写不出数字说明没想清楚</Text>
+    <Box style={{ width: 120, height: 1, background: 'rgba(255,255,255,0.4)' }} />
+    <Text style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)' }}>三要素：指标名 + 数字门槛 + 数据来源</Text>
+  </Box>
+</Slide>

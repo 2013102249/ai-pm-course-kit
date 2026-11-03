@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 80, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)' }}>
+    <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center', gap: 36 }}>
+        <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center' }}>选型不是选最强，是选最合适</Text>
+        <Box style={{ width: 72, height: 4, background: 'rgba(255,255,255,0.6)', borderRadius: 2 }} />
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', textAlign: 'center' }}>先按场景定能力线 → 能力线之上比成本与延迟 → 合规一票否决</Text>
+    </Box>
+</Slide>

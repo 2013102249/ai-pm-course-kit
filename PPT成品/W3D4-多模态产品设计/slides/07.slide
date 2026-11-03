@@ -1,0 +1,43 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, borderRadius: 2, background: '#7C3AED' }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>07 / 16</Text>
+
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+        <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>选型思考顺序</Text>
+            <Box style={{ background: '#EFF6FF', borderRadius: 16, padding: '8px 20px' }}>
+                <Text style={{ fontSize: 16, color: '#2563EB', fontWeight: 'bold' }}>顺序不能反 · 面试答题框架</Text>
+            </Box>
+        </Box>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+
+        <Box style={{ marginTop: 28, flexDirection: 'column', gap: 8 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '24px 32px' }}>
+                <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>先问价值</Text>
+                <Text style={{ fontSize: 20, color: '#1E1B4B', marginLeft: 16 }}>非多模态能不能解决？先确认这个需求是否非用多模态不可</Text>
+            </Box>
+            <Box style={{ alignItems: 'center' }}><Text style={{ fontSize: 22, color: '#7C3AED', fontWeight: 'bold' }}>↓</Text></Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '24px 32px' }}>
+                <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>再问形态</Text>
+                <Text style={{ fontSize: 20, color: '#1E1B4B', marginLeft: 16 }}>在四类形态中选哪种：文生图 / 文生视频 / 语音 / 数字人</Text>
+            </Box>
+            <Box style={{ alignItems: 'center' }}><Text style={{ fontSize: 22, color: '#7C3AED', fontWeight: 'bold' }}>↓</Text></Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#EFF6FF', borderRadius: 12, padding: '24px 32px' }}>
+                <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#2563EB' }}>最后问边界</Text>
+                <Text style={{ fontSize: 20, color: '#1E1B4B', marginLeft: 16 }}>成本与合规能不能兜住，想清楚再动手</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

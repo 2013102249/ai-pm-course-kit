@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W5 周一《AI 产品增长》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl cur" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W5-物料/W5D1-AI产品增长 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W5 周一《AI 产品增长》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业（与前 1000 用户计划正式版合并提交）；求职挑战层自测，第八周面试课复用。<br />
+所有题目附参考答案与评分标准。本课考点：增长方案设计——为自己的项目写前 1000 用户计划。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 关于 AARRR 模型在 AI 产品上的应用，说法正确的是：</strong><br />
+A. 五个环节平均用力，每个环节分配五分之一的资源<br />
+B. 增长的重心在获客，先做大流量再谈其他<br />
+C. AI 产品的重心在激活和留存——前两层决定生死，后三层决定快慢<br />
+D. 裂变应该最先做，因为它能低成本获客</p>
+<p><strong>2. 关于 aha 时刻，理解正确的是：</strong><br />
+A. aha 时刻就是产品的核心功能名称<br />
+B. aha 时刻是用户首次体验到核心价值的最短路径上的那个瞬间，必须落到可观测行为上<br />
+C. aha 时刻离注册越远越好，先让用户充分了解产品<br />
+D. aha 时刻可以通过加新手引导弹窗来强化</p>
+<p><strong>3. 某 AI 产品 DAU 很高但 30 日留存极差，最可能的诊断是：</strong><br />
+A. 获客渠道质量差，应该立刻换渠道<br />
+B. 激活与留存层有问题，用户没有反复体验到核心价值，DAU 靠推送撑着<br />
+C. 收入模式不对，应该改定价<br />
+D. 裂变力度不够，应该加大邀请奖励</p>
+<p><strong>4. 关于冷启动的种子用户，做法正确的是：</strong><br />
+A. 越多越好，1 万个泛用户比 100 个精准用户更有价值<br />
+B. 先做投放，快速拉满注册量再筛选<br />
+C. 找 100 个高契合的精准用户，去他们聚集的地方服务到极致<br />
+D. 任何一个渠道拉来的人都可以当种子用户</p>
+<p><strong>5. 关于裂变奖励的设计，更合理的是：</strong><br />
+A. 现金红包最直接，力度越大越好<br />
+B. 优先产品权益——与核心价值绑定、筛出真用户、成本可控<br />
+C. 奖励只给邀请者，被邀请者不需要好处<br />
+D. 留存未验证前就先上裂变，抢占市场</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 写出 aha 时刻的三步找法，并用一句话说明每一步最容易犯的错误。</strong></p>
+<p><strong>7. AI 产品获客相比传统产品的两个结构性差异是什么？各用一句话解释。</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>8. 前 1000 用户冷启动计划（50 分，本课核心考点）</strong></p>
+<p>为你自己的主项目写一份前 1000 用户冷启动计划，要求包含：</p>
+<p>① aha 时刻假设（用户第几次用什么功能时觉得「值了」，落到可观测行为，10 分）；<br />
+② 激活路径（从进入产品到 aha 时刻的关键步骤，标注删掉了哪几步，10 分）；<br />
+③ 单点切入（拿产品哪个能力先服务用户，10 分）；<br />
+④ 种子用户来源与服务动作（去哪找前 100 个精准用户、怎么服务到极致，至少 2 条具体动作，10 分）；<br />
+⑤ 主渠道选择与理由（只写 1 条），以及裂变机制的上线条件（10 分）。</p>
+<p><strong>9. 增长方案诊断（50 分）</strong></p>
+<p>某同学的增长方案（教学示例）如下：「我们将投放 5 万元做应用商店买量，同时在五个内容平台开通账号日更，上线即启动邀请返现（每邀请一人得 10 元现金），目标是首月 10 万注册用户。留存抓手：暂无，先把用户量做大再说。」</p>
+<p>请指出这份方案的 4 个问题，并逐条给出修改建议。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>10. 面试真题：给你 3 个月，怎么把一款新 AI 工具做到前 1000 个用户？（30 分）</strong></p>
+<p>面试官：「假设我们上线了一款 AI 会议纪要工具，预算几乎为零，你如何在 3 个月内获得前 1000 个活跃用户？」</p>
+<p>要求：先给总体思路（一句话），再给分阶段动作（至少 2 个阶段），最后说明你会用什么指标判断该不该进入下一阶段。</p>
+<p><strong>11. 案例分析：增长快但留不住（30 分）</strong></p>
+<p>你的 AI 产品上线两个月，注册用户增长曲线很好看，但 7 日留存持续下滑（示例值，需按业务校准），团队里出现两种声音：A 说加大投放和推送力度把量拉回来；B 说停一停增长，先修产品。你支持谁？给出你的判断依据、诊断步骤和验证方法。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；选 B 得 5 分（识别出传统增长误区但结论错误）</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能口头说明「功能名不可验证、行为可验证」加 5 分</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；写出「DAU 是结果不是诊断指标」额外加分</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能说明现金奖励引来薅羊毛人群、污染种子用户池加 5 分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>三步：定核心价值（错误：列多个价值，一个没做透）→ 找关键行为（错误：拍脑袋定行为、不用留存数据回验）→ 压缩路径（错误：把压缩做成了加引导弹窗）</td>
+<td>每步 6 分 + 每个易错点 2 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>差异一：体验前置——对话即注册，注册动作被推后甚至取消；差异二：生成结果自带传播属性——用户分享结果卡片即零成本高信任广告</td>
+<td>每差异 10 分 + 解释各 2.5 分</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 8 题评分要点</strong>：aha 时刻必须写「第几次 + 什么功能 + 值了」且可观测；激活路径体现减法；种子用户来源具体到「哪类社群 / 平台 / 场景」；服务动作可执行（如人工兜底、一对一收集反馈）；渠道只有 1 条并给出聚集理由；裂变上线条件必须绑定留存验证。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>五项齐全，aha 时刻落到行为上，种子用户来源与服务动作基本具体</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>激活路径体现明确的「删步骤」减法；渠道选择有聚集理由；裂变上线条件绑定留存指标</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外体现：aha 时刻假设附验证方式（数据回验或访谈）；计划区分「先 100 再 1000」的阶段节奏；指出自己方案最大的风险点</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 9 题参考答案（4 个问题）</strong>：① 首选投放买量——留存未验证前买量是花钱验证失败，应先免费手段跑通「到达 aha 的用户留得住」；② 五个平台同时铺——冷启动人力只够打透 1 个主渠道，应收敛；③ 上线即裂变且用现金奖励——裂变排在留存之后，且现金引薅羊毛、污染种子池，应改产品权益并绑定留存验证；④ 留存抓手空缺——方案缺了决定生死的第 3 栏，必须先补 aha 时刻、激活路径与留存抓手，目标「10 万注册」也应改为留存与激活导向的目标。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>指出至少 3 个问题，方向正确</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>指出 4 个问题，且每条修改建议可执行</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外点出「目标本身错了」（注册量导向应改为激活与留存导向），体现增长观</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 10 题参考答案</strong>：总体思路一句话——先用零预算方式验证「会议纪要工具的核心价值能被前 100 个用户体验到并留得住」，再借他们的成果做内容放大到 1000。阶段一（第 1–4 周）：找 100 个精准种子用户（高频开会的人群聚集的社群 / 行业社区），免费深度服务，人工兜底保证每次纪要可用，收集「纪要前后对比」案例；判断指标：这批用户的 7 日留存是否明显更高、aha 时刻（第一次拿到可直接发出的纪要）到达率。阶段二（第 5–12 周）：把案例做成内容在单一主渠道持续发布，上线双向产品权益的邀请机制，滚动扩大到 1000；判断指标：K 因子方向为正、被邀请者激活率不低于种子用户。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>有分阶段动作，体现「先精准后放大」</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>阶段间有明确的进入判断指标；动作具体可执行</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>额外点出 aha 时刻与留存验证是阶段门槛，或提到种子用户服务到极致的具体机制（如人工兜底）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 11 题参考答案</strong>：支持 B。判断依据：增长是放大器，放大的是现有留存水平；留存下滑时加大投放和推送，等于加速消耗口碑。诊断步骤：① 拆留存——对比「到达 aha 时刻」与「未到达」两组用户的 7 日留存差（示例值，需按业务校准）；② 若差值显著，问题在激活——优化到 aha 的路径与首次生成质量；③ 若差值不显著，问题在价值本身——回访流失用户，重新验证 aha 时刻假设；④ 修复后用小流量队列验证留存回升，再恢复增长投入。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>选 B 且给出「留存先于增长」的理由</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>有结构化的诊断步骤，提到按「是否到达 aha」拆分留存</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>两种拆分结果对应不同结论（激活问题 vs 价值问题），并给出修复后的验证方法，体现闭环</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

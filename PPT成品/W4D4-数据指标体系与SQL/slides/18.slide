@@ -1,0 +1,49 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>18 / 18</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>总结与作业</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 24 }} />
+  <Box style={{ flexDirection: 'row', gap: 26, width: '100%', alignItems: 'flex-start' }}>
+    <Box style={{ width: 600, flexDirection: 'column', gap: 12 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.55, flex: 1 }}>五大核心指标回答「用得值不值」，不是「来了多少人」</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.55, flex: 1 }}>北极星三标准：绑价值、可影响、可拆解；配上护栏，指标体系才算三层齐全</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.55, flex: 1 }}>SQL 四关：SELECT 选列、WHERE 筛行、GROUP BY 分组、JOIN 连表；跑数三步：整体、切片、归因</Text>
+      </Box>
+      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '18px 24px', marginTop: 10 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>作业（两项）</Text>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>① 课后 SQL 十题练习集：全部用「小笔」数据集，十题全对或讲清错因（W4 验收标准之一）</Text>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 8, lineHeight: 1.6 }}>② 指标看板设计表改到定稿，进 PRD V2.0</Text>
+      </Box>
+      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '14px 24px' }}>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>预告：明天（周五）PRD 评审大会——<span style={{ fontWeight: 'bold', color: '#2563EB' }}>指标章是评委必问项</span></Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+      <Box style={{ width: 500, height: 280, borderRadius: 8, border: '1px solid #E5E7EB', overflow: 'hidden' }}>
+        <Image src="assets/pipeline.svg" style={{ width: 500, height: 280, objectFit: 'contain' }} />
+      </Box>
+      <Box style={{ width: 500, background: '#F5F3FF', borderRadius: 8, padding: '12px 18px', marginTop: 14 }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#5B21B6' }}>数据回流：指标看板跑出的数字，驱动下一轮迭代</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,53 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D3</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 30, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>15 / 16</Text>
+  </Box>
+  <Box style={{ flexDirection: 'column', gap: 18, height: '100%' }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>翻车案例分组讨论</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    <Box style={{ flexDirection: 'row', gap: 28, flex: 1, paddingTop: 4 }}>
+      <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
+        <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '12px 24px', flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+          <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>规则：<span style={{ fontWeight: 'bold' }}>3–4 人</span>一组 · <span style={{ fontWeight: 'bold' }}>5 分钟</span></Text>
+        </Box>
+        <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 20px', flexDirection: 'column', gap: 6, flex: 1 }}>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>卡 A · 白屏的周报助手</Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55 }}>周报命中敏感词被系统拦截，页面直接白屏，草稿未保存，用户重新输入三遍后弃用。</Text>
+        </Box>
+        <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 20px', flexDirection: 'column', gap: 6, flex: 1 }}>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>卡 B · 坚持己见的模拟面试官</Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55 }}>问产品岗准备什么，答的是运营岗清单；用户指出后，助手道歉并继续讲运营岗，连续三轮。</Text>
+        </Box>
+        <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 20px', flexDirection: 'column', gap: 6, flex: 1 }}>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>卡 C · 失忆的学习助手</Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55 }}>连续多轮追问同一道题，第七轮问第二问时助手回复「您好，请问有什么可以帮您？」，上下文全部丢失。</Text>
+        </Box>
+      </Box>
+      <Box style={{ width: 420, flexDirection: 'column', gap: 14 }}>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>汇报四句话模板</Text>
+        <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 22px', flexDirection: 'row', alignItems: 'center', gap: 16, flex: 1 }}>
+          <Box style={{ width: 30, height: 30, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text></Box>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>翻车点</Text>
+          <Text style={{ fontSize: 14, color: '#64748B', marginLeft: 'auto' }}>讲现象不讲技术</Text>
+        </Box>
+        <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 22px', flexDirection: 'row', alignItems: 'center', gap: 16, flex: 1 }}>
+          <Box style={{ width: 30, height: 30, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text></Box>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>根因</Text>
+        </Box>
+        <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 22px', flexDirection: 'row', alignItems: 'center', gap: 16, flex: 1 }}>
+          <Box style={{ width: 30, height: 30, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text></Box>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>方案</Text>
+        </Box>
+        <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 22px', flexDirection: 'row', alignItems: 'center', gap: 16, flex: 1 }}>
+          <Box style={{ width: 30, height: 30, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}><Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text></Box>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>数字</Text>
+          <Text style={{ fontSize: 14, color: '#64748B', marginLeft: 'auto' }}>方案必须落到数字</Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

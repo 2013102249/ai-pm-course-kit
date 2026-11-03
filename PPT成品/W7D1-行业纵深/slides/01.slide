@@ -1,0 +1,23 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative', justifyContent: 'center' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#FFFFFF', opacity: 0.85, borderRadius: 4 }} />
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)' }}>AI 产品经理实战训练营</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+    <Box style={{ width: 56, height: 4, background: 'rgba(255,255,255,0.6)', borderRadius: 2 }} />
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)' }}>W7 · 就业冲刺周</Text>
+  </Box>
+  <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF', marginTop: 22 }}>行业纵深（分赛道分组）</Text>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 26 }}>
+    <Box style={{ background: 'rgba(255,255,255,0.16)', border: '1px solid rgba(255,255,255,0.55)', borderRadius: 10, padding: '8px 20px' }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: 'rgba(255,255,255,0.95)' }}>W7 周一</Text>
+    </Box>
+    <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '8px 20px' }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#5B21B6' }}>分组日</Text>
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', marginTop: 30 }}>任务说明型课件 · 本课以工作坊与导师连线为主</Text>
+  <Box style={{ position: 'absolute', bottom: 36, left: 60 }}>
+    <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+  </Box>
+</Slide>

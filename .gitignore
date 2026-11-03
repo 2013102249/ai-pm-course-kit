@@ -1,0 +1,9 @@
+.DS_Store
+**/.DS_Store
+.cache/
+.slidep/
+**/.cache/
+**/.slidep/
+*.log
+*.mp3
+*.pptx

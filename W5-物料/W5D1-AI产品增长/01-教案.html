@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W5 周一《AI 产品增长》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl cur" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W5-物料/W5D1-AI产品增长 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W5 周一《AI 产品增长》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第五周第一天 · 90 分钟（2 课时）· 讲师版</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段三 · 产品硬功（Week 5）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>AI 产品增长</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，工作坊前休息 5 分钟）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>转行 / 进阶层学员（PRD V2.0 已于 W4D5 过审，本周进入增长—实验—商业化—推进四模块）</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>主项目需求与用户画像（PRD V2.0）、W2 模型评测基础、AARRR 常识性了解</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>主项目增长方案（含 aha 时刻假设、激活路径、前 1000 用户冷启动计划、留存抓手、裂变机制评估），周五中期评审并入答辩材料</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏；本课无专用交互页，工作坊用导学案模板 + 互评方式组织</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能逐环节说出 AARRR 五环节在 AI 产品上的做法差异与各环节关键指标（对应课堂笔记表 + 基础习题）。</li>
+<li>能为自己的主项目写出 aha 时刻假设（一句「用户第几次用什么功能时会觉得『值了』」），并给出验证方式（对应导学案课堂模板第 1 项 + 进阶习题）。</li>
+<li>能为自己的主项目写出一份前 1000 用户冷启动计划（种子用户来源、单点切入、获客动作各至少 2 条），并通过「前 1000 用户会不会信」互评检验（对应工作坊 + 求职挑战题）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点</strong>：aha 时刻的定义与寻找方法——AI 产品的激活与留存不靠推送靠「用户第一次体验到核心价值的那一刻」。</li>
+<li><strong>难点一</strong>：AARRR 不是五张表平均用力，AI 产品漏斗的重心从「获客」前移到「激活 + 留存」，学员易套用传统打法（先拉新投放）。</li>
+<li><strong>难点二</strong>：冷启动四策略的取舍——学员写方案时容易「贪大求全」，五个渠道一起铺、十个动作并列写，反而一个都做不透。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AARRR 漏斗图（本课新制）</td>
+<td>导入 + 环节一总览</td>
+<td>05-配图清单（待制规格）</td>
+</tr>
+<tr>
+<td>导学案增长方案模板</td>
+<td>工作坊学员填写</td>
+<td>本课 03-导学案</td>
+</tr>
+<tr>
+<td>播客《AI 产品怎么冷启动》</td>
+<td>课前预习 / 课后复习</td>
+<td>本课 04-播客稿</td>
+</tr>
+<tr>
+<td>分层习题</td>
+<td>当堂测 + 作业</td>
+<td>本课 06-分层习题</td>
+</tr>
+<tr>
+<td>增长方案工作坊组织方案</td>
+<td>环节五组织与互评</td>
+<td>本课 07-交互使用说明</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8 min</td>
+<td>导入：漏斗还在，打法变了</td>
+<td>提问「DAU 涨得快但一周后 90% 不回来，问题在哪层」；用 AARRR 漏斗图讲传统增长 vs AI 产品增长的重心迁移</td>
+<td>提问 + 图示</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–28 min</td>
+<td>环节一：AARRR 在 AI 产品的落地</td>
+<td>逐环节过五层：传统做法 / AI 产品怎么做 / 关键指标；强调 AI 产品「对话即注册、生成结果即传播」的结构性差异</td>
+<td>讲授 + 表格</td>
+<td>导学案 AARRR 笔记表</td>
+</tr>
+<tr>
+<td>28–46 min</td>
+<td>环节二：激活与留存——aha 时刻（核心）</td>
+<td>aha 时刻定义（首次体验到核心价值的最短路径）；三步找法：定核心价值 → 找关键行为 → 压缩路径；留存抓手设计</td>
+<td>讲授 + 案例对照</td>
+<td>导学案 aha 时刻假设栏</td>
+</tr>
+<tr>
+<td>46–58 min</td>
+<td>环节三：冷启动与 PLG</td>
+<td>冷启动四策略（种子用户 / 内容 / 渠道 / 工具化）；PLG 模式三特征；AI 简历工具冷启动教学案例</td>
+<td>案例 + 讲授</td>
+<td>冷启动策略笔记</td>
+</tr>
+<tr>
+<td>58–63 min</td>
+<td>环节四：裂变与邀请机制</td>
+<td>裂变四条设计底线（绑核心价值 / 双向收益 / 防薅羊毛 / 先修漏斗再裂变）；K 因子怎么看（示例值，需按业务校准）</td>
+<td>讲授</td>
+<td>导学案裂变评估栏</td>
+</tr>
+<tr>
+<td>63–85 min</td>
+<td>环节五：增长方案工作坊</td>
+<td>学员按导学案模板填写自己的增长方案（15 min）；两人互评（用「前 1000 用户会不会信」检验，7 min）；讲师巡场追问 + 2 组展示（3 min）</td>
+<td>工作坊 + 互评</td>
+<td>主项目增长方案初稿</td>
+</tr>
+<tr>
+<td>85–90 min</td>
+<td>总结与作业</td>
+<td>三句话收束 + 布置作业（并入周五中期答辩材料）+ 预告周二 AB 实验</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>时间拆分合计：8 + 20 + 18 + 12 + 5 + 22 + 5 = 90 分钟。</p>
+<h2>六、AARRR 五环节在 AI 产品的落地总表（板书 + PPT 主表）</h2>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>传统产品的做法</th>
+<th>AI 产品怎么做</th>
+<th>关键指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获客 Acquisition</td>
+<td>投放买量、应用商店冲榜、地推</td>
+<td>内容获客（演示案例与教程）；生成结果自带分享属性（结果卡片即广告）；对话即注册，体验门槛前置归零</td>
+<td>获客成本 CAC、渠道注册转化率</td>
+</tr>
+<tr>
+<td>激活 Activation</td>
+<td>新手引导、注册礼包、签到任务</td>
+<td>把用户以最短路径送到 aha 时刻：预置示例问题、免注册先体验、首答质量兜底</td>
+<td>aha 时刻到达率、首次核心行为完成率、注册到 aha 的耗时</td>
+</tr>
+<tr>
+<td>留存 Retention</td>
+<td>推送召回、积分签到、会员体系</td>
+<td>核心价值随使用复现与增值：历史记录可用、个性化越用越准、嵌入用户既有工作流</td>
+<td>次日 / 7 日 / 30 日留存、周活跃比</td>
+</tr>
+<tr>
+<td>收入 Revenue</td>
+<td>广告、一次性买断、会员等级</td>
+<td>订阅制为主，按量计费（按次数或用量）补充；免费额度设计决定付费转化漏斗</td>
+<td>付费转化率、ARPU、LTV（数字为示例值，需按业务校准）</td>
+</tr>
+<tr>
+<td>裂变 Referral</td>
+<td>邀请返现、拼团砍价</td>
+<td>协作邀请（多人共用一份产出）；生成物外链带品牌水印；双向收益以产品价值为主</td>
+<td>K 因子、邀请发送率、被邀请者激活率</td>
+</tr>
+</tbody>
+</table>
+<p>讲授口径：五层不是平均用力。AI 产品获客打法更花，但<strong>生死在激活与留存</strong>——模型带来的体验差异都发生在前两层之后，漏斗没修好就放大流量等于漏水的桶再加水。</p>
+<h2>七、aha 时刻：定义与三步找法（本课核心知识点）</h2>
+<p><strong>定义</strong>：aha 时刻 = 用户首次体验到产品核心价值的最短路径上的那个瞬间。对 AI 产品而言，多数时候表现为「第一次成功生成一份自己觉得可用的产出」。注意是「体验到的瞬间」而不是「功能名称」——它必须能落到一个可观测的用户行为上。</p>
+<p><strong>三步找法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>动作</th>
+<th>产物</th>
+<th>常见错误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 步：定核心价值</td>
+<td>一句话回答「用户用它到底为了什么」，只留一个主价值</td>
+<td>核心价值一句话</td>
+<td>列出五六个价值，一个都没做透</td>
+</tr>
+<tr>
+<td>第 2 步：找关键行为</td>
+<td>假设「哪个动作最可能让用户体验到核心价值」，用早期用户数据 + 访谈交叉验证（体验过该动作的用户，留存是否明显更高）</td>
+<td>关键行为假设（如「首次成功生成一份完整简历」）</td>
+<td>拍脑袋定一个行为，从不用留存数据回验</td>
+</tr>
+<tr>
+<td>第 3 步：压缩路径</td>
+<td>从注册到该行为逐步删减：能预填的不让用户填、能免注册的不强制注册、能用示例问题的不让用户从空白输入框开始</td>
+<td>激活路径图（每步保留理由）</td>
+<td>把路径压缩做成了「加引导弹窗」——路径只会变长不会变短</td>
+</tr>
+</tbody>
+</table>
+<p><strong>与留存的关系</strong>：留存的本质是 aha 时刻的反复重现。第一次让用户「值了」，之后每一次使用都要让他「还是值」。AI 产品留存的三个抓手：历史产出可积累（越用越有价值）、个性化越用越准、嵌入既有工作流成为默认工具。推送只能把人拉回来一次，拉不回第二次——【金句】AI 产品的留存不靠推送，靠 aha 时刻。</p>
+<h2>八、冷启动四策略</h2>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>一句话做法</th>
+<th>适用前提</th>
+<th>反面信号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>种子用户策略</td>
+<td>找 100 个高契合用户，去他们聚集的地方，服务到极致，再谈规模</td>
+<td>产品核心价值已可体验（哪怕粗糙）</td>
+<td>种子用户来自泛流量，谁都能用谁都不爱用</td>
+</tr>
+<tr>
+<td>内容策略</td>
+<td>围绕核心价值做内容：案例、教程、使用前后对比，内容即获客入口</td>
+<td>核心价值能被「展示出来」让人看见</td>
+<td>内容讲技术讲情怀，不展示用户能得到什么</td>
+</tr>
+<tr>
+<td>渠道策略</td>
+<td>选 1 个用户聚集的主渠道打透，跑通再扩渠道</td>
+<td>已知目标用户在哪聚集</td>
+<td>五个渠道同时铺，每个都浅尝辄止</td>
+</tr>
+<tr>
+<td>工具化策略</td>
+<td>把产品的一部分能力做成免费小工具，单点切入，免费工具即获客入口</td>
+<td>有一个「小而完整」的能力可以拆出来</td>
+<td>免费工具与核心价值无关，引流来的人不是目标用户</td>
+</tr>
+</tbody>
+</table>
+<p>四策略不是四选一，冷启动期通常「种子用户 + 单渠道 + 一个工具化入口」组合使用，内容策略全程伴随。共同纪律：先服务好前 100 个用户，再谈 1000，再谈规模。</p>
+<h2>九、课堂提问设计（7 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「一款 AI 产品 DAU 涨得很快，但一周后 90% 的用户不再回来，问题出在漏斗的哪一层？」</td>
+<td>导入</td>
+<td>激活与留存层——用户没体验到核心价值就被拉进来了；拉新是往漏水里加水</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「回想你自己最近一次觉得某个 AI 工具『值了』，是哪一刻？」</td>
+<td>环节二开头</td>
+<td>收集 2–3 个真实回答，归纳共性：都是「第一次拿到可用产出」的时刻——顺势给出 aha 时刻定义</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「aha 时刻离注册越远越好还是越近越好？」</td>
+<td>三步找法之后</td>
+<td>越近越好；路径每长一步就流失一批人，压缩路径是激活设计的全部内容</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「前 1000 用户阶段，1 万个泛用户和 100 个精准种子用户，选哪个？」</td>
+<td>环节三</td>
+<td>选 100 个精准的：种子用户要的是反馈质量不是数量，泛用户的反馈会把你带偏</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「AI 产品的获客和传统软件最大的结构性差异是什么？」</td>
+<td>环节三 PLG 段</td>
+<td>体验前置（对话即注册）+ 生成结果自带传播属性；PLG 在 AI 产品上是天然适配而非刻意选择</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「裂变奖励发现金好还是给产品权益好？」</td>
+<td>环节四</td>
+<td>优先产品权益：与核心价值绑定、筛出真用户、成本可控；现金易引来薅羊毛人群，污染种子用户池</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「前 1000 用户阶段要不要投放买量？」</td>
+<td>工作坊巡场 / 总结前</td>
+<td>不建议：留存没验证前买量 = 花钱验证失败；先用免费手段把「到达 aha 的用户留存得住」跑通，再谈放大</td>
+</tr>
+</tbody>
+</table>
+<h2>十、板书要点</h2>
+<pre><code>AARRR：获客 → 激活 → 留存 → 收入 → 裂变
+AI 产品结构差异：对话即注册 · 生成结果即传播 · 越用越准
+
+aha 时刻 = 首次体验到核心价值的最短路径
+三步找法：定核心价值 → 找关键行为 → 压缩路径
+
+冷启动四策略：种子用户 / 内容 / 渠道 / 工具化
+纪律：先 100 个真爱用户，再 1000，再规模
+金句：留存不靠推送，靠 aha 时刻
+</code></pre>
+<h2>十一、课堂练习参考答案（工作坊模板预填示例）</h2>
+<p>以教学示例「某 AI 简历工具」（非真实产品）预填一版，供讲师点评时对照：</p>
+<table>
+<thead>
+<tr>
+<th>模板项</th>
+<th>示例填写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aha 时刻假设</td>
+<td>用户第一次上传旧简历、30 秒内拿到一份针对目标岗位改写的完整简历时，会觉得「值了」</td>
+</tr>
+<tr>
+<td>激活路径</td>
+<td>免注册进入 → 上传旧简历（或选示例简历）→ 选目标岗位 → 生成改写结果 → 此时才提示注册保存</td>
+</tr>
+<tr>
+<td>前 1000 用户冷启动</td>
+<td>种子用户：求职社群与高校就业群，先服务 100 人（每人免费改一份，人工兜底）；渠道：只做求职内容平台单渠道；工具化入口：免费小工具「简历一页纸体检」引流</td>
+</tr>
+<tr>
+<td>留存抓手</td>
+<td>改写记录可回溯；投递进度跟进提醒；面试季每周更新岗位适配建议</td>
+</tr>
+<tr>
+<td>裂变机制评估</td>
+<td>把改写结果卡片分享给同学，双方各得一次免费深度改写（产品权益而非现金）；先验证 7 日留存再上线，K 因子目标设为示例值，需按业务校准</td>
+</tr>
+</tbody>
+</table>
+<h2>十二、学员易错点预判与应对</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>典型表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「增长 = 投钱买量」</td>
+<td>增长方案第一行就写「投放预算 XX 万」</td>
+<td>用「漏水的桶」比喻纠正：留存未验证前买量是花钱验证失败；增长方案先写激活与留存，再写放大手段</td>
+</tr>
+<tr>
+<td>「留存只看 DAU」</td>
+<td>互评时只报 DAU 数字，无留存曲线</td>
+<td>纠正：DAU 是结果不是诊断指标；要看次日 / 7 日留存和「到达 aha 的用户 vs 未到达用户的留存差」</td>
+</tr>
+<tr>
+<td>「冷启动贪大求全」</td>
+<td>方案里五个渠道、十个动作并列铺开</td>
+<td>用教学案例对照：单点切入、先服务好 100 个种子用户；要求把方案收敛到「一条主渠道 + 一个工具化入口」</td>
+</tr>
+<tr>
+<td>「aha 时刻想当然」</td>
+<td>写「用户注册了就激活了」或只写功能名不写行为</td>
+<td>追问「用户第几次用什么功能时会觉得『值了』」，要求落到可观测行为，并补一条验证方式（数据回验或访谈）</td>
+</tr>
+<tr>
+<td>「裂变先于留存」</td>
+<td>留存抓手栏空白，裂变机制写了满满一页</td>
+<td>回到漏斗顺序：裂变放大的是现有留存水平，留存没修好，裂变只会加速流失</td>
+</tr>
+</tbody>
+</table>
+<h2>十三、作业与衔接</h2>
+<ol>
+<li>课后按工作坊互评意见修订增长方案，与 PRD V2.0、商业画布一起并入周五中期答辩材料（W5D5 里程碑 ④）。</li>
+<li>完成分层习题（06），进阶实操题即「为自己项目写前 1000 用户计划」的正式版。</li>
+<li>预告周二《AB 实验与数据决策》——今天方案里的每个假设，明天学怎么用实验验证。</li>
+</ol>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

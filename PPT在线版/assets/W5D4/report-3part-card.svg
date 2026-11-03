@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/>
+    </marker>
+  </defs>
+  <rect x="40" y="42" width="4" height="22" fill="#7C3AED"/>
+  <text x="54" y="60" font-size="20" font-weight="700" fill="#221E33">汇报三段结构示意卡</text>
+  <text x="54" y="82" font-size="12" fill="#6B7280">结论先行 30 秒 · 数据支撑 90 秒 · 需要的支持 60 秒</text>
+
+  <!-- 三段时间轴 -->
+  <rect x="40" y="118" width="184" height="52" rx="6" fill="#7C3AED"/>
+  <rect x="228" y="118" width="556" height="52" rx="6" fill="#2563EB"/>
+  <rect x="788" y="118" width="372" height="52" rx="6" fill="#5B21B6"/>
+  <text x="132" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">① 结论先行 · 30 秒</text>
+  <text x="506" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">② 数据支撑 · 90 秒</text>
+  <text x="974" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">③ 需要的支持 · 60 秒</text>
+
+  <!-- 三张内容卡 -->
+  <rect x="40" y="190" width="184" height="180" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="132" y="226" text-anchor="middle" font-size="14" font-weight="700" fill="#221E33">状态判断</text>
+  <text x="132" y="250" text-anchor="middle" font-size="12" fill="#6B7280">（项目什么状态）</text>
+  <text x="132" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#221E33">决策请求</text>
+  <text x="132" y="310" text-anchor="middle" font-size="12" fill="#6B7280">（需要对方做什么）</text>
+
+  <rect x="228" y="190" width="556" height="180" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+  <text x="252" y="226" font-size="14" fill="#221E33">· 2–3 条关键进展，每条带数字</text>
+  <text x="252" y="256" font-size="14" fill="#221E33">· 数字与计划对比：提前 / 持平 / 延后</text>
+  <text x="252" y="286" font-size="12" fill="#6B7280">（数字是 90 秒的主角，让进展一眼可见）</text>
+
+  <rect x="788" y="190" width="372" height="180" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="812" y="226" font-size="14" fill="#221E33">· 当前最大的风险</text>
+  <text x="812" y="256" font-size="14" fill="#221E33">· 二选一诉求，不给开放题</text>
+  <text x="812" y="282" font-size="12" fill="#6B7280">（例：名单周五前给，或下周一给）</text>
+
+  <!-- 下区：反例 vs 正例 -->
+  <rect x="40" y="410" width="510" height="220" rx="10" fill="#F8F7FB" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="295" y="444" text-anchor="middle" font-size="16" font-weight="700" fill="#7A7590">反例 · 流水账周报</text>
+  <line x1="215" y1="438" x2="375" y2="438" stroke="#7A7590" stroke-width="1.5"/>
+  <text x="64" y="482" font-size="14" fill="#7A7590">本周做了评测，也开了两次会，</text>
+  <text x="64" y="510" font-size="14" fill="#7A7590">下周继续推进，整体一切正常。</text>
+  <text x="64" y="546" font-size="12.5" fill="#7A7590">（只有动作：没有状态、没有数字、没有请求）</text>
+
+  <line x1="552" y1="520" x2="584" y2="520" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="590" y="410" width="570" height="220" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="875" y="444" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">正例 · 三段式汇报</text>
+  <rect x="614" y="466" width="56" height="24" rx="12" fill="#7C3AED"/>
+  <text x="642" y="483" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">30 秒</text>
+  <text x="686" y="483" font-size="14" fill="#221E33">结论：进度正常，可按期进入试用</text>
+  <rect x="614" y="504" width="56" height="24" rx="12" fill="#2563EB"/>
+  <text x="642" y="521" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">90 秒</text>
+  <text x="686" y="521" font-size="14" fill="#221E33">数据：评测通过率 <tspan font-weight="700" fill="#2563EB">82%</tspan>，超计划 <tspan font-weight="700" fill="#2563EB">7</tspan> 个点</text>
+  <rect x="614" y="542" width="56" height="24" rx="12" fill="#5B21B6"/>
+  <text x="642" y="559" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">60 秒</text>
+  <text x="686" y="559" font-size="14" fill="#221E33">请求：试用用户名单，本周五前给 or 下周一给</text>
+</svg>

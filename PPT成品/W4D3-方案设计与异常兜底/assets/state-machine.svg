@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="800" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7C3AED"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EA580C"/></marker>
+    <marker id="arrN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <rect x="48" y="34" width="4" height="22" fill="#7C3AED"/>
+  <text x="62" y="52" font-size="20" font-weight="700" fill="#221E33">状态机示意图（对话产品）</text>
+  <text x="62" y="76" font-size="12" fill="#6B7280">主干流转 + 异常分流四出口 + 用户追问回路 · 对话是环，不是线 · 节点内标注超时基准值</text>
+
+  <!-- 主干 -->
+  <rect x="70" y="140" width="140" height="72" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="140" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#221E33">空闲</text>
+  <text x="140" y="198" text-anchor="middle" font-size="12" fill="#6B7280">超时：—</text>
+
+  <line x1="212" y1="176" x2="302" y2="176" stroke="#7C3AED" stroke-width="1.8" marker-end="url(#arrP)"/>
+
+  <rect x="310" y="140" width="160" height="72" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="390" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#221E33">理解中</text>
+  <text x="390" y="198" text-anchor="middle" font-size="12" fill="#6B7280">超时 3 秒</text>
+
+  <line x1="472" y1="176" x2="582" y2="176" stroke="#7C3AED" stroke-width="1.8" marker-end="url(#arrP)"/>
+
+  <rect x="590" y="140" width="160" height="72" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="670" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#221E33">生成中</text>
+  <text x="670" y="198" text-anchor="middle" font-size="12" fill="#6B7280">超时 10 秒</text>
+
+  <line x1="752" y1="176" x2="872" y2="176" stroke="#7C3AED" stroke-width="1.8" marker-end="url(#arrP)"/>
+
+  <rect x="880" y="140" width="150" height="72" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="955" y="174" text-anchor="middle" font-size="18" font-weight="700" fill="#221E33">完成</text>
+  <text x="955" y="198" text-anchor="middle" font-size="12" fill="#6B7280">超时：—</text>
+
+  <!-- 用户追问回路：完成 → 理解中 -->
+  <path d="M 955,138 C 955,84 390,84 390,136" fill="none" stroke="#2563EB" stroke-width="1.8" marker-end="url(#arrB)"/>
+  <text x="672" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">用户追问 · 对话是环，不是线</text>
+
+  <!-- 异常分流 -->
+  <line x1="390" y1="214" x2="540" y2="324" stroke="#EA580C" stroke-width="1.6" marker-end="url(#arrO)"/>
+  <line x1="670" y1="214" x2="660" y2="324" stroke="#EA580C" stroke-width="1.6" marker-end="url(#arrO)"/>
+  <text x="600" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#EA580C">异常分流</text>
+
+  <rect x="470" y="330" width="260" height="72" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8"/>
+  <text x="600" y="362" text-anchor="middle" font-size="18" font-weight="700" fill="#EA580C">异常</text>
+  <text x="600" y="386" text-anchor="middle" font-size="12" fill="#6B7280">停留 ≤30 秒</text>
+
+  <!-- 四条异常出口 -->
+  <line x1="600" y1="404" x2="172" y2="462" stroke="#EA580C" stroke-width="1.5" marker-end="url(#arrO)"/>
+  <line x1="600" y1="404" x2="432" y2="462" stroke="#EA580C" stroke-width="1.5" marker-end="url(#arrO)"/>
+  <line x1="600" y1="404" x2="700" y2="462" stroke="#EA580C" stroke-width="1.5" marker-end="url(#arrO)"/>
+  <line x1="600" y1="404" x2="958" y2="462" stroke="#EA580C" stroke-width="1.5" marker-end="url(#arrO)"/>
+
+  <rect x="80" y="470" width="170" height="56" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="165" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">澄清</text>
+  <rect x="340" y="470" width="170" height="56" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="425" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">拒答</text>
+  <rect x="620" y="470" width="170" height="56" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="705" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">降级</text>
+  <rect x="880" y="470" width="170" height="56" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="965" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">转人工</text>
+
+  <!-- 恢复节点 -->
+  <line x1="705" y1="528" x2="705" y2="602" stroke="#A5A1B8" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <path d="M 965,528 L 965,566 L 780,566 L 780,602" fill="none" stroke="#A5A1B8" stroke-width="1.5" marker-end="url(#arrN)"/>
+
+  <rect x="620" y="610" width="170" height="64" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="705" y="638" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">恢复</text>
+  <text x="705" y="660" text-anchor="middle" font-size="12" fill="#6B7280">超时：—</text>
+
+  <!-- 恢复 → 空闲（降级成功） -->
+  <path d="M 620,642 L 50,642 L 50,176 L 62,176" fill="none" stroke="#7C3AED" stroke-width="1.6" marker-end="url(#arrP)"/>
+  <text x="300" y="632" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">降级成功 → 指回空闲</text>
+
+  <!-- 恢复 → 挂起（转人工成功） -->
+  <line x1="792" y1="644" x2="872" y2="644" stroke="#A5A1B8" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <text x="832" y="632" text-anchor="middle" font-size="11" fill="#6B7280">转人工成功</text>
+  <rect x="880" y="620" width="120" height="48" rx="8" fill="#FFFFFF" stroke="#A5A1B8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="940" y="650" text-anchor="middle" font-size="14" fill="#6B7280">挂起</text>
+
+  <!-- 角标 -->
+  <text x="1152" y="776" text-anchor="end" font-size="11" fill="#9CA3AF">AI 产品经理就业训练营 · W4D3</text>
+</svg>

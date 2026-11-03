@@ -1,0 +1,37 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', right: 60, bottom: 26, fontSize: 14, color: '#64748B' }}>10 / 16</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>实操总览：五步地图</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16, marginBottom: 24 }} />
+  <Box style={{ flexDirection: 'column', gap: 14, width: '100%' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '16px 26px', width: '100%' }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 52 }}>①</Text>
+      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B', width: 200 }}>建应用</Text>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>完成标志：编排画布打开</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '16px 26px', width: '100%' }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 52 }}>②</Text>
+      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B', width: 200 }}>加节点</Text>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>完成标志：主链路连线成型（含至少 1 个条件分支）</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '16px 26px', width: '100%' }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 52 }}>③</Text>
+      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B', width: 200 }}>配工具</Text>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>完成标志：单节点试运行通过</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '16px 26px', width: '100%' }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 52 }}>④</Text>
+      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B', width: 200 }}>调提示词</Text>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>完成标志：输出格式稳定</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '16px 26px', width: '100%' }}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 52 }}>⑤</Text>
+      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B', width: 200 }}>测运行</Text>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>完成标志：异常输入不崩，才算 V1</Text>
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 14, color: '#64748B', marginTop: 24 }}>本页为主投屏 Dify/Coze 画布的步骤锚点 · 投屏 3–5 分钟 + 学员动手 + 助教巡场</Text>
+</Slide>

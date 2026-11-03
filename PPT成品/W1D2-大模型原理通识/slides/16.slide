@@ -1,0 +1,63 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D2</Text>
+    </Box>
+    <Text style={{ fontSize: 14, color: '#64748B', position: 'absolute', right: 60, bottom: 34 }}>16 / 16</Text>
+    <Box style={{ gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>懂到什么程度 · 边界表</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 18 }}>
+        <Box style={{ width: '100%', border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden', padding: 0, background: '#FFFFFF' }}>
+            <Table
+                style={{ width: '100%', height: 396 }}
+                defaultTextStyle={{ fontSize: 15, textAlign: 'left', color: '#1E1B4B' }}
+                defaultCellStyle={{
+                    padding: '10px 16px',
+                    border: {
+                        left: { width: 1, color: '#E8E5F1' },
+                        right: { width: 1, color: '#E8E5F1' },
+                        top: { width: 1, color: '#E8E5F1' },
+                        bottom: { width: 1, color: '#E8E5F1' },
+                    },
+                }}
+                cells={[
+                    [
+                        { text: '必须懂（5 条）· 决定产品决策，面试必考', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
+                        { text: '应该懂（5 条）· 开会不懵，能和技术对话', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#2563EB' } } },
+                        { text: '不必懂（5 条）· 遇到时找算法同事', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#6B7280' } } },
+                    ],
+                    [
+                        { text: '① 大模型是概率续写引擎，会幻觉' },
+                        { text: '① Transformer 自注意力大致在干什么' },
+                        { text: '① 数学公式（注意力、损失函数推导）' },
+                    ],
+                    [
+                        { text: '② 预训练 / SFT / RLHF 各自解决什么问题', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '② 微调不是首选：先提示词、再 RAG、最后微调', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '② 代码实现与训练框架细节', cellStyle: { background: { color: '#F5F3FF' } } },
+                    ],
+                    [
+                        { text: '③ 上下文窗口是什么、超限会怎样' },
+                        { text: '③ 多模态的能力边界（能识图不等于能精确数数）' },
+                        { text: '③ 模型结构参数（层数、注意力头数、规模）' },
+                    ],
+                    [
+                        { text: '④ 推理成本按 token 计费，输入输出分开算', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '④ 主流模型家族的存在与定位', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '④ 分布式训练与显存优化', cellStyle: { background: { color: '#F5F3FF' } } },
+                    ],
+                    [
+                        { text: '⑤ 模型有能力边界和知识截止时间' },
+                        { text: '⑤ 私有化部署与 API 调用是两条成本曲线' },
+                        { text: '⑤ 论文复现' },
+                    ],
+                ]}
+            />
+        </Box>
+        <Box style={{ background: '#7C3AED', borderRadius: 12, padding: '14px 26px', alignItems: 'center' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>收口金句：懂边界，不懂公式</Text>
+        </Box>
+    </Box>
+</Slide>

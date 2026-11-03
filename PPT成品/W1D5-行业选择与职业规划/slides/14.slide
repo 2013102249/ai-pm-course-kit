@@ -1,0 +1,34 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D5</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 30, right: 60, fontSize: 14, color: '#64748B' }}>14 / 16</Text>
+  <Box style={{ flexDirection: 'column', width: '100%', height: '100%' }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>样本点评：一份好，一份改</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+    <Box style={{ flexDirection: 'row', gap: 24, marginTop: 28, width: '100%' }}>
+      <Box style={{ flex: 1, border: '2px solid #16A34A', borderRadius: 12, padding: '30px 32px', flexDirection: 'column', gap: 18 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+          <Box style={{ width: 40, height: 40, borderRadius: 20, background: '#16A34A', alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>✓</Text>
+          </Box>
+          <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#16A34A' }}>好样本</Text>
+        </Box>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.4 }}>亮点：对策带时间点</Text>
+        <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.6 }}>「风险与对策」一栏，每条对策都挂上了明确的时间点，可验收、可追问</Text>
+      </Box>
+      <Box style={{ flex: 1, border: '2px solid #7C3AED', borderRadius: 12, padding: '30px 32px', flexDirection: 'column', gap: 18 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+          <Box style={{ width: 40, height: 40, borderRadius: 20, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>改</Text>
+          </Box>
+          <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>待改样本</Text>
+        </Box>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.4 }}>病灶：目标行业写了四个</Text>
+        <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.6 }}>行业不收敛，作品与投递都摊薄——回到「1 主 1 备」</Text>
+      </Box>
+    </Box>
+    <Text style={{ fontSize: 14, color: '#64748B', marginTop: 24 }}>样本已脱敏：姓名与敏感信息已打码，仅用于课堂点评</Text>
+  </Box>
+</Slide>

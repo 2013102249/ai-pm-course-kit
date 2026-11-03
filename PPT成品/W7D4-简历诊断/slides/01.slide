@@ -1,0 +1,14 @@
+<Slide style={{ width: 1280, height: 720, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', padding: 60, position: 'relative', flexDirection: 'row', alignItems: 'center', gap: 48 }}>
+    <Box style={{ flex: 1, height: '100%', justifyContent: 'space-between', padding: '30px 0' }}>
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 2 }}>AI 产品经理实战训练营</Text>
+        <Box style={{ flexDirection: 'column', gap: 20 }}>
+            <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF' }}>1v1 简历诊断</Text>
+            <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)' }}>W7D4 · W7 周四 · 今天没有新课，只有手术</Text>
+            <Text style={{ fontSize: 22, color: 'rgba(255,255,255,0.85)' }}>今日终点：简历 V2 可投递 + 作品集链接 + 品牌第一条</Text>
+        </Box>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+    </Box>
+    <Box style={{ width: 470, height: 300, background: '#FFFFFF', borderRadius: 16, padding: 16, justifyContent: 'center', alignItems: 'center' }}>
+        <Image src="assets/capability-profile.svg" style={{ width: 438, height: 254, objectFit: 'contain' }} />
+    </Box>
+</Slide>

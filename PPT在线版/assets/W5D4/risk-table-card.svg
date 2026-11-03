@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/>
+    </marker>
+  </defs>
+  <rect x="40" y="42" width="4" height="22" fill="#7C3AED"/>
+  <text x="54" y="60" font-size="20" font-weight="700" fill="#221E33">风险清单三栏法示意卡</text>
+  <text x="54" y="82" font-size="12" fill="#6B7280">写事件 · 判概率影响 · 定应对 —— 每栏一个具体示例</text>
+
+  <!-- 栏 1 · 风险 -->
+  <rect x="40" y="118" width="357" height="450" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <rect x="40" y="118" width="357" height="44" rx="10" fill="#7C3AED"/>
+  <rect x="40" y="140" width="357" height="22" fill="#7C3AED"/>
+  <text x="218.5" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">① 风险</text>
+  <text x="218.5" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">写事件，不写担心</text>
+  <rect x="60" y="220" width="317" height="96" rx="8" fill="#F8F7FB" stroke="#C9C2DE" stroke-width="1.2"/>
+  <text x="74" y="246" font-size="12" font-weight="700" fill="#7A7590">反例</text>
+  <text x="74" y="278" font-size="15" fill="#7A7590">进度可能不太乐观</text>
+  <line x1="72" y1="272" x2="196" y2="272" stroke="#7A7590" stroke-width="1.5"/>
+  <text x="74" y="302" font-size="12" fill="#7A7590">模糊担心 · 无法验证 · 无法证伪</text>
+  <line x1="218.5" y1="320" x2="218.5" y2="334" stroke="#A5A1B8" stroke-width="1.8" marker-end="url(#arr)"/>
+  <rect x="60" y="340" width="317" height="120" rx="8" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="74" y="366" font-size="12" font-weight="700" fill="#5B21B6">正例</text>
+  <text x="74" y="398" font-size="15" fill="#221E33">评测集 50 条未建，</text>
+  <text x="74" y="424" font-size="15" fill="#221E33">W6D4 无法跑分</text>
+  <text x="74" y="450" font-size="12" fill="#5B21B6">可验证的事件，可直接验收</text>
+  <rect x="60" y="496" width="317" height="48" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="218.5" y="525" text-anchor="middle" font-size="13" fill="#6B7280">「持续跟进」不算应对：谁做？到什么程度？</text>
+
+  <!-- 栏 2 · 概率 × 影响 -->
+  <rect x="421" y="118" width="357" height="450" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <rect x="421" y="118" width="357" height="44" rx="10" fill="#7C3AED"/>
+  <rect x="421" y="140" width="357" height="22" fill="#7C3AED"/>
+  <text x="599.5" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">② 概率 × 影响</text>
+  <text x="599.5" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">两维都要有判断依据</text>
+  <!-- 九宫格 -->
+  <rect x="490" y="224" width="58" height="58" fill="#DCCBF8" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="548" y="224" width="58" height="58" fill="#DCCBF8" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="606" y="224" width="58" height="58" fill="#7C3AED" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="490" y="282" width="58" height="58" fill="#F1EBFD" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="548" y="282" width="58" height="58" fill="#DCCBF8" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="606" y="282" width="58" height="58" fill="#DCCBF8" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="490" y="340" width="58" height="58" fill="#F1EBFD" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="548" y="340" width="58" height="58" fill="#F1EBFD" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="606" y="340" width="58" height="58" fill="#DCCBF8" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="635" cy="253" r="7" fill="#FFFFFF" stroke="#5B21B6" stroke-width="2"/>
+  <text x="478" y="258" text-anchor="end" font-size="12" fill="#6B7280">高</text>
+  <text x="478" y="316" text-anchor="end" font-size="12" fill="#6B7280">中</text>
+  <text x="478" y="374" text-anchor="end" font-size="12" fill="#6B7280">低</text>
+  <text transform="rotate(-90 458 311)" x="458" y="311" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">影响</text>
+  <text x="486" y="422" text-anchor="end" font-size="12" font-weight="700" fill="#6B7280">概率</text>
+  <text x="519" y="422" text-anchor="middle" font-size="12" fill="#6B7280">低</text>
+  <text x="577" y="422" text-anchor="middle" font-size="12" fill="#6B7280">中</text>
+  <text x="635" y="422" text-anchor="middle" font-size="12" fill="#6B7280">高</text>
+  <circle cx="447" cy="452" r="6" fill="#FFFFFF" stroke="#5B21B6" stroke-width="2"/>
+  <text x="462" y="457" font-size="13" fill="#221E33">示例：评测集缺失 → 高概率 × 高影响</text>
+  <rect x="441" y="496" width="317" height="48" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="599.5" y="525" text-anchor="middle" font-size="13" fill="#6B7280">两维判断都要给出依据（数据 / 事实）</text>
+
+  <!-- 栏 3 · 应对 -->
+  <rect x="802" y="118" width="357" height="450" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <rect x="802" y="118" width="357" height="44" rx="10" fill="#7C3AED"/>
+  <rect x="802" y="140" width="357" height="22" fill="#7C3AED"/>
+  <text x="980.5" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">③ 应对</text>
+  <text x="980.5" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">应对 = 动作 + 责任人 + 时间</text>
+  <rect x="822" y="220" width="317" height="30" fill="#E8EFFD"/>
+  <text x="890.5" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">动作</text>
+  <text x="1004" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">责任人</text>
+  <text x="1094" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">时间</text>
+  <text x="890.5" y="288" text-anchor="middle" font-size="13" fill="#221E33">补齐评测集 50 条</text>
+  <text x="1004" y="288" text-anchor="middle" font-size="13" fill="#221E33">产品（我）</text>
+  <text x="1094" y="288" text-anchor="middle" font-size="13" fill="#221E33">W5D5 前</text>
+  <text x="890.5" y="356" text-anchor="middle" font-size="13" fill="#221E33">提前约 10 位试用用户</text>
+  <text x="1004" y="356" text-anchor="middle" font-size="13" fill="#221E33">产品（我）</text>
+  <text x="1094" y="356" text-anchor="middle" font-size="13" fill="#221E33">W5D4</text>
+  <line x1="822" y1="318" x2="1139" y2="318" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="959" y1="220" x2="959" y2="386" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="1049" y1="220" x2="1049" y2="386" stroke="#E8E5F1" stroke-width="1.2"/>
+  <rect x="822" y="220" width="317" height="166" fill="none" stroke="#C9C2DE" stroke-width="1.2"/>
+  <text x="822" y="420" font-size="12" fill="#7A7590">反例：「持续跟进」—— 无动作 / 无责任人 / 无时间</text>
+  <text x="822" y="446" font-size="12" fill="#7A7590">（追问：跟进什么？谁跟进？何时算完？）</text>
+  <rect x="822" y="496" width="317" height="48" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="980.5" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">没有责任人的风险，不算风险。</text>
+
+  <!-- 底部通栏 -->
+  <rect x="40" y="596" width="1120" height="52" rx="10" fill="#7C3AED"/>
+  <text x="600" y="629" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">风险清单不是写给自己的日记，是写给团队的合同。</text>
+</svg>

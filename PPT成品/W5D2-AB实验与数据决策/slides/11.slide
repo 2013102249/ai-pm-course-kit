@@ -1,0 +1,35 @@
+<Slide style={{ position: 'relative', width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 32, right: 60, fontSize: 14, color: '#64748B' }}>11 / 16</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#DC2626' }}>陷阱一：偷看指标</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+  <Box style={{ flexDirection: 'row', flex: 1, marginTop: 28, gap: 24 }}>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 18 }}>
+      <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, background: '#FFFFFF', padding: 26, flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 17, color: '#64748B' }}>问题</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>半成品数据不可拍板</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 26, flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>规避</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5 }}>开跑前冻结判读日期 + 成败标准</Text>
+      </Box>
+      <Box style={{ background: '#7C3AED', borderRadius: 12, padding: 20, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>先定判据，再看数据</Text>
+      </Box>
+    </Box>
+    <Box style={{ width: 400, border: '2px dashed #7C3AED', borderRadius: 12, background: '#FFFFFF', padding: 32, flexDirection: 'column', justifyContent: 'center', gap: 24 }}>
+      <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#7C3AED' }}>开跑前冻结这张卡</Text>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>判读日期</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>＿＿＿＿ 年 ＿＿ 月 ＿＿ 日</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column', gap: 8 }}>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>成败标准</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>指标 ≥ 多少算成功</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

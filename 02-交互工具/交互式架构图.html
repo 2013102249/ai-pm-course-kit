@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交互式架构图 · AI 产品经理训练营</title>
+<style>
+  :root{
+    --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --purple-border:#DDD2F7;
+    --blue:#2563EB; --blue-light:#E8EFFD; --blue-border:#C9D9F8;
+    --ink:#221E33; --ink2:#4A4560; --muted:#7A7590; --faint:#A5A1B8;
+    --bg:#F7F6FB; --card:#FFFFFF; --border:#E8E5F1; --border-soft:#F0EEF7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:14.5px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .hero{background:linear-gradient(135deg,#2A1B52 0%,#4A2A85 50%,#2B4A9E 100%);color:#fff;padding:30px 0 26px}
+  .hero .badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:2px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 13px;color:rgba(255,255,255,.85);margin-bottom:12px}
+  .hero .badge .dot{width:6px;height:6px;border-radius:50%;background:#C4B5FD;box-shadow:0 0 8px #C4B5FD}
+  .hero h1{font-size:23px;font-weight:700;letter-spacing:.5px}
+  .hero p{font-size:13px;color:rgba(255,255,255,.75);margin-top:6px}
+  /* Tabs */
+  .tabs{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}
+  .tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+  .tab{border:1px solid var(--border);background:#FBFAFD;border-radius:999px;padding:7px 18px;font-size:13.5px;font-weight:600;color:var(--ink2);cursor:pointer;white-space:nowrap;font-family:inherit;transition:.15s}
+  .tab:hover{border-color:var(--purple);color:var(--purple-deep)}
+  .tab.on{background:var(--purple);border-color:var(--purple);color:#fff}
+  /* 主区 */
+  main{padding:18px 0 10px}
+  .layout{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;align-items:start}
+  .diagcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px}
+  .diagcard svg{width:100%;height:auto;display:block}
+  .oneline{margin-top:12px;background:var(--purple-light);border:1px solid var(--purple-border);border-radius:10px;padding:10px 14px;font-size:12.8px;color:var(--purple-deep)}
+  .oneline b{font-weight:700}
+  /* 说明卡 */
+  .side{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;position:sticky;top:64px}
+  .side .back{display:none;font-size:12px;color:var(--blue);cursor:pointer;font-weight:600;margin-bottom:12px;border:none;background:none;font-family:inherit;padding:0}
+  .side .back.show{display:inline-block}
+  .side .kicker{font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--purple);margin-bottom:6px}
+  .side h2{font-size:17px;font-weight:700;margin-bottom:12px}
+  .side .block{margin-bottom:14px}
+  .side .block .bt{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+  .side .block .bt i{width:6px;height:6px;border-radius:50%;background:var(--purple);display:inline-block}
+  .side .block p{font-size:13px;color:var(--ink2)}
+  .side .block ul{margin-left:18px;font-size:13px;color:var(--ink2)}
+  .side .block ul li{margin-bottom:4px}
+  .quote{background:var(--blue-light);border:1px solid var(--blue-border);border-radius:10px;padding:11px 14px;font-size:13px;color:var(--blue)}
+  .quote b{display:block;font-size:11px;letter-spacing:1px;margin-bottom:4px;opacity:.8}
+  .hint{font-size:12px;color:var(--faint);margin-top:14px;border-top:1px dashed var(--border);padding-top:10px}
+  /* SVG 节点 */
+  .node{cursor:pointer}
+  .node rect{fill:#FFFFFF;stroke:#C9C2DE;stroke-width:1.4;transition:all .15s}
+  .node text{pointer-events:none}
+  .node .nl{font-size:13px;font-weight:700;fill:var(--ink)}
+  .node .ns{font-size:10px;fill:var(--muted)}
+  .node .np{font-size:9.5px;font-weight:700;fill:var(--purple)}
+  .node:hover rect{stroke:var(--purple);stroke-width:2.2;filter:drop-shadow(0 3px 8px rgba(124,58,237,.25))}
+  .node.sel rect{stroke:var(--purple);stroke-width:2.6;fill:var(--purple-light)}
+  .edge{stroke:#C9C2DE;stroke-width:1.6;fill:none}
+  .edge.dash{stroke-dasharray:6 5;animation:flow 1.2s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-22}}
+  .elabel{font-size:9.5px;fill:var(--faint)}
+  footer{padding:24px 0 44px;text-align:center;color:var(--faint);font-size:12px}
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr}
+    .side{position:static}
+    .hero h1{font-size:19px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>INTERACTIVE ARCHITECTURE · 课堂工具</div>
+    <h1>AI 架构交互式讲解图</h1>
+    <p>点击图中任意节点，查看「是什么 / 产品经理要关心什么 / 面试怎么答」三段式讲解。默认显示整张图的一分钟讲法。</p>
+  </div>
+</header>
+
+<div class="tabs">
+  <div class="wrap" id="tabs">
+    <button class="tab on" data-d="llm">LLM 基础链路</button>
+    <button class="tab" data-d="rag">RAG 架构</button>
+    <button class="tab" data-d="agent">Agent 架构</button>
+    <button class="tab" data-d="full">AI 产品全链路</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="layout">
+    <div>
+      <div class="diagcard"><svg id="svg" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg"></svg></div>
+      <div class="oneline" id="oneline"></div>
+    </div>
+    <aside class="side" id="side"></aside>
+  </div>
+</main>
+
+<footer>交互式架构图 · AI 产品经理就业训练营课堂工具</footer>
+
+<script>
+/* ================= 数据 ================= */
+var DIAGRAMS = {
+  llm: {
+    name: 'LLM 基础链路',
+    summary: '用户说出需求 → 提示词把需求、规则和资料打包好 → 大模型基于概率续写答案 → 后处理清洗与过滤 → 呈现给用户。整条链路里，产品经理的抓手在「提示词组装」与「输出后处理」两端——前者决定模型听懂什么，后者决定用户安全看到什么。',
+    oneline: '<b>一句话讲明白：</b>大模型是一个「看懂指令、续写答案」的概率引擎，产品经理的工作是把它圈进正确的笼子里。',
+    nodes: [
+      {id:'input', label:'用户输入', sub:'User Input', x:16, y:150, w:96, h:52,
+       what:'用户的一句话请求，是一切链路的起点。',
+       pm:['关注真实场景的输入分布：用户实际会怎么问、会问什么','设计输入引导：placeholder、示例问题、语音入口','前置拦截明显违规与敏感输入'],
+       interview:'「用户输入是需求的显微镜——骂声最多的输入方式，就是产品最该改的地方。」'},
+      {id:'prompt', label:'提示词组装', sub:'Prompt Assembly', x:140, y:150, w:112, h:52,
+       what:'把 System 指令、用户问题、上下文资料、历史对话拼成最终提示词。',
+       pm:['这是产品经理的主战场——提示词就是需求文档','管好上下文窗口预算，什么该进、什么该出','提示词必须版本化管理，变更要可回溯'],
+       interview:'「在 AI 产品里，提示词即需求：改提示词和改 PRD 一样需要评审。」'},
+      {id:'llm', label:'大模型', sub:'LLM · Transformer', x:280, y:150, w:112, h:52,
+       what:'基于概率续写答案的引擎，能力来自预训练与对齐。',
+       pm:['不必懂原理，但要懂边界：会幻觉、有知识截止、有成本','选型看能力-成本-延迟三角，没有「最强」只有「最合适','私有化部署与 API 调用是两条成本曲线'],
+       interview:'「产品经理不需要会训模型，但必须能回答『为什么选这个模型』。」'},
+      {id:'post', label:'输出后处理', sub:'Post-processing', x:420, y:150, w:104, h:52,
+       what:'对模型原始输出做格式清洗、安全过滤、敏感信息脱敏。',
+       pm:['合规兜底层：内容安全审核必须前置，不能后补','设计降级文案与兜底回复（模型答不出时说什么）','敏感信息脱敏：手机号、身份证、金额'],
+       interview:'「没有后处理的 AI 产品是裸奔——安全过滤不是加分项，是准入项。」'},
+      {id:'resp', label:'回复用户', sub:'Response', x:552, y:150, w:72, h:52,
+       what:'最终呈现给用户的答案与交互。',
+       pm:['可信度设计：引用来源、置信度提示、免责声明','流式输出显著降低等待焦虑','多轮对话的上下文管理'],
+       interview:'「AI 产品的体验差距，一半在模型，一半在呈现。」'},
+      {id:'param', label:'参数配置', sub:'temperature · max tokens', x:280, y:30, w:200, h:50,
+       what:'temperature、max tokens、模型选型等控制模型行为的旋钮。',
+       pm:['temperature 是产品性格：0.1 是严谨客服，0.9 是创意总监','max tokens 直接关联成本，要设上限','参数变更是产品决策，不是技术细节'],
+       interview:'「temperature 不是技术参数，是产品性格——面试时敢这么答，就是产品思维。」'}
+    ],
+    edges: [
+      {from:'input', to:'prompt'}, {from:'prompt', to:'llm'}, {from:'llm', to:'post'}, {from:'post', to:'resp'},
+      {from:'param', to:'llm', dash:true},
+      {from:'resp', to:'input', dash:true, path:'M 588 202 L 588 340 L 64 340 L 64 206', label:'多轮上下文', lx:326, ly:354}
+    ]
+  },
+  rag: {
+    name: 'RAG 架构',
+    summary: '先把企业文档切片、向量化，存进向量数据库（建库，一次性工作）；用户提问时，把问题向量化去库里检索最相关片段，重排后拼进提示词，让模型带着资料回答。RAG 增强的是模型的「记忆力」——让它从闭卷天才变成开卷专家。',
+    oneline: '<b>一句话讲明白：</b>先查资料再回答——RAG 给模型开卷考试的权利，也用引用来源锁住了它的发挥。',
+    nodes: [
+      {id:'doc', label:'文档库', sub:'Document Store', x:16, y:30, w:104, h:46,
+       what:'企业知识、帮助中心、制度文件等原始资料。',
+       pm:['知识库的质量上限 = 资料的质量上限','建立资料更新与过期机制，否则答案会「过期','先盘家底：有多少资料值得进库'],
+       interview:'「RAG 的第一个瓶颈从来不是模型，是文档。」'},
+      {id:'parse', label:'解析与分块', sub:'Parsing & Chunking', x:148, y:30, w:110, h:46,
+       what:'解析文档结构，切成带重叠的语义块。',
+       pm:['块大小是精度与上下文的权衡，没有标准答案','表格、扫描件、图文混排是三大重灾区','块间保留重叠，防止答案被从中间切断'],
+       interview:'「分块策略决定了检索的天花板——块切坏了，后面全白搭。」'},
+      {id:'emb', label:'Embedding 模型', sub:'Text Encoder', x:286, y:30, w:118, h:46,
+       what:'把文本编码成语义向量，让「按意思搜索」成为可能。',
+       pm:['换模型 = 全库重新向量化，这是隐性成本','中英文混合、专业术语场景必须实测','维度和效果不总成正比'],
+       interview:'「选 Embedding 模型前先问一句：重建全库要多久？」'},
+      {id:'vdb', label:'向量数据库', sub:'Vector Database', x:432, y:30, w:118, h:46,
+       what:'存储向量并支持近似最近邻（ANN）检索。',
+       pm:['关注写入吞吐、检索延迟、混合检索（向量+关键词）','数据量级决定自建还是选云服务','元数据过滤（按部门、按时间）常被忽略但极有用'],
+       interview:'「向量数据库不是万能药——关键词精确匹配仍要留一手。」'},
+      {id:'q', label:'用户问题', sub:'Query', x:16, y:290, w:96, h:46,
+       what:'用户的原始提问。',
+       pm:['查询改写（补全、消歧、拆子问题）能显著提升召回','多轮对话里要把指代消解掉（「它」是什么）','提供「猜你想问」降低输入门槛'],
+       interview:'「好的查询改写，等于替用户把问题问对了。」'},
+      {id:'qemb', label:'查询向量化', sub:'Query Encoding', x:140, y:290, w:104, h:46,
+       what:'用同一个 Embedding 模型把问题变成向量。',
+       pm:['必须与文档用同一模型——最常见的事故源','模型升级时查询端要同步升级'],
+       interview:'「查询和文档用不同模型编码，就像用英语问一个只懂中文的人。」'},
+      {id:'retr', label:'向量检索', sub:'Retrieval · Top-K', x:272, y:290, w:104, h:46,
+       what:'计算问题与所有块的相似度，取 Top-K 候选。',
+       pm:['K 值是成本与召回的交易，K=4 是多数场景甜点区','设相似度阈值，过滤低质结果','召回不够时先查分块，再换模型'],
+       interview:'「K 值每加 1，成本和噪声一起涨。」'},
+      {id:'rerank', label:'重排', sub:'Rerank', x:404, y:290, w:104, h:46,
+       what:'用更精细的模型对候选块二次排序。',
+       pm:['性价比最高的一环：多花几百毫秒，换显著更准的上下文','延迟敏感场景可只重排 Top-20'],
+       interview:'「检索求快、重排求准——两步走是工业界标配。」'},
+      {id:'aug', label:'拼接提示词', sub:'Prompt Augmentation', x:524, y:290, w:100, h:46,
+       what:'把检索到的资料块填入提示词模板。',
+       pm:['管好上下文预算：资料不是越多越好','必须设计「检索不到资料」时的兜底策略','提示词模板要版本化'],
+       interview:'「拼提示词时就要想好：检索不到资料时，模型该说什么。」'},
+      {id:'gen', label:'大模型生成', sub:'Generation', x:524, y:170, w:100, h:46,
+       what:'基于检索到的资料生成回答。',
+       pm:['要求模型标注引用来源，无依据不答','用评测集持续验收，盯幻觉率','temperature 调低，减少自由发挥'],
+       interview:'「没有引用的 RAG 回答，可信度至少打对折。」'},
+      {id:'ans', label:'带引用回答', sub:'Grounded Answer', x:404, y:170, w:100, h:46,
+       what:'可溯源、可验证的最终答案。',
+       pm:['引用可点击回跳原文——可信度设计标配','展示「资料更新时间」，管理预期'],
+       interview:'「让用户能点回原文，是 AI 产品建立信任最短的路。」'}
+    ],
+    edges: [
+      {from:'doc', to:'parse'}, {from:'parse', to:'emb'}, {from:'emb', to:'vdb'},
+      {from:'q', to:'qemb'}, {from:'qemb', to:'retr'}, {from:'retr', to:'rerank'}, {from:'rerank', to:'aug'},
+      {from:'aug', to:'gen', path:'M 574 290 L 574 216'},
+      {from:'gen', to:'ans', path:'M 524 193 L 504 193'},
+      {from:'vdb', to:'retr', dash:true, path:'M 491 76 L 330 286', label:'相似度计算', lx:438, ly:146}
+    ]
+  },
+  agent: {
+    name: 'Agent 架构',
+    summary: 'Agent 是「长着四肢的大模型」：核心负责规划，记忆负责经验，工具负责能力，执行负责落地。产品经理设计的不只是提示词，而是任务边界、人工接管点和安全闸门——Agent 跑得起来靠技术，跑不出事靠产品。',
+    oneline: '<b>一句话讲明白：</b>给模型配上规划、记忆、工具和执行力，让它从「答题」变「办事」——但闸门必须握在产品经理手里。',
+    nodes: [
+      {id:'core', label:'Agent 核心', sub:'规划 Planning', x:255, y:170, w:130, h:60,
+       what:'大脑——拆解任务、制定计划、决定下一步做什么。',
+       pm:['定义任务边界与成功标准（做到什么程度算完成）','设计人工接管点：什么时候交还给人类','控制最大步数，防止无限循环烧钱'],
+       interview:'「Agent 产品的第一问题：这件事什么时候该交还给人类？」'},
+      {id:'plan', label:'规划', sub:'Planning', x:40, y:40, w:130, h:52,
+       what:'把大目标拆成可执行的步骤序列。',
+       pm:['步骤要可观测：用户能看到它在干嘛、进行到哪一步','失败重试策略：重试几次、何时放弃'],
+       interview:'「没有步数上限的 Agent，是在拿用户的 token 赌运气。」'},
+      {id:'mem', label:'记忆', sub:'Memory', x:470, y:40, w:130, h:52,
+       what:'短期上下文与长期记忆的存取。',
+       pm:['设计记忆的写入与遗忘策略——该忘的忘','长期记忆的隐私边界与用户可见性'],
+       interview:'「记忆不是越多越好——会遗忘，才是产品设计。」'},
+      {id:'tool', label:'工具', sub:'Tools · API / MCP', x:40, y:310, w:150, h:52,
+       what:'外部能力：搜索、计算器、数据库、企业系统 API。',
+       pm:['工具描述文案决定调用准确率——它是提示词的一部分','权限最小化：这个 Agent 能动哪些数据','MCP 让工具接入标准化，是产品经理的新杠杆'],
+       interview:'「工具的描述文案是提示词的一部分——写不好，模型就不会用。」'},
+      {id:'act', label:'执行', sub:'Action', x:470, y:310, w:130, h:52,
+       what:'真正发起工具调用，与环境发生交互。',
+       pm:['高风险动作必须人工确认：支付、发送、删除','设计回滚与补偿机制','执行日志全程留痕，可审计'],
+       interview:'「凡是不可逆的动作，都必须有人工确认闸门。」'},
+      {id:'multi', label:'多 Agent 协作', sub:'Multi-Agent', x:255, y:340, w:130, h:48,
+       what:'多个 Agent 分工协同，各管一段。',
+       pm:['先问「单 Agent 能不能解决」——多数场景能','协作协议与消息格式是新的设计对象'],
+       interview:'「多 Agent 是复杂度黑洞：两个 Agent 能做的事，别用五个。」'}
+    ],
+    edges: [
+      {from:'core', to:'plan', path:'M 300 170 L 120 92', label:'任务分解'},
+      {from:'core', to:'mem', path:'M 345 170 L 520 92', label:'经验调用'},
+      {from:'core', to:'tool', path:'M 300 230 L 130 310', label:'能力扩展'},
+      {from:'core', to:'act', path:'M 345 230 L 510 310', label:'落地执行'},
+      {from:'core', to:'multi', dash:true, path:'M 320 230 L 320 340', label:'分工协同'},
+      {from:'act', to:'core', dash:true, path:'M 600 336 C 636 300, 636 240, 388 205', label:'环境反馈'}
+    ]
+  },
+  full: {
+    name: 'AI 产品全链路',
+    summary: 'AI 产品不是「接个 API」，而是从需求到数据、选型、开发、评测、上线、回流的完整闭环。产品经理在每个环节都是翻译官和验收员——这正是 AI PM 和传统 PM 最大的不同：你既要懂技术语言，又要守住用户价值。',
+    oneline: '<b>一句话讲明白：</b>AI 产品是从数据到闭环的流水线，产品经理是每个环节的「翻译官和验收员」。',
+    nodes: [
+      {id:'req', label:'需求输入', sub:'业务问题 → 产品方向', x:14, y:60, w:96, h:52, pm:'写 PRD · 定成功指标',
+       what:'从业务问题出发，定义 AI 产品方向与边界。',
+       pm2:['立项三问：解决谁的问题、为什么是现在、为什么用 AI','定义可量化的成功指标'],
+       interview:'「AI 产品立项三问：解决谁的问题、为什么是现在、为什么用 AI。」'},
+      {id:'data', label:'数据准备', sub:'语料 · 知识 · 合规', x:146, y:60, w:100, h:52, pm:'定数据标准 · 划合规边界',
+       what:'准备训练 / 检索 / 评测所需的数据资产。',
+       pm2:['数据决定上限：没有数据的 AI 需求是空中楼阁','数据合规：来源、授权、个保法'],
+       interview:'「数据决定上限——没有数据的 AI 需求都是空中楼阁。」'},
+      {id:'select', label:'模型选型', sub:'API · 开源 · 私有化', x:278, y:60, w:100, h:52, pm:'定选型标准 · 建验收基线',
+       what:'确定用哪个模型、哪类服务、什么部署方式。',
+       pm2:['能力、成本、延迟、合规四角平衡','预留切换能力，避免单点绑定'],
+       interview:'「选型不是选最强，是选最合适。」'},
+      {id:'dev', label:'应用开发', sub:'Prompt · 工作流 · RAG · Agent', x:410, y:60, w:100, h:52, pm:'写方案 · 搭 Demo · 跟排期',
+       what:'把模型能力包装成用户可用的产品功能。',
+       pm2:['AI PM 的代码是提示词和工作流','不会搭 Demo，就只能被动等排期'],
+       interview:'「AI 产品经理的代码是提示词和工作流——不会搭 Demo 就只能被动等排期。」'},
+      {id:'eval', label:'评测验收', sub:'评测集 · badcase · 打分', x:542, y:60, w:96, h:52, pm:'定验收标准 · 跑评测集',
+       what:'用数据和用例验收模型与功能是否达标。',
+       pm2:['没有评测集的 AI 功能等于没有验收标准','badcase 归因：是模型问题还是方案问题'],
+       interview:'「没有评测集的 AI 功能，上线就是开盲盒。」'},
+      {id:'mon', label:'上线监控', sub:'幻觉率 · 采纳率 · 成本', x:542, y:200, w:96, h:52, pm:'盯指标 · 收 badcase',
+       what:'上线后持续监控质量、体验与成本。',
+       pm2:['幻觉率、采纳率、单次成本三个指标天天看','badcase 回流进评测集'],
+       interview:'「上线才是开始：三个指标天天看，一个会都不能少。」'},
+      {id:'loop', label:'数据回流', sub:'用户反馈 → 迭代', x:410, y:200, w:100, h:52, pm:'设计闭环 · 驱动迭代',
+       what:'把用户行为与反馈变成下一轮的改进燃料。',
+       pm2:['用户每一次纠正都是训练素材','闭环设计决定产品进化速度'],
+       interview:'「用户每一次纠正都是训练素材——闭环设计决定进化速度。」'}
+    ],
+    edges: [
+      {from:'req', to:'data'}, {from:'data', to:'select'}, {from:'select', to:'dev'}, {from:'dev', to:'eval'},
+      {from:'eval', to:'mon', path:'M 590 112 L 590 200'},
+      {from:'mon', to:'loop', path:'M 542 226 L 510 226'},
+      {from:'loop', to:'data', dash:true, path:'M 460 200 L 196 112', label:'闭环迭代'}
+    ]
+  }
+};
+
+/* ================= 渲染 ================= */
+var curD = 'llm';
+var curNode = null;
+var NS = 'http://www.w3.org/2000/svg';
+
+function el(tag, attrs){
+  var e = document.createElementNS(NS, tag);
+  for(var k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+
+/* 节点内文字超宽时强制收缩适配（杜绝任何文字溢出/重叠） */
+function fitNodeText(t, maxW, fs){
+  var s = t.textContent || '';
+  var w = 0;
+  for(var i = 0; i < s.length; i++){ w += (s.charCodeAt(i) > 255 ? fs : fs * 0.56); }
+  if(w > maxW){
+    t.setAttribute('textLength', maxW);
+    t.setAttribute('lengthAdjust', 'spacingAndGlyphs');
+  }
+}
+
+function nodeById(d, id){
+  return DIAGRAMS[d].nodes.filter(function(n){return n.id === id;})[0];
+}
+function center(n, side){
+  var cx = n.x + n.w/2, cy = n.y + n.h/2;
+  if(side === 'top') return [cx, n.y];
+  if(side === 'bottom') return [cx, n.y + n.h];
+  if(side === 'left') return [n.x, cy];
+  return [n.x + n.w, cy];
+}
+
+function renderDiagram(key){
+  curD = key; curNode = null;
+  var d = DIAGRAMS[key];
+  var svg = document.getElementById('svg');
+  svg.innerHTML = '';
+  /* 定义箭头 marker */
+  var defs = el('defs', {});
+  var mk = el('marker', {id:'arr', viewBox:'0 0 10 10', refX:9, refY:5, markerWidth:7, markerHeight:7, orient:'auto-start-reverse'});
+  mk.appendChild(el('path', {d:'M 0 0 L 10 5 L 0 10 z', fill:'#A5A1B8'}));
+  defs.appendChild(mk);
+  svg.appendChild(defs);
+
+  /* 边 */
+  d.edges.forEach(function(e){
+    var a = nodeById(key, e.from), b = nodeById(key, e.to);
+    var p;
+    if(e.path){ p = el('path', {d:e.path}); }
+    else {
+      var pa = center(a, (b.x > a.x ? 'right' : 'left'));
+      var pb = center(b, (b.x > a.x ? 'left' : 'right'));
+      p = el('line', {x1:pa[0], y1:pa[1], x2:pb[0], y2:pb[1]});
+    }
+    p.setAttribute('class', 'edge' + (e.dash ? ' dash' : ''));
+    p.setAttribute('marker-end', 'url(#arr)');
+    svg.appendChild(p);
+    if(e.label){
+      var mid = e.path ? midOfPath(e.path) : null;
+      if(mid){
+      var lx = (e.lx !== undefined) ? e.lx : mid[0];
+      var ly = (e.ly !== undefined) ? e.ly : mid[1] - 5;
+      var t = el('text', {x:lx, y:ly, 'text-anchor':'middle', 'class':'elabel'});
+      t.textContent = e.label;
+        svg.appendChild(t);
+      }
+    }
+  });
+
+  /* 节点 */
+  d.nodes.forEach(function(n){
+    var g = el('g', {'class':'node', 'data-id':n.id});
+    var title = el('title', {});
+    title.textContent = n.sub || n.label;
+    g.appendChild(title);
+    g.appendChild(el('rect', {x:n.x, y:n.y, width:n.w, height:n.h, rx:10}));
+    var t1 = el('text', {x:n.x + n.w/2, y:n.y + (typeof n.pm === 'string' ? 21 : (n.sub ? 26 : 30)), 'text-anchor':'middle', 'class':'nl'});
+    t1.textContent = n.label;
+    fitNodeText(t1, n.w - 8, 13);
+    g.appendChild(t1);
+    if(n.sub){
+      var t2 = el('text', {x:n.x + n.w/2, y:n.y + 36, 'text-anchor':'middle', 'class':'ns'});
+      t2.textContent = n.sub;
+      fitNodeText(t2, n.w - 8, 10);
+      g.appendChild(t2);
+    }
+    if(typeof n.pm === 'string'){
+      var t3 = el('text', {x:n.x + n.w/2, y:n.y + 45, 'text-anchor':'middle', 'class':'np'});
+      t3.textContent = n.pm;
+      fitNodeText(t3, n.w - 8, 9.5);
+      g.appendChild(t3);
+    }
+    g.addEventListener('click', function(){ showNode(key, n.id); });
+    svg.appendChild(g);
+  });
+
+  document.getElementById('oneline').innerHTML = d.oneline;
+  showSummary();
+}
+
+function midOfPath(d){
+  var m = d.match(/M\s*([\d.]+)\s+([\d.]+)[\sLCS]*([\d.]+)\s+([\d.]+)\s*$/);
+  if(m) return [(+m[1] + +m[3])/2, (+m[2] + +m[4])/2];
+  var m2 = d.match(/M\s*([\d.]+)\s+([\d.]+)/);
+  return m2 ? [+m2[1], +m2[2]] : [0,0];
+}
+
+function showSummary(){
+  var d = DIAGRAMS[curD];
+  var side = document.getElementById('side');
+  side.innerHTML =
+    '<button class="back" id="backBtn">← 返回总览</button>' +
+    '<div class="kicker">总览讲解</div>' +
+    '<h2>' + d.name + ' · 一分钟讲法</h2>' +
+    '<div class="block"><div class="bt"><i></i>整条链路</div><p>' + d.summary + '</p></div>' +
+    '<div class="block"><div class="bt"><i></i>课堂用法</div><p>先按这张图把全场讲一遍，再点击任意节点展开三段式细讲。建议每张图配一个真实产品案例（如 RAG 配知识库问答产品）。</p></div>' +
+    '<div class="quote"><b>面试金句</b>' + d.oneline.replace(/<[^>]+>/g, '') + '</div>' +
+    '<div class="hint">提示：悬停节点查看英文全称，点击节点查看「是什么 / 产品经理要关心什么 / 面试怎么答」。</div>';
+  document.getElementById('backBtn').classList.remove('show');
+}
+
+function showNode(key, id){
+  var n = nodeById(key, id);
+  var side = document.getElementById('side');
+  var pmList = (n.pm2 || n.pm || []).map(function(x){return '<li>' + x + '</li>';}).join('');
+  side.innerHTML =
+    '<button class="back show" id="backBtn">← 返回总览</button>' +
+    '<div class="kicker">' + DIAGRAMS[key].name + ' · 节点讲解</div>' +
+    '<h2>' + n.label + (n.sub ? ' <span style="font-size:12px;color:var(--muted);font-weight:500">' + n.sub + '</span>' : '') + '</h2>' +
+    '<div class="block"><div class="bt"><i></i>是什么</div><p>' + n.what + '</p></div>' +
+    '<div class="block"><div class="bt"><i></i>产品经理要关心什么</div><ul>' + pmList + '</ul></div>' +
+    '<div class="quote"><b>面试怎么答</b>' + n.interview + '</div>';
+  document.getElementById('backBtn').onclick = showSummary;
+  /* 高亮选中节点 */
+  var nodes = document.querySelectorAll('#svg .node');
+  nodes.forEach(function(g){
+    g.classList.toggle('sel', g.getAttribute('data-id') === id);
+  });
+}
+
+/* ================= Tab 事件 ================= */
+document.querySelectorAll('#tabs .tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('#tabs .tab').forEach(function(x){x.classList.remove('on');});
+    t.classList.add('on');
+    renderDiagram(t.dataset.d);
+  });
+});
+
+/* ================= 初始化 ================= */
+renderDiagram('llm');
+</script>
+</body>
+</html>

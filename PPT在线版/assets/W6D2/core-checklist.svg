@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arwB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+
+  <!-- 标题区：紫底白字横幅 -->
+  <rect x="30" y="32" width="1140" height="64" rx="10" fill="#7C3AED"/>
+  <text x="54" y="64" font-size="22" font-weight="700" fill="#FFFFFF">核心链路检查清单</text>
+  <text x="54" y="86" font-size="13" fill="#EDE7FB">W6D2 开发冲刺 I · 今天只做一件事：跑通</text>
+
+  <!-- 链路区：输入 → 处理 → 输出 -->
+  <rect x="60" y="140" width="340" height="96" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+  <text x="230" y="182" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">输入</text>
+  <text x="230" y="206" text-anchor="middle" font-size="11" fill="#6B7280">Input</text>
+  <rect x="430" y="140" width="340" height="96" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+  <text x="600" y="182" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">处理</text>
+  <text x="600" y="206" text-anchor="middle" font-size="11" fill="#6B7280">Process</text>
+  <rect x="800" y="140" width="340" height="96" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+  <text x="970" y="182" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">输出</text>
+  <text x="970" y="206" text-anchor="middle" font-size="11" fill="#6B7280">Output</text>
+
+  <path d="M400,188 L422,188" fill="none" stroke="#2563EB" stroke-width="3.5" marker-end="url(#arwB)"/>
+  <circle cx="415" cy="188" r="3.5" fill="#2563EB"/>
+  <path d="M770,188 L792,188" fill="none" stroke="#2563EB" stroke-width="3.5" marker-end="url(#arwB)"/>
+  <circle cx="785" cy="188" r="3.5" fill="#2563EB"/>
+
+  <!-- 节点下挂检查点 -->
+  <text x="76" y="262" font-size="12" fill="#4A4560">· 真实输入，非测试文本</text>
+  <text x="76" y="282" font-size="12" fill="#4A4560">· 用户操作 ≤3 步 / 一键示例</text>
+  <text x="446" y="262" font-size="12" fill="#4A4560">· Key 配在环境变量</text>
+  <text x="446" y="282" font-size="12" fill="#4A4560">· 拿到一次真实模型响应</text>
+  <text x="816" y="262" font-size="12" fill="#4A4560">· 结果回前端，无手动搬数据</text>
+  <text x="816" y="282" font-size="12" fill="#4A4560">· 日志可见：时间 / token / 耗时</text>
+
+  <line x1="30" y1="310" x2="1170" y2="310" stroke="#E8E5F1" stroke-width="1.2"/>
+
+  <!-- 检查点区：六项勾选 -->
+  <text x="30" y="338" font-size="14" font-weight="700" fill="#221E33">六项检查点 · 逐条打勾</text>
+
+  <rect x="70" y="356" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="104" y="371" font-size="15" fill="#221E33">能提交一条<tspan font-weight="700" fill="#7C3AED">真实输入</tspan>（非测试文本）</text>
+
+  <rect x="70" y="392" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="104" y="407" font-size="15" fill="#221E33">用户操作 ≤3 步，或有「一键示例」</text>
+
+  <rect x="70" y="428" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="104" y="443" font-size="15" fill="#221E33">Key 配在<tspan font-weight="700" fill="#7C3AED">环境变量</tspan>，非代码明文</text>
+
+  <rect x="70" y="464" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="104" y="479" font-size="15" fill="#221E33">拿到一次<tspan font-weight="700" fill="#7C3AED">真实模型响应</tspan>（调用记录可见）</text>
+
+  <rect x="70" y="500" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+  <text x="104" y="515" font-size="15" fill="#221E33">结果展示回前端，全程无手动搬数据</text>
+
+  <rect x="70" y="536" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <text x="104" y="551" font-size="15" fill="#221E33"><tspan font-weight="700" fill="#2563EB">日志可见</tspan>：能指出本次请求的时间 / token / 耗时</text>
+
+  <!-- 底部纪律条 -->
+  <rect x="30" y="600" width="1140" height="60" rx="10" fill="#2563EB"/>
+  <text x="54" y="637" font-size="16" font-weight="700" fill="#FFFFFF">先跑通，再完美 · 今天允许丑，不允许没跑通</text>
+  <rect x="826" y="614" width="96" height="32" rx="16" fill="#1E40AF"/>
+  <text x="874" y="635" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">40min 输入</text>
+  <rect x="938" y="614" width="96" height="32" rx="16" fill="#1E40AF"/>
+  <text x="986" y="635" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">70min 调用</text>
+  <rect x="1050" y="614" width="96" height="32" rx="16" fill="#1E40AF"/>
+  <text x="1098" y="635" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">80min 串联</text>
+</svg>

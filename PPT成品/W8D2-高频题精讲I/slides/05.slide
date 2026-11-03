@@ -1,0 +1,6 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei', justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', lineHeight: 1.5 }}>
+        数据，不是形容词<br />——要的是<span style={{ color: '#FDE68A' }}>证据链</span>，不是感动
+    </Text>
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', marginTop: 40, letterSpacing: 2 }}>W8D2 高频题精讲 I · 项目深挖</Text>
+</Slide>

@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>14 / 18</Text>
+    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>ATS 是什么</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ width: '100%', flexDirection: 'column', gap: 26, height: 450 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, height: 170 }}>
+            <Box style={{ flex: 1, height: '100%', background: '#F5F3FF', borderRadius: 14, padding: 22, flexDirection: 'column', gap: 8, justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>STEP 1</Text>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>解析文本</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>机器读取简历，抽取字段与文本内容</Text>
+            </Box>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+            <Box style={{ flex: 1, height: '100%', background: '#EFF6FF', borderRadius: 14, padding: 22, flexDirection: 'column', gap: 8, justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>STEP 2</Text>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>关键词匹配</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>与 JD 要求的关键词、技能项比对打分</Text>
+            </Box>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+            <Box style={{ flex: 1, height: '100%', background: '#F5F3FF', borderRadius: 14, padding: 22, flexDirection: 'column', gap: 8, justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>STEP 3</Text>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>排序</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>匹配度高的简历排到 HR 查看队列前列</Text>
+            </Box>
+        </Box>
+        <Box style={{ background: '#FEF2F2', border: '1px solid #DC2626', borderRadius: 12, padding: '18px 26px' }}>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}><span style={{ fontWeight: 'bold', color: '#DC2626' }}>花哨排版可能解析失败：</span>双栏错位、图形化图标、表格嵌套，机器可能读不出来，你的内容根本没进入匹配环节。</Text>
+        </Box>
+        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '18px 26px' }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>结构清晰优先于视觉创意：单栏、标准段名、常规字体，先让机器读懂，再谈好看。</Text>
+        </Box>
+    </Box>
+</Slide>

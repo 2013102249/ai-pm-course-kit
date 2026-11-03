@@ -1,0 +1,28 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, position: 'relative', background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif" }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D1</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>16 / 18</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>腾讯问卷实操：现场建卷</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ flex: 1, justifyContent: 'center', gap: 26 }}>
+    <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '16px 24px' }}>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>本页切腾讯问卷，现场建卷投屏讲解</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'stretch', gap: 20 }}>
+      <Box style={{ flex: 1.4, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#7C3AED' }}>7 步</Text>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>现场建卷流程</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '24px 28px', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#2563EB' }}>8 分钟</Text>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>分组建卷</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '24px 28px', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#2563EB' }}>5 分钟</Text>
+        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>互填找茬</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

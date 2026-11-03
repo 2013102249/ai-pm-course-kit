@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>提示词调试台 · AI 产品经理培训工具</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+:root {
+  --purple: #7C3AED;
+  --purple-dark: #5B21B6;
+  --purple-bg: #F1EBFD;
+  --purple-border: #DCCFFA;
+  --blue: #2563EB;
+  --blue-dark: #1E40AF;
+  --blue-bg: #E8EFFD;
+  --blue-border: #CBDAF8;
+  --page-bg: #F7F6FB;
+  --card: #FFFFFF;
+  --border: #E8E5F1;
+  --text: #221E33;
+  --text-2: #7A7590;
+  --track: #E4E1EE;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.page { max-width: 1200px; margin: 0 auto; padding: 20px 20px 32px; }
+
+/* ---------- 顶栏 ---------- */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 6px 0 16px; }
+.brand h1 { font-size: 20px; font-weight: 700; letter-spacing: .5px; display: flex; align-items: center; gap: 10px; }
+.brand h1::before { content: ""; width: 6px; height: 22px; border-radius: 3px; background: linear-gradient(180deg, var(--purple), var(--blue)); }
+.brand p { font-size: 12px; color: var(--text-2); margin-top: 4px; padding-left: 16px; }
+
+.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 13px; color: var(--text); }
+.switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+.switch-track { position: relative; width: 38px; height: 20px; border-radius: 999px; background: var(--track); transition: background .2s; flex: none; }
+.switch-thumb { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(34, 30, 51, .3); transition: left .2s; }
+.switch input:checked + .switch-track { background: var(--purple); }
+.switch input:checked + .switch-track .switch-thumb { left: 20px; }
+.switch input:focus-visible + .switch-track { box-shadow: 0 0 0 3px rgba(124, 58, 237, .25); }
+
+/* ---------- 布局 ---------- */
+.layout { display: grid; grid-template-columns: 45fr 55fr; gap: 16px; align-items: start; }
+.col-left, .col-right { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px rgba(34, 30, 51, .04); }
+
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.card-head h2 { font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.card-head h2::before { content: ""; width: 4px; height: 14px; border-radius: 2px; background: var(--purple); }
+.hint { font-size: 12px; color: var(--text-2); }
+.badge-sim { font-size: 11px; color: var(--blue-dark); background: var(--blue-bg); border: 1px solid var(--blue-border); border-radius: 999px; padding: 3px 10px; }
+
+/* ---------- 表单 ---------- */
+.field { margin-bottom: 14px; }
+.field-label { font-size: 13px; font-weight: 600; margin-bottom: 8px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.field-sub { font-size: 11px; color: var(--text-2); font-weight: 400; }
+
+textarea, select, input[type="number"] { width: 100%; font: inherit; font-size: 13px; color: var(--text); background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+textarea { resize: vertical; line-height: 1.7; }
+textarea::placeholder { color: #A8A3BC; }
+textarea:focus, select:focus, input:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(124, 58, 237, .12); }
+
+.tpl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tpl-btn { font: inherit; font-size: 13px; text-align: left; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--purple-border); background: var(--purple-bg); color: var(--purple-dark); cursor: pointer; transition: all .15s; }
+.tpl-btn:hover { border-color: var(--purple); background: #E9DFFC; }
+.tpl-btn.active { background: var(--purple); border-color: var(--purple); color: #fff; }
+
+.param-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.param label { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; color: var(--text-2); margin-bottom: 6px; gap: 6px; }
+.param-value { font-size: 12px; font-weight: 700; color: var(--purple-dark); font-variant-numeric: tabular-nums; }
+
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; background: transparent; height: 22px; cursor: pointer; }
+input[type="range"]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: var(--track); }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; margin-top: -5px; border-radius: 50%; background: var(--purple); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(34, 30, 51, .35); }
+input[type="range"]::-moz-range-track { height: 6px; border-radius: 3px; background: var(--track); }
+input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--purple); border: 2px solid #fff; }
+
+/* ---------- 按钮 ---------- */
+.actions { display: flex; gap: 10px; }
+.btn { font: inherit; font-size: 14px; border: none; cursor: pointer; border-radius: 8px; padding: 10px 22px; transition: all .15s; }
+.btn-primary { background: var(--purple); color: #fff; font-weight: 600; }
+.btn-primary:hover { background: var(--purple-dark); }
+.btn-ghost { background: #fff; border: 1px solid var(--border); color: var(--text); }
+.btn-ghost:hover { border-color: var(--purple); color: var(--purple-dark); }
+.btn-small { font-size: 12px; padding: 6px 14px; background: var(--purple-bg); border: 1px solid var(--purple-border); color: var(--purple-dark); border-radius: 6px; cursor: pointer; transition: all .15s; }
+.btn-small:hover { background: var(--purple); border-color: var(--purple); color: #fff; }
+.btn-block { width: 100%; }
+
+/* ---------- 输出 ---------- */
+.answer-box { background: #FAF9FD; border: 1px solid var(--border); border-radius: 10px; padding: 14px; min-height: 240px; max-height: 460px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; font-size: 13px; line-height: 1.8; }
+.answer-box-sm { min-height: 200px; max-height: 380px; font-size: 12.5px; }
+.placeholder { color: var(--text-2); font-size: 13px; white-space: normal; }
+.stream-cursor { display: inline-block; width: 7px; height: 15px; margin-left: 2px; border-radius: 1px; background: var(--purple); vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.output-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.tpl-current { font-size: 12px; color: var(--text-2); }
+
+/* ---------- 评分卡 ---------- */
+.score-total { font-size: 13px; color: var(--text-2); }
+.score-num { font-size: 26px; font-weight: 700; color: var(--purple); margin-right: 2px; }
+.score-bar { display: flex; gap: 6px; margin-bottom: 12px; }
+.score-seg { flex: 1; height: 6px; border-radius: 3px; background: #EDEBF3; transition: background .2s; }
+.score-seg.on { background: var(--purple); }
+.score-comment { font-size: 13px; background: var(--purple-bg); border: 1px solid var(--purple-border); color: var(--purple-dark); border-radius: 8px; padding: 10px 12px; margin-bottom: 6px; }
+.score-list { list-style: none; }
+.score-item { display: flex; gap: 10px; padding: 11px 0; border-top: 1px dashed var(--border); }
+.score-item:first-child { border-top: none; padding-top: 4px; }
+.si-icon { flex: none; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+.si-icon svg { width: 12px; height: 12px; }
+.score-item.hit .si-icon { background: var(--purple-bg); color: var(--purple-dark); }
+.score-item.miss .si-icon { background: #F1F0F5; color: var(--text-2); }
+.si-body { flex: 1; min-width: 0; }
+.si-title { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.chip { font-size: 11px; font-weight: 500; padding: 1px 8px; border-radius: 999px; }
+.chip-hit { background: var(--purple-bg); color: var(--purple-dark); }
+.chip-miss { background: #F1F0F5; color: var(--text-2); }
+.si-tip { font-size: 12px; color: var(--text-2); margin-top: 3px; line-height: 1.6; }
+
+/* ---------- A/B 对比 ---------- */
+.ab-config { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-bottom: 12px; background: #FDFCFF; }
+.ab-config-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.ab-badge { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 6px; }
+.badge-a { background: var(--purple-bg); color: var(--purple-dark); }
+.badge-b { background: var(--blue-bg); color: var(--blue-dark); }
+.ab-tpl-name { font-size: 11px; color: var(--text-2); }
+.mini-label { display: block; font-size: 11px; color: var(--text-2); margin-bottom: 4px; }
+.ab-config textarea { margin-bottom: 10px; }
+.ab-temp-row label { display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; color: var(--text-2); margin-bottom: 4px; }
+
+.ab-answers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ab-answer { min-width: 0; }
+.ab-answer-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.ab-score-chip { font-size: 12px; color: var(--text-2); margin-left: auto; font-variant-numeric: tabular-nums; }
+.diff-note { margin-top: 12px; background: var(--blue-bg); border: 1px solid var(--blue-border); border-radius: 10px; padding: 12px 14px; display: flex; gap: 10px; }
+.diff-label { flex: none; font-size: 12px; font-weight: 700; color: var(--blue-dark); padding-top: 2px; }
+.diff-note p { font-size: 13px; color: var(--text); line-height: 1.75; }
+
+/* ---------- 演示脚本 ---------- */
+details.demo { margin-top: 16px; }
+details.demo summary { cursor: pointer; font-size: 14px; font-weight: 700; list-style: none; display: flex; align-items: center; gap: 10px; }
+details.demo summary::-webkit-details-marker { display: none; }
+details.demo summary::before { content: ""; width: 0; height: 0; border-left: 7px solid var(--purple); border-top: 5px solid transparent; border-bottom: 5px solid transparent; transition: transform .2s; flex: none; }
+details[open].demo summary::before { transform: rotate(90deg); }
+.sum-sub { font-size: 12px; font-weight: 400; color: var(--text-2); }
+.demo-steps { margin: 14px 0 2px; padding-left: 22px; display: grid; gap: 10px; }
+.demo-steps li { font-size: 13px; line-height: 1.8; }
+.demo-steps b { color: var(--purple-dark); font-weight: 700; }
+.foot { margin-top: 18px; font-size: 12px; color: var(--text-2); text-align: center; line-height: 1.8; }
+
+/* ---------- 响应式：≤720px 单栏堆叠 ---------- */
+@media (max-width: 720px) {
+  .page { padding: 14px 14px 28px; }
+  .layout { grid-template-columns: 1fr; }
+  .ab-answers { grid-template-columns: 1fr; }
+  .param-grid { grid-template-columns: 1fr; }
+  .answer-box { max-height: 340px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>提示词调试台</h1>
+      <p>AI 产品经理培训课程 · 课堂演示与学员动手工具</p>
+    </div>
+    <label class="switch" for="abToggle">
+      <input type="checkbox" id="abToggle">
+      <span class="switch-track"><span class="switch-thumb"></span></span>
+      <span class="switch-text">A/B 对比模式</span>
+    </label>
+  </header>
+
+  <main class="layout">
+    <div class="col-left">
+
+      <section class="card" id="singlePanel">
+        <div class="card-head">
+          <h2>工作台</h2>
+          <span class="hint">Ctrl / Cmd + Enter 快速运行</span>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="systemPrompt">System Prompt<span class="field-sub">系统提示：定义角色与全局规则</span></label>
+          <textarea id="systemPrompt" rows="4" spellcheck="false"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="userPrompt">User Prompt<span class="field-sub">用户提示：任务、输入内容与具体要求</span></label>
+          <textarea id="userPrompt" rows="10" spellcheck="false"></textarea>
+        </div>
+
+        <div class="field">
+          <div class="field-label">场景模板<span class="field-sub">一键填入「角色 + 任务 + 约束 + 输出格式」四要素</span></div>
+          <div class="tpl-grid" id="tplGrid"></div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">参数</div>
+          <div class="param-grid">
+            <div class="param">
+              <label for="modelSelect">模型</label>
+              <select id="modelSelect">
+                <option value="standard">通用大模型 · 标准版</option>
+                <option value="long">通用大模型 · 长文本版</option>
+                <option value="lite">轻量模型 · 快速版</option>
+              </select>
+            </div>
+            <div class="param">
+              <label for="tempRange">temperature<span class="param-value" id="tempValue">0.3</span></label>
+              <input type="range" id="tempRange" min="0" max="1" step="0.1" value="0.3">
+            </div>
+            <div class="param">
+              <label for="maxTokens">max tokens</label>
+              <input type="number" id="maxTokens" value="500" min="1" max="100000">
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="runBtn">运行</button>
+          <button type="button" class="btn btn-ghost" id="resetBtn">重置</button>
+        </div>
+      </section>
+
+      <section class="card" id="abPanel" hidden>
+        <div class="card-head">
+          <h2>A/B 对比配置</h2>
+          <span class="hint">建议一次只改一个变量</span>
+        </div>
+
+        <div class="field">
+          <div class="field-label">场景模板<span class="field-sub">点击后同时载入 A 与 B 作为对比基准</span></div>
+          <div class="tpl-grid" id="tplGridAb"></div>
+        </div>
+
+        <div class="ab-config">
+          <div class="ab-config-head">
+            <span class="ab-badge badge-a">配置 A</span>
+            <span class="ab-tpl-name" id="abTplNameA"></span>
+          </div>
+          <label class="mini-label" for="aSystem">System Prompt</label>
+          <textarea id="aSystem" rows="3" spellcheck="false"></textarea>
+          <label class="mini-label" for="aUser">User Prompt</label>
+          <textarea id="aUser" rows="6" spellcheck="false"></textarea>
+          <div class="ab-temp-row">
+            <label for="aTemp">temperature<span class="param-value" id="aTempValue">0.3</span></label>
+            <input type="range" id="aTemp" min="0" max="1" step="0.1" value="0.3">
+          </div>
+        </div>
+
+        <div class="ab-config">
+          <div class="ab-config-head">
+            <span class="ab-badge badge-b">配置 B</span>
+            <span class="ab-tpl-name" id="abTplNameB"></span>
+          </div>
+          <label class="mini-label" for="bSystem">System Prompt</label>
+          <textarea id="bSystem" rows="3" spellcheck="false"></textarea>
+          <label class="mini-label" for="bUser">User Prompt</label>
+          <textarea id="bUser" rows="6" spellcheck="false"></textarea>
+          <div class="ab-temp-row">
+            <label for="bTemp">temperature<span class="param-value" id="bTempValue">0.3</span></label>
+            <input type="range" id="bTemp" min="0" max="1" step="0.1" value="0.3">
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block" id="compareBtn">对比运行</button>
+      </section>
+
+    </div>
+
+    <div class="col-right">
+
+      <section class="card" id="outputPanel">
+        <div class="card-head">
+          <h2>模拟输出</h2>
+          <span class="badge-sim">教学模拟 · 预置示例回答</span>
+        </div>
+        <div class="answer-box" id="answerBox"></div>
+        <div class="output-foot">
+          <button type="button" class="btn btn-small" id="copyBtn">复制回答</button>
+          <span class="tpl-current" id="tplCurrent"></span>
+        </div>
+      </section>
+
+      <section class="card" id="scoreCard">
+        <div class="card-head">
+          <h2>提示词五要素评分</h2>
+          <div class="score-total"><span class="score-num" id="scoreNum">0</span><span class="score-den">/ 5</span></div>
+        </div>
+        <div class="score-bar" id="scoreBar"></div>
+        <p class="score-comment" id="scoreComment"></p>
+        <ul class="score-list" id="scoreList"></ul>
+      </section>
+
+      <section class="card" id="abOutput" hidden>
+        <div class="card-head">
+          <h2>对比结果</h2>
+          <span class="badge-sim" id="abTplBadge"></span>
+        </div>
+        <div class="ab-answers">
+          <div class="ab-answer">
+            <div class="ab-answer-head">
+              <span class="ab-badge badge-a">A</span>
+              <span class="ab-score-chip" id="aScoreChip">评分 -/5</span>
+              <button type="button" class="btn btn-small" id="aCopyBtn">复制</button>
+            </div>
+            <div class="answer-box answer-box-sm" id="aAnswerBox"></div>
+          </div>
+          <div class="ab-answer">
+            <div class="ab-answer-head">
+              <span class="ab-badge badge-b">B</span>
+              <span class="ab-score-chip" id="bScoreChip">评分 -/5</span>
+              <button type="button" class="btn btn-small" id="bCopyBtn">复制</button>
+            </div>
+            <div class="answer-box answer-box-sm" id="bAnswerBox"></div>
+          </div>
+        </div>
+        <div class="diff-note">
+          <span class="diff-label">差异解读</span>
+          <p id="diffText">点击「对比运行」后，这里会给出两侧结果的差异解读。</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <details class="card demo">
+    <summary>课堂演示脚本<span class="sum-sub">5 步流程 · 每步说清「操作什么、问学员什么、讲什么」</span></summary>
+    <ol class="demo-steps">
+      <li><b>第一步 · 认识结构：</b>点击「会议纪要总结」模板并点击运行，问学员「这条提示词由哪几部分组成、评分卡为什么是 5 分」，讲解提示词五要素——角色、任务、约束、输出格式、示例，前四项是骨架、示例是稳定器。</li>
+      <li><b>第二步 · 看见角色：</b>删掉 System Prompt 里的角色描述再运行，指着评分卡问学员「哪一项从已覆盖变成了缺失」，讲解角色设定决定回答的身份视角与专业度。</li>
+      <li><b>第三步 · 体验失控：</b>把 User Prompt 精简成「总结一下」再运行，问学员「总分降到几分、缺了哪几项」，讲解任务与约束不清时输出会失控。</li>
+      <li><b>第四步 · 对照改进：</b>按评分卡的改进建议逐项补回提示词，问学员「补哪一项对分数提升最明显」，讲解约束与输出格式是生产环境的关键。</li>
+      <li><b>第五步 · 理解参数：</b>开启 A/B 对比模式、把 B 的温度调到 0.9 后对比运行，问学员「两个回答差在哪、哪个更适合上线」，讲解 temperature 在稳定性与创造力之间的权衡。</li>
+    </ol>
+  </details>
+
+  <footer class="foot">
+    本工具为课堂教学模拟：回答为预置示例，不调用真实模型；评分基于关键词规则检测，仅用于教学演示；所有操作均在浏览器本地完成，可离线使用。
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- 场景模板数据 ---------- */
+  var TEMPLATES = [
+    {
+      id: 'meeting',
+      name: '会议纪要总结',
+      system: '你是一名拥有 10 年经验的企业会议纪要专家，擅长把冗长的会议记录提炼成重点突出、可直接归档的结构化纪要，语言专业、克制，不做主观评价。',
+      user: '请将以下会议记录整理成一份结构化会议纪要：\n\n【会议主题】Q3 产品迭代评审会\n【参与人】产品部、研发部、运营部共 8 人\n【讨论内容】\n1. 张明汇报新版搜索功能进度，因排序算法问题需延期两周；\n2. 李华提出增加暗色模式需求，研发评估需 3 人日；\n3. 运营部申请 9 月上线开学季活动，需研发支持数据埋点；\n4. 王芳提醒下周三前须提交预算终稿。\n\n约束：只根据原文整理，不要添加原文没有的信息；总篇幅不超过 300 字。\n输出格式：按「会议信息、关键结论、待办事项、风险提示」四个部分输出；待办事项用表格列出，必须包含负责人和截止时间。\n\n参考示例：\n输入：产品部周会，讨论登录接口超时问题，决定由后端老陈周四前修复，前端同步加 loading 态。\n输出：一、会议信息：产品部周会；二、关键结论：登录超时定位为网关配置错误，周四前修复；三、待办事项：后端修复接口（老陈，周四前）、前端增加 loading 态（小周，周五前）；四、风险提示：修复期间可能出现登录失败投诉，需客服提前准备话术。',
+      answer: '一、会议信息\n主题：Q3 产品迭代评审会\n参与人：产品部、研发部、运营部共 8 人\n\n二、关键结论\n1. 新版搜索功能因排序算法问题延期两周上线；\n2. 暗色模式需求通过评审，工作量评估为 3 人日；\n3. 开学季活动定于 9 月上线，需研发配合完成数据埋点；\n4. 预算终稿须在下周三前提交。\n\n三、待办事项\n| 事项 | 负责人 | 截止时间 |\n| --- | --- | --- |\n| 解决排序算法延期问题 | 研发部 | 两周内 |\n| 输出暗色模式技术方案 | 研发部 | 3 人日 |\n| 完成开学季活动埋点 | 研发部 | 9 月上线前 |\n| 提交预算终稿 | 王芳 | 下周三前 |\n\n四、风险提示\n搜索功能延期可能影响 Q3 核心指标达成，建议同步调整运营侧上线节奏，并提前与业务方沟通预期。'
+    },
+    {
+      id: 'intent',
+      name: '客户意图分类',
+      system: '你是一名电商平台客服中心的意图分类专家，熟悉售后、物流、营销、咨询等各类客户消息，判断准确、口径一致、输出稳定。',
+      user: '请将下面的客户咨询消息分类到指定意图类别，并给出置信度和判断理由。\n\n客户消息：「我上周买的蓝色连衣裙 M 码穿不了，想换成 L 码，订单号 582193，快递还没拆封。」\n\n可选类别：物流查询、退换货、退款申请、商品咨询、投诉建议、其他。\n\n约束：只能从上述类别中选择，不得自造类别；置信度低于 0.6 时归入「其他」；判断理由不超过 50 字。\n输出格式：输出 JSON，包含 intent、confidence、reason 三个字段，不要输出多余文字。\n\n参考示例：\n输入：「订单 123456 到哪了？三天了还没有物流更新。」\n输出：{"intent": "物流查询", "confidence": 0.98, "reason": "客户询问订单配送进度，属于典型物流查询。"}',
+      answer: '{\n  "intent": "退换货",\n  "confidence": 0.97,\n  "reason": "客户明确表示「换成 L 码」并提供订单号，属于尺码更换的典型退换货诉求，而非退款。"\n}'
+    },
+    {
+      id: 'contract',
+      name: '合同信息抽取',
+      system: '你是一名具备 5 年法务经验的合同信息抽取专家，擅长从长合同中快速定位关键条款，只认原文，不做过度推断。',
+      user: '请从以下合同片段中抽取关键信息：\n\n合同编号：HT-2024-0873\n甲方（委托方）：深圳市星辰科技有限公司\n乙方（服务方）：杭州云禾信息技术有限公司\n合同金额：人民币 1,280,000 元（含税）。签署后 7 个工作日内支付 30% 作为预付款，项目验收通过后支付 60%，质保期满后支付剩余 10%。\n签订日期：2024 年 3 月 15 日\n服务期限：2024 年 4 月 1 日起至 2025 年 3 月 31 日止。\n任何一方违约，须按合同总额的 5% 向守约方支付违约金。\n\n约束：只抽取合同中明确出现的信息，缺失字段统一填「未提及」；不要推断或补充任何内容。\n输出格式：输出 Markdown 表格，字段依次为合同编号、甲方、乙方、合同金额、付款方式、签订日期、服务期限、违约责任。\n\n参考示例：\n输入：「本合同自双方签字之日起生效，一式两份，具有同等法律效力。」\n输出：| 生效条款 | 自双方签字之日起生效，一式两份 |',
+      answer: '| 字段 | 内容 |\n| --- | --- |\n| 合同编号 | HT-2024-0873 |\n| 甲方 | 深圳市星辰科技有限公司 |\n| 乙方 | 杭州云禾信息技术有限公司 |\n| 合同金额 | 人民币 1,280,000 元（含税） |\n| 付款方式 | 签约后 7 个工作日付 30%，验收通过后付 60%，质保期满付 10% |\n| 签订日期 | 2024 年 3 月 15 日 |\n| 服务期限 | 2024 年 4 月 1 日至 2025 年 3 月 31 日 |\n| 违约责任 | 违约方按合同总额的 5% 向守约方支付违约金 |'
+    },
+    {
+      id: 'copy',
+      name: '文案改写',
+      system: '你是一名资深新媒体文案改写专家，深耕小红书与公众号场景，擅长把平铺直叙的产品介绍改写成有场景、有情绪、有行动号召的短文案。',
+      user: '请将下面的产品文案改写成 3 个不同风格的版本：\n\n原文：「这是一本时间管理书籍，教你如何合理安排工作时间，提高效率，适合职场人士阅读。」\n\n约束：保留原意与核心信息，不得使用「最」「第一」等绝对化用语；每版不超过 80 字；语言口语化，适合小红书发布。\n输出格式：依次输出 3 个版本，每版标注风格名称，并在版本后用一句话说明改写思路。\n\n参考示例：\n输入：「这款保温杯能保温 12 小时。」\n输出：版本一（场景型）：早上灌的热咖啡，下午三点还是烫的——这只杯子，把时间焐慢了。',
+      answer: '版本一（场景共鸣型）\n凌晨改完的方案，第二天照样被打回——直到我把这本时间管理手册翻烂。职场人不骗职场人，真的能打。\n改写思路：用「加班改方案」的具体场景制造代入感，让读者自动对号入座。\n\n版本二（利益承诺型）\n3 天摸鱼、2 天冲刺，也能准时交稿？秘密全在这份时间管理清单里，亲测有效。\n改写思路：先用反常识结论抓住注意力，再落到具体收益，激发点击欲。\n\n版本三（情绪价值型）\n打工人的崩溃，从「deadline 突然提前」开始。这本书，是我续命用的。\n改写思路：借用打工人梗触发情绪共鸣，让产品成为情绪出口而不是说教工具。'
+    }
+  ];
+
+  /* ---------- 五要素评分规则 ---------- */
+  var SCORE_RULES = [
+    {
+      name: '角色设定',
+      keys: ['你是', '扮演', '作为一名', '资深', '专家', '顾问'],
+      tip: '补充一句角色定位，例如「你是一名拥有 10 年经验的会议纪要专家」，先让模型「入戏」再回答。'
+    },
+    {
+      name: '任务描述',
+      keys: ['请', '帮我', '将', '把', '整理', '总结', '分类', '抽取', '改写', '判断', '回答'],
+      tip: '用动词把任务写具体，例如「请将以下会议记录整理成结构化纪要」，避免只说「弄一下」。'
+    },
+    {
+      name: '约束条件',
+      keys: ['不要', '不能', '必须', '只能', '不得', '避免', '不超过', '严禁', '仅根据'],
+      tip: '加上边界，例如「不要添加原文没有的信息」「篇幅不超过 300 字」，约束越具体输出越可控。'
+    },
+    {
+      name: '输出格式',
+      keys: ['格式', 'JSON', '表格', '列表', '字段', 'Markdown', '输出为', '依次输出', '四个部分'],
+      tip: '指定输出结构，例如「按四个部分输出」或「输出 JSON，包含 intent、confidence、reason 字段」。'
+    },
+    {
+      name: '示例',
+      keys: ['示例', '例如', '比如', '例：', '样例'],
+      tip: '附 1 个输入输出示例（few-shot），格式与风格的稳定性会明显提升。'
+    }
+  ];
+
+  var CHECK_SVG = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.6l3.1 3.1L12.8 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var DASH_SVG = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>';
+
+  var PLACEHOLDER = '<div class="placeholder">点击「运行」按钮，查看当前场景的高质量示例回答。</div>';
+  var PLACEHOLDER_AB = '<div class="placeholder">点击「对比运行」查看该侧的回答。</div>';
+  var DIFF_PLACEHOLDER = '点击「对比运行」后，这里会给出两侧结果的差异解读。';
+
+  function $(id) { return document.getElementById(id); }
+
+  var state = { templateId: 'meeting' };
+  var streamTimers = {};
+
+  function getTemplate() {
+    for (var i = 0; i < TEMPLATES.length; i++) {
+      if (TEMPLATES[i].id === state.templateId) return TEMPLATES[i];
+    }
+    return TEMPLATES[0];
+  }
+
+  /* ---------- 流式打字 ---------- */
+  function streamInto(box, text, key) {
+    if (streamTimers[key]) {
+      clearInterval(streamTimers[key]);
+      streamTimers[key] = null;
+    }
+    box.innerHTML = '';
+    var cursor = document.createElement('span');
+    cursor.className = 'stream-cursor';
+    box.appendChild(cursor);
+    var i = 0;
+    var step = 2;
+    streamTimers[key] = setInterval(function () {
+      if (i >= text.length) {
+        clearInterval(streamTimers[key]);
+        streamTimers[key] = null;
+        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+        box.scrollTop = box.scrollHeight;
+        return;
+      }
+      box.insertBefore(document.createTextNode(text.slice(i, i + step)), cursor);
+      i += step;
+      box.scrollTop = box.scrollHeight;
+    }, 24);
+  }
+
+  /* ---------- 评分 ---------- */
+  function evaluate(text) {
+    var lower = (' ' + text + ' ').toLowerCase();
+    return SCORE_RULES.map(function (rule) {
+      var matched = null;
+      for (var i = 0; i < rule.keys.length; i++) {
+        if (lower.indexOf(rule.keys[i].toLowerCase()) !== -1) { matched = rule.keys[i]; break; }
+      }
+      return { name: rule.name, hit: matched !== null, matched: matched, tip: rule.tip };
+    });
+  }
+
+  function countHits(items) {
+    var n = 0;
+    items.forEach(function (it) { if (it.hit) n++; });
+    return n;
+  }
+
+  function overallComment(n) {
+    if (n === 5) return '五要素齐全，这是一条可以直接进入生产环境的高质量提示词。';
+    if (n === 4) return '已覆盖大部分要素，按下方建议补齐缺失项即可投产。';
+    if (n === 3) return '结构基本成型，建议优先补齐约束条件与输出格式。';
+    if (n === 2) return '要素缺口较多，输出容易不稳定，请对照建议逐项完善。';
+    return '当前提示词过于简单，请参考场景模板的四要素结构重新组织。';
+  }
+
+  function renderScore(items) {
+    var hit = countHits(items);
+    $('scoreNum').textContent = String(hit);
+    var bar = $('scoreBar');
+    bar.innerHTML = '';
+    for (var i = 0; i < 5; i++) {
+      var seg = document.createElement('i');
+      seg.className = 'score-seg' + (i < hit ? ' on' : '');
+      bar.appendChild(seg);
+    }
+    $('scoreComment').textContent = overallComment(hit);
+    var list = $('scoreList');
+    list.innerHTML = '';
+    items.forEach(function (it) {
+      var li = document.createElement('li');
+      li.className = 'score-item ' + (it.hit ? 'hit' : 'miss');
+
+      var icon = document.createElement('span');
+      icon.className = 'si-icon';
+      icon.innerHTML = it.hit ? CHECK_SVG : DASH_SVG;
+
+      var body = document.createElement('div');
+      body.className = 'si-body';
+
+      var title = document.createElement('div');
+      title.className = 'si-title';
+      var name = document.createElement('span');
+      name.textContent = it.name;
+      var chip = document.createElement('span');
+      chip.className = 'chip ' + (it.hit ? 'chip-hit' : 'chip-miss');
+      chip.textContent = it.hit ? '已覆盖' : '缺失';
+      title.appendChild(name);
+      title.appendChild(chip);
+
+      var tip = document.createElement('p');
+      tip.className = 'si-tip';
+      tip.textContent = it.hit ? ('检测到「' + it.matched + '」，该项达标。') : ('改进建议：' + it.tip);
+
+      body.appendChild(title);
+      body.appendChild(tip);
+      li.appendChild(icon);
+      li.appendChild(body);
+      list.appendChild(li);
+    });
+  }
+
+  function updateScore() {
+    renderScore(evaluate($('systemPrompt').value + '\n' + $('userPrompt').value));
+  }
+
+  /* ---------- 模板 ---------- */
+  function renderTemplateGrids() {
+    [$('tplGrid'), $('tplGridAb')].forEach(function (grid) {
+      grid.innerHTML = '';
+      TEMPLATES.forEach(function (t) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tpl-btn' + (t.id === state.templateId ? ' active' : '');
+        btn.setAttribute('data-id', t.id);
+        btn.textContent = t.name;
+        btn.addEventListener('click', function () {
+          applyTemplate(t.id, $('abPanel').hidden ? 'single' : 'ab');
+        });
+        grid.appendChild(btn);
+      });
+    });
+  }
+
+  function applyTemplate(id, mode) {
+    var tpl = null;
+    for (var i = 0; i < TEMPLATES.length; i++) {
+      if (TEMPLATES[i].id === id) tpl = TEMPLATES[i];
+    }
+    if (!tpl) return;
+    state.templateId = id;
+
+    var btns = document.querySelectorAll('.tpl-btn');
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle('active', btns[j].getAttribute('data-id') === id);
+    }
+
+    if (mode === 'single') {
+      $('systemPrompt').value = tpl.system;
+      $('userPrompt').value = tpl.user;
+      $('answerBox').innerHTML = PLACEHOLDER;
+      updateScore();
+    } else if (mode === 'ab') {
+      $('aSystem').value = tpl.system;
+      $('aUser').value = tpl.user;
+      $('bSystem').value = tpl.system;
+      $('bUser').value = tpl.user;
+      resetAbOutputs();
+    }
+
+    $('tplCurrent').textContent = '当前模板：' + tpl.name;
+    $('abTplNameA').textContent = '模板：' + tpl.name;
+    $('abTplNameB').textContent = '模板：' + tpl.name;
+    $('abTplBadge').textContent = '基于模板：' + tpl.name;
+  }
+
+  /* ---------- 运行 ---------- */
+  function runSingle() {
+    var tpl = getTemplate();
+    updateScore();
+    streamInto($('answerBox'), tpl.answer, 'single');
+  }
+
+  function resetSingle() {
+    var tpl = getTemplate();
+    $('systemPrompt').value = tpl.system;
+    $('userPrompt').value = tpl.user;
+    $('modelSelect').selectedIndex = 0;
+    $('tempRange').value = '0.3';
+    $('tempValue').textContent = '0.3';
+    $('maxTokens').value = '500';
+    $('answerBox').innerHTML = PLACEHOLDER;
+    updateScore();
+  }
+
+  function resetAbOutputs() {
+    $('aAnswerBox').innerHTML = PLACEHOLDER_AB;
+    $('bAnswerBox').innerHTML = PLACEHOLDER_AB;
+    $('aScoreChip').textContent = '评分 -/5';
+    $('bScoreChip').textContent = '评分 -/5';
+    $('diffText').textContent = DIFF_PLACEHOLDER;
+  }
+
+  function buildDiff(aHit, bHit) {
+    var ta = parseFloat($('aTemp').value);
+    var tb = parseFloat($('bTemp').value);
+    var samePrompt = $('aSystem').value === $('bSystem').value && $('aUser').value === $('bUser').value;
+    var parts = [];
+    if (ta === tb) {
+      parts.push('两侧温度相同（' + ta.toFixed(1) + '），差异全部来自提示词本身');
+    } else if (ta < tb) {
+      parts.push('A 温度更低（' + ta.toFixed(1) + '），回答更稳定、更贴近范例；B 温度更高（' + tb.toFixed(1) + '），用词与结构更发散、可能出现更多发挥');
+    } else {
+      parts.push('B 温度更低（' + tb.toFixed(1) + '），回答更稳定、更贴近范例；A 温度更高（' + ta.toFixed(1) + '），用词与结构更发散、可能出现更多发挥');
+    }
+    if (samePrompt) {
+      parts.push('两侧提示词完全一致，适合单独观察温度的影响');
+    } else {
+      parts.push('两侧提示词不同，其中 ' + (aHit >= bHit ? 'A' : 'B') + ' 的五要素评分更高（' + Math.max(aHit, bHit) + '/5），提示词越完整输出越可控');
+    }
+    return parts.join('；') + '。课堂结论：生产环境优先「低温度 + 完整提示词」，创意场景再适当提高温度。';
+  }
+
+  function runCompare() {
+    var tpl = getTemplate();
+    var aHit = countHits(evaluate($('aSystem').value + '\n' + $('aUser').value));
+    var bHit = countHits(evaluate($('bSystem').value + '\n' + $('bUser').value));
+    $('aScoreChip').textContent = '评分 ' + aHit + '/5';
+    $('bScoreChip').textContent = '评分 ' + bHit + '/5';
+    streamInto($('aAnswerBox'), tpl.answer, 'a');
+    streamInto($('bAnswerBox'), tpl.answer, 'b');
+    $('diffText').textContent = buildDiff(aHit, bHit);
+  }
+
+  /* ---------- 复制 ---------- */
+  function copyAnswer(text, btn) {
+    var original = btn.textContent;
+    function ok() {
+      btn.textContent = '已复制';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    }
+    function fail() {
+      btn.textContent = '复制失败';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    }
+    function legacy() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        if (document.execCommand('copy')) { ok(); } else { fail(); }
+      } catch (e) { fail(); }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, legacy);
+    } else {
+      legacy();
+    }
+  }
+
+  /* ---------- 事件绑定 ---------- */
+  function init() {
+    renderTemplateGrids();
+    applyTemplate('meeting', 'single');
+
+    $('runBtn').addEventListener('click', runSingle);
+    $('resetBtn').addEventListener('click', resetSingle);
+    $('compareBtn').addEventListener('click', runCompare);
+
+    $('tempRange').addEventListener('input', function () { $('tempValue').textContent = this.value; });
+    $('aTemp').addEventListener('input', function () { $('aTempValue').textContent = this.value; });
+    $('bTemp').addEventListener('input', function () { $('bTempValue').textContent = this.value; });
+
+    $('systemPrompt').addEventListener('input', updateScore);
+    $('userPrompt').addEventListener('input', updateScore);
+
+    $('copyBtn').addEventListener('click', function () { copyAnswer(getTemplate().answer, this); });
+    $('aCopyBtn').addEventListener('click', function () { copyAnswer(getTemplate().answer, this); });
+    $('bCopyBtn').addEventListener('click', function () { copyAnswer(getTemplate().answer, this); });
+
+    $('abToggle').addEventListener('change', function () {
+      var on = this.checked;
+      $('singlePanel').hidden = on;
+      $('abPanel').hidden = !on;
+      $('outputPanel').hidden = on;
+      $('scoreCard').hidden = on;
+      $('abOutput').hidden = !on;
+      if (on) {
+        $('aSystem').value = $('systemPrompt').value;
+        $('aUser').value = $('userPrompt').value;
+        $('bSystem').value = $('systemPrompt').value;
+        $('bUser').value = $('userPrompt').value;
+        $('aTemp').value = $('tempRange').value;
+        $('aTempValue').textContent = $('tempRange').value;
+        $('bTemp').value = $('tempRange').value;
+        $('bTempValue').textContent = $('tempRange').value;
+        resetAbOutputs();
+        applyTemplate(state.templateId, 'none');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'Enter' || e.key === 'enter')) {
+        e.preventDefault();
+        if ($('abPanel').hidden) { runSingle(); } else { runCompare(); }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

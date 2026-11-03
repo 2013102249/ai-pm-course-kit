@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>配图清单 · W5 周二《AB 实验与数据决策》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl cur" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W5-物料/W5D2-AB实验与数据决策 / 05-配图清单.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><span class="cur">05-配图清单</span><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>配图清单 · W5 周二《AB 实验与数据决策》</h1>
+<blockquote>
+<p>本课共使用 2 张新制图（均已制成，归入《03-配图素材》）+ 1 张工具截图（现场演示）。<br />
+本课无共用交互页，视觉呈现以这两张图为核心。<br />
+品牌色纪律：主色紫 #7C3AED，辅色蓝 #2563EB；辅助色仅允许中性灰阶（#221E33 / #4A4560 / #A5A1B8）与警示红 #DC2626（仅用于陷阱标注）。中文标注，无错别字。</p>
+</blockquote>
+<h2>本课配图总表</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>素材</th>
+<th>文件（建议）</th>
+<th>状态</th>
+<th>使用时机</th>
+<th>停留时长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>实验流程图</td>
+<td>03-配图素材/AB实验流程图.svg</td>
+<td>已制成</td>
+<td>环节一总览（10–18 min）</td>
+<td>约 8 min</td>
+</tr>
+<tr>
+<td>2</td>
+<td>三陷阱示意图</td>
+<td>03-配图素材/AB实验三陷阱示意图.svg</td>
+<td>已制成</td>
+<td>环节三收束（约 60 min）</td>
+<td>约 5 min</td>
+</tr>
+<tr>
+<td>3</td>
+<td>在线样本量计算器截图</td>
+<td>现场投屏实时演示</td>
+<td>无需制作</td>
+<td>要素③样本量（约 33 min）</td>
+<td>3 min</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>图 1 · 实验流程图（已制成）</h2>
+<h3>内容结构（五步横向流程）</h3>
+<pre><code>[假设] → [设计] → [灰度] → [全量] → [决策]
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>图上主文字</th>
+<th>图上辅助小字（≤12 字/条）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 假设</td>
+<td>假设：可证伪</td>
+<td>「数据打脸时我承认」</td>
+</tr>
+<tr>
+<td>② 设计</td>
+<td>设计：四要素</td>
+<td>「假设 · 指标 · 样本 · 周期」</td>
+</tr>
+<tr>
+<td>③ 灰度</td>
+<td>灰度：小比例放量</td>
+<td>「给 bug 留缓冲带」</td>
+</tr>
+<tr>
+<td>④ 全量</td>
+<td>全量：判读通过后放开</td>
+<td>「三道闸过了才全量」</td>
+</tr>
+<tr>
+<td>⑤ 决策</td>
+<td>决策：进入下一轮假设</td>
+<td>「增长是永不收敛的循环」</td>
+</tr>
+</tbody>
+</table>
+<p>第 ⑤ 步向第 ① 步画一条回环虚线，标注「下一轮假设」，体现循环。</p>
+<h3>视觉规格</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>画幅</td>
+<td>1920 × 1080（16:9，PPT 全屏用）</td>
+</tr>
+<tr>
+<td>布局</td>
+<td>五节点等距横排，箭头连接；回环虚线沿顶部走弧线</td>
+</tr>
+<tr>
+<td>配色</td>
+<td>五个节点统一紫色 #7C3AED 描边、浅紫底；「灰度」节点用蓝色 #2563EB 实底白字（强调它是容易漏的一步）</td>
+</tr>
+<tr>
+<td>字号</td>
+<td>节点主文字 ≥40px，辅助小字 ≥22px，投屏可读</td>
+</tr>
+<tr>
+<td>风格</td>
+<td>圆角矩形、扁平、无阴影堆叠；与既有素材（RAG 架构图等）线宽一致</td>
+</tr>
+</tbody>
+</table>
+<h3>验收标准</h3>
+<ul>
+<li>五步顺序与教案「假设→设计→灰度→全量→决策」完全一致，无缺步、无换序。</li>
+<li>每个节点辅助小字 ≤12 字，且与讲课稿表述不冲突。</li>
+<li>仅出现紫 / 蓝 / 中性灰 / 警示红四类颜色，警示红在本图不使用（本图无陷阱内容）。</li>
+<li>回环虚线存在且不与主流程箭头交叉遮挡。</li>
+<li>中文标注零错别字；SVG 源文件 + 导出 PNG 各一份。</li>
+</ul>
+<h3>讲法脚本（对应环节一，10–18 min）</h3>
+<ul>
+<li><strong>讲法</strong>：从左到右用手指沿箭头走一遍，每步念主文字 + 一句辅助小字；走完五步后指向顶部回环线：「决策不是终点，是下一轮假设的起点。」</li>
+<li><strong>重点强调</strong>：讲第 ③ 步灰度时放慢——「很多同学以为实验跑完就直接全量，中间少了灰度这层保险。」</li>
+<li><strong>提问点</strong>：「昨天你们的增长方案，今天走到五步里的第几步？」（预期：大部分停在第 1 步）</li>
+<li><strong>过渡话术</strong>：「第一步假设，现在大部分同学还没站稳——怎么才算站稳？四要素，一个一个来。」</li>
+</ul>
+<hr />
+<h2>图 2 · 三陷阱示意图（已制成）</h2>
+<h3>内容结构（三栏对照）</h3>
+<pre><code>┌─────────────┬─────────────┬─────────────┐
+│ 陷阱一        │ 陷阱二        │ 陷阱三        │
+│ 偷看指标      │ 辛普森悖论    │ 多重比较      │
+│ 一句话案例    │ 一句话案例    │ 一句话案例    │
+│ 规避动作      │ 规避动作      │ 规避动作      │
+└─────────────┴─────────────┴─────────────┘
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>栏</th>
+<th>陷阱名</th>
+<th>一句话案例（图上原文）</th>
+<th>规避动作（图上原文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>偷看指标</td>
+<td>第 3 天 B 组领先就庆功全量，第 7 天反转——样本结构歪了</td>
+<td>开跑前冻结：判读日期 + 成败标准</td>
+</tr>
+<tr>
+<td>2</td>
+<td>辛普森悖论</td>
+<td>整体 5.2% 赢 5.0%，但 iOS、Android 两个分组 A 版全赢</td>
+<td>判读前先按平台 / 新老分层看一遍</td>
+</tr>
+<tr>
+<td>3</td>
+<td>多重比较</td>
+<td>看了 20 个指标，总有 1 个「显著」——像买 20 张彩票</td>
+<td>先定指标再看数；指标越多门槛越高</td>
+</tr>
+</tbody>
+</table>
+<p>三栏底部加一条通栏底部条：「三坑同源：先定判据，再看数据。」（紫底白字）</p>
+<h3>视觉规格</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>画幅</td>
+<td>1920 × 1080（16:9）</td>
+</tr>
+<tr>
+<td>布局</td>
+<td>三等宽竖栏；每栏四层：陷阱名 / 图标 / 案例 / 规避动作</td>
+</tr>
+<tr>
+<td>配色</td>
+<td>栏标题警示红 #DC2626；案例区白底灰字；规避动作区蓝色 #2563EB 浅底；底部通栏紫 #7C3AED</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>简笔线性图标各一：望远镜（偷看）、天平（悖论）、骰子（运气），线宽统一 2px</td>
+</tr>
+<tr>
+<td>字号</td>
+<td>陷阱名 ≥36px，案例与规避动作 ≥22px</td>
+</tr>
+</tbody>
+</table>
+<h3>验收标准</h3>
+<ul>
+<li>三个陷阱名称与教案一致：偷看指标 / 辛普森悖论 / 多重比较，无增加或替换。</li>
+<li>每栏「一句话案例」与教案、讲课稿中的故事逻辑一致（数字例子 5.2% / 5.0% 与 8% / 7% / 3% / 2.5% 自洽，数字不出现在图上，只出现在讲师板书）。</li>
+<li>规避动作每条 ≤20 字，可在 5 秒内读完。</li>
+<li>警示红仅用于陷阱名，不得用于规避动作区（规避动作用蓝色，传递「可解决」的正面感）。</li>
+<li>中文标注零错别字；SVG 源文件 + 导出 PNG 各一份。</li>
+</ul>
+<h3>讲法脚本（对应环节三收束，约 60 min）</h3>
+<ul>
+<li><strong>讲法</strong>：三大陷阱已逐个用故事讲完，本图作为收束记忆页。逐栏指读：陷阱名 → 案例 → 规避动作，每栏不超过 30 秒。</li>
+<li><strong>提问点</strong>：「三个陷阱里，哪个在你现在的工作流程里最容易发生？」（预期答案分散，顺势强调每个人的高危项不同）</li>
+<li><strong>记忆锚点</strong>：最后指向底部通栏，全班齐读「先定判据，再看数据」。</li>
+<li><strong>过渡话术</strong>：「陷阱防住了，数据齐了——从数据到决策，还有三道闸。」</li>
+</ul>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

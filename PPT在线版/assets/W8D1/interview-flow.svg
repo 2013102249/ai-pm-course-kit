@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<defs>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+</defs>
+<rect x="40" y="34" width="4" height="22" fill="#7C3AED"/>
+<text x="54" y="52" font-size="20" font-weight="700" fill="#221E33">面试流程图</text>
+<text x="54" y="74" font-size="12" fill="#6B7280">五轮面试逐轮拆解 · 谁面 / 考什么 / 淘汰点 · 越往后越接近 offer</text>
+<text x="1160" y="52" text-anchor="end" font-size="11" fill="#6B7280">轮次为全集框架，不同公司会合并或增减</text>
+<!-- 第1轮 -->
+<rect x="36" y="130" width="200" height="300" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="136" y="168" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">第1轮 · HR初筛</text>
+<line x1="50" y1="182" x2="222" y2="182" stroke="#C9C2DE" stroke-width="1"/>
+<text x="48" y="214" font-size="12" font-weight="700" fill="#5B21B6">谁面</text>
+<text x="48" y="240" font-size="12" fill="#221E33">招聘HR（10–20分钟）</text>
+<text x="48" y="276" font-size="12" font-weight="700" fill="#5B21B6">考察点</text>
+<text x="48" y="302" font-size="12" fill="#221E33">动机·稳定性·薪资口径</text>
+<line x1="50" y1="330" x2="222" y2="330" stroke="#C9C2DE" stroke-width="1"/>
+<text x="48" y="358" font-size="12" font-weight="700" fill="#DC2626">淘汰点</text>
+<text x="48" y="384" font-size="12" fill="#DC2626">动机含糊</text>
+<!-- 第2轮 -->
+<rect x="266" y="130" width="200" height="300" rx="10" fill="#F8F5FE" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="366" y="168" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">第2轮 · 业务面</text>
+<line x1="280" y1="182" x2="452" y2="182" stroke="#C9C2DE" stroke-width="1"/>
+<text x="278" y="214" font-size="12" font-weight="700" fill="#5B21B6">谁面</text>
+<text x="278" y="240" font-size="12" fill="#221E33">直属上级·同级PM</text>
+<text x="278" y="262" font-size="12" fill="#221E33">（45–60分钟）</text>
+<text x="278" y="294" font-size="12" font-weight="700" fill="#5B21B6">考察点</text>
+<text x="278" y="320" font-size="12" fill="#221E33">项目真实度·方法体系</text>
+<line x1="280" y1="344" x2="452" y2="344" stroke="#C9C2DE" stroke-width="1"/>
+<text x="278" y="372" font-size="12" font-weight="700" fill="#DC2626">淘汰点</text>
+<text x="278" y="396" font-size="12" fill="#DC2626">追问两层露馅</text>
+<!-- 第3轮 -->
+<rect x="496" y="130" width="200" height="300" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="596" y="168" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">第3轮 · 总监面</text>
+<line x1="510" y1="182" x2="682" y2="182" stroke="#C9C2DE" stroke-width="1"/>
+<text x="508" y="214" font-size="12" font-weight="700" fill="#5B21B6">谁面</text>
+<text x="508" y="240" font-size="12" fill="#221E33">部门总监</text>
+<text x="508" y="262" font-size="12" fill="#221E33">（30–45分钟）</text>
+<text x="508" y="294" font-size="12" font-weight="700" fill="#5B21B6">考察点</text>
+<text x="508" y="320" font-size="12" fill="#221E33">判断力·「为什么」层</text>
+<line x1="510" y1="344" x2="682" y2="344" stroke="#C9C2DE" stroke-width="1"/>
+<text x="508" y="372" font-size="12" font-weight="700" fill="#DC2626">淘汰点</text>
+<text x="508" y="396" font-size="12" fill="#DC2626">只讲执行、失败全归外部</text>
+<!-- 第4轮 -->
+<rect x="726" y="130" width="200" height="300" rx="10" fill="#E9DFFB" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="826" y="168" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">第4轮 · 交叉面</text>
+<line x1="740" y1="182" x2="912" y2="182" stroke="#C9C2DE" stroke-width="1"/>
+<text x="738" y="214" font-size="12" font-weight="700" fill="#5B21B6">谁面</text>
+<text x="738" y="240" font-size="12" fill="#221E33">研发·设计·运营负责人</text>
+<text x="738" y="262" font-size="12" fill="#221E33">（30–40分钟）</text>
+<text x="738" y="294" font-size="12" font-weight="700" fill="#5B21B6">考察点</text>
+<text x="738" y="320" font-size="12" fill="#221E33">协作性·需求表达</text>
+<line x1="740" y1="344" x2="912" y2="344" stroke="#C9C2DE" stroke-width="1"/>
+<text x="738" y="372" font-size="12" font-weight="700" fill="#DC2626">淘汰点</text>
+<text x="738" y="396" font-size="12" fill="#DC2626">把协作方当执行资源</text>
+<!-- 第5轮 -->
+<rect x="956" y="130" width="200" height="300" rx="10" fill="#E0D0F8" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="1056" y="168" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">第5轮 · HRD面</text>
+<line x1="970" y1="182" x2="1142" y2="182" stroke="#C9C2DE" stroke-width="1"/>
+<text x="968" y="214" font-size="12" font-weight="700" fill="#5B21B6">谁面</text>
+<text x="968" y="240" font-size="12" fill="#221E33">HR负责人</text>
+<text x="968" y="262" font-size="12" fill="#221E33">（20–30分钟）</text>
+<text x="968" y="294" font-size="12" font-weight="700" fill="#5B21B6">考察点</text>
+<text x="968" y="320" font-size="12" fill="#221E33">价值观·抗压·薪酬</text>
+<line x1="970" y1="344" x2="1142" y2="344" stroke="#C9C2DE" stroke-width="1"/>
+<text x="968" y="372" font-size="12" font-weight="700" fill="#DC2626">淘汰点</text>
+<text x="968" y="396" font-size="12" fill="#DC2626">态度反复、负面情绪</text>
+<!-- 箭头 -->
+<line x1="240" y1="280" x2="260" y2="280" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrb)"/>
+<line x1="470" y1="280" x2="490" y2="280" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrb)"/>
+<line x1="700" y1="280" x2="720" y2="280" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrb)"/>
+<line x1="930" y1="280" x2="950" y2="280" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrb)"/>
+<!-- 底部横幅 -->
+<rect x="36" y="470" width="1128" height="84" rx="12" fill="#F1EBFD"/>
+<text x="600" y="520" text-anchor="middle" font-size="18" font-weight="700" fill="#5B21B6">五轮面试 = 同一个假设的五次验证：你能不能来干活</text>
+<text x="600" y="600" text-anchor="middle" font-size="12" fill="#6B7280">每轮四步走：谁面 → 考什么 → 怎么死 → 准备动作 · 在导学案逐轮写下「我要防什么」</text>
+</svg>

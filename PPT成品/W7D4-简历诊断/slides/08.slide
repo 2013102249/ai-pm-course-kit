@@ -1,0 +1,24 @@
+<Slide style={{ width: 1280, height: 720, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', padding: 60, flexDirection: 'column' }}>
+    <Box style={{ background: '#FFFFFF', borderRadius: 16, padding: '28px 36px', gap: 18 }}>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E1B4B' }}>今日验收 4 项</Text>
+        <Box style={{ flexDirection: 'row', gap: 14 }}>
+            {[['01', '20 项全过'], ['02', '项目有数字'], ['03', '作品集链接可用'], ['04', '品牌第一条已发布']].map(([n, t]) => (
+                <Box key={n} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10, background: '#EFF6FF', borderRadius: 10, padding: '14px 16px' }}>
+                    <Box style={{ width: 36, height: 36, background: '#2563EB', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>{n}</Text>
+                    </Box>
+                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B', flex: 1 }}>{t}</Text>
+                </Box>
+            ))}
+        </Box>
+        <Box style={{ flexDirection: 'row', gap: 24, alignItems: 'center' }}>
+            <Text style={{ fontSize: 19, color: '#1E1B4B' }}>今晚 <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>21:00</span> 前提交</Text>
+            <Text style={{ fontSize: 19, color: '#1E1B4B' }}>明早 <span style={{ fontWeight: 'bold', color: '#2563EB' }}>8:30–9:00</span> 补救窗口</Text>
+            <Text style={{ fontSize: 19, color: '#1E1B4B' }}>明日预告：W7D5 岗位投递策略</Text>
+        </Box>
+    </Box>
+    <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center', gap: 18 }}>
+        <Text style={{ fontSize: 38, color: '#FFFFFF' }}>简历不是写出来的，是改出来的</Text>
+        <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF' }}>—— 改到 HR 停下来为止</Text>
+    </Box>
+</Slide>

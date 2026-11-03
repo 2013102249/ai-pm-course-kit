@@ -1,0 +1,14 @@
+<Slide style={{ width: 1280, height: 720, padding: 80, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+    <Box style={{ position: 'absolute', right: -100, top: -100, width: 380, height: 380, borderRadius: 190, background: 'rgba(255,255,255,0.06)' }} />
+    <Box style={{ position: 'absolute', right: 60, bottom: -140, width: 300, height: 300, borderRadius: 150, background: 'rgba(255,255,255,0.05)' }} />
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 28, position: 'relative' }}>
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 4 }}>AI 产品经理实战训练营</Text>
+        <Box style={{ width: 72, height: 6, background: 'rgba(255,255,255,0.9)', borderRadius: 3 }} />
+        <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#FFFFFF' }}>AI 商业化与成本核算</Text>
+        <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)' }}>W5 周三 · 算清每一句话的成本，设计能赚钱的收费</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>W5 · D3</Text>
+    </Box>
+</Slide>

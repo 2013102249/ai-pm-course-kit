@@ -1,0 +1,17 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', bottom: 28, right: 60 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>03 / 16</Text>
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 32 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>导入：同一个问题，两个答案</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+        <Text style={{ fontSize: 18, color: '#64748B' }}>本页配合真实模型对话窗口投屏</Text>
+        <Box style={{ width: '100%', background: '#F5F3FF', borderRadius: 10, padding: '22px 28px' }}>
+            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>现场实验 · 两个档位模型回答同一问题：「给哪个发工资？」</Text>
+        </Box>
+    </Box>
+</Slide>

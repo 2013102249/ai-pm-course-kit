@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W2 周五《主项目立项启动（里程碑 ①）》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl cur" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W2-物料/W2D5-主项目立项启动 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W2 周五《主项目立项启动（里程碑 ①）》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【过渡】环节过渡话术 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）<br />
+本稿含往届选题对比故事，均为概括性教学示例表述。</p>
+</blockquote>
+<hr />
+<h2>开场：选题定生死（0–8 分钟）</h2>
+<p>大家好。今天是第二周的周五，也是整个训练营的一个重要节点——主项目立项日。</p>
+<p>从今天起，你要开始做一个项目，这个项目会跟着你走完剩下的六周：第三周你给它搭原型，第四周给它写 PRD，第五周做商业验证，第六周做成可以演示的 MVP。到了第七周、第八周，它会被你写进简历、搬上作品集，成为面试里那二十分钟最值钱的谈资。</p>
+<p>而在今天，你只需要做一件事：把它定下来。定下来之后，不换题。</p>
+<p>【停】</p>
+<p>先说清楚这有多重要。我带过很多期学员，回头看数据，最后面试结果好和不好的学员，分水岭往往不在第六周做得多努力，而在今天——选题那一下。【金句】请记住今天的第一句话，也是本周最重要的一句话：<strong>选题定生死。方向错了，执行越快死得越快。</strong></p>
+<p>【故事】给大家讲两个往届学员的真实轨迹，都是概括性的例子。有一个往期学员，选题是「做一个万能 AI 助手」——注意这五个字，万能。你问他解决谁的问题，他说所有人都用；你问他什么场景，他说什么场景都能用。听起来很厉害，对吧？结果三周之后他崩溃了：需求写不出来，因为「所有人」等于没有用户画像；原型做不聚焦，因为「什么都能用」意味着什么都得做；评测集更是没法建，你连测什么都不知道。第六周路演，评委问了一个问题就把他问住了：「你的用户，到底是谁？」这个项目最后草草收场，简历上都不好意思写。</p>
+<p>再看另一个往期学员，选题是「教育机构的招生答疑知识库」——面向三线以下城市中小型培训机构的招生老师，自动回答家长关于课程、价格、上课时间的咨询。行业，教育，是他 W1D5 就锁定的主赛道；场景，招生答疑，家长天天问、老师天天答，高频又具体；人群，中小机构的招生老师，可触达、有付费意愿。三环全部锁死。之后每一周他都顺：原型有明确边界，PRD 有具体用户，路演时评委追问行业细节，他答得比评委还熟。这个项目后来成了他拿 offer 的核心谈资。</p>
+<p>【问】同样是六周，一个步步惊心，一个步步顺畅。大家想一想，这两个选题的差别，最早出现在哪一步？【停，点 1–2 名学员】</p>
+<p>对，第一步。一个没有具体人群和场景，三环全是空气；一个行业、场景、人群三环全部锁死。这就是今天这节课的全部意义。</p>
+<p>【操作：打开配图《AI 产品全链路图》】</p>
+<p>最后定位一下。这张图是 AI 产品的全链路：立项、数据、模型、评测、上线、迭代。立项是全链路的第一环。第一环是方向盘——后面每一环的力气花得值不值，都取决于方向盘打向哪里。今天，我们就来打这个方向盘。</p>
+<p>【过渡】怎么打？三步走：先学会定题，三维定题法；再学会验题，可行性四维评估；最后学会写下来，立项报告六章结构。今天下午还有评审专场，人人过关。我们开始第一步。</p>
+<h2>环节一：三维定题法——行业 × 场景 × 人群（8–28 分钟）</h2>
+<p>【操作：打开配图《三维定题交集图》（三环韦恩图）】</p>
+<p>三维定题法，一句话概括：<strong>好选题不在脑子里，在三环的交集里。</strong> 哪三环？行业、场景、人群。我逐环讲。</p>
+<p><strong>第一环，行业：我懂的赛道。</strong> 这一环其实你在 W1D5 已经锁定了——你的主赛道。今天选题材，必须从主赛道里挑。为什么这么死板？【问】有没有同学想过，干脆挑个当下最热门的方向，管它是不是我的赛道？【停】</p>
+<p>我理解这个冲动，但我要把它按住。理由有三条。第一，你的主赛道是上周花一整天调研选出来的，你的行业认知、案例积累、人脉线索都在那里，换热门方向等于清零重来。第二，这个项目要陪你走到面试——面试官问你「为什么做这个方向」，你说「因为它火」，这是减分答案；你说「因为我在教育行业深耕过两年，我太清楚招生老师的痛了」，这是加分答案。第三，AI 产品经理是强行业属性的岗位，教育、金融、SaaS 差异巨大，赛道一致，项目才有行业纵深。</p>
+<p><strong>第二环，场景：高频、具体、有痛点的任务。</strong> 三个标准缺一不可。高频，一周至少发生几次，低频场景撑不起一个产品；具体，能用一个动词短语说出来——「回答家长咨询」「生成商品上架文案」「摘要客服工单」，如果一个场景你需要三句话才解释得清，它就还不够具体；有痛点，现在解决它的方式费时费力费钱，AI 介入才有价值。</p>
+<p><strong>第三环，人群：可触达的一类人。</strong> 注意两个词。第一，「一类人」，不是所有人——「中小机构招生老师」是人群，「所有人」是空气。第二，「可触达」，你得有办法接触到他们做访谈、找试用，比如你有这个行业的前同事、客户资源。一个你永远接触不到的人群，调研做不了，试用找不来，数据更采不到。</p>
+<p>【停，环视】</p>
+<p>三环讲完了，现在看它们怎么用。三环不是三个独立的题目，是三个圆，你的选题必须落在三个圆的交集里。交集意味着：这个选题，是「我懂的行业」里、「高频具体的场景」上、「我够得着的人群」的问题。三环缺一环，选题就悬空。</p>
+<p>我现场做一个收缩演示，大家看清楚这个过程。第一版选题：「做一个万能 AI 助手」。三环全空，这是起点，也是很多同学现在的状态。开始收缩——先锁行业，我懂教育，改成「教育行业的 AI 助手」。行业有了，但场景和人群还是空气。再锁场景，教育行业里什么任务高频、具体、有痛点？招生答疑——家长咨询量是招生老师工作量的最大头。改成「帮教育机构回答家长咨询的 AI 助手」。场景有了，人群还泛。最后锁人群，哪类机构、哪类老师？三线以下城市、没有预算上大型客服系统的中小培训机构，它们的招生老师。到这里，「教育机构招生答疑知识库：面向三线以下城市中小型培训机构的招生老师，自动回答家长关于课程、价格、时间的咨询」——三环锁死，选题合格。（以上均为教学示例。）</p>
+<p>大家看清楚收缩的路径了吗？<strong>从大到小，一环一环加限定词，每一环至少加一个具体名词。</strong>「教育」「招生答疑」「三线以下城市中小机构」——每个词都在替你砍掉一片不该碰的需求，也都在替你的项目攒下聚焦度。</p>
+<p>【金句】第二句金句：<strong>好选题是三环交集里长出来的，不是脑子里想出来的。</strong></p>
+<p>【过渡】现在轮到你们。打开导学案的「选题卡」，把你昨晚预习写下的三个候选题目拿出来，逐个过三环：行业是哪个？场景是什么？人群是谁？三环里有任何一环填不出来，这个候选就先画掉。给大家八分钟，填完之后小组内互相读一遍，用三环标准互相挑刺。开始。</p>
+<p>【停，8 分钟，巡视。典型问题现场纠正：三环缺环的、用了「所有」「一站式」这类词的、场景说不成动词短语的，就地指出】</p>
+<p>好，时间到。刚才我巡视了一圈，大部分同学的选题已经能落到交集里了。但我要提醒一句：三环锁死只说明「题目清楚了」，不代表「题目能做」。能不能做，要看可行性——这就是第二步。</p>
+<h2>环节二：可行性四维评分卡（28–48 分钟）</h2>
+<p>接下来这二十分钟，是今天的第二个核心。我们要给选题做一次体检，工具是四维评分卡：技术、数据、合规、竞争，每个维度 0 到 5 分，满分 20。<strong>及格线：单维不低于 3 分，且总分不低于 12 分。</strong> 记住，是两道线同时卡：任何一维低于 3 分，说明有致命短板；总分低于 12，说明整体存疑。</p>
+<p>逐维讲，每一维我都给你打分锚点。</p>
+<p><strong>第一维，技术：现有模型能力够不够。</strong> 5 分是什么样？你要的能力是成熟场景，比如文本问答、摘要、分类，现成模型加提示词就能到八成。3 分是部分环节有难度，需要工程调优但知道路怎么走。1 分是什么？你要的能力今天的大模型根本做不到，比如要求百分百零幻觉、要求模型实时获取它训练数据里没有的私密信息。这一维的坑在于：把「演示能跑」当成「能力够用」。W2D1 你们做过选型决策树，W2D3 建过评测集——这一维的判断依据，就是你那三天的方法论。</p>
+<p><strong>第二维，数据：训练和评测的数据从哪来。</strong> AI 产品的燃料是数据，很多选题死在这一维。【问】大家说说，一个选题的数据来源可能有哪些？【停，收 2–3 个答案】对，三条路：公开数据集、业务方或自建整理、模型合成。评估这一维时你要能具体说出来——「课程和价格信息可以从机构官网和宣传册整理出来」，这算有来源；只说一句「用公开数据」，说不出来是哪个公开数据，那等于没有。<strong>没有数据来源的选题，是空中楼阁。</strong> 所以评分卡的规则是：数据维打分必须写明具体来源，写不出来，这一维最高只能给 2 分。</p>
+<p><strong>第三维，合规：备案、内容安全、个人信息。</strong> 这一维有特殊性——它不是打分高低的问题，它是硬门槛。上周四的合规课，大家手里有《AI 产品合规检查清单》，今天逐条对照。三个必查项：第一，你的场景涉不涉及需要资质的领域，医疗诊断建议、投资建议，没有资质就不能碰；第二，内容安全，生成的对外内容有没有风险，广告法用语、未成年人保护都要过一遍；第三，个人信息，产品要不要收集处理用户敏感信息。合规维低于 3 分的选题，必须换题或改题，不能带病立项——技术弱可以缩小范围，数据缺可以自建，合规硬伤没有补救空间。</p>
+<p><strong>第四维，竞争：差异化在哪。</strong> 别一听「有竞品」就慌，有竞品反而说明需求是真的。要问的是：用户为什么选你？你的差异化可能来自行业纵深——你比你对手更懂这个行业的话术和流程；可能来自人群聚焦——大厂做通用产品，你只服务一类被忽略的人；可能来自场景闭环——别人只做回答，你把咨询记录直接变成招生跟进线索。答不出「为什么选你」，这维给不了 3 分以上。</p>
+<p>四个维度讲完，我示范打一次分，就用开头那个教育机构招生答疑知识库（教学示例）。技术 4 分：答疑是 RAG 成熟场景，但家长口语化提问的意图识别有难度，扣 1。数据 4 分：课程价格信息可从机构官网整理，但要逐家自建，扣 1。合规 4 分：不涉医疗金融，但要注意广告法用语和未成年人信息保护，扣 1。竞争 3 分：通用客服产品能覆盖一部分需求，差异化在行业话术模板和招生场景闭环，扣 2。总分 15，及格，可立项。</p>
+<p>注意我扣分的方式——每一维都扣了分，每一维都写了扣分理由。【金句】第三句金句送给大家：<strong>可行性评估不是给选题泼冷水，是给项目省三个月。</strong> 一个今天诚实暴露的短板，是明天有预案的风险；一个今天被藏着掖着的短板，是第六周路演现场的翻车。</p>
+<p>现在大家给自己得分最高的那个候选选题打分。两条纪律：第一，每维至少写一条扣分理由，写不出扣分理由的维度，我会默认按满分重审你这个选题的难度——换句话说，不许回避问题；第二，打完分对照及格线，单维低于 3 或者总分低于 12 的，回到环节一收缩改题，别恋战。六分钟，开始。</p>
+<p>【停，6 分钟，巡视。重点看：全满分的、数据维写不出具体来源的】</p>
+<p>【过渡】好，大部分同学已经有了第一份体检报告。选题清楚、体检及格，接下来把它正式写下来——这就是立项报告。</p>
+<h2>环节三：立项报告六章结构与逐章写法（48–62 分钟）</h2>
+<p>【操作：投屏导学案《立项报告空白模板》】</p>
+<p>立项报告一共六章，一页纸能写完。别小看这一页纸——<strong>立项报告第一页写不出一句话选题，就还没想清楚。</strong> 我逐章讲写法，每章给一个一句话公式和一个反例。</p>
+<p><strong>第一章，选题概述。</strong> 一句话公式：面向（人群）的（产品形态），解决（场景）问题。写完自检：这句话里有没有「万能」「所有」「一站式」？有，回去收缩。反例：「一款面向所有用户的智能 AI 助手」——这句话信息量为零。</p>
+<p><strong>第二章，目标用户画像。</strong> 写三类信息：身份特征（什么行业、什么岗位、多大规模）、核心痛点（现在这件事怎么做、费多少时间精力）、触达方式（你通过什么渠道接触到他们做访谈和试用）。反例：只写「18 到 45 岁对 AI 感兴趣的人」——年龄和对 AI 感兴趣不是用户画像，是人口统计游戏。</p>
+<p><strong>第三章，核心场景。</strong> 用「用户故事」格式：当（什么情况），用户需要（做什么），现在的方式（有多痛）。一个立项报告写一到三个核心场景就够，多了说明还没收缩到位。</p>
+<p><strong>第四章，成功指标。</strong> 本章最容易糊弄。【问】「用户很喜欢我们的产品」，这算成功指标吗？【停】不算——不可测量。改法给口诀：<strong>可测量、有数字、有期限。</strong> 比如改成「试用用户 7 日留存不低于 40%」「在 50 条评测集上答疑准确率不低于 90%」「3 个月内完成 10 家机构付费意向验证」。注意第二条，你的评测集这一周就建过 50 条，立项报告里的质量指标直接挂上去，W6 验收时还要用它。</p>
+<p><strong>第五章，四维可行性自评。</strong> 把环节二的评分卡原样贴进来：四个分数、总分、每维的扣分理由。这一章向评审官证明的不是「我很有信心」，而是「我把风险摸过了」。</p>
+<p><strong>六章之外，还有第六章，风险与对策。</strong> 至少写三条风险，每条配一个对策。常见写法：技术风险——口语化提问识别不准，对策是评测集里加口语 case 并设计兜底话术；数据风险——小机构信息不全，对策是合同约定由机构提供资料；合规风险——宣传用语踩广告法，对策是输出加敏感词过滤。这一章是评审质询环节的高频考点，你写出来的每一条风险，都是替自己提前挡一支冷箭。</p>
+<p>六章讲完。大家对照导学案的空白模板，现在开始把今天填过的选题卡、评分卡、指标整合成立项报告初稿，课堂上写多少算多少，写不完的下午评审前补齐。十二分钟。</p>
+<p>【停，12 分钟，巡视答疑】</p>
+<p>【过渡】初稿有了。接下来做今天课堂的最后一个环节——把你的选题讲出来，接受质询。下午的评审专场是正式版，现在我们先预演。</p>
+<h2>环节四：立项评审工作坊（预演）（62–84 分钟）</h2>
+<p>规则很简单，也是下午专场的规则：<strong>每人 3 分钟陈述 + 2 分钟质询。</strong> 陈述讲什么？六章各一句话，重点压在成功指标和风险对策上。【问】大家觉得，这 3 分钟里最不该省的是哪一部分？【停】</p>
+<p>对——风险与对策。评审官最想听的不是你多有信心，而是你知不知道自己会死在哪、怎么不死。说得出风险的选题是想过日子的，说不出风险的选题是一见钟情。</p>
+<p>现在组内互评。4 人小组，每人 1 分钟快速陈述选题，其他人用同一张四维评分卡给他打分，最后每组推选出评分最高的一位代表，代表小组做全班陈述。10 分钟，开始。</p>
+<p>【停，10 分钟，巡视各组，记录有代表性的选题】</p>
+<p>好，请两个小组的代表上台，每人 3 分钟陈述，全班 2 分钟质询，我来点评。</p>
+<p>【停，2 组 × 5 分钟。点评时用评分卡语言：先肯定三环锁得最紧的一环，再指出评分卡里最虚的一维，最后给一条可执行的修改动作】</p>
+<p>两组讲完，大家应该感觉到评审的火力了。下午 14:00 评审专场，正式流程，人人过审，我先把规则完整宣布一遍，详见工作坊说明文档：</p>
+<p>第一，时间盒。每人 5 分钟整——3 分钟陈述，2 分钟质询，超时打断，按 24 人滚动，全场两个半小时。第二，评委打分。我用六张表打分：三环是否锁死、指标是否可测、四维自评是否诚实、风险是否有对策，四张表各占四分之一样的重要性权重，任一项「不通过」即整体不通过。第三，不过关返工。当场给修改意见，今天 17:00 前提交修订版，我 18:00 前线上复审，复审通过即锁定。第四，通过者，选题从今天起锁定，此后不换题——里程碑 ① 达成。</p>
+<p>【金句】第四句金句，送给大家进入评审专场之前：<strong>好的立项报告，是写给六周后的自己看的作战地图。</strong></p>
+<h2>总结与作业（84–90 分钟）</h2>
+<p>今天的内容收束成三句话。</p>
+<p>第一，三维定题法：行业、场景、人群三环交集，好选题从交集里长出来，每一环都要有具体名词。第二，四维评分卡：技术、数据、合规、竞争各 0 到 5 分，及格线是单维不低于 3 分、总分不低于 12 分，合规是硬门槛，数据必须写明来源。第三，立项报告六章：选题、用户、场景、指标、自评、风险——指标要可测量，风险要有对策。</p>
+<p>今天下午的安排：14:00 评审专场，每人 3 分钟陈述加 2 分钟质询，通过即锁定选题。周末作业两项：第一，按评审意见修订立项报告，提交终版；第二，用本周的评测方法，为你的选题预建 20 条种子评测问题，第三周做原型时直接复用。</p>
+<p>从今天起，你们每个人都是自己项目的创始人。六周后路演舞台上的样子，就是今天下午你在评审台上讲出来的样子。下午见。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>选题定生死：方向错了，执行越快死得越快。</li>
+<li>好选题是三环交集里长出来的，不是脑子里想出来的。</li>
+<li>可行性评估不是给选题泼冷水，是给项目省三个月。</li>
+<li>没有数据来源的选题，是空中楼阁。</li>
+<li>立项报告第一页写不出一句话选题，就还没想清楚。</li>
+<li>成功指标口诀：可测量、有数字、有期限。</li>
+<li>好的立项报告，是写给六周后的自己看的作战地图。</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「这样，我提示一下——回想上周五你选主赛道的时候，标准是什么？今天这三环，其实就是把那天的标准拆细了。」</td>
+</tr>
+<tr>
+<td>学员说「我想不到选题」</td>
+<td>「不用想大的。先回答一个小问题：你 W1D5 定的赛道里，哪类人你认识、能约到？先锁人群，再倒推场景，比凭空想容易十倍。」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个角度有价值，我记下来课后展开。先拉回来——这个题问的是可行性，你觉得『能不能做』要看哪几件事？」</td>
+</tr>
+<tr>
+<td>学员固执坚持大选题</td>
+<td>「可以，你保留。但我给你个作业：把你的选题用三环各写一个具体名词，写不出来，说明它今天还不具备立项条件，下午评审你自己去面对质询。」</td>
+</tr>
+<tr>
+<td>学员自评全满分</td>
+<td>「全满分有两个可能：你的选题完美，或者你还没诚实。我更倾向后者——来，告诉我这个选题最难的地方是什么，说不出难点，分数就得降。」</td>
+</tr>
+<tr>
+<td>小组互评吵起来</td>
+<td>「吵是对的，评审本来就带火药味。规则一条：每次反驳必须用评分卡维度说话，不许说『我觉得』。」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「陈述预演减少到 1 组，规则不变，下午专场每个人都会完整过一遍。」</td>
+</tr>
+<tr>
+<td>学员课后要求换题</td>
+<td>「按流程：除非在评审中因合规或数据硬伤被否，选题通过评审后不换。确有特殊情况的，课后单独找我，需给出在主赛道内的关联理由。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W4 周二《AI 产品 PRD 写作》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl cur" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W4-物料/W4D2-AI产品PRD写作 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W4 周二《AI 产品 PRD 写作》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影/发布指令 【过渡】环节衔接话术 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）<br />
+全文示例均为教学示例，用于课堂演示，非真实项目数据。</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好。昨天的调研方法课，大家已经学了访谈和问卷怎么做，这周你们每个人都在做真实调研。今天，我们把这个调研变成一份正式的东西——主项目的 PRD V1.0。</p>
+<p>先说清楚今天的终点。第一，你会知道 AI 产品的 PRD 和你以前听说过的传统 PRD 差在哪——差五处，一处都不能少。第二，今天课堂上你会当场把 PRD 的十章骨架全部写出来，课后补全成 V1.0 全文，周五的 PRD 评审大会，你就要拿着它上台答辩，过审了才有 V2.0。所以今天不是听课日，是写作日。电脑都打开，我们马上开工。</p>
+<p>给大家交个底：今天这节课的强度，可能是开营以来最大的。因为你不是在「学 PRD」，是在「写 PRD」。学 PRD 很舒服，听我讲就行；写 PRD 很痛苦，每个字都要你自己想。但是周五评审大会上，台下的评审问的每一个问题，都能在今天你写下的某一行里找到答案。今天偷的懒，周五会加倍还回来；今天写的每一行，都是周五的弹药。</p>
+<p>【停】</p>
+<h2>导入：两段 PRD 的差距（3–8 分钟）</h2>
+<p>开始之前，先看两段 PRD。【操作：投屏差 PRD 片段】</p>
+<p>第一段，来自一份真实的学员初稿：「2.1 支持智能问答。」</p>
+<p>就这一句话。你猜后来发生了什么？研发拿到这句话，过来问了产品经理十一个问题：答什么范围？不知道。答错了怎么办？不知道。多快要答？不知道。要不要标注来源？不知道。最后研发自己拍脑袋做了一个，上线第一天，用户问「课程能退款吗」，机器人回答「可以，随时退」——公司政策是七天内、扣 20% 手续费。用户投诉，产品背锅。</p>
+<p>【停】</p>
+<p>再看第二段。【操作：投屏好 PRD 片段】</p>
+<p>「2.1 支持用户对课程政策提问，回答须引用知识库原文，引用正确率 ≥90%，无法回答时触发转人工话术：『这个问题我需要人工同事为您确认，已为您转接，预计等待 2 分钟。』」（教学示例）</p>
+<p>【问】同样是「智能问答」，第二段多了什么？研发拿到它还需要来问几个问题？【停，点 1–2 名学员】</p>
+<p>对，大家说的都对——范围、质量标准、兜底动作，全都有了。研发拿到这一段，基本不用来问。这就是 PRD 的作用：<strong>PRD 写到什么程度，决定研发来问你十一个问题，还是零个问题。</strong></p>
+<p>这里要纠正一个普遍的误解：很多人以为 PRD 是写给研发的「任务说明书」，越短越省事。反了。PRD 是团队的「共识合同」——你在上面多写的每一行，都是在替未来的自己省一次会、少吵一次架、少背一次锅。写 PRD 的痛苦是一次性的，不写的痛苦是持续的。传统产品如此，AI 产品更是如此——因为 AI 产品里「说不清楚」的代价，是模型替你随便说一个。</p>
+<p>还有一点要注意：第二段里那个转人工话术，连具体文案都写进去了。有人会觉得这是不是管太宽了？不是。兜底话术就是产品体验的一部分，就像错误页的文案一样——「出错了」和「抱歉，这个问题我需要人工同事为您确认」，用户感受到的是两个产品。PRD 写不到这个粒度，上线后这个文案就归了随意发挥的人。</p>
+<p>今天这 90 分钟，就是把你手里那个「支持智能问答」，改写成第二段的样子。</p>
+<h2>环节一：五处差异精讲（8–25 分钟）</h2>
+<p>【过渡】AI 产品的 PRD 不是新发明一种文档，骨架还是那一套。但是有五处，跟传统 PRD 完全不一样。这五处，就是周五评审大会的评分重点，也是面试官判断「你做没做过 AI 产品」的五个探针。</p>
+<p>【操作：投屏配图《五处差异对比表》】</p>
+<h3>差异一：评测标准——从「功能验收」到「效果验收」</h3>
+<p>传统 PRD 怎么写验收？功能点逐条打勾。登录功能，能登录就算完成；购物车，能加购就算完成。测试用例测的是「操作路径走没走通」。</p>
+<p>AI 产品为什么不能这么写？因为 AI 的输出是概率性的。同一个问题，今天问和明天问，回答可能不一样；换种问法，答案质量可能断崖式下跌。「做出来了」和「答得对」是两回事。而且如果没有量化标准，团队会陷入无休止的争论——你说答得好，我说答得差，谁说了算？</p>
+<p>改后长什么样？三要素：指标名、数字门槛、数据来源。「回答须引用知识库原文，引用正确率 ≥90%，评测集 50 条，来源为真实用户提问。」（教学示例）三要素缺一个，这条标准就是废纸。</p>
+<p>为什么数字门槛这么重要？给大家一个心理机制：没有数字的标准，评测时会自动滑向「差不多了吧」。有数字，才有一票否决——90% 就是 90%，89.5% 就是不过，没有任何商量。你在 PRD 里写下的每一个数字，都是在给未来某个深夜想「要不就这样上线吧」的团队，立一道闸门。</p>
+<p>数字从哪来？两个来源：一是同行基准，比如同类客服产品的行业水平；二是你自己的评测集试跑，跑一遍看看当前水平在哪，把「跳一跳够得着」的数定成门槛。拍脑袋定的数字，要么形同虚设，要么把团队压垮。</p>
+<p>【金句】第一句金句：<strong>评测标准不是等上线再定的，它是 PRD 的一部分——写不出数字，说明你还没想清楚产品。</strong></p>
+<h3>差异二：容错兜底——从「异常提示」到「四级降级链」</h3>
+<p>传统 PRD 里的异常流程什么样？接口超时，弹「网络异常请重试」；404，跳错误页。异常是什么？是故障，小概率事件。</p>
+<p>AI 产品呢？「错」不是故障，是常态。检索不到资料、模型超时、答案置信度低，天天发生。传统那套「弹个提示重试」根本不够用。</p>
+<p>改后长什么样？一条四级降级链。第一级，低置信回答，先澄清追问，确认用户到底想问什么。第二级，检索无结果，明确拒答，并且给一个替代入口，比如帮助中心。第三级，连续两次答不上，引导转人工。第四级，模型服务整个不可用，降级为关键词搜索 FAQ。（教学示例）</p>
+<p>【问】用户问了一个知识库里根本没有的问题，产品应该怎么办？【停】</p>
+<p>对——先确认，确认超出范围就明确说不知道。记住，AI 产品里，<strong>诚实的「我不知道」是特性，编造的「答案」是事故</strong>。这一章周三的兜底设计课会专门展开，今天先把骨架搭起来。</p>
+<p>为什么兜底要「分级」？因为不同情况下，用户的期待不一样。用户的问题模糊，你澄清一下，他愿意等；用户问得清清楚楚而知识库里真没有，你再追问就是骚扰，直接拒答加指路才是对的；连续两次都答不上，用户已经不耐烦了，这时候必须出现人。兜底的顺序，就是用户耐心的刻度。写 PRD 的时候，把这四级想象成一条河的四级堤坝——水小时第一级就拦住了，水大时逐级顶上，总有一级能兜住。</p>
+<h3>差异三：幻觉控制——传统 PRD 里根本不存在的一章</h3>
+<p>传统 PRD 有没有「幻觉控制」这一章？没有，因为不存在这个问题。传统程序输出是确定的，输入一样输出就一样，它不会「一本正经地编」。</p>
+<p>AI 产品为什么要加？大家第三周都学过了——幻觉不是模型的缺陷，是它的本能。它是概率续写引擎，永远给你一个「最像答案的答案」。关键在于：用户不会区分「模型编的」和「产品说的」。模型编了假政策，骂的是你的产品。</p>
+<p>改后长什么样？三条。第一，回答必须基于检索到的知识库内容生成，关键结论标注引用来源。第二，相似度低于阈值时不得生成，直接进拒答流程。第三，运营红线：每周抽检 badcase，幻觉率超过 5% 触发回滚。（教学示例）</p>
+<p>这三条对应三道防线。引用来源是「事前约束」——逼着模型只根据资料说话；相似度阈值是「事中拦截」——没把握的内容在生成前就被拦下；幻觉率红线是「事后追责」——万一漏网，有监控、有回滚。产品经理要记住：三道防线里，前两道写进需求，第三道写进运营规范，但责任人都是你。</p>
+<p>【金句】第二句金句：<strong>幻觉控制不是技术攻关，是产品需求——它必须白纸黑字写进 PRD，才有资格谈信任。</strong></p>
+<h3>差异四：成本预算——从「服务器粗估」到「单次调用成本」</h3>
+<p>传统 PRD 里成本怎么写？非功能需求里一句「服务器 4 核 8G 三台」，完事，研发运维关心就行。</p>
+<p>AI 产品为什么不行？因为 AI 产品每回答一次都在花钱。输入多少 token、输出多少 token、用什么模型、上下文给多长、Top-K 取几——每一个都是产品决策，每一个都直接影响单次成本。你把上下文从两千 token 放宽到两万，成本涨十倍，这个决定谁来拍？产品经理拍。所以成本必须写进 PRD，它不是运维细节，是产品约束。</p>
+<p>改后长什么样？「单次问答成本 ≤0.05 元，按输入 2000 token、输出 500 token 估算；单用户单日上限 50 次；月度预算 5000 元，超 80% 预警。」（教学示例）</p>
+<p>给大家一个可以背的公式：单次成本 = 输入 token 数 × 输入单价 + 输出 token 数 × 输出单价。第八章就按这个公式填。</p>
+<p>再算一笔大账给大家看。假设你的产品单次成本 5 分钱，日均 1000 次调用，一个月就是 1500 元——还能接受。但如果产品设计失误，每次都把全量知识库塞进上下文，单次成本涨到 5 毛钱，一个月就是 15000 元，翻十倍。功能一模一样，成本天差地别，差别只在于 PRD 里有没有写成本约束。这就是为什么成本预算必须是产品需求：它约束的不是服务器，是产品设计本身。</p>
+<h3>差异五：数据回流——从「埋点看数」到「badcase 闭环」</h3>
+<p>传统 PRD 的数据需求一章是什么？埋点清单：PV、UV、点击率，给 BI 出报表用，跟产品迭代关系不大。</p>
+<p>AI 产品为什么不一样？因为 AI 产品的迭代燃料，不是加功能，是修 badcase。线上每一个答错的问题，都应该变成评测集里的新用例。没有回流机制，评测集永远停在上线那天——上线第一天是 90 分，三个月后用户问题变了，还是拿 50 条老题测，分数虚高，产品其实在退步。</p>
+<p>改后长什么样？「用户点踩时必填原因标签：答错、答非所问、引用错误、其他；点踩样本自动进待标注队列，每周筛选入评测集；采纳率、解决率、幻觉率每周出报告。」（教学示例）</p>
+<p>【问】数据回流和普通埋点，区别在哪？【停】</p>
+<p>对，一个在看，一个在喂。埋点是「看数据」，回流是「喂产品」——badcase 回流进评测集，驱动下一轮迭代，这才叫闭环。</p>
+<p>给大家一个判断标准：看一个 AI 产品团队的 PRD 有没有数据回流章，就知道这个产品三个月后是变好还是变烂。有回流的，评测集每周长大，产品每周变好；没有回流的，评测集停在上线那天，用户的问题早就进化了，产品还在用上周的地图找今天的路。</p>
+<p>【过渡】五处差异讲完了。现在大家把导学案上「五处差异速记表」用 1 分钟补完，然后我们看 PRD 的完整骨架。</p>
+<h2>环节二：PRD 十章结构总览（25–33 分钟）</h2>
+<p>【操作：投屏配图《PRD 结构图》】</p>
+<p>大家看这张结构图。一份 AI 产品 PRD，十章。看着多，其实就四组。</p>
+<p>第一组，前三章——背景、目标、用户与场景，回答「为什么做」。背景放调研数据和访谈原话，目标放指标，场景放用户故事。</p>
+<p>第二组，第四、五章——功能需求、AI 能力需求，回答「做什么」。注意第五章是 AI 产品特有的：哪些环节用模型、用什么能力、提示词初稿长什么样。</p>
+<p>第三组，第六到九章——评测标准、容错兜底、成本预算、数据回流，回答「怎么算好」。这四章就是刚才五处差异的落点，也是你的 PRD 和平庸 PRD 拉开差距的地方。</p>
+<p>第四组，第十章——风险，回答「怕什么」。技术、数据、合规，各写一条，附应对思路。</p>
+<p>注意这十章的顺序不是随便排的：前三章站不住，后面全白写——背景没有真实调研，目标就是拍脑袋；目标不可测量，评测标准就无从谈起；场景不清晰，功能优先级就分不下去。评审大会上，有经验的评审一定会从第一章开始顺着你问，一路问到第十章——十章就是十条追问链，每一环都要接得住上一环。</p>
+<p>还有一个使用技巧：这十章骨架不只是写作模板，也是你周五答辩的讲稿结构。背景一分钟、方案两分钟、评测与兜底两分钟——评审最想听的，恰恰是第六到九章。因为那四章是「AI 产品的懂行证明」，前面三章谁都会写。</p>
+<p>【金句】第三句金句：<strong>传统 PRD 证明你想过「做什么」，AI 产品 PRD 还要证明你想过「错了怎么办、花了多少钱、下次怎么变好」。</strong></p>
+<p>写作规则宣布一下：接下来 35 分钟，我们十章逐章过，每章我讲 2 分钟，你们写 1.5 分钟，我计时，到点就下一章。写不完的先按导学案的引导句填满框架，课后润色。记住一条纪律：不许在前几章 perfectionism，背景写再漂亮，也不加分。</p>
+<h2>环节三：逐章写作（33–68 分钟，核心环节）</h2>
+<p>好，开始。大家的导学案翻到「PRD 十章写作模板」，我每讲完一章，发布计时，你们写。</p>
+<p><strong>第 1 章，背景。</strong> 为什么做这个项目。两个素材来源：昨天的调研数据，和你的立项报告。写法上，用数据说话——「我访谈了 6 位目标用户，其中 4 位提到……」（教学示例句式）。禁止写「随着人工智能的发展」这种空话。</p>
+<p>【操作：发布计时 1.5 分钟。巡场，抽看 2 份】</p>
+<p>【问】昨天访谈里，哪一句话让你确认需求是真的？【停，点 1 名学员复述】</p>
+<p>很好，这句原话就放背景章里。访谈原话是背景章最有力量的素材，比任何形容词都硬。</p>
+<p><strong>第 2 章，目标。</strong> 规则非常严格：1 个北极星指标，2 个护栏指标，就三个。「提升用户体验」不算目标——不可测量。</p>
+<p>【问】为什么「提升用户体验」不是合格的目标？【停】</p>
+<p>对，无法验收。合格目标等于指标加数字加截止时间：「上线 4 周内，问题解决率达到 60%」（教学示例）。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p><strong>第 3 章，用户与场景。</strong> 目标用户画像一段，然后写 3 个核心场景，每个场景一句话：谁，什么时候，想完成什么。注意，场景要来自你的访谈，不要编。判断场景真不真有个土办法：把这句话念给被访谈的人听，他点头，就是真的；他皱眉说「我不会这么用」，就是你想出来的。场景写得越具体，后面功能优先级越好分——所有跟三个核心场景无关的功能，直接进 P2，毫不犹豫。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p><strong>第 4 章，功能需求。</strong> 功能列表加优先级，P0 是没有就不能上线的，P1 是第一版要有最好，P2 是以后再说。每条 P0 功能必须写清三样：输入、处理、输出。这就是导入时那个十一个问题的解法——写全了，研发就不用来问。</p>
+<p>举一个合格样例给大家参照：「用户输入课程政策问题（自然语言），系统检索知识库并生成回答（处理），3 秒内输出带引用来源的回答（输出）。」（教学示例）主语、动词、宾语，一个都不能少。判别标准还是那句话：研发读完不用来问你。</p>
+<p>【操作：发布计时 2 分钟，本章内容多】</p>
+<p><strong>第 5 章，AI 能力需求。</strong> 这是 AI 产品 PRD 特有的一章。三个问题：哪些环节用模型？用什么能力——生成、检索还是结构化？提示词初稿长什么样？注意，提示词初稿要作为附录放进 PRD。</p>
+<p>【金句】第四句金句，也是今天最重要的一句：<strong>在 AI 产品里，提示词就是需求的一部分——改提示词和改 PRD 一样要评审。</strong> 为什么？因为线上改一行提示词，可能让引用正确率从 90% 掉到 70%。没有版本管理和评审流程的提示词，是产品的定时炸弹。</p>
+<p>【操作：发布计时 2 分钟。巡场】</p>
+<p>【故事】讲个真事。一个团队的客服机器人，上线效果不错。三周后效果突然变差，查了一星期才发现，是个工程师为了修一个 badcase，直接在线上改了提示词，改完没记录、没评测，引发连锁反应。从此他们的规矩就是：提示词改动必须走 PRD 变更流程。大家现在就要建立这个意识。</p>
+<p><strong>第 6 章，评测标准。</strong> 三要素模板直接套：指标名、数字门槛、数据来源。至少两类指标：效果类，比如引用正确率；幻觉类，比如拒答恰当率。</p>
+<p>【操作：发布计时 2 分钟。抽 1 份现场投屏点评 30 秒——重点看有没有数字和数据来源】</p>
+<p><strong>第 7 章，容错兜底。</strong> 四连问自检：低置信怎么办？无结果怎么办？连续失败怎么办？服务不可用怎么办？每个问题都要有一句话答案。今天先把四条写上，周三的课会教大家画完整的状态机。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p><strong>第 8 章，成本预算。</strong> 公式刚才给了：单次成本 = 输入 token × 单价 + 输出 token × 单价。以输入 2000 token、输出 500 token 估算，写出你的单次成本上限和月度预算。写「后续评估」的，现在当场算一个数出来，宁可估错，不可空白。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p><strong>第 9 章，数据回流。</strong> 三样东西：点踩时的归因标签设计、badcase 每周回流评测集的条数、每周要出的三个指标——采纳率、解决率、幻觉率。归因标签别贪多，四个就够：答错、答非所问、引用错误、其他。标签一多，用户就乱选，数据就废了。标签设计的原则是「互斥、好懂、能指导动作」——每个标签后面都要跟着一个明确的修复动作，不能指导动作的标签是装饰品。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p><strong>第 10 章，风险。</strong> 技术风险、数据风险、合规风险，各一条，每条附一句应对思路。比如「政策类知识更新不及时——设置每周知识库巡检」（教学示例）。</p>
+<p>【操作：发布计时 1.5 分钟】</p>
+<p>【过渡】好，十章骨架全部成稿。给自己鼓个掌——今天下课前，你们每个人都有了一份完整的 AI 产品 PRD 骨架，这在很多公司里是两周的活。</p>
+<h2>环节四：片段改错与同伴互评（68–83 分钟）</h2>
+<p>光写不看不算会写。现在做个练习。</p>
+<p>【操作：发布习题改错片段（见分层习题第二层第 8 题）】</p>
+<p>这段 PRD 片段里有五处问题，个人找错，5 分钟，开始。</p>
+<p>【停，5 分钟后】</p>
+<p>【问】先问大家：这段里最大的问题是什么？【停】</p>
+<p>对，第 1 处，「支持智能问答」——没有输入输出定义，研发拿到没法开工。改写：「用户以自然语言输入课程政策问题，系统在 3 秒内输出基于知识库的回答。」（教学示例）</p>
+<p>第 2 处，没有评测标准。补上三要素：「引用正确率 ≥90%，评测集 50 条，来源为近三个月用户真实提问。」（教学示例）</p>
+<p>第 3 处，没有兜底设计。补：「相似度低于 0.6 时不生成回答，改为拒答话术并推荐帮助中心。」（教学示例）</p>
+<p>第 4 处，没有成本约束。补：「单次问答成本 ≤0.05 元，单用户单日上限 50 次。」（教学示例）</p>
+<p>第 5 处，没有数据回流。补：「点踩必选归因标签，badcase 每周回流评测集。」（教学示例）</p>
+<p>【操作：同桌交换，互评对方 PRD 第 4–6 章，5 分钟】</p>
+<p>互评规则：每条 P0 功能查三要素齐不齐，评测标准查数字有没有，提示词查在不在附录。用铅笔写批注，不许擦别人的东西。</p>
+<p>互评的时候提醒大家一个心态：你现在批同桌越狠，周五他答辩越稳；同桌现在批你越狠，你周五踩的坑越少。评审大会上有真实的「研发评估模拟」环节，评审的追问不会比你同桌客气。所以，往狠里批，往具体里批——「这里不好」不算批注，「这里没有数字门槛，建议补引用正确率 ≥90%」才算。</p>
+<p>【停，5 分钟互评，巡场】</p>
+<p>好，互评结束。把同桌给你写的那条最有价值的批注，当场改进自己的 PRD 里——现在就改，30 秒。当场改掉的批注才是自己的，记下来的批注是别人的。</p>
+<h2>总结与作业（83–90 分钟）</h2>
+<p>今天的内容，收束成三句话。</p>
+<p>第一，AI 产品 PRD 与传统 PRD 有五处差异：评测标准、容错兜底、幻觉控制、成本预算、数据回流——记住，这五处是面试探针。</p>
+<p>第二，评测标准三要素：指标名、数字门槛、数据来源。写不出数字，说明还没想清楚。</p>
+<p>第三，提示词是需求的一部分，改提示词和改 PRD 一样要评审。</p>
+<p>课后作业，截止周五中午 12 点：第一，把十章骨架补全成 PRD V1.0 全文，提交到飞书群文档；第二，准备周五评审大会的 5 分钟答辩——背景 1 分钟、方案 2 分钟、评测与兜底 2 分钟。评审过了，才有 V2.0。</p>
+<p>两个提醒。第一，V1.0 的验收线不是「写完了」，是「每一章都能扛住一个问题」：背景章能扛住「数据哪来的」，目标章能扛住「为什么是这个数」，评测章能扛住「怎么测的」。交之前自己先扛一遍。第二，今晚补全文的时候，对照今天同桌的批注和改错题的五处问题逐章自查——那五处，就是评审大会的枪口。</p>
+<p>【过渡】明天我们讲方案设计与异常兜底，把今天 PRD 第 7 章那四行兜底，画成真正的流程图和状态机。今天的 PRD 模板记得带过来。下课。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>评测标准不是等上线再定的，它是 PRD 的一部分——写不出数字，说明你还没想清楚产品。</li>
+<li>幻觉控制不是技术攻关，是产品需求——它必须白纸黑字写进 PRD，才有资格谈信任。</li>
+<li>传统 PRD 证明你想过「做什么」，AI 产品 PRD 还要证明你想过「错了怎么办、花了多少钱、下次怎么变好」。</li>
+<li>在 AI 产品里，提示词就是需求的一部分——改提示词和改 PRD 一样要评审。</li>
+<li>AI 产品里，诚实的「我不知道」是特性，编造的「答案」是事故。</li>
+<li>埋点是「看数据」，回流是「喂产品」。</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「我提示一下——回想导入那个案例，研发问了十一个问题，第一个问题是什么？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个角度有信息量，先记在白板上。回到问题本身——它问的是评测标准，你觉得评测标准要回答谁的疑问？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「完全正确，大声再说一遍——『指标、数字、来源』，这三要素周五评审我还会抽查。」</td>
+</tr>
+<tr>
+<td>写作环节学员卡住不动</td>
+<td>「卡住很正常，先别追求好，先追求有——按导学案引导句填满，写烂的初稿好过完美的空白。」</td>
+</tr>
+<tr>
+<td>有学员说「我们项目不需要成本预算」</td>
+<td>「好问题——那你现在告诉我，你的产品每月 API 账单多少？答不上来，就说明需要。」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「互评环节压缩到 3 分钟，只评第 6 章评测标准——这是今天最值钱的一章。」</td>
+</tr>
+<tr>
+<td>学员被点评后情绪低落</td>
+<td>「现在被抓的问题越多，周五评审大会掉的坑越少——你赚了。」</td>
+</tr>
+<tr>
+<td>演示投屏出问题</td>
+<td>「正好，产品要有兜底，讲课也要有——我口头把这段 PRD 读一遍，大家先听结构。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

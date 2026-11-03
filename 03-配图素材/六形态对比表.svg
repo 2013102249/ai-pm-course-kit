@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="48" y="44" width="4" height="22" fill="#7C3AED"/>
+<text x="62" y="61" font-size="20" font-weight="700" fill="#221E33">六形态对比表</text>
+<text x="62" y="82" font-size="12" fill="#6B7280">同一个模型能力，包成不同形态，产品长相完全不同 · 逐行讲完后纵向扫「技术依赖」与「商业模式」两列</text>
+
+<!-- 表头 -->
+<rect x="48" y="118" width="1104" height="46" fill="#7C3AED"/>
+<text x="143" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">形态</text>
+<text x="353" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">代表产品</text>
+<text x="668" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">技术依赖</text>
+<text x="1010" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">商业模式</text>
+
+<!-- 行1 -->
+<rect x="48" y="164" width="1104" height="64" fill="#FAF9FE"/>
+<text x="66" y="202" font-size="16" font-weight="700" fill="#5B21B6">对话式助手</text>
+<text x="256" y="202" font-size="15" fill="#221E33">豆包 / Kimi / DeepSeek</text>
+<text x="486" y="202" font-size="15" fill="#4A4560">基础模型对话、长上下文、推理</text>
+<text x="886" y="202" font-size="15" fill="#4A4560">免费获客 + 会员订阅 + 生态导流</text>
+<!-- 行2 -->
+<rect x="48" y="228" width="1104" height="64" fill="#FFFFFF"/>
+<text x="66" y="266" font-size="16" font-weight="700" fill="#5B21B6">工作流编排</text>
+<text x="256" y="266" font-size="15" fill="#221E33">扣子（Coze）</text>
+<text x="486" y="266" font-size="15" fill="#4A4560">工作流引擎 + 工具调用 + 多模型路由</text>
+<text x="886" y="266" font-size="15" fill="#4A4560">平台订阅 / 按量计费 + 开发者生态</text>
+<!-- 行3 -->
+<rect x="48" y="292" width="1104" height="64" fill="#FAF9FE"/>
+<text x="66" y="330" font-size="16" font-weight="700" fill="#5B21B6">知识库问答</text>
+<text x="256" y="330" font-size="15" fill="#221E33">ima</text>
+<text x="486" y="330" font-size="15" fill="#4A4560">RAG：解析、分块、向量化、检索、重排</text>
+<text x="886" y="330" font-size="15" fill="#4A4560">订阅 / 席位收费 + 企业按量</text>
+<!-- 行4 -->
+<rect x="48" y="356" width="1104" height="64" fill="#FFFFFF"/>
+<text x="66" y="394" font-size="16" font-weight="700" fill="#5B21B6">多模态生成</text>
+<text x="256" y="394" font-size="15" fill="#221E33">即梦</text>
+<text x="486" y="394" font-size="15" fill="#4A4560">文生图 / 文生视频 / 语音合成，算力成本高</text>
+<text x="886" y="394" font-size="15" fill="#4A4560">积分 / 按生成量计费 + 订阅</text>
+<!-- 行5 -->
+<rect x="48" y="420" width="1104" height="64" fill="#FAF9FE"/>
+<text x="66" y="458" font-size="16" font-weight="700" fill="#5B21B6">Copilot 副驾</text>
+<text x="256" y="458" font-size="15" fill="#221E33">钉钉 AI 助理</text>
+<text x="486" y="458" font-size="15" fill="#4A4560">上下文工程 + 宿主系统集成</text>
+<text x="886" y="458" font-size="15" fill="#4A4560">按席位订阅，随宿主分发</text>
+<!-- 行6 -->
+<rect x="48" y="484" width="1104" height="64" fill="#FFFFFF"/>
+<text x="66" y="522" font-size="16" font-weight="700" fill="#5B21B6">自主 Agent</text>
+<text x="256" y="522" font-size="15" fill="#221E33">Manus</text>
+<text x="486" y="522" font-size="15" fill="#4A4560">规划 + 工具调用 + 多步执行 + 错误恢复</text>
+<text x="886" y="522" font-size="15" fill="#4A4560">订阅 + 按任务 / 积分计费</text>
+
+<!-- 网格 -->
+<line x1="48" y1="164" x2="1152" y2="164" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="228" x2="1152" y2="228" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="292" x2="1152" y2="292" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="356" x2="1152" y2="356" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="420" x2="1152" y2="420" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="484" x2="1152" y2="484" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="548" x2="1152" y2="548" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="238" y1="118" x2="238" y2="548" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="468" y1="118" x2="468" y2="548" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="868" y1="118" x2="868" y2="548" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="48" y="118" width="1104" height="430" fill="none" stroke="#E8E5F1" stroke-width="1.2"/>
+
+<!-- 金句通栏 -->
+<rect x="48" y="572" width="1104" height="60" rx="10" fill="#7C3AED"/>
+<text x="600" y="610" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">形态没有高下，匹配才对</text>
+<text x="600" y="664" text-anchor="middle" font-size="12" fill="#7A7590">代表产品均为公开可查真实产品；不涉及用户量、收入、市场份额等未公开数据</text>
+</svg>

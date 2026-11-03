@@ -1,0 +1,4 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', alignItems: 'center', justifyContent: 'center', gap: 28 }}>
+  <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', lineHeight: 1.5 }}>10 个真实用户<br />胜过 100 条自嗨功能</Text>
+  <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.7, textAlign: 'center' }}>W6D4 · 测试验收与真实用户试用</Text>
+</Slide>

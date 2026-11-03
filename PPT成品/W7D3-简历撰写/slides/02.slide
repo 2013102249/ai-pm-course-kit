@@ -1,0 +1,49 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>02 / 18</Text>
+    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天你能带走什么</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ width: '100%', height: 430, flexDirection: 'row', flexWrap: 'wrap', gap: 20 }}>
+        <Box style={{ width: 570, height: 205, background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>黄金结构五段</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>定位 / 技能 / 项目 / 工作 / 教育，项目是 40% 的黄金位</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 570, height: 205, background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>项目描述公式</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>一句背景 + 两条动作 + 一条数据结果</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 570, height: 205, background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>JD 关键词提取法</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>拆 JD → 盘点真实弹药 → 改写归位</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 570, height: 205, background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'row', alignItems: 'center', gap: 20 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>简历 V1 骨架</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>五段齐备、可直接迭代的第一版简历</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

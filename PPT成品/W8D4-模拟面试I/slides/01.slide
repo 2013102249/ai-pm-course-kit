@@ -1,0 +1,17 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 40 }}>
+  <Box style={{ flexDirection: 'column', width: 640, gap: 20 }}>
+    <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.75, letterSpacing: 6 }}>AI 产品经理实战训练营</Text>
+    <Box style={{ flexDirection: 'column', gap: 8, marginTop: 12 }}>
+      <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF' }}>模拟面试 I</Text>
+      <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#FFFFFF' }}>1v1 压力面</Text>
+    </Box>
+    <Text style={{ fontSize: 22, color: '#FFFFFF', opacity: 0.85, marginTop: 16 }}>W8 周四 · 全程录像 · 产出改进清单 V1</Text>
+  </Box>
+  <Box style={{ width: 460, background: '#FFFFFF', borderRadius: 16, padding: 20, flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+    <Image src="assets/capability-profile.svg" style={{ width: 420, height: 244, objectFit: 'contain' }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理能力画像</Text>
+  </Box>
+  <Box style={{ position: 'absolute', left: 60, bottom: 40 }}>
+    <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.7 }}>讲师：张小培</Text>
+  </Box>
+</Slide>

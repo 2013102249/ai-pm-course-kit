@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W3 周一《Agent 架构原理》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl cur" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W3-物料/W3D1-Agent架构原理 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W3 周一《Agent 架构原理》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速，重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好，今天是第三周的周一。先帮大家把坐标定位一下：上个星期，你们完成了模型选型、微调原理、评测体系和合规四件事，周五每个人都把主项目立了项——选题、目标用户、核心场景、成功指标，全部锁定。从今天起，训练营进入一个新阶段：把你立项的那个产品，做成真的。</p>
+<p>第三周的产出是三件套：Agent 架构图、工作流原型、知识库原型。今天这 90 分钟，就为第一件打地基。也提醒一句：这一周的技术内容，不再是为学而学——每讲完一个东西，都要立刻回答「我的项目里用不用它、怎么用」。所以今天上课时，请你们脑子里始终装着自己立项的那个产品，每讲完一个要素，就问自己一句：我的产品里，这个要素长什么样？</p>
+<p>先说今天的终点，下课的时候你要能做成三件事：第一，画出你自己主项目的 Agent 架构草图，四要素一个不少；第二，能用一句话给别人讲清楚「Agent 和普通对话产品的区别」；第三，面对一个场景，你能初步判断该不该上 Agent。这三个能力，直接决定你周五的架构图长什么样，也决定面试里「讲一个你做的 AI 产品」你能讲多深。</p>
+<p>【停】</p>
+<h2>导入：从答题到办事（3–8 分钟）</h2>
+<p>正式开讲之前，我先请大家想一个对比。</p>
+<p>上个星期你们天天在用对话产品：问它一个问题，它回你一段话。比如你问它「帮我写一份三天的东京旅游攻略」，它唰唰唰写出来了，航班信息可能是编的，酒店价格可能是过时的，但没关系——它交付的是一份「答案」，用不用、怎么用、出了错算谁的，都是你自己的事。</p>
+<p>现在换一件事：你说「帮我订下周三去东京的机票和酒店，预算五千」。注意，这次它要交付的不是攻略，是订单。要拆任务——先查航班再比价再下单；要用工具——真的去调订票接口；要拿结果——你手机上得出现一条真实的订单；还要担责任——订错了城市、买贵了两千，这个责任是它的。</p>
+<p>【金句】这就是今天第一个要记住的框架：<strong>答题是给答案，办事是拆任务、用工具、拿结果、担责任。Agent 就是从「答题」走向「办事」的那一步。</strong></p>
+<p>【问】那我先问大家：这两件事，对产品经理来说，最本质的差别是什么？【停，点 1–2 名学员】</p>
+<p>有同学说到点子上了——交付物变了，责任主体也变了。答题型产品，模型说错了顶多被吐槽；办事型产品，模型做错一步是真金白银的损失。所以 Agent 产品的设计难度，不在技术多复杂，而在「责任」两个字上。这个点我们今天最后会回到它那里。</p>
+<p>市面上已经有产品把「办事」这件事做成了形态。比如 Manus，它的公开定位就是通用 Agent：你给它一个目标，它自己拆解任务、调用浏览器和代码等工具去执行，整个过程以任务列表和步骤的形式展示给用户。再比如扣子，是字节跳动推出的 Agent 开发平台，提供插件、工作流、知识库这些能力，让你自己搭一个能干活的 Agent。注意，我今天只描述它们的公开形态，不评价优劣——你们 W1D4 做产品拆解时已经练过怎么客观地看一个产品。</p>
+<p>再往深一层想：责任主体变了，产品的每一个设计决策都要跟着变。答题型产品，错一个字改一下提示词就行；办事型产品，你要回答一连串新问题——它每一步要不要给用户看？哪一步开始要收费？做错了怎么补救？哪些事绝对不能让它自作主张？这一串问题，没有一个是「技术问题」，全部是产品问题。今天 90 分钟，就是教你们把这串问题一个一个回答掉。</p>
+<p>【停】</p>
+<h2>环节一：Agent 到底是什么（8–15 分钟）</h2>
+<p>那 Agent 到底是什么？我给大家一个不用背的定义：</p>
+<p>【金句】<strong>Agent 就是长着四肢的大模型。</strong>模型是大脑，四肢是四要素：规划、记忆、工具、执行。</p>
+<p>回忆一下 W1D2，我们讲过大模型是一个「看懂指令、续写答案」的概率引擎——那是大脑。大脑再聪明，它也只动嘴不动手。你让它「去查一下今天的汇率」，它只能编一个像汇率的数字，因为它没有手。Agent 要解决的就是这个问题：给大脑装上四肢，让它从「能说」变成「能做」。</p>
+<p>【操作：打开配图《Agent 四要素架构图》】</p>
+<p>看这张图。中间是 Agent 核心，也就是那个大脑，负责规划和调度。左边和右边、上面和下面，是四个器官：</p>
+<p>上面两个：规划，把大目标拆成一步一步；记忆，记住发生过的事。<br />
+下面两个：工具，接上外部能力；执行，真正动手干活。</p>
+<p>这张图今天会陪我们一整节课，大家先在导学案上把骨架画下来——中间一个核心，四周四个要素，连上线。细节我们马上一个一个过。</p>
+<p>先泼一盆冷水：不是所有产品都需要 Agent。你们的主项目里，有些环节用固定的流程跑反而更稳、更便宜。什么时候用 Agent、什么时候用固定工作流，明天 W3D2 会专门练这个判断。今天你先把 Agent 的原理吃透，明天才有资格决定「不用它」。</p>
+<p>【停】</p>
+<h2>环节二：四要素逐个精讲（15–42 分钟，核心环节）</h2>
+<p>【操作：打开《交互式架构图》，切到「Agent 架构」Tab】</p>
+<p>接下来 27 分钟，是今天的核心。我们用这个交互工具，四个要素逐个点开讲。每讲一个，你们在导学案的「四要素笔记表」里填一行：是什么、产品经理管什么、常见坑。</p>
+<p><strong>第一个要素：规划。</strong>【操作：点击「规划」节点，展示右侧三段式讲解】</p>
+<p>规划，就是把一个大目标拆成可执行的步骤序列。用户说「帮我调研这三个竞品并写成报告」，规划模块要把这句话拆成：先搜集资料、再对比整理、再生成报告、最后自查——四步，每一步可执行。</p>
+<p>产品经理管什么？三件事。第一，任务边界：哪些事这个 Agent 该干、干到什么程度算完成，必须先定义清楚，不然它会拿着模糊的目标瞎跑。第二，可观测：用户要能看到它拆成了哪几步、现在进行到第几步——Manus 把任务列表直接展示出来，就是这个设计。第三，重试策略：某一步失败了，重试几次？什么时候放弃并交还人类？这些不是技术细节，是产品规则。</p>
+<p>【问】现在问大家：Agent 拆完任务之后，为什么还是会一步错、步步错？【停】</p>
+<p>对——没有步数上限。第一步的理解就偏了，后面每一步都在错误的轨道上狂奔，而且不设上限地跑。所以我给你们今天的第一句核心金句：</p>
+<p>【金句】<strong>没有步数上限的 Agent，是在拿用户的 token 赌运气。</strong></p>
+<p>记住，做 Agent 产品，最大步数是必填项，不是可选项。</p>
+<p>规划的常见坑就一个：只画流程，不定边界和上限。你面试的时候画出「max steps = 20，超出即暂停并交还人类」，面试官立刻知道你真做过。</p>
+<p><strong>第二个要素：记忆。</strong>【操作：点击「记忆」节点】</p>
+<p>记忆分两层。短期记忆，就是当前这轮任务里的上下文——用户的目标、已经完成的步骤、中间结果，都在模型的上下文窗口里。长期记忆，是跨会话的存取——上次用户告诉过它「我偏好靠窗的座位」，下次不用再说一遍。</p>
+<p>产品经理管什么？第一，写入与遗忘策略：什么值得记、什么必须忘。第二，隐私边界：长期记忆里存了用户什么，用户有权看到、有权删除——这在合规上不是加分项，是底线。第三，记忆的调用时机：什么场景该把哪些经验翻出来用。</p>
+<p>给大家一个具体例子感受一下。一个差旅 Agent，用户第一次用的时候随口说过「经济舱就好，尽量靠过道」。三个月后它帮用户订票，要不要还记得这条偏好？应该记——这是高价值、低风险的偏好，记住它，体验立刻不一样。但假设用户某次任务里提过一句公司的预算数字，这条该不该进长期记忆？大概率不该——涉密，而且过期极快。你看，「记什么、忘什么」根本不是技术参数，是产品规则，得一条一条设计出来。</p>
+<p>【问】那我问一句：Agent 的记忆，是不是越多越好？【停】</p>
+<p>有同学犹豫了。答案是：不是。记忆塞得越满，噪声越多，判断越差；而且记的都是用户的隐私，多记一分，风险多一分。这里有第二句金句：</p>
+<p>【金句】<strong>记忆不是越多越好——会遗忘，才是产品设计。</strong></p>
+<p>常见坑：把记忆做成「什么都记」，既贵又不安全。正确做法是给记忆设计分层：任务内的短期记忆用完即弃，跨会话的长期记忆白名单化管理。</p>
+<p><strong>第三个要素：工具。</strong>【操作：点击「工具」节点】</p>
+<p>工具是 Agent 的手和脚：搜索、计算器、数据库查询、企业系统 API。大脑再强，没有工具就还是只能答题。</p>
+<p>产品经理管什么？第一，工具清单：给这个 Agent 配哪几个工具——注意是最小集，不是全家桶，每多一个工具，出错面就大一分。第二，权限最小化：这个 Agent 能读哪些数据、能动哪些系统，必须逐个授权，不能一上来就给它全部 API 的钥匙。第三，也是最容易忽略的：工具的描述文案。</p>
+<p>【问】为什么说工具的描述文案，是提示词的一部分？【停】</p>
+<p>因为模型是靠读工具的描述来决定「什么时候用这个工具、传什么参数」的。你写「search：搜索」，模型根本不知道什么时候该用它；你写「search：当需要查询实时信息（股价、汇率、新闻）时调用，输入为自然语言关键词」，模型就用得很准。所以写工具描述，本质上是在写提示词——这是产品经理可以直接上手、直接见效的工作，明天实操你们就会体会到。</p>
+<p><strong>第四个要素：执行。</strong>【操作：点击「执行」节点】</p>
+<p>执行，就是真正发起调用、和环境发生交互：真的下单、真的发邮件、真的改数据库。前面三个要素都在「想」，这一个在「做」。</p>
+<p>产品经理管什么？第一，人工确认闸门：高风险动作必须停下来等用户点头。第二，回滚与补偿：做了之后发现错了，能不能撤销、怎么补救。第三，执行日志：每一步动了什么，全程留痕，出了问题能审计。</p>
+<p>【问】哪些动作必须有人工确认？【停】</p>
+<p>对，判断标准就一条：不可逆。支付、发送、删除、对外承诺——做了就收不回来的，必须有人工闸门；查询、草稿、预览这类可逆动作，可以让它放手去做。</p>
+<p>到这里，四要素讲完了。但注意图上还有一条虚线：执行完之后，环境的结果会反馈回大脑。Agent 不是一条道跑到黑，它是「做一步、看一眼、再决定下一步」的循环。这个循环，就是我们接下来要讲的 ReAct。</p>
+<p>【停】</p>
+<h2>环节三：ReAct——把思考摊开给用户看（42–55 分钟）</h2>
+<p>ReAct，两个词的缩写：Reasoning + Acting，思考和行动交替进行。完整循环是四拍：思考——我该做什么；行动——调用工具；观察——看返回结果；再思考——根据结果调整下一步。</p>
+<p>这个循环本身不难。今天我要教你们的是一个产品经理的讲法，也是面试时的差异化答案：</p>
+<p>【金句】<strong>ReAct 对产品经理的意义，是把模型的思考过程摊开给用户看。</strong></p>
+<p>为什么要摊开？三个理由，层层递进。</p>
+<p>第一，信任。黑箱转圈和「正在执行第 3 步：查询航班价格」，是两种完全不同的心理体验。前者用户等 30 秒就开始焦虑，后者用户愿意等 3 分钟。可观测，是 Agent 产品信任感的第一来源。</p>
+<p>第二，可中断。用户看得到步骤，才能在它跑偏的那一刻叫停。你想象一个 Agent 在第 7 步开始反复搜索同一个关键词——用户看得见，就能及时干预；看不见，它就把预算烧完了你才知道。</p>
+<p>第三，可纠偏。出了错，用户和客服能定位到具体哪一步错了——是搜索词不对，还是下单参数传错。没有过程展示，badcase 就是「它最后给我的结果是错的」，无从归因。</p>
+<p>【故事】我讲一个反面案例。有个团队做行程规划 Agent，技术做得不错，但界面只有一个转圈的动画。内测的时候，用户平均等待 40 秒就开始重复点击、刷新，很多人直接关掉——哪怕最后结果是对的，用户也觉得「它是不是死机了」。后来他们只做了一个改动：把 ReAct 的每一步以清单形式展示出来，完成一步打一个勾。同样的技术，同样的等待时间，内测满意度完全是两个量级。你看，这不是技术改进，是产品改进——把本来就存在的思考过程，翻译给用户看。</p>
+<p>还要补一个词：反思机制。Agent 执行失败之后，不应该傻乎乎地原样重试，而是要「想一想」——刚才哪一步出了问题，换个方式再来。这个反思本身也是模型的一次推理，产品经理要关心的是：反思几次、反思不出办法时是不是交还人类。这就又回到了步数上限和接管点。</p>
+<p>【问】好，那我再追问一句：把思考过程全部摊开，会不会信息过载？【停】</p>
+<p>问得好——所以呈现要分层：默认只展示步骤清单，一行一句；想看细节的用户，点开某一步看完整的推理和工具返回。这就是「可展开的透明」，不是「事无巨细的汇报」。这个设计，你们主项目的架构图里可以直接用。</p>
+<p>【停】</p>
+<h2>环节四：MCP——工具的 USB 接口（55–65 分钟）</h2>
+<p>接下来讲一个这两年工具生态里最重要的词：MCP，Model Context Protocol，模型上下文协议。</p>
+<p>先讲它解决什么问题。一个 Agent 平台上，假设有 3 个模型、10 个工具。没有统一协议的时代，每个模型接每个工具，都要单独写一套适配——3 乘 10，30 套适配代码。每上一个新模型，重写 10 套；每上一个新工具，重写 3 套。工具生态越大，这个乘法越恐怖。</p>
+<p>MCP 干的事，就是给所有模型和工具定一个统一的插口。模型只要实现一次 MCP 客户端，工具只要实现一次 MCP 服务端，两边即插即用。3 加 10，13 份工作就够了。M 乘 N 变成 M 加 N。</p>
+<p>【问】我问大家一个生活类比：这个思路你在哪儿见过？【停】</p>
+<p>对——USB。没有 USB 的年代，打印机一个口、鼠标一个口、键盘一个口，每个设备一种线。USB 统一之后，任何设备插上就能用。所以记住这个类比：</p>
+<p>【金句】<strong>MCP 就是 AI 时代的 USB 接口——工具接入从「每个都单独适配」变成「即插即用」。</strong></p>
+<p>再给你们一个更贴近工作的算法。假设你们主项目要用三个工具：日历、企业数据库、邮件。没有 MCP 的做法是什么？你们选的模型厂商每家都有自己的一套调用格式，A 模型一套写法，B 模型一套写法，换模型，三个工具全部重接。有了 MCP，工具侧实现一次 MCP 服务端，任何支持协议的模型都能直接用——明天你们在扣子或 Dify 里加插件的时候，可以留意一下，添加一个工具的配置成本已经低到分钟级，这就是标准化带来的变化。</p>
+<p>客观背景补充一句：MCP 是 Anthropic 在 2024 年 11 月发布的开放协议，之后被多家主流模型厂商和开发平台跟进支持。像扣子、Dify 这类开发平台，都在提供自己的插件与工具接入体系，MCP 正在成为跨平台通用的连接标准。这里我不展开技术细节，你们只需要站在产品视角记住一件事——</p>
+<p>工具接入的标准化，是产品经理的新杠杆。以前接一个新工具，要评估「开发排期两周」；协议统一之后，接一个新工具的成本大幅下降，意味着你设计 Agent 时的工具选择空间变大了、试错变快了。做竞品分析和方案评审时，「这个平台工具生态怎么样、接新工具多快」，会成为你方案里的一个正式考量项。</p>
+<p>最后 30 秒前瞻一个词：A2A，Agent-to-Agent，Agent 之间的协作协议，Google 在 2025 年发布。它想解决的是「不同家的 Agent 怎么互相沟通」。今天不展开，你们记住这个名字就行——面试聊到 Agent 生态，能提一句「工具侧有 MCP，Agent 互联侧有 A2A」，就够显专业了。</p>
+<p>【停】</p>
+<h2>环节五：Multi-Agent 复杂度警告（65–75 分钟）</h2>
+<p>【操作：交互工具 Agent Tab，点击「多 Agent 协作」节点】</p>
+<p>最后一个技术话题：Multi-Agent，多个 Agent 分工协同。比如一个「调研 Agent」负责搜集资料，交给「写作 Agent」成稿，再交给「审校 Agent」查错——各管一段。</p>
+<p>听起来很美好，对吧？但我今天这 10 分钟的主要任务，是给你们泼冷水。</p>
+<p>多 Agent 有三个隐藏成本。第一，协作协议：Agent 和 Agent 之间怎么传话？传什么格式？谁先谁后？这些本身就是新的设计对象，而且比单个 Agent 的设计更难。第二，消息损耗：A 传给 B 的每一句话，都是一次有损压缩——A 觉得说清楚了，B 理解偏了，错误就这么进来了。第三，失败传播：链条上任何一环出错，都会往下游传染，而且越往下游，越难定位是哪一环出的错。</p>
+<p>所以，记住这个判断：</p>
+<p>【金句】<strong>多 Agent 是复杂度黑洞：两个 Agent 能做的事，别用五个。</strong></p>
+<p>【问】那什么时候才真的需要多 Agent？【停】</p>
+<p>三个信号，满足其一再考虑：任务真的可以并行，串行太慢；单个 Agent 的上下文装不下整个任务，必须分段；不同环节需要隔离的专业能力或权限。如果三个信号一个都不占，老老实实用单 Agent。</p>
+<p>给大家一个决策顺序，也是明天课堂会反复用的：先问「单 Agent 能不能解决」，再问「要不要 Agent」，最后才问「要不要多个 Agent」。把这三个问题倒着问的人，做出来的产品一定复杂到没法维护。</p>
+<p>【停】</p>
+<h2>环节六：产品边界与主项目草图（75–85 分钟）</h2>
+<p>技术讲完了，最后 10 分钟回到产品，也回到你们自己的项目。Agent 产品经理有三道必设的闸门。</p>
+<p>第一道：人工接管点。回顾今天开头那句话——答题的责任在你，办事的责任在它。但一个负责任的 Agent 产品，必须明确回答：</p>
+<p>【金句】<strong>Agent 产品经理的第一问题：这件事什么时候交还给人类？</strong></p>
+<p>哪些时刻交还？三种：模型对下一步没把握的时候（置信度低）；步数或预算触顶的时候；碰到不可逆动作的时候。这三个时刻，就是你在架构图上要标注的接管点。</p>
+<p>接管点在界面上怎么呈现？也给大家一句参考设计：接管不是「弹窗打断」，而是「暂停 + 选项」。比如执行到「即将向 200 名客户发送邮件」这一步，正确的做法是停下来，把收件范围、正文摘要、发送时间摆出来，给用户「确认发送」和「我要改」两个按钮——用户保有控制感，Agent 保住了效率。接管点设计得好不好，直接决定用户敢不敢把大事交给你的产品。</p>
+<p>第二道：步数与成本上限。前面讲过了，max steps 是必填项。再补一个维度：单次任务成本上限。每一步都调工具、调模型，钱是按步累加的，上限就是你的刹车。</p>
+<p>第三道：安全闸门。不可逆动作前强制人工确认——这是红线，不是建议。</p>
+<p>【操作：发布导学案草图任务，计时 8 分钟】</p>
+<p>现在轮到你们了。打开导学案的「主项目 Agent 架构草图区」，8 分钟，把你立项的那个产品画出来：中间 Agent 核心，四周四要素，另外三样东西必须有——至少一个接管点、一个步数上限、一个具体工具清单。开始。【停，8 分钟，巡视，重点看四要素是否标全、接管点在哪里】</p>
+<p>巡视时我看到几个共性问题，现场纠正：有同学只画了「LLM 加工具」两个框，记忆和执行不见了——回忆一下，执行是唯一动手的环节，没有执行就不叫 Agent。还有同学的图是全自动闭环，一个交还人类的点都没有——你想让它在你的产品里替用户承担全部责任吗？现在改。</p>
+<p>【停】</p>
+<h2>总结与作业（85–90 分钟）</h2>
+<p>今天的内容，收束成三句话：</p>
+<p>第一，Agent 是长着四肢的大模型，四要素——规划、记忆、工具、执行，每个要素产品经理都有一块自留地：步数上限、遗忘策略、工具描述、人工确认。<br />
+第二，ReAct 的产品讲法是把思考摊开给用户看——可观测带来信任、可中断、可纠偏；MCP 是工具的 USB 接口，M×N 变 M+N。<br />
+第三，Agent 产品的三道闸门：接管点、步数上限、安全闸门——先问单 Agent 能不能解决，再决定要不要 Agent。</p>
+<p>周末作业一个：把今天的草图完善成正式的主项目 Agent 架构图，周五评审直接用。验收标准就是导学案上的四条：四要素标全、接管点明确、步数上限标注、工具清单具体。另外，把今天的金句抄三句进导学案，第八周面试课要用。</p>
+<p>明天 W3D2，我们把今天的判断题落成实操：什么场景该用 Agent、什么场景该用固定工作流，然后现场用 Dify 或扣子搭一条带工具调用的工作流。今天画草图时觉得「这里好像不用 Agent」的同学，明天就是你的主场。</p>
+<p>下课。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>答题是给答案，办事是拆任务、用工具、拿结果、担责任。</li>
+<li>Agent 就是长着四肢的大模型。</li>
+<li>没有步数上限的 Agent，是在拿用户的 token 赌运气。</li>
+<li>记忆不是越多越好——会遗忘，才是产品设计。</li>
+<li>ReAct 对产品经理的意义，是把模型的思考过程摊开给用户看。</li>
+<li>MCP 就是 AI 时代的 USB 接口——工具接入从「每个都单独适配」变成「即插即用」。</li>
+<li>多 Agent 是复杂度黑洞：两个 Agent 能做的事，别用五个。</li>
+<li>Agent 产品经理的第一问题：这件事什么时候交还给人类？</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「提示一下——上周五你们立项的时候，成功指标都定了，那 Agent 帮用户执行的时候，谁负责检查它做得对不对？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个角度先记下来，课后可以展开。我们回到问题本身——我问的是产品和模型的责任边界，你觉得边界画在哪？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「完全正确。再说一遍，让大家都听到——『不可逆』这三个字，面试可以直接用。」</td>
+</tr>
+<tr>
+<td>学员钻技术细节（问 ReAct 底层实现）</td>
+<td>「这个深度适合课后单聊。今天记住产品视角就够了：思考过程摊开，是为了信任和可中断——这也是面试的答案。」</td>
+</tr>
+<tr>
+<td>小组讨论冷场（草图环节）</td>
+<td>「画不出完整图没关系，先把四要素的四个框摆出来，再往里填——先有骨架，再有血肉。」</td>
+</tr>
+<tr>
+<td>时间不够要压缩环节</td>
+<td>「Multi-Agent 的三个隐藏成本我先给结论：协议、损耗、失败传播，细节回放里补，记得看。」</td>
+</tr>
+<tr>
+<td>演示工具卡住</td>
+<td>「正好，这本身就是今天的知识点——任何 Agent 产品都要有降级方案。我们先用架构图讲，工具稍后再点。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

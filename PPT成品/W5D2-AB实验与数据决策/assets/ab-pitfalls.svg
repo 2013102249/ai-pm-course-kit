@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <rect x="40" y="42" width="4" height="22" fill="#7C3AED"/>
+  <text x="54" y="60" font-size="20" font-weight="700" fill="#221E33">AB 实验三陷阱示意图</text>
+  <text x="54" y="82" font-size="12" fill="#6B7280">偷看指标 · 辛普森悖论 · 多重比较 —— 先定判据，再看数据</text>
+
+  <!-- 栏 1 · 偷看指标 -->
+  <rect x="40" y="118" width="357" height="442" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="218.5" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#DC2626">陷阱一 · 偷看指标</text>
+  <line x1="178.5" y1="168" x2="258.5" y2="168" stroke="#DC2626" stroke-width="2"/>
+  <g transform="translate(218.5,214)" stroke="#4A4560" stroke-width="2" fill="none" stroke-linecap="round">
+    <line x1="-34" y1="26" x2="-6" y2="-2"/>
+    <line x1="-24" y1="34" x2="4" y2="6"/>
+    <line x1="-6" y1="-2" x2="4" y2="6"/>
+    <circle cx="13" cy="-12" r="9"/>
+  </g>
+  <rect x="54" y="266" width="329" height="140" rx="8" fill="#FAFAFC" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="68" y="292" font-size="13" font-weight="700" fill="#6B7280">案例</text>
+  <text x="68" y="322" font-size="15" fill="#4A4560">第 3 天 B 组领先就庆功全量，</text>
+  <text x="68" y="348" font-size="15" fill="#4A4560">第 7 天反转 —— 样本结构歪了</text>
+  <rect x="54" y="424" width="329" height="112" rx="8" fill="#E8EFFD" stroke="#C9C2DE" stroke-width="1.2"/>
+  <text x="68" y="452" font-size="13" font-weight="700" fill="#2563EB">规避动作</text>
+  <text x="68" y="488" font-size="15" fill="#221E33">开跑前冻结：判读日期 + 成败标准</text>
+
+  <!-- 栏 2 · 辛普森悖论 -->
+  <rect x="421" y="118" width="357" height="442" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="599.5" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#DC2626">陷阱二 · 辛普森悖论</text>
+  <line x1="559.5" y1="168" x2="639.5" y2="168" stroke="#DC2626" stroke-width="2"/>
+  <g transform="translate(599.5,214)" stroke="#4A4560" stroke-width="2" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-26" r="2.4" fill="#4A4560"/>
+    <line x1="0" y1="-24" x2="0" y2="16"/>
+    <line x1="-26" y1="-20" x2="26" y2="-20"/>
+    <line x1="-26" y1="-20" x2="-26" y2="-6"/>
+    <line x1="26" y1="-20" x2="26" y2="-6"/>
+    <path d="M-38,-6 A12 12 0 0 0 -14,-6"/>
+    <path d="M14,-6 A12 12 0 0 0 38,-6"/>
+    <line x1="-12" y1="18" x2="12" y2="18"/>
+  </g>
+  <rect x="435" y="266" width="329" height="140" rx="8" fill="#FAFAFC" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="449" y="292" font-size="13" font-weight="700" fill="#6B7280">案例</text>
+  <text x="449" y="322" font-size="15" fill="#4A4560">整体 5.2% 赢 5.0%，但 iOS、</text>
+  <text x="449" y="348" font-size="15" fill="#4A4560">Android 两个分组 A 版全赢</text>
+  <rect x="435" y="424" width="329" height="112" rx="8" fill="#E8EFFD" stroke="#C9C2DE" stroke-width="1.2"/>
+  <text x="449" y="452" font-size="13" font-weight="700" fill="#2563EB">规避动作</text>
+  <text x="449" y="488" font-size="15" fill="#221E33">判读前先按平台 / 新老分层看一遍</text>
+
+  <!-- 栏 3 · 多重比较 -->
+  <rect x="802" y="118" width="357" height="442" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="980.5" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#DC2626">陷阱三 · 多重比较</text>
+  <line x1="940.5" y1="168" x2="1020.5" y2="168" stroke="#DC2626" stroke-width="2"/>
+  <g transform="translate(980.5,214)" stroke="#4A4560" stroke-width="2" fill="none">
+    <rect x="-20" y="-20" width="40" height="40" rx="6"/>
+    <circle cx="-10" cy="-10" r="3.2" fill="#4A4560" stroke="none"/>
+    <circle cx="10" cy="-10" r="3.2" fill="#4A4560" stroke="none"/>
+    <circle cx="0" cy="0" r="3.2" fill="#4A4560" stroke="none"/>
+    <circle cx="-10" cy="10" r="3.2" fill="#4A4560" stroke="none"/>
+    <circle cx="10" cy="10" r="3.2" fill="#4A4560" stroke="none"/>
+  </g>
+  <rect x="816" y="266" width="329" height="140" rx="8" fill="#FAFAFC" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="830" y="292" font-size="13" font-weight="700" fill="#6B7280">案例</text>
+  <text x="830" y="322" font-size="15" fill="#4A4560">看了 20 个指标，总有 1 个「显著」</text>
+  <text x="830" y="348" font-size="15" fill="#4A4560">—— 像买 20 张彩票</text>
+  <rect x="816" y="424" width="329" height="112" rx="8" fill="#E8EFFD" stroke="#C9C2DE" stroke-width="1.2"/>
+  <text x="830" y="452" font-size="13" font-weight="700" fill="#2563EB">规避动作</text>
+  <text x="830" y="488" font-size="15" fill="#221E33">先定指标再看数；指标越多门槛越高</text>
+
+  <!-- 底部通栏 -->
+  <rect x="40" y="592" width="1120" height="52" rx="10" fill="#7C3AED"/>
+  <text x="600" y="625" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">三坑同源：先定判据，再看数据。</text>
+</svg>

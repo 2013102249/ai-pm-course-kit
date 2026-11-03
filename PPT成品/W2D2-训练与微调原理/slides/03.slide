@@ -1,0 +1,45 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 16</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>从「挑人」到「培养」</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
+
+  <Box style={{ flexDirection: 'row', gap: 32 }}>
+    <Box style={{ width: 540, flexDirection: 'column', gap: 16 }}>
+      <Box style={{ background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 12, padding: 20 }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>昨天 · 选型</Text>
+        <Text style={{ fontSize: 20, color: '#1E1B4B', marginTop: 6 }}>选型 = 挑一个现成的人：在市场上比简历、挑能力</Text>
+      </Box>
+      <Box style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 12, padding: 20 }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>今天 · 培养</Text>
+        <Text style={{ fontSize: 20, color: '#1E1B4B', marginTop: 6 }}>看一个模型是怎么被一步步培养出来的</Text>
+      </Box>
+      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#64748B', marginTop: 8 }}>带着三个悬念听今天的课</Text>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>模型的能力，是从哪里来的？</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>同一个底座，为什么行为差别那么大？</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>产品经理在哪一步能出手？</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/llm-arch.svg" style={{ width: 560, height: 288, objectFit: 'contain' }} />
+    </Box>
+  </Box>
+</Slide>

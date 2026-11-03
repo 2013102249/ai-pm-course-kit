@@ -1,0 +1,10 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
+  <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center', gap: 30 }}>
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', letterSpacing: 6 }}>录音自测 + 小结</Text>
+    <Text style={{ fontSize: 54, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center' }}>题库是练出来的，不是抄出来的</Text>
+    <Text style={{ fontSize: 22, color: 'rgba(255,255,255,0.85)', textAlign: 'center' }}>说人话三步法 · 数据两模板 · STAR 三句话收束</Text>
+    <Box style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 12, padding: '14px 30px' }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>录音自测：5 问，今晚完成</Text>
+    </Box>
+  </Box>
+</Slide>

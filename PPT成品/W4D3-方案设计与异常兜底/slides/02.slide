@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D3</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 30, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>02 / 16</Text>
+  </Box>
+  <Box style={{ flexDirection: 'column', gap: 20, height: '100%' }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天你能带走什么</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    <Box style={{ flexDirection: 'column', gap: 24, paddingTop: 8 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '28px 32px', width: '100%' }}>
+        <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+        </Box>
+        <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>画出对话产品状态机</Text>
+        <Text style={{ fontSize: 17, color: '#64748B', marginLeft: 'auto' }}>每个状态标超时值与异常出口</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '28px 32px', width: '100%' }}>
+        <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+        </Box>
+        <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>写出四件套四要素</Text>
+        <Text style={{ fontSize: 17, color: '#64748B', marginLeft: 'auto' }}>触发条件 · 产品动作 · 文案 · 升级路径</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '28px 32px', width: '100%' }}>
+        <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+        </Box>
+        <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>兜底设计表五行情景进 PRD</Text>
+        <Text style={{ fontSize: 17, color: '#64748B', marginLeft: 'auto' }}>直接填入「容错兜底」章节</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="40" y="34" width="4" height="22" fill="#7C3AED"/>
+<text x="54" y="52" font-size="20" font-weight="700" fill="#221E33">题型地图</text>
+<text x="54" y="74" font-size="12" fill="#6B7280">五大题型地图——先归型，再调框架 · W8D2 / W8D3 精讲课复用作导航</text>
+<!-- 卡1 项目深挖 -->
+<rect x="36" y="108" width="558" height="232" rx="16" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<rect x="436" y="122" width="146" height="22" rx="11" fill="#7C3AED"/>
+<text x="509" y="137" text-anchor="middle" font-size="10" fill="#FFFFFF">权重最高·业务面主战场</text>
+<text x="315" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">① 项目深挖</text>
+<text x="56" y="182" font-size="12" font-weight="700" fill="#2563EB">典型问法 <tspan font-weight="400">「这个数据怎么统计的？分母是什么」</tspan></text>
+<text x="56" y="216" font-size="12" fill="#221E33"><tspan font-weight="700">考察本质 </tspan>验真</text>
+<text x="56" y="248" font-size="12" fill="#221E33"><tspan font-weight="700">答题框架 </tspan>STAR + 追问防御链</text>
+<text x="56" y="306" font-size="12" fill="#DC2626"><tspan font-weight="700">高频失误 </tspan>数据张口报不出</text>
+<!-- 卡2 场景设计 -->
+<rect x="606" y="108" width="558" height="232" rx="16" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="885" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">② 场景设计</text>
+<text x="626" y="182" font-size="12" font-weight="700" fill="#2563EB">典型问法 <tspan font-weight="400">「从 0 设计一款 AI 面试助手」</tspan></text>
+<text x="626" y="216" font-size="12" fill="#221E33"><tspan font-weight="700">考察本质 </tspan>拆题方法论</text>
+<text x="626" y="248" font-size="12" fill="#221E33"><tspan font-weight="700">答题框架 </tspan>人群-场景-痛点-方案-指标-风险</text>
+<text x="626" y="306" font-size="12" fill="#DC2626"><tspan font-weight="700">高频失误 </tspan>上来就讲功能</text>
+<!-- 卡3 技术理解 -->
+<rect x="36" y="356" width="368" height="232" rx="16" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="220" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">③ 技术理解</text>
+<text x="52" y="430" font-size="12" font-weight="700" fill="#2563EB">典型问法 <tspan font-weight="400">「RAG 和微调怎么选」</tspan></text>
+<text x="52" y="462" font-size="12" fill="#221E33"><tspan font-weight="700">考察本质 </tspan>能与工程师对话</text>
+<text x="52" y="494" font-size="12" fill="#221E33"><tspan font-weight="700">答题框架 </tspan>加知识用 RAG / 改行为用微调</text>
+<text x="52" y="552" font-size="12" fill="#DC2626"><tspan font-weight="700">高频失误 </tspan>装懂硬撑</text>
+<!-- 卡4 数据 -->
+<rect x="416" y="356" width="368" height="232" rx="16" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="600" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">④ 数据</text>
+<text x="432" y="430" font-size="12" font-weight="700" fill="#2563EB">典型问法 <tspan font-weight="400">「DAU 跌了 15% 怎么排查」</tspan></text>
+<text x="432" y="462" font-size="12" fill="#221E33"><tspan font-weight="700">考察本质 </tspan>用数据定位问题</text>
+<text x="432" y="494" font-size="12" fill="#221E33"><tspan font-weight="700">答题框架 </tspan>北极星指标 + 异动排查</text>
+<text x="432" y="552" font-size="12" fill="#DC2626"><tspan font-weight="700">高频失误 </tspan>「我会去问数据同学」</text>
+<!-- 卡5 开放行为 -->
+<rect x="796" y="356" width="368" height="232" rx="16" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="980" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">⑤ 开放行为</text>
+<text x="812" y="430" font-size="12" font-weight="700" fill="#2563EB">典型问法 <tspan font-weight="400">「讲一次你最大的失败」</tspan></text>
+<text x="812" y="462" font-size="12" fill="#221E33"><tspan font-weight="700">考察本质 </tspan>自省与稳定</text>
+<text x="812" y="494" font-size="12" fill="#221E33"><tspan font-weight="700">答题框架 </tspan>STAR + 反思收尾</text>
+<text x="812" y="552" font-size="12" fill="#DC2626"><tspan font-weight="700">高频失误 </tspan>只讲事件没有反思</text>
+<!-- 归类口诀 -->
+<rect x="36" y="608" width="1128" height="56" rx="12" fill="#F1EBFD"/>
+<text x="600" y="643" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">归类口诀：看考察意图，不看字面</text>
+</svg>

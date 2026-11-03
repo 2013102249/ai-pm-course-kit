@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>11 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>冷启动四策略</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 20 }}>
+        <Box style={{ width: 570, padding: '22px 26px', background: '#F5F3FF', borderRadius: 12, gap: 8 }}>
+            <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#7C3AED' }}>种子用户</Text>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>找 100 个高契合用户，去他们聚集的地方，服务到极致，再谈规模</Text>
+            <Text style={{ fontSize: 15, color: '#64748B', lineHeight: 1.45 }}>反面信号：种子来自泛流量，谁都能用谁都不爱用</Text>
+        </Box>
+        <Box style={{ width: 570, padding: '22px 26px', background: '#EFF6FF', borderRadius: 12, gap: 8 }}>
+            <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#2563EB' }}>内容</Text>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>围绕核心价值做内容：案例、教程、使用前后对比，内容即获客入口</Text>
+            <Text style={{ fontSize: 15, color: '#64748B', lineHeight: 1.45 }}>反面信号：讲技术讲情怀，不展示用户能得到什么</Text>
+        </Box>
+        <Box style={{ width: 570, padding: '22px 26px', background: '#EFF6FF', borderRadius: 12, gap: 8 }}>
+            <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#2563EB' }}>渠道</Text>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>选 1 个用户聚集的主渠道打透，跑通再扩渠道</Text>
+            <Text style={{ fontSize: 15, color: '#64748B', lineHeight: 1.45 }}>反面信号：五个渠道同时铺，每个都浅尝辄止</Text>
+        </Box>
+        <Box style={{ width: 570, padding: '22px 26px', background: '#F5F3FF', borderRadius: 12, gap: 8 }}>
+            <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#7C3AED' }}>工具化</Text>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>把产品的一部分能力做成免费小工具，单点切入，免费工具即获客入口</Text>
+            <Text style={{ fontSize: 15, color: '#64748B', lineHeight: 1.45 }}>反面信号：免费工具与核心价值无关，引来非目标用户</Text>
+        </Box>
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 20 }}>
+        <Text style={{ fontSize: 16, color: '#64748B' }}>四策略不是四选一：冷启动期通常「种子用户 + 单渠道 + 一个工具化入口」组合使用，内容策略全程伴随。</Text>
+    </Box>
+</Slide>

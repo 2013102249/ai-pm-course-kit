@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 990" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="990" fill="#FFFFFF"/>
+<rect x="48" y="44" width="4" height="22" fill="#7C3AED"/>
+<text x="62" y="61" font-size="20" font-weight="700" fill="#221E33">一页纸通识卡 · 大模型原理（产品经理版）</text>
+<text x="62" y="82" font-size="12" fill="#6B7280">环节二至环节五贯穿使用 · 课后打印贴墙复习主素材</text>
+
+<!-- ① 类比区 -->
+<rect x="48" y="104" width="1104" height="84" rx="10" fill="#7C3AED"/>
+<text x="600" y="142" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">大模型 = 超级接话员</text>
+<text x="600" y="170" text-anchor="middle" font-size="14" fill="#F1EBFD">它永远会接话，哪怕它不知道答案</text>
+
+<!-- ② 三阶段成长史 -->
+<rect x="48" y="206" width="12" height="12" fill="#7C3AED"/>
+<text x="68" y="217" font-size="16" font-weight="700" fill="#221E33">三阶段成长史</text>
+<rect x="48" y="232" width="200" height="40" fill="#7C3AED"/>
+<rect x="248" y="232" width="260" height="40" fill="#2563EB"/>
+<rect x="508" y="232" width="644" height="40" fill="#5B21B6"/>
+<text x="148" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">阶段名</text>
+<text x="378" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">我的类比</text>
+<text x="830" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">解决什么问题</text>
+<rect x="48" y="272" width="200" height="52" fill="#FAF9FE"/>
+<rect x="248" y="272" width="260" height="52" fill="#FAF9FE"/>
+<rect x="508" y="272" width="644" height="52" fill="#FAF9FE"/>
+<text x="148" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">预训练</text>
+<text x="378" y="304" text-anchor="middle" font-size="15" fill="#4A4560">读书</text>
+<text x="528" y="304" font-size="14" fill="#4A4560">海量文本里学会语言规律与世界知识</text>
+<rect x="48" y="324" width="200" height="52" fill="#FFFFFF"/>
+<rect x="248" y="324" width="260" height="52" fill="#FFFFFF"/>
+<rect x="508" y="324" width="644" height="52" fill="#FFFFFF"/>
+<text x="148" y="356" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">SFT</text>
+<text x="378" y="356" text-anchor="middle" font-size="15" fill="#4A4560">岗前培训</text>
+<text x="528" y="356" font-size="14" fill="#4A4560">用示范对话学会「怎么好好接话」</text>
+<rect x="48" y="376" width="200" height="52" fill="#FAF9FE"/>
+<rect x="248" y="376" width="260" height="52" fill="#FAF9FE"/>
+<rect x="508" y="376" width="644" height="52" fill="#FAF9FE"/>
+<text x="148" y="408" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">RLHF</text>
+<text x="378" y="408" text-anchor="middle" font-size="15" fill="#4A4560">满意度回访</text>
+<text x="528" y="408" font-size="14" fill="#4A4560">按人类反馈对齐，学会什么该说、什么不该说</text>
+<rect x="48" y="232" width="1104" height="196" fill="none" stroke="#E8E5F1" stroke-width="1.2"/>
+<line x1="48" y1="272" x2="1152" y2="272" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="324" x2="1152" y2="324" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="376" x2="1152" y2="376" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="248" y1="232" x2="248" y2="428" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="508" y1="232" x2="508" y2="428" stroke="#E8E5F1" stroke-width="1"/>
+
+<!-- ③ 两个仪表盘 -->
+<rect x="48" y="452" width="12" height="12" fill="#2563EB"/>
+<text x="68" y="463" font-size="16" font-weight="700" fill="#221E33">两个仪表盘</text>
+<rect x="48" y="476" width="540" height="120" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.2"/>
+<text x="76" y="516" font-size="16" font-weight="700" fill="#221E33"><tspan fill="#2563EB">上下文窗口</tspan> = 模型的桌面大小</text>
+<text x="76" y="546" font-size="13" fill="#4A4560">桌面只有这么大——放不下长文档与太多轮历史</text>
+<text x="76" y="570" font-size="13" fill="#4A4560">超限就会截断或报错，先算再排</text>
+<rect x="612" y="476" width="540" height="120" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.2"/>
+<text x="640" y="516" font-size="16" font-weight="700" fill="#221E33">推理成本 = 按 <tspan fill="#2563EB">token</tspan> 计费</text>
+<text x="640" y="546" font-size="13" fill="#4A4560">输入输出分开算，费用随用量线性增长</text>
+<text x="640" y="570" font-size="13" fill="#4A4560">先估算 token 用量，再谈毛利</text>
+
+<!-- ④ 边界表 -->
+<rect x="48" y="622" width="12" height="12" fill="#5B21B6"/>
+<text x="68" y="633" font-size="16" font-weight="700" fill="#221E33">「懂到什么程度」边界表</text>
+<text x="1152" y="633" text-anchor="end" font-size="11" fill="#7A7590">条目照抄教案第十节 · 不必懂的问题找算法同事</text>
+
+<!-- 必须懂列 -->
+<rect x="48" y="644" width="352" height="44" rx="10" fill="#7C3AED"/>
+<rect x="48" y="666" width="352" height="22" fill="#7C3AED"/>
+<text x="224" y="673" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">必须懂</text>
+<rect x="48" y="688" width="352" height="252" rx="10" fill="#FAF9FE" stroke="#E8E5F1" stroke-width="1"/>
+<text x="224" y="710" text-anchor="middle" font-size="11" fill="#6B7280">直接决定产品决策，面试必考</text>
+<text x="64" y="740" font-size="13" fill="#221E33">① 大模型是概率续写引擎，会幻觉</text>
+<text x="64" y="764" font-size="13" fill="#221E33">② 预训练 / SFT / RLHF 三阶段各自</text>
+<text x="80" y="782" font-size="13" fill="#221E33">解决什么问题</text>
+<text x="64" y="808" font-size="13" fill="#221E33">③ 上下文窗口是什么、超限会怎样</text>
+<text x="64" y="832" font-size="13" fill="#221E33">④ 推理成本按 token 计费、输入输出</text>
+<text x="80" y="850" font-size="13" fill="#221E33">分开算</text>
+<text x="64" y="876" font-size="13" fill="#221E33">⑤ 模型有能力边界和知识截止时间</text>
+
+<!-- 应该懂列 -->
+<rect x="424" y="644" width="352" height="44" rx="10" fill="#2563EB"/>
+<rect x="424" y="666" width="352" height="22" fill="#2563EB"/>
+<text x="600" y="673" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">应该懂</text>
+<rect x="424" y="688" width="352" height="252" rx="10" fill="#FAF9FE" stroke="#E8E5F1" stroke-width="1"/>
+<text x="600" y="710" text-anchor="middle" font-size="11" fill="#6B7280">开会不懵，能和技术同事对话</text>
+<text x="440" y="740" font-size="13" fill="#221E33">① Transformer 自注意力大致在干什么</text>
+<text x="440" y="764" font-size="13" fill="#221E33">② 微调不是首选——先提示词、再</text>
+<text x="456" y="782" font-size="13" fill="#221E33">RAG、最后微调</text>
+<text x="440" y="806" font-size="13" fill="#221E33">③ 多模态的能力边界（能识图不等于</text>
+<text x="456" y="824" font-size="13" fill="#221E33">能精确数数）</text>
+<text x="440" y="848" font-size="13" fill="#221E33">④ 主流模型家族的存在与定位</text>
+<text x="456" y="866" font-size="12" fill="#221E33">（GPT / Claude / Gemini /</text>
+<text x="456" y="884" font-size="12" fill="#221E33">DeepSeek / Qwen / GLM）</text>
+<text x="440" y="908" font-size="13" fill="#221E33">⑤ 私有化部署与 API 调用是两条成本</text>
+<text x="456" y="926" font-size="13" fill="#221E33">曲线</text>
+
+<!-- 不必懂列 -->
+<rect x="800" y="644" width="352" height="44" rx="10" fill="#6B7280"/>
+<rect x="800" y="666" width="352" height="22" fill="#6B7280"/>
+<text x="976" y="673" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">不必懂</text>
+<rect x="800" y="688" width="352" height="252" rx="10" fill="#F5F5F7" stroke="#E8E5F1" stroke-width="1"/>
+<text x="976" y="710" text-anchor="middle" font-size="11" fill="#9CA3AF">遇到时找算法同事，学了也是沉没成本</text>
+<text x="816" y="740" font-size="13" fill="#9CA3AF">① 数学公式（注意力公式、损失函数</text>
+<text x="832" y="758" font-size="13" fill="#9CA3AF">推导）</text>
+<text x="816" y="782" font-size="13" fill="#9CA3AF">② 代码实现与训练框架细节</text>
+<text x="816" y="806" font-size="13" fill="#9CA3AF">③ 模型结构参数（层数、注意力头数、</text>
+<text x="832" y="824" font-size="13" fill="#9CA3AF">参数规模）</text>
+<text x="816" y="848" font-size="13" fill="#9CA3AF">④ 分布式训练与显存优化</text>
+<text x="816" y="872" font-size="13" fill="#9CA3AF">⑤ 论文复现</text>
+
+<text x="1152" y="966" text-anchor="end" font-size="11" fill="#7A7590">AI 产品经理就业训练营 · W1D2 · 自主研发</text>
+</svg>

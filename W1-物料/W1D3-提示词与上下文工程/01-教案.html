@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W1 周三《提示词与上下文工程》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl cur" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料/W1D3-提示词与上下文工程 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W1 周三《提示词与上下文工程》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第一周第三天 · 90 分钟（2 课时，中间休息 5 分钟）· 讲师版</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段一 · 认知筑基（Week 1）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>提示词与上下文工程</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，中间休息 5 分钟）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>已完成 W1D1 岗位全景、W1D2 大模型原理通识的学员</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>大模型基本工作原理、上下文窗口概念、System / User Prompt 结构</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>1 条本人改写的五要素达标提示词（评分 ≥4/5）+ 上下文工程四组件笔记</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏 + 学员可访问提示词调试台</td>
+</tr>
+<tr>
+<td>后续衔接</td>
+<td>周末产出「30 条场景提示词练习集」；W3 起所有方案设计课均要求「提示词可复用、可评测」</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能独立写出一条包含提示词五要素（角色、任务、约束、输出格式、示例）中至少 4 项的提示词，并在提示词调试台中通过五要素评分，得分 ≥4/5（对应验证：课后 30 条练习集中抽查，达标率纳入周末验收）。</li>
+<li>能说出上下文工程四组件（资料注入、工具描述、记忆设计、历史对话）各自解决的产品问题，并能对给定业务场景勾选「需要哪几个组件、不需要哪个、为什么」（对应课堂练习 + 分层习题第 6 题）。</li>
+<li>能诊断一条低分提示词缺失哪些要素，并按评分卡建议逐项改写（对应分层习题第 1–2 题找茬题）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点</strong>：提示词五要素教学法——每个要素「是什么、缺了会怎样、怎么写」讲透，让学员拿起来就能套。</li>
+<li><strong>难点一</strong>：约束与输出格式的写法。学员能写「请总结」，写不出「不要添加原文没有的信息；输出 JSON，含 intent、confidence、reason 字段」这类可验收的约束。</li>
+<li><strong>难点二</strong>：上下文工程四组件的产品视角。学员容易只记住名词，说不清「资料注入解决幻觉、工具描述解决不会用工具、记忆设计解决重复交代、历史对话解决多轮连贯」分别对应什么产品问题。</li>
+<li><strong>防冷场预案</strong>：本课有两次现场改写练习，冷场风险高于讲授环节，话术库见讲课稿附录，务必课前熟悉。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提示词调试台</td>
+<td>本课核心教具：差提示词 vs 好提示词对比 + 学员现场改写</td>
+<td>02-交互工具/提示词调试台.html</td>
+</tr>
+<tr>
+<td>提示词五要素检查卡</td>
+<td>学员贴墙速查 + 板书对照</td>
+<td>05-配图清单（本课待制）</td>
+</tr>
+<tr>
+<td>导学案</td>
+<td>学员课上填写（五要素自评表 + 改写练习区）</td>
+<td>本目录 03-导学案.md</td>
+</tr>
+<tr>
+<td>演示用差提示词与好提示词</td>
+<td>导入与改写环节对比素材，全文见讲课稿</td>
+<td>本目录 02-讲课稿.md</td>
+</tr>
+<tr>
+<td>30 条场景提示词练习集</td>
+<td>课后作业说明</td>
+<td>本目录 03-导学案.md</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10 min</td>
+<td>导入：同一个需求，两种命运</td>
+<td>现场用调试台运行两条同需求提示词（「总结一下」vs 五要素完整版），学员直观看到输出质量差异；提问「差在哪」</td>
+<td>交互演示 + 对比冲击 + 提问</td>
+<td>学员在导学案记下第一印象</td>
+</tr>
+<tr>
+<td>10–28 min</td>
+<td>环节一：提示词五要素教学法</td>
+<td>逐要素讲「角色、任务、约束、输出格式、示例」：定义、缺失后果、写法句式；每讲一要素回调试台评分卡指认</td>
+<td>讲授 + 图示 + 工具指认</td>
+<td>五要素笔记表填写</td>
+</tr>
+<tr>
+<td>28–48 min</td>
+<td>环节二：现场改写——把 1 分改成 4 分</td>
+<td>以学员预习提交的真实提示词为例，现场逐项改写；邀请 2–3 名学员上台操作调试台，其他人同步改写</td>
+<td>讲师演示 + 学员实操 + 点评</td>
+<td>改写练习区填写 + 评分截图</td>
+</tr>
+<tr>
+<td>48–53 min</td>
+<td>课间休息</td>
+<td>播放提示词五要素检查卡，学员可离座</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>53–70 min</td>
+<td>环节三：上下文工程四组件</td>
+<td>讲「资料注入、工具描述、记忆设计、历史对话」：各组件是什么、解决什么产品问题、不做的后果；各配一个产品案例</td>
+<td>讲授 + 案例 + 提问</td>
+<td>四组件笔记表填写</td>
+</tr>
+<tr>
+<td>70–85 min</td>
+<td>环节四：场景选组件 + 自评验收</td>
+<td>3 个业务场景小组判断「需要哪些上下文组件」；随后学员用调试台给本人预习提示词自评并冲刺 4/5</td>
+<td>小组讨论 + 实操自评</td>
+<td>场景选组件表 + 自评记录</td>
+</tr>
+<tr>
+<td>85–90 min</td>
+<td>总结与作业</td>
+<td>三句话收束 + 布置 30 条练习集 + 预告周四产品形态拆解</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2>六、课堂提问设计（7 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「同一条需求，为什么左边的答案像白开水，右边的能直接归档？」</td>
+<td>导入</td>
+<td>左边缺角色、约束、输出格式、示例；五要素决定输出质量的上限</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「提示词开头那句角色设定，是在干什么？」</td>
+<td>角色要素</td>
+<td>设定身份视角与专业度；让模型用「专家的眼睛」看任务</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「约束条件里『不要添加原文没有的信息』这句话值多少分？」</td>
+<td>约束要素</td>
+<td>防幻觉与防跑题；生产环境里约束决定可验收性</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「为什么有了任务描述，还要单独写输出格式？」</td>
+<td>输出格式要素</td>
+<td>格式决定下游能不能用；表格 / JSON 能直接进系统，散文不能</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「示例（few-shot）在提示词里是加分项还是必需品？」</td>
+<td>示例要素</td>
+<td>小任务可省，格式与风格要求严的场景必备；示例是稳定器</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「模型每次对话都失忆，用户会重复自我介绍，产品上怎么解？」</td>
+<td>记忆设计组件</td>
+<td>记忆设计：把用户偏好、历史结论存下来，下次自动带上</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「什么场景下不该做上下文注入？」</td>
+<td>组件选择练习</td>
+<td>注入会挤占上下文窗口、抬高成本；简单任务轻装上阵更快更省</td>
+</tr>
+</tbody>
+</table>
+<h2>七、板书要点</h2>
+<pre><code>提示词五要素：角色 → 任务 → 约束 → 输出格式 → 示例
+口诀：先入戏，再说事，划边界，定格式，给样板
+前四项是骨架，示例是稳定器
+
+评分即验收：调试台五要素评分 ≥4/5 才允许进入 30 条练习集
+
+上下文工程四组件：
+资料注入 —— 解决「模型不知道」（幻觉的对症药）
+工具描述 —— 解决「模型不会用」（函数调用全靠描述写清楚）
+记忆设计 —— 解决「模型总失忆」（用户不用重复交代）
+历史对话 —— 解决「多轮接不上」（截断与摘要的权衡）
+
+面试金句：提示词是需求文档，上下文工程是系统设计。
+</code></pre>
+<h2>八、课堂练习参考答案</h2>
+<h3>练习 1 · 现场改写（差提示词 → 好提示词）</h3>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>提示词全文</th>
+<th>评分</th>
+<th>诊断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>差版</td>
+<td>总结一下</td>
+<td>1/5</td>
+<td>有任务动词「总结」，其余四要素全缺</td>
+</tr>
+<tr>
+<td>改写版</td>
+<td>见下方「五要素完整版」</td>
+<td>5/5</td>
+<td>五要素齐全</td>
+</tr>
+</tbody>
+</table>
+<p>五要素完整版（可直接复制使用）：</p>
+<pre><code>你是一名拥有 10 年经验的企业会议纪要专家，擅长把冗长的会议记录提炼成重点突出、可直接归档的结构化纪要，语言专业、克制，不做主观评价。
+
+请将以下会议记录整理成一份结构化会议纪要：
+
+【会议主题】Q3 产品迭代评审会
+【参与人】产品部、研发部、运营部共 8 人
+【讨论内容】
+1. 张明汇报新版搜索功能进度，因排序算法问题需延期两周；
+2. 李华提出增加暗色模式需求，研发评估需 3 人人日；
+3. 运营部申请 9 月上线开学季活动，需研发支持数据埋点；
+4. 王芳提醒下周三前须提交预算终稿。
+
+约束：只根据原文整理，不要添加原文没有的信息；总篇幅不超过 300 字。
+输出格式：按「会议信息、关键结论、待办事项、风险提示」四个部分输出；待办事项用表格列出，必须包含负责人和截止时间。
+
+参考示例：
+输入：产品部周会，讨论登录接口超时问题，决定由后端老陈周四前修复，前端同步加 loading 态。
+输出：一、会议信息：产品部周会；二、关键结论：登录超时定位为网关配置错误，周四前修复；三、待办事项：后端修复接口（老陈，周四前）、前端增加 loading 态（小周，周五前）；四、风险提示：修复期间可能出现登录失败投诉，需客服提前准备话术。
+</code></pre>
+<h3>练习 2 · 场景选组件（上下文工程四组件）</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>需要的组件</th>
+<th>判断理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>客服机器人回答公司售后政策</td>
+<td>资料注入 + 历史对话</td>
+<td>政策文档必须注入（防编造）；多轮要接得上订单上下文；记忆与工具按需</td>
+</tr>
+<tr>
+<td>差旅助手帮用户订机票酒店</td>
+<td>工具描述 + 记忆设计 + 历史对话</td>
+<td>必须会调用订票工具；记住用户常用舱位与预算；同一次行程多轮不改口</td>
+</tr>
+<tr>
+<td>一次性文案润色（无用户系统）</td>
+<td>资料注入即可</td>
+<td>单轮任务，轻装上阵；做记忆反而浪费成本</td>
+</tr>
+</tbody>
+</table>
+<h2>九、学员易错点预判与应对</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把提示词当「咒语」，迷信玄学写法</td>
+<td>群里转发「神级提示词」，认为加了魔法词效果就好</td>
+<td>用调试台 A/B 现场证伪：删掉约束前后评分与输出差异一目了然；强调提示词是工程不是玄学</td>
+</tr>
+<tr>
+<td>五要素写成流水账，没有可验收标准</td>
+<td>每条都写「请好好总结」</td>
+<td>拿「不要添加原文没有的信息」「不超过 300 字」当样板，让学员照句式仿写</td>
+</tr>
+<tr>
+<td>认为提示词越长越好</td>
+<td>把整份文档塞进提示词，评分却不高</td>
+<td>演示「堆长度 ≠ 补要素」：评的是五类要素是否到位，不是字数；回扣上下文窗口与成本</td>
+</tr>
+<tr>
+<td>把上下文工程理解成「提示词加长版」</td>
+<td>说「上下文工程就是写更长的提示词」</td>
+<td>用四组件对照表纠偏：资料注入 / 工具描述 / 记忆设计 / 历史对话，三个半在提示词之外，是系统级设计</td>
+</tr>
+<tr>
+<td>演示时冷场不敢点名</td>
+<td>讲师自问自答，学员低头</td>
+<td>严格执行防冷场话术库：先降低作答成本（「举手就行，不用站起来」），再收敛问题（二选一）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

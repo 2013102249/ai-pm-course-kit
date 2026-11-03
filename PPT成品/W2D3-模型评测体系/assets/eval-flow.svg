@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker>
+<marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7C3AED"/></marker>
+<marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker>
+</defs>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">评测流程示意图</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">五步闭环 · 评测集是活的资产，每转一圈增值一分</text>
+<!-- 闭环弧：⑤ → ① -->
+<path d="M 1059.5,226 C 1059.5,108 140.5,108 140.5,226" fill="none" stroke="#7C3AED" stroke-width="2" marker-end="url(#arrP)"/>
+<text x="600" y="116" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">评测集是活的资产，每转一圈增值一分</text>
+<!-- 主流程箭头 -->
+<line x1="227" y1="295" x2="259" y2="295" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="460" y1="295" x2="492" y2="295" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="693" y1="295" x2="725" y2="295" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="926" y1="295" x2="958" y2="295" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<!-- 节点① 建集 -->
+<rect x="30" y="230" width="195" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="127.5" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#7C3AED">① 建集</text>
+<text x="127.5" y="294" text-anchor="middle" font-size="10.5" fill="#4A4560">定维度 3–8 个，写用例 50 条</text>
+<text x="127.5" y="311" text-anchor="middle" font-size="10.5" fill="#4A4560">正例 / 负例 / 边界 = 6:2:2</text>
+<!-- 节点② 跑分 -->
+<rect x="263" y="230" width="195" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="360.5" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#7C3AED">② 跑分</text>
+<text x="360.5" y="294" text-anchor="middle" font-size="10.5" fill="#4A4560">逐维 1–5 星打分</text>
+<text x="360.5" y="311" text-anchor="middle" font-size="10.5" fill="#4A4560">通过＝各维 ≥4 分</text>
+<text x="360.5" y="328" text-anchor="middle" font-size="10.5" fill="#4A4560">且非 badcase</text>
+<!-- 节点③ 归因 -->
+<rect x="496" y="230" width="195" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="593.5" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#7C3AED">③ 归因</text>
+<text x="593.5" y="294" text-anchor="middle" font-size="10.5" fill="#4A4560">四类：提示词、模型能力、</text>
+<text x="593.5" y="311" text-anchor="middle" font-size="10.5" fill="#4A4560">资料、需求</text>
+<text x="593.5" y="328" text-anchor="middle" font-size="10.5" fill="#4A4560">现象→假设→验证</text>
+<!-- 节点④ 修复 -->
+<rect x="729" y="230" width="195" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="826.5" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#7C3AED">④ 修复</text>
+<text x="826.5" y="294" text-anchor="middle" font-size="10.5" fill="#4A4560">改提示词、补资料、</text>
+<text x="826.5" y="311" text-anchor="middle" font-size="10.5" fill="#4A4560">换模型、调需求</text>
+<text x="826.5" y="328" text-anchor="middle" font-size="10.5" fill="#4A4560">先查便宜的再查贵的</text>
+<!-- 节点⑤ 回归 -->
+<rect x="962" y="230" width="195" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="1059.5" y="266" text-anchor="middle" font-size="20" font-weight="700" fill="#7C3AED">⑤ 回归</text>
+<text x="1059.5" y="294" text-anchor="middle" font-size="10.5" fill="#4A4560">重跑评测集 + 周边 case</text>
+<text x="1059.5" y="311" text-anchor="middle" font-size="10.5" fill="#4A4560">badcase 回流入集</text>
+<text x="1059.5" y="328" text-anchor="middle" font-size="10.5" fill="#4A4560">升版本号</text>
+<!-- badcase 回流分支 -->
+<path d="M 1059.5,364 C 1059.5,445 140.5,445 140.5,364" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrR)"/>
+<text x="600" y="438" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">badcase 回流</text>
+<!-- 底部口诀与指标卡 -->
+<text x="40" y="560" font-size="12" fill="#6B7280">口诀：建集是写题 · 跑分是考试 · 归因是破案 · 修复是治病 · 回归是复查</text>
+<rect x="640" y="520" width="520" height="84" rx="12" fill="#2563EB"/>
+<text x="900" y="552" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">两条行业警戒线</text>
+<text x="900" y="580" text-anchor="middle" font-size="14" fill="#FFFFFF">badcase 率 ≤ 30% ｜ 通过率 ≥ 80% 再灰度</text>
+</svg>

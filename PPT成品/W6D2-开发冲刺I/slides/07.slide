@@ -1,0 +1,31 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, flexDirection: 'column' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D2</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>07 / 8</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>Blockers 清算（80–90 分钟切回）</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ width: '100%', flexDirection: 'column', gap: 26, marginTop: 36 }}>
+    <Box style={{ width: '100%', background: '#F5F3FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', gap: 22, paddingTop: 26, paddingBottom: 26, paddingLeft: 28, paddingRight: 28 }}>
+      <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+      </Box>
+      <Text style={{ fontSize: 22, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>已跑通</span>：现场演示</Text>
+    </Box>
+    <Box style={{ width: '100%', background: '#EFF6FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', gap: 22, paddingTop: 26, paddingBottom: 26, paddingLeft: 28, paddingRight: 28 }}>
+      <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+      </Box>
+      <Text style={{ fontSize: 22, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>未跑通</span>：指定责任人 + 今晚 <span style={{ fontWeight: 'bold', color: '#2563EB' }}>21:00</span> 复查</Text>
+    </Box>
+    <Box style={{ width: '100%', background: '#F5F3FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', gap: 22, paddingTop: 26, paddingBottom: 26, paddingLeft: 28, paddingRight: 28 }}>
+      <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+      </Box>
+      <Text style={{ fontSize: 22, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>明日预告</span>：<span style={{ fontWeight: 'bold', color: '#2563EB' }}>W6D3 开发冲刺 II</span></Text>
+    </Box>
+  </Box>
+</Slide>

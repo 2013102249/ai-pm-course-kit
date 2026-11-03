@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, flexDirection: 'column' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D2</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>02 / 8</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天只做一件事：跑通核心链路</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ flexDirection: 'row', gap: 32, marginTop: 28 }}>
+    <Box style={{ width: 690, height: 414 }}>
+      <Image src="assets/core-checklist.svg" style={{ width: 690, height: 414, borderRadius: 10, border: '1px solid #E5E7EB' }} />
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 22 }}>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: 20 }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>今天的事：一条链路</Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', marginTop: 10 }}>输入 → 处理 → 输出</Text>
+      </Box>
+      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: 20 }}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>不属于今天的事</Text>
+        <Box style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginTop: 12 }}>
+          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
+            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>样式</Text>
+          </Box>
+          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
+            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>登录</Text>
+          </Box>
+          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
+            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>支付</Text>
+          </Box>
+          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
+            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>历史记录</Text>
+          </Box>
+        </Box>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>先跑通，再完美</Text>
+    </Box>
+  </Box>
+</Slide>

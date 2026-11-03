@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W2 周一《模型能力边界与选型方法论》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl cur" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W2-物料/W2D1-模型能力边界与选型 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W2 周一《模型能力边界与选型方法论》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第二周第一天 · 90 分钟（2 课时）· 讲师版</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段一 · 认知筑基（Week 2）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>模型能力边界与选型方法论</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，中间不设休息，实验环节即活跃节奏）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>转行 / 进阶层学员（W1 已完成职业定位、技术通识、提示词、产品形态、选赛道）</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>W1D2 大模型原理通识（预训练 / 上下文窗口 / token 概念）、W1D3 提示词五要素、W1D4 产品形态拆解</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>《模型选型决策树》填写稿 + 同任务 3 模型对比实验记录 + 主项目模型初选卡</td>
+</tr>
+<tr>
+<td>下游衔接</td>
+<td>W2 周五主项目立项：本课选型结论直接写入立项报告「技术可行性评估」一节</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏 + 现场可联网访问各模型官方对话产品</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能用「能力-成本-延迟」三角，对给定业务场景从三类模型（通用旗舰 / 轻量快速 / 推理增强）中做出初选，并说出至少两条权衡理由（对应课堂决策树填写 + 分层习题基础层）。</li>
+<li>能现场完成「同一组任务 × 3 类模型」对比实验，按「正确性 / 响应速度 / 消耗 / 失败方式」四个维度如实记录结果，并归纳出至少一条自己验证的结论（对应导学案模型对比记录表 + 课后实验记录作业）。</li>
+<li>能用选型决策树为自己的主项目完成模型初选，产出「首选模型 + 两条理由 + 一个备选方案」，直接用于 W2 周五立项报告（对应导学案主项目选型初选卡）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点一</strong>：能力-成本-延迟三角——学员必须建立「选型是三维权衡，不是单向比强弱」的产品视角。</li>
+<li><strong>重点二</strong>：选型决策树——五问顺序不可乱，先场景后模型，先「够用」后「更强」。</li>
+<li><strong>难点一</strong>：学员容易「唯榜单论」，把跑分排名当选型依据。应对：用现场实验让学员亲手验证「榜单第一不等于你的场景最优」。</li>
+<li><strong>难点二</strong>：成本与延迟意识缺失。学员默认「选最聪明的准没错」。应对：用「10 倍调用量」的成本放大提问，让学员自己算出后果；价格一律用「以官网实时价格为准」口径，教方法不背数字。</li>
+<li><strong>难点三</strong>：模型信息动态变化，学员容易把本课的横评结论当永久事实。应对：反复强调「横评表会过期，方法不会」，教的判断框架可长期复用。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 原理架构图</td>
+<td>定位图：开课回扣 W1D2，说明「模型能力差异从哪来」</td>
+<td>03-配图素材/LLM原理架构图.svg</td>
+</tr>
+<tr>
+<td>模型横评表</td>
+<td>环节一主流模型客观定位</td>
+<td>本课自制，规格见 05-配图清单</td>
+</tr>
+<tr>
+<td>能力-成本-延迟三角图</td>
+<td>环节二讲解</td>
+<td>本课自制，见 05-配图清单</td>
+</tr>
+<tr>
+<td>选型决策树图</td>
+<td>环节四讲解与板书母版</td>
+<td>本课自制，见 05-配图清单</td>
+</tr>
+<tr>
+<td>各模型官方对话产品（网页版）</td>
+<td>环节三现场对比实验，课前须逐一登录验证</td>
+<td>组织方案见 07-交互使用说明</td>
+</tr>
+<tr>
+<td>导学案</td>
+<td>学员课上填写对比记录表与决策树</td>
+<td>03-导学案</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8 min</td>
+<td>导入：同一个问题，两个答案</td>
+<td>投屏现场用两个不同档位的模型问同一个真实问题（如写一条请假条），把两条回答并排；提问「如果你是老板，给哪个发工资」</td>
+<td>现场演示 + 提问</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–20 min</td>
+<td>环节一：能力边界地图与主流模型横评</td>
+<td>用 LLM 原理架构图定位「能力差异从哪来」；模型横评表讲六家模型客观定位；能力六维度：通用对话、复杂推理、长文本、多模态、代码、中文场景；强调信息时效性</td>
+<td>讲授 + 图示 + 提问</td>
+<td>导学案横评笔记</td>
+</tr>
+<tr>
+<td>20–32 min</td>
+<td>环节二：能力-成本-延迟三角</td>
+<td>三角讲解设计见第六节；三个「三问」收束为选型第一原则</td>
+<td>讲授 + 板书</td>
+<td>导学案三角笔记</td>
+</tr>
+<tr>
+<td>32–62 min</td>
+<td>环节三：现场对比实验（核心）</td>
+<td>同一组任务 × 3 类模型（通用旗舰 / 轻量快速 / 推理增强），任务包与组织方案见 07-交互使用说明；学员按四维度记录</td>
+<td>现场演示 + 秒表计时 + 学员同步记录</td>
+<td>模型对比记录表</td>
+</tr>
+<tr>
+<td>62–75 min</td>
+<td>环节四：选型决策树</td>
+<td>五问决策树逐层讲解：场景类型 → 质量要求 → 延迟容忍 → 预算约束 → 合规与部署；什么时候用小模型、什么时候上推理增强</td>
+<td>讲授 + 板书</td>
+<td>决策树框架笔记</td>
+</tr>
+<tr>
+<td>75–85 min</td>
+<td>环节五：主项目选型练习</td>
+<td>学员用决策树为自己的主项目做模型初选（首选 + 理由 + 备选），2 人互查后点名分享</td>
+<td>个人填写 + 互查 + 点评</td>
+<td>主项目选型初选卡</td>
+</tr>
+<tr>
+<td>85–90 min</td>
+<td>总结与作业</td>
+<td>金句收束 + 布置作业（补全实验记录 + 初选卡带入周五立项）+ 预告 W2D2 微调原理</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>时间合计：8 + 12 + 12 + 30 + 13 + 10 + 5 = 90 分钟。</p>
+<h2>六、「能力-成本-延迟」三角讲解设计（重点环节教学设计）</h2>
+<p><strong>讲解目标</strong>：让学员离开教室时能脱口而出「选型不是选最强，是三维权衡」。</p>
+<p><strong>讲解顺序（先建立冲突，再给框架）</strong>：</p>
+<ol>
+<li><strong>先给一个单维判断题制造冲突</strong>：「模型 A 能力最强、模型 B 便宜三倍、模型 C 快三倍，你的产品该选谁？」让学员发现——这个问题没法回答，因为缺了场景。由此引出：能力、成本、延迟三个角，缺一个角都没法做决策。</li>
+<li><strong>逐角讲解（每角配一个产品经理视角的追问）</strong>：</li>
+<li><strong>能力角</strong>：不是「哪家最强」，是「这个场景需要的最低能力线在哪」。低于这条线的产品不合格，高于这条线的部分要花真金白银买。追问：「能力线以上多出来的聪明，用户愿意付钱吗？」</li>
+<li><strong>成本角</strong>：三类成本——调用成本（按 token 计费，以各官网实时价格为准）、接入与运维成本、切换成本。追问：「如果你的产品日调用 1 万次和 100 万次，同样的单价意味着什么？」</li>
+<li><strong>延迟角</strong>：用户体感。对话类产品超过数秒用户就开始流失，批处理类产品可以等。追问：「你的场景里，用户等 10 秒会发生什么？」</li>
+<li><strong>三角的用法（板书收束）</strong>：先按场景定「能力线」，再在能力线之上的模型里比「成本 × 延迟」，最后用合规与部署做一票否决。<strong>顺序不可反</strong>——先看便宜再补能力，是新手最常见的返工原因。</li>
+<li><strong>即时检验</strong>：给两个概括场景（离线批量摘要 / 在线实时客服），让学员口头用三角说一遍初选逻辑，确认全班掌握后再进对比实验。</li>
+</ol>
+<h2>七、选型决策树教学设计（重点环节教学设计）</h2>
+<p><strong>决策树五问（板书与导学案一致）</strong>：</p>
+<pre><code>第 1 问：任务类型是什么？（问答摘要 / 创意生成 / 多步推理 / 结构化抽取）
+第 2 问：质量底线在哪？（错了的代价：可接受 / 需人工兜底 / 不可接受）
+第 3 问：延迟容忍多少？（实时对话 / 几秒可等 / 离线批处理）
+第 4 问：预算与调用量？（日均量级 × 官网实时单价估算）
+第 5 问：合规与部署约束？（数据是否可出域 / 是否要求国产与备案 / 私有化需求）
+</code></pre>
+<p><strong>教学设计要点</strong>：</p>
+<ol>
+<li><strong>先错后对</strong>：先给一个「反例决策」——某团队所有场景无脑上最强模型，成本失控后被迫全线降级重测。让学员指出错在哪一问没问。</li>
+<li><strong>五问顺序即板书顺序</strong>：强调第 1、2 问定「能力线」，第 3、4 问定「档位」，第 5 问是「一票否决」，与三角讲解的顺序互相印证。</li>
+<li><strong>小模型专属强调</strong>：在第 2 问分支上重点讲「什么时候用小模型」——任务简单且量大、失败可兜底、需要极速响应时，小模型是正解不是妥协。</li>
+<li><strong>课堂落地</strong>：环节五学员把五问逐条套自己的主项目，产出写在导学案初选卡上；讲师巡视时只追问「你的第 5 问答案是什么」，用合规问倒逼真实思考。</li>
+</ol>
+<h2>八、课堂提问设计（7 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「同一个问题，两个模型的回答差这么多，如果你是老板，你给哪个发工资？为什么？」</td>
+<td>导入</td>
+<td>引出分歧点：回答好的可能更贵更慢；发工资的标准不是「好」而是「够用且划算」——自然过渡到选型方法论</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「同样是 pretrain 出来的模型，为什么能力差别这么大？」</td>
+<td>环节一</td>
+<td>训练数据、规模、对齐与后训练策略不同；回扣 W1D2「超级接话员」类比——不同接话员读过的书和训练方式不同</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「海外模型与国产模型，在国内做产品时真正拉开差距的是什么维度？」</td>
+<td>环节一</td>
+<td>不只是能力，还有合规备案、国内访问与接入便利、中文场景适配、私有化部署支持；能力之外的因素常是决定项</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「你的产品日调用量涨 100 倍，你还敢用最贵的模型吗？」</td>
+<td>环节二成本角</td>
+<td>多数场景不敢——成本随调用量线性放大；引出「量大且简单的任务应该交给便宜档位」，以官网实时单价为准现场估一估</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「实验里轻量模型哪个任务掉链子了？掉链子的方式是什么？」</td>
+<td>环节三</td>
+<td>预期：多步推理或带约束任务出错率升高，且错得「理直气壮」（不报错、直接给错答案）；强调「失败方式」比「失败次数」更值得关注</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「推理增强模型回答前先『想』很久，什么场景这个等待花得值？」</td>
+<td>环节三</td>
+<td>数学、逻辑、代码、复杂决策类任务值；闲聊、摘要类任务不值——等待是用户体感的直接损失</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「决策树五问里，哪一问的答案可能直接否决前面四问的所有结论？」</td>
+<td>环节四</td>
+<td>第 5 问合规与部署——数据不能出域时，再强的海外模型也不可选；一票否决项必须最先确认或最后兜底检查</td>
+</tr>
+</tbody>
+</table>
+<h2>九、板书要点</h2>
+<pre><code>选型不是选最强，是选最合适
+
+能力-成本-延迟三角：
+  能力线 = 场景能接受的最低质量
+  成本   = 调用（token，以官网实时价格为准）+ 运维 + 切换
+  延迟   = 用户体感；实时场景以秒计
+
+选型五问（顺序不可乱）：
+  ① 任务类型 ② 质量底线 ③ 延迟容忍 ④ 预算量级 ⑤ 合规部署（一票否决）
+
+三类模型档位：通用旗舰（能力全） / 轻量快速（快且省） / 推理增强（先想后答）
+一句话：先定能力线，再比成本与延迟，最后合规兜底。
+</code></pre>
+<h2>十、课堂练习参考答案（主项目选型练习示例）</h2>
+<p>以概括示例「面向中小商家的智能客服问答产品」为参照（学员按各自项目作答，结构一致即可）：</p>
+<table>
+<thead>
+<tr>
+<th>决策树五问</th>
+<th>示例回答</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 任务类型</td>
+<td>售后政策问答为主，属知识问答与摘要类</td>
+</tr>
+<tr>
+<td>② 质量底线</td>
+<td>答错会引发客诉，需人工兜底机制</td>
+</tr>
+<tr>
+<td>③ 延迟容忍</td>
+<td>在线对话，需秒级响应</td>
+</tr>
+<tr>
+<td>④ 预算量级</td>
+<td>中小商家付费意愿有限，成本敏感，量大</td>
+</tr>
+<tr>
+<td>⑤ 合规部署</td>
+<td>面向国内商家，数据不可随意出域，倾向国产已备案模型</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例结论</strong>：首选国产主流对话模型的标准档位（具体以官网实时信息与自测为准）；备选轻量档处理高频简单问题以压成本；复核项：接入的模型须已完成生成式 AI 服务备案。<strong>给分点</strong>：五问齐全（50%）、结论与五问自洽（30%）、给出备选与复核项（20%）。</p>
+<h2>十一、学员易错点预判与应对</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>唯榜单论</td>
+<td>引用某榜单排名作为选型唯一依据</td>
+<td>现场实验反证：让榜单结论在自己的任务上失效一次；强调榜单是通用能力参考，不是你的场景评测</td>
+</tr>
+<tr>
+<td>只看能力不看成本与延迟</td>
+<td>方案里永远写「接入最强模型」</td>
+<td>用「调用量 × 100」提问逼学员算账；作业要求初选卡必须含成本估算框架（以官网实时价格为准）</td>
+</tr>
+<tr>
+<td>把本课横评结论当永久事实</td>
+<td>一周后引用「课上说某模型更强」</td>
+<td>每次提到横评表都补一句「以官网实时信息为准」；教方法不教死结论</td>
+</tr>
+<tr>
+<td>忽略合规一票否决</td>
+<td>初选卡直接写海外旗舰模型，不谈数据出域</td>
+<td>巡视时只问第 5 问；结合 W2 周四合规课预告——备案与数据出域将决定主项目的模型池</td>
+</tr>
+<tr>
+<td>认为换模型是零成本</td>
+<td>说「先随便选一个，不好再换」</td>
+<td>讲清切换成本：提示词重调、输出格式回归测试、评测集重跑；预告 W2D3 评测集正是「敢换模型」的底气</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

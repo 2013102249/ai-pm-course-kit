@@ -1,0 +1,73 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>11 / 20</Text>
+    <Box style={{ marginBottom: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>形态三：知识库问答</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24, background: '#F5F3FF', borderRadius: 12, padding: '16px 24px', marginBottom: 16 }}>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>
+            <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>定义：</span>把文档组织进知识库，先检索、再生成，回答有据可依
+        </Text>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#4C1D95' }}>答案必须带出处</Text>
+    </Box>
+    <Table
+        style={{ width: 1160, height: 396 }}
+        defaultTextStyle={{ fontSize: 16, color: '#64748B', textAlign: 'left' }}
+        defaultCellStyle={{
+            border: {
+                left: { width: 1, color: '#E8E5F1' },
+                right: { width: 1, color: '#E8E5F1' },
+                top: { width: 1, color: '#E8E5F1' },
+                bottom: { width: 1, color: '#E8E5F1' },
+            },
+        }}
+        cells={[
+            [
+                { text: '形态', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                { text: '判别特征', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                { text: '标杆产品', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                { text: '商业模式', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+            ],
+            [
+                { text: '对话式助手' },
+                { text: '人问一句，AI 答一句' },
+                { text: '豆包 / Kimi / DeepSeek' },
+                { text: '免费获客 + 会员订阅 + 生态导流' },
+            ],
+            [
+                { text: '工作流编排' },
+                { text: '人画流程，AI 按节点跑' },
+                { text: '扣子（Coze）' },
+                { text: '平台订阅 / 按量计费 + 开发者生态' },
+            ],
+            [
+                { text: '知识库问答', textStyle: { bold: true, color: '#5B21B6', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' }, border: { top: { width: 2, color: '#7C3AED' }, bottom: { width: 2, color: '#7C3AED' }, left: { width: 1, color: '#E8E5F1' }, right: { width: 1, color: '#E8E5F1' } } } },
+                { text: '答案必须带出处', textStyle: { bold: true, color: '#5B21B6', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' }, border: { top: { width: 2, color: '#7C3AED' }, bottom: { width: 2, color: '#7C3AED' }, left: { width: 1, color: '#E8E5F1' }, right: { width: 1, color: '#E8E5F1' } } } },
+                { text: 'ima', textStyle: { bold: true, color: '#5B21B6', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' }, border: { top: { width: 2, color: '#7C3AED' }, bottom: { width: 2, color: '#7C3AED' }, left: { width: 1, color: '#E8E5F1' }, right: { width: 1, color: '#E8E5F1' } } } },
+                { text: '订阅 / 席位收费 + 企业按量', textStyle: { bold: true, color: '#5B21B6', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' }, border: { top: { width: 2, color: '#7C3AED' }, bottom: { width: 2, color: '#7C3AED' }, left: { width: 1, color: '#E8E5F1' }, right: { width: 1, color: '#E8E5F1' } } } },
+            ],
+            [
+                { text: '多模态生成' },
+                { text: '一次生成，一次付费' },
+                { text: '即梦' },
+                { text: '积分 / 按生成量计费 + 订阅' },
+            ],
+            [
+                { text: 'Copilot 副驾' },
+                { text: '人主导，AI 建议' },
+                { text: '钉钉 AI 助理' },
+                { text: '按席位订阅，随宿主分发' },
+            ],
+            [
+                { text: '自主 Agent' },
+                { text: '人给目标，AI 走完全程' },
+                { text: 'Manus' },
+                { text: '订阅 + 按任务 / 积分计费' },
+            ],
+        ]}
+    />
+</Slide>

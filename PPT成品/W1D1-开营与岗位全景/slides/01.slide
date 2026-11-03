@@ -1,0 +1,17 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)' }}>
+    <Image
+        src="assets/capability-profile.svg"
+        style={{ position: 'absolute', right: 60, top: 200, width: 460, height: 267, borderRadius: 12, opacity: 0.92 }}
+    />
+    <Box style={{ width: 620, height: '100%', justifyContent: 'center', gap: 18 }}>
+        <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>AI 产品经理实战训练营</Text>
+        <Text style={{ fontSize: 60, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25 }}>
+            开营 + AI 产品经理
+            <br />
+            岗位全景
+        </Text>
+        <Box style={{ width: 72, height: 4, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+        <Text style={{ fontSize: 24, color: '#FFFFFF', opacity: 0.85 }}>W1 周一 · 90 分钟</Text>
+        <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.7, marginTop: 40 }}>讲师：张小培</Text>
+    </Box>
+</Slide>

@@ -1,0 +1,23 @@
+<Slide style={{ position: 'relative', width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 32, right: 60, fontSize: 14, color: '#64748B' }}>07 / 16</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>要素① 假设：可证伪</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+  <Box style={{ flexDirection: 'column', flex: 1, marginTop: 28, gap: 22 }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 36, justifyContent: 'center' }}>
+      <Text style={{ fontSize: 28, color: '#1E1B4B', lineHeight: 1.9 }}>
+        因为<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>【洞察】</span>，我们相信<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>【改动】</span>，
+        会让<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>【用户】</span>的<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>【指标】</span>提升<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>【幅度】</span>
+      </Text>
+    </Box>
+    <Box style={{ border: '1px solid #E5E7EB', borderRadius: 12, background: '#FFFFFF', padding: 24, flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+      <Box style={{ width: 36, height: 36, background: '#7C3AED', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>？</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>「打脸时我承认什么」——答不上来，就不是可证伪的假设</Text>
+    </Box>
+  </Box>
+</Slide>

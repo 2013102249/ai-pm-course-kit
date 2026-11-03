@@ -1,0 +1,17 @@
+<Slide style={{ width: 1280, height: 720, padding: 80, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', justifyContent: 'center' }}>
+  <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', letterSpacing: 4, marginBottom: 48 }}>本课小结 · 跟读三句话</Text>
+  <Box style={{ gap: 32 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.6)' }}>01</Text>
+      <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF' }}>五步循环划边界</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.6)' }}>02</Text>
+      <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF' }}>一主两辅</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.6)' }}>03</Text>
+      <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF' }}>规矩先行</Text>
+    </Box>
+  </Box>
+</Slide>

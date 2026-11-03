@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W1 周三《提示词与上下文工程》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl cur" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料/W1D3-提示词与上下文工程 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W1 周三《提示词与上下文工程》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业；求职挑战层自测，第八周面试课复用。<br />
+所有题目附参考答案与评分标准。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、提示词找茬题（每题 10 分，共 40 分）</h3>
+<p><strong>1. 下面这条提示词缺了哪些五要素？（找出至少 3 项，写出缺失项名称与补法）</strong></p>
+<blockquote>
+<p>你是一名资深HR。</p>
+</blockquote>
+<p><strong>2. 下面这条提示词缺了哪些五要素？（找出至少 3 项，写出缺失项名称与补法）</strong></p>
+<blockquote>
+<p>请分析这份用户反馈，写清楚你的分析，注意质量。</p>
+</blockquote>
+<p><strong>3. 下面这条提示词有一处「写了等于没写」的约束，请指出并改写。</strong></p>
+<blockquote>
+<p>帮我写一篇公众号文章，要求文笔好一些，不要太长，别写差的内容。</p>
+</blockquote>
+<p><strong>4. 下面这条提示词的输出格式为什么不可用？请改到字段级。</strong></p>
+<blockquote>
+<p>把会议内容整理成表格。</p>
+</blockquote>
+<h3>二、五要素识别题（每题 10 分，共 40 分）</h3>
+<p><strong>5. 「你是一名拥有 8 年经验的跨境电商运营专家，熟悉亚马逊平台规则与广告投放」——这句话属于哪个要素？删掉它，输出最可能发生什么变化？</strong></p>
+<p><strong>6. 「只根据以下材料回答，材料中没有的信息一律回答『未提及』；回答不超过 200 字」——这句话属于哪个要素？它主要防住哪两类输出事故？</strong></p>
+<p><strong>7. 「参考示例：输入：本周完成知识库文档整理 30 篇。输出：交付类——完成客服知识库 30 篇文档整理。」——这句话属于哪个要素？它在什么场景下可以省略？</strong></p>
+<p><strong>8. 将下列五句话按五要素归类（每句只归一类）：</strong></p>
+<p>A. 「请将以下客户消息分类到指定意图类别，并给出置信度和判断理由」<br />
+B. 「你是一名电商平台客服中心的意图分类专家，判断准确、口径一致」<br />
+C. 「只能从上述类别中选择，不得自造类别；置信度低于 0.6 时归入『其他』」<br />
+D. 「输出 JSON，包含 intent、confidence、reason 三个字段，不要输出多余文字」<br />
+E. 「输入：『订单 123456 到哪了？三天了还没有物流更新。』输出：{\"intent\": \"物流查询\", \"confidence\": 0.98}」</p>
+<h3>三、上下文工程速答（每题 10 分，共 20 分）</h3>
+<p><strong>9. 写出上下文工程四组件的名称，并各用一句话说明它解决什么产品问题。</strong></p>
+<p><strong>10. 判断：以下场景分别最需要哪个组件？（每题选一个）</strong></p>
+<p>A. 用户问「你们公司年假几天」，模型回答「一般公司年假 5 到 15 天不等」<br />
+B. 用户上周说过「我住在浦东」，这周助手推荐会议地点时又问了一遍「您住哪」<br />
+C. 用户说「帮我订明天去北京的票」，模型回复「我无法订票」<br />
+D. 用户连问五个跟进问题，模型在第三个问题后开始答非所问</p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>11. 低分提示词改造（50 分）</strong></p>
+<p>你接手一个同事写的提示词，调试台评分 1/5：</p>
+<blockquote>
+<p>帮我看看这个数据。</p>
+</blockquote>
+<p>已知业务背景：运营同事每周要把一份销售明细（Excel 粘贴的纯文本，含日期、渠道、订单数、成交额四列）变成一份给部门总监的摘要，总监关心三件事——哪个渠道在涨、哪个在跌、有没有异常波动。</p>
+<p>请按五要素重写这条提示词，要求：<br />
+1. 五要素齐全，全文可直接复制使用；<br />
+2. 至少两条可验收的约束；<br />
+3. 输出格式定到字段级；<br />
+4. 附一个输入输出示例；<br />
+5. 说明你每一项的设计理由（每条理由一句话）。</p>
+<p><strong>12. 上下文工程方案设计（50 分）</strong></p>
+<p>你负责一款面向中小电商卖家的「经营参谋」AI 助手，已上线三个月，出现四个投诉：</p>
+<ul>
+<li>投诉 1：「我问它上周店铺退货率，它给了一个行业平均数字，根本不是我的」；</li>
+<li>投诉 2：「让它算一下投产比，它心算，还算错了」；</li>
+<li>投诉 3：「我每次都要重新说一遍我卖的是童装」；</li>
+<li>投诉 4：「聊到第五轮，它把我前面定的活动预算忘了」。</li>
+</ul>
+<p>请为每个投诉匹配对应的上下文工程组件，并给出你的设计动作（每个组件：配什么、怎么配、注意什么边界）。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>13. 面试真题：提示词调了三天还不稳定，怎么办？（30 分）</strong></p>
+<p>面试官：「我们做一个合同抽取功能，提示词团队改了三天，抽取准确率还是波动很大，你会怎么处理？先提示词还是先微调？」</p>
+<p>要求：先给结论，再按优先级给排查步骤，最后补一个「显专业」的补充观点。</p>
+<p><strong>14. 面试真题：说说你对上下文工程的理解（30 分）</strong></p>
+<p>面试官：「现在都在说上下文工程，和提示词工程什么关系？你做过哪些上下文层面的设计？」</p>
+<p>要求：一句话说清两者关系；四组件至少展开两个，各配一个你做过的设计细节；收在一个金句上。</p>
+<p><strong>15. 案例题：同样的提示词，两个同事跑出两个结果（40 分）</strong></p>
+<p>团队里两位同事用同一条提示词处理同一批客户反馈，A 的产出被运营直接采用，B 的产出被打回重做。排查发现：两人的提示词原文确实一致，但 A 额外做了三件事。请列出你认为最可能的三件事，并说明每件事为什么影响产出。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>缺任务、约束、输出格式、示例</td>
+<td>每指出一项 2 分（最多 6 分）+ 补法合理 4 分；只答「缺约束」得 4 分</td>
+</tr>
+<tr>
+<td>2</td>
+<td>缺角色、约束（现有约束不可验收）、输出格式、示例</td>
+<td>每指出一项 2 分（最多 6 分）+ 补法合理 4 分；能说出「写清楚你的分析」是无效约束加分</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「文笔好一些」「别写差的内容」不可验收</td>
+<td>指出无效约束 4 分；改写出可验收约束（如「口语化，每段不超过 80 字」「不得使用『最』『第一』等绝对化用语」）6 分</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「表格」未定义字段，下游无法解析</td>
+<td>指出问题 4 分；改到字段级（如「Markdown 表格，字段依次为议题、结论、负责人、截止时间」）6 分</td>
+</tr>
+<tr>
+<td>5</td>
+<td>角色设定</td>
+<td>归属 4 分；删掉后输出退化为通用平均水准、失去运营专业视角 6 分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>约束条件</td>
+<td>归属 4 分；防编造（幻觉）与防跑题/超长 6 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>示例</td>
+<td>归属 4 分；格式简单、模型常见任务可省；格式与风格要求严时必备 6 分</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A 任务、B 角色、C 约束、D 输出格式、E 示例</td>
+<td>每个 2 分</td>
+</tr>
+<tr>
+<td>9</td>
+<td>资料注入（模型不知道）、工具描述（模型不会用）、记忆设计（模型总失忆）、历史对话（多轮接不上）</td>
+<td>名称每项 1.5 分 + 问题说明 1 分</td>
+</tr>
+<tr>
+<td>10</td>
+<td>A 资料注入、B 记忆设计、C 工具描述、D 历史对话</td>
+<td>每个 5 分</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 11 题参考答案</strong>（要点，学员表述不同不扣分）：</p>
+<ul>
+<li>角色：拥有 8 年经验的电商数据分析师，擅长渠道对比与异动归因，输出务实、结论先行；</li>
+<li>任务：请将以下销售明细整理成一份给部门总监的周度摘要，输入为粘贴的四列纯文本（日期、渠道、订单数、成交额）；</li>
+<li>约束：只根据给定数据计算，不得引用外部数据；不得推测数据之外的原因；总篇幅不超过 400 字；数据缺失的渠道标注「本周无数据」；</li>
+<li>输出格式：按「核心结论、渠道涨跌对比、异常波动提示」三部分输出；渠道对比用表格，字段为渠道、订单数、成交额、环比变化；</li>
+<li>示例：输入三行模拟明细，输出一段对应格式的摘要；</li>
+<li>设计理由逐项对应「可验收、防编造、下游可用、照着画」。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>五要素基本齐全，约束与格式达到「可验收」底线，全文可复制</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>约束覆盖防编造与数据缺失两类异常；格式到字段级；示例格式与正文一致</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外体现业务理解：如按总监阅读顺序组织输出、环比口径定义、异常判定阈值，或说明温度参数建议</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 12 题参考答案</strong>：投诉 1 → 资料注入（接入店铺数据，回答前检索本人数据，禁止用行业均值冒充）；投诉 2 → 工具描述（接入计算器或代码执行工具，写清调用时机与参数，禁用模型心算）；投诉 3 → 记忆设计（将「经营类目：童装」写入用户档案，注入时自动带上，并提供删除入口）；投诉 4 → 历史对话（近几轮原文 + 更早轮次摘要的混合策略，关键参数如预算单独存档）。边界：每个组件都要评估成本收益，记忆项要可查看可删除。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>四个投诉与组件匹配正确，各给出基本设计动作</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>设计动作具体到「配什么、怎么配」；提到至少一个边界（隐私删除或成本）</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外给出组件优先级排序与上线节奏，或指出「资料注入 + 工具」应先行、记忆可后置的收益论证</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 13 题参考答案</strong>：结论=先穷尽提示词，再考虑微调，且微调前先上结构化输出与校验。排查优先级：① 检查五要素——约束是否可验收、是否有示例；② 统一输入格式与字段定义；③ 加输出校验层（JSON schema / 正则）兜底；④ 建 20–50 条评测集，用 badcase 定位是理解问题还是格式问题；⑤ 确实需改变模型「行为」且提示词不稳定时再微调。专业补充：「大多数准确率问题，一半是提示词问题，一半是数据问题——先看评测集再动模型。」</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>结论正确（先提示词后微调），给出 2–3 条排查步骤</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>步骤成体系（要素检查 → 校验层 → 评测集），有先后逻辑</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>补上「badcase 归因」或「数据质量也是主因」视角，或提到校验层兜底的具体做法</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 14 题参考答案</strong>：关系——提示词工程是「写好这一次指令」，上下文工程是「设计喂给模型的一切」，前者是后者的一个组件。展开两个：资料注入（做过 X：政策文档检索后拼入提示词，引用标号）；工具描述（做过 X：重写 N 个工具描述后误调率从 30% 降到 10%）。收束金句：提示词是需求文档，上下文工程是系统设计。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>一句话关系说清，四组件能列举，展开至少一个</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>展开两个以上且各带设计细节（数据、动作、结果）</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>细节含数字结果；收尾金句自然；能主动比较「做与不做」的收益</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 15 题参考答案</strong>（三件事，言之成理即可）：① A 先清洗/规整了输入（统一分隔符、去噪、补缺失列），输入质量决定输出上限；② A 固定了参数与版本（temperature 调低、记录模型版本与提示词版本），保证结果可复现；③ A 建了小评测集或人工抽检，按 badcase 迭代过提示词——产出差异不来自运气，来自验收闭环。其他合理答案（如 A 补充了五要素中的示例、A 做了输入长度控制）同等给分。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（24–31 分）</td>
+<td>三条原因基本合理，与「提示词一致但产出不同」的现象自洽</td>
+</tr>
+<tr>
+<td>良好（32–35 分）</td>
+<td>原因覆盖「输入质量、参数与版本、验收闭环」中的两类且解释具体</td>
+</tr>
+<tr>
+<td>优秀（36–40 分）</td>
+<td>三条均有动作层细节（怎么做、看什么指标），体现工程习惯</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

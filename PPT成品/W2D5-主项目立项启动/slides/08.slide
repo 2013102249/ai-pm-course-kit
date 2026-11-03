@@ -1,0 +1,69 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei','PingFang SC',sans-serif" }}>
+  <Box style={{ position: 'absolute', top: 26, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D5</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 22, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>08 / 14</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>动手：填写选题卡</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+  <Text style={{ fontSize: 17, color: '#64748B', marginTop: 20 }}>本页配合现场导学案选题卡讲解，边讲边填</Text>
+  <Box style={{ flexDirection: 'row', gap: 32, marginTop: 20, alignItems: 'flex-start' }}>
+    <Box style={{ width: 460, background: '#F5F3FF', borderRadius: 12, padding: '28px 30px', gap: 22 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>3 个候选，逐个过三环</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>三环填不出 → 先画掉</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: 20 }}>
+      <Text style={{ fontSize: 15, color: '#64748B' }}>导学案 · 选题卡结构</Text>
+      <Box style={{ flexDirection: 'row', marginTop: 14 }}>
+        <Box style={{ width: 110, height: 44, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB', background: '#7C3AED' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>候选</Text>
+        </Box>
+        <Box style={{ width: 140, height: 44, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB', background: '#7C3AED' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>行业</Text>
+        </Box>
+        <Box style={{ width: 140, height: 44, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB', background: '#7C3AED' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>场景</Text>
+        </Box>
+        <Box style={{ width: 140, height: 44, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB', background: '#7C3AED' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>人群</Text>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row' }}>
+        <Box style={{ width: 110, height: 50, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB' }}>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>候选 1</Text>
+        </Box>
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#F5F3FF' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#EFF6FF' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#F5F3FF' }} />
+      </Box>
+      <Box style={{ flexDirection: 'row' }}>
+        <Box style={{ width: 110, height: 50, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB', background: '#F5F3FF' }}>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>候选 2</Text>
+        </Box>
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB' }} />
+      </Box>
+      <Box style={{ flexDirection: 'row' }}>
+        <Box style={{ width: 110, height: 50, justifyContent: 'center', alignItems: 'center', border: '1px solid #E5E7EB' }}>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>候选 3</Text>
+        </Box>
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#F5F3FF' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#EFF6FF' }} />
+        <Box style={{ width: 140, height: 50, border: '1px solid #E5E7EB', background: '#F5F3FF' }} />
+      </Box>
+    </Box>
+  </Box>
+</Slide>

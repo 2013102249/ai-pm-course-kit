@@ -1,0 +1,29 @@
+<Slide width={1280} height={720} style={{ width: 1280, height: 720, padding: '60px 60px 60px 60px', background: '#FFFFFF', flexDirection: 'column' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', top: 670, right: 60, fontSize: 14, color: '#64748B' }}>14 / 20</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场对比：无 RAG vs 有 RAG</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
+  <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 26 }}>
+    <Box style={{ width: 620, background: '#F5F3FF', borderRadius: 8, padding: '14px 24px' }}>
+      <Text style={{ fontSize: 17, color: '#64748B' }}>本页配合现场工具投屏讲解（对比开关）</Text>
+    </Box>
+    <Box style={{ background: '#F5F3FF', borderRadius: 8, padding: '14px 24px', border: '1px solid #7C3AED' }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>学员自己读，停 10 秒</Text>
+    </Box>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 24, marginTop: 30, alignItems: 'stretch' }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '28px 32px', border: '2px solid #7A7590' }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7A7590' }}>无 RAG：直接问模型</Text>
+      <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 16, lineHeight: 1.7 }}>问：「你们的退货政策是什么？」<br />模型一本正经地<span style={{ fontWeight: 'bold', color: '#7A7590' }}>编造</span>一条听起来合理的政策</Text>
+      <Text style={{ fontSize: 16, color: '#7A7590', marginTop: 18 }}>来源：无 · 无法核对 · 可能是幻觉</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '28px 32px', border: '2px solid #7C3AED' }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>有 RAG：先查再答</Text>
+      <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 16, lineHeight: 1.7 }}>同样的问题，模型基于<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>检索到的知识库文档</span>回答</Text>
+      <Text style={{ fontSize: 16, color: '#16A34A', marginTop: 18 }}>来源：政策文档 v3.2 [1] · 有据可查</Text>
+    </Box>
+  </Box>
+</Slide>

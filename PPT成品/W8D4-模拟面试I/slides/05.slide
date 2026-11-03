@@ -1,0 +1,80 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D4</Text>
+  </Box>
+  <Box style={{ position: 'absolute', right: 60, bottom: 26 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 6</Text>
+  </Box>
+  <Box style={{ flexDirection: 'column', height: '100%', gap: 14 }}>
+    <Box style={{ flexDirection: 'column', gap: 14 }}>
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>三遍法复盘</Text>
+      <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '16px 20px' }}>
+      <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B', width: 216 }}>第一遍 · 内容缺口</Text>
+      <Box style={{ flex: 1, flexDirection: 'row', gap: 10 }}>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>补齐没答上的知识点</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>给每题配一个数据或案例</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>写下正确口径一句话</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '16px 20px' }}>
+      <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B', width: 216 }}>第二遍 · 表达节奏</Text>
+      <Box style={{ flex: 1, flexDirection: 'row', gap: 10 }}>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>掐表限时复述答案</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>删掉口头禅和废词</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>每题先给结论再展开</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '16px 20px' }}>
+      <Box style={{ width: 44, height: 44, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B', width: 216 }}>第三遍 · 肢体眼神</Text>
+      <Box style={{ flex: 1, flexDirection: 'row', gap: 10 }}>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>对镜头练眼神接触</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>定一个坐姿与手势标准</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 8, padding: '10px 12px', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, color: '#1E1B4B' }}>录音自查语速与音量</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 20px', alignItems: 'center' }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>复盘结束：标出 3 道薄弱题，带去明日二轮（对照「改进清单 V1」模板逐遍填写）</Text>
+    </Box>
+    <Box style={{ border: '1px solid #E5E7EB', borderRadius: 10, padding: '14px 20px', flexDirection: 'row', alignItems: 'center', gap: 20, flex: 1 }}>
+      <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#64748B' }}>×</Text>
+        <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>不合格：</span>「太紧张」——只说情绪，不是动作</Text>
+      </Box>
+      <Box style={{ width: 1, height: 40, background: '#E5E7EB' }} />
+      <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
+        <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>合格：</span>「先深呼吸再说口径」——动作可执行</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

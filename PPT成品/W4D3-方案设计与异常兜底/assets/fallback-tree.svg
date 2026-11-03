@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7C3AED"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+    <marker id="arrN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <rect x="48" y="34" width="4" height="22" fill="#7C3AED"/>
+  <text x="62" y="52" font-size="20" font-weight="700" fill="#221E33">兜底决策树</text>
+  <text x="62" y="76" font-size="12" fill="#6B7280">四层判断 · 每层左侧「否」走兜底，右侧「是」继续向下 · 四件套顺序即优先级</text>
+
+  <!-- 入口 -->
+  <rect x="520" y="104" width="160" height="48" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="600" y="133" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">用户输入</text>
+  <line x1="600" y1="154" x2="600" y2="172" stroke="#7C3AED" stroke-width="1.8" marker-end="url(#arrP)"/>
+
+  <!-- 第一层 -->
+  <rect x="90" y="162" width="320" height="92" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="250" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">澄清</text>
+  <text x="250" y="216" text-anchor="middle" font-size="12.5" fill="#221E33">追问 1 次 + 选项</text>
+  <text x="250" y="238" text-anchor="middle" font-size="11.5" fill="#7A7590">升级成本：零成本</text>
+
+  <line x1="456" y1="208" x2="416" y2="208" stroke="#7C3AED" stroke-width="1.6" marker-end="url(#arrP)"/>
+  <text x="437" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">否</text>
+
+  <rect x="460" y="178" width="320" height="60" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+  <text x="620" y="215" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">① 能理解吗？</text>
+  <line x1="620" y1="240" x2="620" y2="282" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <text x="636" y="266" font-size="13" font-weight="700" fill="#2563EB">是</text>
+
+  <!-- 第二层 -->
+  <rect x="90" y="272" width="320" height="92" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="250" y="302" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">拒答</text>
+  <text x="250" y="326" text-anchor="middle" font-size="12.5" fill="#221E33">固定文案 + 替代出路</text>
+  <text x="250" y="348" text-anchor="middle" font-size="11.5" fill="#7A7590">升级成本：低成本</text>
+
+  <line x1="456" y1="318" x2="416" y2="318" stroke="#7C3AED" stroke-width="1.6" marker-end="url(#arrP)"/>
+  <text x="437" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">否</text>
+
+  <rect x="460" y="288" width="320" height="60" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+  <text x="620" y="325" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">② 能答吗？</text>
+  <line x1="620" y1="350" x2="620" y2="392" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <text x="636" y="376" font-size="13" font-weight="700" fill="#2563EB">是</text>
+
+  <!-- 第三层 -->
+  <rect x="90" y="382" width="320" height="92" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="250" y="412" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">降级</text>
+  <text x="250" y="436" text-anchor="middle" font-size="12.5" fill="#221E33">规则话术 / 缓存答案</text>
+  <text x="250" y="458" text-anchor="middle" font-size="11.5" fill="#7A7590">升级成本：低成本</text>
+
+  <line x1="456" y1="428" x2="416" y2="428" stroke="#7C3AED" stroke-width="1.6" marker-end="url(#arrP)"/>
+  <text x="437" y="416" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">否</text>
+
+  <rect x="460" y="398" width="320" height="60" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+  <text x="620" y="435" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">③ 答得出吗？</text>
+  <line x1="620" y1="460" x2="620" y2="502" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <text x="636" y="486" font-size="13" font-weight="700" fill="#2563EB">是</text>
+
+  <!-- 第四层 -->
+  <rect x="90" y="492" width="320" height="92" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="250" y="522" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">转人工</text>
+  <text x="250" y="546" text-anchor="middle" font-size="12.5" fill="#221E33">带上下文摘要</text>
+  <text x="250" y="568" text-anchor="middle" font-size="11.5" fill="#7A7590">升级成本：人力成本</text>
+
+  <line x1="456" y1="538" x2="416" y2="538" stroke="#7C3AED" stroke-width="1.6" marker-end="url(#arrP)"/>
+  <text x="437" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#7C3AED">否</text>
+
+  <rect x="460" y="508" width="320" height="60" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6"/>
+  <text x="620" y="545" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">④ 用户满意吗？</text>
+  <line x1="620" y1="570" x2="620" y2="612" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <text x="634" y="598" font-size="12.5" font-weight="700" fill="#2563EB">是（四层全过）</text>
+
+  <!-- 正常回答 -->
+  <rect x="500" y="618" width="240" height="60" rx="10" fill="#EAF7EE" stroke="#16A34A" stroke-width="1.6"/>
+  <text x="620" y="654" text-anchor="middle" font-size="16" font-weight="700" fill="#16A34A">正常回答</text>
+
+  <!-- 成本递增标注（右侧） -->
+  <line x1="880" y1="170" x2="880" y2="580" stroke="#C9C2DE" stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#arrN)"/>
+  <text transform="rotate(90 906 377)" x="906" y="377" text-anchor="middle" font-size="12" fill="#7A7590">升级成本自上而下递增</text>
+
+  <!-- 左下角口诀 -->
+  <rect x="90" y="700" width="420" height="40" rx="20" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.2"/>
+  <text x="300" y="725" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">口诀：能用便宜的办法解决，绝不启动贵的</text>
+</svg>

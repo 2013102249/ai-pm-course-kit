@@ -1,0 +1,37 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei','PingFang SC',sans-serif" }}>
+  <Box style={{ position: 'absolute', top: 26, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D5</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 22, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 14</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>评审工作坊（预演）</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+  <Text style={{ fontSize: 17, color: '#64748B', marginTop: 20 }}>本页配合现场导学案与投屏计时器讲解，严格计时</Text>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 18, marginTop: 34 }}>
+    <Box style={{ width: 300, background: '#F5F3FF', borderRadius: 12, padding: '24px 26px', gap: 12, height: 150 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#7C3AED', borderRadius: 999, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>10 分钟</Text>
+      </Box>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>组内互评</Text>
+    </Box>
+    <Text style={{ fontSize: 24, color: '#94A3B8' }}>→</Text>
+    <Box style={{ width: 280, background: '#F5F3FF', borderRadius: 12, padding: '24px 26px', gap: 12, height: 150 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#7C3AED', borderRadius: 999, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>推选</Text>
+      </Box>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>推选代表</Text>
+    </Box>
+    <Text style={{ fontSize: 24, color: '#94A3B8' }}>→</Text>
+    <Box style={{ width: 340, background: '#F5F3FF', borderRadius: 12, padding: '24px 26px', gap: 12, height: 150 }}>
+      <Box style={{ alignSelf: 'flex-start', background: '#7C3AED', borderRadius: 999, padding: '5px 14px' }}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3 分钟 + 2 分钟</Text>
+      </Box>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>陈述 + 质询</Text>
+    </Box>
+  </Box>
+  <Box style={{ alignSelf: 'center', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: 999, padding: '10px 28px', marginTop: 30 }}>
+    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>× 2 组，依次上场</Text>
+  </Box>
+</Slide>

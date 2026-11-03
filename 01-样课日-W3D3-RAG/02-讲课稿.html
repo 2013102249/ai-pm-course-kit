@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W3 周三《RAG 架构与知识库产品》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl cur" href="../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../index.html">资源包总入口</a>
+  <span class="crumb">01-样课日-W3D3-RAG / 02-讲课稿.md</span>
+  <a class="back" href="../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-课堂交互使用说明.html">07-课堂交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W3 周三《RAG 架构与知识库产品》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好，我是今天的讲师。周三这节课，是第三周的重头戏。前面两天我们讲了 Agent 架构和 Agent 产品设计，今天讲另一个 AI 产品的核心架构——RAG。</p>
+<p>先说清楚今天的终点：下课的时候，你要能做到两件事。第一，能给别人画出 RAG 的完整链路，每一步用一句话讲明白；第二，面对一个业务场景，你能判断——这里该用 RAG，还是该用微调，还是根本不该用 AI。这两个能力，是 AI 产品经理面试的高频区，我们后面第八周会专门训练，但底子就在今天这 90 分钟。</p>
+<p>【停】</p>
+<h2>导入：一个价值 20 万的幻觉（3–10 分钟）</h2>
+<p>上课之前，先给大家看一个真实的事故。【操作：打开配图《幻觉案例示意图》】</p>
+<p>一家电商公司上了智能客服，用户问：「你们的退款政策是什么？」客服机器人特别流利地回答：「我们支持 72 小时无条件退款，不满意随时退。」用户信了，买了。三天后要退，人工客服说：抱歉，我们是 7 天无理由，但您这个品类不支持。用户炸了——「你们机器人明明说 72 小时无条件退！」截图发到社交媒体，一天上了同城热搜。公司赔了钱，下了机器人，回去写事故报告。</p>
+<p>【停】</p>
+<p>【问】这个事故里，模型做错了什么？【停，点 1–2 名学员】</p>
+<p>对，有同学说到了——它「不知道」自己公司的政策，但它不敢说自己不知道，它「不好意思」空着，于是它编了一个。72 小时这个数字哪来的？模型从训练数据里见过的无数电商政策里，概率性地「拼」了一个最像的。</p>
+<p>注意，这不是模型笨。你换任何一个今天最强的模型，不接公司资料直接问，它照样编。因为<strong>幻觉不是模型的缺陷，是它的本能</strong>——它是一个概率续写引擎，它永远会给你一个「最像答案的答案」。</p>
+<p>所以问题来了：怎么让模型不胡说？【停】</p>
+<p>答案就是我们今天的主角——RAG。 retrieval augmented generation，检索增强生成。翻译成人话：<strong>先查资料，再回答</strong>。就像开卷考试：闭卷考试你再聪明也可能记错，开卷考试给你课本，你照着答。</p>
+<p>【金句】记住今天第一句面试金句：<strong>RAG 的本质，是给模型开卷考试的权利。</strong></p>
+<h2>环节一：RAG 全链路总览（10–25 分钟）</h2>
+<p>【操作：打开配图《RAG 架构图》】</p>
+<p>我们看这张图。RAG 系统里有两条链路，大家看的时候千万别混。</p>
+<p>上面这条叫<strong>建库链路</strong>，是离线的、一次性的。企业的文档——产品手册、售后政策、操作指南——先解析，切块，用 Embedding 模型编码成向量，存进向量数据库。这一步做完，除非文档更新，否则不用重跑。</p>
+<p>下面这条叫<strong>问答链路</strong>，是在线的、实时的。用户每问一个问题，系统就把这个问题也向量化，去向量数据库里检索最相关的几个片段，重排之后，拼进提示词，让模型带着这些资料生成回答，并且标注引用。</p>
+<p>【停，环视】</p>
+<p>【问】我现在问大家一个问题：如果公司每周都更新一次政策文档，会怎样？【停】</p>
+<p>对，建库链路要重新跑。解析、分块、向量化，全部重建。这就是知识库产品的隐性成本，我们第三部分会讲。</p>
+<p>现在看一个关键问题：为什么需要向量数据库？直接全文搜索不行吗？【停】</p>
+<p>这里有个认知升级。传统搜索是「按字面匹配」——用户搜「怎么退货」，文档里写的是「退款流程」，字面对不上，搜不到。向量检索是「按意思匹配」——「退货」和「退款」在向量空间里距离很近，能搜到。这就是 Embedding 的价值：它把文本变成了「语义身份证」。</p>
+<p>【操作：打开配图《向量数据库示意图》】</p>
+<p>看这张图。每个文本块变成一个向量——一长串数字。真实模型是 768 维甚至更高，这里我们示意性地画了几个。用户的问题也变成同样一串数字，然后在数据库里找「距离最近」的 K 个。距离，就是语义相似度。</p>
+<p>好，总览讲完了。大家在自己的导学案上，把这两条链路的骨架画一下，先画个大概，细节我们马上用交互工具逐步过。</p>
+<h2>环节二：六步链路精讲（25–55 分钟，核心环节）</h2>
+<p>【操作：打开《RAG 交互演示》工具，选择问题 Q1「新像素家庭战略学习法适合什么家庭？」】</p>
+<p>接下来 30 分钟，我们一步一步跑一遍。我每跑一步，你们在导学案的「六步笔记表」里填一行。</p>
+<p><strong>第一步，文档解析。</strong>【操作：点击步骤 1】</p>
+<p>左边是我们预置的一篇文档，《新像素家庭战略学习法介绍》，300 字左右，有标题、有段落、有一个表格。右边是解析结果：1 个标题、3 个段落、1 个表格、312 字。</p>
+<p>【问】解析这步，产品经理要关心什么？就一件事——原料质量。扫描版 PDF、复杂表格、图文混排，是三大重灾区。我见过一个项目，政策文件全是扫描件，OCR 出来错字连篇，后面检索再准也没用，因为源头就错了。选型的时候，必须拿自己真实的文档去实测，不要看 Demo。</p>
+<p><strong>第二步，文本分块。</strong>【操作：点击步骤 2，拖动块大小滑块】</p>
+<p>现在文档被切成了 4 个块，每块之间有一段高亮——这是重叠部分，20 字。为什么要重叠？因为一个问题的答案可能正好横跨两个块的边界，不重叠就可能被从中间切断。</p>
+<p>大家看滑块，我把块大小从 400 调到 200。【操作：拖动滑块】</p>
+<p>【问】块变小了，检索是变准了还是变糊了？【停】</p>
+<p>块变小，单个块的主题更聚焦，检索更准；但每个块的上下文变短，模型拿到的信息可能不完整。反过来块调大，上下文全了，但一个块里塞了多个主题，检索时相似度被稀释。所以这是个权衡，没有标准答案——这也是为什么面试问「分块策略」时，标准答案是「看场景」。</p>
+<p>【金句】第二句金句：<strong>分块策略决定了检索的天花板——块切坏了，后面全白搭。</strong></p>
+<p><strong>第三步，向量化。</strong>【操作：点击步骤 3】</p>
+<p>看这四个色块组，这是每个文本块的「向量指纹」示意。真实模型是 768 维，这里可视化前 32 维。每块的颜色深浅不一样，代表它们的语义特征不同。</p>
+<p>【问】这里有个大坑：如果明年我们换了更强的 Embedding 模型，会发生什么？【停】</p>
+<p>对，全库重新向量化。文档多少，就重算多少。所以选 Embedding 模型不是选效果最好的那个，是选「效果够用且敢长期用」的那个。</p>
+<p><strong>第四步，向量检索。</strong>【操作：点击步骤 4】</p>
+<p>用户的问题也向量化，然后和库里所有块算相似度。看这张表：chunk-03 拿了 0.91，chunk-01 是 0.71，这两个入选 Top-K。注意，chunk-02 只有 0.58——它讲的是课程模块和续费率，和「适合什么家庭」这个问题关系不大。</p>
+<p>【问】Top-K 的 K，取 4 和取 40，差别在哪？【停】</p>
+<p>K 越大，候选越多，越不容易漏——但提示词越长，成本越高，噪声也越多。多数场景 K=4 是甜点区。复杂问题，比如「对比一下 A 模块和 B 模块」，可以动态调大 K。</p>
+<p><strong>第五步，重排。</strong>【操作：点击步骤 5，引导学员看排名变化】</p>
+<p>注意看，这一步排名变了。初排的时候 chunk-02 在第三，重排之后它掉到最后，被淘汰了。chunk-03 从 0.91 到 0.94，更稳了。</p>
+<p>为什么？向量检索是「粗排」，求快，用的是双塔结构，问题和文档分开编码，快但不够精细。重排是「精排」，把问题和候选块放在一起，一个词一个词地对着看，慢几百毫秒，但准得多。</p>
+<p>【问】既然重排更准，为什么不直接用重排，还要向量检索干什么？【停】</p>
+<p>对，因为贵、因为慢。全库几千个块，每个都和问题精细对一遍，延迟和成本都爆炸。所以工业界的标准做法是两步走：检索从几千个里快速捞出 20 个候选，重排再精挑细选 2–4 个。</p>
+<p>【金句】第三句金句：<strong>检索求快，重排求准——两步走是工业界标配。</strong></p>
+<p><strong>第六步，生成。</strong>【操作：点击步骤 6，看流式回答】</p>
+<p>看右边的回答。注意几个细节：第一，回答不长，但每个关键结论后面都有 [1][2] 的引用标记。第二，下面有引用来源卡片，点进去能看到原文。第三，这个回答是严格基于检索到的资料生成的，模型没有自由发挥。</p>
+<p>【问】为什么每个结论都要能点回原文？【停】</p>
+<p>因为可信度。AI 产品的信任是一点点攒起来的，最快的攒法就是让用户能验证。你告诉用户「7 天内可退」，他信你；你告诉用户「根据售后政策第 3 条，7 天内可退」，并附上原文链接，他会截图发给朋友。</p>
+<p>【操作：打开底部「无 RAG vs 有 RAG」对比开关】</p>
+<p>现在看对比。左边，不接资料直接问，模型说「19.8 万起、保证录取世界前 50」——全是编的。右边，同样的问题，RAG 版本说的每句话都有出处。</p>
+<p>【停，让学员自己读 10 秒】</p>
+<p>【故事】讲一个我参与过的项目。有个团队做企业知识库，Demo 效果特别好，CEO 当场拍板上线。上线第二周，业务方投诉率涨了 40%。为什么？他们只做了「能回答」，没做三件事：第一，知识库不更新，产品价格早就变了，机器人还在报旧价；第二，没有权限设计，销售能看到财务的制度文件；第三，没有引用来源，业务方无法验证答案，出了错也不知道该找谁。三个月后，这个产品被弃用了。技术没问题，死的是产品设计。</p>
+<h2>环节三：知识库产品设计（55–70 分钟）</h2>
+<p>所以，知识库产品设计，产品经理要管三件事。</p>
+<p><strong>第一，更新机制。</strong> 资料谁上传、多久更新、过期了怎么办。我的建议：每个文档强制填「生效日期」和「责任人」，检索时优先取新版本。没有更新机制的知识库，上线那天就开始腐烂。</p>
+<p><strong>第二，权限与安全。</strong> 谁能看哪部分资料？不同部门的文档要隔离。模型回答时只能检索「这个用户有权看」的文档——这叫检索侧权限，很多团队会漏。</p>
+<p><strong>第三，溯源呈现。</strong> 每个结论能点回原文，展示「资料更新时间」，让用户自己判断新旧。</p>
+<p>这三件事，就是我们主项目知识库原型的验收标准。周末你们的原型，我会按这三条来验收。</p>
+<h2>环节四：决策练习——RAG 还是微调？（70–85 分钟）</h2>
+<p>【操作：发布导学案决策表练习】</p>
+<p>最后做个练习。三个场景，小组讨论 5 分钟，告诉我：RAG、微调、还是都不用。开始。【停，5 分钟，期间巡视听讨论】</p>
+<p>好，哪组先来？【停，点 1 组】</p>
+<p>场景一，客服回答公司售后政策。对，RAG。为什么？政策会变，RAG 改文档就生效，微调你得重新训练一遍，成本和周期都划不来。</p>
+<p>场景二，合同信息抽取，要求输出固定 JSON。有组说微调，有组说提示词。都对，但我要纠正一个顺序——<strong>先试提示词</strong>。今天的大模型，指令遵循能力已经很强，大多数格式要求，一个写得好的提示词加输出校验就能解决。微调是最后手段，不是首选。什么时候必须微调？当提示词怎么调都不稳定，且失败代价高的时候。</p>
+<p>场景三，让模型用我们苗姐的亲切口吻给新学员写信。这个必须微调。为什么？因为 RAG 给的是「知识」，给不了「语气」。风格、人格、口吻，是行为层特征，只能靠微调改。</p>
+<p>【金句】第四句金句，也是今天最重要的一句：<strong>加知识用 RAG，改行为用微调——先问「非 AI 能不能解决」，再问「哪个模型」。</strong></p>
+<h2>总结与作业（85–90 分钟）</h2>
+<p>今天的内容，收束成三句话：</p>
+<p>第一，RAG 是检索系统不是模型升级，它的本质是先查资料再回答。<br />
+第二，六步链路里，产品经理的主战场在分块策略、Top-K 权衡和知识库三要素——更新、权限、溯源。<br />
+第三，决策口诀：加知识用 RAG，改行为用微调。</p>
+<p>周末作业两个：第一，完成主项目知识库原型，验收标准就是今天讲的三个要素；第二，在导学案上补全 RAG 全链路图，标出每一步的产品职责。</p>
+<p>下节课，多模态产品设计——文生图、语音、数字人，我们会讲到 AI 产品形态的另一半。下课。</p>
+<hr />
+<h2>附录：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「这样，我提示一下——回想一下昨天我们讲的分块，块和块之间为什么要留重叠？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「你这个角度有意思，先记下来。我们回到这个问题本身——它问的是检索环节，你觉得检索解决的是什么问题？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「对，完全正确。来，大声再说一遍，让后面同学都听到——这个知识点面试必考。」</td>
+</tr>
+<tr>
+<td>小组讨论冷场</td>
+<td>「这样，每组至少写下一条，哪怕写『不确定』也行，写下来我们才能对症下药。」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「这个点展开讲要 10 分钟，今天时间关系我们先记住结论，回放里我会补讲，记得看。」</td>
+</tr>
+<tr>
+<td>演示工具卡住</td>
+<td>「正好，这就是我要讲的——工具会崩，产品要有兜底。等它 5 秒，我们先用架构图讲。」</td>
+</tr>
+</tbody>
+</table>
+<h2>附录：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>RAG 的本质，是给模型开卷考试的权利。</li>
+<li>分块策略决定了检索的天花板——块切坏了，后面全白搭。</li>
+<li>检索求快，重排求准——两步走是工业界标配。</li>
+<li>加知识用 RAG，改行为用微调。</li>
+<li>没有更新机制的知识库，上线那天就开始腐烂。</li>
+</ol>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>05 / 20</Text>
+    <Box style={{ marginBottom: 20 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>定位：形态选择发生在全链路哪一环</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 396, gap: 4, alignItems: 'center' }}>
+            <Box style={{ width: 300, height: 44, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#4A4560' }}>需求</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#A5A1B8', lineHeight: 1.2 }}>↓</Text>
+            <Box style={{ width: 300, height: 44, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#4A4560' }}>数据</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#A5A1B8', lineHeight: 1.2 }}>↓</Text>
+            <Box style={{ width: 300, height: 44, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#4A4560' }}>选型</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#A5A1B8', lineHeight: 1.2 }}>↓</Text>
+            <Box style={{ width: 300, height: 44, background: '#7C3AED', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }}>应用开发 ← 形态选择在这里</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#A5A1B8', lineHeight: 1.2 }}>↓</Text>
+            <Box style={{ width: 300, height: 44, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#4A4560' }}>评测</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#A5A1B8', lineHeight: 1.2 }}>↓</Text>
+            <Box style={{ width: 300, height: 44, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#4A4560' }}>监控</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 740, height: 414, background: '#F5F3FF', borderRadius: 12, padding: 10 }}>
+            <Image src="assets/ai-product-pipeline.svg" style={{ width: 720, height: 394, objectFit: 'contain' }} />
+        </Box>
+    </Box>
+</Slide>

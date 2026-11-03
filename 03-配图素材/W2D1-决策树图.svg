@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="840" fill="#FFFFFF"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">选型决策树图</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">五问自上而下 · 一票不过就换方案 · 配合导学案空白决策树使用</text>
+<!-- 左侧阶段标尺 -->
+<line x1="150" y1="142" x2="150" y2="718" stroke="#E8E5F1" stroke-width="2"/>
+<rect x="100" y="205" width="100" height="30" rx="8" fill="#F1EBFD" stroke="#C9C2DE"/>
+<text x="150" y="225" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">定能力线</text>
+<rect x="100" y="497" width="100" height="30" rx="8" fill="#E8EFFD" stroke="#C9C2DE"/>
+<text x="150" y="517" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">定档位</text>
+<rect x="100" y="703" width="100" height="30" rx="8" fill="#FFFFFF" stroke="#DC2626"/>
+<text x="150" y="723" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">一票否决</text>
+<!-- Q1 -->
+<rect x="240" y="110" width="440" height="64" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="460" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">第一问｜提示词 + 外挂资料能否直接达标？</text>
+<line x1="682" y1="142" x2="754" y2="142" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="134" text-anchor="middle" font-size="11" fill="#2563EB">是</text>
+<rect x="760" y="114" width="400" height="56" rx="10" fill="#F1EBFD" stroke="#C9C2DE"/>
+<text x="960" y="148" text-anchor="middle" font-size="13" fill="#221E33">用提示词工程 + RAG 解决，不动模型</text>
+<line x1="460" y1="174" x2="460" y2="244" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="476" y="214" font-size="12" fill="#6B7280">否</text>
+<!-- Q2 -->
+<rect x="240" y="250" width="440" height="96" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.8"/>
+<text x="460" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">第二问｜是否满足小模型三条件？</text>
+<text x="460" y="318" text-anchor="middle" font-size="12" fill="#7C3AED">三条件：任务结构化程度高 · 容错空间可控 · 无复杂多轮规划</text>
+<line x1="682" y1="298" x2="754" y2="298" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="290" text-anchor="middle" font-size="11" fill="#2563EB">是</text>
+<rect x="760" y="270" width="400" height="56" rx="10" fill="#FFFFFF" stroke="#C9C2DE"/>
+<text x="960" y="304" text-anchor="middle" font-size="13" fill="#221E33">优先中小模型：性价比与延迟更优</text>
+<line x1="460" y1="346" x2="460" y2="408" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="476" y="384" font-size="12" fill="#6B7280">否</text>
+<!-- Q3 -->
+<rect x="240" y="414" width="440" height="64" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="460" y="452" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">第三问｜数据能否出域、调用云端 API？</text>
+<line x1="682" y1="446" x2="754" y2="446" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="438" text-anchor="middle" font-size="11" fill="#2563EB">是</text>
+<rect x="760" y="418" width="400" height="56" rx="10" fill="#FFFFFF" stroke="#C9C2DE"/>
+<text x="960" y="452" text-anchor="middle" font-size="13" fill="#221E33">可选云端 API：按合规与生态挑厂商</text>
+<line x1="460" y1="478" x2="460" y2="540" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="476" y="516" font-size="12" fill="#6B7280">否</text>
+<!-- Q4 -->
+<rect x="240" y="546" width="440" height="64" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="460" y="584" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">第四问｜调用量与预算撑得起哪一档？</text>
+<line x1="682" y1="578" x2="754" y2="578" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="570" text-anchor="middle" font-size="11" fill="#2563EB">是</text>
+<rect x="760" y="550" width="400" height="56" rx="10" fill="#FFFFFF" stroke="#C9C2DE"/>
+<text x="960" y="584" text-anchor="middle" font-size="13" fill="#221E33">定档：旗舰 / 标准 / 轻量，混搭路由</text>
+<line x1="460" y1="610" x2="460" y2="670" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="476" y="646" font-size="12" fill="#6B7280">否</text>
+<!-- Q5 -->
+<rect x="240" y="676" width="440" height="84" rx="10" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+<text x="460" y="710" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">第五问｜合规是否可过？</text>
+<text x="460" y="738" text-anchor="middle" font-size="12" fill="#DC2626">备案路径 · 数据边界 · 内容安全</text>
+<rect x="548" y="662" width="108" height="26" rx="13" fill="#DC2626"/>
+<text x="602" y="680" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">一票否决</text>
+<line x1="682" y1="692" x2="754" y2="686" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="678" text-anchor="middle" font-size="11" fill="#2563EB">是</text>
+<rect x="760" y="664" width="400" height="44" rx="10" fill="#FFFFFF" stroke="#C9C2DE"/>
+<text x="960" y="692" text-anchor="middle" font-size="12" fill="#221E33">通过 → 进入成本与延迟评估（三角图）</text>
+<line x1="682" y1="738" x2="754" y2="746" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="716" y="756" text-anchor="middle" font-size="11" fill="#DC2626">否</text>
+<rect x="760" y="724" width="400" height="44" rx="10" fill="#FFFFFF" stroke="#DC2626"/>
+<text x="960" y="752" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">否 → 一票否决：换题或换模型</text>
+<text x="460" y="806" text-anchor="middle" font-size="12" fill="#6B7280">配合导学案空白决策树使用：边听边填，图只做导航。</text>
+</svg>

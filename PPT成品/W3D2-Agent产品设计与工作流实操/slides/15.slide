@@ -1,0 +1,19 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', right: 60, bottom: 26, fontSize: 14, color: '#64748B' }}>15 / 16</Text>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 48, width: '100%', flex: 1 }}>
+    <Text style={{ fontSize: 130, fontWeight: 'bold', color: '#2563EB' }}>5</Text>
+    <Box style={{ flexDirection: 'column', gap: 22, flex: 1 }}>
+      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>第⑤步：测运行</Text>
+      <Text style={{ fontSize: 24, color: '#1E1B4B', lineHeight: 1.6 }}>三类输入：正常 / 边界 / 异常，补失败分支</Text>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#EFF6FF', borderRadius: 12, padding: '16px 24px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>完成标志</Text>
+        <Text style={{ fontSize: 20, color: '#1E1B4B' }}>异常不崩，才算 V1</Text>
+      </Box>
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 14, color: '#64748B' }}>本页为主投屏 Dify/Coze 画布的步骤锚点</Text>
+</Slide>

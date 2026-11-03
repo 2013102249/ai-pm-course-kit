@@ -1,0 +1,87 @@
+<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D5</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>08 / 10</Text>
+  </Box>
+  <Box style={{ flexDirection: 'column', gap: 18, marginBottom: 20 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>研发评估模拟</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+  </Box>
+  <Box style={{ flex: 1, flexDirection: 'row', gap: 40, alignItems: 'center' }}>
+    <Box style={{ width: 620, flexDirection: 'column', gap: 16 }}>
+      <Box style={{ width: '100%', border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
+        <Table
+          style={{ width: '100%', height: 396 }}
+          defaultTextStyle={{ fontSize: 17, textAlign: 'left', color: '#1E1B4B' }}
+          defaultCellStyle={{
+            padding: '10px 22px',
+            border: {
+              left: { width: 1, color: '#E5E7EB' },
+              right: { width: 1, color: '#E5E7EB' },
+              top: { width: 1, color: '#E5E7EB' },
+              bottom: { width: 1, color: '#E5E7EB' },
+            },
+          }}
+          cells={[
+            [
+              { text: '任务模块', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+              { text: '人日基准', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+            ],
+            [
+              { text: '对话链路' },
+              { text: '3–5 人日', textStyle: { fontWeight: 'bold', color: '#2563EB' } },
+            ],
+            [
+              { text: '知识库', cellStyle: { background: { color: '#F5F3FF' } } },
+              { text: '2–3 人日', textStyle: { fontWeight: 'bold', color: '#2563EB' }, cellStyle: { background: { color: '#F5F3FF' } } },
+            ],
+            [
+              { text: '界面' },
+              { text: '3–5 人日', textStyle: { fontWeight: 'bold', color: '#2563EB' } },
+            ],
+            [
+              { text: '评测', cellStyle: { background: { color: '#F5F3FF' } } },
+              { text: '3 人日', textStyle: { fontWeight: 'bold', color: '#2563EB' }, cellStyle: { background: { color: '#F5F3FF' } } },
+            ],
+            [
+              { text: '埋点看板' },
+              { text: '2 人日', textStyle: { fontWeight: 'bold', color: '#2563EB' } },
+            ],
+            [
+              { text: '合计', textStyle: { bold: true }, cellStyle: { background: { color: '#F1EBFD' } } },
+              { text: '13–18 人日', textStyle: { bold: true, color: '#7C3AED', fontSize: 18 }, cellStyle: { background: { color: '#F1EBFD' } } },
+            ],
+          ]}
+        />
+      </Box>
+      <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '12px 20px', alignItems: 'center' }}>
+        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>≈ <span style={{ color: '#2563EB', fontWeight: 'bold' }}>1–2 名工程师 × 2 周</span>，先拆任务再估时</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'column', gap: 16 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>风险三高发</Text>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#F5F3FF', borderRadius: 12, padding: '16px 22px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, color: '#FFFFFF', fontWeight: 'bold' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>幻觉率</span>——评测门槛必须量化</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#FFFFFF', borderRadius: 12, border: '1px solid #E5E7EB', padding: '16px 22px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, color: '#FFFFFF', fontWeight: 'bold' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>单次成本</span>——成本章要能复算</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#F5F3FF', borderRadius: 12, padding: '16px 22px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, color: '#FFFFFF', fontWeight: 'bold' }}>3</Text>
+        </Box>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>数据回流</span>——埋点看板先于上线</Text>
+      </Box>
+      <Text style={{ fontSize: 15, color: '#64748B' }}>本页为投屏常驻页，质询收尾时对照估时</Text>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,14 @@
+<Slide style={{ width: 1280, height: 720, padding: '0 80px', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', flexDirection: 'row', alignItems: 'center', gap: 60 }}>
+  <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'flex-start' }}>
+    <Box style={{ background: '#A78BFA', borderRadius: 999, padding: '8px 22px', marginBottom: 28 }}>
+      <Text style={{ fontSize: 16, color: '#FFFFFF', fontWeight: 'bold', letterSpacing: 2 }}>主线项目里程碑 ③</Text>
+    </Box>
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 4, marginBottom: 18 }}>AI 产品经理实战训练营</Text>
+    <Text style={{ fontSize: 66, fontWeight: 'bold', color: '#FFFFFF', marginBottom: 20 }}>PRD 评审大会</Text>
+    <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)', marginBottom: 64 }}>W4 周五 · 一次答辩 · 一份修订要求清单 · V2.0 过审口径</Text>
+    <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+  </Box>
+  <Box style={{ width: 500, height: 330, background: '#FFFFFF', borderRadius: 20, padding: 24, alignItems: 'center', justifyContent: 'center' }}>
+    <Image src="assets/capability-profile.svg" style={{ width: 452, height: 262, objectFit: 'contain' }} />
+  </Box>
+</Slide>

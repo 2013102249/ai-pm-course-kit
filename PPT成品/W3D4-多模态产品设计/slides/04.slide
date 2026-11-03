@@ -1,0 +1,35 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, borderRadius: 2, background: '#7C3AED' }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>04 / 16</Text>
+
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>谁该负责？权属没有标准答案</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 20, marginTop: 36, height: 300 }}>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: 28, justifyContent: 'flex-start' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>用户</Text>
+                <Box style={{ height: 2, background: '#F5F3FF', marginTop: 14 }} />
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 16, lineHeight: 1.7 }}>输入了提示词、点击了生成，责任如何认定？</Text>
+            </Box>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: 28 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>平台</Text>
+                <Box style={{ height: 2, background: '#F5F3FF', marginTop: 14 }} />
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 16, lineHeight: 1.7 }}>提供了生成工具与分发入口，该承担什么？</Text>
+            </Box>
+            <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, padding: 28 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>模型方</Text>
+                <Box style={{ height: 2, background: '#F5F3FF', marginTop: 14 }} />
+                <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 16, lineHeight: 1.7 }}>训练数据与生成能力来自这里，边界在哪？</Text>
+            </Box>
+        </Box>
+
+        <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '22px 28px', marginTop: 32, flexDirection: 'row', alignItems: 'center', gap: 14 }}>
+            <Box style={{ width: 6, height: 26, borderRadius: 3, background: '#2563EB' }} />
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>三方责任划分不清 —— 归属没有标准答案，<span style={{ fontWeight: 'bold', color: '#2563EB' }}>靠协议约定</span></Text>
+        </Box>
+    </Box>
+</Slide>

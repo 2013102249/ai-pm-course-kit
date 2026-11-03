@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D2</Text>
+    </Box>
+    <Text style={{ fontSize: 14, color: '#64748B', position: 'absolute', right: 60, bottom: 34 }}>10 / 16</Text>
+    <Box style={{ gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第二阶段：SFT = 岗前培训</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 22 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+            <Box style={{ flex: 1, background: '#FFFFFF', border: '1.5px solid #CBD5E1', borderRadius: 14, padding: '26px 30px', gap: 10 }}>
+                <Text style={{ fontSize: 15, color: '#64748B' }}>培训前</Text>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#475569' }}>续写引擎</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.6 }}>你问：「怎么退货？」<br />它接：「怎么退货比较快？」</Text>
+            </Box>
+            <Box style={{ alignItems: 'center', gap: 6 }}>
+                <Text style={{ fontSize: 30, color: '#7C3AED', fontWeight: 'bold' }}>→</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>岗前培训</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F5F3FF', border: '1.5px solid #7C3AED', borderRadius: 14, padding: '26px 30px', gap: 10 }}>
+                <Text style={{ fontSize: 15, color: '#7C3AED' }}>培训后</Text>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>对话助手</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>你问：「怎么退货？」<br />它答：一步步告诉你退货流程</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 14, padding: '22px 28px' }}>
+            <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>?</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B' }}>怎么培训的：<span style={{ fontWeight: 'bold', color: '#2563EB' }}>人工写大量「问答示范对」</span>，照着教它怎么好好接话</Text>
+        </Box>
+        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 24px' }}>
+            <Text style={{ fontSize: 18, color: '#1E1B4B' }}>你感受到的「AI 听话了」，<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>根子就在这一步</span></Text>
+        </Box>
+    </Box>
+</Slide>

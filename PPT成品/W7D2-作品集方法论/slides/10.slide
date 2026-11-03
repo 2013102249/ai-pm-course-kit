@@ -1,0 +1,54 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D2</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>A：写决策不写流水账</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ flexDirection: 'row', gap: 16, marginTop: 22, height: 86 }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>S</Text>
+      <Text style={{ fontSize: 16, color: '#64748B' }}>一句话</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>T</Text>
+      <Text style={{ fontSize: 16, color: '#64748B' }}>可量化</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#7C3AED', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>A</Text>
+      <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.9)' }}>写决策</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>R</Text>
+      <Text style={{ fontSize: 16, color: '#64748B' }}>有数字</Text>
+    </Box>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 24, marginTop: 20, height: 210 }}>
+    <Box style={{ flex: 1, background: '#FEF2F2', borderRadius: 14, padding: 24 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Box style={{ width: 32, height: 32, borderRadius: 16, background: '#DC2626', alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>✕</Text>
+        </Box>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#DC2626' }}>反例</Text>
+      </Box>
+      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.8, marginTop: 22 }}>「负责调研、PRD、跟开发、测试验收」</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#ECFDF5', borderRadius: 14, padding: 24 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <Box style={{ width: 32, height: 32, borderRadius: 16, background: '#059669', alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>✓</Text>
+        </Box>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#059669' }}>正例 · 两条决策</Text>
+      </Box>
+      <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.8, marginTop: 20 }}>① 推翻原假设，放弃换模型<br />② 延迟上线，换正确率</Text>
+    </Box>
+  </Box>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#F5F3FF', borderRadius: 10, marginTop: 18, height: 58, paddingLeft: 24, paddingRight: 24 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>要领：</span>每条决策都能答『为什么、放弃了什么』</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 24, right: 60, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>教学示例 · 数字为虚构演示</Text>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>10 / 16</Text>
+  </Box>
+</Slide>

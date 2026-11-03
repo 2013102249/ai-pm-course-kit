@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="40" y="34" width="4" height="22" fill="#7C3AED"/>
+<text x="54" y="52" font-size="20" font-weight="700" fill="#221E33">offer 决策矩阵</text>
+<text x="54" y="74" font-size="12" fill="#6B7280">四维加权打分 · 矩阵做第一轮筛选，不做最终决定 · 图中不含具体公司名与薪资数字</text>
+<!-- 左侧表格 -->
+<rect x="36" y="150" width="700" height="56" fill="#7C3AED"/>
+<text x="126" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">维度</text>
+<text x="296" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">权重（示例）</text>
+<text x="466" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">offer A 打分（1–5）</text>
+<text x="646" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">offer B 打分（1–5）</text>
+<rect x="36" y="206" width="180" height="224" fill="#F7F6FB"/>
+<text x="126" y="240" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">薪资</text>
+<text x="296" y="240" text-anchor="middle" font-size="13" fill="#221E33">30%</text>
+<text x="466" y="240" text-anchor="middle" font-size="14" fill="#221E33">4</text>
+<text x="646" y="240" text-anchor="middle" font-size="14" fill="#221E33">3</text>
+<text x="126" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">成长</text>
+<text x="296" y="296" text-anchor="middle" font-size="13" fill="#221E33">30%</text>
+<text x="466" y="296" text-anchor="middle" font-size="14" fill="#221E33">3</text>
+<text x="646" y="296" text-anchor="middle" font-size="14" fill="#221E33">5</text>
+<text x="126" y="352" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">行业</text>
+<text x="296" y="352" text-anchor="middle" font-size="13" fill="#221E33">20%</text>
+<text x="466" y="352" text-anchor="middle" font-size="14" fill="#221E33">4</text>
+<text x="646" y="352" text-anchor="middle" font-size="14" fill="#221E33">4</text>
+<text x="126" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">团队</text>
+<text x="296" y="408" text-anchor="middle" font-size="13" fill="#221E33">20%</text>
+<text x="466" y="408" text-anchor="middle" font-size="14" fill="#221E33">4</text>
+<text x="646" y="408" text-anchor="middle" font-size="14" fill="#221E33">5</text>
+<rect x="36" y="430" width="700" height="56" fill="#F1EBFD"/>
+<text x="126" y="464" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">加权总分</text>
+<text x="296" y="464" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">100%</text>
+<text x="466" y="465" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">3.7</text>
+<text x="646" y="465" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">4.2</text>
+<line x1="216" y1="150" x2="216" y2="486" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="376" y1="150" x2="376" y2="486" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="556" y1="150" x2="556" y2="486" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="262" x2="736" y2="262" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="318" x2="736" y2="318" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="374" x2="736" y2="374" stroke="#C9C2DE" stroke-width="1"/>
+<line x1="36" y1="430" x2="736" y2="430" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="36" y="150" width="700" height="336" fill="none" stroke="#C9C2DE" stroke-width="1.2"/>
+<text x="216" y="516" font-size="10.5" fill="#6B7280">示例权重，按个人处境调整</text>
+<!-- 右侧结论框 -->
+<rect x="790" y="150" width="374" height="336" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+<text x="814" y="192" font-size="15" font-weight="700" fill="#7C3AED">结论</text>
+<text x="814" y="238" font-size="14" font-weight="700" fill="#221E33">B 公司胜出——虽然 A 的月薪更高</text>
+<text x="814" y="276" font-size="14" fill="#221E33">胜出原因——成长与团队两个维度翻回差距</text>
+<text x="814" y="316" font-size="12" fill="#6B7280">差距拆解：薪资 A 领先 0.3，</text>
+<text x="814" y="336" font-size="12" fill="#6B7280">成长 B 领先 0.6、团队 B 领先 0.2</text>
+<text x="814" y="384" font-size="12" fill="#6B7280">矩阵做第一轮筛选，不做最终决定</text>
+<text x="814" y="440" font-size="11" fill="#6B7280">四维含义：薪资=现金流，成长=职级与学习，</text>
+<text x="814" y="460" font-size="11" fill="#6B7280">行业=赛道景气，团队=直属老板与协作</text>
+<!-- 底部 -->
+<rect x="36" y="580" width="1128" height="60" rx="10" fill="#F7F6FB"/>
+<text x="600" y="617" text-anchor="middle" font-size="13" fill="#6B7280">矩阵不是替你做决定，是替你把情绪从决定里拿出来——剩下的对比，你看得比谁都清楚</text>
+</svg>

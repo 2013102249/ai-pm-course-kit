@@ -1,0 +1,34 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+  <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', fontFamily: 'Microsoft YaHei' }}>本课核心产出 · 合规检查清单五模块</Text>
+  <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#FFFFFF', marginTop: 12, fontFamily: 'Microsoft YaHei' }}>对照清单，逐项过关</Text>
+  <Box style={{ flex: 1, flexDirection: 'row', gap: 14, marginTop: 32, marginBottom: 28 }}>
+    <Box style={{ flex: 1, background: 'rgba(255,255,255,0.12)', borderRadius: 12, padding: 20, gap: 12 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.8)', fontFamily: 'Microsoft YaHei' }}>01</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>备案</Text>
+      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', fontFamily: 'Microsoft YaHei' }}>备得上</Text>
+    </Box>
+    <Box style={{ flex: 1, background: 'rgba(255,255,255,0.12)', borderRadius: 12, padding: 20, gap: 12 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.8)', fontFamily: 'Microsoft YaHei' }}>02</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>内容安全</Text>
+      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', fontFamily: 'Microsoft YaHei' }}>审得出</Text>
+    </Box>
+    <Box style={{ flex: 1, background: 'rgba(255,255,255,0.12)', borderRadius: 12, padding: 20, gap: 12 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.8)', fontFamily: 'Microsoft YaHei' }}>03</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>数据合规</Text>
+      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', fontFamily: 'Microsoft YaHei' }}>收得少</Text>
+    </Box>
+    <Box style={{ flex: 1, background: 'rgba(255,255,255,0.12)', borderRadius: 12, padding: 20, gap: 12 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.8)', fontFamily: 'Microsoft YaHei' }}>04</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>未成年人保护</Text>
+      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', fontFamily: 'Microsoft YaHei' }}>护得住</Text>
+    </Box>
+    <Box style={{ flex: 1, background: 'rgba(255,255,255,0.12)', borderRadius: 12, padding: 20, gap: 12 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.8)', fontFamily: 'Microsoft YaHei' }}>05</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>责任标识</Text>
+      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', fontFamily: 'Microsoft YaHei' }}>标得清</Text>
+    </Box>
+  </Box>
+  <Box style={{ background: '#4C1D95', border: '1px solid rgba(255,255,255,0.4)', borderRadius: 12, padding: '22px 24px', alignItems: 'center' }}>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>备得上 · 审得出 · 收得少 · 护得住 · 标得清</Text>
+  </Box>
+</Slide>

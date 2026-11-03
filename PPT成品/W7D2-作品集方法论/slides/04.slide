@@ -1,0 +1,18 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', justifyContent: 'center', fontFamily: 'Microsoft YaHei' }}>
+  <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.8)', letterSpacing: 3 }}>差距拆解 · 优秀版的四个特征</Text>
+  <Box style={{ flexDirection: 'row', gap: 16, marginTop: 28 }}>
+    <Box style={{ paddingLeft: 24, paddingRight: 24, paddingTop: 9, paddingBottom: 9, borderRadius: 999, border: '1px solid rgba(255,255,255,0.55)' }}>
+      <Text style={{ fontSize: 18, color: '#FFFFFF' }}>有数字</Text>
+    </Box>
+    <Box style={{ paddingLeft: 24, paddingRight: 24, paddingTop: 9, paddingBottom: 9, borderRadius: 999, border: '1px solid rgba(255,255,255,0.55)' }}>
+      <Text style={{ fontSize: 18, color: '#FFFFFF' }}>有决策</Text>
+    </Box>
+    <Box style={{ paddingLeft: 24, paddingRight: 24, paddingTop: 9, paddingBottom: 9, borderRadius: 999, border: '1px solid rgba(255,255,255,0.55)' }}>
+      <Text style={{ fontSize: 18, color: '#FFFFFF' }}>有角色</Text>
+    </Box>
+    <Box style={{ paddingLeft: 24, paddingRight: 24, paddingTop: 9, paddingBottom: 9, borderRadius: 999, border: '1px solid rgba(255,255,255,0.55)' }}>
+      <Text style={{ fontSize: 18, color: '#FFFFFF' }}>可验证</Text>
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5, marginTop: 56 }}>平庸的经历写职责，<br />优秀的经历写决策和数据</Text>
+</Slide>

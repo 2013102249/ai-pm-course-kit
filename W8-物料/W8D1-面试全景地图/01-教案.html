@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W8 周一《AI PM 面试全景地图》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl cur" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W8-物料/W8D1-面试全景地图 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W8 周一《AI PM 面试全景地图》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第八周第一天 · 90 分钟（2 课时）· 讲师版<br />
+课程背景：学员已于 W7D5 启动首批投递（≥10 家），本日为面试周第一课，建立面试全景认知。</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段四 · 实战与就业（Week 8）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>AI PM 面试全景地图：流程、题型、评分标准</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，中间休息 5 分钟）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>转行 / 进阶层学员（已完成主项目与作品集，已投递 ≥10 家）</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>W7 简历与作品集、主项目全链路（W1–W6）、首批投递进展</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>个人面试准备矩阵（五行题型 × 四列初版，课后补全至每类 ≥4 问）</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏；本课无专用交互页，以工作坊组织为主</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能完整说出 AI PM 面试五轮流程（HR→业务→总监→交叉→HRD），并指出每轮的 1 个核心考察点与 1 个典型淘汰点（对应课堂笔记表 + 习题第一层）。</li>
+<li>能将给定的 8 个面试问题准确归类到五大题型（项目深挖 / 场景设计 / 技术理解 / 数据 / 开放行为），并为每类说出对应答题框架索引（对应课堂练习 + 习题核心考点）。</li>
+<li>能对照评分标准表（示例框架，各公司自定），为自己的主项目陈述做一次 5 维自评，并填出面试准备矩阵初版（对应课堂工作坊产出）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点</strong>：五大题型地图——每类「典型问法、考察本质、答题框架、高频失误」，这是本周所有课（W8D2–D3 精讲、W8D4–D5 模拟）的总纲。</li>
+<li><strong>难点一</strong>：学员容易把面试理解为「临场发挥」，意识不到五轮流程是同一个假设的五次验证——课程要用「面试官视角自白」完成这个认知转变。</li>
+<li><strong>难点二</strong>：题型归类时存在边界模糊（如项目深挖与数据题交叉），要教「看考察意图，不看字面」的归类方法。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面试流程图（待制）</td>
+<td>环节一五轮总览</td>
+<td>本课配图清单图 1</td>
+</tr>
+<tr>
+<td>题型地图（待制）</td>
+<td>环节二五大题型总览</td>
+<td>本课配图清单图 2</td>
+</tr>
+<tr>
+<td>导学案</td>
+<td>预习弹药盘点 + 课堂矩阵填写</td>
+<td>本课 03-导学案</td>
+</tr>
+<tr>
+<td>评分标准表（板书/PPT）</td>
+<td>环节三教学</td>
+<td>08-PPT大纲第 12–14 页</td>
+</tr>
+<tr>
+<td>学员投递进展表（课前收集）</td>
+<td>导入战报</td>
+<td>讲师课前汇总</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8 min</td>
+<td>导入：投递战报与面试官自白</td>
+<td>播报全班投递进展（已投递家数 / 已约面家数）；「面试官视角自白」：一位做了十年面试官的朋友说，他 20 分钟内判断一个人主要靠三件事——项目是不是真做过的、遇到坑时的反应、数据张口能不能报出来；抛出金句「面试是开卷考试——考的不是你有多聪明，是你准备了多少」</td>
+<td>战报冲击 + 提问</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–23 min</td>
+<td>环节一：面试五轮流程逐轮拆解</td>
+<td>用面试流程图讲 HR→业务→总监→交叉→HRD 五轮：每轮谁面 / 考什么 / 淘汰点 / 准备动作；强调五轮是同一假设的五次验证</td>
+<td>讲授 + 图示 + 提问</td>
+<td>导学案五轮流程笔记表</td>
+</tr>
+<tr>
+<td>23–50 min</td>
+<td>环节二：五大题型地图逐类精讲（核心）</td>
+<td>用题型地图讲五大题型：每类典型问法 / 考察本质 / 答题框架索引 / 高频失误；每类现场演练 1 问快速归类</td>
+<td>讲授 + 快问快答</td>
+<td>导学案题型笔记表</td>
+</tr>
+<tr>
+<td>50–62 min</td>
+<td>环节三：评分标准揭秘（示例框架）</td>
+<td>讲评分维度：逻辑结构 / 项目真实度 / 技术理解 / 数据思维 / 表达与气场（示例框架，各公司自定）；学员用 5 维表给自己的主项目陈述打分</td>
+<td>讲授 + 自评</td>
+<td>5 维自评分数</td>
+</tr>
+<tr>
+<td>62–84 min</td>
+<td>环节四：面试准备矩阵工作坊</td>
+<td>学员填写个人面试准备矩阵（五行题型 × 四列：高频问法 / 我的答案骨架 / 案例与数据 / 待补强项）；两人一组互审：各抽 1 问，让对方扮演面试官试问 1 轮；讲师巡场</td>
+<td>工作坊 + 互审</td>
+<td>矩阵初版</td>
+</tr>
+<tr>
+<td>84–90 min</td>
+<td>总结与作业</td>
+<td>三句话收束 + 布置矩阵补全作业（每类 ≥4 问）+ 预告周二高频题精讲 I</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>（时间拆分总和 = 8+15+27+12+22+6 = 90 分钟）</p>
+<h2>六、五轮流程逐轮教学（环节一详细内容）</h2>
+<blockquote>
+<p>教学口径：以「通用的 AI PM 校招 / 社招社招通用流程」为教学示例，标注「不同公司轮次会合并或增减，五轮是全集框架」。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>轮次</th>
+<th>谁面</th>
+<th>考什么</th>
+<th>典型淘汰点</th>
+<th>学员的准备动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 轮 · HR 初筛</td>
+<td>招聘 HR，10–20 分钟电话 / 视频</td>
+<td>求职动机、稳定性、薪资范围口径、沟通表达基本盘</td>
+<td>动机含糊（「先看看机会」）、转行理由前后矛盾、薪资报价口径混乱</td>
+<td>备好 30 秒自我介绍；转行理由一句话版；薪资区间想清楚再说；准备 1 个得体反问</td>
+</tr>
+<tr>
+<td>第 2 轮 · 业务面</td>
+<td>未来直属上级 / 同级 PM，45–60 分钟</td>
+<td>项目真实度（逐层深挖）、场景设计与方法体系、协作与推进能力</td>
+<td>项目讲不清细节、追问两层就露馅、只讲结果没有方法</td>
+<td>主项目 STAR 版 + 追问防御链；题型弹药逐类盘点（W8D2 专训）</td>
+</tr>
+<tr>
+<td>第 3 轮 · 总监面</td>
+<td>部门总监 / 负责人，30–45 分钟</td>
+<td>视野与判断力（为什么这么做）、成长性、与团队方向匹配</td>
+<td>只会讲执行、说不出取舍逻辑、把失败全归因外部</td>
+<td>每个项目补「为什么」层复盘；准备 2 条有依据的行业观点</td>
+</tr>
+<tr>
+<td>第 4 轮 · 交叉面</td>
+<td>协作方（研发负责人 / 设计 / 运营），30–40 分钟</td>
+<td>好不好合作、懂不懂协作方的语言、需求是否靠谱</td>
+<td>把研发当执行资源、需求描述模糊、出问题先甩锅</td>
+<td>站在研发视角重述主项目；准备 1 个「分歧如何解决」的协作故事</td>
+</tr>
+<tr>
+<td>第 5 轮 · HRD 面</td>
+<td>HR 负责人，20–30 分钟</td>
+<td>价值观与稳定性、抗压表现、薪酬谈判、入职意愿确认</td>
+<td>态度反复、薪酬期望失控、输出对前雇主的负面情绪</td>
+<td>薪酬三线（底线 / 目标 / 开口价）；离职原因终版口径；3 个有水平的反问（W8D5 专训）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>逐轮教学口播要点</strong>：<br />
+- 第 1 轮强调「HR 初筛不是走过场」：她按画像筛人，命中率比学员想象的高，动机含糊是转行学员第一大死因。<br />
+- 第 2 轮强调「这是权重最高的一轮」：本课五大题型里至少三类（项目深挖 / 场景设计 / 数据）在这一轮集中出现。<br />
+- 第 3 轮强调「总监不看细节看判断」：同样讲项目，业务面讲「怎么做」，总监面讲「为什么这么做、别的路为什么不行」。<br />
+- 第 4 轮强调「交叉面是协作方的一票」：研发负责人否掉一个 PM 的常见理由是「需求说不清楚、将来没法合作」。<br />
+- 第 5 轮强调「HRD 面不是聊天」：价值观、稳定性、薪酬三件事都在暗中打分，关键判断点是「你到底想不想来、能待多久」。</p>
+<h2>七、五大题型逐类教学（环节二详细内容）</h2>
+<table>
+<thead>
+<tr>
+<th>题型</th>
+<th>典型问法</th>
+<th>考察本质</th>
+<th>答题框架索引</th>
+<th>高频失误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 项目深挖</td>
+<td>「介绍你最有成就感的项目」「这个数据怎么统计的？分母是什么」「如果重来一次你会改什么」</td>
+<td>真实性 + 深度 + 复盘能力——验证「项目是不是你真做的」</td>
+<td>STAR + 追问防御链（数据→取舍→失败→复盘），W8D2 详讲</td>
+<td>只讲结果不讲过程；数据模糊（「涨了很多」）；把团队成果说成个人</td>
+</tr>
+<tr>
+<td>② 场景设计</td>
+<td>「从 0 设计一款 AI 面试助手」「给你一款 AI 客服，你怎么做冷启动」</td>
+<td>结构化思维 + 方法论——看你怎么拆一个没做过的题</td>
+<td>人群-场景-痛点-方案-指标-风险，W8D2 详讲</td>
+<td>上来就讲功能；没有指标；没有取舍和优先级</td>
+</tr>
+<tr>
+<td>③ 技术理解</td>
+<td>「RAG 和微调怎么选」「Agent 和工作流的边界」「幻觉怎么治理」</td>
+<td>懂到能和工程师对话，不需要懂到能写代码</td>
+<td>W1–W3 决策口诀：加知识用 RAG、改行为用微调、先问非 AI 能不能解决；W8D3 详讲</td>
+<td>装懂硬撑；背名词堆概念；追问一层就穿</td>
+</tr>
+<tr>
+<td>④ 数据题</td>
+<td>「你的产品核心指标是什么」「DAU 跌了 15% 怎么排查」</td>
+<td>数据思维——用数据定位问题、评估价值</td>
+<td>北极星指标 + 异动排查（先拆内外因，再分渠道分群），W8D3 详讲</td>
+<td>说「我会去问数据同学」；只报数不解释；没有指标分层</td>
+</tr>
+<tr>
+<td>⑤ 开放行为</td>
+<td>「讲一次你的失败」「和研发吵过架吗」「为什么转行」</td>
+<td>性格、自省能力、稳定性——看你这个人</td>
+<td>STAR + 反思收尾（W8D3 详讲）</td>
+<td>现编故事；踩红线（抱怨前雇主）；只讲事件没有反思</td>
+</tr>
+</tbody>
+</table>
+<p><strong>归类方法教学</strong>（本环节方法论落点）：归类看「考察意图」，不看「字面」。同一个项目，问「数据怎么统计的」是项目深挖（验真），问「这个数据为什么跌」是数据题（验思维）；判断依据是——面试官想验证什么。</p>
+<h2>八、评分标准表教学（环节三详细内容）</h2>
+<blockquote>
+<p>以下为「示例框架，各公司自定」，用于教学演示，让学员知道打分是怎么发生的。实际权重与量表随公司、轮次、面试官个人而变。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>考察内容</th>
+<th>5 分表现（示例）</th>
+<th>2 分表现（示例）</th>
+<th>权重（示例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逻辑结构</td>
+<td>回答是否有框架、分层、优先级</td>
+<td>先结论后展开，有取舍有依据</td>
+<td>想到哪说到哪，没有结构</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>项目真实度</td>
+<td>项目细节、数据、决策过程是否经得起追问</td>
+<td>任意追问两层仍自洽，数据张口可报</td>
+<td>追问即模糊，数据「大概是」</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>技术理解</td>
+<td>技术边界与选型逻辑</td>
+<td>能讲清为什么这么选、代价是什么</td>
+<td>只会背名词，无法对话</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>数据思维</td>
+<td>指标设计与归因能力</td>
+<td>指标分层清晰，异动排查有方法</td>
+<td>没有指标概念，归因靠猜</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>表达与气场</td>
+<td>语速、条理、自信度、倾听</td>
+<td>沉稳清晰，敢说「我不知道」</td>
+<td>背稿痕迹重，眼神躲闪</td>
+<td>15%</td>
+</tr>
+</tbody>
+</table>
+<p>教学落点：① 项目真实度权重最高——呼应面试官自白三件事；② 「敢说不知道」在 5 分表现里——纠正「答不上来就完了」的恐惧；③ 每个维度都能通过准备补强——呼应金句「面试是开卷考试」。</p>
+<h2>九、课堂提问设计（7 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「HR 初筛只有 15 分钟，她在淘汰谁？」</td>
+<td>环节一第 1 轮</td>
+<td>动机含糊、口径矛盾、表达混乱的人——她按画像筛人，不是走过场</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「业务面和总监面都让你讲项目，问法有什么不同？」</td>
+<td>环节一第 2–3 轮</td>
+<td>业务面问「怎么做」验执行，总监面问「为什么这么做」验判断；追问深度不同</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「交叉面为什么让研发负责人也来面你？」</td>
+<td>环节一第 4 轮</td>
+<td>验证协作性：需求说不说得清、好不好合作；交叉面有一票否决的分量</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「场景设计题，面试官真的在乎你的方案对不对吗？」</td>
+<td>环节二题型②</td>
+<td>不全在乎——在乎你怎么拆问题：有没有人群、场景、指标、取舍；方案对错其次</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「面试官问『你最大的缺点』，他想听到什么？」</td>
+<td>环节二题型⑤</td>
+<td>真实的缺点 + 正在做的改进；想验证自省能力，不是想听「我太追求完美」</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「同一轮里，两个面试官对你评分差距很大，最可能说明什么？」</td>
+<td>环节三评分表</td>
+<td>说明你在某个维度表现不稳定（如表达时好时坏），或两人权重侧重不同——引出「稳定输出靠准备」</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「为什么说反问环节不能说『没有问题』？」</td>
+<td>环节四工作坊前</td>
+<td>放弃了唯一一次主动提问的机会，也显得没有诚意；准备 2–3 个反问是标准动作</td>
+</tr>
+</tbody>
+</table>
+<h2>十、板书要点</h2>
+<pre><code>面试全景 = 流程 × 题型 × 评分
+
+五轮流程：HR → 业务 → 总监 → 交叉 → HRD
+（同一假设的五次验证：你能不能来干活）
+
+五大题型：项目深挖 / 场景设计 / 技术理解 / 数据 / 开放行为
+归类口诀：看考察意图，不看字面
+
+评分五维（示例框架）：逻辑 20% · 项目真实 30% · 技术 15% · 数据 20% · 表达 15%
+
+金句：面试是开卷考试——考的不是你有多聪明，是你准备了多少
+</code></pre>
+<h2>十一、课堂练习参考答案（题型归类快练，环节二用）</h2>
+<table>
+<thead>
+<tr>
+<th>快练问题</th>
+<th>归类</th>
+<th>判断依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「你项目里的采纳率 68% 是怎么统计的？」</td>
+<td>项目深挖</td>
+<td>验数据真实性，分母口径是验真钩子</td>
+</tr>
+<tr>
+<td>「如果预算砍半，你的方案先砍什么？」</td>
+<td>场景设计</td>
+<td>看取舍与优先级，是没做过的题</td>
+</tr>
+<tr>
+<td>「你们没有算法团队，为什么敢上 RAG？」</td>
+<td>技术理解</td>
+<td>考技术选型的边界判断</td>
+</tr>
+</tbody>
+</table>
+<h2>十二、学员易错点预判与应对</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把面试当答辩背稿</td>
+<td>矩阵答案写成全文背诵，一试问就卡壳</td>
+<td>教「骨架不背稿」：矩阵只写关键词骨架，用工作坊互审试问逼出口语化表达；示范「背稿者」与「有骨架的人」的差别</td>
+</tr>
+<tr>
+<td>每轮答同一套话</td>
+<td>业务面、总监面、交叉面用完全相同的项目版本</td>
+<td>用五轮流程表逐轮标注「同一项目的不同讲法」：业务面讲执行、总监面讲判断、交叉面讲协作；要求矩阵答案骨架按轮次做变体</td>
+</tr>
+<tr>
+<td>忽视反问环节</td>
+<td>结尾说「没有问题了」</td>
+<td>讲反问的三种类型（业务型 / 团队型 / 成长型），要求矩阵里每家公司备 2 问；用提问 7 收束</td>
+</tr>
+<tr>
+<td>数据张口报不出</td>
+<td>被问「采纳率多少」现场翻手机查</td>
+<td>呼应面试官自白第三件事「数据张口能不能报出来」；工作坊互审时专门抽查数据问法，要求把核心 3 个数字背进矩阵</td>
+</tr>
+<tr>
+<td>题型归类凭字面</td>
+<td>把「数据怎么统计的」归为数据题</td>
+<td>教「看考察意图」归类法：验真=项目深挖，验思维=数据题；用课堂快练 3 问现场纠偏</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

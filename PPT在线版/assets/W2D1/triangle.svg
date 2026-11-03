@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="780" fill="#FFFFFF"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">能力-成本-延迟三角图</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">单维选择会失灵：三个角都要看——先定能力线，再比成本与延迟，最后合规兜底</text>
+<!-- 三角主体 -->
+<path d="M600,330 L250,640 L950,640 Z" fill="none" stroke="#C9C2DE" stroke-width="2" stroke-dasharray="6,5"/>
+<text x="600" y="522" text-anchor="middle" font-size="13" fill="#6B7280">选型三角</text>
+<!-- 能力卡 -->
+<rect x="60" y="100" width="380" height="150" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="80" y="132" font-size="16" font-weight="700" fill="#5B21B6">能力：先画能力线，再挑选</text>
+<text x="80" y="160" font-size="13" fill="#221E33">① 列出任务的最低能力要求</text>
+<text x="80" y="182" font-size="13" fill="#221E33">② 用横评表初筛候选模型</text>
+<text x="80" y="204" font-size="13" fill="#221E33">③ 够用就好，不为用不到的能力买单</text>
+<line x1="440" y1="175" x2="575" y2="305" stroke="#A5A1B8" stroke-width="1"/>
+<!-- 成本卡 -->
+<rect x="40" y="420" width="340" height="180" rx="12" fill="#E8EFFD" stroke="#2563EB" stroke-width="1.5"/>
+<text x="60" y="452" font-size="16" font-weight="700" fill="#2563EB">成本：三层都要算</text>
+<text x="60" y="482" font-size="13" fill="#221E33">调用成本：以官网实时价格估算</text>
+<text x="60" y="506" font-size="13" fill="#221E33">运维成本：接入、监控、版本升级</text>
+<text x="60" y="530" font-size="13" fill="#221E33">切换成本：日后换模型的迁移代价</text>
+<line x1="380" y1="530" x2="270" y2="610" stroke="#A5A1B8" stroke-width="1"/>
+<!-- 延迟卡 -->
+<rect x="820" y="420" width="340" height="180" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="840" y="452" font-size="16" font-weight="700" fill="#5B21B6">延迟：用户体感分场景</text>
+<text x="840" y="482" font-size="13" fill="#221E33">交互式场景：秒级响应可感知</text>
+<text x="840" y="506" font-size="13" fill="#221E33">后台批处理：分钟级可接受</text>
+<text x="840" y="530" font-size="13" fill="#221E33">用真实场景实测，别只看均值</text>
+<line x1="820" y1="530" x2="930" y2="610" stroke="#A5A1B8" stroke-width="1"/>
+<!-- 顶点 -->
+<circle cx="600" cy="330" r="38" fill="#7C3AED"/>
+<text x="600" y="337" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">能力</text>
+<circle cx="250" cy="640" r="38" fill="#2563EB"/>
+<text x="250" y="647" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">成本</text>
+<circle cx="950" cy="640" r="38" fill="#5B21B6"/>
+<text x="950" y="647" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">延迟</text>
+<!-- 收束顺序 -->
+<text x="40" y="720" font-size="14" font-weight="700" fill="#221E33">收束顺序</text>
+<rect x="160" y="692" width="240" height="44" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="280" y="720" text-anchor="middle" font-size="14" font-weight="700" fill="#5B21B6">① 先定能力线</text>
+<line x1="404" y1="714" x2="444" y2="714" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="452" y="692" width="260" height="44" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="582" y="720" text-anchor="middle" font-size="14" font-weight="700" fill="#221E33">② 再比成本与延迟</text>
+<line x1="716" y1="714" x2="756" y2="714" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="764" y="692" width="290" height="44" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="909" y="720" text-anchor="middle" font-size="14" font-weight="700" fill="#221E33">③ 最后合规兜底（硬门槛）</text>
+</svg>

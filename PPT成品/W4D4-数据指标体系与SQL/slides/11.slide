@@ -1,0 +1,39 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>11 / 18</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>北极星指标三标准</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 26 }} />
+  <Box style={{ flexDirection: 'row', gap: 24, width: '100%', alignItems: 'flex-start' }}>
+    <Box style={{ width: 576, flexDirection: 'column', gap: 14 }}>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 22px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>一、绑价值</Text>
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 6, lineHeight: 1.5 }}>自检问句：这个数字涨的时候，用户是真的多得到了价值吗？</Text>
+      </Box>
+      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '14px 22px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>二、可影响</Text>
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 6, lineHeight: 1.5 }}>自检问句：下个迭代我们做什么，能让它动？</Text>
+      </Box>
+      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 22px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>三、可拆解</Text>
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 6, lineHeight: 1.5 }}>自检问句：它跌了，我能查到是哪个环节跌的吗？</Text>
+      </Box>
+    </Box>
+    <Box style={{ width: 560, flexDirection: 'column' }}>
+      <Box style={{ width: 560, height: 336, borderRadius: 8, border: '1px solid #E5E7EB', overflow: 'hidden' }}>
+        <Image src="assets/metrics-system.svg" style={{ width: 560, height: 336, objectFit: 'contain' }} />
+      </Box>
+      <Box style={{ width: 560, background: '#FFFFFF', border: '2px solid #7C3AED', borderRadius: 8, padding: '12px 18px', marginTop: 12, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 10, height: 10, background: '#7C3AED', borderRadius: 5 }} />
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>北极星：金字塔最上面、全公司抬头看的一个数</Text>
+      </Box>
+    </Box>
+  </Box>
+  <Box style={{ width: '100%', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 10, padding: '18px 28px', marginTop: 22 }}>
+    <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>北极星一换，全团队的动作跟着换</Text>
+  </Box>
+</Slide>

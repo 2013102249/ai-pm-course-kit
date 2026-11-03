@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 104 1140 562" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="740" fill="#FFFFFF"/>
+<rect x="36" y="40" width="4" height="22" fill="#7C3AED"/>
+<text x="50" y="57" font-size="20" font-weight="700" fill="#221E33">六大赛道对比表</text>
+<text x="50" y="78" font-size="12" fill="#6B7280">四个维度过一遍赛道——离开教室遇到第七个赛道，也这么过一遍</text>
+
+<!-- 表头 -->
+<rect x="36" y="110" width="1128" height="46" fill="#7C3AED"/>
+<text x="96" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">赛道</text>
+<text x="302" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">典型岗位</text>
+<text x="508" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">入门门槛</text>
+<text x="628" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">AI 结合度</text>
+<text x="926" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">适合人群</text>
+
+<!-- 赛道列底色 -->
+<rect x="36" y="156" width="120" height="504" fill="#F1EBFD"/>
+
+<!-- 行1 教育 -->
+<text x="96" y="214" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">教育</text>
+<text x="172" y="196" font-size="13" fill="#4A4560">AI 学习应用产品 /</text>
+<text x="172" y="216" font-size="13" fill="#4A4560">教育信息化解决方案</text>
+<rect x="476" y="184" width="64" height="30" rx="15" fill="#3B82F6"/>
+<text x="508" y="204" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">中</text>
+<rect x="596" y="184" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="628" y="204" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<text x="704" y="206" font-size="13" fill="#4A4560">有教学、教研、教育运营背景者；追求岗位池稳定的转行层</text>
+<!-- 行2 金融 -->
+<text x="96" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">金融</text>
+<text x="172" y="280" font-size="13" fill="#4A4560">风控策略产品 / 金融科技产品</text>
+<rect x="476" y="268" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="508" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<rect x="596" y="268" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="628" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<text x="704" y="290" font-size="13" fill="#4A4560">有银行、证券、保险从业背景者；数理与风控背景者</text>
+<!-- 行3 内容营销 -->
+<text x="96" y="382" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">内容营销</text>
+<text x="172" y="364" font-size="13" fill="#4A4560">AI 营销工具产品 / 内容平台产品</text>
+<rect x="476" y="352" width="64" height="30" rx="15" fill="#BFDBFE"/>
+<text x="508" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A8A">低</text>
+<rect x="596" y="352" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="628" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<text x="704" y="374" font-size="13" fill="#4A4560">有市场、运营、创意背景者；想快速切入的转行层</text>
+<!-- 行4 电商零售 -->
+<text x="96" y="466" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">电商零售</text>
+<text x="172" y="448" font-size="13" fill="#4A4560">平台 AI 应用 / 导购与商家工具</text>
+<rect x="476" y="436" width="64" height="30" rx="15" fill="#3B82F6"/>
+<text x="508" y="456" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">中</text>
+<rect x="596" y="436" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="628" y="456" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<text x="704" y="458" font-size="13" fill="#4A4560">有电商、零售运营背景者；追求大众赛道的转行层</text>
+<!-- 行5 企业 SaaS -->
+<text x="96" y="550" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">企业 SaaS</text>
+<text x="172" y="532" font-size="13" fill="#4A4560">Copilot / 知识库 /</text>
+<text x="172" y="552" font-size="13" fill="#4A4560">Agent 工作流产品</text>
+<rect x="470" y="520" width="76" height="30" rx="15" fill="#2563EB"/>
+<text x="508" y="540" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">中—高</text>
+<rect x="590" y="520" width="76" height="30" rx="15" fill="#2563EB"/>
+<text x="628" y="540" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">中—高</text>
+<text x="704" y="542" font-size="13" fill="#4A4560">有 ToB 与解决方案经验者；愿意深耕行业做深者</text>
+<!-- 行6 出海 -->
+<text x="96" y="634" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">出海</text>
+<text x="172" y="616" font-size="13" fill="#4A4560">海外增长产品 / AI 工具出海产品</text>
+<rect x="476" y="604" width="64" height="30" rx="15" fill="#3B82F6"/>
+<text x="508" y="624" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">中</text>
+<rect x="596" y="604" width="64" height="30" rx="15" fill="#1E40AF"/>
+<text x="628" y="624" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">高</text>
+<text x="704" y="626" font-size="13" fill="#4A4560">英语好、数据与增长背景者；能接受远程协作者</text>
+
+<!-- 网格 -->
+<line x1="36" y1="156" x2="1164" y2="156" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="240" x2="1164" y2="240" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="324" x2="1164" y2="324" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="408" x2="1164" y2="408" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="492" x2="1164" y2="492" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="576" x2="1164" y2="576" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="36" y1="660" x2="1164" y2="660" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="156" y1="110" x2="156" y2="660" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="448" y1="110" x2="448" y2="660" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="568" y1="110" x2="568" y2="660" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="688" y1="110" x2="688" y2="660" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="36" y="110" width="1128" height="550" fill="none" stroke="#E8E5F1" stroke-width="1.2"/>
+
+<text x="600" y="696" text-anchor="middle" font-size="12" fill="#7A7590">薪资带宽参考表由机构每年更新，不随本图发布；门槛与结合度定档依据公开行业常识</text>
+</svg>

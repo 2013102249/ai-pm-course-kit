@@ -1,0 +1,41 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>PLG：产品驱动增长</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 28, gap: 20 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, padding: '24px 30px', background: '#F5F3FF', borderRadius: 12 }}>
+            <Box style={{ width: 36, height: 36, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+            </Box>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>对话即体验</Text>
+            <Text style={{ fontSize: 17, color: '#64748B' }}>对话即注册，体验门槛前置归零</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, padding: '24px 30px', background: '#EFF6FF', borderRadius: 12 }}>
+            <Box style={{ width: 36, height: 36, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+            </Box>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>生成结果可分享</Text>
+            <Text style={{ fontSize: 17, color: '#64748B' }}>生成结果自带分享属性，结果卡片即广告</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, padding: '24px 30px', background: '#F5F3FF', borderRadius: 12 }}>
+            <Box style={{ width: 36, height: 36, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+            </Box>
+            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>免费额度完整体验核心价值</Text>
+            <Text style={{ fontSize: 17, color: '#64748B' }}>免费也能走完价值闭环，转化才有可能</Text>
+        </Box>
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 30, padding: '18px 28px', background: '#EFF6FF', borderRadius: 12, borderLeft: '5px solid #2563EB' }}>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>
+            <span style={{ fontWeight: 'bold', color: '#2563EB' }}>反面提醒：</span>价值不硬时，负面口碑同样被加速——PLG 放大的是产品本身。
+        </Text>
+    </Box>
+</Slide>

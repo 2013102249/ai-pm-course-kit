@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative', fontFamily: 'Microsoft YaHei' }}>
+    <Text style={{ position: 'absolute', right: 60, bottom: 26, fontSize: 14, color: '#64748B' }}>10 / 10</Text>
+    <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>收尾：W7 就业冲刺</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 16 }} />
+    </Box>
+    <Box style={{ marginTop: 28, flexDirection: 'row', gap: 20, height: 250 }}>
+        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 6 }}>
+                <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#7C3AED' }}>24</Text>
+                <Text style={{ fontSize: 18, color: '#64748B', paddingBottom: 8 }}>小时内</Text>
+            </Box>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>复盘文档提交</Text>
+            <Text style={{ fontSize: 16, color: '#64748B' }}>标准：外行能看懂</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+            </Box>
+            <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#2563EB' }}>W7</Text>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>五天安排表</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 6 }}>
+                <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#7C3AED' }}>3</Text>
+                <Text style={{ fontSize: 18, color: '#64748B', paddingBottom: 8 }}>分钟</Text>
+            </Box>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>给外行讲产品</Text>
+        </Box>
+    </Box>
+    <Box style={{ marginTop: 28, height: 210, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 16, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#FFFFFF' }}>「路演是产品的浓缩，产品是思考的浓缩」</Text>
+    </Box>
+</Slide>

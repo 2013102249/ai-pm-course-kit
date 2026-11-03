@@ -1,0 +1,72 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>08 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三步找法：定核心价值 → 找关键行为 → 压缩路径</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 30, flexDirection: 'row', alignItems: 'stretch', gap: 12 }}>
+        <Box style={{ width: 344, padding: '24px 26px', background: '#F5F3FF', borderRadius: 12, gap: 14 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>定核心价值</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>产物</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>核心价值一句话：只留一个主价值</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>易错点</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>列出五六个价值，一个都没做透</Text>
+            </Box>
+        </Box>
+        <Box style={{ justifyContent: 'center' }}>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+        </Box>
+        <Box style={{ width: 344, padding: '24px 26px', background: '#EFF6FF', borderRadius: 12, gap: 14 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>找关键行为</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>产物</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>关键行为假设，用留存数据交叉验证</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>易错点</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>拍脑袋定一个行为，从不用留存数据回验</Text>
+            </Box>
+        </Box>
+        <Box style={{ justifyContent: 'center' }}>
+            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+        </Box>
+        <Box style={{ width: 344, padding: '24px 26px', background: '#F5F3FF', borderRadius: 12, gap: 14 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>压缩路径</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>产物</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>激活路径图（每步保留理由）</Text>
+            </Box>
+            <Box style={{ gap: 6 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>易错点</Text>
+                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>做成加引导弹窗，路径只会变长不会变短</Text>
+            </Box>
+        </Box>
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 30, padding: '16px 28px', background: '#7C3AED', borderRadius: 12, alignItems: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>压缩是减法，不是加引导</Text>
+    </Box>
+</Slide>

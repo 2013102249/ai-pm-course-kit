@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG 交互演示 · AI 产品经理训练营</title>
+<style>
+  :root{
+    --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --purple-border:#DDD2F7;
+    --blue:#2563EB; --blue-light:#E8EFFD; --blue-border:#C9D9F8;
+    --green:#059669; --green-light:#E7F6F0; --green-border:#C2E8D8;
+    --red:#DC2626; --red-light:#FEEEEF; --red-border:#F5C6CB;
+    --ink:#221E33; --ink2:#4A4560; --muted:#7A7590; --faint:#A5A1B8;
+    --bg:#F7F6FB; --card:#FFFFFF; --border:#E8E5F1; --border-soft:#F0EEF7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:14.5px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  /* 头部 */
+  .hero{background:linear-gradient(135deg,#2A1B52 0%,#4A2A85 50%,#2B4A9E 100%);color:#fff;padding:34px 0 30px}
+  .hero .badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:2px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 13px;color:rgba(255,255,255,.85);margin-bottom:12px}
+  .hero .badge .dot{width:6px;height:6px;border-radius:50%;background:#C4B5FD;box-shadow:0 0 8px #C4B5FD}
+  .hero h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+  .hero p{font-size:13px;color:rgba(255,255,255,.75);margin-top:6px;max-width:760px}
+  /* 问题选择 */
+  .qbar{background:var(--card);border-bottom:1px solid var(--border);padding:12px 0}
+  .qbar .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .qbar .lbl{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-right:2px}
+  .qbtn{border:1px solid var(--border);background:#FBFAFD;border-radius:999px;padding:6px 14px;font-size:12.8px;color:var(--ink2);cursor:pointer;transition:.15s;font-family:inherit}
+  .qbtn:hover{border-color:var(--purple);color:var(--purple-deep)}
+  .qbtn.on{background:var(--purple);border-color:var(--purple);color:#fff;font-weight:600}
+  /* 步骤条 */
+  .stepper{background:var(--card);border-bottom:1px solid var(--border);padding:14px 0}
+  .stepper .wrap{display:flex;gap:6px;overflow-x:auto}
+  .stp{flex:1;min-width:96px;border:1px solid var(--border);border-radius:12px;background:#FBFAFD;padding:10px 8px;text-align:center;cursor:pointer;transition:.15s;position:relative}
+  .stp .no{width:22px;height:22px;border-radius:50%;background:#EFEDF5;color:var(--muted);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 5px;transition:.15s}
+  .stp .nm{font-size:12.5px;font-weight:600;color:var(--ink2)}
+  .stp .en{font-size:10px;color:var(--faint);margin-top:1px}
+  .stp.done .no{background:var(--green);color:#fff}
+  .stp.done .nm{color:var(--green)}
+  .stp.active{border-color:var(--purple);background:var(--purple-light);box-shadow:0 2px 10px rgba(124,58,237,.12)}
+  .stp.active .no{background:var(--purple);color:#fff}
+  .stp.active .nm{color:var(--purple-deep)}
+  .stp.running .no{background:var(--blue);color:#fff;animation:pulse 1s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+  /* 控制条 */
+  .ctrl{padding:14px 0 0}
+  .ctrl .wrap{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{border:none;border-radius:10px;padding:9px 20px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s}
+  .btn-main{background:var(--purple);color:#fff}
+  .btn-main:hover{background:var(--purple-deep)}
+  .btn-main:disabled{background:#C9C2DE;cursor:not-allowed}
+  .btn-ghost{background:#fff;border:1px solid var(--border);color:var(--ink2)}
+  .btn-ghost:hover{border-color:var(--purple);color:var(--purple-deep)}
+  /* 主面板 */
+  main{padding:16px 0 8px}
+  .panel{display:none}
+  .panel.on{display:block;animation:fadein .3s}
+  @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:14px}
+  .card h3{font-size:15.5px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .card h3 .tag{font-size:10.5px;font-weight:700;letter-spacing:1px;color:var(--purple);background:var(--purple-light);border:1px solid var(--purple-border);border-radius:5px;padding:2px 8px}
+  .card .sub{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .docbox{background:#FBFAFD;border:1px solid var(--border);border-radius:12px;padding:16px;font-size:13px;color:var(--ink2)}
+  .docbox h4{font-size:14px;color:var(--ink);margin-bottom:8px}
+  .docbox p{margin-bottom:8px}
+  .docbox table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+  .docbox th,.docbox td{border:1px solid var(--border);padding:5px 8px;text-align:left}
+  .docbox th{background:var(--purple-light);color:var(--purple-deep);font-weight:600}
+  .parse-list{list-style:none}
+  .parse-list li{display:flex;justify-content:space-between;padding:8px 10px;border-bottom:1px dashed var(--border-soft);font-size:13px}
+  .parse-list li:last-child{border-bottom:none}
+  .parse-list .v{font-weight:700;color:var(--purple-deep);font-variant-numeric:tabular-nums}
+  /* 分块 */
+  .chunk{background:#FBFAFD;border:1px solid var(--border);border-left:4px solid var(--purple);border-radius:10px;padding:12px 14px;margin-bottom:10px;font-size:13px;color:var(--ink2)}
+  .chunk .cid{font-size:11px;font-weight:700;color:var(--purple);letter-spacing:1px;margin-bottom:4px}
+  .chunk .ov{background:var(--amber-light,#FDF3E3);color:#B45309;border-radius:4px;padding:0 5px;font-size:11.5px;font-weight:600}
+  .chunkhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+  .seg{display:flex;border:1px solid var(--border);border-radius:9px;overflow:hidden}
+  .seg button{border:none;background:#fff;padding:6px 14px;font-size:12.5px;cursor:pointer;color:var(--ink2);font-family:inherit;border-right:1px solid var(--border)}
+  .seg button:last-child{border-right:none}
+  .seg button.on{background:var(--purple);color:#fff;font-weight:600}
+  /* 向量指纹 */
+  .vecrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+  .veccell{background:#FBFAFD;border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}
+  .veccell .cid{font-size:11px;font-weight:700;color:var(--purple);letter-spacing:1px;margin-bottom:8px}
+  .vecgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;margin-bottom:8px}
+  .vecgrid i{aspect-ratio:1;border-radius:2px;display:block}
+  .veccell .dim{font-size:11px;color:var(--faint)}
+  /* 分数表 */
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{background:#FBFAFD;color:var(--muted);font-size:11.5px;letter-spacing:1px;font-weight:600;text-align:left;padding:9px 10px;border-bottom:2px solid var(--border)}
+  .tbl td{padding:9px 10px;border-bottom:1px solid var(--border-soft);color:var(--ink2)}
+  .tbl tr.top td{background:var(--purple-light)}
+  .tbl tr.top td:first-child{border-radius:8px 0 0 8px}
+  .tbl tr.top td:last-child{border-radius:0 8px 8px 0}
+  .tbl .rank{font-weight:800;color:var(--purple-deep);font-variant-numeric:tabular-nums}
+  .tbl .sc{font-weight:700;font-variant-numeric:tabular-nums}
+  .tbl .sc.hi{color:var(--purple-deep)}
+  .arrowcell{color:var(--faint);font-size:12px}
+  .up{color:var(--green);font-weight:700}
+  .down{color:var(--red);font-weight:700}
+  .badge-in{display:inline-block;font-size:10.5px;font-weight:700;border-radius:5px;padding:1px 7px;letter-spacing:.5px}
+  .badge-in.y{background:var(--green-light);color:var(--green)}
+  .badge-in.n{background:#F3F1FA;color:var(--muted)}
+  /* 生成 */
+  .answer{background:#FBFAFD;border:1px solid var(--border);border-radius:12px;padding:18px;font-size:14px;color:var(--ink2);min-height:120px;white-space:pre-wrap}
+  .answer .cursor{display:inline-block;width:8px;height:16px;background:var(--purple);vertical-align:-2px;animation:blink .8s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .refs{margin-top:14px}
+  .refs .rt{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:8px}
+  .refcard{background:var(--blue-light);border:1px solid var(--blue-border);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--ink2);margin-bottom:8px}
+  .refcard b{color:var(--blue)}
+  /* 对比 */
+  .compare{margin:6px 0 10px}
+  .compare .sw{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;cursor:pointer;user-select:none}
+  .compare .sw .track{width:40px;height:22px;border-radius:999px;background:#E3E0EE;position:relative;transition:.2s;flex:none}
+  .compare .sw .track::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .compare.on .sw .track{background:var(--purple)}
+  .compare.on .sw .track::after{left:21px}
+  .compare .sw .t{font-size:13.5px;font-weight:600;color:var(--ink)}
+  .compare .sw .d{font-size:12px;color:var(--muted)}
+  .cmpgrid{display:none;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+  .compare.on .cmpgrid{display:grid}
+  .cmpcard{border-radius:12px;padding:16px;font-size:13px}
+  .cmpcard.bad{background:var(--red-light);border:1px solid var(--red-border);color:var(--ink2)}
+  .cmpcard.good{background:var(--green-light);border:1px solid var(--green-border);color:var(--ink2)}
+  .cmpcard .h{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+  .cmpcard.bad .h{color:var(--red)}
+  .cmpcard.good .h{color:var(--green)}
+  .cmpnote{margin-top:12px;background:var(--purple-light);border:1px solid var(--purple-border);border-radius:10px;padding:10px 16px;font-size:12.8px;color:var(--purple-deep)}
+  details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:14px 0 30px}
+  details summary{font-size:13.5px;font-weight:700;color:var(--blue);cursor:pointer;list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:"▸ ";}
+  details[open] summary::before{content:"▾ ";}
+  details ol{margin:10px 0 4px 20px;font-size:12.8px;color:var(--ink2)}
+  details ol li{margin-bottom:5px}
+  footer{padding:26px 0 44px;text-align:center;color:var(--faint);font-size:12px}
+  @media (max-width:720px){
+    .grid2{grid-template-columns:1fr}
+    .cmpgrid{grid-template-columns:1fr}
+    .vecrow{grid-template-columns:repeat(2,1fr)}
+    .hero h1{font-size:20px}
+    .stp{min-width:82px;padding:8px 5px}
+    .stp .nm{font-size:11.5px}
+    .stp .en{display:none}
+    .card{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>RAG INTERACTIVE DEMO · 课堂工具</div>
+    <h1>RAG 六步链路交互演示</h1>
+    <p>检索增强生成：先查资料，再回答。点击任一步骤单独执行，或一键跑完整链路——亲眼看到「闭卷天才」如何变成「开卷专家」。</p>
+  </div>
+</header>
+
+<div class="qbar">
+  <div class="wrap">
+    <span class="lbl">选择问题</span>
+    <button class="qbtn on" data-q="0">Q1 新像素家庭战略学习法适合什么家庭？</button>
+    <button class="qbtn" data-q="1">Q2 三方协议签署平台怎么保障数据安全？</button>
+    <button class="qbtn" data-q="2">Q3 K12 闯关应用的关卡设计原则是什么？</button>
+  </div>
+</div>
+
+<div class="stepper">
+  <div class="wrap" id="stepper">
+    <div class="stp active" data-s="0"><div class="no">1</div><div class="nm">文档解析</div><div class="en">Parsing</div></div>
+    <div class="stp" data-s="1"><div class="no">2</div><div class="nm">文本分块</div><div class="en">Chunking</div></div>
+    <div class="stp" data-s="2"><div class="no">3</div><div class="nm">向量化</div><div class="en">Embedding</div></div>
+    <div class="stp" data-s="3"><div class="no">4</div><div class="nm">向量检索</div><div class="en">Retrieval</div></div>
+    <div class="stp" data-s="4"><div class="no">5</div><div class="nm">重排</div><div class="en">Rerank</div></div>
+    <div class="stp" data-s="5"><div class="no">6</div><div class="nm">生成回答</div><div class="en">Generation</div></div>
+  </div>
+</div>
+
+<div class="ctrl">
+  <div class="wrap">
+    <button class="btn btn-main" id="runAll">一键跑完整链路</button>
+    <button class="btn btn-ghost" id="resetBtn">重置演示</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 步骤 1：文档解析 -->
+  <section class="panel on" id="p0">
+    <div class="card">
+      <h3><span class="tag">STEP 1</span>文档解析：把原始资料变成机器可读的结构</h3>
+      <div class="sub">PDF、Word、网页、表格——先解析成干净的文本和结构化数据，后面的每一步都依赖这一步的质量。</div>
+      <div class="grid2">
+        <div class="docbox">
+          <h4>新像素家庭战略学习法介绍</h4>
+          <p>家庭战略学习法是新像素教育面向 6-18 岁学生家庭推出的一套系统化学习陪伴方案，核心理念是「先战略、后战术」：先帮助家庭厘清升学目标与成长路径，再倒推学科规划与习惯养成。</p>
+          <p>方案包含三大模块：学业规划诊断、家庭学习教练驻场、月度战略复盘。课程由具备 8 年以上一线教学经验的导师授课，目前已服务超过 1200 个家庭。</p>
+          <table>
+            <tr><th>模块</th><th>周期</th><th>形式</th></tr>
+            <tr><td>学业规划诊断</td><td>2 周</td><td>1v1 访谈 + 报告</td></tr>
+            <tr><td>家庭学习教练</td><td>12 周</td><td>线上 + 线下</td></tr>
+            <tr><td>月度战略复盘</td><td>持续</td><td>月度会议</td></tr>
+          </table>
+        </div>
+        <div>
+          <div class="card" style="margin-bottom:0">
+            <h3 style="font-size:14px">解析结果</h3>
+            <ul class="parse-list">
+              <li><span>识别文档标题</span><span class="v">1 个</span></li>
+              <li><span>提取段落</span><span class="v">3 段</span></li>
+              <li><span>识别表格</span><span class="v">1 个（3 行）</span></li>
+              <li><span>正文总字数</span><span class="v">312 字</span></li>
+              <li><span>解析耗时</span><span class="v">0.4 秒</span></li>
+            </ul>
+            <p style="font-size:12.5px;color:var(--muted);margin-top:12px;border-top:1px dashed var(--border);padding-top:10px">产品经理要点：解析环节决定了知识库的「原料质量」。扫描版 PDF、复杂表格、图文混排是三大重灾区，选型时必须实测。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 步骤 2：文本分块 -->
+  <section class="panel" id="p1">
+    <div class="card">
+      <h3><span class="tag">STEP 2</span>文本分块：把长文档切成可检索的「知识切片」</h3>
+      <div class="sub">块太大，检索不精准；块太小，上下文不完整。拖动滑块感受块大小对结果的影响。</div>
+      <div class="chunkhead">
+        <span style="font-size:12.5px;color:var(--muted)">当前块大小：<b id="chunkSizeLbl" style="color:var(--purple-deep)">400 字</b>（块间保留 20 字重叠，防止答案被从中间切断）</span>
+        <div class="seg" id="sizeSeg">
+          <button data-z="200">200 字</button>
+          <button class="on" data-z="400">400 字</button>
+          <button data-z="600">600 字</button>
+        </div>
+      </div>
+      <div id="chunkBox"></div>
+    </div>
+  </section>
+
+  <!-- 步骤 3：向量化 -->
+  <section class="panel" id="p2">
+    <div class="card">
+      <h3><span class="tag">STEP 3</span>向量化：给每个文本块办一张「语义身份证」</h3>
+      <div class="sub">Embedding 模型把文本编码成一串数字（向量）。语义越相近，向量在空间中的距离越近——这是「按意思搜索」而非「按字面搜索」的关键。</div>
+      <div class="vecrow" id="vecBox"></div>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:14px;border-top:1px dashed var(--border);padding-top:12px">下方每一组色块是一个文本块的「向量指纹」示意（真实模型是 768~3072 维，这里可视化前 32 维）。产品经理要点：换 Embedding 模型 = 全库重新向量化，这是隐性成本，选型要谨慎。</p>
+    </div>
+  </section>
+
+  <!-- 步骤 4：向量检索 -->
+  <section class="panel" id="p3">
+    <div class="card">
+      <h3><span class="tag">STEP 4</span>向量检索：用问题找到最相关的知识切片</h3>
+      <div class="sub">用户问题同样被向量化，与库中所有块计算余弦相似度，取 Top-K。相似度越高，越可能包含答案。</div>
+      <table class="tbl">
+        <thead><tr><th style="width:52px">排名</th><th>文本块</th><th style="width:110px">相似度</th><th style="width:90px">入选 Top-K</th></tr></thead>
+        <tbody id="retrievalBody"></tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:12px;border-top:1px dashed var(--border);padding-top:10px">产品经理要点：Top-K 不是越大越好——K 值直接影响提示词长度和成本。K=4 是多数场景的甜点区，复杂问题可动态调整。</p>
+    </div>
+  </section>
+
+  <!-- 步骤 5：重排 -->
+  <section class="panel" id="p4">
+    <div class="card">
+      <h3><span class="tag">STEP 5</span>重排：用更精细的模型给候选块「二次排队」</h3>
+      <div class="sub">向量检索求快，重排求准。重排模型逐个阅读「问题 + 候选块」，给出更准确的相关性分数——注意排名发生了变化。</div>
+      <table class="tbl">
+        <thead><tr><th style="width:60px">文本块</th><th style="width:110px">检索分</th><th style="width:40px"></th><th style="width:110px">重排分</th><th style="width:80px">变化</th><th style="width:110px">送入生成</th></tr></thead>
+        <tbody id="rerankBody"></tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:12px;border-top:1px dashed var(--border);padding-top:10px">产品经理要点：重排是性价比最高的一环——多花几百毫秒，换显著更准的上下文。面试常考：「为什么有了向量检索还要重排？」</p>
+    </div>
+  </section>
+
+  <!-- 步骤 6：生成回答 -->
+  <section class="panel" id="p5">
+    <div class="card">
+      <h3><span class="tag">STEP 6</span>生成回答：把检索到的资料拼进提示词，让模型「开卷考试」</h3>
+      <div class="sub">最终提示词 = 系统指令 + 检索到的资料块 + 用户问题。模型基于资料回答，并标注引用来源。</div>
+      <div class="answer" id="answerBox"></div>
+      <div class="refs">
+        <div class="rt">引用来源</div>
+        <div id="refBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对比开关 -->
+  <div class="compare" id="compareBox">
+    <div class="sw" id="compareSwitch">
+      <div class="track"></div>
+      <div><div class="t">无 RAG vs 有 RAG 对比演示</div><div class="d">开启后并排查看两种回答的差别（讲师高频教学动作）</div></div>
+    </div>
+    <div class="cmpgrid">
+      <div class="cmpcard bad">
+        <div class="h">直接问大模型（无 RAG）· 含幻觉</div>
+        <div id="noragAns"></div>
+      </div>
+      <div class="cmpcard good">
+        <div class="h">RAG 增强回答 · 有据可查</div>
+        <div id="ragAns"></div>
+      </div>
+    </div>
+    <div class="cmpnote">教学提示：幻觉不是模型「笨」，是它根本没没见过你的资料。RAG 的本质是——先给模型看资料，再让它答题。</div>
+  </div>
+
+  <details>
+    <summary>讲师演示按钮（5 步演示流程）</summary>
+    <ol>
+      <li>先问学员：「不接任何资料，直接问大模型『新像素学习法适合什么家庭』，会发生什么？」——现场跑一次，展示幻觉，引出 RAG 动机。</li>
+      <li>点「一键跑完整链路」，每步停 10 秒：问「这一步解决什么问题？不做会怎样？」——重点讲分块重叠和 Top-K 的权衡。</li>
+      <li>走到第 6 步生成时，指着引用标记问：「为什么每个结论都要能点回原文？」——讲可信度与产品责任。</li>
+      <li>打开底部对比开关，让学员自己读两张卡的差别——讲「幻觉不是模型笨，是它没见过你的资料」。</li>
+      <li>收尾提问：「如果资料每周更新，哪个环节要重新做？」（答案：解析、分块、向量化全链路重建——引出知识库运维成本。）</li>
+    </ol>
+  </details>
+
+</main>
+
+<footer>RAG 交互演示 · AI 产品经理就业训练营课堂工具 · 数据均为教学模拟</footer>
+
+<script>
+/* ================= 数据 ================= */
+var DOC_PARAS = [
+  '家庭战略学习法是新像素教育面向 6-18 岁学生家庭推出的一套系统化学习陪伴方案，核心理念是「先战略、后战术」：先帮助家庭厘清升学目标与成长路径，再倒推学科规划与习惯养成。',
+  '方案包含三大模块：学业规划诊断、家庭学习教练驻场、月度战略复盘。课程由具备 8 年以上一线教学经验的导师授课，目前已服务超过 1200 个家庭，学员续费率达到 87%。',
+  '家庭战略学习法尤其适合三类家庭：一是升学方向模糊、需要专业规划的家庭；二是亲子沟通紧张、需要第三方介入的家庭；三是多孩家庭，需要平衡不同孩子的成长路径。'
+];
+var DOC_TABLE = '模块 / 周期 / 形式：学业规划诊断 2 周 1v1 访谈加报告；家庭学习教练 12 周线上加线下；月度战略复盘持续月度会议。';
+
+var CHUNKS = [
+  {id:'chunk-01', text:'家庭战略学习法是新像素教育面向 6-18 岁学生家庭推出的系统化学习陪伴方案，核心理念是「先战略、后战术」：先厘清升学目标与成长路径，再倒推学科规划与习惯养成。', sim:0.71, rerank:0.78},
+  {id:'chunk-02', text:'方案包含三大模块：学业规划诊断、家庭学习教练驻场、月度战略复盘。导师具备 8 年以上一线教学经验，已服务超过 1200 个家庭，学员续费率达到 87%。', sim:0.58, rerank:0.52},
+  {id:'chunk-03', text:'适合家庭一：升学方向模糊、需要专业规划的家庭；适合家庭二：亲子沟通紧张、需要第三方介入的家庭；适合家庭三：多孩家庭，需要平衡不同孩子的成长路径。', sim:0.91, rerank:0.94},
+  {id:'chunk-04', text:'课程模块周期表：学业规划诊断周期 2 周形式 1v1 访谈加报告；家庭学习教练周期 12 周形式线上加线下；月度战略复盘持续开展形式为月度会议。', sim:0.62, rerank:0.66}
+];
+
+var QA = [
+  {
+    q:'新像素家庭战略学习法适合什么家庭？',
+    answer:'根据课程资料，家庭战略学习法尤其适合三类家庭：一是升学方向模糊、需要专业规划的家庭；二是亲子沟通紧张、需要第三方介入的家庭；三是多孩家庭，需要平衡不同孩子的成长路径。[1]\n\n该方案面向 6-18 岁学生家庭，以「先战略、后战术」为核心理念，目前已服务超过 1200 个家庭。[2]',
+    refs:[{from:'chunk-03', text:'适合家庭一：升学方向模糊……适合家庭三：多孩家庭，需要平衡不同孩子的成长路径。'},{from:'chunk-01', text:'面向 6-18 岁学生家庭，核心理念「先战略、后战术」……'}],
+    norag:'家庭战略学习法适合所有家庭，尤其推荐给准备送孩子出国留学的家庭。课程采用美国常春藤名校招生官 1v1 指导模式，周期 3 年，保证孩子录取世界前 50 名校，费用为 19.8 万元起。'
+  },
+  {
+    q:'三方协议签署平台怎么保障数据安全？',
+    answer:'平台从三个层面保障签署数据安全：一是传输与存储全链路加密，协议文件采用国密算法加密存储；二是签署全程留痕，所有操作生成不可篡改的时间戳日志，支持司法出证；三是权限分级，学生、家长、机构三方按角色可见，敏感字段脱敏展示。[1]\n\n管理后台同时具备操作审计功能，异常登录与批量导出会实时告警。[2]',
+    refs:[{from:'chunk-A', text:'协议文件采用国密算法加密存储，操作日志不可篡改，支持司法出证。'},{from:'chunk-B', text:'三方按角色可见，敏感字段脱敏；异常登录与批量导出实时告警。'}],
+    norag:'平台采用区块链技术，所有协议上链永久保存，任何第三方包括政府机关都无法查看，因此完全不需要做等级保护测评，也不受任何监管要求约束。'
+  },
+  {
+    q:'K12 闯关应用的关卡设计原则是什么？',
+    answer:'关卡设计遵循三条原则：一是能力阶梯原则，关卡难度按「记忆—理解—应用—迁移」四级认知阶梯递进，每关只引入一个新知识点；二是即时反馈原则，答对即时通关动画，答错给出针对性讲解而非简单判错；三是防挫败原则，连续失败两次后触发提示与降级题库，保护学习动机。[1]\n\n同时每 10 关设置一个 Boss 关，综合考查前 10 关知识点。[2]',
+    refs:[{from:'chunk-C', text:'难度按四级认知阶梯递进，每关只引入一个新知识点。'},{from:'chunk-D', text:'连续失败两次触发提示与降级题库；每 10 关设置 Boss 关。'}],
+    norag:'关卡设计主要靠游戏化：每关必须限定 10 秒内答完，超时就闯关失败，连续失败 5 次锁定账号 24 小时，以此激发学生的好胜心，实践证明挫败感越强学习效果越好。'
+  }
+];
+var CUR_Q = 0;
+
+/* ================= 状态 ================= */
+var done = [false,false,false,false,false,false];
+var running = false;
+var typingTimer = null;
+
+/* ================= 工具 ================= */
+function $(s){return document.querySelector(s);}
+function $$(s){return document.querySelectorAll(s);}
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+
+function renderStepper(){
+  $$('#stepper .stp').forEach(function(el){
+    var i = +el.dataset.s;
+    el.classList.toggle('active', i === curStep);
+    el.classList.toggle('done', done[i] && i !== curStep);
+  });
+}
+var curStep = 0;
+
+function showStep(i){
+  curStep = i;
+  $$('.panel').forEach(function(p){p.classList.remove('on');});
+  $('#p'+i).classList.add('on');
+  renderStepper();
+}
+
+function markDone(i){
+  done[i] = true;
+  renderStepper();
+}
+
+/* ================= 步骤 2：分块渲染 ================= */
+function renderChunks(size){
+  var box = $('#chunkBox');
+  box.innerHTML = '';
+  var full = DOC_PARAS.join('') + DOC_TABLE;
+  var parts = [];
+  var start = 0;
+  while(start < full.length){
+    var end = Math.min(start + size, full.length);
+    var text = full.slice(start, end);
+    if(parts.length > 0 && start > 0){
+      var ovStart = Math.max(0, start - 20);
+      text = '<span class="ov">' + full.slice(ovStart, start) + '</span>' + text;
+    }
+    parts.push({id:'chunk-0' + (parts.length+1), text:text, len:end-start});
+    start = end;
+  }
+  parts.forEach(function(p, idx){
+    var div = document.createElement('div');
+    div.className = 'chunk';
+    div.innerHTML = '<div class="cid">' + p.id + ' · ' + p.len + ' 字</div>' + p.text;
+    box.appendChild(div);
+  });
+  $('#chunkSizeLbl').textContent = size + ' 字';
+}
+
+/* ================= 步骤 3：向量指纹 ================= */
+function renderVectors(){
+  var box = $('#vecBox');
+  box.innerHTML = '';
+  var palette = ['#7C3AED','#8B5CF6','#A78BFA','#C4B5FD','#2563EB','#3B82F6','#60A5FA','#93C5FD'];
+  CHUNKS.forEach(function(c, ci){
+    var cell = document.createElement('div');
+    cell.className = 'veccell';
+    var html = '<div class="cid">' + c.id + '</div><div class="vecgrid">';
+    for(var i=0;i<32;i++){
+      var color = palette[(i*7+ci*5) % palette.length];
+      var op = 0.15 + ((i*13+ci*29) % 10) / 10;
+      html += '<i style="background:'+color+';opacity:'+op.toFixed(2)+'"></i>';
+    }
+    html += '</div><div class="dim">768 维向量（示意 32 维）</div>';
+    cell.innerHTML = html;
+    box.appendChild(cell);
+  });
+}
+
+/* ================= 步骤 4/5：表格 ================= */
+function renderRetrieval(){
+  var body = $('#retrievalBody');
+  body.innerHTML = '';
+  var sorted = CHUNKS.slice().sort(function(a,b){return b.sim - a.sim;});
+  sorted.forEach(function(c, i){
+    var tr = document.createElement('tr');
+    if(i < 2) tr.className = 'top';
+    tr.innerHTML = '<td class="rank">' + (i+1) + '</td>' +
+      '<td>' + c.id + ' · ' + c.text.slice(0, 34) + '……</td>' +
+      '<td class="sc' + (i<2?' hi':'') + '">' + c.sim.toFixed(2) + '</td>' +
+      '<td><span class="badge-in ' + (i<2?'y':'n') + '">' + (i<2?'入选':'未入选') + '</span></td>';
+    body.appendChild(tr);
+  });
+}
+function renderRerank(){
+  var body = $('#rerankBody');
+  body.innerHTML = '';
+  var sorted = CHUNKS.slice().sort(function(a,b){return b.rerank - a.rerank;});
+  var initOrder = CHUNKS.slice().sort(function(a,b){return b.sim - a.sim;});
+  sorted.forEach(function(c, i){
+    var oldRank = initOrder.indexOf(c) + 1;
+    var delta = oldRank - (i+1);
+    var tr = document.createElement('tr');
+    if(i < 2) tr.className = 'top';
+    tr.innerHTML = '<td class="rank">' + c.id.replace('chunk-','') + '</td>' +
+      '<td class="sc">' + c.sim.toFixed(2) + '</td>' +
+      '<td class="arrowcell">→</td>' +
+      '<td class="sc' + (i<2?' hi':'') + '">' + c.rerank.toFixed(2) + '</td>' +
+      '<td>' + (delta > 0 ? '<span class="up">↑' + delta + '</span>' : delta < 0 ? '<span class="down">↓' + (-delta) + '</span>' : '<span style="color:var(--faint)">—</span>') + '</td>' +
+      '<td><span class="badge-in ' + (i<2?'y':'n') + '">' + (i<2?'送入':'淘汰') + '</span></td>';
+    body.appendChild(tr);
+  });
+}
+
+/* ================= 步骤 6：流式生成 ================= */
+function renderRefs(){
+  var box = $('#refBox');
+  box.innerHTML = '';
+  QA[CUR_Q].refs.forEach(function(r, i){
+    var div = document.createElement('div');
+    div.className = 'refcard';
+    div.innerHTML = '<b>[' + (i+1) + '] ' + r.from + '</b> · ' + r.text;
+    box.appendChild(div);
+  });
+}
+function typeAnswer(){
+  var box = $('#answerBox');
+  box.innerHTML = '<span class="cursor"></span>';
+  var text = QA[CUR_Q].answer;
+  var i = 0;
+  if(typingTimer) clearInterval(typingTimer);
+  typingTimer = setInterval(function(){
+    if(i >= text.length){
+      clearInterval(typingTimer);
+      box.textContent = text;
+      return;
+    }
+    i += 2;
+    box.innerHTML = escapeHtml(text.slice(0, i)) + '<span class="cursor"></span>';
+    box.scrollTop = box.scrollHeight;
+  }, 24);
+}
+function escapeHtml(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ================= 对比区 ================= */
+function renderCompare(){
+  $('#noragAns').textContent = QA[CUR_Q].norag;
+  $('#ragAns').textContent = QA[CUR_Q].answer.replace(/\[\d\]/g, '');
+}
+
+/* ================= 单步执行 ================= */
+async function runStep(i){
+  if(running) return;
+  running = true;
+  $('#runAll').disabled = true;
+  var el = $$('#stepper .stp')[i];
+  el.classList.add('running');
+  showStep(i);
+  await sleep(900 + Math.random()*600);
+  el.classList.remove('running');
+  markDone(i);
+  if(i === 1) renderChunks(400);
+  if(i === 2) renderVectors();
+  if(i === 3) renderRetrieval();
+  if(i === 4) renderRerank();
+  if(i === 5){ renderRefs(); typeAnswer(); }
+  running = false;
+  $('#runAll').disabled = false;
+}
+
+/* ================= 事件绑定 ================= */
+$$('#stepper .stp').forEach(function(el){
+  el.addEventListener('click', function(){ runStep(+el.dataset.s); });
+});
+$$('#sizeSeg button').forEach(function(b){
+  b.addEventListener('click', function(){
+    $$('#sizeSeg button').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    renderChunks(+b.dataset.z);
+  });
+});
+$('#runAll').addEventListener('click', async function(){
+  if(running) return;
+  for(var i=0;i<6;i++){
+    await runStep(i);
+    await sleep(350);
+  }
+});
+$('#resetBtn').addEventListener('click', function(){
+  done = [false,false,false,false,false,false];
+  if(typingTimer) clearInterval(typingTimer);
+  $('#answerBox').innerHTML = '';
+  showStep(0);
+  renderStepper();
+});
+$('#compareSwitch').addEventListener('click', function(){
+  $('#compareBox').classList.toggle('on');
+});
+$$('.qbtn').forEach(function(b){
+  b.addEventListener('click', function(){
+    $$('.qbtn').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    CUR_Q = +b.dataset.q;
+    renderCompare();
+    if(done[5]){ renderRefs(); typeAnswer(); }
+  });
+});
+
+/* ================= 初始化 ================= */
+renderChunks(400);
+renderVectors();
+renderRetrieval();
+renderRerank();
+renderCompare();
+</script>
+</body>
+</html>

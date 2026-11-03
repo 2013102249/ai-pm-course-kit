@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教案 · W4 周一《用户研究与需求分析》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl cur" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W4-物料/W4D1-用户研究与需求分析 / 01-教案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><span class="cur">01-教案</span><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>教案 · W4 周一《用户研究与需求分析》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第四周第一天 · 90 分钟（2 课时）· 讲师版</p>
+</blockquote>
+<h2>一、基本信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所属阶段</td>
+<td>阶段三 · 产品硬功（Week 4）</td>
+</tr>
+<tr>
+<td>本课主题</td>
+<td>用户研究与需求分析</td>
+</tr>
+<tr>
+<td>课时</td>
+<td>90 分钟（2 课时，中间休息 5 分钟）</td>
+</tr>
+<tr>
+<td>授课对象</td>
+<td>转行 / 进阶层学员（主项目已立项锁定，原型已通过 W3D5 评审）</td>
+</tr>
+<tr>
+<td>前置知识</td>
+<td>主项目选题与目标用户假设、原型 V1.5、W1–W3 的 AI 产品形态与技术常识</td>
+</tr>
+<tr>
+<td>本课产出</td>
+<td>主项目调研启动包：访谈提纲 V1 + 验证型问卷初稿（课堂完成）</td>
+</tr>
+<tr>
+<td>本周目标</td>
+<td>产出支撑 PRD 的真实调研：≥5 个访谈 + ≥30 份有效问卷；D2 写 PRD、D5 PRD 评审大会</td>
+</tr>
+<tr>
+<td>教学场地</td>
+<td>教室或线上直播，需投屏 + 每位学员手机可扫码（腾讯问卷实操）</td>
+</tr>
+</tbody>
+</table>
+<h2>二、教学目标（可测量）</h2>
+<ol>
+<li>能用「需求真伪四问」框架（痛点真不真 / 场景有没有 / 现有方案是什么 / 替换成本高不高）对给定的 4 条需求描述做出真伪判断，每条至少给出 2 个论据（对应习题第二层第 8 题）。</li>
+<li>能按「暖场 / 背景 / 场景还原 / 痛点挖掘 / 收尾」五段结构，为自己主项目写出访谈提纲 V1，其中含至少 2 个开放题、1 个「最近一次」场景还原问题（对应导学案课堂模板）。</li>
+<li>能在腾讯问卷（或问卷星）中独立完成一份 ≥8 题的验证型问卷初稿，选项满足 MECE 且无倾向性（对应课堂实操 + 07-交互使用说明）。</li>
+<li>能用 RICE 模型对 3 个需求打分排序并说明砍留理由（对应习题第二层第 9 题）。</li>
+</ol>
+<h2>三、教学重难点</h2>
+<ul>
+<li><strong>重点一</strong>：需求真伪四问框架——这是本课的主线工具，也是面试高频考点。</li>
+<li><strong>重点二</strong>：AI 场景用户访谈的提问技巧（开放题 / 追问 / 沉默），学员第一次真人访谈前必须有现场示范。</li>
+<li><strong>难点一</strong>：学员把访谈做成推销、把调研当成「确认自己想法」。需要讲师现场做「推销式 vs 访谈式」正反对比示范。</li>
+<li><strong>难点二</strong>：问卷选项设计带倾向、题目混入「发现型」问题。用互填找茬机制让学员互相纠错。</li>
+</ul>
+<h2>四、教学准备（物料清单）</h2>
+<table>
+<thead>
+<tr>
+<th>物料</th>
+<th>用途</th>
+<th>出处</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 产品经理能力画像.svg</td>
+<td>开篇定位（可选）：调研能力在画像中的位置</td>
+<td>03-配图素材</td>
+</tr>
+<tr>
+<td>需求真伪判断流程图（待制）</td>
+<td>环节二核心可视化：四问逐环 + 淘汰 / 通过分支</td>
+<td>本日 05-配图清单（规格已附）</td>
+</tr>
+<tr>
+<td>AI 产品全链路图.svg</td>
+<td>定位：调研在产品链路最前端</td>
+<td>03-配图素材</td>
+</tr>
+<tr>
+<td>腾讯问卷（投屏账号）</td>
+<td>环节三现场建卷演示</td>
+<td>外部工具（备用：问卷星）</td>
+</tr>
+<tr>
+<td>导学案</td>
+<td>学员课上填写访谈提纲、四问评估表、问卷设计区</td>
+<td>本日 03-导学案</td>
+</tr>
+</tbody>
+</table>
+<h2>五、教学步骤与时间拆分</h2>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>环节</th>
+<th>教学内容</th>
+<th>教学方法</th>
+<th>对应产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8 min</td>
+<td>导入：一个被砍掉的功能</td>
+<td>讲「AI 菜谱推荐」伪需求故事（教学示例）：访谈 5 人后发现真痛点是「买了的菜怎么消耗」而非「不知道做什么菜」；提问「用户说的需求为什么会变」</td>
+<td>故事冲击 + 提问</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8–13 min</td>
+<td>本周地图：调研如何支撑 PRD</td>
+<td>本周主线：D1 学方法 → D2–D4 执行调研（≥5 访谈 + ≥30 问卷）→ D2 写 PRD、D5 评审；明确「调研数据是 PRD 的弹药」</td>
+<td>讲授</td>
+<td>学员明确本周里程碑</td>
+</tr>
+<tr>
+<td>13–31 min</td>
+<td>环节一：AI 场景用户访谈方法</td>
+<td>访谈不是聊天更不是推销；五段结构（暖场 / 背景 / 场景还原 / 痛点挖掘 / 收尾）；三类提问技巧示范：开放题（是非题改写经历题）、追问（「当时发生了什么」）、沉默（停 3 秒不填空）；学员现场 3 分钟两两演练</td>
+<td>讲授 + 讲师示范 + 学员演练</td>
+<td>导学案访谈提纲 V1（至少完成场景还原段）</td>
+</tr>
+<tr>
+<td>31–36 min</td>
+<td>休息</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>36–56 min</td>
+<td>环节二：需求真伪四问框架（核心）</td>
+<td>用流程图逐环讲四问：痛点真不真（用户做过什么努力）、场景有没有（最近一次 + 频率）、现有方案是什么（含「忍着」）、替换成本高不高（数据 / 习惯 / 协作链 / 价格）；课堂演练：用四问评估「AI 帮爸妈挂号」与主项目核心需求</td>
+<td>图示 + 讲授 + 小组评估</td>
+<td>导学案四问评估表填写</td>
+</tr>
+<tr>
+<td>56–74 min</td>
+<td>环节三：问卷设计与腾讯问卷实操</td>
+<td>访谈发现假设、问卷验证假设；问卷设计三原则（一页原则、每题验证一个假设、选项 MECE 无倾向）；现场建卷 7 步演示 + 学员分组建卷互填找茬（组织方案见 07-交互使用说明）</td>
+<td>投屏演示 + 学员实操 + 互填找茬</td>
+<td>验证型问卷初稿（≥8 题）</td>
+</tr>
+<tr>
+<td>74–86 min</td>
+<td>环节四：KANO 与 RICE 优先级</td>
+<td>KANO 三类（基本型 / 期望型 / 兴奋型）判定「做不做」；RICE 打分（Reach × Impact × Confidence ÷ Effort）判定「先做谁」；用 RICE 对四问筛过的需求排序</td>
+<td>讲授 + 板书演算</td>
+<td>RICE 排序笔记</td>
+</tr>
+<tr>
+<td>86–90 min</td>
+<td>总结与本周里程碑布置</td>
+<td>三句话收束 + 布置本周调研任务 + 预告 D2 PRD 写作</td>
+<td>讲授</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>时间拆分校验：8+5+18+5+20+18+12+4 = 90 分钟。</p>
+<h2>六、课堂提问设计（8 问）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>提问</th>
+<th>提问时机</th>
+<th>预设答案 / 引导方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>「用户跟你说『我想要更快的马』，他真正要的是什么？」</td>
+<td>导入</td>
+<td>更快的位移——需求表述不等于需求本身，引出「听用户说什么不如看用户做什么」</td>
+</tr>
+<tr>
+<td>2</td>
+<td>「访谈和推销的区别是什么？」</td>
+<td>环节一</td>
+<td>推销想让用户认同你，访谈想让用户暴露真实行为；访谈里不得介绍自己的方案</td>
+</tr>
+<tr>
+<td>3</td>
+<td>「为什么『你以后会用吗』是个无效问题？」</td>
+<td>环节一</td>
+<td>预测行为不可靠、且受访者倾向给面子答案；应问过去的具体行为：「你上次遇到是什么时候，当时怎么处理的」</td>
+</tr>
+<tr>
+<td>4</td>
+<td>「用户停下来不说话了，你怎么办？」</td>
+<td>环节一</td>
+<td>等 3 秒，别急着填空——沉默会给对方压力，逼出更真实的补充；急着接话等于替用户作答</td>
+</tr>
+<tr>
+<td>5</td>
+<td>「四问里哪一问最容易漏？」</td>
+<td>环节二</td>
+<td>现有方案——大家默认用户是白纸，其实人人都有替代方案，包括用 Excel、用微信群、甚至「忍着」</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「一个需求四问全过了，就能直接开发吗？」</td>
+<td>环节二 / 四衔接</td>
+<td>不能，还要看优先级与资源——进入 KANO 定类别、RICE 排顺序</td>
+</tr>
+<tr>
+<td>7</td>
+<td>「问卷只有 30 份，能下结论吗？」</td>
+<td>环节三</td>
+<td>训练营阶段用于验证方向足够：看选项分布和异常值，不看精确比例；正式产品决策需要更大样本与显著性检验</td>
+</tr>
+<tr>
+<td>8</td>
+<td>「KANO 里哪类功能，做了用户觉得理所当然、不做用户直接骂？」</td>
+<td>环节四</td>
+<td>基本型——做了不加分，不做扣分；对应 AI 产品里的「答得准、不幻觉、能兜底」</td>
+</tr>
+</tbody>
+</table>
+<h2>七、板书要点</h2>
+<pre><code>需求真伪四问（不过四问，不进开发）
+① 痛点真不真 —— 用户为这个问题做过什么努力？
+② 场景有没有 —— 最近一次发生在什么时候？频率多高？
+③ 现有方案是什么 —— Excel / 微信群 / 人肉 / 忍着，都算方案
+④ 替换成本高不高 —— 数据迁移 / 习惯 / 协作链 / 价格
+
+访谈五段：暖场 → 背景 → 场景还原 → 痛点挖掘 → 收尾
+提问三技：开放题（问经历不问观点）· 追问（当时发生了什么）· 沉默（停 3 秒）
+
+KANO：基本型 / 期望型 / 兴奋型 —— 定「做不做」
+RICE：Reach × Impact × Confidence ÷ Effort —— 定「先做谁」
+
+本周里程碑：≥5 个真实访谈 + ≥30 份有效问卷 → D2 PRD 用数据说话
+</code></pre>
+<h2>八、课堂练习参考答案（四问评估演练）</h2>
+<p>练习题：用四问评估「AI 帮爸妈挂号」这个需求（学员分组 3 分钟）。</p>
+<table>
+<thead>
+<tr>
+<th>四问</th>
+<th>评估要点</th>
+<th>参考结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>痛点真不真</td>
+<td>痛点存在（挂号难、子女异地着急），但要注意痛点主体可能是子女而非父母</td>
+<td>痛点真实，但主体需重定义</td>
+</tr>
+<tr>
+<td>场景有没有</td>
+<td>低频场景（人均每月不到 1 次），且多发生在工作日早间抢号时段</td>
+<td>场景真实但低频</td>
+</tr>
+<tr>
+<td>现有方案是什么</td>
+<td>医院官方 App、114 电话、找黄牛、让老家亲戚跑窗口</td>
+<td>已有可用方案，官方 App 是强对手</td>
+</tr>
+<tr>
+<td>替换成本高不高</td>
+<td>老年人学习成本高、信任门槛高（敢不敢让 AI 挂号）</td>
+<td>替换成本偏高</td>
+</tr>
+</tbody>
+</table>
+<p>结论示范：原始表述「帮爸妈挂号」偏伪，问题重定义后变成「帮异地子女盯号源、约时间、提醒父母」——从「替父母操作」变成「给子女当助手」，替换成本大幅下降。此题无唯一答案，论证过程比结论重要（教学示例，用于演示四问用法）。</p>
+<h2>九、学员易错点预判与应对（6 条）</h2>
+<table>
+<thead>
+<tr>
+<th>易错点</th>
+<th>表现</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>把访谈做成推销</td>
+<td>访谈变成介绍自己的产品功能，追问用户「你会喜欢吧」</td>
+<td>现场做「推销式 vs 访谈式」正反对比示范；立规矩：访谈中提到自己的方案时只能问「你现在怎么解决」，不得介绍功能</td>
+</tr>
+<tr>
+<td>引导式提问</td>
+<td>「你是不是觉得现在特别麻烦？」「大家都这么说对吧？」</td>
+<td>给改写公式：是非题 → 经历题（「上次遇到是什么情况」）；课堂即兴纠错 2 轮</td>
+</tr>
+<tr>
+<td>问卷选项带倾向</td>
+<td>自家方案的选项描述更丰满、竞品选项写得含糊；选项不 MECE、有交叉</td>
+<td>互填找茬环节专门查选项；发放问卷自查清单（见 07-交互使用说明）</td>
+</tr>
+<tr>
+<td>问错人</td>
+<td>只访谈身边同学、室友，样本全是「自己人」</td>
+<td>强调目标用户画像三条线（谁有这个问题 / 谁在 actively 找方案 / 谁付得起成本）；预习任务已要求找 1 位目标用户，课上点名核对</td>
+</tr>
+<tr>
+<td>把「用户说想要」直接当需求</td>
+<td>调研报告里写「10 个用户里有 8 个说想要」</td>
+<td>金句纠正：用户说的都是对的，用户做的才是真的；必须过四问，看行为不看口头承诺</td>
+</tr>
+<tr>
+<td>访谈记录只记观点不记场景</td>
+<td>记录里全是「他觉得」「他认为」，没有具体事件</td>
+<td>提纲模板「场景还原」段强制要求记录「最近一次」的时间、经过、卡点；讲师抽查记录</td>
+</tr>
+</tbody>
+</table>
+<h2>十、与后续课程的衔接</h2>
+<table>
+<thead>
+<tr>
+<th>衔接点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W4D2 PRD 写作</td>
+<td>PRD 的「背景与目标」章节必须引用本周调研数据</td>
+</tr>
+<tr>
+<td>W4D5 PRD 评审大会</td>
+<td>评审首问通常是「这个需求有调研支撑吗」——本周产出即答辩弹药</td>
+</tr>
+<tr>
+<td>W6D4 测试验收与用户试用</td>
+<td>W4 建立的访谈能力在试用反馈环节复用</td>
+</tr>
+<tr>
+<td>第八周面试冲刺</td>
+<td>需求真伪判断、访谈提纲设计是 AI 产品经理面试高频区，本日习题第三层为面试真题</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
+  <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#1E1B4B' }}>小结与作业</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16, marginBottom: 26 }} />
+
+  <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#64748B' }}>三句话收束今天</Text>
+  <Box style={{ flexDirection: 'row', gap: 20, marginTop: 12 }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 20, height: 118, justifyContent: 'center', gap: 8 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>四步</Text>
+      <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>预训练 → SFT → LoRA → RLHF，一条培养链路</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 20, height: 118, justifyContent: 'center', gap: 8 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>五问</Text>
+      <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>任何一问不过 = 不该微调</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 20, height: 118, justifyContent: 'center', gap: 8 }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>接口</Text>
+      <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>交付四件，验收三关</Text>
+    </Box>
+  </Box>
+
+  <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#64748B', marginTop: 24 }}>课后作业</Text>
+  <Box style={{ flexDirection: 'column', gap: 10, marginTop: 12 }}>
+    <Box style={{ height: 56, background: '#EFF6FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', padding: 18, gap: 14 }}>
+      <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+      </Box>
+      <Text style={{ fontSize: 18, color: '#1E1B4B' }}>完成五问自测题，检验判断清单是否真的内化</Text>
+    </Box>
+    <Box style={{ height: 56, background: '#EFF6FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', padding: 18, gap: 14 }}>
+      <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+      </Box>
+      <Text style={{ fontSize: 18, color: '#1E1B4B' }}>在主项目里论证：你的场景该不该微调</Text>
+    </Box>
+    <Box style={{ height: 56, background: '#EFF6FF', borderRadius: 10, flexDirection: 'row', alignItems: 'center', padding: 18, gap: 14 }}>
+      <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+      </Box>
+      <Text style={{ fontSize: 18, color: '#1E1B4B' }}>预习周三内容：模型评测体系</Text>
+    </Box>
+  </Box>
+
+  <Box style={{ height: 58, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginTop: 20 }}>
+    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>预告 · 周三 W2D3 模型评测体系：微调完了怎么证明变好了</Text>
+  </Box>
+</Slide>

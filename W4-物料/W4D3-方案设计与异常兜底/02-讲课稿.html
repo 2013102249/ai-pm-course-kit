@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W4 周三《方案设计与异常兜底》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl cur" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W4-物料/W4D3-方案设计与异常兜底 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W4 周三《方案设计与异常兜底》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影 / 板书操作指令 【故事】案例故事 【过渡】环节过渡话术 【金句】面试金句（放慢语速重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好。周三这节课，我们讲第四周最容易翻车、也最能拉开差距的一课——方案设计与异常兜底。</p>
+<p>先交代一下今天在课程全局里的位置。昨天大家交了 PRD V1.0，我知道很多人写得挺痛苦。今天不是推倒重写，今天专门补一块 AI 产品 PRD 里最容易缺、缺了最致命的章节——「容错兜底」。你们今天课上的产出，直接进 PRD，周五评审的时候，评审组会专门检查这一章。</p>
+<p>为什么说这块最容易缺？因为人在写需求的时候，脑子里全是「用户来了 → 系统答了 → 用户满意了」这条阳光大道。但真实世界里，AI 产品每天上演的是另一部剧：用户问了个奇怪的问题、模型突然慢了、生成的内容被拦了、用户聊到第七轮发现机器人把他第一句话忘了。这些时刻，决定用户是骂一句退出，还是觉得「这产品还挺稳」。</p>
+<p>【停】</p>
+<h2>导入：AI 翻车现场合集（3–8 分钟）</h2>
+<p>上课之前，先带大家看一组「AI 翻车现场合集」。这些是教学化整理的典型场景，不指向任何具体产品，但每一种，你们在真实产品里都早晚能碰到。</p>
+<p>【故事】第一幕，叫「答非所问还坚持己见」。一个客服机器人，用户问 A 产品怎么开发票，它开始讲 B 产品的激活流程。用户说「你理解错了」，它回一句「抱歉给您带来困扰」，然后接着讲 B 产品，语气还特别自信。用户问了三轮，它自信了三轮。最后用户不是去打客服电话了，是去社交媒体发了帖。</p>
+<p>第二幕，叫「含敏感词直接白屏」。一个内容生成工具，用户让它写一段文案，生成内容里命中了敏感词。系统怎么处理的？拦截，然后——整个页面一片空白。没有报错，没有提示，没有草稿。用户写了两千字，点一下，全没了。用户此刻对产品的感情，大家可以体会一下。</p>
+<p>第三幕，叫「聊着聊着，忘了你是谁」。一个学习助手，用户前面六轮一直在聊二次函数的解析几何应用，第七轮问「那这道题的第二问呢」，助手回了一句「您好，请问有什么可以帮您？」。前面六轮，归零，从头开始。用户不会觉得「哦它上下文超窗了」，用户只会觉得「这玩意儿没记性」。</p>
+<p>【停，环视】</p>
+<p>【问】这三幕里，你觉得哪一幕对产品口碑杀伤最大？【停，点 1–2 名学员】</p>
+<p>有同学选第一幕，有同学选第二幕，都有道理。我给一个我的判断：第一幕杀伤最大。因为第二幕、第三幕，用户还能理解「产品出故障了」；第一幕是「它不仅错了，它还骗我，还理直气壮」。产品的信任是一次一次攒的，这种时刻是一次清零。</p>
+<p>现在问第二个问题。</p>
+<p>【问】这三个场景，模型的锅还是产品设计的锅？【停】</p>
+<p>对，主要是产品设计的锅。模型会答错、会命中敏感词、会忘上下文——这些是模型的本性，你选哪个模型都一样。产品经理的活儿，是在这些「必然发生」的坏事发生之前，就设计好「发生之后怎么办」。正常路径大家都会写，翻车路径才见功力。</p>
+<p>【金句】记住今天第一句金句：<strong>AI 产品的体验，一半在兜底——正常路径大家都会写，翻车路径才见功力。</strong></p>
+<p>【过渡】那「兜底」到底兜什么、怎么兜？我们从一个最基础的问题讲起——你的产品方案，到底要用几张图来表达。</p>
+<h2>环节一：三层设计表达——功能结构图、流程图、状态机（8–20 分钟）</h2>
+<p>【操作：板书三层对比表】</p>
+<p>写方案的时候，很多同学分不清三种图。今天一次说清。</p>
+<p>第一张，<strong>功能结构图</strong>，回答「有什么」。静态的，把系统拆成模块：对话模块、知识库模块、历史记录模块。它像房子的户型图——房间有几间、每间多大。</p>
+<p>第二张，<strong>业务流程图</strong>，回答「怎么走」。动态的，用户从 A 到 B 走哪条路，每步做什么判断。它像导航路线——从这里到那里，经过哪几个路口。</p>
+<p>第三张，<strong>状态机</strong>，回答「此刻在哪，卡住了怎么办」。它在任何一个时刻都能告诉你：系统现在处于什么状态，这个状态可能停留多久，卡住了往哪儿去。</p>
+<p>【问】问题来了：前两张图大家熟悉，为什么 AI 产品必须加上第三张状态机？【停，点 1–2 名学员】</p>
+<p>因为 AI 产品的三个特性，把状态机从「可选」变成了「必选」。</p>
+<p>第一，<strong>结果是概率的</strong>。传统功能点了按钮就一定有确定结果，AI 的回答质量有高有低，可能出现你设计时想不到的输出。第二，<strong>过程是异步的</strong>。用户发完问题要等——等多久？等的时候看到什么？超时了算什么？这些都是状态问题，不是流程问题。第三，<strong>路径不是直线的</strong>。流程图画的是「从开始到结束」，但对话是环：用户可以随时插话、随时改口、随时不满意重来。直线工具画不了环，状态机才行。</p>
+<p>一句话：<strong>传统产品画流程就够了，AI 产品必须画状态机——因为它可能停在任何一步。</strong></p>
+<h2>环节二：对话产品状态机精讲（20–35 分钟）</h2>
+<p>【操作：板书 + 投影配图《状态机示意图》】</p>
+<p>接下来我们画一个对话产品的完整状态机。这就是你们课后要给自己项目画的模板，请照着画。</p>
+<p>基础主干五个状态：<strong>空闲 → 理解中 → 生成中 → 完成 / 异常 → 恢复</strong>。</p>
+<p>【操作：白板画主干，边画边讲】</p>
+<p>用户没说话，系统在<strong>空闲</strong>。用户输入一句话，进入<strong>理解中</strong>——意图识别、敏感词初筛都在这一步。识别通过，进入<strong>生成中</strong>——模型开始干活，流式输出。顺利的话到<strong>完成</strong>，回答输出完毕。不顺利，任何一步出问题，进入<strong>异常</strong>。异常处理完，进入<strong>恢复</strong>，回到空闲或者接着聊。这就是骨架。</p>
+<p>骨架好画，功夫在细节。我给每个状态补三个东西：<strong>超时值、用户感知、异常出口</strong>。大家笔记记这三个词，这是状态机设计的灵魂。</p>
+<p><strong>空闲</strong>：进入条件是会话开始或上一轮完成。建议问题要在这里摆出来，降低用户「第一句不知道说什么」的成本。别小看这个状态——很多对话产品冷启动失败，不是模型不行，是用户面对一个空输入框不知道该打什么。空闲态的设计目标只有一个：让用户迈出第一步的成本足够低。</p>
+<p><strong>理解中</strong>：进入条件是收到输入。超时设 3 秒——3 秒还没识别完，就要给提示「还在理解中」，别让用户干等。用户感知用轻量动效加「已读」气泡。异常出口两个：置信度太低，走异常——待会儿讲澄清；命中违规词，走异常——待会儿讲拒答。</p>
+<p><strong>生成中</strong>：进入条件是识别通过。超时设 10 秒——超过 10 秒没吐出内容，就不能再等了，转降级。用户感知是流式输出，首字延迟尽量压在 2 秒以内——用户对「开始动」和「动完了」的容忍度完全不同，迟迟不动才最焦虑。异常出口：超时、生成失败、敏感词拦截，全部转降级。</p>
+<p><strong>完成</strong>：回答输出完毕。注意这里有个容易被忽略的出口——用户追问或再次输入，直接回到理解中，不是回到空闲。对话是环，不是线。</p>
+<p><strong>异常</strong>：任何超时、失败、拦截都汇到这里。但异常不是一个终点，它是一个<strong>分流站</strong>——分四条路：澄清、拒答、降级、转人工。这就是我们接下来 30 分钟的主角，翻车四件套。</p>
+<p><strong>恢复</strong>：兜底动作执行完的状态。它必须明确指回哪儿：降级成功回到空闲，转人工成功就挂起等真人。异常态绝不能是死胡同。</p>
+<p>【问】我画完了，检查一下大家：每个状态我标了几个「超时值」？为什么要标？【停】</p>
+<p>对，每个状态都要标。没有超时值的状态机是摆设——「理解中」不停 30 秒没有任何提示，用户会做什么？疯狂点、直接退、打差评。超时值，就是你对「等多久算不正常」的产品定义。</p>
+<p>三条画图纪律，写下来：<strong>每个状态必须标超时值；每个异常状态必须有出口；恢复必须指回具体状态。</strong> 课后你们自己画图，我按这三条检查。</p>
+<p>【过渡】骨架有了，分流站的四条路——降级、澄清、拒答、转人工——现在一条一条讲。每讲完一条，你们在导学案的兜底设计表里写一行，写的时候注意，触发条件必须带数字。</p>
+<h2>环节三：翻车四件套逐个教学（35–62 分钟，核心环节）</h2>
+<p>【操作：板书四件套四要素表头：触发条件 / 产品动作 / 文案示例 / 升级路径】</p>
+<p>四件套的教学，每件都按同一个句式：<strong>什么情况触发 → 产品做什么 → 屏幕上显示什么话 → 还不行怎么办</strong>。四要素缺一不可——缺触发条件是口号，缺文案是骨架没有肉，缺升级路径是又一次只设计了「一步」。</p>
+<h3>第一件：降级（35–42 分钟）</h3>
+<p>降级的定义：<strong>AI 暂时干不了，退回次优方案，保住可用性。</strong></p>
+<p>触发条件，给三个量化基准：生成超时超过 10 秒；接口连续失败 2 次以上；输出命中敏感词被拦截。注意最后这个——回想开头那个白屏场景，拦截本身不是错，拦截之后什么都不做才是事故。</p>
+<p>产品动作：切换到规则话术，或者返回缓存答案，或者提示稍后再试。缓存答案这个词大家注意——高频问题的优质回答，提前准备好放在那里，AI 掉线的时候顶上。它不聪明，但它可靠。用户体验从来不是一条曲线，是你聪明的时候有多聪明，和你掉线的时候有多难看，两段曲线共同决定的。特别强调一点：<strong>「重新生成」最多只给重试 1 次</strong>。我见过失败之后按钮疯狂转圈、用户连点八次的产品——每一次重试都是成本，无限重试是把失控交给用户。</p>
+<p>文案示例，大家感受一下：「这个问题我需要再想一想，已经为您记录，10 分钟内会给出答案。着急的话，您可以先看看这份指南。」拆开看三个动作：认账——「需要再想一想」；给预期——「10 分钟内」；给出路——「可以先看指南」。没有一个字提「系统错误码」。</p>
+<p>升级路径：降级应答只是第一步，后台要补答并推送给用户，这个 badcase 要记下来回流。降级不是兜住了就完了，是把问题接住、转出去、再收回来。</p>
+<h3>第二件：澄清（42–49 分钟）</h3>
+<p>澄清的定义：<strong>没听懂就问，不装懂。</strong> 开头那个「答非所问还坚持己见」的场景，根子就是缺这一件——它没听懂，但它不敢问，硬着头皮答。</p>
+<p>触发条件，两个量化基准：意图识别置信度低于 0.6；一次查询同时命中 2 个以上候选意图、而且分差小于 0.1——说明真有歧义。这两个数是教学基准值，你们项目里要按自己的数据调，但必须是数，不能是「感觉理解不了的时候」。</p>
+<p>产品动作：追问，而且<strong>最多问一次</strong>。</p>
+<p>【问】为什么最多问一次？而且为什么必须给选项？【停，点学员】</p>
+<p>对。问第二次用户就开始烦了——「你到底行不行」。开放式追问是把成本甩回给用户，用户得打字描述；给选项是产品把成本接过来，用户「点一下」就行。所以文案长这样：「您是想问 A 还是 B？点一下就行。」一次澄清，两个候选，闭着眼睛都能选。</p>
+<p>升级路径：澄清一次之后仍然模糊怎么办？不追问第二次，改成给「猜你最想问」的问题列表，同时把人工入口亮出来。让用户永远有下一步，这是所有兜底设计的底线。</p>
+<h3>第三件：拒答（49–56 分钟）</h3>
+<p>拒答的定义：<strong>超出能力边界或踩到合规红线，明确说不能。</strong></p>
+<p>【问】先辨析一个问题：拒答和模型说「我不知道」，是一回事吗？【停】</p>
+<p>不是，这两件事差得很远。模型自己说「我不知道」，是生成出来的不确定表述——什么时候说、怎么说、说成什么样，全不可控。拒答是产品设计出来的动作：固定文案、固定触发、经过审核。一个是你祈祷模型自觉，一个是你写了规则。AI 产品经理要的是后者。</p>
+<p>触发条件三个：命中违规词表；问题超出产品知识范围、检索不到依据；涉及医疗、法律、投资建议这类高风险领域。特别是第三个——你是个学习助手，用户问你「帮我诊断这个症状是什么病」，这不是炫技题，这是必须拒的合规题。</p>
+<p>产品动作三个词：<strong>礼貌拒答、说明边界、给替代出路</strong>。文案示例：「这个我帮不了您，因为健康问题需要专业医生判断。您可以试试：把症状整理好去医院，或者我把您的问题整理成一份就诊清单。」注意，拒答文案<strong>必须由产品写死、走审核，禁止让模型现场生成</strong>——让模型自己写「我拒绝你的理由」，等于让嫌疑人自己写判决书。</p>
+<p>升级路径：用户觉得你拒错了怎么办？留申诉入口，进人工复核队列，复核结果每周回流更新词表。拒答策略不是上线即定稿，是活的。</p>
+<h3>第四件：转人工（56–62 分钟）</h3>
+<p>转人工的定义：<strong>AI 兜完了还解决不了，人上场。</strong> 前三件都是 AI 在兜，这是唯一一件要花钱的——所以触发条件定得最要紧。</p>
+<p>【问】转多了会怎样？转少了会怎样？【停】</p>
+<p>转多了，人力成本爆炸，AI 白建了——老板会问「那我为什么要这个机器人」。转少了，用户被 AI 耗到愤怒流失——他不会觉得「AI 不行」，他觉得「这家公司找不到活人」。所以触发条件是走钢丝，必须量化。四个基准：连续 2 轮没有解决用户问题；用户消息命中强负面情绪词；用户明确说「转人工」；高价值客户标记。四个条件满足任何一个，立刻转。</p>
+<p>产品动作：排队转人工，并且<strong>携带完整上下文摘要</strong>。文案：「已为您转接人工，之前的对话我都带过去了，您不用重复。」这句话的价值大家品一下——用户最愤怒的时刻，往往就是「已经解释三遍了，换了个人又让我从头讲」的时刻。带着上下文转，是转人工设计里最值钱的一句话。</p>
+<p>升级路径：人工工单要在 24 小时内回访，工单归因回流——用户为什么没被 AI 解决？是能力缺口还是触发失灵？回流到训练数据和词表里。</p>
+<p>四件套讲完了，说两条总原则。第一，<strong>四件套的顺序就是优先级</strong>：能用降级解决的不转人工，能澄清一次解决的不追问第二次——每一次升级都有成本，兜底方案设计的本质是升级成本的最小化。第二，<strong>兜底文案三原则：说人话、给出路、兜住情绪</strong>。课后你们写文案，拿这三条自查。</p>
+<p>【过渡】四件套是四个工具，那什么时候用哪个？接下来给大家一张「判断顺序图」——兜底决策树。</p>
+<h2>环节四：兜底决策树 + Prompt 即需求（62–72 分钟）</h2>
+<p>【操作：投影配图《兜底决策树》】</p>
+<p>决策树不长，四个问题，从上往下问：</p>
+<p>第一问，<strong>能理解吗？</strong> 置信度低、有歧义，走澄清。第二问，<strong>能答吗？</strong> 违规、超边界、检索无据，走拒答。第三问，<strong>答得出吗？</strong> 超时、失败、被拦，走降级。第四问，<strong>用户满意吗？</strong> 连续两轮没解决、情绪负面、主动要求，走转人工。</p>
+<p>【问】注意这四问的顺序，为什么「能理解吗」排第一，「用户满意吗」排最后？【停】</p>
+<p>因为成本递增。澄清是零成本的——一次追问；降级是低成本的——一次规则应答；转人工是真金白银。决策树的本质就是：<strong>能用便宜的办法解决，绝不启动贵的。</strong> 顺序错了，最便宜的兜底就永远没机会出场。</p>
+<p>画图纪律一条：决策树每个叶子节点，必须落在四件套之一或者「正常回答」上。两个叶子落进同一个件套、但触发条件不同，这是允许的——但每个叶子的触发条件必须各自写量化值。</p>
+<h3>Prompt 即需求</h3>
+<p>决策树讲完，说今天最后一个知识点，也是 AI 产品 PRD 和传统 PRD 最不一样的一点——<strong>Prompt 是需求的一部分，不是开发的实现细节。</strong></p>
+<p>道理一条链：一句 Prompt 决定产品行为——语气、格式、边界、拒答策略，全写在里面；改一句 Prompt，产品行为就变了；产品行为变了，就是改了需求。举个小例子：有人在 Prompt 里加了一句「回答要热情一点」，第二天投诉来了——用户觉得客服在灾难事故面前过于活泼。一句六个字的修改，产品人格当场变了。改需求要不要版本记录？要不要评审？要不要回归测试？要。那 Prompt 凭什么例外？</p>
+<p>三项管理机制，写进 PRD：<strong>版本管理</strong>——Prompt 进版本库，每次修改记录改了哪句、为什么改、谁批准；<strong>评审上线</strong>——重要 Prompt 比如拒答策略的变更，必须产品经理签字才能上；<strong>回归测试</strong>——Prompt 改完必须跑一遍评测集，确认老能力没退化。回扣第二周讲的评测集，没有回归的 Prompt 调优等于裸奔。</p>
+<p>【过渡】知识讲完了，现在练。前面开场那三个翻车场景，你们已经知道有多疼了——接下来三个新案例，你们来当那个「提前把坑填上的人」。</p>
+<h2>环节五：翻车案例分组讨论（72–85 分钟）</h2>
+<p>规则说一下：3 到 4 人一组，每组一张案例卡，讨论 5 分钟，然后每组 2 分钟汇报。分工一下——记录员、汇报员、计时员，四人组加一个抬杠员，专门挑方案的毛病。汇报固定格式，四句话：<strong>翻车点是什么 → 根因在哪 → 四件套里用哪几件 → 触发条件的数字是多少</strong>。最后那句最关键——说不出数字的方案，等于没设计。</p>
+<p>【操作：发布案例卡，计时 5 分钟，巡场听讨论】</p>
+<p>好，时间到。哪组先来？</p>
+<p>【停，每组汇报后按 07 文件点评框架点评，四查：查触发条件是否量化 / 查文案是否说人话 / 查升级路径是否闭环 / 查是否装得进 PRD】</p>
+<p>第一组讲的是周报助手白屏案例。方案用了降级——很好，而且他们说了「拦截后保留草稿」，这个动作很专业，用户两千年字保住了，愤怒就少了一半。触发条件的数字也给了。过关。</p>
+<p>第二组的面试模拟官案例，方案是澄清加拒答组合拳。我特别表扬一点：他们区分了「置信度低先澄清」和「无据可依直接拒答」两个触发——很多人会把这个场景一股脑丢给澄清。另外记住他们说的「连续 2 轮坚持己见就转人工」，这个数字就是量化意识。</p>
+<p>第三组的学习助手失忆案例。摘要是关键——「我们刚才聊到……」这一句话，把一次翻车变成了一次平滑接续。这就是兜底文案的力量：不解决技术问题，解决体验问题。</p>
+<p>三组共同的教训一句话：<strong>案例里没有一个事故是「模型不够强」造成的，全是「没设计会发生什么」造成的。</strong> 模型会变强，设计不会自动补齐——这正是产品经理不可替代的地方。</p>
+<h2>总结与作业（85–90 分钟）</h2>
+<p>今天的内容，收束成三句话：</p>
+<p>第一，AI 产品方案要画三层：功能结构图管有什么，流程图管怎么走，状态机管此刻在哪、卡住了怎么办。</p>
+<p>第二，翻车四件套——降级、澄清、拒答、转人工，每件四要素：量化触发条件、产品动作、文案示例、升级路径。顺序即优先级，能用便宜的不用贵的。</p>
+<p>第三，Prompt 是需求的一部分，版本、评审、回归，一个都不能少。</p>
+<p>作业两个：第一，把今天的兜底设计表扩到至少六行，并入 PRD「容错兜底」章节，周五评审前提交——评审组会专查这一章；第二，给自己项目补全核心业务的状态机图，按今天三条画图纪律自查。</p>
+<p>下节课，数据指标体系与 SQL 实战——兜底做得好不好，不能靠感觉，要靠幻觉率、解决率这些数字说话。下课。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>AI 产品的体验，一半在兜底——正常路径大家都会写，翻车路径才见功力。</li>
+<li>传统产品画流程就够了，AI 产品必须画状态机——因为它可能停在任何一步。</li>
+<li>拒答是产品设计出来的动作，不是模型临场发挥的礼貌。</li>
+<li>兜底方案设计的本质，是升级成本的最小化——能用便宜的办法解决，绝不启动贵的。</li>
+<li>兜底文案三原则：说人话、给出路、兜住情绪。</li>
+<li>Prompt 是需求的一部分——没有回归测试的 Prompt 调优，等于裸奔。</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「提示一下——回想开场那三个翻车场景，哪一个还有挽回的余地？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「这个角度先记下来。我们拉回问题本身——它问的是触发条件，你觉得触发条件缺了数字会怎样？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「完全正确，大声再说一遍——量化触发条件，这个点周五评审一定被问。」</td>
+</tr>
+<tr>
+<td>小组讨论冷场</td>
+<td>「每组先写下翻车点，哪怕只写一句。写下来我们才知道坑在哪。」</td>
+</tr>
+<tr>
+<td>学员说「这个用大模型能力升级就能解决」</td>
+<td>「好问题——能力升级解决『答得好不好』，兜底设计解决『答不出来的时候用户看到什么』。两件事，后者你升级到 GPT 几都得做。」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「Prompt 管理三机制今天先记三个词：版本、评审、回归，课后作业里会用到，回放里我补讲。」</td>
+</tr>
+<tr>
+<td>汇报超时</td>
+<td>「方案已经很好了，触发条件数字留着填进导学案，下一组接上。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D1</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>04 / 12</Text>
+  </Box>
+  <Box>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>六件套全景</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  </Box>
+  <Box style={{ marginTop: 22, flexDirection: 'row', gap: 24 }}>
+    <Box>
+      <Image src="assets/industry-framework.svg" style={{ width: 590, height: 462 }} />
+      <Text style={{ fontSize: 14, color: '#64748B', marginTop: 8 }}>行业分析框架图 · 产业链 / 政策 / 竞品 / 客户 / 场景 / 术语</Text>
+    </Box>
+    <Box style={{ flex: 1, gap: 16 }}>
+      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>「查什么 + 写多深」双行结构</Text>
+        <Text style={{ fontSize: 16, color: '#64748B', marginTop: 8, lineHeight: 1.5 }}>每一节上行写<span style={{ fontWeight: 'bold' }}>查什么</span>，下行写<span style={{ fontWeight: 'bold' }}>写多深</span>，先框架后细节，可循环补全</Text>
+      </Box>
+      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, padding: '16px 22px' }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>蓝字 = 验收硬标准</Text>
+        <Box style={{ marginTop: 10, gap: 7 }}>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>产业链：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>3 层 + 星标「我在哪」</span></Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>政策：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>3–6 条 + 对产品的意义</span></Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>竞品：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>≥3 行 + 每行有来源</span></Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>客户：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>1 个画像 + 痛点原话</span></Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>场景：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>≥5 个 + 3 个有佐证</span></Text>
+          <Text style={{ fontSize: 15, color: '#1E1B4B' }}>术语：<span style={{ color: '#2563EB', fontWeight: 'bold' }}>≥15 条 + 使用例句</span></Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,37 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D3</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>10 / 18</Text>
+    <Box style={{ flexDirection: 'column', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第三步：定评分标准与通过线</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 36, alignItems: 'stretch' }}>
+        <Box style={{ flex: 1, flexDirection: 'column', gap: 16 }}>
+            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 12 }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>1–5 星锚点描述</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>每档分数写清行为描述（如 5 分 = 完全正确且格式规范），让不同打分人打出一致的分数。</Text>
+            </Box>
+            <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 12 }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>单条通过标准</Text>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>单条通过 = <span style={{ fontWeight: 'bold', color: '#2563EB' }}>各维 ≥4 分</span> 且 <span style={{ fontWeight: 'bold', color: '#2563EB' }}>非 badcase</span>，两个条件缺一不可。</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 480, background: '#F5F3FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>灰度警戒线（两个数字）</Text>
+            <Box style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 32 }}>
+                <Box style={{ flexDirection: 'column', gap: 4 }}>
+                    <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#DC2626' }}>≤30%</Text>
+                    <Text style={{ fontSize: 16, color: '#64748B' }}>badcase 率警戒线</Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 4 }}>
+                    <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#2563EB' }}>≥80%</Text>
+                    <Text style={{ fontSize: 16, color: '#64748B' }}>通过率门槛</Text>
+                </Box>
+            </Box>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>两条线同时达标，才允许进入灰度发布。</Text>
+        </Box>
+    </Box>
+</Slide>

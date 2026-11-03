@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W7 周二《作品集方法论》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl cur" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料/W7D2-作品集方法论 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W7 周二《作品集方法论》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（STAR 改写）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业（与复盘文档互审合并做）；求职挑战层自测，第八周面试课复用。<br />
+所有题目附参考答案与评分标准。题目中的项目与数字均为教学示例，学员作答时必须替换为自己主项目的真实数据，禁止照抄示例数字。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 关于作品集三种形态的定位，正确的是：</strong><br />
+A. 在线演示是深度证明，复盘文档是直接证明<br />
+B. 项目复盘文档是深度证明，在线演示是直接证明，产品分析集是思维证明<br />
+C. 产品分析集的读者主要是 HR<br />
+D. 三种形态必须三选一，选一个做精就够</p>
+<p><strong>2. 一名转行学员的作品集主辅搭配，最合理的是：</strong><br />
+A. 主：产品分析集；辅：无<br />
+B. 主：在线演示；辅：无<br />
+C. 主：复盘文档 + 产品分析集；辅：在线演示<br />
+D. 三种都做主形态，平均用力</p>
+<p><strong>3. 关于 STAR 中 S（Situation）的写法，正确的是：</strong><br />
+A. 背景写得越详细越好，体现项目体量<br />
+B. 一句话不超过 40 字，含行业、场景、核心矛盾<br />
+C. 至少写 200 字，让面试官了解行业背景<br />
+D. 可以省略，直接从动作写起</p>
+<p><strong>4. 「负责了智能客服的需求调研、PRD 撰写、开发跟进、测试验收」，这句 Action 的核心问题是：</strong><br />
+A. 字数太少，信息量不足<br />
+B. 写成了岗位说明书，换任何人都成立，看不出决策<br />
+C. 动词使用不当<br />
+D. 没有写时间线</p>
+<p><strong>5. 下列 Result 写法中，符合「必须有数字且有对比」的是：</strong><br />
+A. 产品效果显著，用户体验大幅提升<br />
+B. 引用正确率达到 90%<br />
+C. 引用正确率从 71% 提升至 90%（上线两周，12 人三轮评测）<br />
+D. 用户普遍反映产品很好用</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 写出数据呈现三原则，并各用一句话说明它防止了什么问题。</strong></p>
+<p><strong>7. 「把团队成果写成个人成果」的风险是什么？正确写法是什么？</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（STAR 改写，本课考点）</h2>
+<p><strong>8. 项目经历改写（60 分）</strong></p>
+<p>下面三段平庸的项目经历均摘自真实简历的典型病句（教学示例）。请任选<strong>两段</strong>，分别改写为符合 STAR 法则的版本。要求：S 一句话（≤40 字）；T 可量化（范围 / 规模 / 周期 / 指标至少两项）；A 写决策不写流水账（2–3 条，含「为什么、放弃了什么」）；R 有对比数字（基准值→结果值 + 时间范围）。</p>
+<blockquote>
+<p>改写允许合理补全背景细节，但涉及数字处请用「X」占位并括注你的真实数据来源，例如「完成 X 次用户访谈（填你的真实访谈数）」，不得凭空编造数字。</p>
+</blockquote>
+<p><strong>段落一</strong>：「负责了知识库产品的设计和开发，学到了很多。」</p>
+<p><strong>段落二</strong>：「参与 AI 知识库项目，负责一些需求分析和文档工作。」</p>
+<p><strong>段落三</strong>：「做了一个用 AI 生成周报的小工具，大家反映还不错。」</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>9. 面试真题：项目 90 秒陈述（30 分）</strong></p>
+<p>面试官：「用 90 秒，讲一个你主导的 AI 产品，让我记住它。」<br />
+要求：按 STAR 口述（背景一句话 / 目标可量化 / 两个关键决策 / 带对比的数字结果），全文 ≤300 字，须含至少 2 个可被追问出处的数字。</p>
+<p><strong>10. 案例分析：数字被质疑（30 分）</strong></p>
+<p>面试官看着你的复盘文档问：「这个『引用正确率从 71% 提升到 90%』，评测集才 12 个人，样本量这么小，你这个数字可信吗？」<br />
+要求：给出当场回应话术（含数据来源说明、样本局限的坦诚承认、以及一个体现严谨性的补充动作），并说明为什么「直接辩解数字没错」不是最优解。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 D 得 3 分（知道有组合意识但方向错——三形态是「一主一辅」不是三选一）</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；能说明「复盘证明闭环能力、分析集证明经验迁移」加 3 分</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；答出「决策过滤器：每条 Action 要能回答为什么这么做、放弃了什么」额外加 3 分</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；能指出 B 的问题「只有绝对值没有基准」加 3 分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>① 对比才有意义——防止单个数字无法判断好坏（「90%」是高是低无从知晓）；② 图表选型——防止一图多结论、立体图歪曲比例、重点淹没；③ 标注来源——防止数字被追问时无法举证、可信度归零</td>
+<td>每原则 5 分 + 问题说明 3 分；原则名称表述不同但意思对即可</td>
+</tr>
+<tr>
+<td>7</td>
+<td>风险：面试官追问细节（方案谁提的、为什么不用另一条路）立即穿帮，属一票否决的诚信问题。正确写法：标注角色与分工，如「团队 4 人，我负责检索与重排方案」——真实标注后成果才真正归你，因为每个细节都答得上</td>
+<td>风险 12 分（答到「穿帮 / 追问 / 诚信」任一即可）+ 正确写法 13 分（必须含「标注角色」动作）</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（第 8 题，每段 30 分，两段共 60 分）</h3>
+<p><strong>段落一参考改写（教学示例格式，学员替换为真实数据）</strong>：<br />
+S：企业内部咨询量 200 条/天，60% 为重复问题，人工响应超 4 小时。<br />
+T：从 0 到 1 主导 8 周上线，团队 X 人，目标引用正确率 X% 以上。<br />
+A：① X 次用户访谈将答非所问归因到分块切断语义，推翻「模型能力不足」的原假设，放弃直接换模型方案；② 设计「分块 X 字 + 重排」两段式检索，以 X 毫秒延迟换取引用正确率。<br />
+R：引用正确率从 X% 提升至 X%（上线 X 周，X 人评测）；累计服务 X 次真实咨询，占日常咨询量 X%。</p>
+<p><strong>段落二参考改写（教学示例格式）</strong>：<br />
+S：售后政策分散在 X 个系统，客服检索一条政策平均耗时 X 分钟。<br />
+T：负责检索链路优化模块，目标把检索时间压到 X 秒内。<br />
+A：① 实测发现关键词搜索命中率仅 X%，改用向量检索加重排；② 砍掉 X 个低使用率筛选器，简化交互层级。<br />
+R：平均检索时间从 X 分 X 秒降至 X 秒，命中率提升至 X%（X 次内部实测）。</p>
+<p><strong>段落三参考改写（教学示例格式）</strong>：<br />
+S：团队周报格式混乱，每人每周平均耗费 X 小时整理。<br />
+T：独立开发 AI 周报助手，X 周内覆盖全组 X 人使用。<br />
+A：① 拆解组内 X 份历史周报归纳出 X 类模板，放弃「完全自由生成」方案以保格式统一；② 增加人工确认步骤，解决生成内容失真问题。<br />
+R：周均整理时间从 X 小时降至 X 分钟，X 人中使用率达 X%（上线 X 周）。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分/段）</td>
+<td>四要素齐全；T 含可量化项；R 含数字；但 A 仍是动作罗列、无取舍</td>
+</tr>
+<tr>
+<td>良好（24–27 分/段）</td>
+<td>A 写出关键决策且含「为什么 / 放弃了什么」至少一处；R 为「基准值→结果值」格式并带时间范围</td>
+</tr>
+<tr>
+<td>优秀（28–30 分/段）</td>
+<td>额外满足：数字用占位符并标注真实数据来源（诚信意识）；S 含核心矛盾；A 中有可辨识的权衡（如延迟换正确率）；全文可直接用于简历</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 9 题参考答案要点</strong>：结构=一句话背景 → 可量化目标 → 两个关键决策（各含取舍）→ 带对比的结果数字；总时长 60–90 秒；数字均能报出出处。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>STAR 四要素齐全，时长可控，至少 1 个数字</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>数字 ≥2 个且带对比基准；决策含「放弃了什么」；口述自然无背诵感</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>在 90 秒内主动埋一个「钩子」（如一个反直觉的归因），引导面试官朝自己准备好的方向追问</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 10 题参考答案要点</strong>：回应结构=①先认事实：报出处（哪份报告、何时测的、评测集怎么建）；②坦诚局限：12 人样本确实小，结论是方向性而非统计显著；③补严谨动作：如「已把上线后 X 次真实咨询作为第二验证层，线上数据与评测集趋势一致」；④点明为什么不能硬辩：面试官考的是数据诚实与严谨性，硬辩触发的是诚信怀疑，承认局限反而是加分项。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>能报出数据来源，回应有礼貌且不慌乱</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>主动承认样本局限并给出第二数据源验证，体现「诚实 + 有方法」</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>点破面试官考察意图（数据诚实度），并把质疑转化为展示严谨性的机会（如顺势介绍评测集建设方法论）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

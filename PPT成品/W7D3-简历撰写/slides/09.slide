@@ -1,0 +1,22 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei', justifyContent: 'center', alignItems: 'center' }}>
+    <Box style={{ width: '100%', flexDirection: 'column', alignItems: 'center', gap: 40 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.75)', letterSpacing: 4 }}>项目描述公式</Text>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 24 }}>
+            <Box style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 14, padding: '22px 30px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>背景一句</Text>
+                <Text style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', marginTop: 6 }}>给盘子</Text>
+            </Box>
+            <Text style={{ fontSize: 30, color: 'rgba(255,255,255,0.7)' }}>+</Text>
+            <Box style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 14, padding: '22px 30px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>动作两条</Text>
+                <Text style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', marginTop: 6 }}>可验证动词</Text>
+            </Box>
+            <Text style={{ fontSize: 30, color: 'rgba(255,255,255,0.7)' }}>+</Text>
+            <Box style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 14, padding: '22px 30px', alignItems: 'center' }}>
+                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>数据一条</Text>
+                <Text style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', marginTop: 6 }}>量化结果</Text>
+            </Box>
+        </Box>
+        <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', lineHeight: 1.5 }}>一句背景给盘子，两条动作见手艺，<br />一条数据见结果</Text>
+    </Box>
+</Slide>

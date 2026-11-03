@@ -1,0 +1,36 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>AARRR 五环节落地总表（上）</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 26, border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
+        <Box style={{ flexDirection: 'row', background: '#7C3AED', height: 56, alignItems: 'center' }}>
+            <Box style={{ width: 150, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>环节</Text></Box>
+            <Box style={{ width: 240, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>传统产品的做法</Text></Box>
+            <Box style={{ width: 450, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>AI 产品怎么做</Text></Box>
+            <Box style={{ width: 320, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>关键指标</Text></Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', background: '#FFFFFF', minHeight: 88, alignItems: 'center', borderBottom: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 150, padding: '16px 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>获客<br />Acquisition</Text></Box>
+            <Box style={{ width: 240, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>投放买量、应用商店冲榜、地推</Text></Box>
+            <Box style={{ width: 450, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>内容获客（演示案例与教程）；生成结果自带分享属性，结果卡片即广告；对话即注册，体验门槛前置归零</Text></Box>
+            <Box style={{ width: 320, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>获客成本 CAC、渠道注册转化率</Text></Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', background: '#F5F3FF', minHeight: 88, alignItems: 'center' }}>
+            <Box style={{ width: 150, padding: '16px 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>激活<br />Activation</Text></Box>
+            <Box style={{ width: 240, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>新手引导、注册礼包、签到任务</Text></Box>
+            <Box style={{ width: 450, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>把用户以最短路径送到 aha 时刻：预置示例问题、免注册先体验、首答质量兜底</Text></Box>
+            <Box style={{ width: 320, padding: '16px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>aha 时刻到达率、首次核心行为完成率、注册到 aha 的耗时</Text></Box>
+        </Box>
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 24, padding: '16px 28px', background: '#7C3AED', borderRadius: 12, alignItems: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>重心不在获客</Text>
+    </Box>
+</Slide>

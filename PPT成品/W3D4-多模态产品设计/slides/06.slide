@@ -1,0 +1,30 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, borderRadius: 2, background: '#7C3AED' }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D4</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>06 / 16</Text>
+
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>四类形态对比总表</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 18 }} />
+
+        <Box style={{ flexDirection: 'row', gap: 24, marginTop: 24 }}>
+            <Image src="assets/multimodal-compare.svg" style={{ width: 800, height: 460, borderRadius: 12, border: '1px solid #E5E7EB' }} />
+            <Box style={{ width: 336, height: 460, flexDirection: 'column', gap: 16 }}>
+                <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '20px 24px', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>成熟度</Text>
+                    <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>决定敢不敢做</Text>
+                </Box>
+                <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '20px 24px', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>成本量级</Text>
+                    <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>决定做不做得起</Text>
+                </Box>
+                <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '20px 24px', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>合规风险</Text>
+                    <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>决定会不会翻车</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

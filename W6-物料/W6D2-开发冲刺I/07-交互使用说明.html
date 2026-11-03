@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交互使用说明 · W6 周二（本课无专用交互页 · 改为「冲刺日助教协作手册」） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl cur" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W6-物料/W6D2-开发冲刺I / 07-交互使用说明.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><span class="cur">07-交互使用说明</span><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>交互使用说明 · W6 周二（本课无专用交互页 · 改为「冲刺日助教协作手册」）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 第六周第二天 · 生产卡口径：本课交互 = 无（学员实操）。<br />
+说明：冲刺日没有课堂演示型交互工具——教具是学员自己的项目工程。本文件替代交互使用说明，规定讲师、助教在 90 分钟内的分工、路线与协作机制。</p>
+</blockquote>
+<h2>一、为什么没有交互页</h2>
+<table>
+<thead>
+<tr>
+<th>原因</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学员在动手</td>
+<td>本课 70 分钟为巡场陪跑，学员屏幕上是自己的代码，任何演示工具都会变成干扰</td>
+</tr>
+<tr>
+<td>无需统一演示</td>
+<td>昨日 W6D1 已完成工具选型，学员技术栈可能不同，不存在「一个工具带全班过一遍」的场景</td>
+</tr>
+<tr>
+<td>已有替代机制</td>
+<td>卡点排查靠教案预判表（讲师手里）+ 卡点记录表（助教手里），比交互工具更直接</td>
+</tr>
+</tbody>
+</table>
+<h2>二、讲师 / 助教分工</h2>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>人数</th>
+<th>核心职责</th>
+<th>不做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>讲师</td>
+<td>1</td>
+<td>开场宣讲（10 min）；全场巡视抓方案级问题；升级问题唯一入口；收尾主持清算（10 min）</td>
+<td>不逐个改代码；不接手助教职权内的一线排查</td>
+</tr>
+<tr>
+<td>助教 A（环境组）</td>
+<td>1</td>
+<td>盯环境类卡点：依赖、端口、启动、替换参考工程</td>
+<td>不判断业务方案</td>
+</tr>
+<tr>
+<td>助教 B（联调组）</td>
+<td>1</td>
+<td>盯 Key 与联调卡点：API 调用、CORS、401/404、日志接入</td>
+<td>不做需求变更决策</td>
+</tr>
+<tr>
+<td>运营（远程）</td>
+<td>1</td>
+<td>群内打卡接龙统计；Key 池额度申请；公共 Key 发放</td>
+<td>不进技术排查</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>若只有 1 名助教：环境与联调两组合并，优先保联调组（冲刺日最高频）。</p>
+</blockquote>
+<h2>三、巡场路线（70 分钟陪跑，全程不停走）</h2>
+<table>
+<thead>
+<tr>
+<th>时段</th>
+<th>路线</th>
+<th>动作要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10–25 min</td>
+<td>讲师全场快走一圈，每人 ≤30 秒</td>
+<td>只问一个问题：「链路三步，现在在哪？」快速分级：已动 / 未动 / 卡死</td>
+</tr>
+<tr>
+<td>25–40 min</td>
+<td>讲师定点守「卡死者」；助教分组片巡场</td>
+<td>每 15 分钟扫一遍本片区；卡超 5 分钟的按预判表代查</td>
+</tr>
+<tr>
+<td>40 min（CP1）</td>
+<td>讲师回台前 2 分钟</td>
+<td>宣布 CP1 打卡，群内发接龙；统计未过名单给助教重点盯</td>
+</tr>
+<tr>
+<td>40–55 min</td>
+<td>助教重点巡 CP1 未过者；讲师巡中间层</td>
+<td>中间层（已过 CP1）问降级与日志，向前压进度</td>
+</tr>
+<tr>
+<td>55–70 min（CP2）</td>
+<td>同 25–40 节奏</td>
+<td>70 分钟宣布 CP2 打卡，接龙 + 名单</td>
+</tr>
+<tr>
+<td>70–80 min（CP3）</td>
+<td>全员向「串联 + 日志可见」收口</td>
+<td>讲师开始终验抽查：每人 30 秒演示</td>
+</tr>
+<tr>
+<td>80–90 min</td>
+<td>全员回位</td>
+<td>讲师主持 blockers 清算，助教投屏记录表逐条过</td>
+</tr>
+</tbody>
+</table>
+<p><strong>路线纪律</strong>：<br />
+1. 助教不等举手，每 15 分钟主动扫一遍本片区——举手求助的学员往往已卡了 20 分钟。<br />
+2. 同一学员身上单次停留不超过 5 分钟，超时升级，不恋战。<br />
+3. 巡场时脚步要慢过讲台，眼光扫屏幕不扫脸——先看报错，再听人讲。</p>
+<h2>四、卡点记录方式（助教专用）</h2>
+<p>在线表格《W6D2 卡点记录表》，四列，一人一行，现场即记，不事后补：</p>
+<table>
+<thead>
+<tr>
+<th>列</th>
+<th>填写规范</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学员</td>
+<td>姓名或座位号</td>
+<td>L-12</td>
+</tr>
+<tr>
+<td>卡点</td>
+<td>归到三类之一：环境 / Key / 联调 / 方案</td>
+<td>联调</td>
+</tr>
+<tr>
+<td>处理</td>
+<td>用了排查表第几步 + 是否当场解决</td>
+<td>CORS 加响应头，已解决</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>已清 / 未清 / 升级</td>
+<td>已清</td>
+</tr>
+</tbody>
+</table>
+<p><strong>记录规则</strong>：<br />
+1. 每条卡点必须记录，无论是否当场解决——共性卡点是当晚 FAQ 的原料。<br />
+2. 一类卡点当场出现第 3 例，助教在群内标注「共性」，讲师立即全场广播一次解法。<br />
+3. 升级讲师的条目，状态写「升级」并附一句背景，讲师按序处理，不允许跳过记录直接口头传话。</p>
+<h2>五、升级求助机制</h2>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>触发条件</th>
+<th>响应人</th>
+<th>响应时限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 自查</td>
+<td>学员卡住</td>
+<td>学员本人</td>
+<td>5 分钟内</td>
+</tr>
+<tr>
+<td>L2 助教</td>
+<td>自查无果 / 学员举手</td>
+<td>对应组助教</td>
+<td>3 分钟内到场</td>
+</tr>
+<tr>
+<td>L3 讲师</td>
+<td>助教 5 分钟未解决 / 方案级问题 / 一类卡点第 3 例</td>
+<td>讲师</td>
+<td>排入当次巡视，最迟 10 分钟</td>
+</tr>
+<tr>
+<td>L4 运营</td>
+<td>Key 额度、账号开通、公共资源问题</td>
+<td>运营</td>
+<td>当天 21:00 前</td>
+</tr>
+</tbody>
+</table>
+<p><strong>升级纪律</strong>：升级时必须带排查记录（试过哪几步、报错是什么），讲师与助教有权对「零排查」的提问退回一步——这是课程刻意训练的职业习惯。</p>
+<h2>六、当日协作检查表（开场前 10 分钟，讲师与助教对齐）</h2>
+<ul>
+<li>[ ] 投屏已打开《核心链路检查清单》配图，全屏</li>
+<li>[ ] 卡点记录表链接已发讲师与助教，三人在线可编辑</li>
+<li>[ ] 讲师本地「能跑通的参考链路」已启动并通过一次请求</li>
+<li>[ ] 学员分组名单已分片到人（每助教一片，含座位号）</li>
+<li>[ ] 群打卡接龙模板已备好（CP1 / CP2 / CP3 三条）</li>
+<li>[ ]  blockers 清单模板已建（用于 80–90 分钟清算）</li>
+</ul>
+<h2>七、应急处理</h2>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>讲师临时缺席</td>
+<td>助教按教案第五节时间表自主执行，宣讲段改用 02-讲课稿逐字稿由资深助教代读</td>
+</tr>
+<tr>
+<td>大面积同类卡点（≥5 人）</td>
+<td>讲师立即叫停巡场，全场广播解法 3 分钟，再放行</td>
+</tr>
+<tr>
+<td>参考工程也跑不通</td>
+<td>启动 L4：运营协调公共环境或演示环境，学员远程共用</td>
+</tr>
+<tr>
+<td>学员情绪焦躁</td>
+<td>话术兜底：「冲刺日卡住是常态，去年这一天全场平均卡 4 次，最后都跑通了」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

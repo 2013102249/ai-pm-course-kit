@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">训练与微调全链路流程图</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">预训练 → SFT → LoRA → RLHF：一个模型从诞生到上岗的四步（实习生类比）</text>
+<!-- 段1 预训练 -->
+<rect x="25" y="150" width="235" height="320" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="142.5" y="212" text-anchor="middle" font-size="28" font-weight="700" fill="#7C3AED">预训练</text>
+<rect x="57" y="235" width="171" height="38" rx="19" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="142.5" y="260" text-anchor="middle" font-size="19" fill="#5B21B6">读完全部教科书</text>
+<text x="142.5" y="308" text-anchor="middle" font-size="12" fill="#6B7280">数以万亿计 Token · 以月计</text>
+<line x1="65" y1="330" x2="220" y2="330" stroke="#E8E5F1"/>
+<text x="142.5" y="362" text-anchor="middle" font-size="11" fill="#A5A1B8">产品经理关注点</text>
+<text x="142.5" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">不参与，选型即可</text>
+<!-- 段2 SFT -->
+<rect x="305" y="150" width="235" height="320" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="422.5" y="212" text-anchor="middle" font-size="28" font-weight="700" fill="#7C3AED">SFT</text>
+<rect x="369" y="235" width="107" height="38" rx="19" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="422.5" y="260" text-anchor="middle" font-size="19" fill="#5B21B6">岗位培训</text>
+<text x="422.5" y="308" text-anchor="middle" font-size="12" fill="#6B7280">数以千计到万计示范</text>
+<line x1="345" y1="330" x2="500" y2="330" stroke="#E8E5F1"/>
+<text x="422.5" y="362" text-anchor="middle" font-size="11" fill="#A5A1B8">产品经理关注点</text>
+<text x="422.5" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">行为差异的来源</text>
+<!-- 段3 LoRA（高亮） -->
+<rect x="585" y="150" width="235" height="320" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="3"/>
+<text x="702.5" y="212" text-anchor="middle" font-size="28" font-weight="700" fill="#7C3AED">LoRA</text>
+<rect x="591" y="235" width="223" height="38" rx="19" fill="#FFFFFF" stroke="#7C3AED"/>
+<text x="702.5" y="260" text-anchor="middle" font-size="19" fill="#5B21B6">贴一张便利贴微调习惯</text>
+<text x="702.5" y="308" text-anchor="middle" font-size="12" fill="#6B7280">数以百计示例 · 开销小可插拔</text>
+<line x1="625" y1="330" x2="780" y2="330" stroke="#DDD2F7"/>
+<text x="702.5" y="362" text-anchor="middle" font-size="11" fill="#A5A1B8">产品经理关注点</text>
+<text x="702.5" y="396" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">产品经理唯一可能</text>
+<text x="702.5" y="420" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">出手的环节</text>
+<!-- 段4 RLHF -->
+<rect x="865" y="150" width="235" height="320" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="982.5" y="212" text-anchor="middle" font-size="28" font-weight="700" fill="#7C3AED">RLHF</text>
+<rect x="910" y="235" width="145" height="38" rx="19" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="982.5" y="260" text-anchor="middle" font-size="19" fill="#5B21B6">师傅带教打分</text>
+<text x="982.5" y="308" text-anchor="middle" font-size="12" fill="#6B7280">人类偏好打分排序</text>
+<line x1="905" y1="330" x2="1060" y2="330" stroke="#E8E5F1"/>
+<text x="982.5" y="362" text-anchor="middle" font-size="11" fill="#A5A1B8">产品经理关注点</text>
+<text x="982.5" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">对齐人类偏好，厂商主战场</text>
+<!-- 箭头与输出物 -->
+<line x1="262" y1="310" x2="298" y2="310" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<text x="282.5" y="136" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">基础模型</text>
+<line x1="542" y1="310" x2="578" y2="310" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<text x="562.5" y="136" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">会听话的模型</text>
+<line x1="822" y1="310" x2="858" y2="310" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<text x="842.5" y="136" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">行为定制版</text>
+<line x1="1102" y1="310" x2="1152" y2="310" stroke="#A5A1B8" stroke-width="2" marker-end="url(#arr)"/>
+<text x="1127" y="136" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">对齐成品</text>
+<!-- LoRA 角标 -->
+<rect x="940" y="118" width="160" height="26" rx="13" fill="#7C3AED"/>
+<text x="1020" y="136" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">够用原则的主场</text>
+<text x="1180" y="675" text-anchor="end" font-size="11" fill="#A5A1B8">AI 产品经理就业训练营 · W2D2</text>
+</svg>

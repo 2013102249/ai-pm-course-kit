@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<defs>
+<marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+</defs>
+<rect x="48" y="44" width="4" height="22" fill="#7C3AED"/>
+<text x="62" y="61" font-size="20" font-weight="700" fill="#221E33">上下文工程四组件速查表</text>
+<text x="62" y="82" font-size="12" fill="#6B7280">上下文组织层是产品经理的主战场，模型那一格反而是黑盒</text>
+
+<!-- 流程轴 -->
+<rect x="100" y="144" width="160" height="52" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="180" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">用户输入</text>
+<line x1="264" y1="170" x2="332" y2="170" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
+<rect x="340" y="144" width="240" height="52" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="460" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">上下文组织层</text>
+<line x1="584" y1="170" x2="652" y2="170" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
+<rect x="660" y="144" width="160" height="52" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="740" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">模型</text>
+<line x1="824" y1="170" x2="892" y2="170" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
+<rect x="900" y="144" width="160" height="52" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+<text x="980" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#221E33">输出</text>
+
+<!-- 分发线 -->
+<line x1="460" y1="196" x2="460" y2="240" stroke="#C9C2DE" stroke-width="1.4"/>
+<line x1="174" y1="240" x2="1026" y2="240" stroke="#C9C2DE" stroke-width="1.4"/>
+<line x1="174" y1="240" x2="174" y2="262" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<line x1="458" y1="240" x2="458" y2="262" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<line x1="742" y1="240" x2="742" y2="262" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+<line x1="1026" y1="240" x2="1026" y2="262" stroke="#2563EB" stroke-width="1.6" marker-end="url(#arrB)"/>
+
+<!-- 卡1 资料注入 -->
+<rect x="44" y="268" width="260" height="280" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+<rect x="44" y="268" width="260" height="44" rx="10" fill="#7C3AED"/>
+<rect x="44" y="290" width="260" height="22" fill="#7C3AED"/>
+<text x="174" y="297" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">资料注入</text>
+<text x="64" y="344" font-size="11" fill="#6B7280">解决的问题</text>
+<text x="64" y="372" font-size="16" font-weight="700" fill="#221E33">模型不知道</text>
+<text x="64" y="396" font-size="13" fill="#6B7280">幻觉的对症药</text>
+<line x1="64" y1="424" x2="284" y2="424" stroke="#E8E5F1" stroke-width="1"/>
+<text x="284" y="466" text-anchor="end" font-size="11" fill="#9CA3AF">不做的后果</text>
+<text x="284" y="492" text-anchor="end" font-size="13" fill="#4A4560">一本正经地编造公司政策</text>
+
+<!-- 卡2 工具描述 -->
+<rect x="328" y="268" width="260" height="280" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+<rect x="328" y="268" width="260" height="44" rx="10" fill="#7C3AED"/>
+<rect x="328" y="290" width="260" height="22" fill="#7C3AED"/>
+<text x="458" y="297" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">工具描述</text>
+<text x="348" y="344" font-size="11" fill="#6B7280">解决的问题</text>
+<text x="348" y="372" font-size="16" font-weight="700" fill="#221E33">模型不会用</text>
+<text x="348" y="396" font-size="13" fill="#6B7280">函数调用</text>
+<line x1="348" y1="424" x2="568" y2="424" stroke="#E8E5F1" stroke-width="1"/>
+<text x="568" y="466" text-anchor="end" font-size="11" fill="#9CA3AF">不做的后果</text>
+<text x="568" y="492" text-anchor="end" font-size="13" fill="#4A4560">该调的时候不调，乱调、错调</text>
+
+<!-- 卡3 记忆设计 -->
+<rect x="612" y="268" width="260" height="280" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+<rect x="612" y="268" width="260" height="44" rx="10" fill="#7C3AED"/>
+<rect x="612" y="290" width="260" height="22" fill="#7C3AED"/>
+<text x="742" y="297" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">记忆设计</text>
+<text x="632" y="344" font-size="11" fill="#6B7280">解决的问题</text>
+<text x="632" y="372" font-size="16" font-weight="700" fill="#221E33">模型总失忆</text>
+<line x1="632" y1="424" x2="852" y2="424" stroke="#E8E5F1" stroke-width="1"/>
+<text x="852" y="466" text-anchor="end" font-size="11" fill="#9CA3AF">不做的后果</text>
+<text x="852" y="492" text-anchor="end" font-size="13" fill="#4A4560">用户重复自我介绍，体验断裂</text>
+
+<!-- 卡4 历史对话 -->
+<rect x="896" y="268" width="260" height="280" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.6"/>
+<rect x="896" y="268" width="260" height="44" rx="10" fill="#7C3AED"/>
+<rect x="896" y="290" width="260" height="22" fill="#7C3AED"/>
+<text x="1026" y="297" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">历史对话</text>
+<text x="916" y="344" font-size="11" fill="#6B7280">解决的问题</text>
+<text x="916" y="372" font-size="16" font-weight="700" fill="#221E33">多轮接不上</text>
+<line x1="916" y1="424" x2="1136" y2="424" stroke="#E8E5F1" stroke-width="1"/>
+<text x="1136" y="466" text-anchor="end" font-size="11" fill="#9CA3AF">不做的后果</text>
+<text x="1136" y="492" text-anchor="end" font-size="13" fill="#4A4560">用户改三次日期，它忘两次</text>
+
+<text x="600" y="600" text-anchor="middle" font-size="12" fill="#7A7590">四张组件卡全部发生在「上下文组织层」——这一层由产品与工程共同设计，是产品经理的主战场</text>
+</svg>

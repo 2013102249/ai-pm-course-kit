@@ -1,0 +1,35 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>W6D3 · 开发冲刺 II</Text>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>02 / 8</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天只做两件事</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
+
+  <Box style={{ flexDirection: 'row', gap: 24, width: '100%', height: 330 }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, border: '1px solid #DDD6FE', padding: '32px 32px', flexDirection: 'column', gap: 18 }}>
+      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>功能补全</Text>
+      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.6 }}>对照 W6D1 技术方案清单，<br />逐项打勾</Text>
+      <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>清单里的每一项，今天都要能在演示里看到</Text>
+    </Box>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, border: '1px solid #DDD6FE', padding: '32px 32px', flexDirection: 'column', gap: 18 }}>
+      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+      </Box>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>三态打磨</Text>
+      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.6 }}>22 项走查清单，<br />逐项过</Text>
+      <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>空态、错态、加载态，一项一项对照检查</Text>
+    </Box>
+  </Box>
+
+  <Box style={{ marginTop: 28, width: '100%', background: '#F5F3FF', borderRadius: 10, border: '1px solid #DDD6FE', padding: '18px 24px', flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#DC2626' }}>纪律：今天禁止开新需求</Text>
+    <Text style={{ fontSize: 16, color: '#64748B' }}>——防止「顺手加功能」拖垮周四测试</Text>
+  </Box>
+</Slide>

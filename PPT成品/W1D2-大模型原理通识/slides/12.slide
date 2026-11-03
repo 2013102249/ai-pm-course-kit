@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D2</Text>
+    </Box>
+    <Text style={{ fontSize: 14, color: '#64748B', position: 'absolute', right: 60, bottom: 34 }}>12 / 16</Text>
+    <Box style={{ gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三阶段成长史 · 一页总结</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flex: 1, flexDirection: 'row', gap: 30, alignItems: 'center' }}>
+        <Box style={{ flex: 1, gap: 16 }}>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'center' }}>
+                <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '18px 20px', gap: 6 }}>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>预训练</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>读书</Text>
+                </Box>
+                <Text style={{ fontSize: 24, color: '#94A3B8' }}>→</Text>
+                <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '18px 20px', gap: 6 }}>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>SFT</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>岗前培训</Text>
+                </Box>
+                <Text style={{ fontSize: 24, color: '#94A3B8' }}>→</Text>
+                <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '18px 20px', gap: 6 }}>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>RLHF</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>满意度回访</Text>
+                </Box>
+            </Box>
+            <Box style={{ background: '#FFFFFF', border: '1.5px solid #7C3AED', borderRadius: 14, padding: '24px 28px', gap: 12 }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>顺序填空 · 面试常考</Text>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.8 }}>大模型的三阶段：<br /><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>______ → ______ → ______</span></Text>
+                <Text style={{ fontSize: 15, color: '#64748B' }}>先读书、再培训、最后回访——顺序不能乱</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: 400, alignItems: 'center', gap: 10 }}>
+            <Image src="assets/onepage-card.svg" style={{ width: 380, height: 313, border: '1px solid #E5E7EB', borderRadius: 10 }} />
+            <Text style={{ fontSize: 14, color: '#64748B' }}>一页纸通识卡 · 三阶段成长史（课后打印贴墙）</Text>
+        </Box>
+    </Box>
+</Slide>

@@ -1,0 +1,41 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D2</Text>
+    </Box>
+    <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>09 / 20</Text>
+    </Box>
+    <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第二问：为什么这么取舍</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+        <Text style={{ fontSize: 19, color: '#64748B', marginTop: 22 }}>防御 = 三步交代清楚</Text>
+        <Box style={{ flexDirection: 'row', gap: 20, marginTop: 16 }}>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '26px 26px', alignItems: 'center' }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B', marginTop: 12 }}>备选项</Text>
+                <Text style={{ fontSize: 16, color: '#64748B', marginTop: 6, textAlign: 'center' }}>当时还考虑过哪些方案</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '26px 26px', alignItems: 'center' }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B', marginTop: 12 }}>放弃理由</Text>
+                <Text style={{ fontSize: 16, color: '#64748B', marginTop: 6, textAlign: 'center' }}>为什么最终没选它们</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '26px 26px', alignItems: 'center' }}>
+                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B', marginTop: 12 }}>验证结果</Text>
+                <Text style={{ fontSize: 16, color: '#64748B', marginTop: 6, textAlign: 'center' }}>选完之后怎么验证对不对</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#F8FAFC', borderRadius: 12, border: '1px solid #E5E7EB', padding: '22px 28px', marginTop: 36 }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#64748B' }}>反例</Text>
+            <Text style={{ fontSize: 20, color: '#1E1B4B' }}>说不出备选项 = <span style={{ fontWeight: 'bold' }}>执行者</span>，不是决策者</Text>
+        </Box>
+    </Box>
+</Slide>

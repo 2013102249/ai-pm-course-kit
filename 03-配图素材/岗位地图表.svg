@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="720" fill="#FFFFFF"/>
+<rect x="48" y="44" width="4" height="22" fill="#7C3AED"/>
+<text x="62" y="61" font-size="20" font-weight="700" fill="#221E33">AI 产品经理五类岗位地图</text>
+<text x="62" y="82" font-size="12" fill="#6B7280">岗位没有高下，匹配才对</text>
+
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker>
+</defs>
+
+<!-- 表头 -->
+<rect x="48" y="120" width="1104" height="44" fill="#5B21B6"/>
+<text x="146" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">岗位方向</text>
+<text x="289" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">面向谁</text>
+<text x="475" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">典型工作内容</text>
+<text x="716" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">核心能力侧重</text>
+<text x="936" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">适合什么背景的人</text>
+<text x="1104" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">我的匹配度</text>
+
+<!-- 行底色 -->
+<rect x="48" y="164" width="1104" height="96" fill="#F1EBFD"/>
+<rect x="48" y="260" width="1104" height="96" fill="#E8EFFD"/>
+<rect x="48" y="356" width="1104" height="96" fill="#F1EBFD"/>
+<rect x="48" y="452" width="1104" height="96" fill="#E8EFFD"/>
+<rect x="48" y="548" width="1104" height="96" fill="#F1EBFD"/>
+
+<!-- 行1 AI 应用产品经理 -->
+<rect x="60" y="198" width="28" height="28" rx="6" fill="#7C3AED"/>
+<text x="164" y="224" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">AI 应用</text>
+<text x="164" y="248" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">产品经理</text>
+<text x="289" y="218" text-anchor="middle" font-size="15" fill="#4A4560">C 端用户</text>
+<text x="352" y="194" font-size="15" fill="#4A4560">对话助手、写作工具等 AI</text>
+<text x="352" y="216" font-size="15" fill="#4A4560">原生产品的需求、功能、</text>
+<text x="352" y="238" font-size="15" fill="#4A4560">体验与增长</text>
+<text x="634" y="206" font-size="15" font-weight="700" fill="#7C3AED">需求洞察 · 体验设计</text>
+<text x="634" y="228" font-size="15" font-weight="700" fill="#7C3AED">· 增长迭代</text>
+<text x="834" y="206" font-size="15" fill="#4A4560">C 端产品 / 运营背景，</text>
+<text x="834" y="228" font-size="15" fill="#4A4560">技能迁移最直接</text>
+<rect x="1066" y="174" width="76" height="76" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1" stroke-dasharray="4 3"/>
+
+<!-- 行2 Agent / 工作流产品经理 -->
+<rect x="60" y="294" width="28" height="28" rx="6" fill="#2563EB"/>
+<text x="164" y="320" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">Agent / 工作流</text>
+<text x="164" y="344" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">产品经理</text>
+<text x="289" y="314" text-anchor="middle" font-size="15" fill="#4A4560">业务流程</text>
+<text x="352" y="290" font-size="15" fill="#4A4560">把人工流程编排成 AI 自动</text>
+<text x="352" y="312" font-size="15" fill="#4A4560">流水线，设计工具调用与</text>
+<text x="352" y="334" font-size="15" fill="#4A4560">异常兜底</text>
+<text x="634" y="302" font-size="15" font-weight="700" fill="#7C3AED">流程抽象 · 工具设计</text>
+<text x="634" y="324" font-size="15" font-weight="700" fill="#7C3AED">· 异常兜底</text>
+<text x="834" y="302" font-size="15" fill="#4A4560">B 端效率工具、RPA、</text>
+<text x="834" y="324" font-size="15" fill="#4A4560">自动化背景</text>
+<rect x="1066" y="270" width="76" height="76" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1" stroke-dasharray="4 3"/>
+
+<!-- 行3 RAG 知识库产品经理 -->
+<rect x="60" y="390" width="28" height="28" rx="6" fill="#7C3AED"/>
+<text x="164" y="416" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">RAG 知识库</text>
+<text x="164" y="440" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">产品经理</text>
+<text x="289" y="410" text-anchor="middle" font-size="15" fill="#4A4560">企业知识</text>
+<text x="352" y="398" font-size="15" fill="#4A4560">把制度、手册、指南做成</text>
+<text x="352" y="420" font-size="15" fill="#4A4560">可问答、可溯源的知识库</text>
+<text x="634" y="398" font-size="15" font-weight="700" fill="#7C3AED">数据治理 · 检索链路</text>
+<text x="634" y="420" font-size="15" font-weight="700" fill="#7C3AED">· 权限与更新机制</text>
+<text x="834" y="398" font-size="15" fill="#4A4560">内容管理、知识库、</text>
+<text x="834" y="420" font-size="15" fill="#4A4560">搜索背景</text>
+<rect x="1066" y="366" width="76" height="76" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1" stroke-dasharray="4 3"/>
+
+<!-- 行4 AI 行业解决方案产品经理 -->
+<rect x="60" y="486" width="28" height="28" rx="6" fill="#2563EB"/>
+<text x="164" y="492" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">AI 行业</text>
+<text x="164" y="516" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">解决方案</text>
+<text x="164" y="540" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">产品经理</text>
+<text x="289" y="506" text-anchor="middle" font-size="15" fill="#4A4560">B 端客户</text>
+<text x="352" y="494" font-size="15" fill="#4A4560">面向行业交付「行业 + AI」</text>
+<text x="352" y="516" font-size="15" fill="#4A4560">整体方案，对交付结果负责</text>
+<text x="634" y="494" font-size="15" font-weight="700" fill="#7C3AED">行业理解 · 方案包装</text>
+<text x="634" y="516" font-size="15" font-weight="700" fill="#7C3AED">· 交付协同</text>
+<text x="834" y="494" font-size="15" fill="#4A4560">ToB 项目、售前、</text>
+<text x="834" y="516" font-size="15" fill="#4A4560">咨询背景</text>
+<rect x="1066" y="462" width="76" height="76" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1" stroke-dasharray="4 3"/>
+
+<!-- 行5 大模型平台产品经理 -->
+<rect x="60" y="582" width="28" height="28" rx="6" fill="#7C3AED"/>
+<text x="164" y="608" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">大模型平台</text>
+<text x="164" y="632" text-anchor="middle" font-size="19" font-weight="700" fill="#221E33">产品经理</text>
+<text x="289" y="602" text-anchor="middle" font-size="15" fill="#4A4560">开发者</text>
+<text x="352" y="590" font-size="15" fill="#4A4560">模型能力平台、API 与开发</text>
+<text x="352" y="612" font-size="15" fill="#4A4560">者工具的产品设计</text>
+<text x="634" y="590" font-size="15" font-weight="700" fill="#7C3AED">技术深度 · 开发者体验</text>
+<text x="634" y="612" font-size="15" font-weight="700" fill="#7C3AED">· 成本模型</text>
+<text x="834" y="590" font-size="15" fill="#4A4560">开发、算法、测试背景</text>
+<text x="834" y="612" font-size="15" fill="#4A4560">且想转产品</text>
+<rect x="1066" y="558" width="76" height="76" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1" stroke-dasharray="4 3"/>
+
+<!-- 网格线 -->
+<line x1="48" y1="164" x2="1152" y2="164" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="260" x2="1152" y2="260" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="356" x2="1152" y2="356" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="452" x2="1152" y2="452" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="48" y1="548" x2="1152" y2="548" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="244" y1="120" x2="244" y2="644" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="334" y1="120" x2="334" y2="644" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="616" y1="120" x2="616" y2="644" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="816" y1="120" x2="816" y2="644" stroke="#E8E5F1" stroke-width="1"/>
+<line x1="1056" y1="120" x2="1056" y2="644" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="48" y="120" width="1104" height="524" fill="none" stroke="#E8E5F1" stroke-width="1.2"/>
+
+<text x="600" y="680" text-anchor="middle" font-size="12" fill="#7A7590">岗位为市场通用分类，具体职责以各公司 JD 为准；薪资与晋升请以招聘平台实时数据为准</text>
+</svg>

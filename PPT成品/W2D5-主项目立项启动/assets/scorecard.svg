@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="700" fill="#FFFFFF"/>
+<rect x="20" y="24" width="4" height="22" fill="#7C3AED"/>
+<text x="34" y="42" font-size="20" font-weight="700" fill="#221E33">四维评分卡示意</text>
+<text x="34" y="62" font-size="12" fill="#6B7280">0–5 分打分 · 合规是硬门槛，不过必须换题</text>
+<!-- 技术卡 -->
+<rect x="30" y="100" width="555" height="210" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="54" y="146" font-size="18" font-weight="700" fill="#221E33">技术</text>
+<text x="54" y="176" font-size="13" fill="#4A4560">现有模型能否稳定完成核心任务与关键步骤？</text>
+<text x="249" y="204" text-anchor="middle" font-size="10" fill="#DC2626">≥3 及格</text>
+<line x1="249" y1="208" x2="249" y2="238" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+<rect x="54" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="151.5" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="249" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="346.5" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="444" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<text x="99" y="250" text-anchor="middle" font-size="10" fill="#6B7280">1</text>
+<text x="196.5" y="250" text-anchor="middle" font-size="10" fill="#6B7280">2</text>
+<text x="294" y="250" text-anchor="middle" font-size="10" fill="#6B7280">3</text>
+<text x="391.5" y="250" text-anchor="middle" font-size="10" fill="#6B7280">4</text>
+<text x="489" y="250" text-anchor="middle" font-size="10" fill="#6B7280">5</text>
+<!-- 数据卡 -->
+<rect x="615" y="100" width="555" height="210" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="639" y="146" font-size="18" font-weight="700" fill="#221E33">数据</text>
+<text x="639" y="176" font-size="13" fill="#4A4560">冷启动与持续数据能否低成本、合规地拿到？</text>
+<text x="834" y="204" text-anchor="middle" font-size="10" fill="#DC2626">≥3 及格</text>
+<line x1="834" y1="208" x2="834" y2="238" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+<rect x="639" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="736.5" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="834" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="931.5" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="1029" y="214" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<text x="684" y="250" text-anchor="middle" font-size="10" fill="#6B7280">1</text>
+<text x="781.5" y="250" text-anchor="middle" font-size="10" fill="#6B7280">2</text>
+<text x="879" y="250" text-anchor="middle" font-size="10" fill="#6B7280">3</text>
+<text x="976.5" y="250" text-anchor="middle" font-size="10" fill="#6B7280">4</text>
+<text x="1074" y="250" text-anchor="middle" font-size="10" fill="#6B7280">5</text>
+<!-- 合规卡（硬门槛） -->
+<rect x="30" y="340" width="555" height="210" rx="12" fill="#FFFFFF" stroke="#DC2626" stroke-width="2" stroke-dasharray="7,4"/>
+<rect x="485" y="362" width="76" height="24" rx="12" fill="#DC2626"/>
+<text x="523" y="379" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">硬门槛</text>
+<text x="54" y="386" font-size="18" font-weight="700" fill="#221E33">合规</text>
+<text x="54" y="416" font-size="13" fill="#4A4560">备案路径、数据边界、内容安全是否清晰可过？</text>
+<text x="249" y="444" text-anchor="middle" font-size="10" fill="#DC2626">≥3 及格</text>
+<line x1="249" y1="448" x2="249" y2="478" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+<rect x="54" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="151.5" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="249" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="346.5" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="444" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<text x="99" y="490" text-anchor="middle" font-size="10" fill="#6B7280">1</text>
+<text x="196.5" y="490" text-anchor="middle" font-size="10" fill="#6B7280">2</text>
+<text x="294" y="490" text-anchor="middle" font-size="10" fill="#6B7280">3</text>
+<text x="391.5" y="490" text-anchor="middle" font-size="10" fill="#6B7280">4</text>
+<text x="489" y="490" text-anchor="middle" font-size="10" fill="#6B7280">5</text>
+<!-- 竞争卡 -->
+<rect x="615" y="340" width="555" height="210" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.5"/>
+<text x="639" y="386" font-size="18" font-weight="700" fill="#221E33">竞争</text>
+<text x="639" y="416" font-size="13" fill="#4A4560">相比现有方案与竞品，是否有明确差异点？</text>
+<text x="834" y="444" text-anchor="middle" font-size="10" fill="#DC2626">≥3 及格</text>
+<line x1="834" y1="448" x2="834" y2="478" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+<rect x="639" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="736.5" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="834" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="931.5" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<rect x="1029" y="454" width="90" height="16" rx="4" fill="#FAF9FE" stroke="#C9C2DE"/>
+<text x="684" y="490" text-anchor="middle" font-size="10" fill="#6B7280">1</text>
+<text x="781.5" y="490" text-anchor="middle" font-size="10" fill="#6B7280">2</text>
+<text x="879" y="490" text-anchor="middle" font-size="10" fill="#6B7280">3</text>
+<text x="976.5" y="490" text-anchor="middle" font-size="10" fill="#6B7280">4</text>
+<text x="1074" y="490" text-anchor="middle" font-size="10" fill="#6B7280">5</text>
+<!-- 及格线横条 -->
+<rect x="30" y="580" width="1140" height="54" rx="12" fill="#7C3AED"/>
+<text x="600" y="614" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">及格线：单维 ≥ 3 分，且总分 ≥ 12 / 20 —— 合规不过，直接换题</text>
+<text x="600" y="668" text-anchor="middle" font-size="11" fill="#6B7280">示范：教育机构招生答疑知识库 → 技术 4 · 数据 4 · 合规 4 · 竞争 3 = 15 / 20（教学示例）</text>
+</svg>

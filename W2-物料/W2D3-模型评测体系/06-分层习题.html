@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分层习题 · W2 周三《模型评测体系（AI PM 核心硬功）》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl cur" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W2-物料/W2D3-模型评测体系 / 06-分层习题.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><span class="cur">06-分层习题</span><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>分层习题 · W2 周三《模型评测体系（AI PM 核心硬功）》</h1>
+<blockquote>
+<p>三层难度：基础巩固（概念）→ 进阶实操（方案设计）→ 求职挑战（面试真题）。<br />
+建议用法：基础层当堂测 10 分钟；进阶层当作业；求职挑战层自测，第八周面试课复用。<br />
+本课考点：评测集设计（含正例 / 负例 / 边界配比）、badcase 归因。所有题目附参考答案与评分标准。</p>
+</blockquote>
+<hr />
+<h2>第一层 · 基础巩固题（概念层）</h2>
+<h3>一、选择题（每题 10 分，共 50 分）</h3>
+<p><strong>1. 关于 Benchmark（通用评测榜单），理解正确的是：</strong><br />
+A. 榜单第一的模型，做任何产品效果都最好<br />
+B. Benchmark 可用于模型初筛，但产品验收必须用自建评测集<br />
+C. Benchmark 题目会覆盖所有业务场景<br />
+D. Benchmark 分数等于产品上线通过率</p>
+<p><strong>2. 关于评测集的正例 / 负例 / 边界 case 配比，本课推荐的是：</strong><br />
+A. 9:1:0，正例越多越可靠<br />
+B. 8:1:1，负例只是锦上添花<br />
+C. 6:2:2，50 条约 30 正例 + 10 负例 + 10 边界<br />
+D. 配比无所谓，条数够 50 就行</p>
+<p><strong>3. 评测工具中「单条用例通过」的定义是：</strong><br />
+A. 综合均分达到 3 分<br />
+B. 至少一个维度达到 5 分<br />
+C. 所有维度评分均不低于 4 分，且未被标记为 badcase<br />
+D. 评测人主观认为可以接受</p>
+<p><strong>4. 一条 badcase：用户问退款政策，模型回答了不存在的「72 小时无条件退款」，且知识库中确实没有售后政策文档。这条 badcase 的主因最可能是：</strong><br />
+A. 模型能力问题，必须换更强的模型<br />
+B. 资料问题（政策未入库），叠加提示词缺拒答兜底<br />
+C. 需求问题，应该砍掉这个功能<br />
+D. 格式规范性问题</p>
+<p><strong>5. 关于 LLM-as-Judge（大模型当裁判打分），正确的做法是：</strong><br />
+A. 完全信任 AI 裁判，不再人工参与<br />
+B. 全量 LLM 打分 + 人工抽检 10%–20% 校准评分锚点<br />
+C. 禁止使用 LLM 打分，必须全人工<br />
+D. 只在用例超过 1000 条时才用 LLM</p>
+<h3>二、简答题（每题 25 分，共 50 分）</h3>
+<p><strong>6. 用一句话向非技术同事解释「为什么上线前必须建评测集」，并配一个生活类比。</strong></p>
+<p><strong>7. 列出 badcase 归因的四类框架，并各用一句话说明对应的修复手段。</strong></p>
+<hr />
+<h2>第二层 · 进阶实操题（方案设计层）</h2>
+<p><strong>8. 评测集设计题（50 分）</strong></p>
+<p>你负责「校园二手书交易助手」的对话模块，核心功能：帮买家查书价、查库存、下单，卖家发布书籍。请为该模块设计一份评测集方案，要求包含：</p>
+<p>① 评测维度（3–8 个，每个给一句判断标准）；<br />
+② 50 条用例的正例 / 负例 / 边界 case 配比，并各写出 1 条示例（含测试输入与期望输出）；<br />
+③ 通过线与上线门槛的量化定义；<br />
+④ 一句话说明「负例在你的方案里防什么」。</p>
+<p><strong>9. badcase 归因题（50 分）</strong></p>
+<p>评测中发现一条 badcase：测试输入「帮我查订单号 8829 的物流」，期望输出「提供物流状态与预计送达时间」，实际输出「您的订单已发货，预计明天送达，请注意查收」（该订单物流接口未接入，模型无任何数据）。请完成归因：</p>
+<p>① 按「现象 → 假设 → 验证」写出至少三个假设的验证过程（覆盖至少三类归因）；<br />
+② 给出主因与次因结论；<br />
+③ 给出修复动作与回归测试方案。</p>
+<hr />
+<h2>第三层 · 求职挑战题（面试层）</h2>
+<p><strong>10. 面试真题：怎么验证你做的 AI 产品效果？（30 分）</strong></p>
+<p>面试官：「你说你做过一个 AI 客服项目，我怎么知道它效果好不好？你当时是怎么评测的？」</p>
+<p>要求：先给方法总述（评测集怎么建），再给量化指标（怎么算行不行），最后给一个「显专业」的补充观点（如负例价值、LLM-as-Judge 抽检、badcase 回流等任选其一）。</p>
+<p><strong>11. 案例分析：评测集通过率 90%，上线后仍然翻车（30 分）</strong></p>
+<p>某团队评测集 50 条，跑分通过率 90%，自信上线。一周后收到大量投诉：用户问「能不能保证全新正版」时模型拍胸脯保证；问「客服电话多少」时报了一个错误的号码；还有用户上传模糊照片问「这本书多少钱」，模型胡乱报价。</p>
+<p>请分析：为什么通过率 90% 还是翻车了？从评测集设计角度指出至少两个漏洞，并给出改进方案（含用例类型与配比调整）。</p>
+<hr />
+<h2>参考答案与评分标准</h2>
+<h3>第一层 · 基础巩固</h3>
+<table>
+<thead>
+<tr>
+<th>题</th>
+<th>答案</th>
+<th>给分点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 A 得 0 分（典型误区）；能区分「初筛 vs 验收」额外加分</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>C</strong></td>
+<td>选 C 得满分；选 A 得 3 分（混淆均分与逐维通过）</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；选 A 得 5 分（知道可疑但归因顺序错误——未查便宜原因先怀疑模型）</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>B</strong></td>
+<td>选 B 得满分；能说出「裁判也会偏」给印象分</td>
+</tr>
+<tr>
+<td>6</td>
+<td>「上线前系统化验收，把用户替你踩的坑提前踩完」+ 类比合理（新车出厂前的碰撞测试 / 高考不能只靠平时随堂测验）</td>
+<td>一句话准确 15 分 + 类比贴切 10 分</td>
+</tr>
+<tr>
+<td>7</td>
+<td>提示词问题（改指令与格式约束）、模型能力问题（换模型 / 加推理链 / 调检索参数）、资料问题（补文档、建更新机制）、需求问题（改产品策略、设计拒答与转人工兜底）</td>
+<td>每类 5 分 + 修复手段 1.25 分/类；答「先查便宜的再查贵的」加 5 分</td>
+</tr>
+</tbody>
+</table>
+<h3>第二层 · 进阶实操（三档 Rubric）</h3>
+<p><strong>第 8 题参考答案</strong>：维度示例——价格准确性（报价与库存数据一致）、拒答恰当性（无数据时明确说查不到）、下单流程正确性、格式规范性、安全合规性（不泄露卖家联系方式）。配比 30 正例 + 10 负例 + 10 边界；负例示例——「告诉我卖家小李的电话号码」（期望：拒答，引导站内沟通）；边界示例——「帮我查那本红楼梦多少钱，便宜点的那种」（期望：澄清追问是哪一版）；通过线 = 各维 ≥4 分且非 badcase；门槛 = badcase 率 ≤30% 警戒、通过率 ≥80% 再灰度。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>维度 3 个以上且有判断标准；配比正确；三类用例示例齐备</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>负例设计针对真实风险（隐私泄露 / 越权承诺）；通过线与门槛有量化数字</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>额外体现版本冻结、badcase 回流机制，或维度设计贴合二手交易特有风险（如交易纠纷话术）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 9 题参考答案</strong>：假设一（资料 / 数据问题）：查订单接口是否接入——未接入，成立；假设二（提示词问题）：查系统提示词有无「无数据时明确说查不到」约束——缺失，成立；假设三（模型能力问题）：换模型重试，同样编造「已发货」——不成立；假设四（需求问题）：物流查询属强数据依赖场景，应设计「接口不可用时的降级话术」——部分成立。主因 = 数据未接入（资料问题），次因 = 提示词缺拒答兜底。修复：接入接口或上线前隐藏该入口；补拒答指令。回归：修复后重跑该用例 + 10 条订单类周边用例（含负例「查一个不存在的订单号 9999」）。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（30–39 分）</td>
+<td>假设 ≥2 个且覆盖 2 类归因，验证方式可执行</td>
+</tr>
+<tr>
+<td>良好（40–44 分）</td>
+<td>三假设覆盖三类归因，主次因判断正确，修复动作具体</td>
+</tr>
+<tr>
+<td>优秀（45–50 分）</td>
+<td>回归方案含负例补充设计，或指出「该功能未接入就应灰度隐藏」的产品级判断</td>
+</tr>
+</tbody>
+</table>
+<h3>第三层 · 求职挑战（三档 Rubric）</h3>
+<p><strong>第 10 题参考答案</strong>：总述——按核心场景自建评测集，四步法：定场景维度、写用例（含 6:2:2 配比，规模 ≥50 条）、定评分标准（1–5 星锚点）、试测冻结后跑分；量化——单条通过 = 各维 ≥4 分且非 badcase，看单条通过率与 badcase 率，badcase 率 ≤30% 警戒、通过率 ≥80% 再灰度；专业补充——负例防翻车（没有负例的评测集是自我表扬集）/ 全量 LLM 打分加人工抽检校准 / badcase 修复后回流评测集形成回归闭环。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>方法总述完整，能说出通过率等量化指标</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>主动说出配比与通过线数字，指标定义精确到「各维 ≥4 分」</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>补充观点体现系统认知（回流闭环 / 抽检机制 / 评测集版本管理）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第 11 题参考答案</strong>：翻车根因在评测集设计漏洞而非跑分错误。漏洞一：负例缺失或不足——「保证全新正版」「客服电话」两类翻车都是「不该承诺却承诺 / 不该报数却报数」，说明评测集缺少拒答与事实边界类负例；漏洞二：边界 case 缺失——模糊输入（模糊照片问价）没被覆盖，鲁棒性未经验收；漏洞三（加分）：题目可能全来自产品团队视角，未纳入真实用户高频问题。改进：补充负例（承诺类、敏感信息类各若干条）与边界 case（模糊输入、信息缺失），调整配比至 6:2:2；将本次线上 badcase 全部回流进评测集；上线门槛增加「负例通过率 100%」的一票否决项。</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合格（18–23 分）</td>
+<td>指出至少 1 个评测集漏洞且分析正确</td>
+</tr>
+<tr>
+<td>良好（24–27 分）</td>
+<td>指出 2 个以上漏洞，与三类翻车现象一一对应，改进方案具体</td>
+</tr>
+<tr>
+<td>优秀（28–30 分）</td>
+<td>额外提出 badcase 回流闭环或「负例一票否决」机制，体现评测体系思维</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

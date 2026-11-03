@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <rect x="48" y="34" width="4" height="22" fill="#7C3AED"/>
+  <text x="62" y="52" font-size="20" font-weight="700" fill="#221E33">五处差异对比表</text>
+  <text x="62" y="76" font-size="12" fill="#6B7280">传统 PRD vs AI 产品 PRD · 行 3 幻觉控制为教学重点 · 周五评审大会评分重点</text>
+
+  <!-- 表头 -->
+  <rect x="56" y="108" width="200" height="52" fill="#7C3AED"/>
+  <rect x="256" y="108" width="440" height="52" fill="#7C3AED"/>
+  <rect x="696" y="108" width="448" height="52" fill="#7C3AED"/>
+  <text x="156" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">维度</text>
+  <text x="476" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">传统 PRD</text>
+  <text x="920" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">AI 产品 PRD</text>
+
+  <!-- 行 1 评测标准 -->
+  <rect x="56" y="160" width="200" height="100" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="256" y="160" width="440" height="100" fill="#F0EEF7" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="696" y="160" width="448" height="100" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+  <text x="156" y="216" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">评测标准</text>
+  <text x="476" y="216" text-anchor="middle" font-size="15" fill="#221E33">功能验收（逐条打勾）</text>
+  <text x="920" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">效果验收（指标 + 数字 + 来源）</text>
+
+  <!-- 行 2 容错兜底 -->
+  <rect x="56" y="260" width="200" height="100" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="256" y="260" width="440" height="100" fill="#F0EEF7" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="696" y="260" width="448" height="100" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+  <text x="156" y="316" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">容错兜底</text>
+  <text x="476" y="316" text-anchor="middle" font-size="15" fill="#221E33">异常提示（请重试）</text>
+  <text x="920" y="316" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">四级降级（澄清 / 拒答 / 转人工 / 降级）</text>
+
+  <!-- 行 3 幻觉控制 -->
+  <rect x="56" y="360" width="200" height="100" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="256" y="360" width="440" height="100" fill="#F0EEF7" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="696" y="360" width="448" height="100" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+  <text x="156" y="416" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">幻觉控制</text>
+  <text x="476" y="416" text-anchor="middle" font-size="15" fill="#9CA3AF">（不存在此章）</text>
+  <text x="920" y="416" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">引用来源 + 阈值拒答 + 幻觉率红线</text>
+
+  <!-- 行 4 成本预算 -->
+  <rect x="56" y="460" width="200" height="100" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="256" y="460" width="440" height="100" fill="#F0EEF7" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="696" y="460" width="448" height="100" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+  <text x="156" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">成本预算</text>
+  <text x="476" y="516" text-anchor="middle" font-size="15" fill="#221E33">服务器粗估</text>
+  <text x="920" y="516" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">单次调用成本 + 日上限 + 月预算</text>
+
+  <!-- 行 5 数据回流 -->
+  <rect x="56" y="560" width="200" height="100" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="256" y="560" width="440" height="100" fill="#F0EEF7" stroke="#C9C2DE" stroke-width="1"/>
+  <rect x="696" y="560" width="448" height="100" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+  <text x="156" y="616" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">数据回流</text>
+  <text x="476" y="616" text-anchor="middle" font-size="15" fill="#221E33">埋点看数</text>
+  <text x="920" y="616" text-anchor="middle" font-size="15" font-weight="700" fill="#5B21B6">badcase 回流评测集闭环</text>
+
+  <!-- 底注 -->
+  <text x="600" y="696" text-anchor="middle" font-size="12" fill="#6B7280">五行差异即 PRD 写作桌面对照卡：答辩前默写一遍，默不出的差异就是要补读的章节</text>
+</svg>

@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D1</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>02 / 18</Text>
+
+  <Box style={{ flexDirection: 'column', height: '100%', gap: 0 }}>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天你能带走什么</Text>
+    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16, marginBottom: 28 }} />
+
+    <Box style={{ flexDirection: 'column', gap: 20, flex: 1 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column', gap: 4 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>一张四要素架构图</Text>
+          <Text style={{ fontSize: 18, color: '#64748B' }}>规划 / 记忆 / 工具 / 执行，Agent 的身体骨架</Text>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '24px 28px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column', gap: 4 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>ReAct 与 MCP 的一句话讲法</Text>
+          <Text style={{ fontSize: 18, color: '#64748B' }}>把思考摊开给用户看；工具的 USB 接口</Text>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px' }}>
+        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Box style={{ flexDirection: 'column', gap: 4 }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>该不该上 Agent 的初步判断</Text>
+          <Text style={{ fontSize: 18, color: '#64748B' }}>决策三问，先问单 Agent 能不能解决</Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

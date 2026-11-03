@@ -1,0 +1,51 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D4</Text>
+    </Box>
+    <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 16</Text>
+    </Box>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>当堂写：你的 5 条风险</Text>
+    <Box style={{ height: 1, background: '#E5E7EB', marginTop: 16 }} />
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 18 }}>
+        <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, padding: 8 }}>
+            <Table
+                style={{ width: '100%', height: 320 }}
+                defaultTextStyle={{ fontSize: 17, textAlign: 'center', color: '#1E1B4B' }}
+                defaultCellStyle={{
+                    border: {
+                        left: { width: 1, color: '#E5E7EB' },
+                        right: { width: 1, color: '#E5E7EB' },
+                        top: { width: 1, color: '#E5E7EB' },
+                        bottom: { width: 1, color: '#E5E7EB' },
+                    },
+                }}
+                cells={[
+                    [
+                        { text: '风险（写事件，不写担心）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                        { text: '概率 × 影响（两维 + 依据）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                        { text: '应对（动作 + 责任人 + 时间）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
+                    ],
+                    ['', '', ''],
+                    [
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                    ],
+                    ['', '', ''],
+                    [
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                        { text: '', cellStyle: { background: { color: '#F5F3FF' } } },
+                    ],
+                    ['', '', ''],
+                ]}
+            />
+        </Box>
+        <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '14px 26px', alignItems: 'center' }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>没有责任人的风险，不算风险</Text>
+        </Box>
+        <Text style={{ fontSize: 16, color: '#64748B', textAlign: 'center' }}>自检提示：应对里有人名和日期吗？</Text>
+    </Box>
+</Slide>

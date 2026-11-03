@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>八件套生产体系 · AI 产品经理训练营</title>
+<style>
+  :root{
+    --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --purple-border:#DDD2F7;
+    --blue:#2563EB; --blue-light:#E8EFFD; --blue-border:#C9D9F8;
+    --ink:#221E33; --ink2:#4A4560; --muted:#7A7590; --faint:#A5A1B8;
+    --bg:#F7F6FB; --card:#FFFFFF; --border:#E8E5F1; --border-soft:#F0EEF7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:14.5px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+  .hero{background:linear-gradient(135deg,#2A1B52 0%,#4A2A85 45%,#2B4A9E 100%);color:#fff;padding:48px 0 42px}
+  .hero .badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:2px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px;color:rgba(255,255,255,.85);margin-bottom:16px}
+  .hero .badge .dot{width:6px;height:6px;border-radius:50%;background:#C4B5FD;box-shadow:0 0 8px #C4B5FD}
+  .hero h1{font-size:30px;font-weight:700;letter-spacing:.5px;margin-bottom:10px}
+  .hero p{font-size:14px;color:rgba(255,255,255,.78);max-width:820px}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
+  .kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:14px 16px}
+  .kpi .num{font-size:23px;font-weight:700;line-height:1.2}
+  .kpi .num span{font-size:12px;font-weight:500;color:rgba(255,255,255,.65)}
+  .kpi .lbl{font-size:11.5px;color:rgba(255,255,255,.65);margin-top:3px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(247,246,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:9px 20px}
+  nav a{white-space:nowrap;text-decoration:none;color:var(--ink2);font-size:13px;font-weight:500;padding:5px 12px;border-radius:999px}
+  nav a:hover{background:var(--purple-light);color:var(--purple-deep)}
+  nav a b{color:var(--purple);margin-right:3px}
+  section{padding:44px 0 6px}
+  .sec-tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:2px;color:var(--purple);background:var(--purple-light);border:1px solid var(--purple-border);border-radius:6px;padding:3px 10px;margin-bottom:10px}
+  .sec-head h2{font-size:23px;font-weight:700}
+  .sec-head p{color:var(--muted);font-size:13.5px;margin-top:7px;max-width:860px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin:18px 0}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:1px;padding:10px;border-bottom:2px solid var(--border);background:#FBFAFD;white-space:nowrap}
+  td{padding:10px;border-bottom:1px solid var(--border-soft);vertical-align:top;color:var(--ink2)}
+  tr:last-child td{border-bottom:none}
+  .t-strong{color:var(--ink);font-weight:600}
+  .t-mono{font-variant-numeric:tabular-nums}
+  .stage-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+  .pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;margin:1px 3px 1px 0;white-space:nowrap}
+  .pill-purple{background:var(--purple-light);color:var(--purple-deep);border:1px solid var(--purple-border)}
+  .pill-blue{background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-border)}
+  .tree{background:#FBFAFD;border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:2;color:var(--ink2);white-space:pre;overflow-x:auto}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .mini{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+  .mini h4{font-size:14px;font-weight:700;margin-bottom:10px}
+  .mini ul{list-style:none}
+  .mini li{font-size:12.5px;color:var(--ink2);padding:5px 0 5px 14px;position:relative;border-bottom:1px dashed var(--border-soft)}
+  .mini li:last-child{border-bottom:none}
+  .mini li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--purple)}
+  .mini li b{color:var(--ink)}
+  .chk{list-style:none}
+  .chk li{font-size:12.8px;color:var(--ink2);padding:6px 0 6px 26px;position:relative;border-bottom:1px dashed var(--border-soft)}
+  .chk li:last-child{border-bottom:none}
+  .chk li::before{content:"";position:absolute;left:2px;top:9px;width:12px;height:12px;border-radius:3px;border:1.5px solid var(--purple);background:#fff}
+  .chk li b{color:var(--purple-deep)}
+  footer{padding:36px 0 50px;text-align:center;color:var(--faint);font-size:12px}
+  footer .rule{width:60px;height:3px;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:2px;margin:0 auto 14px}
+  @media (max-width:960px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:860px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .grid3{grid-template-columns:1fr}
+    .hero h1{font-size:23px}
+  }
+  @media (max-width:720px){
+    .wrap{padding:0 14px}
+    .card{padding:16px;border-radius:14px}
+    table{font-size:12.5px}
+    th{display:none}
+    td{display:block;width:100%;border-bottom:none;padding:4px 0}
+    tr{display:block;padding:13px 0;border-bottom:1px solid var(--border)}
+    tr:last-child{border-bottom:none}
+    td[data-label]::before{content:attr(data-label);display:block;font-size:10.5px;font-weight:700;color:var(--purple);letter-spacing:1.5px;margin:8px 0 2px}
+    td:first-child::before{margin-top:0}
+    .stage-tag{margin-left:4px}
+    .tree{font-size:11px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>COURSE PRODUCTION KIT · 自研课程</div>
+    <h1>每日课程配套资源 · 八件套生产体系</h1>
+    <p>八件套是课程的「生产线」：一套标准、一个样课日、一张 40 天生产卡。目标——每一节课都有统一质量、可验收、可复用、可持续迭代的教学物料。</p>
+    <div class="kpis">
+      <div class="kpi"><div class="num">8<span> 件套</span></div><div class="lbl">教案 / 讲课稿 / 导学案 / 播客 / 配图 / 习题 / 交互 / PPT</div></div>
+      <div class="kpi"><div class="num">40<span> 天</span></div><div class="lbl">8 周 × 5 天逐日生产卡</div></div>
+      <div class="kpi"><div class="num">320<span> 件</span></div><div class="lbl">物料总数（40 天 × 8 件）</div></div>
+      <div class="kpi"><div class="num">4<span> 个</span></div><div class="lbl">共用交互工具（全课复用）</div></div>
+      <div class="kpi"><div class="num">9<span> 张</span></div><div class="lbl">自研配图素材（SVG 源文件）</div></div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#standard"><b>01</b>八件套标准</a>
+    <a href="#structure"><b>02</b>目录与命名</a>
+    <a href="#cards"><b>03</b>40 天生产卡</a>
+    <a href="#schedule"><b>04</b>生产排期</a>
+    <a href="#checklist"><b>05</b>质量验收</a>
+  </div>
+</nav>
+
+<section id="standard">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">01 · STANDARD</span>
+      <h2>八件套定义与质量标准</h2>
+      <p>每一件都有明确用途、必含要素和验收线。生产时对照本表自检，不合格不进入物料库。</p>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th style="width:38px">#</th><th style="width:96px">件套</th><th style="width:200px">用途</th><th>必含要素</th><th style="width:36%">验收标准</th><th style="width:80px">单件工时</th></tr></thead>
+        <tbody>
+          <tr><td class="t-strong">1</td><td class="t-strong">教案</td><td>讲师授课的执行蓝图</td><td>课时、教学目标（可测量）、重难点、教学步骤、时间拆分、课堂提问设计、板书要点、参考答案、学员易错点预判</td><td>时间拆分总和 = 课时；提问 ≥6 个且附预设答案；易错点 ≥4 条附应对</td><td>2–3 h</td></tr>
+          <tr><td class="t-strong">2</td><td class="t-strong">讲课稿</td><td>可直接照读的逐字稿</td><td>完整口播文本；课堂提问、过渡话术、案例故事、防冷场话术、面试金句（金句单独汇总）</td><td>新讲师可照读授课；四类话术齐备；口播时长与课时偏差 &lt;10%</td><td>3–4 h</td></tr>
+          <tr><td class="t-strong">3</td><td class="t-strong">导学案</td><td>学员预习 + 课堂记录 + 课后巩固</td><td>课前预习任务、预习思考题、课堂空白模板（与教案环节一一对应）、课后巩固</td><td>三段结构完整；课堂模板字段 = 教案环节数；学员 25 分钟内可完成预习</td><td>1–1.5 h</td></tr>
+          <tr><td class="t-strong">4</td><td class="t-strong">播客稿</td><td>轻量化音频，课余复习 / 课前预习</td><td>开场钩子、生活类比、3 个以内知识点、面试金句、结尾行动号召、制作备注（语速/BGM/章节）</td><td>口播 1500±200 字（约 8 分钟）；知识点 ≤3 个；附录含章节标记</td><td>1–1.5 h</td></tr>
+          <tr><td class="t-strong">5</td><td class="t-strong">配图</td><td>课堂可视化素材包</td><td>架构图、案例图、对比图、流程图、人物角色图；每图附使用时机与讲法脚本</td><td>与教案环节对应；统一品牌色（紫 #7C3AED / 蓝 #2563EB）；中文标注无错别字</td><td>1–2 h</td></tr>
+          <tr><td class="t-strong">6</td><td class="t-strong">分层习题</td><td>当堂测 + 作业 + 求职自测</td><td>基础巩固（选择/简答）、进阶实操（方案设计）、求职挑战（面试真题/案例）；全部附答案 + 评分标准</td><td>三层齐备；答案含给分点；实操与挑战题为三档 Rubric</td><td>1.5–2 h</td></tr>
+          <tr><td class="t-strong">7</td><td class="t-strong">交互式网页</td><td>课堂演示 + 学员动手</td><td>单文件零依赖；讲师演示脚本；学员操作指引；断网可用</td><td>无外部请求；无 alert/confirm；≤720px 可用；讲师脚本 5 步</td><td>0.5–2 h</td></tr>
+          <tr><td class="t-strong">8</td><td class="t-strong">PPT 大纲</td><td>课件制作依据</td><td>逐页：标题、要点（≤6 行/页）、讲师提示、配图标注</td><td>页数与课时匹配（约 4–5 分钟/页）；交互页标注「投屏代替」</td><td>2–3 h</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:14px;border-top:1px dashed var(--border);padding-top:12px">单日八件合计约 <b style="color:var(--purple-deep)">12–18 小时</b>；40 天合计约 <b style="color:var(--purple-deep)">550–700 小时</b>。2 人教研小组按第 04 节排期约 8–10 周完成；单人生产时间约翻倍，建议优先做 W1 / W3 / W6 三个样课周。</p>
+    </div>
+  </div>
+</section>
+
+<section id="structure">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">02 · STRUCTURE</span>
+      <h2>目录结构与命名规范</h2>
+      <p>所有物料按「周-日-件套」三级归档，命名即检索。共用资产（工具、配图）单独存放，跨周复用不重复生产。</p>
+    </div>
+    <div class="card">
+      <div class="tree">course-kit/
+├── 00-八件套生产体系.html            ← 本文件（生产标准 + 40 天生产卡）
+├── index.html                       ← 资源总入口（导航到全部资产）
+├── 01-样课日-W3D3-RAG/               ← 完整样课日（八件套标杆）
+│   ├── 01-教案.md
+│   ├── 02-讲课稿.md
+│   ├── 03-导学案.md
+│   ├── 04-播客稿.md
+│   ├── 05-配图清单.md
+│   ├── 06-分层习题.md
+│   ├── 07-课堂交互使用说明.md
+│   └── 08-PPT大纲.md
+├── W1-物料/                         ← 第一周全套（5 天 × 8 件 = 40 件，已完成）
+├── W2-物料/                         ← 第二周全套（5 天 × 8 件 = 40 件，已完成）
+├── W3-物料/                         ← 第三周其余 4 天（4 天 × 8 件 = 32 件，已完成；W3D3 见样课日）
+├── W4-物料/                         ← 第四周全套（5 天 × 8 件 = 40 件，已完成）
+├── W5-物料/                         ← 第五周全套（5 天 × 8 件 = 40 件，已完成）
+├── W7-物料/                         ← 第七周全套（5 天 × 8 件 = 40 件，已完成）
+├── W8-物料/                         ← 第八周全套（5 天 × 8 件 = 40 件，已完成）
+│   ├── W1D1-开营与岗位全景/
+│   ├── W1D2-大模型原理通识/
+│   ├── W1D3-提示词与上下文工程/
+│   ├── W1D4-AI产品形态拆解/
+│   └── W1D5-行业选择与职业规划/
+├── W6-物料/                         ← 第六周全套（5 天 × 8 件 = 40 件，已完成）
+│   ├── W6D1-Vibe Coding与AI工程提效/
+│   ├── W6D2-开发冲刺I/
+│   ├── W6D3-开发冲刺II/
+│   ├── W6D4-测试验收与用户试用/
+│   └── W6D5-结业路演/
+├── 02-交互工具/                      ← 共用交互资产（全课复用）
+│   ├── 提示词调试台.html              （W1D3 / W6D1）
+│   ├── RAG交互演示.html              （W3D3）
+│   ├── AI产品评估打分工具.html        （W2D3 / W6D4）
+│   └── 交互式架构图.html              （W1D2 / W3D1 等多课）
+└── 03-配图素材/                      ← 共用配图资产（SVG 源文件）
+    ├── LLM原理架构图.svg
+    ├── RAG架构图.svg
+    ├── Agent四要素架构图.svg
+    ├── 向量数据库示意图.svg
+    ├── AI产品全链路图.svg
+    ├── 传统vs AI产品对比图.svg
+    ├── 幻觉案例示意图.svg
+    ├── AI产品研发流程图.svg
+    └── AI产品经理能力画像.svg</div>
+      <div class="grid3" style="margin-top:18px">
+        <div class="mini"><h4>命名规则</h4><ul>
+          <li><b>按日物料</b>：W{周}-{件套号}-{主题}，如 03-教案-RAG架构</li>
+          <li><b>共用资产</b>：只放 02 / 03 目录，各处引用不拷贝</li>
+          <li><b>版本号</b>：V1.0 定稿，V1.1 起记录修订说明</li>
+        </ul></div>
+        <div class="mini"><h4>格式约定</h4><ul>
+          <li><b>文本件</b>：Markdown（.md），方便转腾讯文档 / 飞书</li>
+          <li><b>交互件</b>：单文件 HTML，零外部依赖</li>
+          <li><b>配图件</b>：SVG 源文件 + 导出 PNG 用</li>
+        </ul></div>
+        <div class="mini"><h4>复用原则</h4><ul>
+          <li>4 个交互工具 + 66 张配图为<b>全课共用资产</b>，生产卡中标注「用哪个」而非「新做哪个」</li>
+          <li>40 天里仅 4 天需要新交互页（W3D2 工作流、W4D4 看板等按需）</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cards">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">03 · PRODUCTION CARDS · ALL DONE</span>
+      <h2>40 天 × 八件套生产卡</h2>
+      <p>逐日列出每一件套的生产要点。W3D3 为样课日，已有完整成品可直接对标。<b style="color:var(--green)">生产进度：八周 40 天全部完成（各 40 件，W3 含样课日），累计 320/320——八件套体系收口。</b>表格在手机上自动堆叠为卡片。</p>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>日程</th><th>课程</th><th>教案重点</th><th>讲课稿核心</th><th>导学案</th><th>播客题目</th><th>配图清单</th><th>习题考点</th><th>交互页面</th><th>PPT</th></tr></thead>
+        <tbody><tr><td data-label="日程" class="t-strong">W1·一</td><td data-label="课程" class="t-strong">开营 + AI PM 岗位全景<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">岗位地图五类岗位对比；JD 拆解方法；8 周路线图</td><td data-label="讲课稿核心">往期学员 offer 故事开场；「岗位倒推能力」过渡</td><td data-label="导学案">预习=浏览 5 份真实 JD；课堂=填写职业定位卡</td><td data-label="播客题目">《AI 产品经理到底有哪几类岗位？》</td><td data-label="配图清单">能力画像图、岗位地图表</td><td data-label="习题考点">岗位分类辨析、JD 关键词提取</td><td data-label="交互页面">交互式架构图（总览）</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W1·二</td><td data-label="课程" class="t-strong">大模型原理通识<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">Transformer 科普深度控制；「懂到什么程度」边界图</td><td data-label="讲课稿核心">「超级接话员」类比；防止钻进技术细节</td><td data-label="导学案">预习=通识一页卡；课堂=通识笔记填空</td><td data-label="播客题目">《大模型是怎么「接话」的？》</td><td data-label="配图清单">LLM原理架构图</td><td data-label="习题考点">预训练/微调概念区分、上下文窗口</td><td data-label="交互页面">交互式架构图（LLM）</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W1·三</td><td data-label="课程" class="t-strong">提示词与上下文工程<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">五要素教学法；上下文工程四组件</td><td data-label="讲课稿核心">同需求差提示词效果对比；现场让学员改提示词防冷场</td><td data-label="导学案">预习=写 1 条提示词；课堂=五要素自评表</td><td data-label="播客题目">《提示词五要素》</td><td data-label="配图清单">提示词五要素检查卡</td><td data-label="习题考点">提示词找茬题、五要素识别</td><td data-label="交互页面">提示词调试台</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W1·四</td><td data-label="课程" class="t-strong">AI 产品形态拆解<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">六大形态「价值×技术×商业」三维拆解</td><td data-label="讲课稿核心">每形态 1 个标杆产品故事；金句「形态没有高下，匹配才对」</td><td data-label="导学案">预习=体验 2 款 AI 产品；课堂=拆解报告模板</td><td data-label="播客题目">《六大 AI 产品形态》</td><td data-label="配图清单">形态对比表、AI产品全链路图</td><td data-label="习题考点">形态归类题、商业模式匹配</td><td data-label="交互页面">无（真实产品演示）</td><td data-label="PPT" class="t-mono">20</td></tr><tr><td data-label="日程" class="t-strong">W1·五</td><td data-label="课程" class="t-strong">行业选择 + 职业规划<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">六大赛道分析框架；个人匹配方法论</td><td data-label="讲课稿核心">「海投是求职最大的浪费」；选赛道前后对比案例</td><td data-label="导学案">预习=3 个候选行业；课堂=职业规划书模板</td><td data-label="播客题目">《选赛道的三个标准》</td><td data-label="配图清单">六大赛道对比表</td><td data-label="习题考点">赛道匹配分析</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W2·一</td><td data-label="课程" class="t-strong">模型能力边界与选型<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">能力-成本-延迟三角；选型决策树</td><td data-label="讲课稿核心">同任务三模型对比实验；金句「选型不是选最强」</td><td data-label="导学案">预习=列出项目要用模型；课堂=选型决策树填写</td><td data-label="播客题目">《别追最强，追最合适》</td><td data-label="配图清单">模型横评表</td><td data-label="习题考点">场景-模型匹配、成本估算</td><td data-label="交互页面">无（现场跑对比）</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W2·二</td><td data-label="课程" class="t-strong">训练与微调原理<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">全链路只讲产品需要懂的部分；「多数场景不该微调」</td><td data-label="讲课稿核心">微调必要性判断清单；LoRA 旁观实验</td><td data-label="导学案">预习=写下想微调的场景；课堂=微调清单</td><td data-label="播客题目">《大多数时候不该微调》</td><td data-label="配图清单">预训练→SFT→LoRA→RLHF 流程图</td><td data-label="习题考点">微调必要性判断</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W2·三</td><td data-label="课程" class="t-strong">模型评测体系<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">评测集构建；badcase 归因；评测报告写作</td><td data-label="讲课稿核心">一条 badcase 的归因破案过程；金句「没评测集=开盲盒」</td><td data-label="导学案">预习=写 3 个测试问题；课堂=评测集设计表</td><td data-label="播客题目">《AI PM 的验收武器：评测集》</td><td data-label="配图清单">评测流程示意图</td><td data-label="习题考点">评测集设计、badcase 归因</td><td data-label="交互页面">AI产品评估打分工具</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W2·四</td><td data-label="课程" class="t-strong">AI 合规与安全<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">生成式 AI 管理办法要点；算法备案；内容安全</td><td data-label="讲课稿核心">因合规被下架的功能案例；企业嘉宾连线 30 分钟</td><td data-label="导学案">预习=查一款 AI 产品备案信息；课堂=合规清单</td><td data-label="播客题目">《国内 AI 产品的合规红线》</td><td data-label="配图清单">合规检查清单图</td><td data-label="习题考点">合规场景判断</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W2·五</td><td data-label="课程" class="t-strong">主项目立项启动<span class="stage-tag">认知筑基</span></td><td data-label="教案重点">三维定题法；可行性四维评估；立项报告结构</td><td data-label="讲课稿核心">往届优秀/失败选题对比；金句「选题定生死」</td><td data-label="导学案">预习=3 个候选题目；课堂=立项报告模板</td><td data-label="播客题目">《AI 产品立项三问》</td><td data-label="配图清单">AI产品全链路图</td><td data-label="习题考点">选题可行性评估</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">14</td></tr><tr><td data-label="日程" class="t-strong">W3·一</td><td data-label="课程" class="t-strong">Agent 架构原理<span class="stage-tag">AI 核心能力</span></td><td data-label="教案重点">四要素与 ReAct；MCP 协议；产品视角边界</td><td data-label="讲课稿核心">「从答题到办事」类比；Multi-Agent 复杂度警告</td><td data-label="导学案">预习=体验 1 个 Agent 产品；课堂=四要素笔记</td><td data-label="播客题目">《Agent：从答题到办事》</td><td data-label="配图清单">Agent四要素架构图</td><td data-label="习题考点">要素辨析、场景适配判断</td><td data-label="交互页面">交互式架构图（Agent）</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W3·二</td><td data-label="课程" class="t-strong">Agent 产品设计与工作流实操<span class="stage-tag">AI 核心能力</span></td><td data-label="教案重点">Agent vs 工作流判断；人机协同与兜底</td><td data-label="讲课稿核心">Dify 现场搭工作流；失败兜底案例</td><td data-label="导学案">预习=注册 Dify/Coze；课堂=工作流设计表</td><td data-label="播客题目">《该用 Agent 还是工作流》</td><td data-label="配图清单">工作流编排示意图</td><td data-label="习题考点">场景适配判断、兜底设计</td><td data-label="交互页面">无（Dify/Coze 实操）</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W3·三</td><td data-label="课程" class="t-strong">RAG 架构与知识库产品<span class="stage-tag">AI 核心能力</span></td><td data-label="教案重点">六步链路与产品职责；分块与 Top-K 权衡</td><td data-label="讲课稿核心">幻觉事故导入；知识库被弃用案例；四句金句</td><td data-label="导学案">预习=跑一遍交互工具；课堂=六步笔记表+决策表</td><td data-label="播客题目">《RAG 一句话讲明白》</td><td data-label="配图清单">幻觉案例图、RAG架构图、向量数据库示意图</td><td data-label="习题考点">概念选择、分块策略、RAG vs 微调</td><td data-label="交互页面">RAG交互演示</td><td data-label="PPT" class="t-mono">20</td></tr><tr><td data-label="日程" class="t-strong">W3·四</td><td data-label="课程" class="t-strong">多模态产品设计<span class="stage-tag">AI 核心能力</span></td><td data-label="教案重点">文生图/视频/语音形态；交互要点；版权合规</td><td data-label="讲课稿核心">多模态产品版权翻车案例；成本体验权衡</td><td data-label="导学案">预习=体验 2 款多模态产品；课堂=多模态模块方案</td><td data-label="播客题目">《多模态体验设计三要点》</td><td data-label="配图清单">多模态形态对比图</td><td data-label="习题考点">多模态场景设计、版权判断</td><td data-label="交互页面">无（现场生成演示）</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W3·五</td><td data-label="课程" class="t-strong">原型评审 I<span class="stage-tag">AI 核心能力</span></td><td data-label="教案重点">三维点评法（价值/可行/体验）；迭代清单</td><td data-label="讲课稿核心">往届原型问题集锦；金句「原型是拿来被推翻的」</td><td data-label="导学案">预习=准备 3 分钟演示；课堂=评审记录表</td><td data-label="播客题目">无（评审日）</td><td data-label="配图清单">评审三维评分卡</td><td data-label="习题考点">原型互评打分</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">10</td></tr><tr><td data-label="日程" class="t-strong">W4·一</td><td data-label="课程" class="t-strong">用户研究与需求分析<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">AI 场景访谈法；需求真伪判断；问卷设计</td><td data-label="讲课稿核心">「伪需求」故事；访谈提问技巧示范</td><td data-label="导学案">预习=找 1 位目标用户；课堂=访谈提纲模板</td><td data-label="播客题目">《怎么判断伪需求》</td><td data-label="配图清单">需求真伪判断流程图</td><td data-label="习题考点">需求真伪判断、访谈提纲</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W4·二</td><td data-label="课程" class="t-strong">AI 产品 PRD 写作<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">AI PRD 与传统 PRD 五处差异；逐章写作</td><td data-label="讲课稿核心">差 PRD vs 好 PRD 对比；金句「提示词是需求的一部分」</td><td data-label="导学案">预习=重读项目选题；课堂=PRD 逐章填写</td><td data-label="播客题目">《AI 产品 PRD 差在哪》</td><td data-label="配图清单">PRD 结构图、五处差异表</td><td data-label="习题考点">PRD 片段改错</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W4·三</td><td data-label="课程" class="t-strong">方案设计与异常兜底<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">状态机设计；翻车设计四件套</td><td data-label="讲课稿核心">AI 翻车现场合集；金句「体验一半在兜底」</td><td data-label="导学案">预习=列 3 个翻车场景；课堂=兜底设计表</td><td data-label="播客题目">《AI 产品的翻车设计》</td><td data-label="配图清单">状态机示意图、兜底决策树</td><td data-label="习题考点">兜底方案设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W4·四</td><td data-label="课程" class="t-strong">数据指标体系与 SQL<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">AI 特有指标；SQL 从 0 到查询；北极星指标</td><td data-label="讲课稿核心">北极星指标案例；SQL 现场跑数</td><td data-label="导学案">预习=装 SQL 环境；课堂=指标看板设计表</td><td data-label="播客题目">《AI 产品五个核心指标》</td><td data-label="配图清单">指标体系图</td><td data-label="习题考点">指标设计、SQL 上机</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W4·五</td><td data-label="课程" class="t-strong">PRD 评审大会<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">评审流程与答辩技巧；研发评估模拟</td><td data-label="讲课稿核心">评审攻防演练；金句「评审是共识会不是考试」</td><td data-label="导学案">预习=准备 5 分钟答辩；课堂=评审记录表</td><td data-label="播客题目">无（评审日）</td><td data-label="配图清单">评审流程图</td><td data-label="习题考点">评审提问设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">10</td></tr><tr><td data-label="日程" class="t-strong">W5·一</td><td data-label="课程" class="t-strong">AI 产品增长<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">AARRR 落地；aha 时刻；冷启动</td><td data-label="讲课稿核心">某 AI 工具冷启动案例；金句「留存靠 aha 时刻」</td><td data-label="导学案">预习=写 aha 时刻假设；课堂=增长方案模板</td><td data-label="播客题目">《AI 产品怎么冷启动》</td><td data-label="配图清单">AARRR 漏斗图</td><td data-label="习题考点">增长方案设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W5·二</td><td data-label="课程" class="t-strong">AB 实验与数据决策<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">实验设计四要素；三大陷阱</td><td data-label="讲课稿核心">被「偷看指标」毁掉的实验；金句「没跑完=没跑」</td><td data-label="导学案">预习=写 1 个待验证假设；课堂=实验设计表</td><td data-label="播客题目">《AB 实验三个常见坑》</td><td data-label="配图清单">实验流程图、陷阱示意图</td><td data-label="习题考点">实验设计、指标异动分析</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W5·三</td><td data-label="课程" class="t-strong">AI 商业化与成本核算<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">四大变现模式；token 成本模型；定价</td><td data-label="讲课稿核心">现场算单次对话成本；金句「不懂 token 成本管不好 AI 产品」</td><td data-label="导学案">预习=查一款 AI 产品定价；课堂=商业画布+单位经济模型</td><td data-label="播客题目">《AI 产品到底怎么赚钱》</td><td data-label="配图清单">变现模式对比图</td><td data-label="习题考点">成本核算计算、定价设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W5·四</td><td data-label="课程" class="t-strong">项目推进与跨团队协作<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">研发三角协作；里程碑与风险；向上汇报</td><td data-label="讲课稿核心">「算法说做不到」的沟通案例；金句「汇报是隐形 KPI」</td><td data-label="导学案">预习=写最大风险；课堂=甘特图+风险清单</td><td data-label="播客题目">《怎么和算法工程师沟通》</td><td data-label="配图清单">AI产品研发流程图</td><td data-label="习题考点">风险应对、汇报结构</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W5·五</td><td data-label="课程" class="t-strong">主项目中期评审<span class="stage-tag">产品硬功</span></td><td data-label="教案重点">中期答辩结构；投资人视角；V3 Scope 决策</td><td data-label="讲课稿核心">「砍需求」决策演示；金句「Scope 是砍出来的」</td><td data-label="导学案">预习=准备中期答辩；课堂=评审记录表</td><td data-label="播客题目">无（评审日）</td><td data-label="配图清单">评审评分卡</td><td data-label="习题考点">Scope 决策分析</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">10</td></tr><tr><td data-label="日程" class="t-strong">W6·一</td><td data-label="课程" class="t-strong">Vibe Coding 与 AI 工程提效<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">方法论与边界；国产工具实战；规则文件编写</td><td data-label="讲课稿核心">现场用 AI 工具 10 分钟搭页面；金句「AI PM 的代码是提示词和工作流」</td><td data-label="导学案">预习=注册 ≥2 款国产 AI 工具；课堂=工具对比记录</td><td data-label="播客题目">《不写代码的 PM 怎么做 Demo》</td><td data-label="配图清单">Vibe Coding 流程图、国产工具对比表</td><td data-label="习题考点">工具场景匹配</td><td data-label="交互页面">提示词调试台</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W6·二</td><td data-label="课程" class="t-strong">开发冲刺 I<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">核心链路开发陪跑；联调要点；API 降级</td><td data-label="讲课稿核心">巡场答疑为主；三个最常卡住的点预判</td><td data-label="导学案">课堂=冲刺任务清单打卡</td><td data-label="播客题目">无（冲刺日）</td><td data-label="配图清单">核心链路检查清单</td><td data-label="习题考点">无（产出验收）</td><td data-label="交互页面">无（学员实操）</td><td data-label="PPT" class="t-mono">8</td></tr><tr><td data-label="日程" class="t-strong">W6·三</td><td data-label="课程" class="t-strong">开发冲刺 II<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">空态/错态/加载态；体验走查清单</td><td data-label="讲课稿核心">走查清单逐项过；「细节是体验的复利」</td><td data-label="导学案">课堂=体验走查清单</td><td data-label="播客题目">无（冲刺日）</td><td data-label="配图清单">三态设计示意图</td><td data-label="习题考点">无（产出验收）</td><td data-label="交互页面">无（学员实操）</td><td data-label="PPT" class="t-mono">8</td></tr><tr><td data-label="日程" class="t-strong">W6·四</td><td data-label="课程" class="t-strong">测试验收与真实用户试用<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">badcase 收集修复；评测集跑分；≥10 用户试用</td><td data-label="讲课稿核心">试用反馈解读示范；金句「10 个真实用户胜过 100 条自嗨功能」</td><td data-label="导学案">课堂=测试报告模板</td><td data-label="播客题目">无（冲刺日）</td><td data-label="配图清单">测试流程图</td><td data-label="习题考点">无（产出验收）</td><td data-label="交互页面">AI产品评估打分工具</td><td data-label="PPT" class="t-mono">12</td></tr><tr><td data-label="日程" class="t-strong">W6·五</td><td data-label="课程" class="t-strong">结业路演<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">5 分钟路演结构；答辩应对；企业嘉宾点评</td><td data-label="讲课稿核心">路演评分标准宣讲；金句「路演是产品的浓缩」</td><td data-label="导学案">预习=准备路演 PPT；课堂=路演评分表</td><td data-label="播客题目">无（路演日）</td><td data-label="配图清单">路演评分标准图</td><td data-label="习题考点">无（路演验收）</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">10</td></tr><tr><td data-label="日程" class="t-strong">W7·一</td><td data-label="课程" class="t-strong">行业纵深（分组）<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">产业链/政策/竞品/客户/场景/术语六件套</td><td data-label="讲课稿核心">各赛道企业导师连线；金句「面试聊深度不聊广度」</td><td data-label="导学案">预习=收集 3 个竞品；课堂=行业手册模板</td><td data-label="播客题目">无（分组日）</td><td data-label="配图清单">行业分析框架图</td><td data-label="习题考点">行业分析报告</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">12</td></tr><tr><td data-label="日程" class="t-strong">W7·二</td><td data-label="课程" class="t-strong">作品集方法论<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">三种形态；STAR 改写；数据呈现美化</td><td data-label="讲课稿核心">同一项目平庸版 vs 优秀版复盘对比</td><td data-label="导学案">预习=列出项目数据素材；课堂=复盘文档模板</td><td data-label="播客题目">《项目经历怎么写有说服力》</td><td data-label="配图清单">STAR 结构图、图表美化示例</td><td data-label="习题考点">项目经历改写</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W7·三</td><td data-label="课程" class="t-strong">简历撰写<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">黄金结构；项目描述公式；ATS；转行叙事</td><td data-label="讲课稿核心">被 HR 秒拒的简历逐条批改；金句「简历是给 HR 的 20 秒产品」</td><td data-label="导学案">预习=准备旧简历；课堂=简历模板填写</td><td data-label="播客题目">《HR 筛简历的 20 秒》</td><td data-label="配图清单">简历黄金结构图</td><td data-label="习题考点">简历片段诊断</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W7·四</td><td data-label="课程" class="t-strong">1v1 简历诊断<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">逐份诊断；作品集在线化；个人品牌起步</td><td data-label="讲课稿核心">诊断话术示范；高频问题 Top10</td><td data-label="导学案">课堂=诊断记录表</td><td data-label="播客题目">无（诊断日）</td><td data-label="配图清单">简历自检 20 项清单</td><td data-label="习题考点">无（诊断验收）</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">8</td></tr><tr><td data-label="日程" class="t-strong">W7·五</td><td data-label="课程" class="t-strong">岗位投递策略<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">渠道优先级；投递漏斗；话术与跟进</td><td data-label="讲课稿核心">打招呼话术对比实验；金句「量是护城河」</td><td data-label="导学案">预习=列 10 家目标公司；课堂=投递清单模板</td><td data-label="播客题目">《投递 50 家没面试，问题出在哪》</td><td data-label="配图清单">投递漏斗图、渠道对比表</td><td data-label="习题考点">投递计划设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">16</td></tr><tr><td data-label="日程" class="t-strong">W8·一</td><td data-label="课程" class="t-strong">面试全景地图<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">五轮流程考察点；五大题型；评分标准</td><td data-label="讲课稿核心">面试官视角自白；金句「面试是开卷考试」</td><td data-label="导学案">预习=盘点题型弹药；课堂=面试准备矩阵</td><td data-label="播客题目">《每一轮面试在考什么》</td><td data-label="配图清单">面试流程图、题型地图</td><td data-label="习题考点">题型归类</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">18</td></tr><tr><td data-label="日程" class="t-strong">W8·二</td><td data-label="课程" class="t-strong">高频题精讲 I：项目与场景<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">追问防御链；场景设计六步框架；10 道真题</td><td data-label="讲课稿核心">现场真题演练+点评；金句「答案是数据不是形容词」</td><td data-label="导学案">预习=写项目 10 问自答；课堂=项目问答库</td><td data-label="播客题目">《面试高频 10 问（上）》</td><td data-label="配图清单">场景设计六步框架图</td><td data-label="习题考点">场景设计题 3 道</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">20</td></tr><tr><td data-label="日程" class="t-strong">W8·三</td><td data-label="课程" class="t-strong">高频题精讲 II：技术与数据<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">技术理解题；数据题；行为题</td><td data-label="讲课稿核心">技术题「说人话」训练；金句「答深度更答边界」</td><td data-label="导学案">预习=复习 W2/W3 金句；课堂=技术数据题库</td><td data-label="播客题目">《面试高频 10 问（下）》</td><td data-label="配图清单">题型-应答策略对照表</td><td data-label="习题考点">技术口述、指标设计</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">20</td></tr><tr><td data-label="日程" class="t-strong">W8·四</td><td data-label="课程" class="t-strong">模拟面试 I（1v1 压力面）<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">压力面试流程；录像复盘；改进清单</td><td data-label="讲课稿核心">压力面试话术示范；复盘点评方法</td><td data-label="导学案">预习=调试设备；课堂=改进清单</td><td data-label="播客题目">无（面试日）</td><td data-label="配图清单">面试评分表</td><td data-label="习题考点">无（表现验收）</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">6</td></tr><tr><td data-label="日程" class="t-strong">W8·五</td><td data-label="课程" class="t-strong">模拟面试 II + 谈薪 + 结营<span class="stage-tag">实战与就业</span></td><td data-label="教案重点">二轮定向模拟；谈薪策略；offer 选择；结营</td><td data-label="讲课稿核心">谈薪话术演练；校友机制；金句「谈薪谈的是未来」</td><td data-label="导学案">预习=准备谈薪底线；课堂=谈薪方案</td><td data-label="播客题目">《谈薪：把 offer 谈高 20%》</td><td data-label="配图清单">谈薪策略图、薪资带宽表</td><td data-label="习题考点">无（表现验收）</td><td data-label="交互页面">无</td><td data-label="PPT" class="t-mono">14</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">04 · SCHEDULE</span>
+      <h2>开班前 4 周生产排期（2 人教研小组）</h2>
+      <p>原则：先定标准与样课，再批量生产；先备首周（完课率）和第六周（口碑），后补中间。</p>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th style="width:90px">时间</th><th style="width:180px">任务</th><th>产出与验收</th></tr></thead>
+        <tbody>
+          <tr><td class="t-strong">T-4 周</td><td class="t-strong">定标准 + 出样课</td><td>八件套模板定稿；完成 W3D3 样课日全套（已交付）；4 个交互工具 + 66 张配图验收通过；内部试讲 1 轮</td></tr>
+          <tr><td class="t-strong">T-3 周</td><td class="t-strong">W1 + W2 全套（10 天）</td><td>80 件物料完成并通过质检；讲师 A 主讲周、讲师 B 主讲周交叉备课</td></tr>
+          <tr><td class="t-strong">T-2 周</td><td class="t-strong">W3 + W4 全套（10 天）</td><td>80 件物料完成；W3 用样课日标准对标；导学案与教案环节对齐抽查</td></tr>
+          <tr><td class="t-strong">T-1 周</td><td class="t-strong">W5–W8 全套 + 收尾</td><td>120 件物料完成；就业物料（简历模板 / 100 题题库 / 投递清单）先行就绪；内部试讲 2 轮；物料打包发群</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">05 · CHECKLIST</span>
+      <h2>质量验收清单（进入物料库前逐项打勾）</h2>
+      <p>任何一件不满足本清单，退回修改。质检人签字后归档。</p>
+    </div>
+    <div class="grid3">
+      <div class="mini"><h4>教案 + PPT</h4><ul class="chk">
+        <li>教学目标<b>可测量</b>（能用作业验证）</li>
+        <li>时间拆分总和 = 课时，环节间有过渡设计</li>
+        <li>提问 ≥6 个，附预设答案</li>
+        <li>易错点 ≥4 条，每条有应对动作</li>
+        <li>PPT 每页 ≤6 个要点，页数与课时匹配</li>
+      </ul></div>
+      <div class="mini"><h4>讲课稿 + 播客稿</h4><ul class="chk">
+        <li>逐字稿新讲师可<b>照读授课</b></li>
+        <li>四类话术齐备：提问 / 过渡 / 防冷场 / 金句</li>
+        <li>金句单独汇总（学员抄录用）</li>
+        <li>播客口播 1500±200 字，知识点 ≤3 个</li>
+        <li>播客附制作备注（语速 / BGM / 章节标记）</li>
+      </ul></div>
+      <div class="mini"><h4>导学案 + 习题 + 交互</h4><ul class="chk">
+        <li>导学案「预习 / 课堂 / 课后」三段完整</li>
+        <li>课堂模板与教案环节<b>一一对应</b></li>
+        <li>习题三层齐备，Rubric 三档描述具体</li>
+        <li>交互工具断网可用、无 alert、移动端可用</li>
+        <li>交互附讲师 5 步演示脚本 + 故障处理</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="rule"></div>
+  <p>八件套生产体系 · AI 产品经理就业训练营 · V1.0 · 2026-10-21</p>
+  <p style="margin-top:6px">本课程八件套体系、全部交互工具与配图素材均由新像素教育自主研发</p>
+</footer>
+
+</body>
+</html>

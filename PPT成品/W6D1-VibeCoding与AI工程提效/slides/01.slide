@@ -1,0 +1,13 @@
+<Slide style={{ width: 1280, height: 720, padding: 80, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', position: 'relative' }}>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 70, height: '100%' }}>
+    <Box style={{ flex: 1, gap: 30 }}>
+      <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 4 }}>AI 产品经理实战训练营</Text>
+      <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25 }}>Vibe Coding<br />与 AI 工程提效</Text>
+      <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)' }}>W6 周一 · 开发收官周</Text>
+      <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+    </Box>
+    <Box style={{ width: 400, background: '#FFFFFF', borderRadius: 12, padding: 12, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/vibecoding_flow.svg" style={{ width: 376, height: 219, objectFit: 'contain' }} />
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1040" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="1040" fill="#FFFFFF"/>
+<!-- 表头 -->
+<rect x="36" y="36" width="1128" height="76" rx="10" fill="#7C3AED"/>
+<text x="60" y="84" font-size="20" font-weight="700" fill="#FFFFFF">模拟面试评分表 · W8D4</text>
+<text x="1140" y="82" text-anchor="end" font-size="11" fill="#F1EBFD">AI 产品经理就业训练营</text>
+<!-- 信息字段 -->
+<text x="36" y="146" font-size="11" fill="#6B7280">学员姓名</text>
+<line x1="96" y1="172" x2="290" y2="172" stroke="#C9C2DE" stroke-width="1.2"/>
+<text x="318" y="146" font-size="11" fill="#6B7280">面试官</text>
+<line x1="378" y1="172" x2="572" y2="172" stroke="#C9C2DE" stroke-width="1.2"/>
+<text x="600" y="146" font-size="11" fill="#6B7280">日期</text>
+<line x1="642" y1="172" x2="836" y2="172" stroke="#C9C2DE" stroke-width="1.2"/>
+<text x="864" y="146" font-size="11" fill="#6B7280">轮次（第几波）</text>
+<line x1="962" y1="172" x2="1164" y2="172" stroke="#C9C2DE" stroke-width="1.2"/>
+<!-- 四维评分区 -->
+<text x="36" y="208" font-size="12" font-weight="700" fill="#7C3AED">四维评分 · 每维勾选一档</text>
+<!-- 内容 40 -->
+<rect x="36" y="222" width="150" height="88" rx="8" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+<text x="111" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">内容</text>
+<text x="111" y="284" text-anchor="middle" font-size="11" fill="#6B7280">（40 分）</text>
+<rect x="194" y="222" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="196" y="226" width="4" height="80" fill="#7C3AED"/>
+<rect x="206" y="238" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="226" y="249" font-size="12" font-weight="700" fill="#7C3AED">一档（高分）32–40</text>
+<text x="206" y="272" font-size="10.5" fill="#221E33">数据有来源有口径，被追问能展开计算过程；</text>
+<text x="206" y="288" font-size="10.5" fill="#221E33">项目细节可复述到「决策级」</text>
+<rect x="520" y="222" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="522" y="226" width="4" height="80" fill="#2563EB"/>
+<rect x="532" y="238" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="552" y="249" font-size="12" font-weight="700" fill="#2563EB">二档（中段）22–31</text>
+<text x="532" y="272" font-size="10.5" fill="#221E33">核心事实准确，但部分数据只有结论没有来源，</text>
+<text x="532" y="288" font-size="10.5" fill="#221E33">追问两层后出现模糊</text>
+<rect x="846" y="222" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="848" y="226" width="4" height="80" fill="#E5E7EB"/>
+<rect x="858" y="238" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="878" y="249" font-size="12" font-weight="700" fill="#6B7280">三档（待改）0–21</text>
+<text x="858" y="272" font-size="10.5" fill="#221E33">出现编造或明显错误数据；被质疑后自我否定、</text>
+<text x="858" y="288" font-size="10.5" fill="#221E33">现场改口</text>
+<!-- 结构 30 -->
+<rect x="36" y="316" width="150" height="88" rx="8" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+<text x="111" y="354" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">结构</text>
+<text x="111" y="378" text-anchor="middle" font-size="11" fill="#6B7280">（30 分）</text>
+<rect x="194" y="316" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="196" y="320" width="4" height="80" fill="#7C3AED"/>
+<rect x="206" y="332" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="226" y="343" font-size="12" font-weight="700" fill="#7C3AED">一档（高分）24–30</text>
+<text x="206" y="366" font-size="10.5" fill="#221E33">先结论后展开，会用「第一/第二」或</text>
+<text x="206" y="382" font-size="10.5" fill="#221E33">「背景-动作-结果」框架，被打断后能回到主线</text>
+<rect x="520" y="316" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="522" y="320" width="4" height="80" fill="#2563EB"/>
+<rect x="532" y="332" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="552" y="343" font-size="12" font-weight="700" fill="#2563EB">二档（中段）15–23</text>
+<text x="532" y="366" font-size="10.5" fill="#221E33">有内容但线性流水账，铺垫过长，</text>
+<text x="532" y="382" font-size="10.5" fill="#221E33">被打断后回不到主线</text>
+<rect x="846" y="316" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="848" y="320" width="4" height="80" fill="#E5E7EB"/>
+<rect x="858" y="332" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="878" y="343" font-size="12" font-weight="700" fill="#6B7280">三档（待改）0–14</text>
+<text x="858" y="366" font-size="10.5" fill="#221E33">想到哪说到哪，听 1 分钟抓不到重点</text>
+<!-- 表达 20 -->
+<rect x="36" y="410" width="150" height="88" rx="8" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+<text x="111" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">表达</text>
+<text x="111" y="472" text-anchor="middle" font-size="11" fill="#6B7280">（20 分）</text>
+<rect x="194" y="410" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="196" y="414" width="4" height="80" fill="#7C3AED"/>
+<rect x="206" y="426" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="226" y="437" font-size="12" font-weight="700" fill="#7C3AED">一档（高分）16–20</text>
+<text x="206" y="460" font-size="10.5" fill="#221E33">语速平稳，一分钟信息密度高，无口头禅堆叠</text>
+<rect x="520" y="410" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="522" y="414" width="4" height="80" fill="#2563EB"/>
+<rect x="532" y="426" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="552" y="437" font-size="12" font-weight="700" fill="#2563EB">二档（中段）10–15</text>
+<text x="532" y="460" font-size="10.5" fill="#221E33">整体清楚但有「嗯、然后」等填充词，长句偏多</text>
+<rect x="846" y="410" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="848" y="414" width="4" height="80" fill="#E5E7EB"/>
+<rect x="858" y="426" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="878" y="437" font-size="12" font-weight="700" fill="#6B7280">三档（待改）0–9</text>
+<text x="858" y="460" font-size="10.5" fill="#221E33">声音过小、语速忽快忽慢、长时间停顿且不说明原因</text>
+<!-- 气场 10 -->
+<rect x="36" y="504" width="150" height="88" rx="8" fill="#F1EBFD" stroke="#C9C2DE" stroke-width="1"/>
+<text x="111" y="542" text-anchor="middle" font-size="16" font-weight="700" fill="#5B21B6">气场</text>
+<text x="111" y="566" text-anchor="middle" font-size="11" fill="#6B7280">（10 分）</text>
+<rect x="194" y="504" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="196" y="508" width="4" height="80" fill="#7C3AED"/>
+<rect x="206" y="520" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="226" y="531" font-size="12" font-weight="700" fill="#7C3AED">一档（高分）8–10</text>
+<text x="206" y="554" font-size="10.5" fill="#221E33">被质疑时姿态稳定，保持眼神接触，能自然接住挑战</text>
+<rect x="520" y="504" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="522" y="508" width="4" height="80" fill="#2563EB"/>
+<rect x="532" y="520" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="552" y="531" font-size="12" font-weight="700" fill="#2563EB">二档（中段）5–7</text>
+<text x="532" y="554" font-size="10.5" fill="#221E33">明显紧张但能继续作答，偶有回避眼神</text>
+<rect x="846" y="504" width="318" height="88" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<rect x="848" y="508" width="4" height="80" fill="#E5E7EB"/>
+<rect x="858" y="520" width="13" height="13" fill="#FFFFFF" stroke="#221E33" stroke-width="1.2"/>
+<text x="878" y="531" font-size="12" font-weight="700" fill="#6B7280">三档（待改）0–4</text>
+<text x="858" y="554" font-size="10.5" fill="#221E33">僵住、长时间沉默，或情绪对抗</text>
+<!-- 评语区 -->
+<rect x="36" y="624" width="4" height="18" fill="#7C3AED"/>
+<text x="48" y="638" font-size="14" font-weight="700" fill="#221E33">做得好的 2 点</text>
+<line x1="48" y1="676" x2="1152" y2="676" stroke="#C9C2DE" stroke-width="1.2"/>
+<line x1="48" y1="716" x2="1152" y2="716" stroke="#C9C2DE" stroke-width="1.2"/>
+<rect x="36" y="748" width="4" height="152" fill="#2563EB"/>
+<text x="48" y="768" font-size="14" font-weight="700" fill="#2563EB">最该改的 1 条</text>
+<line x1="60" y1="806" x2="1152" y2="806" stroke="#C9C2DE" stroke-width="1.2"/>
+<line x1="60" y1="846" x2="1152" y2="846" stroke="#C9C2DE" stroke-width="1.2"/>
+<line x1="60" y1="886" x2="1152" y2="886" stroke="#C9C2DE" stroke-width="1.2"/>
+<!-- 汇总区 -->
+<rect x="36" y="924" width="190" height="76" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="131" y="952" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">四维合计</text>
+<text x="131" y="978" text-anchor="middle" font-size="11" fill="#6B7280">满分 100</text>
+<text x="250" y="942" font-size="13" font-weight="700" fill="#221E33">薄弱题记录（题目 / 卡点）</text>
+<line x1="250" y1="966" x2="870" y2="966" stroke="#C9C2DE" stroke-width="1.2"/>
+<line x1="250" y1="988" x2="870" y2="988" stroke="#C9C2DE" stroke-width="1.2"/>
+<line x1="250" y1="1008" x2="870" y2="1008" stroke="#C9C2DE" stroke-width="1.2"/>
+<text x="900" y="942" font-size="13" font-weight="700" fill="#221E33">面试官签名</text>
+<line x1="900" y1="1008" x2="1164" y2="1008" stroke="#C9C2DE" stroke-width="1.2"/>
+<!-- 隐私提示 -->
+<text x="1164" y="1032" text-anchor="end" font-size="10" fill="#6B7280">本表随录像归档，仅本人与教研组可见，30 天后删除</text>
+</svg>

@@ -1,0 +1,43 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D2</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>按背景选型：一主一辅</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ marginTop: 28, border: '1px solid #E5E7EB', borderRadius: 12 }}>
+    <Table
+      style={{ width: '100%', height: 400 }}
+      defaultTextStyle={{ fontSize: 18, color: '#1E1B4B', textAlign: 'center' }}
+      defaultCellStyle={{
+        border: {
+          left: { width: 1, color: '#E5E7EB' },
+          right: { width: 1, color: '#E5E7EB' },
+          top: { width: 1, color: '#E5E7EB' },
+          bottom: { width: 1, color: '#E5E7EB' },
+        },
+      }}
+      cells={[
+        [
+          { text: '你的背景', textStyle: { fontSize: 18, bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
+          { text: '一主一辅组合', textStyle: { fontSize: 18, bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
+          { text: '选型逻辑', textStyle: { fontSize: 18, bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
+        ],
+        ['应届生', '复盘文档 + 产品分析集', '靠深度'],
+        [
+          { text: '转行者', cellStyle: { background: { color: '#EFF6FF' } } },
+          { text: '复盘文档 + 产品分析集（演示佐证）', cellStyle: { background: { color: '#EFF6FF' } } },
+          { text: '靠迁移', cellStyle: { background: { color: '#EFF6FF' } } },
+        ],
+        [
+          { text: '在职者', cellStyle: { background: { color: '#F5F3FF' } } },
+          { text: '在线演示 + 复盘文档', cellStyle: { background: { color: '#F5F3FF' } } },
+          { text: '靠实物', cellStyle: { background: { color: '#F5F3FF' } } },
+        ],
+      ]}
+    />
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 16</Text>
+  </Box>
+</Slide>

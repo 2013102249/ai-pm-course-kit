@@ -1,0 +1,11 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative', overflow: 'hidden' }}>
+    <Image src="assets/multimodal-compare.svg" style={{ position: 'absolute', right: -60, bottom: -40, width: 760, height: 437, opacity: 0.14, borderRadius: 16 }} />
+    <Box style={{ position: 'relative', zIndex: 1, height: '100%', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 2 }}>AI 产品经理实战训练营</Text>
+        <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF', marginTop: 24 }}>多模态产品设计</Text>
+        <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)', marginTop: 20 }}>W3 · 周四</Text>
+        <Box style={{ marginTop: 60 }}>
+            <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+        </Box>
+    </Box>
+</Slide>

@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D1</Text>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>12 / 18</Text>
+    <Box style={{ flexDirection: 'column', gap: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场示范：拆一份 JD</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ flexDirection: 'row', gap: 28, marginTop: 20 }}>
+        <Box style={{ width: 640, flexDirection: 'column', gap: 12 }}>
+            <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '12px 18px' }}>
+                <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>职责区（做什么）</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55, marginTop: 4 }}>负责 AI 对话产品的需求分析与功能设计，输出 PRD；设计提示词方案与效果评测方案；跟踪上线数据，持续优化。</Text>
+            </Box>
+            <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 18px' }}>
+                <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>要求区（硬门槛）</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55, marginTop: 4 }}>3 年以上产品经理经验；有完整项目闭环；数据能力强，熟练使用 SQL。</Text>
+            </Box>
+            <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 18px' }}>
+                <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>加分项区（优先项）</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55, marginTop: 4 }}>了解大模型基本原理；能理解 RAG、Agent 技术方案；有知识库、智能客服或对话产品经验。</Text>
+            </Box>
+            <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '12px 18px' }}>
+                <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>隐藏区（团队与阶段）</Text>
+                <Text style={{ fontSize: 15, color: '#1E1B4B', lineHeight: 1.55, marginTop: 4 }}>与算法团队协作、负责数据优化——团队有算法配置，公司重数据驱动。</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 14 }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>关键词 → 六维归类</Text>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>PRD 与需求分析 → <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>产品硬功</span></Text>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>评测方案 → <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>产品硬功 + 数据思维</span></Text>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>SQL 与数据跟踪 → <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>数据思维</span></Text>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>大模型原理 / RAG / Agent → <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>AI 技术理解</span></Text>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>与算法协作 → <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>沟通表达 + 项目推进</span></Text>
+        </Box>
+    </Box>
+    <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>教学示例，非真实招聘信息</Text>
+</Slide>

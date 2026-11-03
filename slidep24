@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# slidep 引擎就绪版包装器（PATH 中 22.22.2-6 shim 未就位，改用 24.14.0 引擎）
+exec /Users/qingzou/.workbuddy/binaries/node/versions/24.14.0/bin/node \
+  /Users/qingzou/.workbuddy/binaries/node/versions/24.14.0/lib/node_modules/@tencent/slidep/dist/index.js "$@"

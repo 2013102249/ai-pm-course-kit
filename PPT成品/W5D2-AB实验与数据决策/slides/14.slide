@@ -1,0 +1,47 @@
+<Slide style={{ position: 'relative', width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D2</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 32, right: 60, fontSize: 14, color: '#64748B' }}>14 / 16</Text>
+  <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>从数据到决策：三道闸 + 无实验条件怎么办</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ flexDirection: 'column', flex: 1, marginTop: 22, gap: 16 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'stretch', gap: 12, flex: 1 }}>
+      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>闸 1</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>显著了吗</Text>
+      </Box>
+      <Box style={{ justifyContent: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>闸 2</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>护栏守住了吗</Text>
+      </Box>
+      <Box style={{ justifyContent: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>闸 3</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>成本与可逆性算过吗</Text>
+      </Box>
+    </Box>
+    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>没有实验条件时：三个替代法（各有一个弱点）</Text>
+    <Box style={{ flexDirection: 'row', alignItems: 'stretch', gap: 16, flex: 1.2 }}>
+      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>前后对照</Text>
+        <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>弱点：分不清改动效果与自然趋势、季节波动</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>灰度观察</Text>
+        <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>弱点：小流量样本少、波动大，只能看方向</Text>
+      </Box>
+      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 22, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>访谈三角验证</Text>
+        <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>弱点：样本少、主观性强，能解释不能量化</Text>
+      </Box>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#64748B' }}>证据不足 ≠ 证明无效</Text>
+  </Box>
+</Slide>

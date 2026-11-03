@@ -1,0 +1,10 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)' }}>
+    <Box style={{ position: 'absolute', top: 0, right: 0, width: 420, height: 420, background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%)', borderRadius: 9999 }} />
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 28, position: 'relative', zIndex: 1 }}>
+        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 2 }}>AI 产品经理实战训练营</Text>
+        <Text style={{ fontSize: 62, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25 }}>大模型原理通识<br />（产品经理版）</Text>
+        <Box style={{ width: 64, height: 4, background: 'rgba(255,255,255,0.6)', borderRadius: 2 }} />
+        <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)' }}>W1 周二 · 懂边界，不懂公式</Text>
+    </Box>
+    <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', position: 'absolute', bottom: 60, left: 60 }}>讲师：张小培</Text>
+</Slide>

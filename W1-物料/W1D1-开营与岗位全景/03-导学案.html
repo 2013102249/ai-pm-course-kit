@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导学案 · W1 周一《开营 + AI 产品经理岗位全景》 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl cur" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料/W1D1-开营与岗位全景 / 03-导学案.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><span class="cur">03-导学案</span><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>导学案 · W1 周一《开营 + AI 产品经理岗位全景》</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 学员版 · 课上直接填写 · 姓名：____________</p>
+</blockquote>
+<h2>一、课前预习（上课前完成，约 25 分钟）</h2>
+<p><strong>预习任务 1</strong>：打开任意招聘平台（BOSS 直聘 / 猎聘 / 脉脉均可），搜索「AI 产品经理」「大模型产品经理」「AI 应用产品经理」，挑 5 份真实 JD 快速浏览（不要求细读，每份 3–4 分钟）。每份记录三样东西：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>公司类型（大厂 / 创业公司 / 传统行业）</th>
+<th>岗位名称</th>
+<th>职责区第一条（照抄）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>预习任务 2</strong>：用一句话写下「我为什么来学 AI 产品经理」，明天开场要自证：</p>
+<hr />
+<p><strong>预习思考题</strong>（明天课上会点名回答）：</p>
+<ol>
+<li>AI 产品经理和传统产品经理，你觉得最大的差别是什么？</li>
+</ol>
+<hr />
+<ol>
+<li>如果让你凭直觉从五类岗位里选一类（课上会公布是哪五类），你最想选哪类？为什么？</li>
+</ol>
+<hr />
+<ol>
+<li>你现在的背景，离你想选的那类岗位，最大的一道坎是什么？</li>
+</ol>
+<hr />
+<h2>二、课堂笔记（课上填写，与教案七个环节一一对应）</h2>
+<h3>1. 开营与规则（对应环节 0–8 min）</h3>
+<p>八周四阶段，请补全：</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>周次</th>
+<th>主题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阶段一</td>
+<td></td>
+<td>认知筑基</td>
+</tr>
+<tr>
+<td>阶段二</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>阶段三</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>阶段四</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>2. 往期学员 offer 故事（对应环节 8–20 min）</h3>
+<p>三位学员的背景与去向（用自己的话概括）：</p>
+<table>
+<thead>
+<tr>
+<th>学员</th>
+<th>原背景</th>
+<th>最后去向（岗位类型）</th>
+<th>做对的第一个动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学员一</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>学员二</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>学员三</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>三个故事的共同点（一句话）：</p>
+<hr />
+<h3>3. 五类岗位对比表（对应环节 20–45 min）</h3>
+<table>
+<thead>
+<tr>
+<th>岗位方向</th>
+<th>面向谁</th>
+<th>做什么</th>
+<th>核心能力</th>
+<th>我的匹配度（画星 1–5）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI 应用产品经理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Agent / 工作流产品经理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RAG 知识库产品经理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI 行业解决方案产品经理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>大模型平台产品经理</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>我未来最可能主攻的一类岗位是：____________，因为：</p>
+<hr />
+<h3>4. JD 四区拆解笔记（对应环节 45–65 min）</h3>
+<p>用课上示范 JD 或自己预习的 JD 完成：</p>
+<table>
+<thead>
+<tr>
+<th>拆解区</th>
+<th>我划出的关键词（至少 3 个）</th>
+<th>判断依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>职责区（做什么）</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>要求区（硬门槛）</td>
+<td></td>
+<td>写「精通 / 负责过 / 三年以上」</td>
+</tr>
+<tr>
+<td>加分项区（优先项）</td>
+<td></td>
+<td>写「熟悉 / 了解 / 优先」</td>
+</tr>
+<tr>
+<td>隐藏区（没明说的）</td>
+<td></td>
+<td>汇报对象 / 团队位置 / 公司阶段</td>
+</tr>
+</tbody>
+</table>
+<p>关键词 → 六维能力归类（各填 1–2 个）：</p>
+<table>
+<thead>
+<tr>
+<th>六维能力</th>
+<th>我从 JD 里找到的对应关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产品硬功</td>
+<td></td>
+</tr>
+<tr>
+<td>AI 技术理解</td>
+<td></td>
+</tr>
+<tr>
+<td>数据思维</td>
+<td></td>
+</tr>
+<tr>
+<td>行业认知</td>
+<td></td>
+</tr>
+<tr>
+<td>项目推进</td>
+<td></td>
+</tr>
+<tr>
+<td>沟通表达</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>5. 八周路线图（对应环节 65–78 min）</h3>
+<table>
+<thead>
+<tr>
+<th>周次</th>
+<th>阶段</th>
+<th>本周核心课</th>
+<th>周末产出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1</td>
+<td>认知筑基</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W3</td>
+<td>AI 核心能力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W4</td>
+<td>产品硬功</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W6</td>
+<td>实战与就业</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>W8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>主项目五个里程碑（按顺序写）：</p>
+<p>W2 ______ → W3 ______ → W4 ______ → W5 ______ → W6 ______</p>
+<h3>6. 个人职业定位卡（对应环节 78–88 min，正式填写，周五工作坊回收）</h3>
+<table>
+<thead>
+<tr>
+<th>栏目</th>
+<th>我的填写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目标岗位（主攻）</td>
+<td></td>
+</tr>
+<tr>
+<td>目标岗位（备选，可空）</td>
+<td></td>
+</tr>
+<tr>
+<td>目标行业</td>
+<td></td>
+</tr>
+<tr>
+<td>当前差距清单 ①（≥5 条，每条可执行）</td>
+<td>①</td>
+</tr>
+<tr>
+<td></td>
+<td>②</td>
+</tr>
+<tr>
+<td></td>
+<td>③</td>
+</tr>
+<tr>
+<td></td>
+<td>④</td>
+</tr>
+<tr>
+<td></td>
+<td>⑤</td>
+</tr>
+<tr>
+<td>八周目标（写结果，不写愿望）</td>
+<td>①</td>
+</tr>
+<tr>
+<td></td>
+<td>②</td>
+</tr>
+<tr>
+<td></td>
+<td>③</td>
+</tr>
+</tbody>
+</table>
+<p>六维雷达自评（每维 1–5 分，5 为最强）：</p>
+<table>
+<thead>
+<tr>
+<th>产品硬功</th>
+<th>AI 技术理解</th>
+<th>数据思维</th>
+<th>行业认知</th>
+<th>项目推进</th>
+<th>沟通表达</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>我目前最弱的一维是：____________，八周要补到：______ 分。</p>
+<h3>7. 今日三句话总结（对应环节 88–90 min）</h3>
+<ol>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+</ol>
+<h2>三、课后巩固（放学前完成）</h2>
+<p><strong>本课面试金句抄录</strong>（至少抄 3 句，第八周面试课会抽查）：</p>
+<ol>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+</ol>
+<p><strong>一句话总结</strong>：岗位倒推能力就是不要问「<strong><strong><strong><strong><strong><strong>」，先问「</strong></strong></strong></strong></strong></strong>」；五类岗位之间是____________，不是____________。</p>
+<p><strong>差距行动化</strong>：把差距清单的第 ① 条，拆成本周可执行的 3 个动作：</p>
+<ol>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+</ol>
+<p><strong>预习自查</strong>：对照预习时对答案，预习思考题第 2、3 题的答案现在有没有变化？有变化的写在下面对照：</p>
+<hr />
+<p><strong>疑问清单</strong>（写下今天没听懂的点，答疑角或社群提问）：</p>
+<ol>
+<li>
+<hr />
+</li>
+<li>
+<hr />
+</li>
+</ol>
+<p><strong>周二预习预告</strong>：《大模型原理通识》一页通识卡，约 20 分钟，重点看「上下文窗口」和「推理成本」两个概念。</p>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

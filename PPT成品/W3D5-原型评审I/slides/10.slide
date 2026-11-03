@@ -1,0 +1,9 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', position: 'relative' }}>
+  <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 30 }}>
+    <Box style={{ alignSelf: 'flex-start', background: '#F5F3FF', borderRadius: 999, paddingLeft: 22, paddingRight: 22, paddingTop: 9, paddingBottom: 9 }}>
+      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>主线项目里程碑 ②</Text>
+    </Box>
+    <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4 }}>原型是拿来被推翻的——<br />被推翻得越早，改起来越便宜</Text>
+    <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', marginTop: 10 }}>周末作业：综合输出六件　｜　下周预告：W4 用户研究与需求分析</Text>
+  </Box>
+</Slide>

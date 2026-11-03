@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <rect x="40" y="42" width="4" height="22" fill="#7C3AED"/>
+  <text x="54" y="60" font-size="20" font-weight="700" fill="#221E33">四大变现模式对比</text>
+  <text x="54" y="82" font-size="12" fill="#6B7280">AI 产品经理的四条收入路径</text>
+
+  <!-- 隔行底色 -->
+  <rect x="40" y="256" width="1120" height="104" fill="#F1EBFD"/>
+  <rect x="40" y="464" width="1120" height="104" fill="#F1EBFD"/>
+
+  <!-- 表头 -->
+  <rect x="40" y="108" width="1120" height="44" fill="#2563EB"/>
+  <text x="115" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">模式</text>
+  <text x="315" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">收费方式</text>
+  <text x="565" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">适合产品</text>
+  <text x="807" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">优势</text>
+  <text x="1042" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">劣势</text>
+
+  <!-- 行左侧紫色色条 -->
+  <rect x="40" y="152" width="6" height="104" fill="#7C3AED"/>
+  <rect x="40" y="256" width="6" height="104" fill="#7C3AED"/>
+  <rect x="40" y="360" width="6" height="104" fill="#7C3AED"/>
+  <rect x="40" y="464" width="6" height="104" fill="#7C3AED"/>
+
+  <!-- 模式列 -->
+  <text x="118" y="210" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">订阅制</text>
+  <text x="118" y="314" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">按量计费</text>
+  <text x="118" y="418" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">席位制</text>
+  <text x="118" y="522" text-anchor="middle" font-size="17" font-weight="700" fill="#221E33">API 调用</text>
+
+  <!-- 收费方式 -->
+  <text x="315" y="196" text-anchor="middle" font-size="14" fill="#221E33">固定月费 / 年费</text>
+  <text x="315" y="222" text-anchor="middle" font-size="14" fill="#221E33">档位区分功能与用量</text>
+  <text x="315" y="300" text-anchor="middle" font-size="14" fill="#221E33">按次 / 按 token / 按张数</text>
+  <text x="315" y="326" text-anchor="middle" font-size="14" fill="#221E33">充值或月结</text>
+  <text x="315" y="404" text-anchor="middle" font-size="14" fill="#221E33">坐席数 × 年费</text>
+  <text x="315" y="430" text-anchor="middle" font-size="14" fill="#221E33">B 端合同全家桶</text>
+  <text x="315" y="508" text-anchor="middle" font-size="14" fill="#221E33">按 token 千次批发价</text>
+  <text x="315" y="534" text-anchor="middle" font-size="14" fill="#221E33">量大折扣大</text>
+
+  <!-- 适合产品 -->
+  <text x="565" y="196" text-anchor="middle" font-size="14" fill="#221E33">高频 C 端助手类</text>
+  <text x="565" y="222" text-anchor="middle" font-size="14" fill="#221E33">（写作 / 学习 / 效率）</text>
+  <text x="565" y="300" text-anchor="middle" font-size="14" fill="#221E33">低频高价值生成类</text>
+  <text x="565" y="326" text-anchor="middle" font-size="14" fill="#221E33">（图 / 视频 / 文书）</text>
+  <text x="565" y="404" text-anchor="middle" font-size="14" fill="#221E33">B 端团队协作</text>
+  <text x="565" y="430" text-anchor="middle" font-size="14" fill="#221E33">（知识库 / CRM / 工作台）</text>
+  <text x="565" y="508" text-anchor="middle" font-size="14" fill="#221E33">平台型公司</text>
+  <text x="565" y="534" text-anchor="middle" font-size="14" fill="#221E33">开发者生态</text>
+
+  <!-- 优势（蓝对勾） -->
+  <polyline points="700,204 706,210 718,198" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="728" y="209" font-size="14" fill="#221E33">收入可预测，现金流稳</text>
+  <polyline points="700,308 706,314 718,302" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="728" y="313" font-size="14" fill="#221E33">收入与成本同步，毛利安全</text>
+  <polyline points="700,412 706,418 718,406" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="728" y="417" font-size="14" fill="#221E33">客单高、粘性强</text>
+  <polyline points="700,516 706,522 718,510" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="728" y="521" font-size="14" fill="#221E33">规模效应最强，替换成本高</text>
+
+  <!-- 劣势（灰橙警示） -->
+  <path d="M941,190 L949,204 L933,204 Z" fill="#B45309"/>
+  <text x="941" y="202" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="958" y="209" font-size="14" fill="#221E33">重度用户成本倒挂</text>
+  <path d="M941,294 L949,308 L933,308 Z" fill="#B45309"/>
+  <text x="941" y="306" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="958" y="313" font-size="14" fill="#221E33">计价焦虑伤留存</text>
+  <path d="M941,398 L949,412 L933,412 Z" fill="#B45309"/>
+  <text x="941" y="410" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="958" y="417" font-size="14" fill="#221E33">决策链长，增长靠销售</text>
+  <path d="M941,502 L949,516 L933,516 Z" fill="#B45309"/>
+  <text x="941" y="514" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="958" y="521" font-size="14" fill="#221E33">毛利低，易陷价格战</text>
+
+  <!-- 表格线 -->
+  <line x1="190" y1="152" x2="190" y2="568" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="440" y1="152" x2="440" y2="568" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="690" y1="152" x2="690" y2="568" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="925" y1="152" x2="925" y2="568" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="40" y1="256" x2="1160" y2="256" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="40" y1="360" x2="1160" y2="360" stroke="#E8E5F1" stroke-width="1.2"/>
+  <line x1="40" y1="464" x2="1160" y2="464" stroke="#E8E5F1" stroke-width="1.2"/>
+  <rect x="40" y="108" width="1120" height="460" fill="none" stroke="#C9C2DE" stroke-width="1.4"/>
+
+  <!-- 注脚 -->
+  <text x="40" y="602" font-size="12" fill="#6B7280">真实产品价格以官网实时价格为准</text>
+</svg>

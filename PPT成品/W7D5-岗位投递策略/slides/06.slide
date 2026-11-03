@@ -1,0 +1,33 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D5</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>06 / 16</Text>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>渠道详解：内推与猎头</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ gap: 24, marginTop: 28, height: 500 }}>
+    <Box style={{ flexDirection: 'row', height: 238, background: '#F5F3FF', borderRadius: 12, overflow: 'hidden' }}>
+      <Box style={{ width: 190, background: '#7C3AED', justifyContent: 'center', alignItems: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)' }}>优先级 1</Text>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>内推</Text>
+      </Box>
+      <Box style={{ flex: 1, padding: '26px 32px', gap: 14, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· <span style={{ fontWeight: 'bold' }}>响应率最高</span>：有人背书，可绕过机器初筛</Text>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· <span style={{ fontWeight: 'bold' }}>推得具体</span>：匹配点三句话 ＋ 推荐语</Text>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· <span style={{ fontWeight: 'bold' }}>跟进到 HR</span>：推完不撒手，确认流转状态</Text>
+      </Box>
+    </Box>
+    <Box style={{ flexDirection: 'row', height: 238, background: '#EFF6FF', borderRadius: 12, overflow: 'hidden' }}>
+      <Box style={{ width: 190, background: '#2563EB', justifyContent: 'center', alignItems: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)' }}>优先级 2</Text>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>猎头</Text>
+      </Box>
+      <Box style={{ flex: 1, padding: '26px 32px', gap: 14, justifyContent: 'center' }}>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· <span style={{ fontWeight: 'bold' }}>只对「好卖」的简历敏感</span>：定位清晰才有人推</Text>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· 主动加 2–3 位 AI 赛道猎头</Text>
+        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>· 资料写清在职状态与期望薪资，降低沟通成本</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

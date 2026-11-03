@@ -1,0 +1,9 @@
+<Slide style={{ width: 1280, height: 720, padding: 80, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', position: 'relative', overflow: 'hidden' }}>
+  <Image src="assets/agent-four-elements.svg" style={{ position: 'absolute', right: 40, bottom: 60, width: 560, height: 346, opacity: 0.14 }} />
+  <Box style={{ position: 'relative', zIndex: 1, width: '100%', height: '100%', justifyContent: 'center' }}>
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', marginBottom: 24 }}>AI 产品经理实战训练营</Text>
+    <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25, marginBottom: 28 }}>Agent 产品设计与工作流实操</Text>
+    <Text style={{ fontSize: 24, color: 'rgba(255,255,255,0.85)', marginBottom: 64 }}>W3 周二 · 今天搭出主项目工作流 V1</Text>
+    <Text style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+  </Box>
+</Slide>

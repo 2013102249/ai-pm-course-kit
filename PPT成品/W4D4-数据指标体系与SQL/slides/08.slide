@@ -1,0 +1,45 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
+    <Text style={{ fontSize: 14, color: '#64748B' }}>08 / 18</Text>
+  </Box>
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>指标三：幻觉率</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 28 }} />
+  <Text style={{ fontSize: 18, color: '#64748B' }}>AI 产品区别于传统产品的特有指标：生成内容中与事实或给定资料不符的比例</Text>
+  <Box style={{ flexDirection: 'row', gap: 24, marginTop: 20, width: '100%', alignItems: 'stretch' }}>
+    <Box style={{ width: 500, flexDirection: 'column', gap: 16 }}>
+      <Box style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '16px 24px' }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>公式</Text>
+        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#5B21B6', fontFamily: 'Menlo, monospace', marginTop: 6 }}>幻觉判定数 / 抽检总数</Text>
+      </Box>
+      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 10, padding: '16px 24px', flex: 1 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>为什么不能全自动统计？</Text>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>背后是「抽样 + 人工判定」或评测集回归——幻觉判定本身没有金标准，自动检测会漏也会误报</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '22px 28px' }}>
+      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#2563EB' }}>不量化 ≠ 不管理，做三件事</Text>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 18 }}>
+        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>分层抽检：金额、政策、医疗等高风险内容从严甚至全查</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>评测集回归：每次改模型、改提示词，跑一遍固定评测集</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 14 }}>
+        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+        </Box>
+        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>拒答单独统计：「我不知道」是好行为，混在一起算会惩罚诚实</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,32 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D4</Text>
+    </Box>
+    <Box style={{ position: 'absolute', top: 24, right: 60, background: '#F5F3FF', border: '1px solid #7C3AED', borderRadius: 6, padding: '4px 12px' }}>
+        <Text style={{ fontSize: 14, color: '#7C3AED', fontWeight: 'bold' }}>教学示例</Text>
+    </Box>
+    <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>14 / 16</Text>
+    </Box>
+    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>反例改写：流水账 vs 三段式</Text>
+    <Box style={{ height: 1, background: '#E5E7EB', marginTop: 16 }} />
+    <Box style={{ flex: 1, justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', gap: 20 }}>
+            <Box style={{ flex: 1, background: '#F8FAFC', border: '1px solid #CBD5E1', borderRadius: 12, padding: '20px 24px', gap: 10 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#64748B' }}>反例 · 流水账周报（周一到周五记动作）</Text>
+                <Text style={{ fontSize: 18, color: '#94A3B8', textDecoration: 'line-through', lineHeight: 1.6 }}>本周做了评测，也开了两次会，下周继续推进，整体一切正常。</Text>
+                <Text style={{ fontSize: 15, color: '#94A3B8' }}>只有动作：没有状态、没有数字、没有请求</Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#EFF6FF', border: '1px solid #2563EB', borderRadius: 12, padding: '20px 24px', gap: 10 }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>正例 · 三段式改写</Text>
+                <Text style={{ fontSize: 17, color: '#2563EB', fontWeight: 'bold' }}>30 秒　结论：进度正常，可按期进入试用</Text>
+                <Text style={{ fontSize: 17, color: '#2563EB', fontWeight: 'bold' }}>90 秒　数据：与计划对比，提前 / 持平 / 延后</Text>
+                <Text style={{ fontSize: 17, color: '#2563EB', fontWeight: 'bold' }}>60 秒　请求：二选一诉求，不给开放题</Text>
+            </Box>
+        </Box>
+        <Box style={{ alignItems: 'center' }}>
+            <Image src="assets/report-3part-card.svg" style={{ width: 312, height: 182, borderRadius: 8, border: '1px solid #E5E7EB' }} />
+        </Box>
+    </Box>
+</Slide>

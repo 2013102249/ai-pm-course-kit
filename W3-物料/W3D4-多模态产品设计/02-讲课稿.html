@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W3 周四《多模态产品设计》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl cur" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W3-物料/W3D4-多模态产品设计 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W3 周四《多模态产品设计》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好。今天是第三周的第四天。回顾一下这一周我们都拿到了什么：周一 Agent 架构，周二工作流实操，昨天 RAG 和知识库。到昨天为止，你们主项目的技术底座已经齐了。</p>
+<p>那今天补最后一块拼图——多模态。为什么要补这一块？因为你打开任何一个主流 AI 产品看看：豆包能画图，元宝能看图，客服机器人会说话，直播间里有数字人。文本之外的眼睛和耳朵，已经是 AI 产品的标配，而不是加分项。</p>
+<p>先说清楚今天的终点。下课的时候，你要交出三样东西：第一，面对一个场景，你能从文生图、文生视频、语音、数字人四种形态里选出对的那一个；第二，你能用「按次计费」的口径，给你选的形态算一笔成本账；第三，你能对生成内容的版权风险做出判断。这三样东西，最后都汇进你们的主项目——今天要完成多模态模块的功能级方案，明天原型评审 I，就要拿出来讲。</p>
+<p>【停】</p>
+<h2>导入：一次版权翻车事故（3–8 分钟）</h2>
+<p>上课之前，先讲一个事故。我不点名，用「某产品」来讲，你们听完就明白为什么不点名。</p>
+<p>【故事】某款图片生成产品上线后很火，用户输入一段描述，几秒钟出一张图，效果很好。有个商家用它生成了一批商品宣传图，直接投了广告。结果没多久收到律师函：生成的图片和某位插画师的系列作品高度相似——训练数据里见过人家的风格，模型「学」出来了。商家觉得自己冤：图是产品生成的，又不是我画的。产品方也觉得自己冤：用户协议里写了生成内容「仅供个人使用」。三方扯皮，商家赔了推广费，产品方被迫修改条款、增加审核，这件事最后变成行业里讲版权必提的案例。</p>
+<p>【停】</p>
+<p>【问】这个纠纷里，生成的内容到底算谁的？用户、平台、模型方，谁该负责？【停，点 2–3 名学员】</p>
+<p>大家注意，刚才几个答案互相矛盾——有人说用户，有人说平台。这恰恰说明：<strong>生成内容的权属，目前没有一个放之四海皆准的答案</strong>，它取决于用户协议怎么约定、服务条款怎么写、是否用于商业用途。这就是今天这节课反复出现的一条主线：版权问题上，态度不是「先上线再说」，而是「先想清楚归属，再谈商用」。</p>
+<p>【金句】第一句面试金句送给大家：<strong>用户可以对生成结果不满意，但不能对生成结果不知情——来源、权属、能不能商用，必须讲清楚。</strong></p>
+<p>好，带着这个案例，我们进入今天的正题：多模态到底有哪几种产品形态，各自的底细是什么。</p>
+<h2>环节一：四类形态对比总览（8–25 分钟）</h2>
+<p>【操作：打开配图《多模态形态对比图》】</p>
+<p>这张图是我们今天的地基，四行，从上往下看。</p>
+<p><strong>第一行，文生图。</strong>文字进，图片出。这是四类里成熟度最高的，已经大规模商用——营销配图、电商主图、概念设计，都在用。成本量级是「低」：按次计费，一次几毛到几元这个量级，具体价格以各家官网实时价格为准，我们不写死数字，因为价格一直在变。合规风险主要是训练数据版权争议、风格模仿，以及刚才案例里的权属不清。</p>
+<p><strong>第二行，文生视频。</strong>文字进，视频出。成熟度是「中」——注意我用词，是「快速演进中」，不是成熟。它两件事还没解决好：一是生成慢，一条几秒钟的视频要等几分钟甚至更久；二是成本高，单次几元到几十元的量级，同样是量级，具体以官网实时价格为准。典型场景是短视频素材、广告创意。合规风险要特别加一条：深度伪造。视频的可信度天然高，所以一旦被用于伪造，危害也是放大级的。</p>
+<p><strong>第三行，语音。</strong>包括语音合成和语音识别。成熟度「很高」，是落地最广的一类——客服播报、有声书、语音交互入口，到处都是。成本量级「低」，一般按字符量计费，每万字几元的量级，以官网实时价格为准。但它的合规风险很多人低估了：声音克隆必须本人授权。声音和脸一样，是受保护的人格权益。某语音产品曾经因为未经授权模仿他人声音，被权利人起诉。还有一个更恶劣的方向：克隆的声音被用于诈骗。所以语音这条线，产品经理的第一课是授权链路。</p>
+<p><strong>第四行，数字人。</strong>形象加语音加动作的合体。成熟度「中」——2D 数字人已经比较成熟，3D 的制作成本高得多。成本量级是四类里「最高」的：形象制作是一次性投入，之后按时长驱动计费。典型场景：直播带货、虚拟主播、企业门户形象。合规风险也是最高的：肖像权冒用、身份混淆——某数字人产品曾被用户拿来生成他人形象冒充本人发言，引发舆情。这类功能现在普遍要求实名、授权证明和内容审核。</p>
+<p>【问】看完全部四行，我问大家：你觉得哪个形态最先实现大规模商用？为什么？【停，点 1–2 名学员】</p>
+<p>对，大多数同学选文生图。理由很完整：成熟度最高、单次成本最低、商用链条最清晰。这就是选型的基本逻辑——<strong>成熟度决定你敢不敢做，成本量级决定你做不做得起，合规风险决定你会不会翻车</strong>。三个维度都要过一遍，才叫产品决策。</p>
+<p>【停，环视】</p>
+<p>给大家一个选型的思考顺序，面试也能用：先问价值——这个场景多模态是不是必需的；再问形态——四类里选哪一类或哪几类组合；最后问边界——成本和合规的上限在哪。顺序不能反。</p>
+<p>另外补一句：形态可以组合，但要组合得有道理。比如「文生图加语音播报」是电商选品的常见组合——看图做决策、听播报省眼睛，两种模态各干各的活。但「文生图加文生视频加数字人」全套堆上去，就是为热闹买单。组合的判断标准还是那条：每一个模态都要能回答「用户为什么要它」。</p>
+<h2>环节二：现场生成演示（25–40 分钟）</h2>
+<p>接下来 15 分钟，我们做现场演示。今天没有专门的交互网页，我们直接用真实的生成工具——所以这一段会有等待时间，请大家把它当成教学素材，而不是干等。</p>
+<p>【操作：打开生成工具页面，输入一段描述，生成一张图】</p>
+<p>第一轮，文生图。描述我已经准备好了，点生成。生成大概需要十几秒，这段时间我说点事。</p>
+<p><strong>等待填充话术</strong>：大家看这个进度。十几秒，感觉还好。但产品经理要算另一笔账：如果一页要生成八张图让用户挑，就是八次等待叠在一起；如果用户是批发场景一次生成一百张呢？等待会成倍放大。所以生成类产品的等待体验，必须按「最坏情况」设计，不能按 Demo 的十几秒设计。</p>
+<p>好，图出来了。大家看效果——整体不错，但仔细看细节，比如文字部分，出错了。这不是偶然，这正是我要讲的：<strong>Demo 的惊艳和产品的稳定，是两回事</strong>。演示的时候模型发挥得很好，一到量产，失败率、重试率全都上来了。你们写方案的时候，必须把「生成成功率」当成一个正式指标写进去，而不是想当然地按 100% 算。</p>
+<p>【问】刚才我们等了十几秒，你接受吗？你心里超过多少秒会放弃？【停，点 2 名学员】</p>
+<p>很真实。一般人的耐心是 5 到 10 秒开始不耐烦；图片 30 秒以内可以接受，但必须有进度反馈；视频要几分钟，就必须给中间状态——比如先出低清预览，让用户确认方向，再精修。记住这个体感数字，后面讲交互设计会用到。</p>
+<p>第二轮，语音合成。【操作：打开语音合成工具，输入一句话，生成语音并播放】</p>
+<p>这一段生成很快，大家听效果——自然度已经很高了，成本低、落地广，这就是语音成熟度「很高」的底气。顺带提一个容易被忽略的价值：无障碍。语音是视障用户使用产品的唯一入口，很多地区的无障碍规范对它有明确要求，这在国际化的产品里不是加分项，是准入项。但注意，刚才播的这个音色是平台授权过的音色库。如果客户提需求说「模仿我们老板的声音」，你第一反应必须是不行，除非有本人书面授权。这句话面试里也可能考。</p>
+<p>如果网络和时间允许，我们再机动演示一段文生视频，生成要等几分钟，我们就让它后台跑着，等下环节讲完回来看结果——这本身就是「会等待」设计的活教材。</p>
+<p>【停】</p>
+<p>环节二做个收束：今天大家亲历了等待、见证了失败、听到了授权的边界。这三个体感，比十页 PPT 有用。</p>
+<h2>环节三：交互设计三要点（40–55 分钟）</h2>
+<p>刚才的体验，提炼成三句话，就是多模态交互设计的三要点。</p>
+<p><strong>第一，会等待。</strong>生成是异步慢响应，和传统点击即达完全不同。体验的一半在设计结果，另一半在设计等待。具体四个动作：进度反馈要真实，不能转圈圈骗人；先生成低保真再精修，让用户早点看到方向；可取消，等不了就退，别把用户锁死；失败要有兜底，自动重试加礼貌的失败提示，而不是白屏。</p>
+<p>【金句】第二句金句：<strong>生成式产品的体验，一半在设计结果，一半在设计等待。</strong></p>
+<p><strong>第二，可微调。</strong>生成结果天然不确定，一次到位是奢望。所以交互流程应该设计成四步：描述、预览、微调、确认。举一个电商场景的例子：卖家生成一张商品场景图，构图满意，但桌子上的阴影不对——好的产品让他圈住阴影区域做局部重绘，两秒搞定；差的产品只有一个「重新生成」按钮，构图也跟着变了，卖家只能一遍遍碰运气。让用户能局部重绘、换音色、改台词，而不是从零开始。判断一个多模态产品做得用不用心，就看它给用户多少「微调空间」。</p>
+<p><strong>第三，选对模态。</strong>多模态不等于堆功能，而是让用户用最自然的器官和产品说话。说话比打字快，就用语音输入；视觉信息比文字高效，就用图呈现。给大家一个判断方法：看用户的「双手状态」。开车、做饭、巡店，双手被占用的场景，语音是对的；对着屏幕挑商品、做设计，眼睛和手都闲着，图和文字交互更高效。模态选择不是技术炫技，是对用户当下状态的体察。同时必须设计降级路径：识别失败自动切回文字，别让用户卡死在语音里。反过来也有禁忌——不该用语音的地方别硬上，比如让用户对着客服机器人念银行卡号，安全性、私密性都不允许。</p>
+<p>【问】回想你预习时体验的那两款多模态产品，哪一款的「等待体验」做得最好？它做了什么？【停，点 1–2 名学员】</p>
+<p>大家说的这些动作——进度条、占位图、生成完的通知——全都归到「会等待」这一个要点里。三要点就讲完了，简单，但你们明天评审的时候，评委就会用这三条挑你们的方案。</p>
+<h2>环节四：成本测算与体验权衡（55–70 分钟）</h2>
+<p>现在讲今天最「产品经理」的一节：算钱。</p>
+<p><strong>口径先讲清楚：按次计费。</strong>单功能日成本 = 日调用次数 × 单次价格 ×（1 + 失败重试率）。注意，单次价格我们统一表述为「以官网实时价格为准」——为什么？生成类服务的价格调整很频繁，你三个月前算的账，今天可能已经不准了。所以正确姿势是：测算时查官网实时价，把截图存档，让测算可回溯。</p>
+<p>测算四步法，跟我一起走一遍。</p>
+<p>第一步，定调用频次：日活乘以人均调用次数，还要区分免费额度和付费额度——免费额度就是你的成本，不是赠品。第二步，查单价：官网实时价格，截图存档。第三步，算总量：日成本乘以 30 天，再乘重试系数 1.2 到 1.5——生成类任务失败重试是常态，不乘这个系数，你的预算就是假的。第四步，设护栏：单用户限额、缓存复用、滥用风控。</p>
+<p>我们用一个假设的数字走一遍。假设你的产品日活一千人，人均每天生成三张图，日调用就是三千次；单次价格去官网查实时价，假设是这个量级——乘出来，再乘 1.3 的重试系数，再乘 30 天。这个算式里没有一个是拍脑袋的：调用次数来自埋点数据，价格来自官网截图，重试系数来自你们自己测出来的失败率。面试时你把这套口径讲出来，面试官就知道你真算过账。</p>
+<p>【问】文生图一次几毛钱，看起来不贵，为什么成本还是会失控？【停】</p>
+<p>对，四个原因：量大，日活乘次数是乘法；重试，失败也要付钱；免费额度被薅，羊毛党专挑免费的东西刷；缺护栏，没有限额和缓存，异常流量直接把预算打穿。<strong>单价低和总成本低，是两回事。</strong></p>
+<p>除了这些，还有四个隐性成本，你们写方案最容易漏：内容审核——机审加人审；存储和带宽——图片视频都是存储大户；并发峰值——用户扎堆生成时成本上浮；滥用风控——防刷接口本身也有成本。作业模板里我给大家预置了这四项的勾选栏，一个都不许空。</p>
+<p>【板书：成本公式 + 四步法】</p>
+<p>最后讲权衡。成本和体验怎么取舍？给大家一个判断标准：<strong>钱要花在用户感知得到的地方</strong>。生成质量直接决定满意度，这块不能省；等待体验决定留存，进度反馈的成本很低但收益很高，优先做；而「无限制重新生成」这类用户感知很弱的宽额度，就要用限额和缓存管起来。反过来说，有一类钱最不能省——授权与合规。某个数字人方案里最不能省的一笔钱是什么？就是授权和审核。省这笔钱，等于给产品埋雷。</p>
+<p>【金句】第三句金句：<strong>成本不是算出来的，是设计出来的——每一分钱都要花在用户感知得到的地方。</strong></p>
+<h2>环节五：版权合规与方案练习（70–83 分钟）</h2>
+<p>回到导入那个案例，我们把它变成方法论。版权风险判断，记三步口诀：<strong>先问授权，再问归属，最后再谈商用。</strong></p>
+<p>第一步问授权：输入端合法吗？克隆声音有没有本人授权？上传的参考图有没有版权？涉及真人形象有没有肖像授权？第二步问归属：输出端说清楚了吗？生成内容归谁、平台条款怎么约定、是否可商用，写进用户协议了吗？第三步问商用：商用链路上有没有审核？内容是否需要备案？会不会被用于冒充他人？</p>
+<p>这三步，对应的就是 W2 周四那节课的《AI 产品合规检查清单》。今天的要求是：你们的多模态模块方案，必须过一遍那份清单的多模态相关条目，这是周五评审的硬门槛。合规不是选修课，是国内 AI 产品经理的岗前必修。再补一个细节：如果方案涉及深度合成能力——比如数字人、声音克隆——按现行监管要求，通常还要做算法备案，并在生成内容上做显著标识。这两条也都在清单里，写方案时别漏。</p>
+<p>【操作：发布导学案「多模态模块方案」模板】</p>
+<p>现在小组练习。打开导学案的方案模板，五个部分：为什么用多模态、选哪种形态、交互设计、成本测算、版权风险。给你们 5 分钟起步，先填「为什么」和「选哪种」，我请一组分享。开始。【停，5 分钟，巡视各组】</p>
+<p>【问】哪组先来？你们的主项目想加什么多模态功能，为什么？【停，点 1 组分享，讲师点评】</p>
+<p>点评时盯三件事：有没有回答「不用多模态能不能解决」；形态选择有没有同时过成熟度、成本、合规三个维度；有没有人把数字人硬塞进方案——如果塞了，追问一句：你的预算撑得住吗，身份价值在哪里？</p>
+<p>【金句】第四句金句，也是今天最重要的一句：<strong>多模态不是功能堆料，是让用户用最自然的器官和产品说话。</strong></p>
+<h2>总结与作业（83–90 分钟）</h2>
+<p>今天的内容，收束成三句话。</p>
+<p>第一，四类形态决策看三个维度：成熟度决定敢不敢做，成本量级决定做不做得起，合规风险决定会不会翻车。<br />
+第二，交互设计三要点：会等待、可微调、选对模态。<br />
+第三，版权口诀：先问授权，再问归属，最后再谈商用。</p>
+<p>作业两个：第一，完成主项目多模态模块方案——功能级设计，五个部分填完整，成本测算按今天的按次口径，价格以官网实时价格为准，附合规清单自查；第二，完成分层习题，重点做第二层的场景选形题。明天原型评审 I，多模态方案是评审材料之一，评委会用三维度和三要点来挑，今晚认真写。</p>
+<p>下课。</p>
+<hr />
+<h2>附录：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「这样，我提示一下——想想你预习时体验的那款产品，等生成的时候它给了你什么反馈？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「你这个角度有意思，先记下来。回到问题本身——我们问的是权属，也就是内容归谁，你从协议角度再想想？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「对，完全正确。来，大声再说一遍，让后面同学都听到——这个判断题面试会考。」</td>
+</tr>
+<tr>
+<td>生成演示等待冷场</td>
+<td>「等待本身就是今天的教材。我们来数一下秒数，等会儿对照『用户多少秒会放弃』那个数据。」</td>
+</tr>
+<tr>
+<td>生成失败</td>
+<td>「太好了，一个真实的失败案例。大家注意看失败提示做得怎么样——这就是『失败兜底』设计。」</td>
+</tr>
+<tr>
+<td>小组讨论冷场</td>
+<td>「每组至少写下一条，哪怕写『我们不确定要不要加多模态』也行，这个不确定本身就值得讨论。」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「文生视频的机动演示今天先不做了，我把等待截图发群里，大家结合回放看。」</td>
+</tr>
+</tbody>
+</table>
+<h2>附录：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>用户可以对生成结果不满意，但不能对生成结果不知情——来源、权属、能不能商用，必须讲清楚。</li>
+<li>成熟度决定你敢不敢做，成本量级决定你做不做得起，合规风险决定你会不会翻车。</li>
+<li>生成式产品的体验，一半在设计结果，一半在设计等待。</li>
+<li>单价低和总成本低，是两回事。</li>
+<li>成本不是算出来的，是设计出来的——每一分钱都要花在用户感知得到的地方。</li>
+<li>多模态不是功能堆料，是让用户用最自然的器官和产品说话。</li>
+</ol>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

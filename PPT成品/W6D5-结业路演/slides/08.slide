@@ -1,0 +1,40 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D5</Text>
+    </Box>
+    <Text style={{ position: 'absolute', right: 60, bottom: 26, fontSize: 14, color: '#64748B' }}>08 / 10</Text>
+    <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>奖项设置</Text>
+        <Box style={{ height: 1, background: '#E5E7EB', marginTop: 16 }} />
+    </Box>
+    <Box style={{ marginTop: 32, flex: 1, flexDirection: 'column', gap: 22 }}>
+        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, borderLeft: '6px solid #7C3AED', padding: '0 32', flexDirection: 'row', alignItems: 'center', gap: 26 }}>
+            <Box style={{ width: 52, height: 52, background: '#7C3AED', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>最佳产品奖</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>演示效果 + 数据支撑 两维总分</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 12, border: '1px solid #E5E7EB', borderLeft: '6px solid #D4AF37', padding: '0 32', flexDirection: 'row', alignItems: 'center', gap: 26 }}>
+            <Box style={{ width: 52, height: 52, background: '#D4AF37', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>最佳成长奖</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>对照 W2 立项的进步幅度</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, borderLeft: '6px solid #2563EB', padding: '0 32', flexDirection: 'row', alignItems: 'center', gap: 26 }}>
+            <Box style={{ width: 52, height: 52, background: '#2563EB', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 6 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>最佳答辩奖</Text>
+                <Text style={{ fontSize: 18, color: '#64748B' }}>答辩单维最高</Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

@@ -1,0 +1,8 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center' }}>投递是概率游戏</Text>
+    <Box style={{ width: 64, height: 4, background: 'rgba(255,255,255,0.6)', borderRadius: 2, marginTop: 32 }} />
+    <Text style={{ fontSize: 30, color: '#FFFFFF', marginTop: 32, textAlign: 'center' }}>话术提高单次转化，量提高总机会</Text>
+    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', marginTop: 36, textAlign: 'center' }}>量 ≠ 海投——是有结构的量，不是闭眼群发</Text>
+  </Box>
+</Slide>

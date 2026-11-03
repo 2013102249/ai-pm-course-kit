@@ -1,0 +1,32 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>AI 产品经理实战训练营 · W2D4</Text>
+  </Box>
+  <Text style={{ position: 'absolute', top: 668, right: 60, fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>03 / 18</Text>
+  <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>导入：一个被下架的功能</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, height: 280, justifyContent: 'center', gap: 18 }}>
+      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>1</Text>
+      </Box>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>未备案、无内容审核<br />即上线</Text>
+    </Box>
+    <Text style={{ fontSize: 30, color: '#7C3AED', fontWeight: 'bold', fontFamily: 'Microsoft YaHei' }}>→</Text>
+    <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 28, height: 280, justifyContent: 'center', gap: 18 }}>
+      <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>2</Text>
+      </Box>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>被要求<br />下架整改</Text>
+    </Box>
+    <Text style={{ fontSize: 30, color: '#7C3AED', fontWeight: 'bold', fontFamily: 'Microsoft YaHei' }}>→</Text>
+    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, height: 280, justifyContent: 'center', gap: 18 }}>
+      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>3</Text>
+      </Box>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>两周补课<br />补齐手续与审核</Text>
+    </Box>
+  </Box>
+  <Text style={{ fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>概括性合规事故 · 不指向任何具体公司</Text>
+</Slide>

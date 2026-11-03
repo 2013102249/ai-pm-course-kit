@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W1 周二《大模型原理通识（产品经理版）》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl cur" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料/W1D2-大模型原理通识 / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W1 周二《大模型原理通识（产品经理版）》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）<br />
+本课红线：只讲产品经理需要懂的原理，不碰数学公式，不碰代码。</p>
+</blockquote>
+<hr />
+<h2>开场（0–3 分钟）</h2>
+<p>大家好，我是今天的讲师。周二这节课，是训练营的第一堂技术课。昨天我们开了营，把 AI 产品经理的岗位地图过了一遍，很多人下课的时候问我：老师，我完全不懂技术，能学吗？今天这 90 分钟，就是来回答这个问题的。</p>
+<p>先说一下今天的终点。下课的时候，你要能做到三件事。第一，用「超级接话员」这一个类比，跟你任何一位非技术朋友讲清楚大模型是什么，讲三分钟不冷场。第二，说出预训练、SFT、RLHF 这三个阶段各自解决了什么问题——这是面试高频题。第三，拿到一张「懂到什么程度」的边界表，从此知道哪些技术该懂、哪些不该懂，不再焦虑。</p>
+<p>【停】</p>
+<p>特别是第三件事。我带过的学员里，转行失败最常见的原因不是能力不够，是精力用错了地方——抱着数学公式死磕，磕了三个月， Prompt 还没写过一条。今天这节课，就是来帮你划这条线的。</p>
+<h2>导入：你每天都在用，但它只是个「超级接话员」（3–10 分钟）</h2>
+<p>上课之前，先做个小调查。【问】今天早上，从睁眼到现在，有谁用过 AI？干什么用的？举手说一下。【停，点 2–3 名学员，无论答案是什么都接住】</p>
+<p>我猜答案差不多这几类：让 AI 写个周报、翻译一段英文、问它一个问题、或者刷到过 AI 生成的图和视频。发现没有——你们已经生活在 AI 产品的汪洋大海里了，但你没注意到它，就像鱼注意不到水。</p>
+<p>那么问题来了：这些产品背后的那个东西，这个叫「大模型」的家伙，它到底是个什么东西？今天你们会听到很多种说法：人工智能、神经网络、深度学习、Transformer。我把这些词先放到一边，今天只给你们一个类比。记住这个类比，今天 90 分钟全靠它。</p>
+<p>【停】</p>
+<p>假设你走进一间办公室，办公室里坐着一个刚从偏远山区来的年轻人。他没上过几天学，没见过世面，但是他有一个天赋，这个天赋恐怖到什么程度——他读过全世界所有的书。图书馆里每一本书、互联网上每一篇帖子、每一段对话，他都读过。但是，从来没有人教过他「怎么回答问题」。他只知道一件事：<strong>接话</strong>。你说前半句，他接后半句。你说「今天天气」，他接「真好」。你说「鹅鹅鹅」，他接「曲项向天歌」。</p>
+<p>现在你走进办公室，问他：「我们公司的退款政策是什么？」</p>
+<p>他会怎么回答？【停】</p>
+<p>他会愣一下吗？不会。他会流利地、自信地、面带微笑地告诉你：「我们支持 72 小时无条件退款，不满意随时退。」</p>
+<p>【停，环视】</p>
+<p>为什么？因为他没见过你们公司的制度。但他是一个接话员——你的问题是「退款政策是什么」，他脑子里最像答案的那个「接话」，就是从这辈子读过的无数电商政策里，概率性地拼了一个最像的。他不知道自己在编。他也不好意思空着。<strong>他的本能是接上话，不是答对题。</strong></p>
+<p>【金句】记住今天第一句，也是全课最重要的一句：<strong>大模型不是百科全书，是超级接话员——它永远会接话，哪怕它不知道答案。</strong></p>
+<p>这个类比有多准确？我告诉你，学术界管这个叫「下一个词预测」，Next Token Prediction。学术界说：大模型干的事，就是根据前文，预测下一个词出现的概率，然后一个词一个词地往外接。你们看，「预测下一个词」和「接话」，说的是同一件事。差别只在一个是论文语言，一个是人话。而产品经理，要说人话。</p>
+<h2>环节一：接话员是怎么练成的（10–30 分钟）</h2>
+<p>【操作：打开配图《LLM原理架构图》】</p>
+<p>好，现在我们看这张图，这是今天唯一一张需要你动脑子看的架构图，别紧张，只有五个方块。</p>
+<p>最左边，「用户输入」——你说的一句话。然后「提示词组装」——系统把你的话、加上预设的指令、加上该带的资料，打包成一段完整的提示词。中间这个紫色的大方块，「大模型」——今天的主角，接话就发生在这里。然后「输出后处理」——模型吐出来的原始答案，要经过清洗、过滤、脱敏，才能见人。最后「回复用户」。</p>
+<p>【停】</p>
+<p>【问】看这张图，我想问大家：整条链路里，哪两个环节是产品经理的主战场？【停，点 1–2 名学员】</p>
+<p>对，有同学答对了——「提示词组装」和「输出后处理」。中间那个大模型，你是改不动的，你只能选。但两端，都是你的活：前端，你决定模型「听懂什么」；后端，你决定用户「安全看到什么」。这个我们周三讲提示词的时候会展开，今天先记住这个结构。</p>
+<h3>Transformer：一个「看全文再接话」的本事</h3>
+<p>现在说说中间这个方块里发生的事。2017 年，Google 的一篇论文提出了一种新的模型结构，叫 Transformer。今天是所有大模型的老祖宗。今天你听到的所有模型——GPT、Claude、Gemini、DeepSeek、Qwen、GLM——底层都是 Transformer 这一脉。</p>
+<p>【停】</p>
+<p>Transformer 有一个核心本事，叫「自注意力」。这个词听起来玄，我给它翻译成人话。【问】你读一句话：「小明把小红的书还给了图书馆，因为他已经看完了。」这个「他」是谁？【停】</p>
+<p>对，是小红……不对，等等，是「小明」还是「小红」？【停，笑】看，你们人类也会卡一下，但你们最终能判断出来——因为你们会回头看全文，找到「他」指的是谁。</p>
+<p>自注意力，就是让模型学会这个本事：<strong>接每一个词之前，先把全文看一遍，看看哪些词跟当前这个词有关系。</strong> 关系大的，多看一眼；关系小的，少看一眼。</p>
+<p>就这么个事。没有公式，没有代码，这就是 Transformer 的心脏。</p>
+<p>那它对产品意味着什么？【停】意味着两件事。第一，模型能处理长文本了——因为它「看得到」全文，这是上下文窗口的物理基础，我们第三部分会讲。第二，训练可以并行——以前的老模型是一个词一个词顺序读，Transformer 是全文一起读，所以能吞下海量数据。这就是为什么最近几年模型能力暴涨——不是因为人变聪明了，是因为这种结构能吃下整个互联网。</p>
+<p>【问】那你们现在回答我：接话员为什么会一本正经地胡说八道？【停】</p>
+<p>因为它学会了「看全文再接话」，但没人教过它「不知道就说不知道」。它的整个训练生涯都在奖励一件事——接得像。你让它填空，它永远填。<strong>答错是本能，拒答才是需要专门教的。</strong></p>
+<h3>预训练：读完图书馆，但从没被教过怎么答题</h3>
+<p>好，接话员的本事是怎么练出来的？三个阶段。我把这三个阶段编成一个故事，你们就记住了。</p>
+<p>第一阶段叫「预训练」。我管它叫<strong>读书</strong>。</p>
+<p>一个接话员，怎么练接话？把人类积累的几乎全部公开文本——书籍、网页、论文、代码、对话——摆在他面前，玩一个游戏：遮住一段话的后半句，让他接。接错了，修正；接对了，奖励。就这么玩，一玩就是几个月，烧掉的显卡数以万计。</p>
+<p>玩到最后，这个接话员练成了两样东西。第一，语言规律——语法、搭配、文风，他都通了，所以他接的话像人话。第二，世界知识——他真的读过所有书，所以他知道巴黎在法国、知道水的沸点、知道绝大多数公开知识。</p>
+<p>但是，注意这个「但是」——【问】一个只会读书、只会接话的人，能直接上岗当客服吗？【停】</p>
+<p>不能。为什么？你问他「帮我写一封请假邮件」，他不会「写邮件」，他只会「接话」——他可能给你接一封网上抄来的邮件，也可能接一段聊邮件这个话题的散文。你问他「1 加 1 等于几」，他可能不答，而是接一句「等于 2，这是一个古老的数学问题」。<strong>他知识渊博，但他没有「回答问题」这个概念。</strong> 他学的从来不是「怎么答对」，是「怎么接得像」。</p>
+<p>【金句】所以第二阶段来了，叫 SFT，监督微调。我管它叫<strong>岗前培训</strong>。</p>
+<h2>环节二：从接话员到助手（30–45 分钟）</h2>
+<p>【停】</p>
+<p>岗前培训干的事，是人工编写成千上万条「标准问答对」——用户会怎么问，理想的回答应该长什么样——一条一条教给模型。问「帮我写请假邮件」，标准答案就是一封格式正确的邮件；问「1 加 1 等于几」，标准答案就是「2」，不是小作文。</p>
+<p>你们发现没有，这一阶段的本质，是把一个「接话员」扭成一个「助手」——<strong>学会按指令回答问题，而不是续写文本。</strong> 今天你们觉得 AI「听话了、能用了」，根子就在这一步。面试的时候，如果面试官问「SFT 是干什么的」，标准答案是：用人工标注的高质量问答对，教模型按人类指令回答，让它从续写引擎变成对话助手。</p>
+<p>【问】那问题又来了：岗前培训也做了，为什么还要第三阶段 RLHF？培训到位了还折腾什么？【停，点 1 名学员】</p>
+<p>好问题。我举个例子你们就懂了。还是那个问题：「怎么提高团队凝聚力？」SFT 教出来的模型，会给你一个「正确的废话」——组织团建、加强沟通、明确目标。每句话都对，每句话都没用。</p>
+<p>而 RLHF 要解决的，就是「正确」和「好」之间的差距。RLHF，基于人类反馈的强化学习，我管它叫<strong>满意度回访</strong>。</p>
+<p>具体怎么操作？不展开讲，产品经理只需要知道机制：让模型对同一个问题生成好几个回答，然后让人来排序——哪个回答更好、更有用、更让人想看完。模型根据这些排序，慢慢调整自己：哦，原来那种干巴巴的正确的废话，人嫌；那种有结构、有例子、有行动建议的，人爱看。于是它越来越会「说人爱听的话」。</p>
+<p>【问】现在你们猜，RLHF 主要是谁做的？【停】</p>
+<p>头部模型公司，都有自己的对齐团队。这就是为什么同样能力的两个模型，用起来「手感」差很多——一个谦逊克制，一个自信张扬。这个「手感」，不是玄学，是对齐阶段驯出来的。</p>
+<p>【故事】讲个真事。前两年有家公司用开源模型做客服，什么都说「作为一个大语言模型，我不能……」三句话不离免责声明，用户气得投诉。后来查了半天，不是模型能力问题，是对齐过度——RLHF 阶段把模型训得太「怂」了。他们花了很大力气重做对齐数据才救回来。所以你们记住：模型上线之后的「脾气」，是对齐的产物，产品经理遇到「模型太轴」的问题，第一反应该是「对齐数据有问题」，而不是「换模型」。</p>
+<p>【金句】第二句金句：<strong>预训练让模型学会说话，SFT 教它听懂指令，RLHF 让它说人爱听的话——三阶段串起来，就是一个人的成长史。</strong></p>
+<p>三个阶段，一句话总结：读书、岗前培训、满意度回访。今天你面试，就把这个讲出去，比背论文管用十倍。</p>
+<h2>环节三：两个仪表盘（45–60 分钟）</h2>
+<p>好，接话员练成了，能干活了。现在你作为产品经理，每天要盯两个仪表盘。不懂这两个仪表盘，你的产品就是在裸奔。</p>
+<h3>仪表盘一：上下文窗口</h3>
+<p>第一个仪表盘，叫「上下文窗口」。</p>
+<p>【停】</p>
+<p>还是接话员的类比。接话员每次接话之前，要「看全文再接话」，对吧？那他的桌面有多大？上下文窗口，就是这个桌面的大小——<strong>模型一次能同时看到的文本总量。</strong></p>
+<p>窗口之内，模型看得见；窗口之外，对不起，看不见。不是「记性不好」，是物理上就看不见——那些字没有进它的输入。</p>
+<p>【问】那我现在问大家：用户跟 AI 聊了 50 轮，聊到第 51 轮，模型「忘了」第 1 轮的内容，是什么原因？【停】</p>
+<p>两种可能，你们都要会排查。第一，第 1 轮的内容被挤出窗口了——窗口就那么大，新内容不断进来，老内容被挤出去，这叫「截断」。第二，产品没把历史对话完整带进去——历史记录管理是产品的活，很多「模型失忆」的 bug，根子在产品，不在模型。</p>
+<p>那应对手段呢？【停】产品经理手里有三张牌。第一，<strong>摘要压缩</strong>——定期把前面的长对话总结成几段短摘要，用摘要代替原文接着聊。第二，RAG——这就是我们第三周的重头戏，相关的资料不进脑子，随用随查。第三，<strong>管理用户预期</strong>——在产品上明示「本产品建议单次对话不超过 N 轮」，长任务引导开新会话。</p>
+<p>【金句】第三句金句：<strong>上下文窗口是产品的预算表——每一分 token 都是成本，每一个字都在挤占模型的注意力。</strong></p>
+<h3>仪表盘二：推理成本</h3>
+<p>第二个仪表盘，更直接——<strong>钱</strong>。</p>
+<p>今天用大模型，主流方式是按 token 计费。token 是计费单位，你们不需要懂严格的定义，只需要记住一个量级感：<strong>一个汉字，大约占一到两个 token。</strong> 一次提问，一次回答，都是钱。而且注意——输入和输出，是分开算钱的，输出的单价通常比输入高。</p>
+<p>【问】所以你们现在告诉我：一个 AI 写作产品，用户「免费无限用」，产品经理该怎么设计？【停】</p>
+<p>对，这就是成本结构问题。用户每敲一个字、模型每吐一个字，都是真金白银。所以你们会看到真实产品里的各种设计：每日次数限制、输出长度上限、会员分级、高峰期降级到小模型。这些不是产品抠门，是成本倒逼。</p>
+<p>【停】</p>
+<p>还有个东西必须现场看。【操作：打开交互工具《交互式架构图》，切到 LLM Tab，点击「参数配置」节点】</p>
+<p>看这个节点，temperature，翻译叫「温度」。它是干什么的？一句话：<strong>控制模型接话时的「胆子大小」。</strong> temperature 低，模型变得保守、严谨、可预测，同样的问法大概率得到同样的答案；temperature 高，模型变得放飞、有创意、什么答案都可能冒出来。</p>
+<p>【问】那你们判断一下：一个医疗问答产品，一个广告文案产品，temperature 分别该调高还是调低？【停】</p>
+<p>对，医疗往低调——0.1 左右，要的就是严谨、可复现；文案往高调——放飞起来才有惊喜。看，temperature 不是什么技术参数，它是产品性格。</p>
+<p>【金句】第四句金句：<strong>temperature 不是技术参数，是产品性格——面试时敢这么答，就是产品思维。</strong></p>
+<p>顺带说一句成本。推理成本不只是钱，还有「快慢」。模型越大、想得越久，用户等得越长。所以选型看的是一个三角：能力、成本、延迟。没有「最强」的模型，只有「最合适」的模型。这句话周三讲选型的时候还会出现，今天先种下种子。</p>
+<h2>环节四：看得见听得见的模型（60–72 分钟）</h2>
+<p>接下来十分钟，是两个速览。不求深，求你们心里有张地图。</p>
+<h3>多模态：从「读字」到「看世界」</h3>
+<p>最早的大模型，只能处理文字，进的是文本，出的也是文本。后来出现了「多模态」模型——能看图、能听声音、能生成图片。今天你们用的文生图、语音对话、文档问答，底层都是多模态能力。</p>
+<p>但产品经理要懂一个边界：【问】多模态模型能认出图片里是一只猫，你猜它能精确数出图里有几只猫吗？【停】</p>
+<p>不一定，而且经常数错。识图，和精确的视觉推理，是两种能力。所以涉及数字、细节、精确判断的视觉场景——比如数库存、看仪表盘读数——别默认模型能搞定，拿真实案例测过再说。记住这个原则：<strong>能力演示不等于生产能力，Demo 能跑不等于能上线。</strong></p>
+<h3>模型江湖速览</h3>
+<p>最后，花三分钟认识一下江湖。我只讲存在和定位，不讲参数——参数会过期，定位不会。</p>
+<p>【操作：切到配图《一页纸通识卡》模型家族一栏】</p>
+<ul>
+<li><strong>GPT 系列</strong>，OpenAI 出品，是目前大众认知度最高的模型家族，ChatGPT 是很多人对 AI 的第一印象。</li>
+<li><strong>Claude 系列</strong>，Anthropic 出品，以长文本处理和稳重的交互风格著称，不少编程和写作场景的工具用的是它。</li>
+<li><strong>Gemini 系列</strong>，Google 出品，多模态是它的主打方向，和 Google 的办公、搜索生态结合紧密。</li>
+<li><strong>DeepSeek</strong>，国内团队出品，以高性价比起量，在开发者和成本敏感的场景里存在感很强。</li>
+<li><strong>Qwen（通义千问）</strong>，阿里出品，国内开源生态里影响最大的一族，很多第三方产品底层用的就是它。</li>
+<li><strong>GLM（智谱）</strong>，清华系团队出品，在国产模型里起步很早，学术和产业两条线都有布局。</li>
+</ul>
+<p>【停】</p>
+<p>注意，我念这六个名字的时候，没有念任何一个参数、任何一个评测分数。为什么？【停】因为参数每个月都在变，分数各家有各家的测法。你今天背下来的数字，明天就是错的。产品经理要记住的是「谁在哪、大概什么路数」，具体数字，选型的时候现查，而且查完要用自己的业务场景实测。</p>
+<p>【金句】第五句金句：<strong>记定位，不记参数——参数会过期，定位不会。</strong></p>
+<h2>环节五：懂到什么程度（72–85 分钟）</h2>
+<p>好，技术部分讲完了。最后 13 分钟，是我今天真正想留给你们的——那张边界表。</p>
+<p>【操作：切到配图《一页纸通识卡》「懂到什么程度」边界区，或投屏教案第十节边界表】</p>
+<p>【停】</p>
+<p>转行 AI 产品经理，最大的内耗就是想全懂。我见过太多学员，抱着《深度学习》教材从第一页开始啃，啃到反向传播，放弃了。今天我把话说明白：<strong>产品经理懂技术，懂的是「边界」，不是「原理」。</strong></p>
+<p>什么叫懂边界？我念几个问题，你们现场判断——必须懂、应该懂，还是不必懂。</p>
+<p>第一问：「为什么选这个模型，不选那个？」【停】必须懂。选型是产品决策，涉及能力、成本、延迟的权衡，这个说不清楚，算法团队问你一句「为什么」你就哑火。</p>
+<p>第二问：「上下文窗口超了会发生什么？」【停】必须懂。它直接决定你的产品能处理多长的文档、能撑多少轮对话。</p>
+<p>第三问：「自注意力大致在干什么？」【停】应该懂。你现在就能答——让模型看全文再接话。不需要懂细节，但算法同事说「这个场景 attention 吃不消」的时候，你要知道他在说窗口不够。</p>
+<p>第四问：「GPT、Claude、DeepSeek、Qwen 各是什么路数？」【停】应该懂，就是刚才那三分钟。这是选型调研的基本功，但不必记参数。</p>
+<p>第五问：「Transformer 有多少层、注意力公式怎么推导？」【停】不必懂。这是数学和结构细节，遇到了找算法同事，你花一个月搞懂它，对产品的贡献是零。</p>
+<p>【停，环视，放慢语速】</p>
+<p>【金句】所以今天最后一句金句，也是我希望你们八周之后还记得的一句：<strong>懂边界，不懂公式；能选型，不训模型。</strong></p>
+<p>你们把这三档抄下来。以后每次想钻进技术细节之前，先问自己一句——这件事在「必须懂」还是「应该懂」里吗？不在？关掉页面，去找算法同事。把时间花在产品上，产品经理的护城河从来不是数学。</p>
+<h2>总结与作业（85–90 分钟）</h2>
+<p>今天 90 分钟，收束成三句话：</p>
+<p>第一，大模型是超级接话员，它的本能是接话不是答对——所以幻觉不是缺陷，是本能，防幻觉靠产品设计，不靠许愿。<br />
+第二，三阶段成长史：预训练让它学会说话，SFT 教它听懂指令，RLHF 让它说人爱听的话。<br />
+第三，两个仪表盘——上下文窗口管体验上限，推理成本管商业模式；一张边界表——懂边界，不懂公式。</p>
+<p>作业三个。第一，把「超级接话员」的类比讲给一位非技术朋友听，三分钟，录个音，发群里。第二，在导学案上补全「懂到什么程度」边界表的三档各一条，用你自己的话。第三，预习明天的一页纸通识卡——周三我们讲提示词，那是训练营第一门能立刻上手的硬功夫。</p>
+<p>周三见。下课。</p>
+<hr />
+<h2>附录：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>大模型不是百科全书，是超级接话员——它永远会接话，哪怕它不知道答案。</li>
+<li>预训练让模型学会说话，SFT 教它听懂指令，RLHF 让它说人爱听的话。</li>
+<li>上下文窗口是产品的预算表——每一分 token 都是成本，每一个字都在挤占模型的注意力。</li>
+<li>temperature 不是技术参数，是产品性格——面试时敢这么答，就是产品思维。</li>
+<li>记定位，不记参数——参数会过期，定位不会。</li>
+<li>懂边界，不懂公式；能选型，不训模型。</li>
+<li>能力演示不等于生产能力，Demo 能跑不等于能上线。</li>
+<li>模型上线之后的「脾气」，是对齐的产物——遇到「模型太轴」，先怀疑对齐数据，别急着换模型。</li>
+</ol>
+<h2>附录：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提问后无人应答</td>
+<td>「这样，我提示一下——回想一下刚才那个类比，接话员的本能是什么？对，接话。那他为什么敢编答案？」</td>
+</tr>
+<tr>
+<td>学员答非所问</td>
+<td>「你这个角度有意思，先记下来。我们回到这个问题本身——它问的是岗前培训那个阶段，你想的是哪个阶段？」</td>
+</tr>
+<tr>
+<td>学员答对但声音小</td>
+<td>「对，完全正确。来，大声再说一遍，让后面同学都听到——这个知识点面试必考。」</td>
+</tr>
+<tr>
+<td>技术背景学员追问公式</td>
+<td>「公式是真的想听吗？还是想知道它影响你哪个决策？今天我们不碰公式，但我保证：你该懂的那部分，一句不少。」</td>
+</tr>
+<tr>
+<td>非技术学员听懵</td>
+<td>「没关系，你们不需要记住 Transformer 三个字，你们只需要记住：它让模型学会看全文再接话。就这一句，够了。」</td>
+</tr>
+<tr>
+<td>讲到成本学员沉默</td>
+<td>「换个说法——你们产品要是免费无限用，用户每敲一个字你赔多少钱？现在明白为什么真实产品都有次数限制了吧？」</td>
+</tr>
+<tr>
+<td>时间不够要跳过环节</td>
+<td>「多模态这部分展开要 15 分钟，今天先记住一句话：识图和精确数数是两种能力。细节周三之后自己点交互工具补。」</td>
+</tr>
+<tr>
+<td>演示工具卡住</td>
+<td>「正好，这就是产品经理的日常——工具会崩，产品要有兜底。等它 5 秒，我们先用架构图讲，不耽误。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>

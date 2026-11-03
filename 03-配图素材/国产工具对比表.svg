@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <rect x="30" y="36" width="4" height="22" fill="#7C3AED"/>
+  <text x="42" y="54" font-size="20" font-weight="700" fill="#221E33">国产工具对比表</text>
+  <text x="42" y="76" font-size="12" fill="#6B7280">五款国产工具 · 对话派与工程派 · 选型原则：一主两辅</text>
+
+  <!-- 表头 -->
+  <rect x="30" y="120" width="1140" height="46" fill="#7C3AED"/>
+  <text x="55" y="149" text-anchor="middle" font-size="11" font-weight="700" fill="#EDE7FB">派别</text>
+  <text x="155" y="149" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">工具</text>
+  <text x="390" y="149" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">定位</text>
+  <text x="695" y="149" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">擅长场景</text>
+  <text x="890" y="149" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">上手难度</text>
+  <text x="1055" y="149" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">价格模式</text>
+
+  <!-- 斑马纹 -->
+  <rect x="80" y="242" width="1090" height="76" fill="#FBFAFD"/>
+  <rect x="80" y="394" width="1090" height="76" fill="#FBFAFD"/>
+
+  <!-- 网格线 -->
+  <g stroke="#E8E5F1" stroke-width="1">
+    <line x1="80" y1="166" x2="80" y2="546"/>
+    <line x1="230" y1="166" x2="230" y2="546"/>
+    <line x1="550" y1="166" x2="550" y2="546"/>
+    <line x1="840" y1="166" x2="840" y2="546"/>
+    <line x1="940" y1="166" x2="940" y2="546"/>
+    <line x1="30" y1="242" x2="1170" y2="242"/>
+    <line x1="30" y1="394" x2="1170" y2="394"/>
+    <line x1="30" y1="470" x2="1170" y2="470"/>
+  </g>
+  <!-- 组间分隔（对话派 / 工程派） -->
+  <line x1="30" y1="318" x2="1170" y2="318" stroke="#C9B8F5" stroke-width="1.6"/>
+  <rect x="30" y="120" width="1140" height="426" fill="none" stroke="#C9C2DE" stroke-width="1.4"/>
+
+  <!-- 派别胶囊 -->
+  <rect x="38" y="196" width="34" height="92" rx="17" fill="#2563EB"/>
+  <text x="55" y="228" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">对</text>
+  <text x="55" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">话</text>
+  <text x="55" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">派</text>
+  <rect x="38" y="392" width="34" height="136" rx="17" fill="#7C3AED"/>
+  <text x="55" y="430" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">工</text>
+  <text x="55" y="456" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">程</text>
+  <text x="55" y="482" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">派</text>
+
+  <!-- 行 1 WorkBuddy -->
+  <text x="155" y="210" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">WorkBuddy</text>
+  <text x="390" y="200" text-anchor="middle" font-size="13" fill="#4A4560">AI 智能体工作台</text>
+  <text x="390" y="220" text-anchor="middle" font-size="13" fill="#4A4560">（对话驱动任务执行）</text>
+  <text x="695" y="209" text-anchor="middle" font-size="13" fill="#4A4560">一句话生成可运行页面与交付物</text>
+  <rect x="864" y="190" width="52" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="890" y="209" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">低</text>
+  <text x="1055" y="209" text-anchor="middle" font-size="12" fill="#4A4560">以官网实时价格为准</text>
+
+  <!-- 行 2 豆包 -->
+  <text x="155" y="286" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">豆包</text>
+  <text x="390" y="276" text-anchor="middle" font-size="13" fill="#4A4560">字节跳动 AI 助手</text>
+  <text x="390" y="296" text-anchor="middle" font-size="13" fill="#4A4560">（网页 / 桌面 / 移动端）</text>
+  <text x="695" y="285" text-anchor="middle" font-size="13" fill="#4A4560">对话、内容生成、简单页面生成</text>
+  <rect x="864" y="266" width="52" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="890" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">低</text>
+  <text x="1055" y="278" text-anchor="middle" font-size="12" fill="#4A4560">基础功能免费，增值服务</text>
+  <text x="1055" y="298" text-anchor="middle" font-size="12" fill="#4A4560">以官网实时价格为准</text>
+
+  <!-- 行 3 Trae -->
+  <text x="155" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">Trae</text>
+  <text x="390" y="361" text-anchor="middle" font-size="13" fill="#4A4560">字节跳动 AI 原生 IDE</text>
+  <text x="695" y="361" text-anchor="middle" font-size="13" fill="#4A4560">从零搭建项目、持续迭代开发</text>
+  <rect x="864" y="342" width="52" height="28" rx="14" fill="#F1EBFD"/>
+  <text x="890" y="361" text-anchor="middle" font-size="14" font-weight="700" fill="#7C3AED">中</text>
+  <text x="1055" y="361" text-anchor="middle" font-size="12" fill="#4A4560">以官网实时价格为准</text>
+
+  <!-- 行 4 通义灵码 -->
+  <text x="155" y="438" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">通义灵码</text>
+  <text x="390" y="428" text-anchor="middle" font-size="13" fill="#4A4560">阿里云 AI 编程助手</text>
+  <text x="390" y="448" text-anchor="middle" font-size="13" fill="#4A4560">（插件形态）</text>
+  <text x="695" y="437" text-anchor="middle" font-size="13" fill="#4A4560">编辑器内代码补全与问答</text>
+  <rect x="864" y="418" width="52" height="28" rx="14" fill="#F1EBFD"/>
+  <text x="890" y="437" text-anchor="middle" font-size="14" font-weight="700" fill="#7C3AED">中</text>
+  <text x="1055" y="430" text-anchor="middle" font-size="12" fill="#4A4560">个人开发者有免费额度</text>
+  <text x="1055" y="450" text-anchor="middle" font-size="12" fill="#4A4560">以官网实时政策为准</text>
+
+  <!-- 行 5 CodeBuddy -->
+  <text x="155" y="514" text-anchor="middle" font-size="16" font-weight="700" fill="#221E33">CodeBuddy</text>
+  <text x="390" y="513" text-anchor="middle" font-size="13" fill="#4A4560">腾讯云 AI 代码助手与智能体</text>
+  <text x="695" y="513" text-anchor="middle" font-size="13" fill="#4A4560">代码助手与智能体协作、工具扩展</text>
+  <rect x="864" y="494" width="52" height="28" rx="14" fill="#F1EBFD"/>
+  <text x="890" y="513" text-anchor="middle" font-size="14" font-weight="700" fill="#7C3AED">中</text>
+  <text x="1055" y="513" text-anchor="middle" font-size="12" fill="#4A4560">以官网实时价格为准</text>
+
+  <!-- 口径脚注条 -->
+  <rect x="30" y="566" width="1140" height="54" rx="8" fill="#F1EBFD"/>
+  <rect x="30" y="566" width="6" height="54" fill="#7C3AED"/>
+  <text x="56" y="599" font-size="13" fill="#5B21B6">以上为公开资料整理的客观定位描述；价格、额度与功能以各官网实时页面为准。建议开课前 3 天复核一次。</text>
+
+  <!-- 图例 -->
+  <rect x="40" y="640" width="30" height="16" rx="8" fill="#2563EB"/>
+  <text x="80" y="653" font-size="12" fill="#6B7280">对话派：零门槛做演示</text>
+  <rect x="230" y="640" width="30" height="16" rx="8" fill="#7C3AED"/>
+  <text x="270" y="653" font-size="12" fill="#6B7280">工程派：项目级迭代开发</text>
+</svg>

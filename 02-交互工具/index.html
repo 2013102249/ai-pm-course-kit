@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>课堂交互工具总览 · AI 产品经理课程资源包</title>
+<style>
+:root{--purple:#7C3AED;--purple-deep:#5B21B6;--purple-light:#F1EBFD;--blue:#2563EB;--blue-light:#E8EFFD;--ink:#221E33;--ink2:#4A4560;--muted:#7A7590;--faint:#A5A1B8;--bg:#F7F6FB;--card:#FFF;--border:#E8E5F1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:14.5px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(135deg,#2A1B52 0%,#4A2A85 50%,#2B4A9E 100%);color:#fff;padding:28px 0 24px}
+.hero .badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:2px;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 13px;color:rgba(255,255,255,.85);margin-bottom:12px}
+.hero .badge .dot{width:6px;height:6px;border-radius:50%;background:#C4B5FD;box-shadow:0 0 8px #C4B5FD}
+.hero h1{font-size:23px;font-weight:700}
+.hero p{font-size:13px;color:rgba(255,255,255,.75);margin-top:6px}
+.home{display:inline-block;margin-top:14px;font-size:12.5px;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px;text-decoration:none}
+main{padding:22px 0 10px}
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.cbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cbody h3{font-size:16px}
+.cbody h3 .no{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--purple);border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px}
+.cbody .desc{font-size:13px;color:var(--ink2)}
+.cbody ul{margin:2px 0 2px 18px;font-size:12.8px;color:var(--ink2)}
+.cbody ul li{margin:3px 0}
+.meta{font-size:12px;color:var(--muted)}
+.meta b{color:var(--blue);font-weight:700}
+.btnrow{display:flex;gap:10px;margin-top:auto;padding-top:10px}
+.btn{font-size:13px;font-weight:600;text-decoration:none;border-radius:999px;padding:7px 18px}
+.btn.pri{background:var(--purple);color:#fff}
+.btn.ghost{border:1px solid var(--purple);color:var(--purple)}
+footer{padding:22px 0 44px;text-align:center;color:var(--faint);font-size:12px}
+@media (max-width:900px){.grid.two,.grid.three{grid-template-columns:1fr}}
+
+.grid.two{grid-template-columns:1fr 1fr}
+.thumb{height:300px;overflow:hidden;border-bottom:1px solid var(--border);background:#FBFAFD;position:relative}
+.thumb iframe{width:1280px;height:820px;border:0;transform:scale(0.375);transform-origin:0 0;pointer-events:none}
+.thumb::after{content:'实时预览 · 点击下方按钮打开可操作';position:absolute;left:10px;bottom:8px;font-size:11px;color:#fff;background:rgba(34,30,51,.62);border-radius:999px;padding:3px 10px}
+</style></head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="badge"><span class="dot"></span>INTERACTIVE TOOLS · 4 件全览</div>
+  <h1>课堂交互工具总览</h1>
+  <p>4 个自研课堂工具，全部单文件、零外部依赖，浏览器打开即用，断网可用、已适配手机。本页即实时预览，点「打开工具」进入可操作版本。</p>
+  <a class="home" href="../index.html">← 返回资源包总入口</a>
+</div></header>
+<main class="wrap"><div class="grid two">
+    <div class="card">
+      <div class="thumb"><iframe src="%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%B0%83%E8%AF%95%E5%8F%B0.html" loading="lazy" scrolling="no" title="提示词调试台"></iframe></div>
+      <div class="cbody">
+        <h3><span class="no">T1</span>提示词调试台</h3>
+        <p class="desc">课堂与自学两用的提示词训练场：现场写、现场测、现场评分。</p>
+        <ul><li>五要素结构即时评分（角色/任务/上下文/格式/约束）</li><li>A/B 双版本对比，看懂提示词差在哪</li><li>内置教学场景模板，学员 0 门槛上手</li></ul>
+        <p class="meta"><b>用于课程：</b>W1D3 提示词课主交互 · W6D1 Vibe Coding 调提示词复用</p>
+        <div class="btnrow"><a class="btn pri" href="%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%B0%83%E8%AF%95%E5%8F%B0.html" target="_blank" rel="noopener">打开工具 ↗</a><a class="btn ghost" href="%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%B0%83%E8%AF%95%E5%8F%B0.html" target="_blank" rel="noopener">新窗口全屏</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><iframe src="RAG%E4%BA%A4%E4%BA%92%E6%BC%94%E7%A4%BA.html" loading="lazy" scrolling="no" title="RAG 交互演示"></iframe></div>
+      <div class="cbody">
+        <h3><span class="no">T2</span>RAG 交互演示</h3>
+        <p class="desc">把 RAG 六步链路做成可逐步执行的动画演示，幻觉对比一开就懂。</p>
+        <ul><li>建库/问答双链路逐步执行，每步可暂停讲解</li><li>「关掉 RAG」开关现场对比幻觉差异</li><li>节点点击有三段式讲解，助教巡场也能讲</li></ul>
+        <p class="meta"><b>用于课程：</b>W3D3 样课日主交互（讲师 5 步演示脚本见当日 07 件）</p>
+        <div class="btnrow"><a class="btn pri" href="RAG%E4%BA%A4%E4%BA%92%E6%BC%94%E7%A4%BA.html" target="_blank" rel="noopener">打开工具 ↗</a><a class="btn ghost" href="RAG%E4%BA%A4%E4%BA%92%E6%BC%94%E7%A4%BA.html" target="_blank" rel="noopener">新窗口全屏</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><iframe src="AI%E4%BA%A7%E5%93%81%E8%AF%84%E4%BC%B0%E6%89%93%E5%88%86%E5%B7%A5%E5%85%B7.html" loading="lazy" scrolling="no" title="AI 产品评估打分工具"></iframe></div>
+      <div class="cbody">
+        <h3><span class="no">T3</span>AI 产品评估打分工具</h3>
+        <p class="desc">AI PM 的验收武器：给 AI 回答逐维打分、标记 badcase、导出评测报告。</p>
+        <ul><li>五维打分 + badcase 开关，自动算通过率与均分</li><li>雷达图可视化，一眼看出能力短板</li><li>Markdown 报告一键导出，直接进评测集作业</li><li>内置示例数据（含教学化 badcase TC-002）</li></ul>
+        <p class="meta"><b>用于课程：</b>W2D3 评测课主交互 · W6D4 主项目测试验收复用</p>
+        <div class="btnrow"><a class="btn pri" href="AI%E4%BA%A7%E5%93%81%E8%AF%84%E4%BC%B0%E6%89%93%E5%88%86%E5%B7%A5%E5%85%B7.html" target="_blank" rel="noopener">打开工具 ↗</a><a class="btn ghost" href="AI%E4%BA%A7%E5%93%81%E8%AF%84%E4%BC%B0%E6%89%93%E5%88%86%E5%B7%A5%E5%85%B7.html" target="_blank" rel="noopener">新窗口全屏</a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><iframe src="%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%9E%B6%E6%9E%84%E5%9B%BE.html?v=2" loading="lazy" scrolling="no" title="交互式架构图"></iframe></div>
+      <div class="cbody">
+        <h3><span class="no">T4</span>交互式架构图</h3>
+        <p class="desc">四张核心架构图合一：节点点击即出「是什么 / 产品经理关心什么 / 面试怎么答」。</p>
+        <ul><li>LLM 基础链路 / RAG / Agent / AI 产品全链路四个页签</li><li>每张图配一分钟总览讲法 + 面试金句</li><li>课堂投屏讲解与学员自学双模式</li></ul>
+        <p class="meta"><b>用于课程：</b>W1D2 / W2D1 / W3D1 / W3D3 / W8D3 多课复用</p>
+        <div class="btnrow"><a class="btn pri" href="%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%9E%B6%E6%9E%84%E5%9B%BE.html?v=2" target="_blank" rel="noopener">打开工具 ↗</a><a class="btn ghost" href="%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%9E%B6%E6%9E%84%E5%9B%BE.html?v=2" target="_blank" rel="noopener">新窗口全屏</a></div>
+      </div>
+    </div>
+</div></main>
+<footer>课堂交互工具 · AI 产品经理就业训练营 · 全部由新像素教育自研</footer>
+</body></html>

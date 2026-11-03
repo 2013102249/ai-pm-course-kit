@@ -1,0 +1,27 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D3</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 18</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场对比：同一个需求，两种命运</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 20 }} />
+
+  <Text style={{ fontSize: 17, color: '#64748B' }}>本页配合提示词调试台投屏讲解</Text>
+
+  <Box style={{ width: '100%', height: 340, background: '#F5F3FF', borderRadius: 16, marginTop: 28, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 20 }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 48 }}>
+      <Box style={{ flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7A7590' }}>「总结一下」</Text>
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#7A7590' }}>1 / 5 分</Text>
+      </Box>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#64748B' }}>vs</Text>
+      <Box style={{ flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>完整版提示词</Text>
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#7C3AED' }}>5 / 5 分</Text>
+      </Box>
+    </Box>
+    <Text style={{ fontSize: 16, color: '#64748B' }}>先看评分卡，再听讲解</Text>
+  </Box>
+</Slide>

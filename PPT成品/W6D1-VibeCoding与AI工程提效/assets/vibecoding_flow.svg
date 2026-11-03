@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arwBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <rect x="40" y="36" width="4" height="22" fill="#7C3AED"/>
+  <text x="52" y="54" font-size="20" font-weight="700" fill="#221E33">Vibe Coding 流程图</text>
+  <text x="52" y="76" font-size="12" fill="#6B7280">五步一循环，快速迭代 · AI 产品经理就业训练营 · W6D1</text>
+
+  <!-- 节点 1 说清楚 -->
+  <rect x="90" y="140" width="250" height="120" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <circle cx="110" cy="140" r="11" fill="#7C3AED"/>
+  <text x="110" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="215" y="180" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">说清楚</text>
+  <text x="215" y="204" text-anchor="middle" font-size="12" fill="#6B7280">需求写成五段式：</text>
+  <text x="215" y="222" text-anchor="middle" font-size="12" fill="#6B7280">是什么 / 给谁用 / 包含什么</text>
+  <text x="215" y="240" text-anchor="middle" font-size="12" fill="#6B7280">长什么样 / 不能怎样</text>
+
+  <!-- 节点 2 生成 -->
+  <rect x="475" y="140" width="250" height="120" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <circle cx="495" cy="140" r="11" fill="#7C3AED"/>
+  <text x="495" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="600" y="180" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">生成</text>
+  <text x="600" y="212" text-anchor="middle" font-size="12" fill="#6B7280">AI 工具产出代码或页面</text>
+
+  <!-- 节点 3 跑起来 -->
+  <rect x="860" y="140" width="250" height="120" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <circle cx="880" cy="140" r="11" fill="#7C3AED"/>
+  <text x="880" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="985" y="180" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">跑起来</text>
+  <text x="985" y="212" text-anchor="middle" font-size="12" fill="#6B7280">本地运行，亲眼验证</text>
+
+  <!-- 节点 4 挑毛病 -->
+  <rect x="860" y="400" width="250" height="120" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <circle cx="880" cy="400" r="11" fill="#7C3AED"/>
+  <text x="880" y="404" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="985" y="440" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">挑毛病</text>
+  <text x="985" y="464" text-anchor="middle" font-size="12" fill="#6B7280">对照预期找差距：</text>
+  <text x="985" y="482" text-anchor="middle" font-size="12" fill="#6B7280">样式 / 逻辑 / 报错</text>
+
+  <!-- 节点 5 再说清楚 -->
+  <rect x="475" y="400" width="250" height="120" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <circle cx="495" cy="400" r="11" fill="#7C3AED"/>
+  <text x="495" y="404" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="600" y="440" text-anchor="middle" font-size="20" font-weight="700" fill="#5B21B6">再说清楚</text>
+  <text x="600" y="472" text-anchor="middle" font-size="12" fill="#6B7280">差距一句话描述给 AI，</text>
+  <text x="600" y="490" text-anchor="middle" font-size="12" fill="#6B7280">进入下一轮</text>
+
+  <!-- 循环箭头（蓝） -->
+  <path d="M340,200 L467,200" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+  <path d="M725,200 L852,200" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+  <path d="M985,260 L985,392" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+  <path d="M860,460 L733,460" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+  <path d="M475,460 L215,460 L215,268" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+
+  <!-- 轮次胶囊 -->
+  <rect x="460" y="325" width="280" height="40" rx="20" fill="#2563EB"/>
+  <text x="600" y="351" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">快速迭代 · 通常 3–10 轮</text>
+
+  <!-- 左下小图例 -->
+  <circle cx="52" cy="626" r="6" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.6"/>
+  <text x="66" y="630" font-size="11" fill="#6B7280">步骤节点</text>
+  <path d="M126,626 L150,626" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arwBlue)"/>
+  <text x="160" y="630" font-size="11" fill="#6B7280">迭代方向（循环，非直线）</text>
+
+  <!-- 右下边界提示条 -->
+  <rect x="620" y="596" width="540" height="60" rx="8" fill="#FFFFFF" stroke="#E8E5F1" stroke-width="1.2"/>
+  <rect x="620" y="596" width="6" height="60" fill="#7C3AED"/>
+  <text x="646" y="632" font-size="15" font-weight="700" fill="#5B21B6">边界口诀：演示层快跑，核心层慢验</text>
+</svg>

@@ -1,0 +1,11 @@
+<Slide width={1280} height={720} style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <Box style={{ flexDirection: 'column', gap: 28 }}>
+    <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.75, letterSpacing: 4 }}>AI 产品经理实战训练营</Text>
+    <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.2 }}>RAG 架构与知识库产品</Text>
+    <Text style={{ fontSize: 24, color: '#FFFFFF', opacity: 0.85 }}>W3 周三 · 画出六步链路，做出 RAG vs 微调决策</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: 120 }}>
+    <Box style={{ width: 40, height: 3, background: '#FFFFFF', opacity: 0.6 }} />
+    <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.7 }}>讲师：张小培</Text>
+  </Box>
+</Slide>

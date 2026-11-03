@@ -1,0 +1,52 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>AI 产品经理实战训练营 · W2D4</Text>
+  </Box>
+  <Text style={{ position: 'absolute', top: 668, right: 60, fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>05 / 18</Text>
+  <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>国内 AI 合规法规地图</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
+  <Box style={{ background: '#F5F3FF', borderRadius: 8, padding: '12px 20px', marginTop: 24, flexDirection: 'row', alignItems: 'center' }}>
+    <Text style={{ fontSize: 18, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>四部基础法律 + 一部专门办法</span> · 按施行时间排列</Text>
+  </Box>
+  <Box style={{ flex: 1, position: 'relative', marginTop: 20 }}>
+    <Box style={{ position: 'absolute', top: 59, left: 40, right: 40, height: 2, background: '#DDD6FE' }} />
+    <Box style={{ flexDirection: 'row' }}>
+      <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{ height: 44, justifyContent: 'flex-end' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', fontFamily: 'Microsoft YaHei' }}>2017</Text>
+        </Box>
+        <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#7C3AED', marginTop: 8 }} />
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 16, textAlign: 'center', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>网络安全法</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{ height: 44, justifyContent: 'flex-end' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', fontFamily: 'Microsoft YaHei' }}>2021</Text>
+        </Box>
+        <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#7C3AED', marginTop: 8 }} />
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 16, textAlign: 'center', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>个人信息保护法</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{ height: 44, justifyContent: 'flex-end' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', fontFamily: 'Microsoft YaHei' }}>2022</Text>
+        </Box>
+        <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#7C3AED', marginTop: 8 }} />
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 16, textAlign: 'center', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>算法推荐管理规定</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{ height: 44, justifyContent: 'flex-end' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', fontFamily: 'Microsoft YaHei' }}>2023.8.15</Text>
+        </Box>
+        <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#7C3AED', marginTop: 8 }} />
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 16, textAlign: 'center', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>生成式人工智能服务<br />管理暂行办法</Text>
+      </Box>
+      <Box style={{ flex: 1, flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{ height: 44, justifyContent: 'flex-end' }}>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', fontFamily: 'Microsoft YaHei' }}>2025.9</Text>
+        </Box>
+        <Box style={{ width: 16, height: 16, borderRadius: 8, background: '#7C3AED', marginTop: 8 }} />
+        <Text style={{ fontSize: 17, color: '#1E1B4B', marginTop: 16, textAlign: 'center', lineHeight: 1.5, fontFamily: 'Microsoft YaHei' }}>人工智能生成合成<br />内容标识办法</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

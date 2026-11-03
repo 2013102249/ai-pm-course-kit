@@ -1,0 +1,30 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
+        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
+    </Box>
+    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
+        <Text style={{ fontSize: 14, color: '#64748B' }}>03 / 16</Text>
+    </Box>
+    <Box style={{ position: 'relative', gap: 18 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>导入：一个增长现象</Text>
+        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
+    </Box>
+    <Box style={{ position: 'relative', marginTop: 32, flexDirection: 'row', gap: 44, alignItems: 'center' }}>
+        <Box style={{ width: 560, gap: 30 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '22px 26px', background: '#F5F3FF', borderRadius: 12, borderLeft: '5px solid #7C3AED' }}>
+                <Text style={{ fontSize: 20, color: '#1E1B4B' }}>DAU 涨得快</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '22px 26px', background: '#F5F3FF', borderRadius: 12, borderLeft: '5px solid #7C3AED' }}>
+                <Text style={{ fontSize: 20, color: '#1E1B4B' }}>投放一停就断崖</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '22px 26px', background: '#F5F3FF', borderRadius: 12, borderLeft: '5px solid #7C3AED' }}>
+                <Text style={{ fontSize: 20, color: '#1E1B4B' }}>一周后 90% 不回来</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B' }}>现象很热闹，问题出在哪一层？</Text>
+        </Box>
+        <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Image src="assets/aarrr-funnel.svg" style={{ width: 500, height: 358, opacity: 0.35, filter: 'grayscale(1)' }} />
+        </Box>
+    </Box>
+</Slide>

@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
+    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D1</Text>
+  </Box>
+  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>08 / 18</Text>
+
+  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>能力边界：不适合做什么</Text>
+  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
+
+  <Box style={{ flexDirection: 'row', gap: 36 }}>
+    <Box style={{ width: 664, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+      <Box style={{ width: 324, height: 128, background: '#F5F3FF', border: '1.5px solid #7C3AED', borderRadius: 12, padding: 20, justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>✕</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>生产级系统</Text>
+      </Box>
+      <Box style={{ width: 324, height: 128, background: '#F5F3FF', border: '1.5px solid #7C3AED', borderRadius: 12, padding: 20, justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>✕</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>核心链路</Text>
+      </Box>
+      <Box style={{ width: 324, height: 128, background: '#F5F3FF', border: '1.5px solid #7C3AED', borderRadius: 12, padding: 20, justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>✕</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>长期维护工程</Text>
+      </Box>
+      <Box style={{ width: 324, height: 128, background: '#F5F3FF', border: '1.5px solid #7C3AED', borderRadius: 12, padding: 20, justifyContent: 'center', gap: 8 }}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>✕</Text>
+        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>强合规场景</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Image src="assets/vibecoding_flow.svg" style={{ width: 460, height: 268, objectFit: 'contain' }} />
+    </Box>
+  </Box>
+
+  <Box style={{ height: 72, background: '#7C3AED', borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginTop: 20 }}>
+    <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>演示层快跑，核心层慢验</Text>
+  </Box>
+</Slide>

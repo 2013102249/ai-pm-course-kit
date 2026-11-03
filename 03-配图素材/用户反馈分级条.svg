@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <rect x="30" y="36" width="4" height="22" fill="#7C3AED"/>
+  <text x="42" y="54" font-size="20" font-weight="700" fill="#221E33">用户反馈分级条</text>
+  <text x="42" y="76" font-size="12" fill="#6B7280">P0 / P1 / P2 三级 · 修复资源按危害分配，不按声音大小分配 · W6D4</text>
+
+  <text x="40" y="140" font-size="13" fill="#6B7280">试用回收的反馈，先分级，再分配修复资源（条宽为占比示意：P0 最小但最致命）</text>
+
+  <!-- 三段占比条 -->
+  <rect x="40" y="170" width="210" height="70" fill="#DC2626"/>
+  <text x="145" y="202" text-anchor="middle" font-size="13.5" font-weight="700" fill="#FFFFFF">P0 编造 / 安全 / 数据错误</text>
+  <text x="145" y="224" text-anchor="middle" font-size="12" fill="#FEE2E2">——当天修 + 回归</text>
+
+  <rect x="250" y="170" width="570" height="70" fill="#2563EB"/>
+  <text x="535" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">P1 体验 / 流程 / 功能缺口</text>
+  <text x="535" y="224" text-anchor="middle" font-size="12" fill="#DBEAFE">——排期修</text>
+
+  <rect x="820" y="170" width="340" height="70" fill="#7A7590"/>
+  <text x="990" y="202" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">P2 吐槽 / 审美 / 边角</text>
+  <text x="990" y="224" text-anchor="middle" font-size="12" fill="#E5E3EE">——记录不排</text>
+
+  <!-- 原声示例卡 -->
+  <rect x="40" y="310" width="210" height="190" rx="10" fill="#FAF9FE" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="56" y="340" font-size="11" fill="#6B7280">教学化原声示例</text>
+  <text x="52" y="392" font-size="34" font-weight="700" fill="#7C3AED" opacity="0.45">“</text>
+  <text x="60" y="404" font-size="14" fill="#221E33">我问年假几天，</text>
+  <text x="60" y="428" font-size="14" fill="#221E33">它说有 20 天</text>
+
+  <rect x="250" y="310" width="570" height="190" rx="10" fill="#FAF9FE" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="266" y="340" font-size="11" fill="#6B7280">教学化原声示例</text>
+  <text x="262" y="392" font-size="34" font-weight="700" fill="#7C3AED" opacity="0.45">“</text>
+  <text x="288" y="404" font-size="14" fill="#221E33">每轮都忘了我刚才说的话</text>
+
+  <rect x="820" y="310" width="340" height="190" rx="10" fill="#FAF9FE" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="836" y="340" font-size="11" fill="#6B7280">教学化原声示例</text>
+  <text x="832" y="392" font-size="34" font-weight="700" fill="#7C3AED" opacity="0.45">“</text>
+  <text x="858" y="404" font-size="14" fill="#221E33">界面有点丑</text>
+
+  <!-- 底部小字 -->
+  <line x1="30" y1="540" x2="1170" y2="540" stroke="#E8E5F1" stroke-width="1.2"/>
+  <text x="600" y="572" text-anchor="middle" font-size="13" fill="#6B7280">原声照抄，勿润色——原声是证据，转述是观点</text>
+</svg>

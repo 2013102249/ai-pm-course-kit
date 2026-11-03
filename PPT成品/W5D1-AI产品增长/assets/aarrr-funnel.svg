@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" font-family="-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <rect width="1200" height="860" fill="#FFFFFF"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/>
+    </marker>
+  </defs>
+  <rect x="40" y="42" width="4" height="22" fill="#7C3AED"/>
+  <text x="54" y="60" font-size="20" font-weight="700" fill="#221E33">AARRR 漏斗图</text>
+  <text x="54" y="82" font-size="12" fill="#6B7280">AI 产品增长五环节 · 自上而下层层过滤，激活与留存是重心</text>
+
+  <!-- 左侧重心括注 -->
+  <path d="M96,216 L104,216 L104,410 L96,410" fill="none" stroke="#5B21B6" stroke-width="2"/>
+  <text transform="rotate(-90 58 313)" x="58" y="313" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">AI 产品增长的重心</text>
+  <text transform="rotate(-90 76 313)" x="76" y="313" text-anchor="middle" font-size="12" font-weight="700" fill="#5B21B6">前两层决定生死，后三层决定快慢</text>
+
+  <!-- 漏斗五层 -->
+  <rect x="120" y="112" width="640" height="90" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+  <rect x="160" y="216" width="560" height="90" rx="10" fill="#E8EFFD" stroke="#2563EB" stroke-width="3.5"/>
+  <rect x="200" y="320" width="480" height="90" rx="10" fill="#F1EBFD" stroke="#5B21B6" stroke-width="3.5"/>
+  <rect x="240" y="424" width="400" height="90" rx="10" fill="#E8EFFD" stroke="#C9C2DE" stroke-width="1.4"/>
+  <rect x="280" y="528" width="320" height="90" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+
+  <circle cx="152" cy="157" r="15" fill="#7C3AED"/><text x="152" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">1</text>
+  <circle cx="192" cy="261" r="15" fill="#2563EB"/><text x="192" y="266" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">2</text>
+  <circle cx="232" cy="365" r="15" fill="#5B21B6"/><text x="232" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">3</text>
+  <circle cx="272" cy="469" r="15" fill="#7C3AED"/><text x="272" y="474" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">4</text>
+  <circle cx="312" cy="573" r="15" fill="#7C3AED"/><text x="312" y="578" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">5</text>
+
+  <text x="440" y="165" text-anchor="middle" font-size="22" font-weight="700" fill="#221E33">获客 Acquisition</text>
+  <text x="440" y="269" text-anchor="middle" font-size="22" font-weight="700" fill="#221E33">激活 Activation</text>
+  <text x="440" y="373" text-anchor="middle" font-size="22" font-weight="700" fill="#221E33">留存 Retention</text>
+  <text x="440" y="477" text-anchor="middle" font-size="22" font-weight="700" fill="#221E33">收入 Revenue</text>
+  <text x="440" y="581" text-anchor="middle" font-size="22" font-weight="700" fill="#221E33">裂变 Referral</text>
+
+  <!-- 连接虚线 -->
+  <line x1="762" y1="157" x2="814" y2="157" stroke="#A5A1B8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <line x1="722" y1="261" x2="814" y2="261" stroke="#A5A1B8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <line x1="682" y1="365" x2="814" y2="365" stroke="#A5A1B8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <line x1="642" y1="469" x2="814" y2="469" stroke="#A5A1B8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <line x1="602" y1="573" x2="814" y2="573" stroke="#A5A1B8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+
+  <!-- 右侧标注框 -->
+  <rect x="820" y="112" width="340" height="90" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="836" y="146" font-size="15" fill="#221E33">内容获客 · 生成结果即广告 · 对话即注册</text>
+  <rect x="836" y="162" width="200" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="936" y="181" text-anchor="middle" font-size="13" fill="#2563EB">指标：获客成本 CAC</text>
+
+  <rect x="820" y="216" width="340" height="90" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
+  <text x="836" y="250" font-size="15" fill="#221E33">最短路径送达 aha 时刻 · 首次生成必须成功</text>
+  <rect x="836" y="266" width="200" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="936" y="285" text-anchor="middle" font-size="13" fill="#2563EB">指标：aha 到达率</text>
+
+  <rect x="820" y="320" width="340" height="90" rx="10" fill="#FFFFFF" stroke="#5B21B6" stroke-width="1.8"/>
+  <text x="836" y="354" font-size="15" fill="#221E33">历史产出可积累 · 越用越准 · 嵌入工作流</text>
+  <rect x="836" y="370" width="200" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="936" y="389" text-anchor="middle" font-size="13" fill="#2563EB">指标：7 日 / 30 日留存</text>
+
+  <rect x="820" y="424" width="340" height="90" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="836" y="458" font-size="15" fill="#221E33">订阅制为主 · 按量计费补充 · 免费额度设计</text>
+  <rect x="836" y="474" width="200" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="936" y="493" text-anchor="middle" font-size="13" fill="#2563EB">指标：付费转化率</text>
+
+  <rect x="820" y="528" width="340" height="90" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="836" y="562" font-size="15" fill="#221E33">协作邀请 · 生成物外链传播 · 双向产品权益</text>
+  <rect x="836" y="578" width="200" height="28" rx="14" fill="#E8EFFD"/>
+  <text x="936" y="597" text-anchor="middle" font-size="13" fill="#2563EB">指标：K 因子</text>
+
+  <!-- 对比小图 -->
+  <rect x="120" y="644" width="470" height="88" rx="10" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.4"/>
+  <text x="140" y="678" font-size="16" font-weight="700" fill="#221E33">传统增长</text>
+  <text x="140" y="708" font-size="14" fill="#6B7280">先拉新 —— 火力指向顶层获客</text>
+  <rect x="610" y="644" width="470" height="88" rx="10" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.4"/>
+  <text x="630" y="678" font-size="16" font-weight="700" fill="#5B21B6">AI 产品增长</text>
+  <text x="630" y="708" font-size="14" fill="#5B21B6">先修漏斗，再放大 —— 火力指向激活与留存</text>
+
+  <!-- 金句条 -->
+  <rect x="60" y="760" width="1080" height="54" rx="10" fill="#7C3AED"/>
+  <text x="600" y="794" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">「AI 产品的留存不靠推送，靠 aha 时刻」</text>
+</svg>

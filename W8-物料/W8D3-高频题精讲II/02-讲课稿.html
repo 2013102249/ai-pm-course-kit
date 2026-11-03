@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讲课稿 · W8 周三《高频题精讲 II：技术理解、数据与行为题》（完整逐字稿） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<aside class="sidebar" id="sb"><a class="brand" href="../../index.html">📚 资源包总入口</a><div class="sub">AI 产品经理就业训练营 · 40 天八件套</div>
+<div class="wh">WEEK 1</div>
+<a class="dl" href="../../W1-物料/W1D1-开营与岗位全景/01-教案.html" title="W1D1 开营与岗位全景">1D1 · 开营与岗位全景</a>
+<a class="dl" href="../../W1-物料/W1D2-大模型原理通识/01-教案.html" title="W1D2 大模型原理通识">1D2 · 大模型原理通识</a>
+<a class="dl" href="../../W1-物料/W1D3-提示词与上下文工程/01-教案.html" title="W1D3 提示词与上下文工程">1D3 · 提示词与上下文工程</a>
+<a class="dl" href="../../W1-物料/W1D4-AI产品形态拆解/01-教案.html" title="W1D4 AI产品形态拆解">1D4 · AI产品形态拆解</a>
+<a class="dl" href="../../W1-物料/W1D5-行业选择与职业规划/01-教案.html" title="W1D5 行业选择与职业规划">1D5 · 行业选择与职业规划</a>
+<div class="wh">WEEK 2</div>
+<a class="dl" href="../../W2-物料/W2D1-模型能力边界与选型/01-教案.html" title="W2D1 模型能力边界与选型">2D1 · 模型能力边界与选型</a>
+<a class="dl" href="../../W2-物料/W2D2-训练与微调原理/01-教案.html" title="W2D2 训练与微调原理">2D2 · 训练与微调原理</a>
+<a class="dl" href="../../W2-物料/W2D3-模型评测体系/01-教案.html" title="W2D3 模型评测体系">2D3 · 模型评测体系</a>
+<a class="dl" href="../../W2-物料/W2D4-AI合规与安全/01-教案.html" title="W2D4 AI合规与安全">2D4 · AI合规与安全</a>
+<a class="dl" href="../../W2-物料/W2D5-主项目立项启动/01-教案.html" title="W2D5 主项目立项启动">2D5 · 主项目立项启动</a>
+<div class="wh">WEEK 3</div>
+<a class="dl" href="../../W3-物料/W3D1-Agent架构原理/01-教案.html" title="W3D1 Agent架构原理">3D1 · Agent架构原理</a>
+<a class="dl" href="../../W3-物料/W3D2-Agent产品设计与工作流实操/01-教案.html" title="W3D2 Agent产品设计与工作流实操">3D2 · Agent产品设计与工作流实操</a>
+<a class="dl" href="../../01-样课日-W3D3-RAG/01-教案.html" title="W3D3 RAG（样课日）">3D3 · RAG（样课日）</a>
+<a class="dl" href="../../W3-物料/W3D4-多模态产品设计/01-教案.html" title="W3D4 多模态产品设计">3D4 · 多模态产品设计</a>
+<a class="dl" href="../../W3-物料/W3D5-原型评审I/01-教案.html" title="W3D5 原型评审I">3D5 · 原型评审I</a>
+<div class="wh">WEEK 4</div>
+<a class="dl" href="../../W4-物料/W4D1-用户研究与需求分析/01-教案.html" title="W4D1 用户研究与需求分析">4D1 · 用户研究与需求分析</a>
+<a class="dl" href="../../W4-物料/W4D2-AI产品PRD写作/01-教案.html" title="W4D2 AI产品PRD写作">4D2 · AI产品PRD写作</a>
+<a class="dl" href="../../W4-物料/W4D3-方案设计与异常兜底/01-教案.html" title="W4D3 方案设计与异常兜底">4D3 · 方案设计与异常兜底</a>
+<a class="dl" href="../../W4-物料/W4D4-数据指标体系与SQL/01-教案.html" title="W4D4 数据指标体系与SQL">4D4 · 数据指标体系与SQL</a>
+<a class="dl" href="../../W4-物料/W4D5-PRD评审大会/01-教案.html" title="W4D5 PRD评审大会">4D5 · PRD评审大会</a>
+<div class="wh">WEEK 5</div>
+<a class="dl" href="../../W5-物料/W5D1-AI产品增长/01-教案.html" title="W5D1 AI产品增长">5D1 · AI产品增长</a>
+<a class="dl" href="../../W5-物料/W5D2-AB实验与数据决策/01-教案.html" title="W5D2 AB实验与数据决策">5D2 · AB实验与数据决策</a>
+<a class="dl" href="../../W5-物料/W5D3-AI商业化与成本核算/01-教案.html" title="W5D3 AI商业化与成本核算">5D3 · AI商业化与成本核算</a>
+<a class="dl" href="../../W5-物料/W5D4-项目推进与跨团队协作/01-教案.html" title="W5D4 项目推进与跨团队协作">5D4 · 项目推进与跨团队协作</a>
+<a class="dl" href="../../W5-物料/W5D5-主项目中期评审/01-教案.html" title="W5D5 主项目中期评审">5D5 · 主项目中期评审</a>
+<div class="wh">WEEK 6</div>
+<a class="dl" href="../../W6-物料/W6D1-Vibe Coding与AI工程提效/01-教案.html" title="W6D1 Vibe Coding与AI工程提效">6D1 · Vibe Coding与AI工程提效</a>
+<a class="dl" href="../../W6-物料/W6D2-开发冲刺I/01-教案.html" title="W6D2 开发冲刺I">6D2 · 开发冲刺I</a>
+<a class="dl" href="../../W6-物料/W6D3-开发冲刺II/01-教案.html" title="W6D3 开发冲刺II">6D3 · 开发冲刺II</a>
+<a class="dl" href="../../W6-物料/W6D4-测试验收与用户试用/01-教案.html" title="W6D4 测试验收与用户试用">6D4 · 测试验收与用户试用</a>
+<a class="dl" href="../../W6-物料/W6D5-结业路演/01-教案.html" title="W6D5 结业路演">6D5 · 结业路演</a>
+<div class="wh">WEEK 7</div>
+<a class="dl" href="../../W7-物料/W7D1-行业纵深/01-教案.html" title="W7D1 行业纵深">7D1 · 行业纵深</a>
+<a class="dl" href="../../W7-物料/W7D2-作品集方法论/01-教案.html" title="W7D2 作品集方法论">7D2 · 作品集方法论</a>
+<a class="dl" href="../../W7-物料/W7D3-简历撰写/01-教案.html" title="W7D3 简历撰写">7D3 · 简历撰写</a>
+<a class="dl" href="../../W7-物料/W7D4-简历诊断/01-教案.html" title="W7D4 简历诊断">7D4 · 简历诊断</a>
+<a class="dl" href="../../W7-物料/W7D5-岗位投递策略/01-教案.html" title="W7D5 岗位投递策略">7D5 · 岗位投递策略</a>
+<div class="wh">WEEK 8</div>
+<a class="dl" href="../../W8-物料/W8D1-面试全景地图/01-教案.html" title="W8D1 面试全景地图">8D1 · 面试全景地图</a>
+<a class="dl" href="../../W8-物料/W8D2-高频题精讲I/01-教案.html" title="W8D2 高频题精讲I">8D2 · 高频题精讲I</a>
+<a class="dl cur" href="../../W8-物料/W8D3-高频题精讲II/01-教案.html" title="W8D3 高频题精讲II">8D3 · 高频题精讲II</a>
+<a class="dl" href="../../W8-物料/W8D4-模拟面试I/01-教案.html" title="W8D4 模拟面试I">8D4 · 模拟面试I</a>
+<a class="dl" href="../../W8-物料/W8D5-模拟面试II与结营/01-教案.html" title="W8D5 模拟面试II与结营">8D5 · 模拟面试II与结营</a>
+<div class="ql"><a class="dl" href="../../02-交互工具/index.html">🛠 交互工具（4）</a><a class="dl" href="../../03-配图素材/index.html">🖼 配图素材（66）</a><a class="dl" href="../../课程大纲.html">纲 · 课程大纲</a><a class="dl" href="../../00-八件套生产体系.html">00 · 生产体系</a></div></aside><div class="scrim" id="scrim"></div><button class="menu-btn" id="mb">☰ 天目录</button>
+<div class="main">
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">W8-物料/W8D3-高频题精讲II / 02-讲课稿.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><span class="cur">02-讲课稿</span><a href="03-导学案.html">03-导学案</a><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
+<h1>讲课稿 · W8 周三《高频题精讲 II：技术理解、数据与行为题》（完整逐字稿）</h1>
+<blockquote>
+<p>AI 产品经理就业训练营 · 90 分钟 · 讲师授课时可直接照读，也可按个人风格改写<br />
+标记说明：【问】课堂提问 【停】停顿等待 【操作】投影/板书操作指令 【故事】案例故事 【金句】面试金句（放慢语速重复一遍）</p>
+</blockquote>
+<hr />
+<h2>开场：面试现场两种死法（0–6 分钟）</h2>
+<p>同学们，昨天我们攻了项目深挖题和场景设计题，今天继续——技术理解题、数据题、开放行为题。这是面试的后三大题型，也是转行同学最容易心里没底的三大题型。</p>
+<p>先看两个真实场面，人名是化名。【故事】去年秋招，候选人小张，面一家 AI 公司的产品岗。面试官问：「RAG 和微调怎么选？」小张特别兴奋，一口气背了两分钟：Embedding、向量数据库、双塔结构、交叉编码、LoRA、全参微调——术语密度高得像论文摘要。面试官听完，只问了一句：「所以你的场景里，知识多久更新一次？」小张愣住了。他背了所有零件，唯独没想过这台机器为什么装。这一轮，他挂了。</p>
+<p>【故事】第二个场面。候选人小李，技术理解其实是对的。面试官问：「什么是幻觉？」她答得也对，但表达是倒着的——先讲了半小时 Transformer 的注意力机制，最后才绕到「所以它会编造答案」。面试官中途看了两次手表。会后反馈写的是：「基础尚可，表达不抓重点。」她挂得比小张还冤。</p>
+<p>【停】</p>
+<p>同学们注意，这两种死法，死因是同一个：技术题答的是知识点，但面试官要的是判断力。所以今天这节课的主线，就一句话——</p>
+<p>【金句】技术题答的是深度，更是边界——知道模型做不到什么，比背下它能做什么更加分。</p>
+<p>【操作：投出《题型-应答策略对照表》配图】</p>
+<p>今天我们会覆盖五大题型的应答策略，表会一直挂在这页。但重点火力是三块：技术题的「说人话三步法」、数据题的两个模板、行为题的 STAR。下课时，你们导学案里的题库要完成 12 问，今天产出，不是今天听课。</p>
+<h2>环节一：说人话三步法（6–16 分钟）</h2>
+<p>先解决表达问题。我问大家一个问题。</p>
+<p>【问】把 RAG 讲给你妈听，30 秒，你会怎么开头？【停，点 1–2 名学员】</p>
+<p>有同学说「RAG 是检索增强生成」——你妈已经走了。有同学说「先查资料再回答」——这就对了，你能开头了。注意，能讲给外行听，恰恰是技术理解力的证明：你只有真懂了，才能把术语脱掉。面试官里一半是非算法背景的，他们考核你的方式，就是看你会不会「说人话」。</p>
+<p>所以技术题的第一公式，说人话三步法，跟我写下来。【操作：板书】</p>
+<p>第一步，先给一句结论。别铺垫、别背定义，第一句话就是判断。比如「RAG 和微调怎么选」——第一句就是「加知识用 RAG，改行为用微调」。面试官 30 秒内就知道你有没有货。</p>
+<p>第二步，再给一个生活类比。类比是给非技术面试官的桥。RAG 就是开卷考试：闭卷再聪明也可能记错，开卷给你课本照着答。微调就是岗前培训：教的是干活的方式，不是知识点。</p>
+<p>第三步，最后给一个取舍判断。说清楚「我这么选，代价是什么，我为什么接受」。这一步最能区分背书的和干过活的——因为你开始谈代价了。</p>
+<p>【停】</p>
+<p>三步法还有一个时间纪律：30 秒答结论，90 秒答权衡。30 秒版本就是第一步加第二步，结论加类比；90 秒版本才是完整的三步展开。面试官追问什么，你再展开什么——把展开的主动权交给他，这也是面试礼仪。</p>
+<p>【金句】30 秒答结论，90 秒答权衡——面试官追问什么，你再展开什么。</p>
+<p>现在示范一遍，大家听结构。问：「什么是 RAG？」30 秒版：「RAG 就是先查资料，再回答。像开卷考试，答之前先翻书，翻不到就老实说不知道，所以它不瞎编。」——结论、类比，二十几秒，完。面试官要是追问，我再进 90 秒版：建库和问答两条链路、检索求快重排求准、知识库要设计更新权限溯源。注意，这些全是第三周的内容，今天我们不学新知识，我们练的是把学过的东西「调得出来、说得出去」。</p>
+<h2>环节二：说人话实战训练（16–24 分钟）</h2>
+<p>光看不练没用。现在现场训练，规则很简单：把 RAG 用 30 秒讲给「完全不懂技术的人」听。假设你妈妈、你前老板、或者隔壁卖水果的大叔——反正零技术背景。我随机抽人，30 秒计时，答完大家用三个问题给他点评：外行能懂吗？有取舍吗？有金句吗？【操作：打开手机计时器，按导学案尾数规则抽人】</p>
+<p>【停，抽第 1 位学员作答，计时 30 秒】</p>
+<p>好，来点评。第一位同学说「它就像一个特别爱面子又特别爱帮人的秘书，你问它问题，它不知道也会硬编一个；RAG 就是给它配了个档案柜，答之前先翻档案」。三问过一遍：外行能懂吗？懂，秘书和档案柜，谁都懂。有取舍吗？没有——他讲了「是什么」，没讲「代价是什么」。补一句就满分：「档案柜要有人维护，资料过期了它还照着旧档案说，所以得有人管更新。」有金句吗？差点意思，但「爱面子的秘书」可以保留，这就是幻觉的类比。</p>
+<p>【停，抽第 2 位学员作答，计时 30 秒】</p>
+<p>第二位同学说了三个术语：向量、语义检索、相似度。【停】大家发现问题了吗——这就是我们说的「堆术语」。术语是圈内人的验证方式，不是给外行的说明书。每句术语后面，必须跟一句人话。比如「向量——就是给每段话发一张语义身份证，意思相近的身份证号码也相近」。你看，术语加人话，一句话就够。</p>
+<p>【停，抽第 3 位学员作答，计时 30 秒】</p>
+<p>第三位同学讲得顺，但答完了自己加了一句「反正现在大模型都支持长文本了，RAG 以后可能会被淘汰」。【停】停——大家注意到没有，这句话在面试里是自杀式的。第一，它暴露了知识点没更新；第二，它把自己前面讲的东西全否定了。面试里不确定的观点，宁可不说；说了错话，比不说更扣分。记住：说人话，不等于说没有根据的话。</p>
+<p>【停，讲师给标杆版】</p>
+<p>好，我给一个 30 秒标杆版，大家抄进导学案：「RAG 就是先查资料，再回答。像开卷考试，答题前先翻书，书上没有就老实承认不知道，所以它不瞎编。代价是档案得有人维护——资料不更新，它就一本正经地过时。」三步全齐：结论、类比、取舍，三十秒。回去每个人都照这个标准改自己的版本，今晚录音自测第一个任务就是它。</p>
+<h2>环节三：高频技术题逐题精讲（24–52 分钟，核心环节）</h2>
+<p>接下来 28 分钟，八道高频技术题逐题过。节奏：我读题，先给 30 秒版骨架，再给 90 秒版，最后讲高频追问。你们同步在导学案题库里填——每问四栏：问题、30 秒版、90 秒版、高频追问。第 2 题和第 5 题我先抽人再讲，给大家留个心。</p>
+<p><strong>题 1，RAG 和微调怎么选？</strong></p>
+<p>30 秒版：加知识用 RAG，改行为用微调——这是第三周的决策口诀，原样照用。再补一句显专业的：「大多数格式问题，先试提示词，微调是最后手段。」</p>
+<p>90 秒版展开四层：一，知识类需求选 RAG，政策、手册、FAQ，改文档就生效；二，行为类需求才动微调，语气、风格、固定格式；三，判断顺序永远是先提示词、再 RAG、最后微调；四，收在代价——RAG 的隐性成本是知识库运维，微调的隐性成本是标注数据和重训周期。你谈了代价，面试官就知道你扛过成本。</p>
+<p>【问】高频追问来了：「微调能让模型记住我的文档吗？」【停】不能。微调调的是行为模式，不是资料存取。想让它「知道」公司的事，靠 RAG；想让它「说话像」公司的口吻，才靠微调。</p>
+<p>还有一道常见追问：「两者能结合吗？」能，而且真实项目里很常见——RAG 供知识，微调或强约束固定输出格式。比如合同抽取场景：RAG 负责把条款找对，提示词加输出校验负责把 JSON 格式锁住，两件事各归各。你能说出组合拳，就说明你不是二选一思维，这是加分项。</p>
+<p><strong>题 2，什么是幻觉？怎么治理？</strong>——这道先抽人。【停，抽 1 名学员】</p>
+<p>这位同学答到了「一本正经胡说八道」，对，但不够。补三层。第一层，说本质：幻觉不是模型的缺陷，是它的本能——它是一个概率续写引擎，永远给你「最像答案的答案」。这句话你在面试里说出来，面试官就知道你懂原理，不是背现象。第二层，说治理，三招：给资料——RAG，先查资料再回答；给约束——提示词限定「只能基于资料回答，不知道就说不知道」，加上拒答兜底和引用溯源；给评测——幻觉率进评测集，上线后当护栏指标持续监控。第三层，说边界，这也是今天最值钱的一步。</p>
+<p>【问】幻觉能治理到 0 吗？【停】</p>
+<p>不能。谁能把幻觉治到 0，谁就是在骗你。正确姿势是：压到业务可接受线，用幻觉率护栏指标盯住，设计好兜底。你看，这道题答到「治理有边界」，比答出十种治理手段更加分——再次回到今天的主线：答深度，更答边界。</p>
+<p><strong>题 3，Agent 和工作流的边界在哪？</strong></p>
+<p>30 秒版：能用工作流解决的事，别用 Agent——确定性是产品的好朋友。判断标准一句话：路径可枚举用工作流，路径开放才用 Agent。</p>
+<p>90 秒版：工作流是人预设路径，稳定、可测、成本可控；Agent 是模型自主规划，路径开放，代价是慢、贵、不稳。判断三问：任务路径可枚举吗？容错成本高吗？真的需要模型自主决策吗？最后补产品闸门：人工接管点、步数与成本上限、安全闸门。高频追问基本必然是「为什么 Agent 产品经常被吐槽不稳」——因为自主规划导致步数不可控，没有上限设计，就是拿用户的 token 赌运气。</p>
+<p><strong>题 4，模型选型看什么？</strong></p>
+<p>30 秒版：模型没有全能冠军，选型不是选最强，是选最合适。三角：先按场景定能力线，能力线之上比成本与延迟，合规一票否决。</p>
+<p>90 秒版：能力线，把业务场景映射到六个能力维度上，够用就好；成本延迟，单位成本乘日均调用量，再加上首 token 延迟对体验的影响；合规，国内业务数据敏感就考虑私有化，数据出境是红线。收尾这句必说：「横评表会过期，方法不会——所以我们建了自己的评测集，换季重跑。」面试官听到这句，就知道你的选型结论不靠网上抄。</p>
+<p>高频追问还有一个：「国产模型和海外模型怎么选？」顺序不能乱——先过合规一票否决，再看能力线，最后比成本。有同学上来就比跑分，一开口就输了：跑分是别人的评测集，不是你的场景。</p>
+<p><strong>题 5，上下文窗口不够怎么办？</strong>——先抽人。【停，抽 1 名学员】</p>
+<p>有同学说「换长上下文模型」——这是答案之一，但面试官想听的是产品思路。三条路：精选——RAG 检索加重排，只喂最相关的片段；压缩——长对话做历史摘要，长文档分块处理；外置——把不常变的信息放进记忆库，按需取用。取舍：塞得满不如塞得准，准确率比长度重要，而且上下文越长成本越高、注意力越稀释。</p>
+<p>【问】那高频追问必来：「长上下文模型都到百万 token 了，RAG 还有价值吗？」【停】</p>
+<p>有，四条：成本，不必每次全量塞；时效，资料天天更新，重训和全量塞都追不上；精度，检索聚焦比大海捞针准；权限，不同用户只能检索他有权限看的资料——这一条长上下文给不了。答出权限这条的，面试官会记住你。</p>
+<p><strong>题 6，怎么评测一个 AI 功能？</strong></p>
+<p>30 秒版：没评测集等于开盲盒。先建评测集，真实用户问题加负例，至少 50 条；再定指标；最后跑对比、定上线门槛。</p>
+<p>90 秒版：评测集必须含负例——负例是防翻车的，没有负例的评测集是自我表扬集；指标两层，功能层看准确率和采纳率，护栏层看拒答恰当率、幻觉率、单次成本；badcase 四类归因——解析、分块、检索、生成，归因对了改进才对；上线门槛要有数字，P0 badcase 零容忍，上线后 badcase 回流评测集，形成闭环。高频追问：「开放生成场景没有标准答案怎么评？」答：小规模人工标注，加线上采纳率交叉验证。</p>
+<p><strong>题 7，内容安全怎么做？</strong></p>
+<p>30 秒版：三道防线——机器审核、人工复审、拒答兜底；国内业务还必须做生成内容标识。</p>
+<p>90 秒版按顺序展开：输入侧敏感词与意图识别，拦在生成之前；生成侧机器审核，高危领域加人工抽检；输出侧拒答兜底加显式隐式双标识。收尾背口诀：备得上、审得出、收得少、护得住、标得清。高频追问：「拒答太严影响体验怎么办？」——灰度调阈值，把误杀率当护栏指标盯。追问「为什么标识是强制的」——生成式 AI 管理办法的要求，隐式标识机器可验。这两问答出来，你的合规分就满了。</p>
+<p><strong>题 8，多模态适用什么场景？</strong></p>
+<p>30 秒版：三维度判断——成熟度、成本量级、合规风险；形态没有高下，匹配才对。</p>
+<p>90 秒版快速过四形态：文生图，营销素材，成熟度高，注意版权和标识；语音，陪伴和客服，注意录音合规；数字人，播报类标准动作，注意人工接管点；文生视频，成本最高可控性最弱。收尾取舍：先问这个场景非用多模态不可吗，再谈效果。高频追问：「数字人客服值得做吗？」——看解决率增量对比成本增量，不用多模态能解决的事，别上多模态。</p>
+<p>【停，环视】</p>
+<p>八题过完。大家发现规律没有？每道题的 90 秒版，最后一步都是「收在取舍」。这就是今天技术题的总答案：结论证明你学过，取舍证明你干过。</p>
+<h2>休息（52–57 分钟）</h2>
+<p>休息五分钟。预习没做完的抓紧翻导学案第一页的金句索引，下半场数据题要用。</p>
+<h2>环节四：数据题（57–70 分钟）</h2>
+<p>回到场。数据题就两个模板，我各讲一个，现场练两问。</p>
+<p><strong>第一个模板：指标设计题。</strong> 问法通常是「给你的产品设计指标体系」。答题骨架四步。第一步先报北极星，并用三标准自查——绑价值、可影响、可拆解。第二步报一级过程指标，从 AI 五大指标里挑最相关的两三个：采纳率、解决率、幻觉率、留存、单次成本。第三步配护栏，防止动作变形——北极星决定船往哪开，护栏指标防止你为了追星把船开翻。第四步，每个指标必带口径：分母是什么、采纳动作怎么定义。</p>
+<p>【问】这里插一道必考题：采纳率 90% 的产品，一定是好产品吗？【停】</p>
+<p>不一定。先反问口径：分母按次还是按会话？修改后采纳算不算？用户重试 10 次才采纳 1 次，采纳率照样能刷高，但单次质量很差。所以记住这句：指标设计先报口径，再报数字。没口径的数字，面试官一追就穿。</p>
+<p><strong>第二个模板：异动分析题。</strong> 问法：「关键指标突然跌了 20%，你怎么排查？」</p>
+<p>【问】先问大家：你的第一反应是什么？【停，点 1 名学员】</p>
+<p>很多同学第一反应是「是不是模型变差了」——慢了。正确顺序三步：第一步，先确认是不是真跌——口径变过没有？统计脚本有没有 bug？是不是周日效应这类周期波动？第二步，拆样本结构——按渠道、新老用户、平台、时段切，看是整体跌还是局部跌，这里藏着辛普森悖论：可能各组都没跌，是占比漂移拖低了整体。第三步，才轮到下结论归因——产品改动、模型版本、外部事件，一条条对时间线。</p>
+<p>口诀三句，跟我念：先拆样本结构，再查指标口径，最后下结论。还有一句面试加分款：先查便宜的，再怀疑贵的——查口径、查周期都是零成本的，直接去动模型是最贵的。</p>
+<p>数据题还有一类变体要防：「怎么向老板汇报一个下跌的指标？」结构也是三句话：先说事实和口径（跌了多少、口径没变、排除了周期因素）；再说归因和置信度（最可能的原因是什么、还有哪些假设待验证）；最后给动作和建议（本周先做什么、什么条件下启动预案）。老板要的不是解释，是「你兜住了」。</p>
+<p>现场练。第 9 问「给你的主项目设计指标体系」，第 10 问「留存跌了 20% 怎么排查」，两问现在填进题库，5 分钟，填完抽人答第 10 问。【停，5 分钟，巡视】</p>
+<p>【停，抽 1 名学员答异动题，点评】这位同学三步顺序对了，特别提醒全班的易错点：数据题最忌讳背理论不结合项目。你面试里答异动题，开头应该是「我拿我项目里采纳率举例」——先报自己项目的北极星，再套框架。空框架等于没答。</p>
+<h2>环节五：开放行为题与 STAR（70–80 分钟）</h2>
+<p>最后一块，开放行为题。「讲一个你踩过的坑」「讲一次你说服团队的经历」「讲一个失败的项目」——这类题没有标准答案，但有标准结构：STAR。</p>
+<p>S，Situation，背景，一句话交代；T，Task，目标，一句话说清你负责什么；A，Action，重头，你分析了什么、做了什么决策、协调了什么资源，篇幅要占一半以上；R，Result，数字收尾，加一句复盘。</p>
+<p>【问】STAR 四个字母，哪个最重要？【停】</p>
+<p>A。因为面试官只能通过 Action 判断「这件事是不是你干的」。背景谁都能编，结果可能是团队运气，只有 Action 暴露你的真实水平。</p>
+<p>先看反面。同一件事，「小说版」这么讲：「那是一个周二的凌晨两点，我刚改完第 17 版 PRD，微信突然响了，是研发负责人……」——情节有了，气氛有了，一分钟过去了，面试官什么也没得到。这就是「讲成小说」。</p>
+<p>「结论先行版」这么讲：「我先说结果——这个功能上线两周，采纳率从 31% 提到 52%（R 前置）。最关键的两个动作：一是我用评测集把 badcase 归因到检索环节，砍掉了两个无效功能（A1）；二是协调算法同学做了重排，我自己标注了两百条数据（A2）。背景一句话：当时我们的知识库原型效果卡了很久（S/T 压缩）。」——同样的故事，30 秒，全是干货。行为题讲的是证据链，不是小说。</p>
+<p>现场练两问：第 11 问「讲一个你主项目里推翻自己最初方案的经历」，第 12 问「讲一次你和数据结论不一致的判断」。60 秒版，用结论先行结构。现在写，写完抽一人。【停，3 分钟，抽答点评】</p>
+<p>点评标准就三条：结果先出了吗？A 占一半以上吗？有数字吗？最后提醒高频追问：「如果重来一次你会怎么做？」——必须答复盘，且复盘要落在可迁移的方法上，不说「更努力」。</p>
+<p>【操作：指回《题型-应答策略对照表》】</p>
+<p>对照表上还有两行，一分钟讲完。反问题——面试结尾的「你有什么想问我的」，这不是客套，是最后一道送分题：问「这个岗位前三个月最重要的产出是什么」，显得你在想怎么干活；千万别问薪资细节和加班多少，那是 HR 轮的事，业务面问了显得格局小。压力题——面试官故意质疑你，比如「你这个项目数据是不是太好看了」。应对只有一句：不接情绪，只给证据。把评测集口径、标注过程、线上验证一条条摆出来，情绪到位不如证据到位。这两行的完整策略，都在挂板那张表上，回去背熟。</p>
+<h2>环节六：题库共建与录音自测（80–87 分钟）</h2>
+<p>现在清点今天的产出。课上 12 问：技术 8 问、数据 2 问、行为 2 问，都在导学案题库里了。课后补足到 20 问以上：追问防御 4 问——「面试官为什么这么问」「这题在考察什么」「追问链会怎么走」「我的防翻车点」；数据 2 问——「没有实验条件怎么决策」「怎么向老板汇报一个下跌的指标」；反问 2 问——「面试结尾我该问什么」「哪些问题千万别问」。补足清单和模板都在导学案第三页。</p>
+<p>光写不练等于没写。演示一遍录音自测：手机打开录音，念题，按 30 秒版作答，不许看稿——卡壳就重来。录完回放，对照三个问题自评：外行能懂吗？有取舍吗？有金句吗？今晚至少录 5 问。周五模拟面试，我从你们题库里抽问——抽到你没录过的，现场加压。题库是练出来的，不是抄出来的。</p>
+<p>【金句】题库是练出来的，不是抄出来的。</p>
+<h2>总结与作业（87–90 分钟）</h2>
+<p>收束三句话。</p>
+<p>第一，技术题用说人话三步法：一句结论、一个类比、一个取舍；30 秒答结论，90 秒答权衡。</p>
+<p>第二，数据题两个模板：指标设计先报口径再报数字；异动分析先拆样本结构、再查口径、最后下结论。</p>
+<p>第三，行为题 STAR，A 占一半以上，结论先行。</p>
+<p>作业三件：题库补足到 20 问以上；录音自测 5 问；分层习题今晚完成，明早交。明天下午，模拟面试 I，一对一压力面，全程录像——今天题库的每一问，都可能是明天的真题。今天课上的每一次 30 秒开口，都是在给明天的自己减压；现在多卡壳一次，面试现场就少卡壳一次。</p>
+<p>【金句】最后，把今天最重要的一句再送大家一遍：技术题答的是深度，更是边界——知道模型做不到什么，比背下它能做什么更加分。明天见，下课。</p>
+<hr />
+<h2>附录一：本课面试金句汇总（建议学员抄录）</h2>
+<ol>
+<li>技术题答的是深度，更是边界——知道模型做不到什么，比背下它能做什么更加分。</li>
+<li>说人话三步法：一句结论，一个类比，一个取舍。</li>
+<li>30 秒答结论，90 秒答权衡——面试官追问什么，你再展开什么。</li>
+<li>每句术语后面，必须跟一句人话。</li>
+<li>术语是圈内人的验证方式，不是给外行的说明书。</li>
+<li>结论证明你学过，取舍证明你干过。</li>
+<li>指标设计先报口径，再报数字。</li>
+<li>先拆样本结构，再查指标口径，最后下结论。</li>
+<li>先查便宜的，再怀疑贵的。</li>
+<li>行为题讲的是证据链，不是小说。</li>
+<li>题库是练出来的，不是抄出来的。</li>
+<li>口径引用款（W3D3）：加知识用 RAG，改行为用微调。</li>
+<li>口径引用款（W2D1）：模型没有全能冠军，选型不是选最强，是选最合适。</li>
+<li>口径引用款（W2D3）：没评测集=开盲盒；先查便宜的，再怀疑贵的。</li>
+</ol>
+<h2>附录二：防冷场话术库（讲师备用）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>话术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽人作答无人应答</td>
+<td>「这样，按导学案姓名尾数来，公平——被抽到不亏，你今天练的每一问，都是面试官下周要问的。」</td>
+</tr>
+<tr>
+<td>学员答「不知道」</td>
+<td>「『不知道』比瞎编强，这本身就是今天的考点——模型都学会了说不知道，咱们更要会。来，我给你 10 秒，先给结论，结论都给得出来。」</td>
+</tr>
+<tr>
+<td>学员堆术语越答越乱</td>
+<td>「停一下，收回来。就一句话：这个术语用一句人话怎么说？说完这句，再继续。」</td>
+</tr>
+<tr>
+<td>学员答「看场景」就停</td>
+<td>「『看场景』是开头不是答案。补完这句：我的场景是 X，所以选 Y，因为 Z。」</td>
+</tr>
+<tr>
+<td>30 秒计时到学员没答完</td>
+<td>「时间到——注意，这就是面试现场。超时的答案不是加分，是扣分。我们练的就是把 90 秒的内容压进 30 秒。」</td>
+</tr>
+<tr>
+<td>数据题学员背理论</td>
+<td>「理论背得很熟。现在换成你的项目：你主项目的北极星是什么？先报它，再答。」</td>
+</tr>
+<tr>
+<td>行为题学员讲故事跑偏</td>
+<td>「打住，倒回去。先用一句话告诉我：这件事的结果是什么？从结果讲起。」</td>
+</tr>
+<tr>
+<td>时间不够要压缩环节</td>
+<td>「八题里剩两题今天点到为止，完整版都在导学案题库，晚上录音自测时必须过一遍——别自己骗自己。」</td>
+</tr>
+<tr>
+<td>学员问「面试官不喜欢怎么办」</td>
+<td>「面试官不需要喜欢你，需要相信你。证据链完整、边界说得清，信了，剩下的都是运气问题。」</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
+<script>
+var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
+document.getElementById('mb').onclick=function(){sb.classList.toggle('open');sc.classList.toggle('on');};
+sc.onclick=function(){sb.classList.remove('open');sc.classList.remove('on');};
+</script>
+</body>
+</html>
