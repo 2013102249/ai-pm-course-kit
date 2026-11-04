@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect width="1200" height="96" fill="url(#hd)"/>
+<text x="50" y="60" font-size="30" font-weight="700" fill="#FFFFFF">优先级排序 · 价值-成本四象限：只允许一个进『先做』</text>
+<text x="1150" y="60" font-size="15" fill="#FFFFFF" text-anchor="end" opacity="0.85">AI 产品经理就业训练营 · 产品思维小课</text>
+<line x1="330" y1="140" x2="330" y2="620" stroke="#111827" stroke-width="2"/>
+<line x1="330" y1="620" x2="970" y2="620" stroke="#111827" stroke-width="2"/>
+<polygon points="330,130 322,144 338,144" fill="#111827"/>
+<polygon points="980,620 966,612 966,628" fill="#111827"/>
+<text x="316" y="380" font-size="16" fill="#111827" font-weight="700" text-anchor="end">用户价值高</text>
+<text x="650" y="654" font-size="16" fill="#111827" font-weight="700" text-anchor="middle">实现成本 →</text>
+<rect x="330" y="140" width="314" height="234" rx="12" fill="#F1EDFB" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="487" y="247" font-size="21" fill="#7C3AED" font-weight="700" text-anchor="middle">左上 · 计划做</text>
+<text x="487" y="283" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">高价值高成本：拆小再上</text>
+<rect x="656" y="140" width="314" height="234" rx="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="813" y="247" font-size="21" fill="#7C3AED" font-weight="700" text-anchor="middle">右上 · 先做</text>
+<text x="813" y="283" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">高价值低成本：本周就动</text>
+<rect x="330" y="386" width="314" height="234" rx="12" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="487" y="493" font-size="21" fill="#6B7280" font-weight="700" text-anchor="middle">左下 · 不做</text>
+<text x="487" y="529" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">低价值高成本：写下来防复活</text>
+<rect x="656" y="386" width="314" height="234" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+<text x="813" y="493" font-size="21" fill="#2563EB" font-weight="700" text-anchor="middle">右下 · 顺手做</text>
+<text x="813" y="529" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">低价值低成本：攒着批量</text>
+<text x="60" y="690" font-size="17" fill="#111827" font-weight="700" text-anchor="start">口诀：全标『紧急』等于没有优先级——四象限分完，右上只留一个，左下的写下来，防止它下周复活。</text>
+<line x1="0" y1="752" x2="1200" y2="752" stroke="#E5E7EB"/>
+<text x="50" y="778" font-size="14" fill="#6B7280">产品思维小课 05 · 优先级排序 ｜ 课堂用法：反例 → 本图 1 分钟 → 今日 3 个候选动作只许 1 个进『先做』</text>
+<text x="1150" y="778" font-size="14" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 1200×800</text>
+</svg>

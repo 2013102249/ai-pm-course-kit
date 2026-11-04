@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect x="0" y="0" width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">RAG（检索增强生成）</text>
+<text x="80" y="112" font-size="19" fill="#FFFFFF" opacity="0.85">RAG · 术语类比卡</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="16" fill="#FFFFFF" text-anchor="middle">W3D3 RAG 架构与知识库产品</text>
+<circle cx="955" cy="102" r="21" fill="#FFFFFF" opacity="0.92"/>
+<text x="955" y="109" font-size="18" font-weight="700" fill="#7C3AED" text-anchor="middle">16</text>
+<text x="990" y="109" font-size="14" fill="#FFFFFF" opacity="0.9">共 18 卡 · 第 16 张</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#111827">一句话定义</text>
+<line x1="78" y1="226" x2="572" y2="226" stroke="#E5E7EB"/>
+<text x="80" y="260" font-size="18.5" fill="#374151">让模型回答前先去资料库检索相关内容，带着资料作答</text>
+<text x="80" y="290" font-size="18.5" fill="#374151">——先查资料，再回答。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#111827">生活类比</text>
+<line x1="642" y1="226" x2="1122" y2="226" stroke="#E5E7EB"/>
+<text x="644" y="260" font-size="18.5" fill="#374151">开卷考试——闭卷靠记忆会记错；开卷照着课本答，</text>
+<text x="644" y="290" font-size="18.5" fill="#374151">书上没有的不敢乱写。</text>
+<rect x="50" y="478" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="478" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="505" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="518" font-size="21" font-weight="700" fill="#111827">面试怎么用</text>
+<line x1="78" y1="536" x2="572" y2="536" stroke="#E5E7EB"/>
+<text x="80" y="570" font-size="18.5" fill="#374151">说「RAG 的本质是给模型开卷考试的权利」「加知识</text>
+<text x="80" y="600" font-size="18.5" fill="#374151">用 RAG，改行为用微调」，再举退款政策编造事故。</text>
+<rect x="614" y="478" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="478" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="505" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="518" font-size="21" font-weight="700" fill="#111827">常见误解</text>
+<line x1="642" y1="536" x2="1122" y2="536" stroke="#E5E7EB"/>
+<text x="644" y="570" font-size="18.5" fill="#374151">以为 RAG 升级了模型智力——它只是外挂资料；资料</text>
+<text x="644" y="600" font-size="18.5" fill="#374151">没入库、已过期、没权限，答案照样错。</text>
+<rect x="0" y="772" width="1200" height="28" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="0"/>
+<line x1="0" y1="772" x2="1200" y2="772" stroke="#E5E7EB"/>
+<text x="50" y="790" font-size="13" fill="#6B7280">AI 产品经理就业训练营 · 术语类比卡</text>
+<text x="1150" y="790" font-size="13" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 术语来源：课程既有内容</text>
+</svg>

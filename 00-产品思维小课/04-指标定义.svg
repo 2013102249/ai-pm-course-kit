@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect width="1200" height="96" fill="url(#hd)"/>
+<text x="50" y="60" font-size="30" font-weight="700" fill="#FFFFFF">指标定义 · 一横一纵：一个北极星，三个过程指标，两条护栏</text>
+<text x="1150" y="60" font-size="15" fill="#FFFFFF" text-anchor="end" opacity="0.85">AI 产品经理就业训练营 · 产品思维小课</text>
+<rect x="400" y="130" width="400" height="120" rx="14" fill="#7C3AED" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="600" y="180" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle">北极星指标 · 唯一</text>
+<text x="600" y="216" font-size="15" fill="#FFFFFF" font-weight="normal" text-anchor="middle">回答「用户得到了什么价值」</text>
+<line x1="600" y1="255" x2="590" y2="255" stroke="#2563EB" stroke-width="2.5"/><polygon points="600,255 586,249 586,261" fill="#2563EB"/>
+<polygon points="594,275 606,275 600,289" fill="#2563EB"/>
+<rect x="180" y="300" width="260" height="120" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<text x="310" y="350" font-size="19" fill="#111827" font-weight="700" text-anchor="middle">过程指标 1</text>
+<text x="310" y="385" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">本周动什么</text>
+<rect x="470" y="300" width="260" height="120" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<text x="600" y="350" font-size="19" fill="#111827" font-weight="700" text-anchor="middle">过程指标 2</text>
+<text x="600" y="385" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">几天能看到变化</text>
+<rect x="760" y="300" width="260" height="120" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<text x="890" y="350" font-size="19" fill="#111827" font-weight="700" text-anchor="middle">过程指标 3</text>
+<text x="890" y="385" font-size="15" fill="#374151" font-weight="normal" text-anchor="middle">归因到具体动作</text>
+<rect x="180" y="470" width="840" height="110" rx="14" fill="#F1EDFB" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="600" y="515" font-size="20" fill="#7C3AED" font-weight="700" text-anchor="middle">护栏指标 × 2 —— 什么涨是不能接受的</text>
+<text x="600" y="552" font-size="16" fill="#374151" font-weight="normal" text-anchor="middle">例：次日留存、客诉率。过程指标涨、护栏指标跌 = 动作变形，立刻停。</text>
+<text x="60" y="690" font-size="17" fill="#111827" font-weight="700" text-anchor="start">口诀：北极星指方向，过程指标管动作，护栏指标防变形——三个都没有，就是『把活跃度搞上去』。</text>
+<line x1="0" y1="752" x2="1200" y2="752" stroke="#E5E7EB"/>
+<text x="50" y="778" font-size="14" fill="#6B7280">产品思维小课 04 · 指标定义 ｜ 课堂用法：反例 → 本图 1 分钟 → 今日研究提纲写 1 北极星 + 2 护栏，同桌互查</text>
+<text x="1150" y="778" font-size="14" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 1200×800</text>
+</svg>

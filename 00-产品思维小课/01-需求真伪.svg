@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect width="1200" height="96" fill="url(#hd)"/>
+<text x="50" y="60" font-size="30" font-weight="700" fill="#FFFFFF">需求真伪 · 四问滤网：四问全过才立项，一问答不上就先别做</text>
+<text x="1150" y="60" font-size="15" fill="#FFFFFF" text-anchor="end" opacity="0.85">AI 产品经理就业训练营 · 产品思维小课</text>
+<rect x="60" y="350" width="150" height="100" rx="14" fill="#7C3AED" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="135" y="392" font-size="20" fill="#FFFFFF" font-weight="700" text-anchor="middle">一个需求</text>
+<text x="135" y="420" font-size="20" fill="#FFFFFF" font-weight="700" text-anchor="middle">进站</text>
+<line x1="215" y1="400" x2="255" y2="400" stroke="#2563EB" stroke-width="2.5"/><polygon points="265,400 251,394 251,406" fill="#2563EB"/>
+<rect x="270" y="130" width="430" height="118" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="270" y="130" width="6" height="118" rx="3" fill="#7C3AED"/>
+<text x="296" y="172" font-size="21" fill="#111827" font-weight="700" text-anchor="start">问 1 · 谁在痛？</text>
+<text x="296" y="208" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">有具体的人吗？叫得出名字吗</text>
+<rect x="270" y="268" width="430" height="118" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<rect x="270" y="268" width="6" height="118" rx="3" fill="#2563EB"/>
+<text x="296" y="310" font-size="21" fill="#111827" font-weight="700" text-anchor="start">问 2 · 痛多久？</text>
+<text x="296" y="346" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">高频还是偶发？一次还是每天</text>
+<rect x="270" y="406" width="430" height="118" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="270" y="406" width="6" height="118" rx="3" fill="#7C3AED"/>
+<text x="296" y="448" font-size="21" fill="#111827" font-weight="700" text-anchor="start">问 3 · 怎么活？</text>
+<text x="296" y="484" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">没有它，用户现在用什么替代</text>
+<rect x="270" y="544" width="430" height="118" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<rect x="270" y="544" width="6" height="118" rx="3" fill="#2563EB"/>
+<text x="296" y="586" font-size="21" fill="#111827" font-weight="700" text-anchor="start">问 4 · 不做会怎样？</text>
+<text x="296" y="622" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">最坏结果写得出具体场景吗</text>
+<line x1="705" y1="400" x2="750" y2="400" stroke="#2563EB" stroke-width="2.5"/><polygon points="760,400 746,394 746,406" fill="#2563EB"/>
+<rect x="765" y="150" width="385" height="150" rx="14" fill="#F1EDFB" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="957" y="205" font-size="22" fill="#7C3AED" font-weight="700" text-anchor="middle">四问全过 → 真需求</text>
+<text x="957" y="245" font-size="16" fill="#374151" font-weight="normal" text-anchor="middle">进排期，写进需求清单</text>
+<rect x="765" y="470" width="385" height="150" rx="14" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="957" y="525" font-size="22" fill="#6B7280" font-weight="700" text-anchor="middle">任一问答不上 → 先别做</text>
+<text x="957" y="565" font-size="16" fill="#374151" font-weight="normal" text-anchor="middle">归档并写明卡在哪一问</text>
+<text x="60" y="690" font-size="17" fill="#111827" font-weight="700" text-anchor="start">口诀：先找人，再问频率，再看替代品，最后算不做的代价——四问滤过，才轮得到排期。</text>
+<line x1="0" y1="752" x2="1200" y2="752" stroke="#E5E7EB"/>
+<text x="50" y="778" font-size="14" fill="#6B7280">产品思维小课 01 · 需求真伪 ｜ 课堂用法：讲师念反例 → 投屏本图讲 1 分钟 → 学员两两互问三个追问</text>
+<text x="1150" y="778" font-size="14" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 1200×800</text>
+</svg>

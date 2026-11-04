@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect width="1200" height="96" fill="url(#hd)"/>
+<text x="50" y="60" font-size="30" font-weight="700" fill="#FFFFFF">跨团队协作 · RACI 四角色：没有 R 没人做，有两个 A 必打架</text>
+<text x="1150" y="60" font-size="15" fill="#FFFFFF" text-anchor="end" opacity="0.85">AI 产品经理就业训练营 · 产品思维小课</text>
+<rect x="400" y="122" width="400" height="66" rx="33" fill="#7C3AED" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="600" y="164" font-size="20" fill="#FFFFFF" font-weight="700" text-anchor="middle">铁律：每个任务的 A 只能有一个</text>
+<rect x="110" y="220" width="720" height="92" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="110" y="220" width="6" height="92" rx="3" fill="#7C3AED"/>
+<text x="140" y="258" font-size="20" fill="#111827" font-weight="700" text-anchor="start">R · Responsible</text>
+<text x="460" y="258" font-size="18" fill="#7C3AED" font-weight="700" text-anchor="start">谁执行</text>
+<text x="140" y="290" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">动手干活的人。没有 R 的任务 = 没人做</text>
+<rect x="110" y="330" width="720" height="92" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<rect x="110" y="330" width="6" height="92" rx="3" fill="#2563EB"/>
+<text x="140" y="368" font-size="20" fill="#111827" font-weight="700" text-anchor="start">A · Accountable</text>
+<text x="460" y="368" font-size="18" fill="#2563EB" font-weight="700" text-anchor="start">谁拍板</text>
+<text x="140" y="400" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">唯一负责拍板的人。两个 A = 必打架</text>
+<rect x="110" y="440" width="720" height="92" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="110" y="440" width="6" height="92" rx="3" fill="#7C3AED"/>
+<text x="140" y="478" font-size="20" fill="#111827" font-weight="700" text-anchor="start">C · Consulted</text>
+<text x="460" y="478" font-size="18" fill="#7C3AED" font-weight="700" text-anchor="start">谁被咨询</text>
+<text x="140" y="510" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">动手前要问过的人——问过才算数</text>
+<rect x="110" y="550" width="720" height="92" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<rect x="110" y="550" width="6" height="92" rx="3" fill="#2563EB"/>
+<text x="140" y="588" font-size="20" fill="#111827" font-weight="700" text-anchor="start">I · Informed</text>
+<text x="460" y="588" font-size="18" fill="#2563EB" font-weight="700" text-anchor="start">谁被告知</text>
+<text x="140" y="620" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">知会即可，别指望 I 会动——他『收到』只是礼貌</text>
+<rect x="880" y="220" width="270" height="422" rx="14" fill="#F1EDFB" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="1015" y="268" font-size="20" fill="#7C3AED" font-weight="700" text-anchor="middle">发需求前自检</text>
+<text x="905" y="312" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">① R 有名字吗</text>
+<text x="905" y="348" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">② A 是不是只有 1 个</text>
+<text x="905" y="384" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">③ C 知道自己被咨询吗</text>
+<text x="905" y="420" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">④ 群里 @ 的人各是哪个字母</text>
+<text x="905" y="478" font-size="17" fill="#6B7280" font-weight="700" text-anchor="start">「人人回复收到」</text>
+<text x="905" y="508" font-size="17" fill="#6B7280" font-weight="700" text-anchor="start">≠「有人负责」</text>
+<text x="905" y="560" font-size="16" fill="#111827" font-weight="700" text-anchor="start">卡住 24 小时就升级</text>
+<text x="60" y="690" font-size="17" fill="#111827" font-weight="700" text-anchor="start">口诀：@ 全员 = 没@任何人——发任务先标字母，R 动手、A 拍板、C 被问、I 只看。</text>
+<line x1="0" y1="752" x2="1200" y2="752" stroke="#E5E7EB"/>
+<text x="50" y="778" font-size="14" fill="#6B7280">产品思维小课 07 · 跨团队协作 ｜ 课堂用法：反例 → 本图 1 分钟 → 今日给整合日任务清单标 RACI，A 只能是自己</text>
+<text x="1150" y="778" font-size="14" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 1200×800</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif">
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<rect width="1200" height="96" fill="url(#hd)"/>
+<text x="50" y="60" font-size="30" font-weight="700" fill="#FFFFFF">用户访谈 · 三层下钻：问过去的行为，不问未来的意愿</text>
+<text x="1150" y="60" font-size="15" fill="#FFFFFF" text-anchor="end" opacity="0.85">AI 产品经理就业训练营 · 产品思维小课</text>
+<rect x="90" y="80" width="700" height="130" rx="12" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<rect x="90" y="80" width="6" height="130" rx="3" fill="#9CA3AF"/>
+<text x="120" y="125" font-size="21" fill="#111827" font-weight="700" text-anchor="start">表层 · 他说要什么</text>
+<text x="120" y="165" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">「我想要个深色模式」——最容易想到的答案，价值最低</text>
+<rect x="90" y="240" width="700" height="130" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+<rect x="90" y="240" width="6" height="130" rx="3" fill="#2563EB"/>
+<text x="120" y="285" font-size="21" fill="#111827" font-weight="700" text-anchor="start">动机层 · 他为什么</text>
+<text x="120" y="325" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">连追两层为什么：怕费眼？深夜用？显专业？——从这里开始值钱</text>
+<rect x="90" y="400" width="700" height="130" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="90" y="400" width="6" height="130" rx="3" fill="#7C3AED"/>
+<text x="120" y="445" font-size="21" fill="#111827" font-weight="700" text-anchor="start">场景层 · 上次何时何地</text>
+<text x="120" y="485" font-size="16" fill="#374151" font-weight="normal" text-anchor="start">上次发生是什么时候、在哪、和谁、之前试过什么——行为最诚实</text>
+<line x1="440" y1="145" x2="430" y2="145" stroke="#7C3AED" stroke-width="2.5"/><polygon points="440,145 426,139 426,151" fill="#7C3AED"/>
+<polygon points="434,171 446,171 440,157" fill="#7C3AED"/>
+<line x1="440" y1="305" x2="430" y2="305" stroke="#7C3AED" stroke-width="2.5"/><polygon points="440,305 426,299 426,311" fill="#7C3AED"/>
+<polygon points="434,331 446,331 440,317" fill="#7C3AED"/>
+<text x="620" y="175" font-size="17" fill="#7C3AED" font-weight="700" text-anchor="start">下钻</text>
+<text x="620" y="335" font-size="17" fill="#7C3AED" font-weight="700" text-anchor="start">下钻</text>
+<rect x="840" y="240" width="310" height="250" rx="14" fill="#F1EDFB" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="995" y="295" font-size="21" fill="#7C3AED" font-weight="700" text-anchor="middle">黄金规则</text>
+<text x="995" y="340" font-size="18" fill="#111827" font-weight="700" text-anchor="middle">问过去的行为：</text>
+<text x="995" y="372" font-size="17" fill="#374151" font-weight="normal" text-anchor="middle">「上次是什么时候？」</text>
+<text x="995" y="412" font-size="18" fill="#111827" font-weight="700" text-anchor="middle">不问未来的意愿：</text>
+<text x="995" y="444" font-size="17" fill="#374151" font-weight="normal" text-anchor="middle">「将来你会用吗？」</text>
+<text x="60" y="690" font-size="17" fill="#111827" font-weight="700" text-anchor="start">口诀：他说要的是答案，他做过的是证据——访谈挖到场景层才算挖到矿。</text>
+<line x1="0" y1="752" x2="1200" y2="752" stroke="#E5E7EB"/>
+<text x="50" y="778" font-size="14" fill="#6B7280">产品思维小课 02 · 用户访谈 ｜ 课堂用法：反例 → 本图 1 分钟 → 两两微型访谈 3 分钟（对同桌挖两层为什么）</text>
+<text x="1150" y="778" font-size="14" fill="#6B7280" text-anchor="end">紫 #7C3AED / 蓝 #2563EB · 1200×800</text>
+</svg>
