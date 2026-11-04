@@ -113,177 +113,82 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <div class="wrap md-body">
 <div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><span class="cur">03-导学案</span><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
 <h1>导学案 · W3 周一《Agent 架构原理》</h1>
-<blockquote>
-<p>AI 产品经理就业训练营 · 学员版 · 课上直接填写 · 姓名：____________</p>
-</blockquote>
+<blockquote>AI 产品经理就业训练营 · 学员版 · 课上直接填写 · 姓名：____________</blockquote>
 <h2>一、课前预习（上课前完成，约 25 分钟）</h2>
+<blockquote><strong>⚡ 开课前 10 分钟 · 产品思维小课 03《PRD 结构》</strong>（文件位于课程包 <code>00-产品思维小课/</code>）<br>先读 <code>03-PRD结构.md</code> + 判断框架图 <code>03-PRD结构.svg</code>：一个反例、一张图、三个互问、一个今天就能用的动作。<br>「六个字 PRD」的反例 + 六块骨架，今天画架构图时先用异常流思维。</blockquote>
 <p><strong>预习任务：体验 1 个 Agent 产品</strong>（任选其一：Manus、扣子空间、或其他带任务执行能力的 AI 助手），给它一个真实的办事型任务（如「整理这个主题的资料并生成一份报告」），边用边记录：</p>
 <table>
-<thead>
-<tr>
-<th>记录项</th>
-<th>我观察到的</th>
-</tr>
-</thead>
+<thead><tr><th>记录项</th><th>我观察到的</th></tr></thead>
 <tbody>
-<tr>
-<td>产品名称</td>
-<td></td>
-</tr>
-<tr>
-<td>它把任务拆成了哪几步（数一数）</td>
-<td></td>
-</tr>
-<tr>
-<td>它用了哪些工具（搜索 / 浏览器 / 文件 / 其他）</td>
-<td></td>
-</tr>
-<tr>
-<td>哪一步卡住了或最慢</td>
-<td></td>
-</tr>
-<tr>
-<td>哪一步需要我人工确认或接管</td>
-<td></td>
-</tr>
-<tr>
-<td>它把思考过程展示给我了吗？怎么展示的？</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>产品名称</td><td></td></tr>
+<tr><td>它把任务拆成了哪几步（数一数）</td><td></td></tr>
+<tr><td>它用了哪些工具（搜索 / 浏览器 / 文件 / 其他）</td><td></td></tr>
+<tr><td>哪一步卡住了或最慢</td><td></td></tr>
+<tr><td>哪一步需要我人工确认或接管</td><td></td></tr>
+<tr><td>它把思考过程展示给我了吗？怎么展示的？</td><td></td></tr>
+</tbody></table>
 <p><strong>预习思考题</strong>（上课会点名回答）：</p>
-<ol>
-<li>你体验的这个产品，交付的是「答案」还是「结果」？依据是什么？</li>
-</ol>
-<hr />
-<ol>
-<li>如果让它把同一个任务连续跑 10 次，你预期每次的花费一样吗？为什么？</li>
-</ol>
-<hr />
-<ol>
-<li>它的哪一步你最不放心交给它自己做？为什么？</li>
-</ol>
-<hr />
+<ol><li>你体验的这个产品，交付的是「答案」还是「结果」？依据是什么？</li></ol>
+<p>________________________________________________</p>
+<ol><li>如果让它把同一个任务连续跑 10 次，你预期每次的花费一样吗？为什么？</li></ol>
+<p>________________________________________________</p>
+<ol><li>它的哪一步你最不放心交给它自己做？为什么？</li></ol>
+<p>________________________________________________</p>
 <h2>二、课堂笔记（课上填写）</h2>
 <h3>1. Agent 一句话定义</h3>
 <p>Agent = 长着________________的大模型；和普通对话产品的本质区别：答题是____________，办事是拆任务、用工具、拿结果、____________。</p>
 <h3>2. 四要素笔记表（每讲完一个要素填一行）</h3>
 <table>
-<thead>
-<tr>
-<th>要素</th>
-<th>是什么（我的理解）</th>
-<th>产品经理管什么</th>
-<th>常见坑</th>
-</tr>
-</thead>
+<thead><tr><th>要素</th><th>是什么（我的理解）</th><th>产品经理管什么</th><th>常见坑</th></tr></thead>
 <tbody>
-<tr>
-<td>① 规划 Planning</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>② 记忆 Memory</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>③ 工具 Tools</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>④ 执行 Action</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>① 规划 Planning</td><td></td><td></td><td></td></tr>
+<tr><td>② 记忆 Memory</td><td></td><td></td><td></td></tr>
+<tr><td>③ 工具 Tools</td><td></td><td></td><td></td></tr>
+<tr><td>④ 执行 Action</td><td></td><td></td><td></td></tr>
+</tbody></table>
 <h3>3. ReAct 三句话</h3>
-<ul>
-<li>循环四拍：思考 → ____________ → 观察 → ____________</li>
-<li>把思考过程摊开给用户看，换来三样东西：<strong><strong><strong><strong><strong><strong>、可中断、</strong></strong></strong></strong></strong></strong></li>
-<li>呈现设计：默认展示____________，点击可展开____________</li>
-</ul>
+<ul><li>循环四拍：思考 → ____________ → 观察 → ____________</li>
+<li>把思考过程摊开给用户看，换来三样东西：____________、可中断、____________</li>
+<li>呈现设计：默认展示____________，点击可展开____________</li></ul>
 <h3>4. MCP 一句话</h3>
 <p>MCP 之于工具，就像____________之于外设；它把工具接入成本从 M×N 降到____________。</p>
 <h3>5. Multi-Agent 判断</h3>
 <table>
-<thead>
-<tr>
-<th>判断项</th>
-<th>结论</th>
-</tr>
-</thead>
+<thead><tr><th>判断项</th><th>结论</th></tr></thead>
 <tbody>
-<tr>
-<td>需要多 Agent 的三个信号</td>
-<td>① 任务可并行 ② 上下文装不下 ③ ____________</td>
-</tr>
-<tr>
-<td>决策顺序（三问）</td>
-<td>先问____________ → 再问要不要 Agent → 最后问____________</td>
-</tr>
-<tr>
-<td>我的判断</td>
-<td>我的主项目：单 Agent / 多 Agent（圈选），理由：____________</td>
-</tr>
-</tbody>
-</table>
+<tr><td>需要多 Agent 的三个信号</td><td>① 任务可并行 ② 上下文装不下 ③ ____________</td></tr>
+<tr><td>决策顺序（三问）</td><td>先问____________ → 再问要不要 Agent → 最后问____________</td></tr>
+<tr><td>我的判断</td><td>我的主项目：单 Agent / 多 Agent（圈选），理由：____________</td></tr>
+</tbody></table>
 <h3>6. 产品三道闸门</h3>
 <table>
-<thead>
-<tr>
-<th>闸门</th>
-<th>我的主项目怎么设</th>
-</tr>
-</thead>
+<thead><tr><th>闸门</th><th>我的主项目怎么设</th></tr></thead>
 <tbody>
-<tr>
-<td>人工接管点（什么时刻交还人类）</td>
-<td></td>
-</tr>
-<tr>
-<td>步数与成本上限（具体数字）</td>
-<td></td>
-</tr>
-<tr>
-<td>安全闸门（哪些动作必须人工确认）</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>人工接管点（什么时刻交还人类）</td><td></td></tr>
+<tr><td>步数与成本上限（具体数字）</td><td></td></tr>
+<tr><td>安全闸门（哪些动作必须人工确认）</td><td></td></tr>
+</tbody></table>
 <h3>7. 主项目 Agent 架构草图区（课上 8 分钟现场作画）</h3>
 <pre><code>（画布：中间 Agent 核心，四周四要素；必须标注——
   至少 1 个接管点位置、1 个步数上限数字、3–5 个具体工具及权限）
 
 
-
 </code></pre>
-<p><strong>草图自查清单（画完逐项打勾）：</strong><br />
-- [ ] 四要素全部标出（规划 / 记忆 / 工具 / 执行）<br />
-- [ ] 至少标注 1 个「交还人类」的接管点<br />
-- [ ] 标注最大步数或成本上限<br />
-- [ ] 列出 3–5 个具体工具，并注明权限边界</p>
+<p><strong>草图自查清单（画完逐项打勾）：</strong></p>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > 四要素全部标出（规划 / 记忆 / 工具 / 执行）</li>
+<li class="task"><input type="checkbox" disabled > 至少标注 1 个「交还人类」的接管点</li>
+<li class="task"><input type="checkbox" disabled > 标注最大步数或成本上限</li>
+<li class="task"><input type="checkbox" disabled > 列出 3–5 个具体工具，并注明权限边界</li></ul>
 <h2>三、课后巩固（48 小时内完成）</h2>
-<p><strong>作业：完善主项目 Agent 架构图</strong><br />
-把课堂草图升级为正式架构图（手绘拍照或画图工具均可），周五原型评审 I 直接使用。验收标准 = 上面四条自查清单全部打勾。</p>
-<p><strong>本课面试金句抄录</strong>（至少抄 3 句，第八周面试课会抽查）：<br />
-1. ________________________________________________<br />
-2. ________________________________________________<br />
-3. ________________________________________________</p>
-<p><strong>一句话总结</strong>：Agent 与对话产品的区别是「答题 vs <strong><strong><strong><strong><strong><strong>」；Agent 产品经理的第一问题是「这件事什么时候</strong></strong></strong></strong></strong></strong>」。</p>
-<p><strong>疑问清单</strong>（写下今天没听懂的点，答疑角或社群提问）：<br />
-1. ________________________________________________<br />
-2. ________________________________________________</p>
-</div>
-</div>
+<p><strong>作业：完善主项目 Agent 架构图</strong><br>把课堂草图升级为正式架构图（手绘拍照或画图工具均可），周五原型评审 I 直接使用。验收标准 = 上面四条自查清单全部打勾。</p>
+<p><strong>本课面试金句抄录</strong>（至少抄 3 句，第八周面试课会抽查）：</p>
+<ol><li>________________________________________________</li>
+<li>________________________________________________</li>
+<li>________________________________________________</li></ol>
+<p><strong>一句话总结</strong>：Agent 与对话产品的区别是「答题 vs ____________」；Agent 产品经理的第一问题是「这件事什么时候____________」。</p>
+<p><strong>疑问清单</strong>（写下今天没听懂的点，答疑角或社群提问）：</p>
+<ol><li>________________________________________________</li>
+<li>________________________________________________</li></ol>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

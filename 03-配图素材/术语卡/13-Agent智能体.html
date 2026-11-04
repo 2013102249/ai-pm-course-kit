@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>术语类比卡 13 · Agent（智能体）（Agent） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">03-配图素材 / 术语卡 / 13-Agent智能体.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>术语类比卡 13 · Agent（智能体）（Agent）</h1>
+<blockquote>所属课程：W3D1 Agent 架构原理 ｜ AI 产品经理就业训练营 · 术语类比卡（共 18 张）<br>配套配图：同目录 <code>13-Agent智能体.svg</code>（1200×800，主色紫 #7C3AED / 蓝 #2563EB）</blockquote>
+<table>
+<thead><tr><th>栏目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td><strong>术语</strong></td><td>Agent（中文叫智能体，会办事的 AI）</td></tr>
+<tr><td><strong>一句话定义</strong></td><td>给它一个目标，它自己拆解步骤、调用工具、把事办完的 AI——从「答题」走向「办事」。</td></tr>
+<tr><td><strong>生活类比</strong></td><td>长着四肢的大模型——大脑再聪明，没手没脚只能动嘴；装上规划、记忆、工具、执行四要素才叫能办事。</td></tr>
+<tr><td><strong>面试怎么用</strong></td><td>用「答题是给答案，办事是拆任务、用工具、拿结果、担责任」定义 Agent，再反问「什么时候交还人类」。</td></tr>
+<tr><td><strong>常见误解</strong></td><td>以为所有产品都该上 Agent——固定流程更稳更便宜；先问单 Agent 能不能解决，再问要不要多个。</td></tr>
+</tbody></table>
+<hr>
+<p><em>术语来源：课程既有内容；英文缩写首次出现均附中文解释。</em></p>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设计作品转产品作品 · 四段式改写模板 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料 / W7D2-作品集方法论 / 10-设计作品转产品作品-模板.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>设计作品转产品作品 · 四段式改写模板</h1>
+<blockquote>AI 产品经理就业训练营 · 作品集主线配套工具 ｜ 配合《09-积木卡-W1 至 W8》使用<br>给谁用：① 只有设计类作品（视觉传达 / 环境设计 / 动画）的学员；② 零作品集、需要用「产品分析集」补位的学员（改用四段式拆解竞品，方法相同）。<br>一句话原理：<strong>面试官不看你过去做了什么，看你能不能把做过的事讲成「问题—方案—指标—复盘」</strong>。你的视觉稿不用重做，要重讲。</blockquote>
+<hr>
+<h2>一、四段式模板（每段写什么、写多长）</h2>
+<table>
+<thead><tr><th>段</th><th>回答什么</th><th>长度</th><th>写作纪律</th><th>自检</th></tr></thead>
+<tbody>
+<tr><td><strong>① 问题</strong></td><td>当时的真实矛盾是什么？谁受影响？</td><td>80–120 字</td><td>写「人的问题」，不写「我要做一张海报」；含一个具体场景</td><td>□ 有主体（谁）□ 有矛盾（什么卡住了）</td></tr>
+<tr><td><strong>② 方案</strong></td><td>我做了什么关键决策？放弃了什么？</td><td>100–150 字</td><td>写 2–3 个「决策 + 理由」，不写流程流水账；用产品语言重述设计动作</td><td>□ 每条能答「为什么」□ 删掉了「换个人也能写」的句子</td></tr>
+<tr><td><strong>③ 指标</strong></td><td>结果怎么衡量？从多少到多少？</td><td>60–100 字</td><td>必须有「基准值 → 结果值 + 时间范围 + 数据来源」；拿不到精确数据就用可核查的估算并注明</td><td>□ 有数字 □ 有基准 □ 标了来源</td></tr>
+<tr><td><strong>④ 复盘</strong></td><td>哪里没做好 / 放弃了什么 / 学到什么能迁移到产品？</td><td>80–120 字</td><td>必须含一句「这经历迁移到产品工作是什么」——这是整段的落点</td><td>□ 有失败或取舍 □ 有产品迁移句</td></tr>
+</tbody></table>
+<p><strong>通用自检（四段全过才算一件成品）</strong>：全文 ≤ 500 字；一个陌生人 3 分钟读完能复述「你解决了什么问题、结果如何」；全文不出现「参与了」「负责了」「学到了很多」。</p>
+<p><strong>指标拿不到怎么办（设计岗常态）</strong>：按可信度递减，四选一并如实标注——① 真实统计（后台 / 店主记录 / 后勤数据）；② 估算（「日均约 27 件，据点位两周观察」）；③ 替代指标（获赞 / 收藏 / 被社团采用）；④ 目标值（标注「目标值，未实测」）。<strong>诚实标注的估算 &gt; 凭空出现的精确数字</strong>——面试追问「怎么测的」时，答案早已写在来源里。</p>
+<hr>
+<h2>二、改写示例 1 · 视觉传达：一张环保主题海报</h2>
+<p><strong>原始作品集写法（❌ 停在这一步）</strong>：</p>
+<blockquote>《旧物新生》环保主题视觉设计。独立完成创意构思、主视觉插画、系列版式与物料延展，获校级毕业设计优秀奖。</blockquote>
+<p>面试官读到的信息：会画图。仅此而已。</p>
+<p><strong>四段式改写后（✅ 目标形态）</strong>：</p>
+<blockquote><strong>问题</strong>：我校旧物回收点长期冷清，后勤数据显示 3 个点位日均回收不足 15 件——不是同学不想回收，而是没人说得清「什么能投、在哪投」。海报要解决的不是「宣传」，是把回收动作从口号变成路径上的一步。<br><strong>方案</strong>：我做了两个取舍。一是放弃全景式插画，改用<strong>单个高对比「投什么」图标</strong>——3 秒内回答「牛奶盒能不能投」；二是放弃均匀铺设，把视觉资源集中投在<strong>宿舍出口与食堂餐具回收处</strong>这两个「动作发生的地方」，教学楼只留引导。三是统一图标系统，让三个点位的物料看起来是同一件事。<br><strong>指标</strong>：投放两周后，三个点位日均回收量从约 12 件升至 27 件（+125%，来源：后勤回收登记表）；食堂点位的错投投诉降为 0（来源：后勤反馈）。<br><strong>复盘</strong>：操场点位几乎没有效果——海报贴在了人流必经地，但不是「手里拿着旧物」的地方。这件事迁移到产品工作：<strong>功能入口要放在用户任务动线上，而不是放在「我们希望用户在的地方」</strong>。这也是我后来做 AI 产品时坚持先画用户旅程图的原因。</blockquote>
+<p><strong>改写对照表（你的设计能力 → 产品经理语言）</strong>：</p>
+<table>
+<thead><tr><th>你写的原来叫</th><th>作品集里改叫</th></tr></thead>
+<tbody>
+<tr><td>视觉层级 / 主视觉</td><td>信息架构：先让用户看什么</td></tr>
+<tr><td>图标系统 / VI（视觉识别系统）规范</td><td>设计系统：一致性降低理解成本</td></tr>
+<tr><td>点位 / 渠道选择</td><td>触点策略：入口放在动线上</td></tr>
+<tr><td>物料延展</td><td>方案落地与多端适配</td></tr>
+<tr><td>获奖经历</td><td>结果背书（放指标段的补充位）</td></tr>
+</tbody></table>
+<hr>
+<h2>三、改写示例 2 · 环境设计：书店「深夜书房」快闪展陈</h2>
+<p><strong>原始作品集写法（❌）</strong>：</p>
+<blockquote>受托为老书店设计 40㎡ 闲置区改造与「深夜书房」快闪展陈，负责空间动线、灯光设计与软装选型。</blockquote>
+<p><strong>四段式改写后（✅）</strong>：</p>
+<blockquote><strong>问题</strong>：合作书店晚 8 点后客流断崖——日均从 60 人跌到不足 10 人，但房租照付。店主的目标不是「好看」，是让 40㎡ 滞销书区在夜间产生现金流。<br><strong>方案</strong>：我做了三个决策。<strong>动线</strong>上，把自习区入口从书店深处移到收银台旁，让「顺便看一眼」变成可能；<strong>分区</strong>上，用灯光把 40㎡ 切成「自习（亮）/ 漫读（柔）/ 咖啡角（暖）」三档，而不是均分；<strong>取舍</strong>上，砍掉原方案里的展墙装置，把预算挪给插座和桌椅——深夜自习者的第一需求是充电，不是拍照背景。<br><strong>指标</strong>：改造后 4 周，晚 8–10 点进店人数从日均 9 人升至 31 人（+244%，来源：店主收银系统客流记录）；连带购书率从 6% 升至 11%；自助咖啡角月增收约 4200 元（来源：店主记账）。<br><strong>复盘</strong>：第 2 周出现流失——晚 10 点后插座不够，部分用户被「劝退」。我补了 6 个插位才稳住。教训是：<strong>体验设计要测「完整旅程」，不能只测「视觉场景」</strong>。迁移到产品：用户在第五步流失，问题常出在第二步的伏笔；上线前要走完全流程，而不是验收完高光截图。</blockquote>
+<p><strong>改写对照表</strong>：</p>
+<table>
+<thead><tr><th>你写的原来叫</th><th>作品集里改叫</th></tr></thead>
+<tbody>
+<tr><td>动线设计</td><td>用户旅程图 / 流程设计</td></tr>
+<tr><td>灯光分区</td><td>信息分层 / 优先级</td></tr>
+<tr><td>材料与预算</td><td>成本约束下的方案取舍</td></tr>
+<tr><td>平面布置图</td><td>产品架构图 / 功能布局</td></tr>
+<tr><td>施工配合</td><td>跨团队协作与落地跟进</td></tr>
+</tbody></table>
+<hr>
+<h2>四、动画方向速查对照（第三类设计背景学员）</h2>
+<table>
+<thead><tr><th>你写的原来叫</th><th>四段式里可以叫</th></tr></thead>
+<tbody>
+<tr><td>分镜脚本</td><td>用户流程拆解：每一步发生什么</td></tr>
+<tr><td>节奏控制（铺垫/高潮）</td><td>信息呈现顺序：先给结论还是先给过程</td></tr>
+<tr><td>试映反馈后修改</td><td>用户反馈驱动的迭代（标准复盘素材）</td></tr>
+<tr><td>引导动画 / 片头</td><td>新用户引导方案（直接就是产品功能）</td></tr>
+<tr><td>一镜到底的转场设计</td><td>降低用户操作断点（流畅性设计）</td></tr>
+</tbody></table>
+<p>一句话提示：动画学员改写时把「我做了一部短片」改成「我用视听语言解决了用户的理解成本问题」——引导动画、产品演示、操作教学，全是产品的刚需场景。</p>
+<hr>
+<h2>五、哪些步骤手机 / 平板能完成（🟢 手机 🟡 平板 🔴 电脑）</h2>
+<table>
+<thead><tr><th>步骤</th><th>设备</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>翻找原始作品、截图存档</td><td>🟢 手机</td><td>相册 + 备忘录建「素材库」文件夹</td></tr>
+<tr><td>回忆并记录「当时为什么这么决策」</td><td>🟢 手机</td><td>语音转文字（微信输入法 / 飞书妙记）再整理——<strong>最容易遗漏也最值钱的素材</strong></td></tr>
+<tr><td>找数据来源（翻聊天记录 / 账本 / 后台）</td><td>🟢 手机</td><td>逐条截图，标注时间</td></tr>
+<tr><td>四段式正文撰写</td><td>🟢 手机</td><td>腾讯文档 / 飞书文档手机端直接写，每段写完按自检表过一遍</td></tr>
+<tr><td>指标表格</td><td>🟢 手机</td><td>腾讯文档表格三列（指标 / 基准→结果 / 来源）</td></tr>
+<tr><td>改写稿排版与配图</td><td>🟡 平板</td><td>平板分屏（左文档右素材）体验最好；手机也能完成</td></tr>
+<tr><td>作品集整合上线</td><td>🔴 电脑（W7D2 整合日集中一次）</td><td><strong>改写工作本身全程手机可完成</strong>，只需在整合日用一次电脑上传排版；无电脑条件者见积木卡 W7「罗思蕊通道」：手机端腾讯文档 / Canva App 可先发 V0.5</td></tr>
+</tbody></table>
+<p><strong>罗思蕊通道（纯移动端走通全流程）</strong>：手机建「素材库」→ 语音速记决策与数据来源 → 四段式初稿（腾讯文档）→ 每周随积木卡归档（W1–W6 各 30–40 分钟）→ W7D2 用手机先发 V0.5 上线占位 → 择机用电脑（或手机版 Canva）升级 V1.0。<strong>每一步都有产出物，没有一步被设备卡死。</strong></p>
+<hr>
+<h2>六、与八周积木的衔接</h2>
+<table>
+<thead><tr><th>时间</th><th>动作</th><th>用到本模板的哪部分</th></tr></thead>
+<tbody>
+<tr><td>W1–W6</td><td>每块积木归档时，顺手用四段式给当周页面写 / 更新叙事</td><td>四段式模板 + 自检表</td></tr>
+<tr><td>W7D2 整合日</td><td>纯设计背景学员完成 1–2 篇「设计作品转产品作品」放附件层 B</td><td>示例 1/2 + 对照表</td></tr>
+<tr><td>W7D5 投递前</td><td>检查每页四段式是否齐、指标是否带来源</td><td>通用自检</td></tr>
+<tr><td>W8</td><td>把最好的四段式改写成 60 秒面试答案</td><td>四段 = STAR 的产品版</td></tr>
+</tbody></table>
+<blockquote>最后提醒：四段式（问题—方案—指标—复盘）与面试课的 STAR 法则（Situation 情境 / Task 任务 / Action 行动 / Result 结果）是同一件事的两种叫法——问题≈S、方案≈T+A、指标≈R。学一次，两处用。</blockquote>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

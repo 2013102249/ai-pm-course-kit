@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集积木卡 W8 · 弹药库页：把作品集变成面试答案 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料 / W7D2-作品集方法论 / 09-积木卡-W8.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>作品集积木卡 W8 · 弹药库页：把作品集变成面试答案</h1>
+<blockquote>八周作品集主线 · 第 <strong>8/8</strong> 块 ｜ 归档时点：<strong>W8D4 / W8D5 两场模拟面试结束后（约 60 分钟）</strong> ｜ 拼入作品集：<strong>自用层「面试弹药库」（不对外）</strong><br>本块不再新增对外页面——W8 的任务是把前七块「翻译」成面试答案。</blockquote>
+<h2>一、本周产出物（全部来自已有作业）</h2>
+<table>
+<thead><tr><th>产出物</th><th>来自哪天</th><th>归档时需要做什么</th></tr></thead>
+<tbody>
+<tr><td>项目问答库</td><td>W8D1–D3 高频题精讲作业</td><td>每道题标注「答案素材来自哪块积木哪一页」</td></tr>
+<tr><td>模拟面试 I 复盘</td><td>W8D4</td><td>整理「被问住的问题 → 事后补的答案」</td></tr>
+<tr><td>模拟面试 II 复盘</td><td>W8D5 结营前</td><td>对照第一场，标出进步点</td></tr>
+</tbody></table>
+<h2>二、判定标准（可验收）</h2>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > 项目问答库覆盖 <strong>8 道高频题</strong>，每道题的答案满足三个条件：①60 秒内讲完；②含「基准值 → 结果值」数字；③标注素材索引（例：「素材：P4 意见闭环表第 2 行」）</li>
+<li class="task"><input type="checkbox" disabled > 两场模拟面试的复盘都有「被问住清单」，且每条已补出答案</li>
+<li class="task"><input type="checkbox" disabled > 弹药库与作品集互链：每条答案能 10 秒内跳到对应积木页——面试前 30 秒复习靠的就是这个索引</li>
+<li class="task"><input type="checkbox" disabled > （结营检查）八块积木全部就位：P1–P6 在线、复盘文档、弹药库</li></ul>
+<h2>三、进入作品集哪一页</h2>
+<p><strong>自用层 · 面试弹药库</strong>（设权限不对外，面试前自己的复习册）：</p>
+<table>
+<thead><tr><th>板块</th><th>放什么</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>高频题答案表</td><td>8 题 ×（60 秒答案 + 素材索引）</td><td>W8D1–D3</td></tr>
+<tr><td>被问住清单</td><td>模拟面试失分题 + 补丁答案</td><td>W8D4 / W8D5</td></tr>
+<tr><td>数字速查卡</td><td>全项目所有关键数字一页纸（基准 → 结果）</td><td>P2–P5 汇总</td></tr>
+<tr><td>三段自我介绍</td><td>30 秒 / 1 分钟 / 3 分钟各一版</td><td>P1 转行宣言扩写</td></tr>
+</tbody></table>
+<p>命名规范：<code>W8-弹药库-姓名</code>（自用层，不进对外链接）。</p>
+<h2>四、设计背景学员转译提示</h2>
+<ul><li>设计背景同学都经历过 <strong>设计答辩</strong>：「这个字体为什么这么选」「这个材料预算怎么算」——被追问不是风险，是你证明思考深度的舞台。弹药库就是把答辩准备的产品版。</li>
+<li>被问住时的话术通用结构（三步）：承认边界 → 给出当时的判断依据 → 给出现在想到的更好做法。模拟面试复盤里，每条失分题都按这三步补答案。</li>
+<li>动画同学：把 60 秒答案当「预告片」剪——先给结论，再给数字，最后留一个钩子让面试官追问你准备好的部分。</li>
+<li>零作品集背景同学：弹药库里补一类题——「你为什么不相关」的转行动机题，素材就是 P1 转行宣言 + W1D2 那条「超级接话员」讲解录音（如果你录了）。</li></ul>
+<h2>五、手机 / 平板可行路径（🟢 全程移动端可完成）</h2>
+<ol><li>问答库表格：手机腾讯文档直接填（8 行 × 3 列：题目 / 60 秒答案 / 素材索引）。</li>
+<li>模拟面试复盘：手机录音（征得同意后）→ 听写关键字 → 三步结构补答案。</li>
+<li>数字速查卡：从 P2–P5 复制数字，手机汇总成一页。</li>
+<li>面试当天：弹药库就在手机里——候场时最后过一遍数字速查卡。</li>
+<li>罗思蕊通道：本块全程手机可完成，无需电脑。</li></ol>
+<h2>六、常见问题</h2>
+<ul><li><strong>Q：八块积木都齐了，为什么还要弹药库？</strong> A：作品集证明「你做过」，弹药库决定「你讲不讲得出来」。同样的积木，索引化之后面试表现完全是两个量级——这是主线的最后一块，也是把积累「变现」的一块。</li>
+<li><strong>Q：模拟面试还是挂了很多题怎么办？</strong> A：W8D5 结营前还有最后一次补丁窗口。挂题清单 + 补丁答案本身就是第八块积木的验收物——「被问住 → 补上」的循环，恰恰是产品经理的日常。</li></ul>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

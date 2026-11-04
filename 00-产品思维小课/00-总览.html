@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品思维小课 · 总览（8 节） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../index.html">资源包总入口</a>
+  <span class="crumb">00-产品思维小课 / 00-总览.md</span>
+  <a class="back" href="../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>产品思维小课 · 总览（8 节）</h1>
+<blockquote>AI 产品经理就业训练营 · 每周第一次课前 10 分钟 ｜ 每节固定四件套：真实反例（3 句）→ 判断框架（1 张图）→ 三个追问（两两互问）→ 今天的动作（当日课堂练习用）<br>设计目标：秦田（测试转产品）、唐嘉焱（设计转产品）补「产品基本知识与思维」，王盛宇、潘韶华、罗思蕊（零基础跨行）用同一套小课建立共同语言——<strong>每天 10 分钟，八周攒出一本产品思维工具箱</strong>。</blockquote>
+<table>
+<thead><tr><th>节</th><th>主题</th><th>使用时点</th><th>今天就能用在哪</th></tr></thead>
+<tbody>
+<tr><td>01</td><td>需求真伪</td><td>W1D1 开营与岗位全景</td><td>一个「签到功能」的反例 + 四问滤网，开营第一天先检查自己的转行决策。</td></tr>
+<tr><td>02</td><td>用户访谈</td><td>W2D1 模型能力边界与选型</td><td>「深色模式」的反例 + 三层下钻，为周五立项准备第一批真实动机。</td></tr>
+<tr><td>03</td><td>PRD 结构</td><td>W3D1 Agent 架构原理</td><td>「六个字 PRD」的反例 + 六块骨架，今天画架构图时先用异常流思维。</td></tr>
+<tr><td>04</td><td>指标定义</td><td>W4D1 用户研究与需求分析</td><td>「活跃度」的反例 + 一横一纵，今天研究提纲里先立北极星和护栏。</td></tr>
+<tr><td>05</td><td>优先级排序</td><td>W5D1 AI 产品增长</td><td>「五个全做」的反例 + 价值-成本四象限，今天只许一个动作进先做区。</td></tr>
+<tr><td>06</td><td>复盘方法</td><td>W6D1 Vibe Coding 与 AI 工程提效</td><td>「追责会」的反例 + 四步复盘环，今天冲刺收工时开 5 分钟迷你复盘。</td></tr>
+<tr><td>07</td><td>跨团队协作</td><td>W7D1 行业纵深</td><td>「人人都回复收到」的反例 + RACI 四角色，明天整合日的任务清单先标好字母。</td></tr>
+<tr><td>08</td><td>表达与汇报</td><td>W8D1 面试全景地图</td><td>「五分钟铺垫」的反例 + 结论先行三段式——面试第一天，先装上 30 秒电梯演讲。</td></tr>
+</tbody></table>
+<h2>使用规则</h2>
+<ol><li>开课前 10 分钟，讲师（或轮值学员）照读反例 → 投屏框架图 → 两两互问 → 布置「今天的动作」。</li>
+<li>每节主讲正文 ≤600 字，10 分钟内含一次口头练习（追问互问或动作陈述）。</li>
+<li>「今天的动作」全部与当日课程任务挂钩：小课不是加课，是当天任务的第一块垫脚石。</li>
+<li>第八周结营时，8 张框架图就是你面试反问环节的「我的方法论」素材——面试官问「你怎么判断需求真伪」，图就在你脑子里。</li></ol>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

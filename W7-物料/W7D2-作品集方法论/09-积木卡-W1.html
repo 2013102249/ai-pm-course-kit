@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集积木卡 W1 · 起点页：证明你已经开始像产品经理一样做事 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料 / W7D2-作品集方法论 / 09-积木卡-W1.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>作品集积木卡 W1 · 起点页：证明你已经开始像产品经理一样做事</h1>
+<blockquote>八周作品集主线 · 第 <strong>1/8</strong> 块 ｜ 归档时点：<strong>W1D5 课后（约 30 分钟）</strong> ｜ 拼入作品集：<strong>P1 起点页</strong><br>铁律：积木卡只定义「怎么归档、怎么算合格」，<strong>零新增任务</strong>——所有产出物都来自本周已有作业。</blockquote>
+<h2>一、本周产出物（全部来自已有作业）</h2>
+<table>
+<thead><tr><th>产出物</th><th>来自哪天</th><th>归档时需要做什么</th></tr></thead>
+<tbody>
+<tr><td>30 条场景提示词练习集</td><td>W1D3 作业（已交）</td><td>挑出评分最高的 8 条，其余整体打包</td></tr>
+<tr><td>个人职业规划书 V1</td><td>W1D5 课后任务一（已交）</td><td>确认是 1v1 确认过的版本</td></tr>
+<tr><td>「超级接话员」讲解录音（可选）</td><td>W1D2 作业</td><td>3 分钟内、讲给非技术朋友听的那条</td></tr>
+</tbody></table>
+<h2>二、判定标准（可验收）</h2>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > 30 条提示词中 <strong>≥24 条</strong>五要素评分 ≥4/5（不达标的标黄，W3 周末前补齐——它们是面试「你怎么写提示词」的现场素材）</li>
+<li class="task"><input type="checkbox" disabled > 职业规划书是 <strong>1v1 确认后</strong>的版本（未确认 = 未定稿 = 不归档）</li>
+<li class="task"><input type="checkbox" disabled > P1 页面开头有一段 <strong>80–120 字「我为什么转行 AI 产品」</strong>，提到一次自己的原专业（设计 / 内容 / 其他），并把它说成资产而不是包袱</li>
+<li class="task"><input type="checkbox" disabled > 作品集草稿文档已建立，命名规范：<code>姓名-AI产品作品集-V1</code></li></ul>
+<h2>三、进入作品集哪一页</h2>
+<p><strong>P1 起点页</strong>（全册第一页）：</p>
+<table>
+<thead><tr><th>板块</th><th>放什么</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>页头</td><td>80–120 字转行宣言</td><td>本周新写（唯一的新增文字，30 分钟内）</td></tr>
+<tr><td>技能证明</td><td>提示词练习集链接 + 「8 条最佳」截图</td><td>W1D3 作业</td></tr>
+<tr><td>目标与路径</td><td>职业规划书链接（赛道、8 周目标）</td><td>W1D5 作业</td></tr>
+</tbody></table>
+<p>命名规范：<code>W1-P1-起点页-姓名</code>。P1 的作用：面试官 30 秒内知道你是谁、从哪来、要去哪。</p>
+<h2>四、设计背景学员转译提示</h2>
+<ul><li>视觉传达 / 环境设计 / 动画的同学：<strong>审美和排版是你们作品集的先天优势</strong>，但 P1 要证明的是「思维换轨」。写转行宣言时用一句句式：「我过去用＿＿回答＿＿问题，现在我要用产品回答用户的问题。」</li>
+<li>把「我会做图」翻译成产品语言：<strong>我能把信息组织到让人 3 秒看懂</strong>——这句话 W7 整合日还会用到。</li></ul>
+<h2>五、手机 / 平板可行路径（🟢 全程移动端可完成）</h2>
+<ol><li>新建腾讯文档 / 飞书文档（手机 App 即可）→ 命名为作品集草稿。</li>
+<li>提示词练习集在飞书学习档案里 → 复制链接粘贴进 P1。</li>
+<li>转行宣言用手机备忘录打草稿 → 粘贴进 P1。</li>
+<li>平板加分项：用备忘录 / GoodNotes 手绘一张 P1 排版草样（可选）。</li></ol>
+<h2>六、常见问题</h2>
+<ul><li><strong>Q：现在作品集只有提示词和规划书，是不是太单薄？</strong> A：不单薄，这是「学习轨迹的证据」。到 W6 你会拥有一个上线的产品——到时候面试官最想看的恰恰是「你是怎么一步步长出来的」，P1 就是这条轨迹的第一格。</li>
+<li><strong>Q：转行宣言写不好怎么办？</strong> A：先写三句大白话（我从哪来 / 我发现了什么 / 我要去哪），再压缩到 100 字。不要写形容词。</li></ul>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

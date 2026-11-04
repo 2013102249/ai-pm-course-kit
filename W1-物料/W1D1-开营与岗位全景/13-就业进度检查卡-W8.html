@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>就业进度检查卡 · W8（覆盖 W7–W8 · 结营总检） · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W1-物料 / W1D1-开营与岗位全景 / 13-就业进度检查卡-W8.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>就业进度检查卡 · W8（覆盖 W7–W8 · 结营总检）</h1>
+<blockquote>自查时点：<strong>第 8 周结营日</strong>，与结营材料一起提交 ｜ 所属阶段：内推试水（W7）→ 批量投递（W8 起）｜ 本卡对应：作品集积木 8/8、就业冲刺<br>本卡是八周的收官检查：勾满 5 项，你带走的是一个「可投递状态」——不是 promise，是清单。</blockquote>
+<h2>五项检查指标</h2>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > <strong>1. 作品集 8/8 全部就位且上线</strong>：P1–P6 六页齐全、四段式导语每页就位、手机端逐页可读；深度复盘文档挂附件层 A；弹药库建好（不对外）</li>
+<li class="task"><input type="checkbox" disabled > <strong>2. 简历终版通过诊断</strong>：W7D3 撰写、W7D4 诊断后的终版已定稿，作品集链接在简历「作品集位」可点击</li>
+<li class="task"><input type="checkbox" disabled > <strong>3. 已投递 ≥10 家且漏斗周报启动</strong>：W7D5 首批 ≥10 家投递完成并打卡；投递计划表 ≥50 行；投递漏斗五层数字（浏览 → 沟通 → 约面 → 面完 → offer）开始每周五自报——数据自记录、不对比他人</li>
+<li class="task"><input type="checkbox" disabled > <strong>4. 两场模拟面试完成且失分题有补丁</strong>：W8D4、W8D5 各一场，「被问住清单」每条已按三步结构补出答案（承认边界 → 当时依据 → 现在的更好做法）</li>
+<li class="task"><input type="checkbox" disabled > <strong>5. 弹药库 8 道高频题就位</strong>：每题 60 秒答案 + 基准值→结果值数字 + 素材索引（能 10 秒跳到对应积木页）</li></ul>
+<h2>未达标怎么办</h2>
+<table>
+<thead><tr><th>指标</th><th>勾不上时的补救动作（结营后仍可执行）</th></tr></thead>
+<tbody>
+<tr><td>1 作品集</td><td>对照《09-积木卡-W7》上线自检清单，缺哪页补哪页——每块积木卡都写了最小验收线</td></tr>
+<tr><td>2 简历终版</td><td>执行 W7D4 诊断意见中未完成项；改完请一位同学做「10 秒扫描测试」（能否说出你投什么岗）</td></tr>
+<tr><td>3 投递与漏斗</td><td>投递计划表未满 50 行的先补清单；已投的逐条补「跟进日期」——没写跟进日期视为没投完</td></tr>
+<tr><td>4 模拟面试</td><td>约同学互面一场线上补测；失分题按弹药库三步结构补答案</td></tr>
+<tr><td>5 弹药库</td><td>每天补 2 题，4 天补完；先补「项目深挖」类，再补「转行动机」类</td></tr>
+</tbody></table>
+<h2>与课程 / 主线的对应</h2>
+<ul><li>课程：W7D1 行业纵深 → W7D2 作品集整合日 → W7D3/D4 简历 → W7D5 投递策略 → W8D1–D3 高频题 → W8D4/D5 模拟面试与结营</li>
+<li>作品集：《09-积木卡-W7》《09-积木卡-W8》</li>
+<li>投递三轮：内推试水（W7）→ 批量投递（W8 起）——结营后漏斗周报继续每周五自报，助教通道保持开放</li>
+<li>就业数据页：结业后 30 天内，你的真实去向数据将更新进《09-就业数据页》，成为下一期学员看到的证据链——这就是这条链路的意义</li></ul>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

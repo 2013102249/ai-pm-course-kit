@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集积木卡 W3 · 原型页：让人看见你脑子里的东西 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料 / W7D2-作品集方法论 / 09-积木卡-W3.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>作品集积木卡 W3 · 原型页：让人看见你脑子里的东西</h1>
+<blockquote>八周作品集主线 · 第 <strong>3/8</strong> 块 ｜ 归档时点：<strong>W3D5 原型评审 I 结束后（约 40 分钟）</strong> ｜ 拼入作品集：<strong>P3 原型页</strong><br>铁律：零新增任务——三件套与评审都是本周主项目任务，积木卡只定义归档。</blockquote>
+<h2>一、本周产出物（全部来自已有作业）</h2>
+<table>
+<thead><tr><th>产出物</th><th>来自哪天</th><th>归档时需要做什么</th></tr></thead>
+<tbody>
+<tr><td>Agent 架构图（正式版）</td><td>W3D1 草图 → 本周完善</td><td>导出一张清晰图（截图 / 图片）</td></tr>
+<tr><td>工作流原型</td><td>W3D2 课堂搭建（扣子 / Dify）</td><td>复制可访问链接；顺手录 60 秒演示录屏</td></tr>
+<tr><td>知识库原型</td><td>W3D3 周末作业</td><td>复制链接 + 截一张「带引用来源」的回答图</td></tr>
+<tr><td>原型评审 I 反馈与修改记录</td><td>W3D5 评审</td><td>整理「意见 → 怎么改的」对照</td></tr>
+</tbody></table>
+<h2>二、判定标准（可验收）</h2>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > 架构图四要素齐全（规划 / 记忆 / 工具 / 执行），且标注了<strong>至少 1 个接管点、1 个步数上限、1 份具体工具清单</strong>（W3D1 验收标准）</li>
+<li class="task"><input type="checkbox" disabled > 工作流 / 知识库原型<strong>至少一个有可访问链接或 60 秒录屏</strong>——「能打开」是原型页的及格线</li>
+<li class="task"><input type="checkbox" disabled > 评审 I 意见逐条闭环（每条意见后写「已改 / 不改的理由」）</li>
+<li class="task"><input type="checkbox" disabled > P3 已放 1 张架构图 + 1 个演示录屏（或 GIF）+ 1 张知识库引用来源截图</li></ul>
+<h2>三、进入作品集哪一页</h2>
+<p><strong>P3 原型页</strong>（全册的「东西长什么样」）：</p>
+<table>
+<thead><tr><th>板块</th><th>放什么</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>架构图</td><td>正式版图片 + 100 字讲解（四要素各一句）</td><td>W3D1</td></tr>
+<tr><td>能跑的东西</td><td>工作流或知识库链接 + 60 秒录屏 / GIF</td><td>W3D2 / W3D3</td></tr>
+<tr><td>证据链</td><td>评审 I 「改前 → 改后」对比一组</td><td>W3D5</td></tr>
+</tbody></table>
+<p>命名规范：<code>W3-P3-原型页-姓名</code>。P3 的作用：把「我说我懂 Agent」变成「你看，这是我的架构、这是能跑的原型、这是评审后我改过的地方」。</p>
+<h2>四、设计背景学员转译提示</h2>
+<ul><li>环境设计同学：<strong>展陈平面图和 Agent 架构图是近亲</strong>——分区对应模块、动线对应流程、出入口对应接管点。你画过平面图，就画得懂架构图，只是换了图例。</li>
+<li>视觉传达同学：架构图的排版（层级、对齐、留白）就是版式设计的活；动画同学：60 秒演示录屏的分镜感是你的本行——<strong>先讲哪一步、后讲哪一步，你比谁都熟</strong>。</li>
+<li>评审 I 的「改前 → 改后」对比，就是你做设计改稿的日常——产品经理叫它「迭代证据」，是全册最值钱的素材类型之一。</li></ul>
+<h2>五、手机 / 平板可行路径（🟡 归档动作移动端可完成）</h2>
+<ol><li>架构图：课上已在电脑画完 → 归档只需<strong>手机拍照 / 截图</strong>放入 P3（平板可用 GoodNotes 手绘批注讲解，加分）。</li>
+<li>演示录屏：电脑端录屏后发到自己微信 → 手机保存 → 上传文档；或直接用电脑截图拼接。</li>
+<li>评审闭环表：手机表格逐条打勾（腾讯文档表格）。</li>
+<li>真正的搭建动作（扣子 / Dify）本周课内已用电脑完成——<strong>归档不要求重新搭建</strong>。</li>
+<li>罗思蕊通道：全部动作手机可完成，唯一建议是录屏找同学帮忙或用电脑 10 分钟。</li></ol>
+<h2>六、常见问题</h2>
+<ul><li><strong>Q：原型太简陋，能放吗？</strong> A：能。P3 证明的是「架构思路 + 评审闭环」，不是炫技。面试官见过太多精美但讲不清楚的作品——<strong>你讲得清楚，就赢了大多数</strong>。</li>
+<li><strong>Q：两个原型只有一个能跑怎么办？</strong> A：及格线就是「至少一个能跑」。另一个放架构图 + 讲解，标注「当前状态：设计中」——诚实标注比遮掩专业。</li></ul>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集积木卡 W5 · 迭代页：用数据说话 · AI 产品经理课程资源包</title>
+<style>
+:root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.85; }
+.sidebar { position:fixed; top:0; left:0; bottom:0; width:212px; background:#241E38; overflow-y:auto; z-index:50; padding:12px 0 24px; transition:transform .2s; scrollbar-width:thin; }
+.sidebar .brand { display:block; color:#fff; font-weight:800; font-size:13px; padding:10px 16px 6px; text-decoration:none; }
+.sidebar .sub { font-size:10.5px; color:#8F88AD; padding:0 16px 10px; border-bottom:1px solid #35305A; margin-bottom:6px; }
+.sidebar .wh { font-size:10.5px; font-weight:700; color:#A78BFA; letter-spacing:2px; padding:10px 16px 3px; }
+.sidebar a.dl { display:block; font-size:12.2px; color:#CFC9E6; text-decoration:none; padding:5px 14px; margin:1px 8px; border-radius:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sidebar a.dl:hover { background:#35305A; color:#fff; }
+.sidebar a.dl.cur { background:var(--purple); color:#fff; font-weight:700; }
+.sidebar .ql { margin-top:12px; border-top:1px solid #35305A; padding-top:8px; }
+.main { margin-left:212px; }
+.menu-btn { display:none; position:fixed; left:12px; bottom:14px; z-index:60; background:var(--purple); color:#fff; border:none; border-radius:999px; padding:9px 16px; font-size:12.5px; font-weight:700; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; font-family:inherit; }
+.scrim { display:none; position:fixed; inset:0; background:rgba(20,16,40,.5); z-index:45; }
+@media (max-width:1100px) { .sidebar { transform:translateX(-100%); } .sidebar.open { transform:none; } .main { margin-left:0; } .menu-btn { display:block; } .scrim.on { display:block; } }
+.topbar { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20; }
+.topbar .in { max-width:900px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.topbar .brand2 { font-weight:800; font-size:14px; color:var(--purple); text-decoration:none; white-space:nowrap; }
+.topbar .crumb { font-size:13px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.topbar .back { font-size:13px; color:#fff; background:var(--purple); text-decoration:none; padding:6px 14px; border-radius:20px; white-space:nowrap; }
+.wrap { max-width:900px; margin:0 auto; padding:24px 24px 80px; background:#fff; min-height:60vh; }
+.kitnav { display:flex; flex-wrap:wrap; gap:8px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; }
+.kitnav .lbl { width:100%; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:1px; }
+.kitnav a { font-size:12.5px; color:var(--purple); background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 13px; text-decoration:none; }
+.kitnav a:hover { border-color:var(--purple); background:var(--purple-light); }
+.kitnav span.cur { font-size:12.5px; color:#fff; background:var(--purple); border:1px solid var(--purple); border-radius:16px; padding:4px 13px; font-weight:700; }
+h1 { font-size:26px; line-height:1.4; margin:14px 0 18px; padding-bottom:12px; border-bottom:3px solid var(--purple); }
+h2 { font-size:20px; margin:34px 0 12px; padding-left:12px; border-left:4px solid var(--purple); }
+h3 { font-size:17px; margin:26px 0 10px; color:var(--blue); }
+h4 { font-size:15px; margin:20px 0 8px; }
+p { margin:10px 0; }
+ul,ol { margin:10px 0 10px 22px; }
+li { margin:5px 0; }
+strong { color:var(--purple); }
+table { border-collapse:collapse; width:100%; margin:14px 0; font-size:13.5px; display:block; overflow-x:auto; }
+th { background:var(--purple); color:#fff; font-weight:600; padding:9px 12px; text-align:left; white-space:nowrap; }
+td { border:1px solid var(--line); padding:8px 12px; vertical-align:top; }
+tr:nth-child(even) td { background:var(--bg); }
+blockquote { border-left:4px solid var(--blue); background:#F5F3FF; padding:10px 16px; margin:12px 0; border-radius:0 8px 8px 0; color:#4C1D95; }
+code { background:#F3F0FA; color:var(--purple); padding:2px 6px; border-radius:5px; font-size:13px; font-family:'SF Mono',Menlo,monospace; }
+pre { background:#1E1B2E; color:#E9E5F5; padding:16px; border-radius:10px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
+.foot { margin-left:212px; padding:0 24px 40px; font-size:12px; color:var(--muted); text-align:center; }
+@media (max-width:1100px) { .foot { margin-left:0; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in">
+  <a class="brand2" href="../../../index.html">资源包总入口</a>
+  <span class="crumb">W7-物料 / W7D2-作品集方法论 / 09-积木卡-W5.md</span>
+  <a class="back" href="../../../index.html">← 返回</a>
+</div></div>
+<div class="wrap md-body">
+<h1>作品集积木卡 W5 · 迭代页：用数据说话</h1>
+<blockquote>八周作品集主线 · 第 <strong>5/8</strong> 块 ｜ 归档时点：<strong>W5D5 主项目中期评审后（约 40 分钟）</strong> ｜ 拼入作品集：<strong>P5 数据与迭代页</strong><br>铁律：零新增任务——中期评审材料是本周主项目任务，积木卡只定义归档。</blockquote>
+<h2>一、本周产出物（全部来自已有作业）</h2>
+<table>
+<thead><tr><th>产出物</th><th>来自哪天</th><th>归档时需要做什么</th></tr></thead>
+<tbody>
+<tr><td>主项目中期评审材料</td><td>W5D5 周日 22:00 提交（讲师逐份确认）</td><td>确认是讲师确认通过的版本</td></tr>
+<tr><td>AB 实验记录 / 数据分析作业</td><td>W5D2 课堂与作业</td><td>挑 1 组最完整的「假设—实验—结论」</td></tr>
+<tr><td>商业化与成本测算</td><td>W5D3 作业</td><td>挑 1 张成本结构表</td></tr>
+</tbody></table>
+<h2>二、判定标准（可验收）</h2>
+<ul class="tasks"><li class="task"><input type="checkbox" disabled > 中期评审通过（讲师逐份确认名单内有你）</li>
+<li class="task"><input type="checkbox" disabled > 至少 <strong>1 组完整的「假设 → 实验 → 结论」</strong>记录：我怀疑什么、怎么验证的、数据说了什么、我决定怎么改</li>
+<li class="task"><input type="checkbox" disabled > P5 出现至少 <strong>1 组「基准值 → 结果值」</strong>数字，并标注来源（哪次测试 / 哪个看板、何时测的）</li>
+<li class="task"><input type="checkbox" disabled > P5 已更新四段式叙事的「指标」段——W2 留的占位，第一次填真数字</li></ul>
+<h2>三、进入作品集哪一页</h2>
+<p><strong>P5 数据与迭代页</strong>（全册的「我不拍脑袋」）：</p>
+<table>
+<thead><tr><th>板块</th><th>放什么</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>四段式叙事</td><td>指标段填入真实数字（基准值 → 结果值 + 来源）</td><td>四段式模板</td></tr>
+<tr><td>迭代证据</td><td>1 组「假设—实验—结论」完整记录</td><td>W5D2 / W5D5</td></tr>
+<tr><td>成本意识</td><td>成本结构表 1 张（AI 产品经理的独特加分项）</td><td>W5D3</td></tr>
+<tr><td>证据链</td><td>中期评审「评委提的哪个问题改变了我的判断」（如有）</td><td>W5D5</td></tr>
+</tbody></table>
+<p>命名规范：<code>W5-P5-迭代页-姓名</code>。P5 的作用：回答面试必考题「你的项目效果怎么衡量的、之后怎么迭代的」。转行者最怕被贴「只会执行」标签，P5 就是反证。</p>
+<h2>四、设计背景学员转译提示</h2>
+<ul><li>你做过 <strong>改稿</strong>：第 1 稿为什么改、第 3 稿为什么又改——把「改稿说明」的思维搬过来，P5 就是它的数据版：不是「我觉得不好看」，而是「数据说哪里不行」。</li>
+<li>视觉传达同学：A/B 两版海报测点击率你也许做过——<strong>你已经做过 AB 实验了</strong>，只是当时它叫「方案比稿」。</li>
+<li>动画同学：试映会（test screening）后改镜头，就是「用户反馈 → 迭代决策」的完整闭环，写进 P5 的复盘段毫无违和。</li>
+<li>提醒：设计行业常说「甲方觉得」，从 W5 起改说「数据显示」——这是 P5 页要帮你养成的说话习惯。</li></ul>
+<h2>五、手机 / 平板可行路径（🟢 主要动作移动端可完成）</h2>
+<ol><li>中期评审材料在 W5D5 已用文档提交——归档只需<strong>复制链接 + 截图关键图表</strong>。</li>
+<li>「假设—实验—结论」记录：手机表格三列填完（每列一句话即可）。</li>
+<li>成本结构表截图：手机截屏 → 相册标注圈出最大成本项。</li>
+<li>四段式指标段：手机文档改 80 字（数字 + 来源 + 时间）。</li>
+<li>罗思蕊通道：本块全程手机可完成，无需电脑。</li></ol>
+<h2>六、常见问题</h2>
+<ul><li><strong>Q：我的数字不好看（只提升了一点点）能放吗？</strong> A：能放，诚实的小幅提升 + 一句归因和迭代计划，比造一个漂亮数字安全一百倍——面试官一追问就穿帮。一票否决的是造假，不是数字小。</li>
+<li><strong>Q：还没有「基准值」怎么办？</strong> A：把上线前的测试成绩（W6D4 会正式跑，但 W5 已有评测记录）当基准。实在没有，写「目标值」并标注「目标值，实测 W6 回填」——定义清楚，同样专业。</li></ul>
+</div>
+<div class="foot" style="margin-left:0">AI 产品经理就业训练营 · 课程资源包 · 本页由同名源文件生成</div>
+</body>
+</html>
