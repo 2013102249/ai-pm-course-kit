@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>导学案 · W6 周四《测试验收与真实用户试用》 · AI 产品经理课程资源包</title>
+<title>导学案 · W6 周四《测试验收与真实用户试用》（300 分钟版） · AI 产品经理课程资源包</title>
 <style>
 :root { --purple:#7C3AED; --purple-deep:#5B21B6; --purple-light:#F1EBFD; --blue:#2563EB; --blue-light:#E8EFFD; --ink:#1E1B2E; --muted:#6B7280; --line:#E9E5F5; --bg:#FAF9FE; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -112,504 +112,304 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 </div></div>
 <div class="wrap md-body">
 <div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><span class="cur">03-导学案</span><a href="04-播客稿.html">04-播客稿</a><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
-<h1>导学案 · W6 周四《测试验收与真实用户试用》</h1>
-<blockquote>
-<p>AI 产品经理就业训练营 · 学员版 · 课上直接填写 · 姓名：____________ 组别：____________<br />
-本课两份课堂模板 = 明天路演的「数据弹药库」，请全程留痕，当晚 22:00 前提交。</p>
-</blockquote>
-<h2>一、课前预习（上课前完成，约 25 分钟）</h2>
-<p><strong>预习任务 1</strong>：打开《AI 产品评估打分工具》，点击「加载示例数据」，把统计面板四个数字抄在下面（上课要核对）：</p>
-<ul>
-<li>badcase 率：____________ ｜ 综合均分：____________ ｜ 通过率：____________ ｜ 用例总数：____________</li>
-</ul>
+<h1>导学案 · W6 周四《测试验收与真实用户试用》（300 分钟版）</h1>
+<blockquote><p>AI 产品经理就业训练营 · 第六周第四天 · 300 分钟（6 课时 × 50 分钟）· 学员版 · 课上直接填写 · 姓名：____________ 组别：____________<br />本课两份课堂模板 = 明天路演的「数据弹药库」，请全程留痕，当晚 22:00 前提交。<br />6 节地图：第 1 节 术语精讲与零层入口（0–50）｜ 第 2 节 核心原理讲授 A（50–100）｜ 第 3 节 核心原理讲授 B + 案例（100–150）｜ 第 4 节 实操演练与巡场（150–200）｜ 第 5 节 面试讲解与追问防御（200–250）｜ 第 6 节 复盘 · 作品集归档 · 当堂验收（250–300）。<br /><strong>数据口径声明</strong>：本导学案出现的通过率、badcase 率、综合均分、相似度、用户原声等数字与语料均为「<strong>教学示例</strong>」，仅用于演示流程与判据；课堂第 4 节的角色扮演记录为「<strong>教学演练</strong>」，不是真实用户数据。真实数据由你课后自行采集，不编造、不把演练当真实反馈。</p></blockquote>
+<hr />
+<h2>〇、课前预习（第 1 节前完成，约 25 分钟，保留原预习表）</h2>
+<p><strong>预习任务 1</strong>：打开《AI 产品评估打分工具》，点击「加载示例数据」，把统计面板四个数字抄在下面（上课要核对；以下均为<strong>教学示例</strong>）：</p>
+<ul><li>badcase 率：____________ ｜ 综合均分：____________ ｜ 通过率：____________ ｜ 用例总数：____________</li></ul>
 <p><strong>预习任务 2</strong>：翻出你 W2D3 建的评测集（≥50 条），数一数：总条数 ______ 条；其中「答非所问」类预期 ______ 条；「编造政策 / 数字」类预期 ______ 条；「格式错误」类预期 ______ 条。（没有类型标注的，按你的记忆估个数，上课要用来对账）</p>
 <p><strong>预习任务 3</strong>：列出你的 10 人试用候选名单（至少 15 个候选，按匹配度排序，上课修订）：</p>
 <table>
-<thead>
-<tr>
-<th>#</th>
-<th>候选人（可写称呼）</th>
-<th>与目标用户的匹配点</th>
-<th>优先级（高/中/低）</th>
-</tr>
-</thead>
+<thead><tr><th>#</th><th>候选人（可写称呼）</th><th>与目标用户的匹配点</th><th>优先级（高/中/低）</th></tr></thead>
 <tbody>
-<tr>
-<td>1</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>2</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>3</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>4</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>1</td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td></td><td></td><td></td></tr>
+<tr><td>6</td><td></td><td></td><td></td></tr>
+<tr><td>7</td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td></td><td></td><td></td></tr>
+<tr><td>9</td><td></td><td></td><td></td></tr>
+<tr><td>10</td><td></td><td></td><td></td></tr>
+<tr><td>11</td><td></td><td></td><td></td></tr>
+<tr><td>12</td><td></td><td></td><td></td></tr>
+<tr><td>13</td><td></td><td></td><td></td></tr>
+<tr><td>14</td><td></td><td></td><td></td></tr>
+<tr><td>15</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<blockquote><p>提醒（第 1 节术语 12）：全是熟人 = <strong>样本偏差</strong>，量再大结论也偏；按匹配度排序，别只找会说好话的人。</p></blockquote>
 <p><strong>预习思考题</strong>（上课会点名回答）：</p>
-<ol>
-<li>一条 badcase，前三层（引用原文、chunk、召回）都查不出问题，第四层该做什么？这说明了什么？</li>
-</ol>
+<ol><li>一条 badcase，前三层（引用原文、chunk、召回）都查不出问题，第四层该做什么？这说明了什么？</li></ol>
 <hr />
-<ol>
-<li>通过率的定义是「所有维度 ≥4 分且未标记 badcase」。为什么一条内容全对但格式 2 分的用例，也算不通过？</li>
-</ol>
+<ol><li>通过率的定义是「所有维度 ≥4 分且未标记 badcase」。为什么一条内容全对但格式 2 分的用例，也算不通过？</li></ol>
 <hr />
-<h2>二、课堂笔记（课上填写）</h2>
-<h3>1. badcase 四层排查漏斗（环节一，讲师破案示范时记录）</h3>
+<ol><li>「准确率」在评测里可能指 Accuracy、Precision 还是通过率？三者区别一句话写下来：</li></ol>
+<hr />
+<hr />
+<h2>一、6 节学员版填写区</h2>
+<h3>第 1 节 · 术语精讲与零层入口（0–50 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 能一句话说清本日 12 个术语，并填完《术语自测表》（见第四节 4.1）。</li><li>☐ 能辨析「准确率 / 精确率 / 召回率 / 通过率」与「样本偏差 / 样本量不足」两组易混概念。</li><li>☐ 当堂小测 ≥8/10。</li></ul>
+<p><strong>随堂填写</strong></p>
+<p>12 术语速记（每格写 ≤30 字的一句话定义，英文缩写首次写全称 + 中文）：</p>
 <table>
-<thead>
-<tr>
-<th>排查层</th>
-<th>看什么</th>
-<th>判定标准</th>
-<th>本轮案例的结论</th>
-</tr>
-</thead>
+<thead><tr><th>#</th><th>术语</th><th>我的一句话定义</th><th>我最容易混的是</th></tr></thead>
 <tbody>
-<tr>
-<td>第 1 层 · 引用原文</td>
-<td>点开引用来源读原文</td>
-<td>原文错/乱码 → 解析问题</td>
-<td></td>
-</tr>
-<tr>
-<td>第 2 层 · chunk 完整</td>
-<td>检索块是否含完整答案</td>
-<td>被切断/主题稀释 → 分块问题</td>
-<td></td>
-</tr>
-<tr>
-<td>第 3 层 · 召回正确</td>
-<td>正确资料排第几、进没进提示词</td>
-<td>没召回/排序垫底 → 检索问题</td>
-<td></td>
-</tr>
-<tr>
-<td>第 4 层 · 裸模型对照</td>
-<td>好资料直接贴给裸模型</td>
-<td>仍错 → 生成问题</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>1</td><td>badcase（失败用例）</td><td></td><td></td></tr>
+<tr><td>2</td><td>评测集</td><td></td><td></td></tr>
+<tr><td>3</td><td>跑分</td><td></td><td></td></tr>
+<tr><td>4</td><td>准确率（Accuracy，整体判对比例）</td><td></td><td></td></tr>
+<tr><td>5</td><td>召回率（Recall，查全率）</td><td></td><td></td></tr>
+<tr><td>6</td><td>归因</td><td></td><td></td></tr>
+<tr><td>7</td><td>回归测试</td><td></td><td></td></tr>
+<tr><td>8</td><td>验收标准</td><td></td><td></td></tr>
+<tr><td>9</td><td>灰度</td><td></td><td></td></tr>
+<tr><td>10</td><td>用户试用</td><td></td><td></td></tr>
+<tr><td>11</td><td>反馈闭环</td><td></td><td></td></tr>
+<tr><td>12</td><td>样本偏差</td><td></td><td></td></tr>
+</tbody></table>
+<p>易混三组填空（照 02-讲课稿 1.2 核对）：</p>
+<ul><li>漏捞 = ____________ 率低；误捞 = ____________（Precision，查准率）低。</li><li>网眼放大 → 召回率 ______、精确率 ______（填「升 / 降」）。</li><li>通过率 = ____________________ 且 ____________________（两条硬杠）。</li></ul>
+<p>零层入口（完全不了解技术的同学填）：我用一句大白话理解「模型是根据喂给它的资料猜下一个字」：</p>
+<hr />
+<p><strong>自测 3 题</strong>（答案第 6 节复核，先不翻书）</p>
+<ol><li>「资料里有却没捞到」是准确率低还是召回率低？答：____________</li><li>评测集和训练集能不能用同一批题？为什么？答：____________</li><li>全是熟人试用，是样本量不足还是样本偏差？答：____________</li></ol>
+<hr />
+<h3>第 2 节 · 核心原理讲授 A · badcase 归因（50–100 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 能独立画出四层排查漏斗，并说出「无归因不派单」纪律。</li><li>☐ 能对一条 badcase 写出「修复动作 + 责任方 + 回归用例」三样产出。</li><li>☐ 能说清「顺序不能反」的成本理由。</li></ul>
+<p><strong>随堂填写：badcase 四层排查漏斗表</strong>（保留原课堂笔记表，讲师破案示范时记录）</p>
+<table>
+<thead><tr><th>排查层</th><th>看什么</th><th>判定标准</th><th>本轮案例的结论（教学示例）</th></tr></thead>
+<tbody>
+<tr><td>第 1 层 · 引用原文</td><td>点开引用来源读原文</td><td>原文错/乱码 → 解析问题</td><td></td></tr>
+<tr><td>第 2 层 · chunk 完整</td><td>检索块是否含完整答案</td><td>被切断/主题稀释 → 分块问题</td><td></td></tr>
+<tr><td>第 3 层 · 召回正确</td><td>正确资料排第几、进没进提示词</td><td>没召回/排序垫底 → 检索问题</td><td></td></tr>
+<tr><td>第 4 层 · 裸模型对照</td><td>好资料直接贴给裸模型</td><td>仍错 → 生成问题</td><td></td></tr>
+</tbody></table>
 <p><strong>纪律填空</strong>：无归因不派单；先 ______ 后 ______；先 ______ 后 ______。</p>
-<h3>2. 我的 badcase 归因统计（环节二跑分后填写）</h3>
+<p>正面案例 / 反面案例各记一句（教学示例）：</p>
+<ul><li>正面：________________________________________________</li><li>反面：________________________________________________</li><li>边界（纯生成、无知识库时从哪查起）：________________________________________________</li></ul>
+<p><strong>自测 3 题</strong></p>
+<ol><li>破案案例四层走完，定位是哪类问题？答：____________</li><li>为什么先查解析、最后才认生成？答：____________</li><li>归因表只填「模型不行」为什么算废纸？答：____________</li></ol>
+<hr />
+<h3>第 3 节 · 核心原理讲授 B + 案例 · 跑分、试用与判据（100–150 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 能读出通过率、badcase 率、雷达凹点三件事，并说清「补根因不补最低分」。</li><li>☐ 能背出上线双条件与反馈分级 P0/P1/P2 判据。</li><li>☐ 能说清名单法、任务式邀请、原声照抄的价值。</li></ul>
+<p><strong>随堂填写：跑分四个数字</strong>（工具示例数据，全部为<strong>教学示例</strong>）</p>
 <table>
-<thead>
-<tr>
-<th>归因类别</th>
-<th>条数</th>
-<th>占比</th>
-<th>代表用例编号</th>
-</tr>
-</thead>
+<thead><tr><th>指标</th><th>工具示例读数</th><th>我自己的评测集读数</th><th>判据</th></tr></thead>
 <tbody>
-<tr>
-<td>解析问题</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>分块问题</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>检索问题</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>生成问题</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>合计</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>用例总数</td><td></td><td></td><td>真实标准 ≥50 条</td></tr>
+<tr><td>badcase 率</td><td></td><td></td><td>警戒线 30%，超线暂缓上线</td></tr>
+<tr><td>综合均分（满分 5）</td><td></td><td></td><td>—</td></tr>
+<tr><td>通过率</td><td></td><td></td><td>上线线 ≥90% 且无 P0</td></tr>
+</tbody></table>
+<p><strong>随堂填写：我的 badcase 归因统计</strong>（保留原课堂笔记表，环节二跑分后填写）</p>
+<table>
+<thead><tr><th>归因类别</th><th>条数</th><th>占比</th><th>代表用例编号</th></tr></thead>
+<tbody>
+<tr><td>解析问题</td><td></td><td></td><td></td></tr>
+<tr><td>分块问题</td><td></td><td></td><td></td></tr>
+<tr><td>检索问题</td><td></td><td></td><td></td></tr>
+<tr><td>生成问题</td><td></td><td></td><td></td></tr>
+<tr><td>合计</td><td></td><td></td><td></td></tr>
+</tbody></table>
 <p><strong>根因判断</strong>：占比最高的一类是 ______，它指向的修复动作是 ______，责任方是 ______。</p>
-<h2>三、课堂模板一：测试报告（环节二完成，当晚 22:00 前提交）</h2>
-<blockquote>
-<p>本模板可直接作为《测试报告》正文；数据用《AI 产品评估打分工具》导出后回填。</p>
-</blockquote>
+<p><strong>随堂填写：三条原声定级</strong>（讲师念的教学示例原声）</p>
+<table>
+<thead><tr><th>原声（教学示例，照抄）</th><th>我定的级 P0/P1/P2</th><th>判据一句话</th></tr></thead>
+<tbody>
+<tr><td>「我问年假几天，它特别肯定地说 15 天，我差点就信了」</td><td></td><td></td></tr>
+<tr><td>「它每轮都忘了我刚才说过的话」</td><td></td><td></td></tr>
+<tr><td>「界面有点丑，按钮也小」</td><td></td><td></td></tr>
+</tbody></table>
+<p>上线纪律链路填空：评测集 ≥50 条 → 跑分 → badcase 率 ≤30% 警戒线 → 归因修复 + ____________ → 上线双条件（____________ 且 ____________）→ ____________（小流量验证）→ ≥10 人试用 → ____________ 闭环。</p>
+<p><strong>自测 3 题</strong></p>
+<ol><li>通过率 92%（教学示例）能不能上线？答：____________</li><li>雷达图三个凹点，工具只报「准确性」，你先补哪个？答：____________</li><li>9 个说挺好、1 个找不到入口，听谁的？答：____________</li></ol>
+<hr />
+<h3>第 4 节 · 实操演练与巡场（150–200 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 能导出测试报告 V0.9（四段结构齐全）。</li><li>☐ 能在「角色扮演 + 三轮轮换」里完成 ≥10 人次试用流程演练，并填四要素记录表。</li><li>☐ 能说清「课堂 = 教学演练，真实 ≥10 人试用在今晚」，不把演练当真实数据。</li></ul>
+<p><strong>随堂填写：三轮轮换记录</strong>（每轮 6 分钟；本表为<strong>教学演练记录</strong>）</p>
+<table>
+<thead><tr><th>轮次</th><th>我扮的角色（产品方 / 试用用户 / 观察员）</th><th>用的画像角色卡</th><th>对方产品的一句话</th><th>我「想关掉它的念头」出现在哪一步</th></tr></thead>
+<tbody>
+<tr><td>第 1 轮</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>第 2 轮</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>第 3 轮</td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><strong>随堂填写：≥10 行反馈登记表</strong>（四要素 + 改进动作；完整版见第三节《课堂模板二》，此处先草记；<strong>教学演练</strong>）</p>
+<table>
+<thead><tr><th>#</th><th>用户画像</th><th>使用场景（他自己的话）</th><th>原声引用（照抄勿润色）</th><th>分级</th><th>改进动作</th></tr></thead>
+<tbody>
+<tr><td>U-01</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-02</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-03</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-04</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-05</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-06</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-07</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-08</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-09</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-10</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>我的设备与替代动作（勾选）：□ 电脑（可导出 .md） □ 平板（单栏跑分 + 分屏记录） □ 手机（看投屏读数 + 群表单回传，导出今晚用电脑补）</p>
+<p><strong>自测 3 题</strong></p>
+<ol><li>产品方为什么「不许提示、不许解释」？答：____________</li><li>为什么要三轮轮换、而不是一个人测到底？答：____________</li><li>课堂这 ≥10 行能写进正式《用户试用反馈报告》吗？答：____________</li></ol>
+<hr />
+<h3>第 5 节 · 面试讲解与追问防御（200–250 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 能按「判据先行 → 术语准确 → 追问防御」三件套答 4 类指定题。</li><li>☐ 两两模拟被连追 ≥2 层不崩，填完《面试模拟记录表》（见第四节 4.2）。</li><li>☐ 抄录 3 条本日面试金句。</li></ul>
+<p><strong>随堂填写：我的 60 秒答法草稿</strong>（挑 2 题写，每题至少用 1 个当日术语）</p>
+<table>
+<thead><tr><th>题号 / 题目</th><th>我的判据句（第一句就要给标准）</th><th>用到的术语</th><th>我预判他下一问是</th></tr></thead>
+<tbody>
+<tr><td>题 ____：</td><td></td><td></td><td></td></tr>
+<tr><td>题 ____：</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><strong>随堂填写：本日面试金句抄录</strong>（至少 3 句，第八周面试课抽查）</p>
+<ol><li>________________________________________________</li><li>________________________________________________</li><li>________________________________________________</li></ol>
+<p><strong>自测 3 题</strong>（写出踩分点关键词即可）</p>
+<ol><li>「怎么验证模型效果」必须报哪三样？答：____________</li><li>「评测集怎么建」被追问「怎么防止自己出的题自己会做」，你怎么接？答：____________</li><li>面试里说数字，必须加哪一句声明？答：____________</li></ol>
+<hr />
+<h3>第 6 节 · 复盘 · 作品集归档 · 当堂验收（250–300 min）</h3>
+<p><strong>本节我要会什么</strong></p>
+<ul><li>☐ 三句收束能复述；术语小测 ≥8/10。</li><li>☐ 5 项产出填入《本日作品集积木》（见第四节 4.3），归档位置写到具体文件夹。</li><li>☐ 按 7 条硬标准自检，未达标项写明补救动作与时限。</li></ul>
+<p><strong>随堂填写：课后巩固与提交清单</strong>（保留原第五节全部内容）</p>
+<p><strong>提交清单（对照《路演前验收清单》逐项打勾）</strong>：</p>
+<ul><li>☐ 《测试报告》：测试范围 / 用例数 / 通过率 / badcase 清单（附归因）/ 修复记录，五段完整</li><li>☐ 试用邀请已发出（名单 ≥15 候选，≥10 人已确认愿意试用）</li><li>☐ 《用户试用反馈收集表》框架已建（任务说明 3 条已写好）</li><li>☐ 《术语自测表》《面试模拟记录表》《本日作品集积木》三张表填完</li><li>☐ 课堂演练记录已标注「教学演练」，未混入真实反馈</li></ul>
+<p><strong>本课面试金句抄录复核</strong>（与第 5 节一致即可）：____________ / ____________ / ____________</p>
+<p><strong>一句话总结</strong>（保留原填空，按 300 分钟版补全）：<br />badcase 归因走四层漏斗——______、______、______、______；跑分看三个数——______、______、______；试用反馈分三级——______、______、______；面试答题三件套——______、______、______。</p>
+<p><strong>疑问清单</strong>（写下今天没听懂的点，明早路演彩排前找讲师答疑）：</p>
+<ol><li>________________________________________________</li><li>________________________________________________</li></ol>
+<p><strong>自测 3 题</strong></p>
+<ol><li>今天五份产出，哪份是路演「数据」页直接能放的？答：____________</li><li>第 3 项作品集积木必须标什么？答：____________</li><li>7 条硬标准里，哪一条是「总闸门」？答：____________</li></ol>
+<hr />
+<h2>二、课堂模板一：测试报告（保留原模板，第 3、4、6 节使用，当晚 22:00 前提交）</h2>
+<blockquote><p>本模板可直接作为《测试报告》正文；数据用《AI 产品评估打分工具》导出后回填。示例数字均为<strong>教学示例</strong>。</p></blockquote>
 <h3>1. 测试范围</h3>
 <table>
-<thead>
-<tr>
-<th>项目</th>
-<th>内容</th>
-</tr>
-</thead>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
 <tbody>
-<tr>
-<td>产品名称</td>
-<td></td>
-</tr>
-<tr>
-<td>本日验收范围（功能模块）</td>
-<td></td>
-</tr>
-<tr>
-<td>测试方式</td>
-<td>评测集跑分（AI 产品评估打分工具）+ 人工逐条复核</td>
-</tr>
-<tr>
-<td>评测人</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>产品名称</td><td></td></tr>
+<tr><td>本日验收范围（功能模块）</td><td></td></tr>
+<tr><td>测试方式</td><td>评测集跑分（AI 产品评估打分工具）+ 人工逐条复核</td></tr>
+<tr><td>评测人</td><td></td></tr>
+</tbody></table>
 <h3>2. 用例与结果总览</h3>
 <table>
-<thead>
-<tr>
-<th>指标</th>
-<th>数值</th>
-<th>判定</th>
-</tr>
-</thead>
+<thead><tr><th>指标</th><th>数值</th><th>判定</th></tr></thead>
 <tbody>
-<tr>
-<td>评测集总用例数</td>
-<td></td>
-<td>底线 ≥50 条</td>
-</tr>
-<tr>
-<td>已跑完用例数</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>通过数 / 通过率</td>
-<td>/ ______%</td>
-<td>上线线 ≥90%</td>
-</tr>
-<tr>
-<td>badcase 数 / badcase 率</td>
-<td>/ ______%</td>
-<td>警戒线 30%，超线暂缓上线</td>
-</tr>
-<tr>
-<td>综合均分（满分 5）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>维度短板（雷达凹点）</td>
-<td></td>
-<td>先补归因后的根因</td>
-</tr>
-</tbody>
-</table>
+<tr><td>评测集总用例数</td><td></td><td>底线 ≥50 条</td></tr>
+<tr><td>已跑完用例数</td><td></td><td></td></tr>
+<tr><td>通过数 / 通过率</td><td>/ ______%</td><td>上线线 ≥90% 且无 P0</td></tr>
+<tr><td>badcase 数 / badcase 率</td><td>/ ______%</td><td>警戒线 30%（教学示例口径），超线暂缓上线</td></tr>
+<tr><td>综合均分（满分 5）</td><td></td><td></td></tr>
+<tr><td>维度短板（雷达凹点）</td><td></td><td>先补归因后的根因</td></tr>
+</tbody></table>
 <h3>3. badcase 清单（附归因）</h3>
 <table>
-<thead>
-<tr>
-<th>编号</th>
-<th>问题描述（教学化标签）</th>
-<th>归因类别</th>
-<th>证据（引用/chunk/召回/裸模型）</th>
-<th>修复动作</th>
-<th>责任人</th>
-<th>状态</th>
-</tr>
-</thead>
+<thead><tr><th>编号</th><th>问题描述（教学化标签）</th><th>归因类别</th><th>证据（引用/chunk/召回/裸模型）</th><th>修复动作</th><th>责任人</th><th>状态</th></tr></thead>
 <tbody>
-<tr>
-<td>B-01</td>
-<td>例：编造政策（答「72 小时无条件退款」）</td>
-<td>生成</td>
-<td>裸模型对照仍编造</td>
-<td>提示词加拒答约束 + 输出数字校验</td>
-<td></td>
-<td>待修</td>
-</tr>
-<tr>
-<td>B-02</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>B-03</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>B-04</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>B-01</td><td>例：编造政策（答「72 小时无条件退款」，教学示例）</td><td>生成</td><td>裸模型对照仍编造</td><td>提示词加拒答约束 + 输出数字校验</td><td></td><td>待修</td></tr>
+<tr><td>B-02</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>B-03</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>B-04</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
 <h3>4. 修复记录</h3>
 <table>
-<thead>
-<tr>
-<th>修复项</th>
-<th>对应 badcase 编号</th>
-<th>修复动作</th>
-<th>修复时间</th>
-<th>回归结果（通过/未通过）</th>
-</tr>
-</thead>
+<thead><tr><th>修复项</th><th>对应 badcase 编号</th><th>修复动作</th><th>修复时间</th><th>回归结果（通过/未通过）</th></tr></thead>
 <tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>纪律：每条修复必须回归，不许带伤上路演台。</p>
-</blockquote>
-<h2>四、课堂模板二：用户试用反馈收集表（环节三建立，课后回收填写）</h2>
-<blockquote>
-<p>发放给试用用户前，先填好「任务说明」；回收后按四要素逐人登记；≥10 人、≥3 条有效改进、原声引用 ≥2 条为硬标准。</p>
-</blockquote>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<blockquote><p>纪律：每条修复必须回归测试，不许带伤上路演台。</p></blockquote>
+<hr />
+<h2>三、课堂模板二：用户试用反馈收集表（保留原模板，第 4 节演练 + 课后回收填写）</h2>
+<blockquote><p>发放给试用用户前，先填好「任务说明」；回收后按四要素逐人登记；≥10 人、≥3 条有效改进、原声引用 ≥2 条为硬标准。<strong>课堂演练记录须标注「教学演练」，真实反馈课后从真人回收，不编造用户语录。</strong></p></blockquote>
 <h3>1. 试用任务说明（随邀请话术一并发出）</h3>
 <table>
-<thead>
-<tr>
-<th>项</th>
-<th>内容</th>
-</tr>
-</thead>
+<thead><tr><th>项</th><th>内容</th></tr></thead>
 <tbody>
-<tr>
-<td>产品一句话介绍</td>
-<td></td>
-</tr>
-<tr>
-<td>试用任务 1（覆盖核心链路）</td>
-<td></td>
-</tr>
-<tr>
-<td>试用任务 2（覆盖核心链路）</td>
-<td></td>
-</tr>
-<tr>
-<td>试用任务 3（覆盖核心链路）</td>
-<td></td>
-</tr>
-<tr>
-<td>必填问题</td>
-<td>「哪个环节，你产生了想关掉它的念头？」</td>
-</tr>
-</tbody>
-</table>
+<tr><td>产品一句话介绍</td><td></td></tr>
+<tr><td>试用任务 1（覆盖核心链路）</td><td></td></tr>
+<tr><td>试用任务 2（覆盖核心链路）</td><td></td></tr>
+<tr><td>试用任务 3（覆盖核心链路）</td><td></td></tr>
+<tr><td>必填问题</td><td>「哪个环节，你产生了想关掉它的念头？」</td></tr>
+</tbody></table>
 <h3>2. 反馈登记表（每人一行）</h3>
 <table>
-<thead>
-<tr>
-<th>#</th>
-<th>用户画像（身份/与目标用户的匹配点）</th>
-<th>使用场景（他用自己的话描述的任务）</th>
-<th>原声引用（照抄，勿润色）</th>
-<th>问题分级（P0/P1/P2）</th>
-<th>我的改进动作</th>
-</tr>
-</thead>
+<thead><tr><th>#</th><th>用户画像（身份/与目标用户的匹配点）</th><th>使用场景（他用自己的话描述的任务）</th><th>原声引用（照抄，勿润色）</th><th>问题分级（P0/P1/P2）</th><th>我的改进动作</th></tr></thead>
 <tbody>
-<tr>
-<td>U-01</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-02</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-03</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-04</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-05</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-06</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-07</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-08</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-09</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>U-10</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<tr><td>U-01</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-02</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-03</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-04</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-05</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-06</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-07</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-08</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-09</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>U-10</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
 <h3>3. 问题分级汇总（反馈收完后填写）</h3>
 <table>
-<thead>
-<tr>
-<th>级别</th>
-<th>判据</th>
-<th>条数</th>
-<th>处理要求</th>
-</tr>
-</thead>
+<thead><tr><th>级别</th><th>判据</th><th>条数</th><th>处理要求</th></tr></thead>
 <tbody>
-<tr>
-<td>P0</td>
-<td>编造 / 安全 / 数据错误</td>
-<td></td>
-<td>当天修 + 回归</td>
-</tr>
-<tr>
-<td>P1</td>
-<td>体验 / 流程 / 功能缺口</td>
-<td></td>
-<td>排期修，写明版本</td>
-</tr>
-<tr>
-<td>P2</td>
-<td>吐槽 / 审美 / 边角</td>
-<td></td>
-<td>记录，不占修复资源</td>
-</tr>
-</tbody>
-</table>
+<tr><td>P0</td><td>编造 / 安全 / 数据错误</td><td></td><td>当天修 + 回归测试</td></tr>
+<tr><td>P1</td><td>体验 / 流程 / 功能缺口</td><td></td><td>排期修，写明版本</td></tr>
+<tr><td>P2</td><td>吐槽 / 审美 / 边角</td><td></td><td>记录，不占修复资源</td></tr>
+</tbody></table>
 <p><strong>有效改进汇总（≥3 条，明日路演「数据与思考」页直接用）</strong>：</p>
-<ol>
-<li>
+<ol><li>________________________________________________</li><li>________________________________________________</li><li>________________________________________________</li></ol>
 <hr />
-</li>
-<li>
-<hr />
-</li>
-<li>
-<hr />
-</li>
-</ol>
-<h2>五、课后巩固（当晚 22:00 前完成）</h2>
-<p><strong>提交清单（对照《路演前验收清单》逐项打勾）</strong>：</p>
-<ul>
-<li>[ ] 《测试报告》：测试范围 / 用例数 / 通过率 / badcase 清单（附归因）/ 修复记录，五段完整</li>
-<li>[ ] 试用邀请已发出（名单 ≥15 候选，≥10 人已确认愿意试用）</li>
-<li>[ ] 《用户试用反馈收集表》框架已建（任务说明 3 条已写好）</li>
-</ul>
-<p><strong>本课面试金句抄录（至少抄 3 句，第八周面试课会抽查）</strong>：</p>
-<ol>
-<li>
-<hr />
-</li>
-<li>
-<hr />
-</li>
-<li>
-<hr />
-</li>
-</ol>
-<p><strong>一句话总结</strong>：badcase 归因走四层漏斗——<strong><strong><strong>、</strong></strong></strong>、<strong><strong><strong>、</strong></strong></strong>；跑分看三个数——<strong><strong><strong>、</strong></strong></strong>、<strong><strong><strong>；试用反馈分三级——</strong></strong></strong>、<strong><strong><strong>、</strong></strong></strong>。</p>
-<p><strong>疑问清单</strong>（写下今天没听懂的点，明早路演彩排前找讲师答疑）：</p>
-<ol>
-<li>
-<hr />
-</li>
-<li>
-<hr />
-</li>
-</ol>
+<h2>四、本日三张新增表（300 分钟版必备）</h2>
+<h3>4.1 《术语自测表》（12 行；第 1 节填「自评」，第 6 节填「复核」）</h3>
+<table>
+<thead><tr><th>#</th><th>术语</th><th>我能一句话说清吗（√ / ×）</th><th>我能辨析易混概念吗（√ / ×）</th><th>我能在面试里说出来吗（√ / ×）</th><th>自评（第 1 节）</th><th>复核（第 6 节小测后）</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>badcase（失败用例）</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>评测集</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>跑分</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>准确率（Accuracy，整体判对比例）</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td>召回率（Recall，查全率）</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6</td><td>归因</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>7</td><td>回归测试</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td>验收标准</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>9</td><td>灰度</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10</td><td>用户试用</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>11</td><td>反馈闭环</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>12</td><td>样本偏差</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><strong>达标线</strong>：三列全 √ ≥10 行；当堂小测 ≥8/10。未达标的行，回查 <code>03-配图素材/术语卡/</code> 对应卡片补。</p>
+<h3>4.2 《面试模拟记录表》（≥4 行；第 5 节两两模拟填写；含追问记录与自评分）</h3>
+<table>
+<thead><tr><th>#</th><th>题号 / 题目</th><th>我扮的角色（面试官 / 候选人）</th><th>被追问了几层</th><th>追问记录（把面试官的原问抄下来）</th><th>我卡在哪一层</th><th>自评分（10 分制）</th><th>我最该改的一句</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><strong>达标线</strong>：每人 ≥4 行、自评分 ≥8；两类失分重点自查——□ 没把「通过率」说成「准确率」 □ 没把课堂演练说成真实用户数据 □ 数字都标了「教学示例」。</p>
+<h3>4.3 《本日作品集积木》（5 项；第 6 节填写）</h3>
+<table>
+<thead><tr><th>#</th><th>产出物</th><th>完成度（未开始 / 进行中 / 已完成）</th><th>归档位置（写到具体文件夹）</th><th>可否放进路演 / 面试作品集</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>badcase 四类归因表 + 四层漏斗笔记</td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>评测集跑分截图 / 测试报告 V0.9</td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td>≥10 行试用演练记录表（<strong>须标注「教学演练」</strong>）</td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>《测试报告》框架（五段式）+ 修复回归记录</td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td>面试 60 秒答法卡（≥2 题）+《面试模拟记录表》</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p><strong>归档纪律</strong>：第 3 项必须标「教学演练」；真实用户数据与全量跑分属课后硬标准，课堂上不编、不假验收。</p>
+
+
 </div>
 </div>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>

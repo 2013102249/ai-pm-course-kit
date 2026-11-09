@@ -113,10 +113,7 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <div class="wrap md-body">
 <div class="kitnav"><span class="lbl">本日八件套 · 顶部切换</span><a href="01-教案.html">01-教案</a><a href="02-讲课稿.html">02-讲课稿</a><a href="03-导学案.html">03-导学案</a><span class="cur">04-播客稿</span><a href="05-配图清单.html">05-配图清单</a><a href="06-分层习题.html">06-分层习题</a><a href="07-交互使用说明.html">07-交互使用说明</a><a href="08-PPT大纲.html">08-PPT大纲</a></div>
 <h1>播客稿 · 《Agent：从答题到办事》</h1>
-<blockquote>
-<p>栏目：《AI 产品经理课余充电》第 7 期 · 时长约 8 分钟 · 用途：课前预习 / 课后复习音频<br />
-录制提示：语速放缓，类比处停顿 1 秒；「」「」内为重读；结尾语速放慢。</p>
-</blockquote>
+<blockquote><p>栏目：《AI 产品经理课余充电》第 7 期 · 时长约 8 分钟 · 用途：300 分钟（6 课时 × 50 分钟）教学日 W3D1《Agent 架构原理》的课前预习 / 课后复习音频<br />录制提示：语速放缓，类比处停顿 1 秒；「」「」内为重读；结尾语速放慢。本期为正常一期，栏目、期号、8 分钟定位与正文保持不变。</p></blockquote>
 <hr />
 <h2>开场钩子（0:00–0:40）</h2>
 <p>早上好，欢迎回到《AI 产品经理课余充电》，我是你的讲师。</p>
@@ -142,39 +139,44 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <hr />
 <h2>附：制作备注</h2>
 <table>
-<thead>
-<tr>
-<th>项目</th>
-<th>建议</th>
-</tr>
-</thead>
+<thead><tr><th>项目</th><th>建议</th></tr></thead>
 <tbody>
-<tr>
-<td>语速</td>
-<td>每分钟约 220–240 字，口播全文约 1600 字</td>
-</tr>
-<tr>
-<td>背景音乐</td>
-<td>轻电子，音量压到人声 20% 以下</td>
-</tr>
-<tr>
-<td>章节标记</td>
-<td>0:40 从答题到办事 / 2:30 两个必考设计 / 5:00 MCP 新杠杆 / 6:30 结尾</td>
-</tr>
-<tr>
-<td>金句清单（shownotes 可列出）</td>
-<td>从答题到办事 / 长着四肢的大模型 / 拿 token 赌运气 / 什么时候交还给人类 / AI 时代的 USB 接口</td>
-</tr>
-<tr>
-<td>配套物料</td>
-<td>shownotes 附《Agent 四要素架构图》与交互式架构图（Agent Tab）链接</td>
-</tr>
-<tr>
-<td>事实核对提示</td>
-<td>Manus 为通用 Agent 产品、扣子为 Agent 开发平台，仅客观提及产品形态，不引用未公开数据</td>
-</tr>
-</tbody>
-</table>
+<tr><td>语速</td><td>每分钟约 220–240 字，口播全文约 1600 字</td></tr>
+<tr><td>背景音乐</td><td>轻电子，音量压到人声 20% 以下</td></tr>
+<tr><td>章节标记</td><td>0:40 从答题到办事 / 2:30 两个必考设计 / 5:00 MCP 新杠杆 / 6:30 结尾</td></tr>
+<tr><td>金句清单（shownotes 可列出）</td><td>从答题到办事 / 长着四肢的大模型 / 拿 token 赌运气 / 什么时候交还给人类 / AI 时代的 USB 接口</td></tr>
+<tr><td>配套物料</td><td>shownotes 附《Agent 四要素架构图》与交互式架构图（Agent Tab）链接</td></tr>
+<tr><td>事实核对提示</td><td>Manus 为通用 Agent 产品、扣子为 Agent 开发平台，仅客观提及产品形态，不引用未公开数据</td></tr>
+<tr><td>教学日口径</td><td>本音频服务于 300 分钟（6 课时 × 50 分钟）教学日：第 1 节术语精讲前预习，第 5 节面试讲解后复习；正文时长仍为约 8 分钟，不随课时拉长</td></tr>
+</tbody></table>
+<hr />
+<h2>附录 A · 本日术语速记（12 个术语，各一句话）</h2>
+<blockquote><p>供学员在 300 分钟教学日第 1 节前后速查、第 6 节归档前复核。英文缩写首次出现一律给全称与中文；术语卡链接统一指向 <code>03-配图素材/术语卡/</code>，卡片待制。</p></blockquote>
+<table>
+<thead><tr><th>#</th><th>术语（全称 + 中文）</th><th>一句话速记</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Agent（智能体）</td><td>会自己拆任务、用工具、把事办完的 AI，交付的是结果不是答案。</td></tr>
+<tr><td>2</td><td>四要素（规划 / 记忆 / 工具 / 执行）</td><td>让大模型能办事的四样零件，难点在产品设计不在模型。</td></tr>
+<tr><td>3</td><td>ReAct（Reasoning + Acting，推理与行动交替）</td><td>「想一步、做一步、看一眼、再想」的循环，产品价值是把思考摊开给用户看。</td></tr>
+<tr><td>4</td><td>规划（Planning）</td><td>把大目标拆成可执行步骤，必须配任务边界、步数上限与重试策略。</td></tr>
+<tr><td>5</td><td>记忆（Memory）</td><td>短期上下文加长期存取，要设计「记什么、忘什么」，用户可见可删。</td></tr>
+<tr><td>6</td><td>工具调用（Tool Use / Tool Calling）</td><td>借外部能力查数据办事情，工具描述文案就是提示词的一部分。</td></tr>
+<tr><td>7</td><td>MCP（Model Context Protocol，模型上下文协议）</td><td>给模型和工具定统一插口，把 M×N 套适配降到 M+N，像 AI 时代的 USB。</td></tr>
+<tr><td>8</td><td>Multi-Agent（多智能体）</td><td>多个 Agent 分工协作，是复杂度黑洞，默认先问单 Agent 能不能解决。</td></tr>
+<tr><td>9</td><td>自主性（Autonomy）</td><td>自己往下跑的程度，按动作可逆性分档，不可逆动作必须交还人类。</td></tr>
+<tr><td>10</td><td>边界（Boundary，产品边界）</td><td>划清该做什么、做到哪、何时停，含任务边界、步数上限与接管点。</td></tr>
+<tr><td>11</td><td>幻觉（Hallucination）</td><td>一本正经编出不存在的内容，办事型产品靠工具查证与人工确认兜底。</td></tr>
+<tr><td>12</td><td>可观测性（Observability）</td><td>用户能看见走到第几步，是信任地基，不是给工程师看的运行日志。</td></tr>
+</tbody></table>
+<blockquote><p>正文里出现的其他缩写补注：API（Application Programming Interface，应用程序接口）、LLM（Large Language Model，大语言模型）、token（用量计费单位）、A2A（Agent-to-Agent，Agent 之间的协作协议）、RAG（Retrieval-Augmented Generation，检索增强生成，下期主题）。</p></blockquote>
+<hr />
+<h2>附录 B · 面试 30 秒口播（4 题，每题约 30 秒稿）</h2>
+<blockquote><p>对应 300 分钟教学日第 5 节四道必答题。每题控制在 110–130 字、约 30 秒；骨架统一为「先结论 → 踩分点 → 一个当日术语 → 一个自己项目的例子」。跟读时语速放缓，术语处重读。</p></blockquote>
+<p><strong>题 1 · Agent 和普通 Chatbot（聊天机器人）有什么区别？</strong><br />「分界线不是更智能，是交付物和责任主体。Chatbot 你问一句它答一句，交付答案、责任在你；Agent 你给目标，它拆任务、调工具、把结果拿回来，做错一步是真金白银的损失，责任在产品。所以我做这类产品先画边界，不先选模型——可观测性、步数上限、人工接管点，一样都不能少。我主项目里『对外发送』那一步，一定设成暂停加确认。」</p>
+<p><strong>题 2 · ReAct 怎么工作，产品经理为什么要关心？</strong><br />「ReAct 全称 Reasoning + Acting，推理与行动交替，循环是思考、行动、观察、再思考四拍。但产品关心的不是循环，是把它摊开给用户看：用户知道它在干嘛是信任，跑偏能叫停是可中断，出错能定位到第几步是可纠偏。呈现上我默认只给一行一句的步骤清单，想看细节再点开——可观测性不是 debug 界面，是信任地基。」</p>
+<p><strong>题 3 · 什么时候不该用 Agent？</strong><br />「三类场景先踩刹车：路径完全固定的用固定工作流，只查一条政策的用检索问答，涉及支付发送删除这类不可逆动作的，拆成『分析、建议、决策』三段，AI 出建议、人类拍板。顺序永远是三问：先问单 Agent 能不能解决，再问要不要 Agent，最后才问要不要多个。跟业务方讲一句实话——全自动的隐含代价是错误也全自动，可靠性优先于自动化率。」</p>
+<p><strong>题 4 · 多 Agent 的复杂度怎么控？</strong><br />「默认不用。多 Agent 是复杂度黑洞：两个 Agent 能做的事，别用五个。它多出三个隐藏成本——协作协议、消息损耗、失败传播，每多一环就多一次有损传话、多一处难定位的出错口。只有任务真能并行、上下文真装不下、专业或权限真需要隔离，三个信号占其一才考虑拆。我主项目路径串行、上下文塞得下，所以用单 Agent，把复杂度省下来花在接管点和步数上限上。」</p>
+
 </div>
 </div>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>

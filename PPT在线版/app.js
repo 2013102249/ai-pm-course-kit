@@ -24,14 +24,15 @@
 
   async function loadIndex() {
     if (indexData) return indexData;
-    const res = await fetch('data/index.json', { cache: 'no-cache' });
+    const res = await fetch('data/index.json?t=' + Date.now(), { cache: 'no-store' });
     indexData = await res.json();
     return indexData;
   }
 
   async function loadDeck(id) {
     if (deckCache.has(id)) return deckCache.get(id);
-    const res = await fetch(`data/decks/${id}.json`);
+    const v = (indexData && indexData.build) || Date.now();
+    const res = await fetch(`data/decks/${id}.json?v=${encodeURIComponent(v)}`);
     if (!res.ok) throw new Error('课件加载失败：' + id);
     const data = await res.json();
     deckCache.set(id, data);

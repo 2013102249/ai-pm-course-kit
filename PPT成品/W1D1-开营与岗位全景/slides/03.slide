@@ -3,37 +3,62 @@
         <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
         <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D1</Text>
     </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 18</Text>
+    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 20</Text>
+
     <Box style={{ flexDirection: 'column', gap: 16 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>开营规则四条</Text>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>一线履历：三个可验证的企业级项目</Text>
         <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
     </Box>
-    <Box style={{ flexDirection: 'row', gap: 24, marginTop: 44, height: 200 }}>
-        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: 28 }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+    <Text style={{ fontSize: 17, color: '#64748B', marginTop: 12 }}>不是二手案例——这三个项目，都是我本人负责、驻场或验收过的。</Text>
+
+    <Box style={{ flexDirection: 'row', gap: 18, marginTop: 22 }}>
+        <Box style={{ flex: 1, height: 336, background: '#F5F3FF', borderRadius: 14, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
+            <Box style={{ flexDirection: 'column', gap: 10 }}>
+                <Box style={{ width: 34, height: 34, borderRadius: 8, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>百度智慧城市</Text>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>驻场产品经理</Text>
+                <Text style={{ fontSize: 14, color: '#4A4560', lineHeight: 1.65 }}>城市级项目长期驻场：把政企方的业务诉求翻译成产品方案，与客户、研发、交付在现场同频推进。</Text>
             </Box>
-            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>飞书归档</Text>
+            <Box style={{ flexDirection: 'column', gap: 8 }}>
+                <Box style={{ width: '100%', height: 1, background: '#DDD6FE' }} />
+                <Text style={{ fontSize: 13, color: '#7C3AED' }}>对应课程：W4 用户研究与需求分析</Text>
+            </Box>
         </Box>
-        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: 28 }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+        <Box style={{ flex: 1, height: 336, background: '#EFF6FF', borderRadius: 14, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
+            <Box style={{ flexDirection: 'column', gap: 10 }}>
+                <Box style={{ width: 34, height: 34, borderRadius: 8, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>甘肃省科技厅项目</Text>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>项目负责人 · 省成果转化平台</Text>
+                <Text style={{ fontSize: 14, color: '#4A4560', lineHeight: 1.65 }}>项目经理 + 产品 + 测试三角色兼任：定原型与开发方案、控制进度、完成全流程测试并参与验收汇报。</Text>
             </Box>
-            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>每周五验收</Text>
+            <Box style={{ flexDirection: 'column', gap: 8 }}>
+                <Box style={{ width: '100%', height: 1, background: '#BFDBFE' }} />
+                <Text style={{ fontSize: 13, color: '#2563EB' }}>对应课程：W5 项目推进与跨团队协作</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, height: 336, background: '#F5F3FF', borderRadius: 14, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
+            <Box style={{ flexDirection: 'column', gap: 10 }}>
+                <Box style={{ width: 34, height: 34, borderRadius: 8, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                </Box>
+                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>智慧交通 · 产品负责人</Text>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>智慧停车 / 公交数字化</Text>
+                <Text style={{ fontSize: 14, color: '#4A4560', lineHeight: 1.65 }}>C 端车主 / B 端车场 / G 端监管四层架构：ETC 无感支付、动态定价与错峰调度，车联网数据秒级回传。</Text>
+            </Box>
+            <Box style={{ flexDirection: 'column', gap: 8 }}>
+                <Box style={{ width: '100%', height: 1, background: '#DDD6FE' }} />
+                <Text style={{ fontSize: 13, color: '#7C3AED' }}>对应课程：W4 方案设计与异常兜底</Text>
+            </Box>
         </Box>
     </Box>
-    <Box style={{ flexDirection: 'row', gap: 24, marginTop: 24, height: 200 }}>
-        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: 28 }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-            </Box>
-            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>W3 起小组评审</Text>
-        </Box>
-        <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: 28 }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
-            </Box>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>一个主项目贯穿八周</Text>
-        </Box>
+
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 80, marginTop: 24, background: '#F8F7FC', borderRadius: 12, padding: '0 26px', gap: 14 }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E1B4B' }}>行业覆盖</Text>
+        <Text style={{ fontSize: 15, color: '#4A4560' }}>政务 · 智慧交通 · 能源电力 · 医疗健康 · 智能制造 · 教育科技 · 金融咨询</Text>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED', marginLeft: 'auto' }}>7 大行业 · 18 个在线平台</Text>
     </Box>
 </Slide>
