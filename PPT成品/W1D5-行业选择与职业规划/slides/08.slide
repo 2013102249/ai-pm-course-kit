@@ -1,93 +1,36 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D5</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 30, right: 60, fontSize: 14, color: '#64748B' }}>08 / 16</Text>
-  <Box style={{ flexDirection: 'column', width: '100%', height: '100%' }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', width: '100%' }}>
-      <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六大赛道对比表（下）</Text>
-      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>本页精讲：电商零售 · 企业 SaaS · 出海</Text>
-    </Box>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
-    <Box style={{ width: '100%', height: 392, border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden', marginTop: 20 }}>
-      <Table
-        style={{ width: '100%', height: '100%' }}
-        defaultTextStyle={{ fontSize: 15, textAlign: 'center', color: '#1E1B4B' }}
-        defaultCellStyle={{
-          border: {
-            left: { width: 1, color: '#E5E7EB' },
-            right: { width: 1, color: '#E5E7EB' },
-            top: { width: 1, color: '#E5E7EB' },
-            bottom: { width: 1, color: '#E5E7EB' },
-          },
-        }}
-        cells={[
-          [
-            { text: '赛道', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '典型岗位', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '入门门槛', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: 'AI 结合度', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '适合人群', textStyle: { bold: true, color: '#FFFFFF', fontSize: 16 }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '教育', textStyle: { color: '#94A3B8', fontSize: 16 }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: 'AI 学习应用产品 / 教育信息化解决方案', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '中', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '高', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '有教学、教研、教育运营背景者；追求岗位池稳定的转行层', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-          ],
-          [
-            { text: '金融', textStyle: { color: '#94A3B8', fontSize: 16 }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '风控策略产品 / 金融科技产品', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '高', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '高', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '有银行、证券、保险从业背景者；数理与风控背景者', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-          ],
-          [
-            { text: '内容营销', textStyle: { color: '#94A3B8', fontSize: 16 }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: 'AI 营销工具产品 / 内容平台产品', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '低', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '高', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-            { text: '有市场、运营、创意背景者；想快速切入的转行层', textStyle: { color: '#94A3B8' }, cellStyle: { background: { color: '#FFFFFF' } } },
-          ],
-          [
-            { text: '电商零售', textStyle: { bold: true, color: '#2563EB', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '平台 AI 应用 / 导购与商家工具', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '中', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '高', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '有电商、零售运营背景者；追求大众赛道的转行层', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '企业 SaaS', textStyle: { bold: true, color: '#2563EB', fontSize: 16 }, cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: 'Copilot / 知识库 / Agent 工作流产品', cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: '中—高', textStyle: { bold: true }, cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: '中—高', textStyle: { bold: true }, cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: '有 ToB 与解决方案经验者；愿意深耕行业做深者', cellStyle: { background: { color: '#EFF6FF' } } },
-          ],
-          [
-            { text: '出海', textStyle: { bold: true, color: '#2563EB', fontSize: 16 }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '海外增长产品 / AI 工具出海产品', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '中', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '高', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '英语好、数据与增长背景者；能接受远程协作者', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-        ]}
-      />
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 20, marginTop: 16, width: '100%' }}>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: '8px 16px', flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>电商零售</Text>
-        <Text style={{ fontSize: 15, color: '#1E1B4B' }}>记忆点：大众赛道，岗位面最广</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: '8px 16px', flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>企业 SaaS</Text>
-        <Text style={{ fontSize: 15, color: '#1E1B4B' }}>记忆点：ToB 经验可直接复用</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 10, padding: '8px 16px', flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>出海</Text>
-        <Text style={{ fontSize: 15, color: '#1E1B4B' }}>记忆点：吃英语与增长背景</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>核心观点：海投是求职最大的浪费（原 4）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>数量的勤奋，掩盖战略的懒惰</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>一百份撒向人海的简历，不如一份递到人前</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>海投是方向不明的结果，又加重方向不明</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>08 / 36</Text>
+    </Box>
 </Slide>

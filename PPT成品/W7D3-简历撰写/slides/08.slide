@@ -1,31 +1,51 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>08 / 18</Text>
-    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>逐段讲法 III：工作经历与教育背景</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ width: '100%', height: 460, flexDirection: 'row', gap: 30 }}>
-        <Box style={{ width: 430, height: '100%', flexDirection: 'column', gap: 12 }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 14, padding: 16, justifyContent: 'center', alignItems: 'center' }}>
-                <Image src="assets/resume-structure.svg" style={{ width: 398, height: 262, objectFit: 'contain' }} />
-            </Box>
-            <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '10px 18px', alignSelf: 'flex-start' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>当前段落：工作经历 · 教育背景</Text>
-            </Box>
-        </Box>
-        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', gap: 20 }}>
-            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 14, padding: 26, flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>工作经历：倒叙 + 一个检验标准</Text>
-                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.7 }}>按时间倒序写，最近的一段放最上面；每一条经历都要回答同一个问题——<span style={{ fontWeight: 'bold', color: '#2563EB' }}>「为什么让我更适合做 AI PM」</span>，答不上来的条目就删。</Text>
-            </Box>
-            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 14, padding: 26, flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>教育背景：精简，放最后</Text>
-                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.7 }}>学校、专业、时间一行带过，不展开课程与奖项堆叠；它是收尾信息，不是卖点。</Text>
-            </Box>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>20 秒的生死判定</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W7D3</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>08</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>HR 初筛约 15–20 秒（行业观察口径，精确来源待教务补充）</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>首屏 1/3 决定去留</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>简历是给 HR 的 20 秒产品</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>金句：别浪费在自我感动上</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>08 / 36</Text>
+    </Box>
 </Slide>

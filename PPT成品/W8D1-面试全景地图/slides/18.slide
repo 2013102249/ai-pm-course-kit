@@ -1,36 +1,54 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>总结与作业</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 28 }} />
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 36, alignItems: 'stretch' }}>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 20, justifyContent: 'center' }}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>三句话收束</Text>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '20px 26px' }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>五轮一假设</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#EFF6FF', borderRadius: 12, padding: '20px 26px' }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>题型只有五个</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 20, background: '#F5F3FF', borderRadius: 12, padding: '20px 26px' }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>真实度权重最高</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 18, justifyContent: 'center' }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 14, padding: '26px 30px', flexDirection: 'column', gap: 14 }}>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>作业</Text>
-        <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>矩阵补全：每类 ≥4 问<br />背核心 3 个数字</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 14, padding: '20px 30px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>预告：周二 · 高频题精讲 I</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>五大题型双案例 + 深化</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#7C3AED' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>正例 / 可行路径</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>正面（设计背景学员）：场景设计先确认用户 / 场景 / 指标再给六步</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>为什么：场景题考拆题方法论</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>常见误解：「问数据同学」＝不懂数据</Text>
+            </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#2563EB' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#2563EB' }}>反例 / 风险动作</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>反面（零基础学员）：技术题硬撑「向量数据库和大模型」被追一层即穿</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>边界：技术题懂到能对话即可</Text>
+            </Box>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>18 / 36</Text>
+    </Box>
 </Slide>

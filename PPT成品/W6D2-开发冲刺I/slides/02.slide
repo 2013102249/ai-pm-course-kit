@@ -1,40 +1,57 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, flexDirection: 'column' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D2</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>02 / 8</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今天只做一件事：跑通核心链路</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'row', gap: 32, marginTop: 28 }}>
-    <Box style={{ width: 690, height: 414 }}>
-      <Image src="assets/core-checklist.svg" style={{ width: 690, height: 414, borderRadius: 10, border: '1px solid #E5E7EB' }} />
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 22 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>今天的事：一条链路</Text>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED', marginTop: 10 }}>输入 → 处理 → 输出</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>不属于今天的事</Text>
-        <Box style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginTop: 12 }}>
-          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
-            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>样式</Text>
-          </Box>
-          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
-            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>登录</Text>
-          </Box>
-          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
-            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>支付</Text>
-          </Box>
-          <Box style={{ background: '#FFFFFF', border: '1px solid #BFDBFE', borderRadius: 14, paddingTop: 5, paddingBottom: 5, paddingLeft: 14, paddingRight: 14 }}>
-            <Text style={{ fontSize: 15, color: '#1E1B4B' }}>历史记录</Text>
-          </Box>
-        </Box>
-      </Box>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>先跑通，再完美</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>今天 300 分钟你能带走什么</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W6D2</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>02</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 1 节 · 0–50 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 5 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>6 节导航：术语 / 链路 / 降级 / 实操 / 面试 / 验收</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>12 个术语大白话钉死</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>一条核心链路与 5 硬 2 软验收线</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>四层降级与状态码 / 日志</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>三件作品集积木</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>02 / 36</Text>
+    </Box>
 </Slide>

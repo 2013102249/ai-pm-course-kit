@@ -1,39 +1,54 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D3</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 30, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>11 / 16</Text>
-  </Box>
-  <Box style={{ flexDirection: 'column', gap: 20, height: '100%' }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第三件 · 拒答</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    <Box style={{ flexDirection: 'row', gap: 32, paddingTop: 6, flex: 1 }}>
-      <Box style={{ width: 460, background: '#EA580C', borderRadius: 12, padding: '32px 34px', flexDirection: 'column', gap: 22, justifyContent: 'center' }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'rgba(255,255,255,0.85)' }}>触发条件</Text>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.7 }}>命中违规<br />超出边界<br />高风险域</Text>
-      </Box>
-      <Box style={{ flex: 1, flexDirection: 'column', gap: 18, justifyContent: 'center' }}>
-        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 28px', flexDirection: 'row', alignItems: 'center', gap: 20, flex: 1 }}>
-          <Box style={{ background: '#EA580C', borderRadius: 6, padding: '5px 14px' }}>
-            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>文案</Text>
-          </Box>
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>固定文案</Text>
-        </Box>
-        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 28px', flexDirection: 'row', alignItems: 'center', gap: 20, flex: 1 }}>
-          <Box style={{ background: '#EA580C', borderRadius: 6, padding: '5px 14px' }}>
-            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>产品动作</Text>
-          </Box>
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>替代出路</Text>
-        </Box>
-        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 28px', flexDirection: 'row', alignItems: 'center', gap: 20, flex: 1 }}>
-          <Box style={{ background: '#EA580C', borderRadius: 6, padding: '5px 14px' }}>
-            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>升级路径</Text>
-          </Box>
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>申诉复核</Text>
-        </Box>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>对话产品状态机全图（原页 7）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>空闲 → 理解中 → 生成中 → 完成 / 异常 → 恢复</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>每状态标超时值与异常出口</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>「完成 → 理解中」回路：对话是环</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>异常是分流站不是终点</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

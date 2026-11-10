@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 6 节 · 250–300 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六节回望 + 三句收束</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>第 1 节立 12 词 → 第 5 节翻成面试话</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>收束一：四步链路只碰 LoRA</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>收束二：五问一问不过不调</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>收束三：协作接口只认考卷</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>31 / 36</Text>
+    </Box>
+</Slide>

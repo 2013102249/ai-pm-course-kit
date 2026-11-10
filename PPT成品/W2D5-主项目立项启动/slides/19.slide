@@ -1,0 +1,58 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 4 节 · 150–200 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>五步实操清单</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>01</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>步骤 1 选题卡复核</Text>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>三环具体名词，无泛化词</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>02</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>步骤 2 四维评分定稿</Text>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>每维扣分理由 + 数据来源</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>03</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>步骤 3 六章初稿</Text>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>一章一段</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>04</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>步骤 4 Scope 砍范围：≥2 条首版不做清单</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>05</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>步骤 5 组内互评 + 代表陈述</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>19 / 36</Text>
+    </Box>
+</Slide>

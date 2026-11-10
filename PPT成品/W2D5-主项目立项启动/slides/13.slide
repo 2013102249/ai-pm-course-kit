@@ -1,43 +1,42 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei','PingFang SC',sans-serif" }}>
-  <Box style={{ position: 'absolute', top: 26, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D5</Text>
-  </Box>
-  <Box style={{ position: 'absolute', top: 22, right: 60, background: '#7C3AED', borderRadius: 999, padding: '8px 20px' }}>
-    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>里程碑 ①</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 22, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>13 / 14</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>下午评审专场规则</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
-  <Box style={{ flexDirection: 'column', gap: 14, marginTop: 22 }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, background: '#F5F3FF', borderRadius: 12, padding: '15px 24px' }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-      </Box>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>时间盒：每人 5 分钟</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, background: '#F5F3FF', borderRadius: 12, padding: '15px 24px' }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-      </Box>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>四项维度任一不过，即整体不过</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, background: '#F5F3FF', borderRadius: 12, padding: '15px 24px' }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-      </Box>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}><span style={{ color: '#2563EB' }}>17:00</span> 前返工重交，<span style={{ color: '#2563EB' }}>18:00</span> 前复审</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, background: '#F5F3FF', borderRadius: 12, padding: '15px 24px' }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
-      </Box>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}><span style={{ color: '#16A34A' }}>✓</span> 通过即锁定</Text>
-    </Box>
-  </Box>
-  <Box style={{ width: '100%', height: 84, borderRadius: 14, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', justifyContent: 'center', alignItems: 'center', marginTop: 22 }}>
-    <Text style={{ fontSize: 29, fontWeight: 'bold', color: '#FFFFFF' }}>好的立项报告，是写给六周后自己的作战地图</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>四维评分卡（原页 9）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>技术 / 数据 / 合规 / 竞争，各 0–5 分</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>及格线：单维 ≥3 且总分 ≥12/20</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>合规卡加警示边框：硬门槛，回扣 W2D4 清单</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>数据维必须写明具体来源</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>13 / 36</Text>
+    </Box>
 </Slide>

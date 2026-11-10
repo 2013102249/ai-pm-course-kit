@@ -1,0 +1,65 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 4 节 · 150–200 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>讲评：初选 ≠ 终选（新增）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>两条通病点评</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>理由空泛 / 不谈数据出域</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>换模型不是零成本</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>提示词重调、格式回归、评测重跑</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 3 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>今天把候选池缩到 2–3 个</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>周三评测集用真实题目定终选</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 5 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>初选卡归档，周五立项取用</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>24 / 36</Text>
+    </Box>
+</Slide>

@@ -1,42 +1,65 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D5</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>11 / 16</Text>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场操练：写你的第一条定制话术</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'row', gap: 28, marginTop: 28, height: 440 }}>
-    <Box style={{ flex: 1, gap: 18, justifyContent: 'center' }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#F5F3FF', borderRadius: 12, padding: '20px 24px' }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-        </Box>
-        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>从预习的 10 家里，挑出匹配度最高的 1 家</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#EFF6FF', borderRadius: 12, padding: '20px 24px' }}>
-        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-        </Box>
-        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>对照岗位 JD，套用三件套结构开写</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#F5F3FF', borderRadius: 12, padding: '20px 24px' }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-        </Box>
-        <Text style={{ fontSize: 19, color: '#1E1B4B' }}>写完用三条检验标准自查一遍</Text>
-      </Box>
-    </Box>
-    <Box style={{ width: 400, justifyContent: 'center' }}>
-      <Box style={{ height: 200, background: '#F5F3FF', border: '1.5px dashed #7C3AED', borderRadius: 14, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#7C3AED' }}>04:00</Text>
-        <Text style={{ fontSize: 17, color: '#64748B', marginTop: 10 }}>4 分钟计时 · 现场计时开始</Text>
-      </Box>
-      <Box style={{ marginTop: 16, height: 12, background: '#7C3AED', borderRadius: 6, width: '100%' }} />
-      <Box style={{ marginTop: 8, flexDirection: 'row', justifyContent: 'space-between' }}>
-        <Text style={{ fontSize: 13, color: '#64748B' }}>0 分钟</Text>
-        <Text style={{ fontSize: 13, color: '#64748B' }}>4 分钟</Text>
-      </Box>
-    </Box>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>渠道详解：直投与情报</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>BOSS 直聘</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>主战场，话术质量决定响应</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>猎聘</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>中高级 / 大厂，关键词决定被搜到</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>脉脉</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>找人 / 查口碑 / 约 coffee chat，主页当公开简历</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>海投 = 对照组，不作为策略</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 5 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>固定投递时段与快速回复</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

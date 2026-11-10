@@ -1,36 +1,51 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D1</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>09 / 18</Text>
-
-  <Box style={{ flexDirection: 'column', height: '100%' }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
-      </Box>
-      <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>要素四：执行</Text>
-    </Box>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16, marginBottom: 24 }} />
-
-    <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 24px' }}>
-      <Text style={{ fontSize: 17, color: '#64748B' }}>本页配合交互式架构图（Agent Tab）投屏讲解</Text>
-    </Box>
-
-    <Box style={{ flexDirection: 'row', gap: 18, marginTop: 26, flex: 1 }}>
-      <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 12, border: '1px solid #DDD6FE', padding: 20, flexDirection: 'column', gap: 8 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>不可逆动作人工确认</Text>
-        <Text style={{ fontSize: 16, color: '#64748B' }}>付款、发出去之前先问人</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 12, border: '1px solid #DDD6FE', padding: 20, flexDirection: 'column', gap: 8 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>回滚与补偿</Text>
-        <Text style={{ fontSize: 16, color: '#64748B' }}>做错了要有退路</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#FFFFFF', borderRadius: 12, border: '1px solid #DDD6FE', padding: 20, flexDirection: 'column', gap: 8 }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>日志留痕</Text>
-        <Text style={{ fontSize: 16, color: '#64748B' }}>每一步可追溯、可审计</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W3D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>四要素总览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W3D1</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>09</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>核心 + 规划 / 记忆 / 工具 / 执行</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>上：规划、记忆；下：工具、执行</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>环境反馈虚线（ReAct 伏笔）</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>每要素旁标「产品经理管什么」</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>09 / 36</Text>
+    </Box>
 </Slide>

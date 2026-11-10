@@ -1,19 +1,56 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D2</Text>
-  </Box>
-  <Text style={{ position: 'absolute', right: 60, bottom: 26, fontSize: 14, color: '#64748B' }}>12 / 16</Text>
-  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 48, width: '100%', flex: 1 }}>
-    <Text style={{ fontSize: 130, fontWeight: 'bold', color: '#2563EB' }}>2</Text>
-    <Box style={{ flexDirection: 'column', gap: 22, flex: 1 }}>
-      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B' }}>第②步：加节点</Text>
-      <Text style={{ fontSize: 24, color: '#1E1B4B', lineHeight: 1.6 }}>四类节点：开始 / LLM / 条件分支 / 输出<br />连线 = 输出变量 → 输入参数，至少 1 个条件分支</Text>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, background: '#EFF6FF', borderRadius: 12, padding: '16px 24px' }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>完成标志</Text>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}>主链路连线成型</Text>
-      </Box>
-    </Box>
-  </Box>
-  <Text style={{ fontSize: 14, color: '#64748B' }}>本页为主投屏 Dify/Coze 画布的步骤锚点</Text>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W3D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>反面案例：把工单分类做成 Agent（新增，案例页）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 1 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>为「以后好扩展」上 Agent</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 2 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>同一工单两次分类不一致</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 3 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>路由错团队、无法对账</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>为未发生的灵活性丢掉可控性</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

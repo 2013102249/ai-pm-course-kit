@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 4 节 · 150–200 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>实操任务页（新增）：50 分钟任务总览与分组</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>时间轴：说明 8′ + 跑分 14′ + 三轮轮换 18′ + 汇总讲评 10′</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>3–4 个工位、产品方 / 试用用户 / 观察员三角色</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>产出：测试报告 V0.9 + ≥10 行记录表</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>声明：课堂是教学演练，不产生真实用户数据</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>19 / 36</Text>
+    </Box>
+</Slide>

@@ -1,37 +1,58 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>11 / 18</Text>
-    <Box style={{ flexDirection: 'column', gap: 16 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第四步：试测、冻结、回流</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 24, marginTop: 44, height: 320 }}>
-        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-            </Box>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>试测校准</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>先抽 5–10 条小样本试测，校准评分锚点，确认打分人理解一致。</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-            </Box>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>冻结版本号</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>内容与标准定稿后冻结版本号，之后所有跑分结果都挂在这个版本上，可追溯、可比较。</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 28, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Box style={{ width: 28, height: 28, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-            </Box>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>badcase 回流入集</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>线上暴露的 badcase 改写成新用例补回评测集，同样的坑不再踩第二次。</Text>
-        </Box>
-    </Box>
-    <Box style={{ marginTop: 32, background: '#EFF6FF', borderRadius: 10, padding: '16px 24px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>评测集是活的资产：随产品迭代持续生长，不是一次性的交付物。</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>评测集构建四步法总览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>01</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>定场景维度</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>02</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>写用例 6:2:2</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>03</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>定标准与通过线</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>04</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>试测冻结回流</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>05</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>本周 50 条从这套流程来</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

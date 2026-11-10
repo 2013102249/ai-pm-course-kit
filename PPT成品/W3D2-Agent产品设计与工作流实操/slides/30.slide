@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 50, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>金句 1 确定性是产品的好朋友<br />金句 2 自主性换灵活性 / 确定性换可控性<br />金句 3 兜底是产品承诺<br />两两模拟 7 题轮答、填记录表</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>本日面试金句 + 两两模拟（新增） · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

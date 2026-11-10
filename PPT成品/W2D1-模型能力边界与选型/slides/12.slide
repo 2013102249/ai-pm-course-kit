@@ -1,37 +1,7 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D1</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 28, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 16</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column', gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>案例：被调用成本吃掉的毛利</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '36px 26px', gap: 16, height: 260 }}>
-                <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#7C3AED' }}>01</Text>
-                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>摘要产品全线旗舰档</Text>
-            </Box>
-            <Text style={{ fontSize: 26, color: '#7C3AED' }}>→</Text>
-            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '36px 26px', gap: 16, height: 260 }}>
-                <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#2563EB' }}>02</Text>
-                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>日处理量涨百倍</Text>
-            </Box>
-            <Text style={{ fontSize: 26, color: '#7C3AED' }}>→</Text>
-            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '36px 26px', gap: 16, height: 260 }}>
-                <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#7C3AED' }}>03</Text>
-                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>成本失控</Text>
-            </Box>
-            <Text style={{ fontSize: 26, color: '#7C3AED' }}>→</Text>
-            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '36px 26px', gap: 16, height: 260 }}>
-                <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#2563EB' }}>04</Text>
-                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>任务分层降级自救</Text>
-            </Box>
-        </Box>
-        <Text style={{ fontSize: 17, color: '#64748B', textAlign: 'center' }}>从 Demo 到上线：同样的选择，成本结构完全不同</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>先按场景定能力线 → 能力线之上比成本与延迟 → 合规一票否决<br />顺序不可反<br />三角是流程图，不是打分表<br />正面案例：先画线再比价、合规兜底<br />反面案例：三维加权求和让破线模型混进比价池</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>三角的正确顺序 + 金句 · 第 2 节 · 50–100 min</Text>
+    </Box>
 </Slide>

@@ -1,36 +1,42 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>15 / 18</Text>
-    <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>教学示例，以官网实时价格为准</Text>
-    <Box style={{ flex: 1, flexDirection: 'column' }}>
-        <Box style={{ flexDirection: 'column', gap: 18 }}>
-            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>单位经济模型：LTV 与 CAC</Text>
-            <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-        </Box>
-        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 24 }}>
-            <Text style={{ fontSize: 24, color: '#1E1B4B', letterSpacing: 1 }}>LTV = 定价 × 生命周期 × 毛利率</Text>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F5F3FF', borderRadius: 12, padding: '28px 36px', gap: 40 }}>
-                <Box style={{ flexDirection: 'column', gap: 6 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>LTV</Text>
-                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>≈ 121 元</Text>
-                </Box>
-                <Box style={{ width: 1, height: 72, background: '#E5E7EB' }} />
-                <Box style={{ flexDirection: 'column', gap: 6 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>CAC</Text>
-                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>40 元</Text>
-                </Box>
-                <Box style={{ width: 1, height: 72, background: '#E5E7EB' }} />
-                <Box style={{ flexDirection: 'column', gap: 6 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>LTV / CAC</Text>
-                    <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#1E1B4B', letterSpacing: 2 }}>≈ 3.0</Text>
-                </Box>
-            </Box>
-            <Box style={{ border: '2px solid #DC2626', borderRadius: 12, padding: '18px 28px', alignItems: 'center' }}>
-                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#DC2626' }}>圈重点：× 毛利率——收 159 不等于赚 159</Text>
-            </Box>
-        </Box>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W5D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>规模化路径：先证模型再放大</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>先在百人级验证单位经济为正</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>毛利为负时放大 = 加速烧钱</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>投资人视角：不怕慢，怕不知赚亏</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>盈亏平衡：单客打平 ≠ 公司打平</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>15 / 36</Text>
+    </Box>
 </Slide>

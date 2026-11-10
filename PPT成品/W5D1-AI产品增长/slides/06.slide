@@ -1,42 +1,48 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
-    </Box>
-    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 16</Text>
-    </Box>
-    <Box style={{ position: 'relative', gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>AARRR 五环节落地总表（下）</Text>
-        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ position: 'relative', marginTop: 24, border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
-        <Box style={{ flexDirection: 'row', background: '#7C3AED', height: 52, alignItems: 'center' }}>
-            <Box style={{ width: 150, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>环节</Text></Box>
-            <Box style={{ width: 240, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>传统产品的做法</Text></Box>
-            <Box style={{ width: 450, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>AI 产品怎么做</Text></Box>
-            <Box style={{ width: 320, padding: '0 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>关键指标</Text></Box>
-        </Box>
-        <Box style={{ flexDirection: 'row', background: '#FFFFFF', minHeight: 80, alignItems: 'center', borderBottom: '1px solid #E5E7EB' }}>
-            <Box style={{ width: 150, padding: '14px 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>留存<br />Retention</Text></Box>
-            <Box style={{ width: 240, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>推送召回、积分签到、会员体系</Text></Box>
-            <Box style={{ width: 450, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>核心价值随使用复现与增值：历史记录可用、个性化越用越准、嵌入用户既有工作流</Text></Box>
-            <Box style={{ width: 320, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>次日 / 7 日 / 30 日留存、周活跃比</Text></Box>
-        </Box>
-        <Box style={{ flexDirection: 'row', background: '#F5F3FF', minHeight: 80, alignItems: 'center', borderBottom: '1px solid #E5E7EB' }}>
-            <Box style={{ width: 150, padding: '14px 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>收入<br />Revenue</Text></Box>
-            <Box style={{ width: 240, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>广告、一次性买断、会员等级</Text></Box>
-            <Box style={{ width: 450, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>订阅制为主，按量计费（按次数或用量）补充；免费额度设计决定付费转化漏斗</Text></Box>
-            <Box style={{ width: 320, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>付费转化率、ARPU、LTV（示例值，需按业务校准）</Text></Box>
-        </Box>
-        <Box style={{ flexDirection: 'row', background: '#FFFFFF', minHeight: 80, alignItems: 'center' }}>
-            <Box style={{ width: 150, padding: '14px 18px' }}><Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>裂变<br />Referral</Text></Box>
-            <Box style={{ width: 240, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>邀请返现、拼团砍价</Text></Box>
-            <Box style={{ width: 450, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>协作邀请（多人共用一份产出）；生成物外链带品牌水印；双向收益以产品价值为主</Text></Box>
-            <Box style={{ width: 320, padding: '14px 18px' }}><Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.45 }}>K 因子、邀请发送率、被邀请者激活率</Text></Box>
-        </Box>
-    </Box>
-    <Box style={{ position: 'relative', marginTop: 22, padding: '16px 28px', background: '#7C3AED', borderRadius: 12, alignItems: 'center' }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>前两层决定生死，后三层决定快慢</Text>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>易混辨析 7 组 + 当堂小测</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>进来≠值了</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>一次值≠一直值</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>回来≠付费</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>老带新≠外投</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>瞬间≠功能名 / 曲线≠DAU / AARRR≠漏斗；附 10 题小测</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 36</Text>
+    </Box>
 </Slide>

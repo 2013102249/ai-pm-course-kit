@@ -1,22 +1,41 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', position: 'relative', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', right: -80, top: -80, width: 280, height: 280, borderRadius: 140, background: 'rgba(255,255,255,0.06)' }} />
-    <Box style={{ position: 'absolute', left: -70, bottom: -110, width: 320, height: 320, borderRadius: 160, background: 'rgba(255,255,255,0.05)' }} />
-    <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 40 }}>
-        <Box style={{ width: 620, flexDirection: 'column', gap: 22 }}>
-            <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', letterSpacing: 3 }}>AI 产品经理实战训练营</Text>
-            <Text style={{ fontSize: 68, fontWeight: 'bold', color: '#FFFFFF' }}>结业路演</Text>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, marginTop: 6 }}>
-                <Box style={{ background: 'rgba(255,255,255,0.18)', borderRadius: 999, padding: '8px 20px' }}>
-                    <Text style={{ fontSize: 20, color: '#FFFFFF' }}>主项目里程碑 ⑤</Text>
-                </Box>
-                <Box style={{ background: 'rgba(255,255,255,0.18)', borderRadius: 999, padding: '8px 20px' }}>
-                    <Text style={{ fontSize: 20, color: '#FFFFFF' }}>W6 周五</Text>
-                </Box>
-            </Box>
-        </Box>
-        <Box style={{ width: 440, background: '#FFFFFF', borderRadius: 16, padding: 24 }}>
-            <Image src="assets/capability-profile.svg" style={{ width: 392, height: 228 }} />
-        </Box>
-    </Box>
-    <Text style={{ position: 'absolute', left: 60, bottom: 44, fontSize: 15, color: 'rgba(255,255,255,0.7)' }}>讲师：张小培</Text>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: '100%', flexDirection: 'row' }}>
+        <Box style={{ width: 700, height: '100%', justifyContent: 'center', gap: 18 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>AI 产品经理实战训练营 · W6D5</Text>
+            <Text style={{ fontSize: 58, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.25 }}>结业路演</Text>
+            <Box style={{ width: 72, height: 4, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 22, color: '#FFFFFF', opacity: 0.88 }}>W6 周五 · 300 分钟（6 课时 × 50 分钟）</Text>
+            
+            
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.7, marginTop: 18 }}>讲师：张小培 Peter · 新像素教育</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+            <Box style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 10, width: 274 }}>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 1 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>0–50 min</Text>
+        </Box>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 2 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>50–100 min</Text>
+        </Box>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 3 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>100–150 min</Text>
+        </Box>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 4 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>150–200 min</Text>
+        </Box>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 5 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>200–250 min</Text>
+        </Box>
+                <Box style={{ width: 132, height: 62, paddingLeft: 14, paddingTop: 10, background: 'rgba(255,255,255,0.10)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>第 6 节</Text>
+            <Text style={{ fontSize: 12, color: '#FFFFFF', opacity: 0.7, marginTop: 4 }}>250–300 min</Text>
+        </Box>
+            </Box>
+        </Box>
+    </Box>
 </Slide>

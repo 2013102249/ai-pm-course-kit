@@ -1,46 +1,48 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D2</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>10 / 20</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column' }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第三问 + 第四问：失败与重来</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-        <Box style={{ flexDirection: 'row', gap: 32, marginTop: 32, alignItems: 'stretch' }}>
-            <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '28px 30px' }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>第三问 · 失败三段式</Text>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: 22 }}>
-                    <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-                    </Box>
-                    <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>真实</span>：讲真事，不粉饰</Text>
-                </Box>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: 18 }}>
-                    <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-                    </Box>
-                    <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>后果</span>：说清损失与影响</Text>
-                </Box>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: 18 }}>
-                    <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-                    </Box>
-                    <Text style={{ fontSize: 19, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>改进</span>：讲你改了什么</Text>
-                </Box>
-            </Box>
-            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '28px 30px' }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>第四问 · 重来</Text>
-                <Box style={{ flexDirection: 'column', gap: 16, marginTop: 22 }}>
-                    <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>· <span style={{ fontWeight: 'bold' }}>与失败成对</span>：有失败，就准备一个重来</Text>
-                    <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>· <span style={{ fontWeight: 'bold' }}>具体到动作</span>：改什么、怎么改、为什么</Text>
-                    <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '18px 22px', border: '1px solid #BFDBFE' }}>
-                        <Text style={{ fontSize: 17, color: '#2563EB', lineHeight: 1.6 }}>「如果重来一次，我会把 A 改成 B，因为 C。」</Text>
-                    </Box>
-                </Box>
-            </Box>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>追问防御链总览 + 第一问：数据怎么来的</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 24, minHeight: 56, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 4, paddingBottom: 4, background: '#EDE9FE', borderRadius: 4 }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#7C3AED' }}>四连问</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>数据 → 取舍 → 失败 → 重来，各自验证什么</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 24, minHeight: 56, background: '#FFFFFF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>防御 = 数据三件套：来源 / 口径 / 基线</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 24, minHeight: 56, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>示范「DAU 1,200 → 1,560 + 四周基线 + 打开即算」完整版</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 24, minHeight: 56, background: '#FFFFFF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 4, paddingBottom: 4, background: '#DBEAFE', borderRadius: 4 }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#2563EB' }}>反例</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>只说「涨了三成」</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 24, minHeight: 56, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>三件套缺一即留一个追问口子</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>10 / 36</Text>
+    </Box>
 </Slide>

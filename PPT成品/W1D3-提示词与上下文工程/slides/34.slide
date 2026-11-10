@@ -1,0 +1,38 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 6 节 · 250–300 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>当堂验收三项</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 18 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>验收一 术语：12 题复核 ≥10/12，能指出 4 组易混</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>验收二 实操：调试台复跑 ≥4/5</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>验收三 面试：抽 1 题 60 秒答 + 顶 1 层追问</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>三项全过才算 300 分钟落地</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>34 / 36</Text>
+    </Box>
+</Slide>

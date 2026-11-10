@@ -1,33 +1,54 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>10 / 18</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>指标五：单次成本</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 28 }} />
-  <Box style={{ flexDirection: 'row', gap: 24, width: '100%', alignItems: 'flex-start' }}>
-    <Box style={{ width: 620, flexDirection: 'column', gap: 16 }}>
-      <Box style={{ background: '#F5F3FF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '16px 24px' }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>公式（简单版：当月 API 账单 / 当月有效请求次数）</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#5B21B6', fontFamily: 'Menlo, monospace', marginTop: 6 }}>当期成本 / 有效请求次数</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '22px 28px' }}>
-        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#2563EB' }}>与「单次价值」比，不跟别人比</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>单次成本必须显著小于单次收益——收益可以是营收贡献，也可以是替代的人力成本，用毛利倒推出成本上限</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 16 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 28px' }}>
-        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#7C3AED' }}>AI 产品独有的「边际成本」视角</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>传统互联网产品边际成本趋近于零，AI 产品每回答一次都在花钱——会失控的是单次，不是总量</Text>
-      </Box>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, padding: '22px 28px' }}>
-        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E1B4B' }}>坑：忽略重试的隐性账</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', marginTop: 10, lineHeight: 1.6 }}>用户不满意多生成三次，成本翻了四倍——这四次都要算进来</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>五大核心指标① 采纳率 / 解决率 / 幻觉率</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>采纳率：被采纳 / 总生成，口径必写、基线对比法</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>解决率：无人工介入自然结束 / 总问题会话，基线＝人工坐席</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>幻觉率：判定幻觉 / 抽检总数，不量化≠不管理、拒答单独统计</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>三者常见误读各 1 条</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>10 / 36</Text>
+    </Box>
 </Slide>

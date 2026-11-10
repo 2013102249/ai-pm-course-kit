@@ -1,51 +1,57 @@
-<Slide style={{ width: 1280, height: 720, padding: '60px 60px', background: '#FFFFFF' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D5</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>04 / 10</Text>
-  </Box>
-  <Box style={{ flexDirection: 'column', gap: 18, marginBottom: 24 }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>评审流程与规则</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-  </Box>
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 36, alignItems: 'center' }}>
-    <Box style={{ width: 430, flexDirection: 'column', gap: 24 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-        <Box style={{ background: '#7C3AED', borderRadius: 8, padding: '8px 16px' }}>
-          <Text style={{ fontSize: 16, color: '#FFFFFF', fontWeight: 'bold' }}>陈述</Text>
-        </Box>
-        <Text style={{ fontSize: 18, color: '#64748B' }}>→</Text>
-        <Box style={{ background: '#7C3AED', borderRadius: 8, padding: '8px 16px' }}>
-          <Text style={{ fontSize: 16, color: '#FFFFFF', fontWeight: 'bold' }}>质询</Text>
-        </Box>
-        <Text style={{ fontSize: 18, color: '#64748B' }}>→</Text>
-        <Box style={{ background: '#7C3AED', borderRadius: 8, padding: '8px 16px' }}>
-          <Text style={{ fontSize: 16, color: '#FFFFFF', fontWeight: 'bold' }}>修订</Text>
-        </Box>
-        <Text style={{ fontSize: 18, color: '#64748B' }}>→</Text>
-        <Box style={{ background: '#7C3AED', borderRadius: 8, padding: '8px 16px' }}>
-          <Text style={{ fontSize: 16, color: '#FFFFFF', fontWeight: 'bold' }}>终审</Text>
-        </Box>
-      </Box>
-      <Box style={{ flexDirection: 'column', gap: 10 }}>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>
-          每人 <span style={{ color: '#2563EB', fontWeight: 'bold' }}>5+5 分钟</span>：陈述与质询分段计时，到点硬切
-        </Text>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>
-          组内轮值<span style={{ color: '#2563EB', fontWeight: 'bold' }}>三角色</span>，按轮值表顺序轮换
-        </Text>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>
-          <span style={{ color: '#2563EB', fontWeight: 'bold' }}>三档裁定</span>：过审 / 有条件通过 / 退回
-        </Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '14px 20px' }}>
-        <Text style={{ fontSize: 16, color: '#2563EB' }}>答辩全程投屏计时器，超时即切下一环节</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Image src="assets/prd-review-flow.svg" style={{ width: 660, height: 456, objectFit: 'contain' }} />
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡组 A：这场会是什么</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>评审＝共识会，不是考试</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>答辩≠念 PRD / 演讲</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>共识会＝分歧摆上桌、每条有去处</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>质疑＝只提可回答的问题，不下结论</Text>
+            </Box>
+            
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>04 / 36</Text>
+    </Box>
 </Slide>

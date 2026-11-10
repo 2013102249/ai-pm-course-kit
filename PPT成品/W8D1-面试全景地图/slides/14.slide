@@ -1,74 +1,54 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D1</Text>
-  </Box>
-  <Text style={{ position: 'absolute', right: 60, bottom: 28, fontSize: 14, color: '#64748B' }}>14 / 18</Text>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>题型⑤ 开放行为 + 评分标准表</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 22 }} />
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 28, alignItems: 'stretch' }}>
-    <Box style={{ width: 480, flexDirection: 'column', gap: 14 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>典型问法</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>「讲一次你最大的失败」</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>考察本质</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>自省与稳定</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>答题框架</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>STAR + 反思收尾</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#DC2626', width: 88 }}>高频失误</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>只讲事件没有反思</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '12px 20px', marginTop: 4 }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>项目真实度权重最高</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
-      <Table
-        style={{ width: '100%', height: 320 }}
-        defaultTextStyle={{ fontSize: 16, color: '#1E1B4B', textAlign: 'left' }}
-        defaultCellStyle={{
-          border: {
-            left: { width: 1, color: '#E5E7EB' },
-            right: { width: 1, color: '#E5E7EB' },
-            top: { width: 1, color: '#E5E7EB' },
-            bottom: { width: 1, color: '#E5E7EB' },
-          },
-          padding: '8px 16px',
-        }}
-        cells={[
-          [
-            { text: '评分维度', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '5 分档表现', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '逻辑', textStyle: { bold: true } },
-            { text: '说理有链条，结论有依据' },
-          ],
-          [
-            { text: '项目真实', textStyle: { bold: true, color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '细节经得起追问（权重最高）', textStyle: { bold: true, color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '技术', textStyle: { bold: true } },
-            { text: '能与工程师对话，敢说不知道' },
-          ],
-          [
-            { text: '数据', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '数字张口报得出', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '表达', textStyle: { bold: true } },
-            { text: '结构清晰，简洁传达' },
-          ],
-        ]}
-      />
-      <Text style={{ fontSize: 14, color: '#64748B' }}>示例框架，各公司自定</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>题型① 项目深挖</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 572, height: 227, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>要点 1</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>问法示例「分母是什么」</Text>
+        </Box>
+        <Box style={{ width: 572, height: 227, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>要点 2</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>本质＝验真</Text>
+        </Box>
+        <Box style={{ width: 572, height: 227, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>要点 3</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>框架＝STAR + 追问防御链（周二详讲）</Text>
+        </Box>
+        <Box style={{ width: 572, height: 227, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>要点 4</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>失误＝数据张口报不出</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>14 / 36</Text>
+    </Box>
 </Slide>

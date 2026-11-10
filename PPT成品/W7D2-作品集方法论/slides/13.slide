@@ -1,37 +1,54 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D2</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>数据呈现三原则</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'column', gap: 16, marginTop: 24 }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, background: '#F5F3FF', borderRadius: 12, height: 92, paddingLeft: 30, paddingRight: 30 }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-      </Box>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', width: 230 }}>对比才有意义</Text>
-      <Text style={{ flex: 1, fontSize: 18, color: '#64748B' }}>基准值 → 结果值，先给基准再给结果</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, background: '#F5F3FF', borderRadius: 12, height: 92, paddingLeft: 30, paddingRight: 30 }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-      </Box>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', width: 230 }}>图表选型</Text>
-      <Text style={{ flex: 1, fontSize: 18, color: '#64748B' }}>一图一结论：趋势折线 / 对比条形 / 构成堆叠，禁 3D</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 22, background: '#F5F3FF', borderRadius: 12, height: 92, paddingLeft: 30, paddingRight: 30 }}>
-      <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-      </Box>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', width: 230 }}>标注来源</Text>
-      <Text style={{ flex: 1, fontSize: 18, color: '#64748B' }}>每个数字都可被追问来源</Text>
-    </Box>
-  </Box>
-  <Box style={{ background: '#7C3AED', borderRadius: 10, marginTop: 24, height: 80, alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>没有基准的数字是广告，有来源的数字才是证据</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>13 / 16</Text>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>数据呈现三原则</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>对比才有意义（基准值→结果值 / 竞品值 / 目标值）</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>图表选型：一图一结论，趋势折线 / 对比条形 / 构成堆叠，禁 3D</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>标注来源：每数字可被追问</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>金句：没有基准的数字是广告，有来源的数字才是证据</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>13 / 36</Text>
+    </Box>
 </Slide>

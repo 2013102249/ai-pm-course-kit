@@ -1,4 +1,50 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', alignItems: 'center', justifyContent: 'center', gap: 28 }}>
-  <Text style={{ fontSize: 52, fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', lineHeight: 1.5 }}>10 个真实用户<br />胜过 100 条自嗨功能</Text>
-  <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.7, textAlign: 'center' }}>W6D4 · 测试验收与真实用户试用</Text>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>案例页（新增）：正面案例 vs 反面案例</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#7C3AED' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>正例 / 可行路径</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>正面（教学示例）：先查引用发现解析混了新旧制度，半天修完</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>两者都不指向真实项目或真实耗时</Text>
+            </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#2563EB' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#2563EB' }}>反例 / 风险动作</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>反面（教学示例）：直接换模型折腾两天，实为 Top-K 设小、十分钟能修</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>共同结论：跳过前三层直接认最贵的第四层最烧钱</Text>
+            </Box>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

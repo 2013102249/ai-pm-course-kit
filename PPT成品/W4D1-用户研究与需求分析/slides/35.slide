@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 50, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>12 术语一句话速记<br />两组边界再念一遍<br />本日 3 条面试金句</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>术语速记与面试金句回扣 · 第 6 节 · 250–300 min</Text>
+    </Box>
+</Slide>

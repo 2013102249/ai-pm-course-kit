@@ -1,46 +1,48 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D5</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 26, right: 60, fontSize: 14, color: '#64748B' }}>09 / 16</Text>
-  <Box style={{ position: 'absolute', top: 28, right: 60, background: '#F5F3FF', border: '1px solid #7C3AED', borderRadius: 12, padding: '4px 12px' }}>
-    <Text style={{ fontSize: 13, color: '#7C3AED' }}>教学示例</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>对比实验：泛泛版 vs 模板版</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'row', gap: 24, marginTop: 26, height: 380 }}>
-    <Box style={{ flex: 1, background: '#FFFFFF', border: '1.5px solid #E5E7EB', borderRadius: 12, padding: 28 }}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>泛泛版</Text>
-      <Box style={{ marginTop: 18, background: '#F8FAFC', border: '1px solid #E5E7EB', borderRadius: 8, padding: 18 }}>
-        <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>「您好，我对贵司的这个岗位很感兴趣，希望能有机会进一步沟通。」</Text>
-      </Box>
-      <Box style={{ marginTop: 20, gap: 10 }}>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>× 称呼不具体，看不出发给谁</Text>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>× 没有价值主张，不知道你有什么</Text>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>× 没有钩子，对方无从接话</Text>
-      </Box>
-      <Box style={{ marginTop: 18, alignItems: 'flex-start' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#DC2626' }}>三件套为零</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, background: '#FFFFFF', border: '1.5px solid #E5E7EB', borderRadius: 12, padding: 28 }}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>模板版</Text>
-      <Box style={{ marginTop: 18, background: '#F8FAFC', border: '1px solid #E5E7EB', borderRadius: 8, padding: 18 }}>
-        <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>「您好，我有产品经验，做过 AI 相关项目，学习能力很强，期待与您交流。」</Text>
-      </Box>
-      <Box style={{ marginTop: 20, gap: 10 }}>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>○ 有一点信息，但谁都能这么写</Text>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>× 不挂钩具体岗位，匹配点没说</Text>
-        <Text style={{ fontSize: 17, color: '#64748B' }}>× 没有钩子，回复率仍然低</Text>
-      </Box>
-      <Box style={{ marginTop: 18, alignItems: 'flex-start' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>有信息，但不挂钩</Text>
-      </Box>
-    </Box>
-  </Box>
-  <Box style={{ marginTop: 22, height: 54, background: '#F5F3FF', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>先自己读 10 秒：如果你是 HR，这两条你会回吗？</Text>
-  </Box>
-  <Text style={{ fontSize: 12, color: '#64748B', marginTop: 12 }}>教学示例 · 话术为虚构演示，仅供组件拆解</Text>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>渠道优先级总览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>内推 ＞ 猎头 ＞ 精准直投 ＞ 海投</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>脉脉做情报，不为投而投</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>响应率一律定性、不给百分比</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>配比：首批 ≥10 家中内推占 2–3 家</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>就业数据「待教务补充」</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>09 / 36</Text>
+    </Box>
 </Slide>

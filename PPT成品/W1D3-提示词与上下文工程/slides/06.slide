@@ -1,35 +1,41 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D3</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>06 / 18</Text>
-
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>要素一：角色</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 18 }} />
-
-  <Text style={{ fontSize: 17, color: '#64748B' }}>本页配合提示词调试台投屏讲解（对照评分卡第 1 行）</Text>
-
-  <Box style={{ flexDirection: 'column', gap: 18, marginTop: 16, width: '100%', flex: 1 }}>
-    <Text style={{ fontSize: 20, color: '#1E1B4B' }}>
-      <span style={{ fontWeight: 'bold', color: '#7C3AED' }}>定义：</span>
-      告诉模型它是谁、以什么身份说话——先「入戏」，再干活
-    </Text>
-    <Box style={{ flexDirection: 'row', gap: 24, width: '100%', flex: 1 }}>
-      <Box style={{ background: '#F1F0F5', borderRadius: 12, padding: '24px 28px', width: 548, flexDirection: 'column', gap: 12, border: '1px solid #E5E7EB' }}>
-        <Box style={{ alignSelf: 'flex-start', background: '#7A7590', borderRadius: 6, padding: '4px 14px' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>反例</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.6 }}>「你是一个有用的助手」</Text>
-        <Text style={{ fontSize: 16, color: '#7A7590', lineHeight: 1.6 }}>只有态度，没有经验、领域和风格</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '24px 28px', flex: 1, flexDirection: 'column', gap: 12, border: '1px solid #DDD6FE' }}>
-        <Box style={{ alignSelf: 'flex-start', background: '#7C3AED', borderRadius: 6, padding: '4px 14px' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>正例</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.6 }}>「你是一名拥有 10 年经验的企业会议纪要专家，语言专业、克制，不做主观评价」</Text>
-        <Text style={{ fontSize: 16, color: '#7C3AED', lineHeight: 1.6 }}>经验、领域、风格，一次说全</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>易混辨析 + 当堂小测 12 题</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 22, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 22, height: 22, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>4 组易混：提示词↔上下文工程、约束↔输出格式、资料注入↔记忆设计、可验收↔写清楚</Text>
+            <Text style={{ fontSize: 13, color: '#94A3B8' }}>待勾选</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 22, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 22, height: 22, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>两两互讲用非技术场景</Text>
+            <Text style={{ fontSize: 13, color: '#94A3B8' }}>待勾选</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 22, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 22, height: 22, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>12 题闭卷 10 分钟</Text>
+            <Text style={{ fontSize: 13, color: '#94A3B8' }}>待勾选</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, paddingTop: 13, paddingBottom: 13, paddingLeft: 20, paddingRight: 22, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Box style={{ width: 22, height: 22, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>达标线 ≥10/12，错组补卡</Text>
+            <Text style={{ fontSize: 13, color: '#94A3B8' }}>待勾选</Text>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 12, paddingBottom: 12, paddingLeft: 20, paddingRight: 20, background: '#F1F5F9', borderRadius: 8, marginTop: 4 }}>
+            <Text style={{ fontSize: 15, color: '#64748B' }}>逐项打勾，缺项当场补齐；设备受限的学员按口述 / 纸质版同等计分。</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 36</Text>
+    </Box>
 </Slide>

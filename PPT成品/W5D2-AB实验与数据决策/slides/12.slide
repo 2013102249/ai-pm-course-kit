@@ -1,58 +1,48 @@
-<Slide style={{ position: 'relative', width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D2</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 32, right: 60, fontSize: 14, color: '#64748B' }}>12 / 16</Text>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#DC2626' }}>陷阱二：辛普森悖论</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
-  <Box style={{ flexDirection: 'row', flex: 1, marginTop: 28, gap: 24, alignItems: 'center' }}>
-    <Box style={{ width: 620, border: '1px solid #E5E7EB', borderRadius: 12, background: '#FFFFFF', padding: 16 }}>
-      <Table
-        style={{ width: '100%', height: 248 }}
-        defaultTextStyle={{ fontSize: 18, textAlign: 'center', color: '#1E1B4B', fontFamily: 'Menlo, Monaco, monospace' }}
-        defaultCellStyle={{
-          border: {
-            left: { width: 1, color: '#E5E7EB' },
-            right: { width: 1, color: '#E5E7EB' },
-            top: { width: 1, color: '#E5E7EB' },
-            bottom: { width: 1, color: '#E5E7EB' },
-          },
-        }}
-        cells={[
-          [
-            { text: '分组', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: 'A 组', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: 'B 组', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '整体', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '5.0%', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '5.2%', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#16A34A' }, cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: 'iOS' },
-            { text: '8%', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#16A34A' } },
-            { text: '7%' },
-          ],
-          [
-            { text: 'Android', cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: '3%', textStyle: { fontSize: 18, fontWeight: 'bold', color: '#16A34A' }, cellStyle: { background: { color: '#EFF6FF' } } },
-            { text: '2.5%', cellStyle: { background: { color: '#EFF6FF' } } },
-          ],
-        ]}
-      />
-      <Text style={{ fontSize: 15, color: '#64748B', marginTop: 14, textAlign: 'center' }}>绿色 = 该组转化率更高</Text>
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 18 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 26, flexDirection: 'column', gap: 8 }}>
-        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>表象</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5 }}>整体 B 赢了，分组里 A 却全赢</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: 26, flexDirection: 'column', gap: 8 }}>
-        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>原因</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.5 }}>两组人群结构不均衡</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>要素④ 周期：完整周覆盖</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>至少 1–2 个完整自然周</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>工作日与周末用户结构不同，只跑半周 = 只测半类用户</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>避开大促 / 发版 / 节假日 / 运营活动</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>新老用户分开看</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>回扣「周一下午开跑错在哪」</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

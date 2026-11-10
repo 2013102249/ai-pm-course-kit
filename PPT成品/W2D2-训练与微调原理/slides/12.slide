@@ -1,33 +1,56 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D2</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>12 / 16</Text>
-
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>LoRA 旁观实验：看什么</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
-
-  <Box style={{ flexDirection: 'row', gap: 20, height: 280 }}>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 14, padding: 24, flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>第一幕</Text>
-      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>数据准备</Text>
-      <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>看示范数据长什么样、怎么标注</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 14, padding: 24, flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>第二幕</Text>
-      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>训练过程</Text>
-      <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>看训练在跑什么、原模型动没动</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 14, padding: 24, flexDirection: 'column', gap: 12, justifyContent: 'center' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>第三幕</Text>
-      <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E1B4B' }}>前后对比</Text>
-      <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.5 }}>同一批问题，微调前后各答一遍</Text>
-    </Box>
-  </Box>
-
-  <Box style={{ height: 64, background: '#7C3AED', borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginTop: 22 }}>
-    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>实验红线：学员不跑训练，只观察不动手</Text>
-  </Box>
-  <Text style={{ fontSize: 16, color: '#64748B', textAlign: 'center', marginTop: 14 }}>配合导学案：用实验记录表逐幕记录你的观察</Text>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>第四步 RLHF：师傅带教打分</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 1 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>人类对多个回答打分排序</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 2 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>学出「好答案的尺子」</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>对齐</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>有用 / 诚实 / 无害</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>学到的是偏好不是新知识</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

@@ -1,49 +1,57 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>AI 产品经理实战训练营 · W2D4</Text>
-  </Box>
-  <Text style={{ position: 'absolute', top: 668, right: 60, fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>06 / 18</Text>
-  <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>《生成式人工智能服务管理暂行办法》要点速览</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 24, marginTop: 28, marginBottom: 8 }}>
-    <Box style={{ flex: 1.5, flexDirection: 'column', gap: 14, justifyContent: 'center' }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>1</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>内容合法合规</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>2</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>防歧视</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>3</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>尊重知识产权</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>4</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>保护个人信息</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '16px 22px', flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>5</Text>
-        </Box>
-        <Text style={{ fontSize: 20, color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>投诉举报机制</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, background: '#7C3AED', borderRadius: 14, padding: 32, justifyContent: 'center', gap: 16 }}>
-      <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', fontFamily: 'Microsoft YaHei' }}>适用范围</Text>
-      <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4, fontFamily: 'Microsoft YaHei' }}>向境内公众<br />提供生成式 AI 服务</Text>
-      <Box style={{ width: 40, height: 3, background: 'rgba(255,255,255,0.5)', borderRadius: 2, marginTop: 8 }} />
-      <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)', lineHeight: 1.7, fontFamily: 'Microsoft YaHei' }}>「向境内公众」五个字，<br />是判断是否适用的前提</Text>
-    </Box>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六组易混辨析 + 当堂小测</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W2D4</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>06</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 1 节 · 0–50 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 5 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>内容安全↔数据合规</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>标识义务↔免责声明</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>机器审核↔人工审核</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>个人信息↔匿名化</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>连线 / 改错 / 选择 10 题 + 答案</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 36</Text>
+    </Box>
 </Slide>

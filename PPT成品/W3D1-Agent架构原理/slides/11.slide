@@ -1,43 +1,51 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D1</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>11 / 18</Text>
-
-  <Box style={{ flexDirection: 'column', height: '100%' }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>ReAct 的呈现设计</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16, marginBottom: 24 }} />
-
-    <Box style={{ flexDirection: 'row', gap: 24, flex: 1 }}>
-      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 14, border: '1px solid #DDD6FE', padding: 24, flexDirection: 'column', gap: 14 }}>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>默认视图：步骤清单</Text>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>一条步骤一行，随执行逐条点亮</Text>
-        </Box>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>默认收起，不打扰普通用户</Text>
-        </Box>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>失败步骤一眼可辨</Text>
-        </Box>
-      </Box>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 14, border: '1px solid #BFDBFE', padding: 24, flexDirection: 'column', gap: 14 }}>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>可展开详情</Text>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>点开单步，看输入与输出</Text>
-        </Box>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>进阶用户与排障场景使用</Text>
-        </Box>
-        <Box style={{ background: '#FFFFFF', borderRadius: 10, padding: '12px 18px' }}>
-          <Text style={{ fontSize: 17, color: '#1E1B4B' }}>层级清晰，不要一次全铺开</Text>
-        </Box>
-      </Box>
-    </Box>
-
-    <Box style={{ marginTop: 24, background: '#F5F3FF', borderRadius: 10, padding: '14px 24px' }}>
-      <Text style={{ fontSize: 18, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>反思机制</span>：失败后自我修正，但要设计「反思几次」的上限，避免原地打转</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W3D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>要素二：记忆</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W3D1</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>11</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>短期上下文 / 长期存取</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>写入与遗忘策略</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>隐私可见可删（合规底线）</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>差旅 Agent「靠过道」例子</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

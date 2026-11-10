@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>三类失分句对照改写<br />每题 60 秒稿须含 ≥1 个本日术语<br />两两模拟组织：三人轮换、至少过 4 题、自评分 ≥3/5<br />金句 1「作品集不是作品展示，是让能力可验证的证据链」<br />金句 2/3（留来源欢迎追问 / 最弱的一段不藏）</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>失败答法对照 + 本日面试金句 3 条 · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

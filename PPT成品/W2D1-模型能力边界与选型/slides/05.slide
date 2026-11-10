@@ -1,63 +1,55 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D1</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 28, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 16</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column', gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>主流模型横评（客观定位）</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flexDirection: 'column', gap: 14, paddingTop: 20 }}>
-        <Box style={{ width: '100%', border: '1px solid #E5E7EB', borderRadius: 12, padding: 8 }}>
-            <Table
-                style={{ width: '100%', height: 380 }}
-                defaultTextStyle={{ fontSize: 16, textAlign: 'left', color: '#1E1B4B' }}
-                defaultCellStyle={{
-                    border: {
-                        left: { width: 1, color: '#E5E7EB' },
-                        right: { width: 1, color: '#E5E7EB' },
-                        top: { width: 1, color: '#E5E7EB' },
-                        bottom: { width: 1, color: '#E5E7EB' },
-                    },
-                }}
-                cells={[
-                    [
-                        { text: '模型系', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17, textAlign: 'center' }, cellStyle: { background: { color: '#7C3AED' } } },
-                        { text: '客观定位（只记定位，不记跑分）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-                    ],
-                    [
-                        { text: 'GPT 系列', textStyle: { bold: true, textAlign: 'center' } },
-                        { text: '通用对话与复杂推理强项，多模态图文语音齐备' },
-                    ],
-                    [
-                        { text: 'Claude 系列', textStyle: { bold: true, textAlign: 'center' }, cellStyle: { background: { color: '#F5F3FF' } } },
-                        { text: '长文本分析见长，长链条推理细腻，工程场景常用', cellStyle: { background: { color: '#F5F3FF' } } },
-                    ],
-                    [
-                        { text: 'Gemini 系列', textStyle: { bold: true, textAlign: 'center' }, cellStyle: { background: { color: '#EFF6FF' } } },
-                        { text: '原生多模态，超长上下文窗口', cellStyle: { background: { color: '#EFF6FF' } } },
-                    ],
-                    [
-                        { text: 'DeepSeek', textStyle: { bold: true, textAlign: 'center' } },
-                        { text: '数理逻辑与代码实现突出，中文语境理解好' },
-                    ],
-                    [
-                        { text: 'Qwen 系列', textStyle: { bold: true, textAlign: 'center' }, cellStyle: { background: { color: '#F5F3FF' } } },
-                        { text: '中文场景覆盖全，多版本覆盖广', cellStyle: { background: { color: '#F5F3FF' } } },
-                    ],
-                    [
-                        { text: 'GLM 系列', textStyle: { bold: true, textAlign: 'center' }, cellStyle: { background: { color: '#EFF6FF' } } },
-                        { text: '中文表达自然，政务中文场景多', cellStyle: { background: { color: '#EFF6FF' } } },
-                    ],
-                ]}
-            />
-        </Box>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#EFF6FF', borderRadius: 8, padding: '14px 20px' }}>
-            <Text style={{ fontSize: 17, color: '#1E1B4B' }}>海外与国产模型的差异常在能力之外：合规 / 可用性 / 中文 / 私有化</Text>
-        </Box>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>此表会过期，以官网实时信息为准。</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡②：四组易混 + 缩写对照（新增）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', height: 404, flexDirection: 'row', gap: 20 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>Token ≠ 字数</Text>
+                    
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>延迟 ≠ 吞吐</Text>
+                    
+                </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>降级 ≠ 换模型</Text>
+                    
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>性价比 ≠ 最便宜</Text>
+                    
+                </Box>
+            </Box>
+        </Box>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 10, paddingBottom: 10, paddingLeft: 18, paddingRight: 18, background: '#F1F5F9', borderRadius: 8 }}>
+            <Text style={{ fontSize: 14, color: '#64748B' }}>附：基准测试 ≠ 场景实测、SLA 承诺 ≠ 实测值、LLM / GPT / API 全称</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>05 / 36</Text>
+    </Box>
 </Slide>

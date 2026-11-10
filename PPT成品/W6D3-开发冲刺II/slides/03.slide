@@ -1,55 +1,42 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D3</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>W6D3 · 开发冲刺 II</Text>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 8</Text>
-
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三态设计标准总表</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
-
-  <Box style={{ flexDirection: 'row', gap: 28, width: '100%', alignItems: 'flex-start' }}>
-    <Box style={{ width: 650, border: '1px solid #E5E7EB', borderRadius: 12, padding: 6, background: '#FFFFFF' }}>
-      <Table
-        style={{ width: '100%', height: 252 }}
-        defaultTextStyle={{ fontSize: 18, textAlign: 'center', color: '#1E1B4B' }}
-        defaultCellStyle={{
-          border: { bottom: { width: 1, color: '#7C3AED' } },
-          verticalAlign: 'middle',
-        }}
-        cells={[
-          [
-            { text: '状态', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '必备要素一', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '必备要素二', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '必备要素三', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '空态', textStyle: { bold: true, color: '#7C3AED' } },
-            '图标',
-            '人话',
-            '下一步动作',
-          ],
-          [
-            { text: '错态', textStyle: { bold: true, color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '发生了什么', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '能做什么', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '重试入口', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '加载态', textStyle: { bold: true, color: '#7C3AED' } },
-            '即时反馈',
-            '进度感知',
-            '防重复',
-          ],
-        ]}
-      />
-    </Box>
-    <Box style={{ flex: 1, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 12, padding: 14, alignItems: 'center', justifyContent: 'center' }}>
-      <Image src="assets/three_states.svg" style={{ width: 440, height: 286, objectFit: 'contain' }} />
-    </Box>
-  </Box>
-
-  <Text style={{ marginTop: 24, fontSize: 16, color: '#64748B' }}>空态 · 错态 · 加载态：每种状态都必须配齐三要素，缺一项即记走查不通过</Text>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>第 1 节目标与零层入口</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>本节目标：12 术语「定义得出 / 类比得开 / 辨析得清 / 面试说得口 / 卡找得到」</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>零层入口：零基础先走 W1-物料/W1D2-大模型原理通识/00-技术零层.md</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>英文缩写对照：AI / MVP / UI / P0-P1-P2 / N/A / badcase / API</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>时间轴：零层 8′ + 术语 22′ + 辨析 12′ + 小测 8′</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>03 / 36</Text>
+    </Box>
 </Slide>

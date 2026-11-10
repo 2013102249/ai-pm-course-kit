@@ -1,44 +1,51 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D1</Text>
-    </Box>
-    <Box style={{ position: 'absolute', right: 60, bottom: 40 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>09 / 16</Text>
-    </Box>
-    <Box style={{ position: 'relative', gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>留存：aha 时刻的反复重现</Text>
-        <Box style={{ width: 1160, height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ position: 'relative', marginTop: 28, flexDirection: 'row', gap: 36 }}>
-        <Box style={{ width: 640, gap: 20 }}>
-            <Text style={{ fontSize: 19, color: '#1E1B4B' }}>留存的本质，是让用户每一次使用都再次体验到核心价值。三个抓手：</Text>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '20px 24px', background: '#F5F3FF', borderRadius: 12, borderLeft: '5px solid #7C3AED' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>历史可积累</Text>
-                <Text style={{ fontSize: 16, color: '#64748B' }}>历史产出越用越有价值</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '20px 24px', background: '#EFF6FF', borderRadius: 12, borderLeft: '5px solid #2563EB' }}>
-                <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>越用越准</Text>
-                <Text style={{ fontSize: 16, color: '#64748B' }}>个性化随使用持续增值</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, padding: '20px 24px', background: '#F5F3FF', borderRadius: 12, borderLeft: '5px solid #7C3AED' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>嵌入工作流</Text>
-                <Text style={{ fontSize: 16, color: '#64748B' }}>成为用户既有流程的默认工具</Text>
-            </Box>
-        </Box>
-        <Box style={{ flex: 1, padding: '36px 32px', background: '#7C3AED', borderRadius: 16, justifyContent: 'center', gap: 16 }}>
-            <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }}>本课最重要的一句话</Text>
-            <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4 }}>「留存只看 DAU」<br />是错误习惯</Text>
-            <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.8)' }}>推送只能把人拉回来一次，<br />拉不回第二次。</Text>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>AARRR 五环节落地总表（下）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W1D2</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>09</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>留存：历史可积累 / 越用越准 / 嵌入工作流</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>收入：订阅制为主 / 按量计费 / 免费额度设计</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>裂变：协作邀请 / 生成物外链 / 双向产品权益</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>收口金句：前两层决定生死，后三层决定快慢</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>09 / 36</Text>
+    </Box>
 </Slide>

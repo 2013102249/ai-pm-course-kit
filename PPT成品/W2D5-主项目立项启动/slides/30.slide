@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>两人一组，A 问 B 答，连追 2 层后互换<br />每题 60 秒答 + 30 秒追问，超时叫停<br />填《面试模拟记录表》：题号 / 追问层数 / 卡点 / 自评分<br />金句：不是拍脑袋定的题 / Scope 敢写清不做什么 / 省三个月</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>两两模拟规则 + 本日面试金句 3 条 · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

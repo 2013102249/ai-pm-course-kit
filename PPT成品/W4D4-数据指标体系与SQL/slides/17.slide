@@ -1,33 +1,54 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>17 / 18</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场跑数：整体 → 切片 → 归因</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 24 }} />
-  <Text style={{ fontSize: 18, color: '#64748B' }}>本页投屏 SQL 环境逐条演示</Text>
-  <Box style={{ flexDirection: 'row', gap: 22, marginTop: 22, width: '100%' }}>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '18px 24px' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>查询 1 · 整体</Text>
-      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E1B4B', marginTop: 10 }}>采纳率 0.54</Text>
-      <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.5 }}>13 次生成，7 次被采纳；一句话给整体下判断</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '18px 24px' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#2563EB' }}>查询 2 · 切片（按天）</Text>
-      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E1B4B', marginTop: 10 }}>异常日 0.00</Text>
-      <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.5 }}>9 月 5 日：2 次生成，零采纳——整体健康不代表天天健康</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '18px 24px' }}>
-      <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>查询 3 · 归因（按渠道）</Text>
-      <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E1B4B', marginTop: 10 }}>渠道归因</Text>
-      <Text style={{ fontSize: 16, color: '#64748B', marginTop: 10, lineHeight: 1.5 }}>哪个渠道的用户质量最高；小样本先看次数，再看比率</Text>
-    </Box>
-  </Box>
-  <Box style={{ width: '100%', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 10, padding: '18px 28px', marginTop: 24 }}>
-    <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>数据讲故事三步：整体 → 切片 → 归因</Text>
-    <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', marginTop: 8 }}>样本量小的时候，先标记「待观察」，不要立刻定性</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>第三关 GROUP BY + 第四关 JOIN</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>分组（GROUP BY 定维度）vs 聚合（COUNT/SUM/AVG 算值），先分组后聚合</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>JOIN 连表、ON 靠 user_id 对上</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>整数除法陷阱 ×1.0、聚合列加 AS 别名</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>练习 2、3</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>17 / 36</Text>
+    </Box>
 </Slide>

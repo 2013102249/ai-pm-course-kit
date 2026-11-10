@@ -1,34 +1,65 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>15 / 18</Text>
-    <Box style={{ flexDirection: 'column', gap: 16 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>badcase 归因四类框架</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 20, marginTop: 36, height: 170 }}>
-        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>提示词问题</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>修复手段：改提示词、补约束与示例，改完立刻复测。</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>模型能力问题</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>修复手段：换更强的模型，或评估微调的必要性与成本。</Text>
-        </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 20, marginTop: 20, height: 170 }}>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>资料问题</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>修复手段：补知识库、修正资料内容，让模型有据可依。</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>需求问题</Text>
-            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>修复手段：回退到需求本身——场景边界、期望输出重新对齐。</Text>
-        </Box>
-    </Box>
-    <Box style={{ marginTop: 28, background: '#F5F3FF', borderRadius: 10, padding: '14px 24px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B' }}>排查原则：先查便宜的再查贵的——提示词 <span style={{ color: '#7C3AED' }}>→</span> 资料 <span style={{ color: '#7C3AED' }}>→</span> 模型，对照导学案四类对照表补全。</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>第四步：试测、冻结、回流</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 1 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>抽 5–10 条试测校准期望输出与锚点</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 2 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>冻结 V1.0、每次修订升版本号</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 3 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>badcase 修完回流入集</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>回归测试 = 改完重跑防改坏</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 5 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>评测集是活的资产</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>15 / 36</Text>
+    </Box>
 </Slide>

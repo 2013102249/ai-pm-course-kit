@@ -1,37 +1,66 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative', fontFamily: "'Microsoft YaHei','PingFang SC',sans-serif" }}>
-  <Box style={{ position: 'absolute', top: 26, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D5</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 22, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 14</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三维定题法总览</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
-  <Box style={{ flexDirection: 'row', gap: 36, marginTop: 22, alignItems: 'center' }}>
-    <Image src="assets/venn.svg" style={{ width: 620, height: 403 }} />
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 18 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '20px 24px', gap: 6 }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <Box style={{ width: 12, height: 12, borderRadius: 6, background: '#7C3AED' }} />
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>行业</Text>
-        </Box>
-        <Text style={{ fontSize: 17, color: '#1E1B4B' }}>我懂的赛道</Text>
-      </Box>
-      <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '20px 24px', gap: 6 }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <Box style={{ width: 12, height: 12, borderRadius: 6, background: '#2563EB' }} />
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>场景</Text>
-        </Box>
-        <Text style={{ fontSize: 17, color: '#1E1B4B' }}>高频 · 具体 · 有痛点</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '20px 24px', gap: 6 }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <Box style={{ width: 12, height: 12, borderRadius: 6, background: '#4C1D95' }} />
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#4C1D95' }}>人群</Text>
-        </Box>
-        <Text style={{ fontSize: 17, color: '#1E1B4B' }}>可触达的一类人</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>划界组 + 推进组 6 词与三组易混辨析</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>Scope＝做什么 + 不做什么（类比：合同写明这期不装阳台）</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>MVP＝最小但完整可验证（类比</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>试营业只上一道招牌菜但流程全通）</Text>
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>里程碑 / 验收标准</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>节点 vs 判据</Text>
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>风险清单 / 资源约束 / 优先级</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>三组连线</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>Scope—功能清单、MVP—半成品、里程碑—验收标准</Text>
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>05 / 36</Text>
+    </Box>
 </Slide>

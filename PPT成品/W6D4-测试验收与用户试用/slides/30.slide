@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 42, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>两人一组，A 面试官 / B 候选人，抽 2 题连追 2–3 层，8′ 后互换<br />《面试模拟记录表》≥4 行、自评分 ≥80<br />金句 3 条抄进导学案<br />巡场专抓两类失分：混用准确率 / 把演练当真实数据</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>两两模拟与本日面试金句（新增） · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

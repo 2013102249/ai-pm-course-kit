@@ -1,31 +1,57 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>AI 产品经理实战训练营 · W2D4</Text>
-  </Box>
-  <Text style={{ position: 'absolute', top: 668, right: 60, fontSize: 14, color: '#64748B', fontFamily: 'Microsoft YaHei' }}>14 / 18</Text>
-  <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>未成年人保护</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flex: 1, flexDirection: 'column', gap: 20, marginTop: 28, marginBottom: 8 }}>
-    <Box style={{ flex: 1, flexDirection: 'row', gap: 20 }}>
-      <Box style={{ flex: 1, background: '#F5F3FF', borderTop: '4px solid #7C3AED', borderRadius: 12, padding: 26, justifyContent: 'center', gap: 14 }}>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#DDD6FE', fontFamily: 'Microsoft YaHei' }}>01</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>用户画像先判断</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderTop: '4px solid #2563EB', borderRadius: 12, padding: 26, justifyContent: 'center', gap: 14 }}>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#BFDBFE', fontFamily: 'Microsoft YaHei' }}>02</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>适龄提示与内容分级</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, flexDirection: 'row', gap: 20 }}>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderTop: '4px solid #2563EB', borderRadius: 12, padding: 26, justifyContent: 'center', gap: 14 }}>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#BFDBFE', fontFamily: 'Microsoft YaHei' }}>03</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>防沉迷</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#F5F3FF', borderTop: '4px solid #7C3AED', borderRadius: 12, padding: 26, justifyContent: 'center', gap: 14 }}>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#DDD6FE', fontFamily: 'Microsoft YaHei' }}>04</Text>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B', fontFamily: 'Microsoft YaHei' }}>未成年人信息从严</Text>
-      </Box>
-    </Box>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>未成年人保护</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W2D4</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>14</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 3 节 · 100–150 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 5 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>先判断用户画像是否含未成年人</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>适龄提示与内容分级</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>防沉迷机制</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>未成年人信息从严、要求进需求文档</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>「所有人」画像会被评审问住</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>14 / 36</Text>
+    </Box>
 </Slide>

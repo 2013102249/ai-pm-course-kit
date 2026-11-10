@@ -1,60 +1,57 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D1</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>02 / 20</Text>
-
-    <Box style={{ flexDirection: 'column', gap: 16 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>讲师介绍：张小培 Peter</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-
-    <Box style={{ flexDirection: 'row', gap: 30, marginTop: 30, alignItems: 'center' }}>
-        <Box style={{ width: 128, height: 128, borderRadius: 26, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 56, fontWeight: 'bold', color: '#FFFFFF' }}>张</Text>
-        </Box>
-        <Box style={{ flex: 1, flexDirection: 'column', gap: 9 }}>
-            <Text style={{ fontSize: 36, fontWeight: 'bold', color: '#1E1B4B' }}>张小培 Peter</Text>
-            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>AI 产品经理讲师 · 新像素 AI 产品经理课程授课讲师</Text>
-            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>曾任教育科技公司科技部产品负责人、智能科技公司研发部负责人；8 年产品、测试与研发管理，深耕 AI 应用与产品设计。</Text>
-        </Box>
-    </Box>
-
-    <Box style={{ flexDirection: 'row', gap: 16, marginTop: 26 }}>
-        <Box style={{ flex: 1, height: 88, background: '#F5F3FF', borderRadius: 12, padding: '0 24px', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
-            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>8 年</Text>
-            <Text style={{ fontSize: 14, color: '#64748B' }}>产品 / 测试 / 研发管理</Text>
-        </Box>
-        <Box style={{ flex: 1, height: 88, background: '#EFF6FF', borderRadius: 12, padding: '0 24px', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
-            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2563EB' }}>18 个</Text>
-            <Text style={{ fontSize: 14, color: '#64748B' }}>可访问的在线平台作品</Text>
-        </Box>
-        <Box style={{ flex: 1, height: 88, background: '#F5F3FF', borderRadius: 12, padding: '0 24px', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
-            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#7C3AED' }}>7 大</Text>
-            <Text style={{ fontSize: 14, color: '#64748B' }}>行业领域 · 从政务到教育</Text>
-        </Box>
-        <Box style={{ flex: 1, height: 88, background: '#EFF6FF', borderRadius: 12, padding: '0 24px', flexDirection: 'column', justifyContent: 'center', gap: 2 }}>
-            <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#2563EB' }}>2 段</Text>
-            <Text style={{ fontSize: 14, color: '#64748B' }}>科技部 / 研发部负责人经历</Text>
-        </Box>
-    </Box>
-
-    <Box style={{ flexDirection: 'row', gap: 16, marginTop: 22 }}>
-        <Box style={{ flex: 1, height: 112, borderLeft: '4px solid #7C3AED', background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'column', gap: 6 }}>
-            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1E1B4B' }}>教育科技公司 · 科技部产品负责人</Text>
-            <Text style={{ fontSize: 14, color: '#64748B', lineHeight: 1.55 }}>公司唯一产品负责人，独立规划「获客 → 测评 → 签约 → 伴学 → 交付」全链路数字化产品体系。</Text>
-        </Box>
-        <Box style={{ flex: 1, height: 112, borderLeft: '4px solid #2563EB', background: '#EFF6FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'column', gap: 6 }}>
-            <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#1E1B4B' }}>智能科技公司 · 研发部负责人</Text>
-            <Text style={{ fontSize: 14, color: '#64748B', lineHeight: 1.55 }}>负责部门需求排期与交付管理，主导垂类大模型、智慧交通、政企服务类项目的产品与研发。</Text>
-        </Box>
-    </Box>
-
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: 22, height: 74, background: '#F5F3FF', borderRadius: 12, padding: '0 24px' }}>
-        <Box style={{ background: '#7C3AED', borderRadius: 8, padding: '5px 12px' }}>
-            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>一线讲师</Text>
-        </Box>
-        <Text style={{ fontSize: 17, color: '#1E1B4B' }}>企业级 AI 产品从 0 到 1 的完整落地经验——课上讲的每个方法，都在项目里验收过。</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>讲师介绍 + 一线履历</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W1D1</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>02</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 1 节 · 0–50 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 5 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>姓名 / 头衔 / 8 年产品·测试·研发管理</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>两段负责人经历：教育科技公司科技部产品负责人、智能科技公司研发部负责人</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>三个可验证项目：百度智慧城市驻场 PM、省科技成果转化平台项目负责人、智慧交通产品负责人</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>18 个可访问在线平台 · 7 大行业</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>这些方法 W4/W5 会亲手做一遍</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>02 / 36</Text>
+    </Box>
 </Slide>

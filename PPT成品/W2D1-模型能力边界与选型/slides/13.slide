@@ -1,51 +1,49 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D1</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 28, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>13 / 16</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column', gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>选型决策树五问</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 28, paddingTop: 24, alignItems: 'center' }}>
-        <Box style={{ width: 490, flexDirection: 'column', gap: 14 }}>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#F5F3FF', borderRadius: 10, padding: '16px 22px' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>任务类型</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#EFF6FF', borderRadius: 10, padding: '16px 22px' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>质量底线（小模型三条件）</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#F5F3FF', borderRadius: 10, padding: '16px 22px' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>延迟容忍</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#EFF6FF', borderRadius: 10, padding: '16px 22px' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>预算量级</Text>
-            </Box>
-            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, background: '#FFFFFF', border: '2px solid #B91C1C', borderRadius: 10, padding: '16px 22px' }}>
-                <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
-                </Box>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>合规部署</Text>
-                <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#B91C1C' }}>一票否决</Text>
-            </Box>
-        </Box>
-        <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Image src="assets/decision-tree.svg" style={{ width: 600, height: 420, objectFit: 'contain' }} />
-        </Box>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>现场对比实验：规则</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+        <Box style={{ width: '100%', paddingTop: 26, paddingBottom: 26, paddingLeft: 32, paddingRight: 32, background: 'linear-gradient(120deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 22 }}>
+            <Box style={{ width: 56, height: 56, borderRadius: 28, border: '2px solid rgba(255,255,255,0.6)', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>▶</Text>
+            </Box>
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>本页配合现场工具投屏讲解</Text>
+                <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, marginTop: 8 }}>课件只保留任务口径与观察点，操作过程在真实工具中演示。</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, flexDirection: 'column', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>同组任务 × 3 类档位（通用旗舰 / 轻量快速 / 推理增强）</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>四维度观察：正确性 / 速度 / 消耗 / 失败方式</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>投屏任务卡念规则</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>学员在导学案建表头</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>「不背跑分，只记今天亲眼所见」</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>13 / 36</Text>
+    </Box>
 </Slide>

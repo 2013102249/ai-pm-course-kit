@@ -1,21 +1,48 @@
-<Slide width={1280} height={720} style={{ width: 1280, height: 720, padding: '60px 60px 60px 60px', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', flexDirection: 'column', justifyContent: 'center' }}>
-  <Box style={{ flexDirection: 'column', gap: 30, paddingLeft: 40 }}>
-    <Text style={{ fontSize: 16, color: '#FFFFFF', opacity: 0.7, letterSpacing: 4 }}>本课最重要的一句 · 决策框架</Text>
-    <Text style={{ fontSize: 48, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.35 }}>加知识用 RAG，改行为用微调；<br />先试提示词</Text>
-    <Box style={{ width: 56, height: 4, background: '#FFFFFF', opacity: 0.7 }} />
-    <Box style={{ flexDirection: 'row', gap: 28, marginTop: 12 }}>
-      <Box style={{ flex: 1, background: '#FFFFFF', opacity: 0.94, borderRadius: 12, padding: '20px 24px' }}>
-        <Text style={{ fontSize: 16, color: '#16A34A', fontWeight: 'bold' }}>场景一 · 知识要常更新</Text>
-        <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>答案随文档变化 → 用 RAG</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#FFFFFF', opacity: 0.94, borderRadius: 12, padding: '20px 24px' }}>
-        <Text style={{ fontSize: 16, color: '#16A34A', fontWeight: 'bold' }}>场景二 · 行为要改变</Text>
-        <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>风格、格式、语气固定调整 → 用微调</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#FFFFFF', opacity: 0.94, borderRadius: 12, padding: '20px 24px' }}>
-        <Text style={{ fontSize: 16, color: '#16A34A', fontWeight: 'bold' }}>场景三 · 拿不准</Text>
-        <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 8, lineHeight: 1.5 }}>别急着重投入 → 先试提示词</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W3D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>三对权衡深化 + 这段在面试里怎么答</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>块大小 ↔ 精度与上下文</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>K 值 ↔ 成本与噪声</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>重排 ↔ 延迟与准确</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>正面案例：补更新 / 权限 / 溯源救回信任</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>面试接口：先按三要素排查，再用召回率归因</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>18 / 36</Text>
+    </Box>
 </Slide>

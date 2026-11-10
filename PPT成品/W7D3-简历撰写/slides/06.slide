@@ -1,45 +1,57 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>06 / 18</Text>
-    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 24 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>逐段讲法 I：头部定位与核心技能</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ width: '100%', height: 460, flexDirection: 'row', gap: 30 }}>
-        <Box style={{ width: 430, height: '100%', flexDirection: 'column', gap: 12 }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 14, padding: 16, justifyContent: 'center', alignItems: 'center' }}>
-                <Image src="assets/resume-structure.svg" style={{ width: 398, height: 262, objectFit: 'contain' }} />
-            </Box>
-            <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '10px 18px', alignSelf: 'flex-start' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>当前段落：头部定位 · 核心技能</Text>
-            </Box>
-        </Box>
-        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'space-between' }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 8 }}>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-                    <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-                    </Box>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>定位一行</Text>
-                </Box>
-                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>一行写清：<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>人 + 事 + 数 + 目标</span>，谁来、做过什么、做到什么程度、接下来想去哪。</Text>
-            </Box>
-            <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 8 }}>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-                    <Box style={{ width: 28, height: 28, background: '#2563EB', borderRadius: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-                    </Box>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>核心技能 4–6 条</Text>
-                </Box>
-                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>从目标岗位 JD 倒推：JD 要什么能力，就写什么证据，不写凑数技能。</Text>
-            </Box>
-            <Box style={{ border: '1px solid #DC2626', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 8 }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#DC2626' }}>禁区</Text>
-                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.6 }}>座右铭、无支撑形容词（如「精通」「擅长」无事实）一律不写。</Text>
-            </Box>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六组易混辨析 + 术语小测</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W7D3</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>06</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 1 节 · 0–50 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 5 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>ATS≠JD / 关键词≠岗位匹配</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>公式≠STAR / 量化≠成果证据</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>一页原则≠排版美观 / 可验证动词≠免责动词</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>术语小测 10 题，≥18/20 达标</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>未达标用术语卡订正重测</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 36</Text>
+    </Box>
 </Slide>

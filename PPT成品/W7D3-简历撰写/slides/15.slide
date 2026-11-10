@@ -1,41 +1,58 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>15 / 18</Text>
-    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 20 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>关键词操作三步 + 边界</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ width: '100%', flexDirection: 'column', gap: 18, height: 455 }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, height: 130 }}>
-            <Box style={{ flex: 1, height: '100%', background: '#F5F3FF', borderRadius: 12, padding: 18, flexDirection: 'column', gap: 6, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>STEP 1 · 拆 JD</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>划出岗位描述里的硬性要求与高频词</Text>
-            </Box>
-            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
-            <Box style={{ flex: 1, height: '100%', background: '#EFF6FF', borderRadius: 12, padding: 18, flexDirection: 'column', gap: 6, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>STEP 2 · 盘点真实弹药</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>对照自己做过的项目，找出真实对应</Text>
-            </Box>
-            <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>→</Text>
-            <Box style={{ flex: 1, height: '100%', background: '#F5F3FF', borderRadius: 12, padding: 18, flexDirection: 'column', gap: 6, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>STEP 3 · 改写归位</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5 }}>用 JD 的语言改写对应条目，放回正确段落</Text>
-            </Box>
-        </Box>
-        <Box style={{ background: '#EFF6FF', border: '1px solid #2563EB', borderRadius: 12, padding: '14px 24px', flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-            <Box style={{ background: '#2563EB', borderRadius: 8, padding: '4px 14px' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>现场跟练</Text>
-            </Box>
-            <Text style={{ fontSize: 18, color: '#1E1B4B' }}>样例 JD 配合现场投屏讲解 · 从样例 JD 提取 8 个关键词，并标出你简历里对应的证据</Text>
-        </Box>
-        <Box style={{ background: '#FEF2F2', border: '1px solid #DC2626', borderRadius: 12, padding: '14px 24px' }}>
-            <Text style={{ fontSize: 18, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#DC2626' }}>红线：只做真实匹配，不堆砌作弊。</span>把没做过的关键词硬塞进简历，面试第一轮追问就会露馅。</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '14px 24px', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED' }}>关键词决定被看见，事实决定被记住。</Text>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>转行叙事三段法</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>01</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>原行业积累什么（1–2 行，只写可迁移）</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>02</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>为什么转 AI PM（一句，奔赴不逃离）</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>03</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>已做了什么证明（重心，2–3 行，≤100 字）</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>04</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>合格版 vs 失败版对比</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>05</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>金句</Text>
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>转行不是从零开始，是带着行业弹药换阵地</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>15 / 36</Text>
+    </Box>
 </Slide>

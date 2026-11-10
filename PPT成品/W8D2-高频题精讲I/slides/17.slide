@@ -1,43 +1,48 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D2</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>17 / 20</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column' }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场真题 10 道总览</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-        <Box style={{ flexDirection: 'row', gap: 28, marginTop: 26, alignItems: 'stretch' }}>
-            <Box style={{ flex: 1, border: '1px solid #DDD2F7', borderRadius: 12 }}>
-                <Box style={{ background: '#7C3AED', padding: '14px 22px' }}>
-                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>A 组 · 项目深挖 5 道</Text>
-                </Box>
-                <Box style={{ padding: '18px 22px', gap: 12 }}>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>1. 讲一个你最有成就感的项目</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>2. 项目里你具体负责哪部分</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>3. 关键数据是怎么来的</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>4. 为什么这么取舍</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>5. 有没有失败或想重来的地方</Text>
-                </Box>
-            </Box>
-            <Box style={{ flex: 1, border: '1px solid #BFDBFE', borderRadius: 12 }}>
-                <Box style={{ background: '#2563EB', padding: '14px 22px' }}>
-                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>B 组 · 场景设计 5 道</Text>
-                </Box>
-                <Box style={{ padding: '18px 22px', gap: 12 }}>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>1. 给老年人设计一款 AI 用药提醒</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>2. 给大学生设计一款 AI 复习工具</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>3. 给小商户设计一款 AI 记账助手</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>4. 给新能源车主设计充电规划</Text>
-                    <Text style={{ fontSize: 16, color: '#1E1B4B' }}>5. 给养宠家庭设计 AI 健康记录</Text>
-                </Box>
-            </Box>
-        </Box>
-        <Box style={{ flexDirection: 'row', gap: 24, marginTop: 26, alignItems: 'center' }}>
-            <Text style={{ fontSize: 15, color: '#64748B' }}>题目用于课堂演练 · 答法对照防御链与六步框架</Text>
-            <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#7C3AED' }}>教学示例题</Text>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>现场真题 10 道总览与骨架速览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>A 组项目深挖 5 道 + B 组场景设计 5 道（标注教学示例题）</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>每道约 100 秒：题目 → 考察点 → 骨架 → 高分要点</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>笔记只记骨架级要点</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>A 组对应防御链 / B 组对应六步框架</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>详细版在 PPT 与导学案</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>17 / 36</Text>
+    </Box>
 </Slide>

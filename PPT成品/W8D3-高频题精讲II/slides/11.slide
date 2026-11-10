@@ -1,50 +1,30 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D3</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>11 / 20</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>技术题口径回扣表：8 题对 W1–W3 金句</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ flex: 1, justifyContent: 'center', gap: 18, marginTop: 16 }}>
-    <Box style={{ border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
-      <Table
-        style={{ width: '100%' }}
-        defaultTextStyle={{ fontSize: 18, textAlign: 'left', color: '#1E1B4B' }}
-        defaultCellStyle={{
-          padding: '16px 22px',
-          border: { left: { width: 1, color: '#E5E7EB' }, right: { width: 1, color: '#E5E7EB' }, top: { width: 1, color: '#E5E7EB' }, bottom: { width: 1, color: '#E5E7EB' } },
-        }}
-        cells={[
-          [
-            { text: 'W1–W3 金句（可背弹药）', textStyle: { fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '回扣八连题', textStyle: { fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '加知识用 RAG，改行为用微调', textStyle: { fontWeight: 'bold', color: '#7C3AED' } },
-            { text: '题 1 RAG vs 微调' },
-          ],
-          [
-            { text: '没评测集 = 开盲盒', textStyle: { fontWeight: 'bold', color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '题 2 幻觉三层 · 题 6 评测四件套', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '模型没有全能冠军', textStyle: { fontWeight: 'bold', color: '#7C3AED' } },
-            { text: '题 4 选型三角 · 题 8 多模态三维度' },
-          ],
-          [
-            { text: '确定性是产品的好朋友', textStyle: { fontWeight: 'bold', color: '#7C3AED' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '题 3 Agent 边界 · 题 5 上下文 · 题 7 内容安全', cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-        ]}
-      />
-    </Box>
-    <Box style={{ background: '#EFF6FF', borderRadius: 10, padding: '14px 24px' }}>
-      <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>这四句金句是可背弹药——任何技术题都可以回扣</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>标杆版与教训</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>标杆 30 秒版全文</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>两类翻车：堆术语、说没根据的话</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

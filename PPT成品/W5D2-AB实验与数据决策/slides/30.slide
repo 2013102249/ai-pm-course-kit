@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 38, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>两两配对、10 分钟后互换角色<br />《面试模拟记录表》≥4 行，含追问记录与自评分<br />踩分点自评 ≥3/4<br />金句 3 条：先定判据再看数据 / 证据不足≠证明无效 / 数据答能不能、决策答值不值<br />抄进导学案</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>两两模拟 + 记录表 + 本日金句 · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

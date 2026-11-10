@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>60 秒稿结构：结论 → 踩分点 → 术语 → 金句<br />金句一：提示词是需求文档，上下文工程是系统设计<br />金句二：第一纪律是把任务写到可验收<br />金句三：上下文不是越多越好，是越准越好</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>60 秒标准答法 + 本日面试金句 · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

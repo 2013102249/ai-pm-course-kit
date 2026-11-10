@@ -1,42 +1,54 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D2</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>现场改写实战</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'row', gap: 28, marginTop: 26, height: 440 }}>
-    <Box style={{ flex: 1.4, flexDirection: 'column' }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 14, padding: 30, height: 220 }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>练习题 · 把这句经历改写成 STAR</Text>
-        <Text style={{ fontSize: 23, color: '#1E1B4B', lineHeight: 1.8, marginTop: 24 }}>「参与 AI 知识库项目，负责一些需求分析和文档工作。」</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', gap: 12, marginTop: 22 }}>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 8, paddingTop: 10, paddingBottom: 10, alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#2563EB' }}>S</span> 一句话</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 8, paddingTop: 10, paddingBottom: 10, alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#2563EB' }}>T</span> 可量化</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 8, paddingTop: 10, paddingBottom: 10, alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#2563EB' }}>A</span> 写决策</Text>
-        </Box>
-        <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 8, paddingTop: 10, paddingBottom: 10, alignItems: 'center' }}>
-          <Text style={{ fontSize: 15, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#2563EB' }}>R</span> 有数字</Text>
-        </Box>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, border: '2px dashed #7C3AED', borderRadius: 14, padding: 30, flexDirection: 'column' }}>
-      <Text style={{ fontSize: 16, color: '#64748B' }}>限时改写</Text>
-      <Text style={{ fontSize: 60, fontWeight: 'bold', color: '#7C3AED', marginTop: 20 }}>90 秒</Text>
-      <Box style={{ width: '100%', height: 14, background: '#E5E7EB', borderRadius: 7, marginTop: 30 }}>
-        <Box style={{ width: '100%', height: 14, background: '#7C3AED', borderRadius: 7 }} />
-      </Box>
-      <Text style={{ fontSize: 14, color: '#64748B', marginTop: 16 }}>计时区占位 · 现场投屏 90 秒倒计时</Text>
-    </Box>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>教学示例 · 数字为虚构演示</Text>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 16</Text>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>现场改写实战 + 正反案例 + 面试连接</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#7C3AED' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>正例 / 可行路径</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>正面案例：周报助手「放弃完全自由生成」</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>练习题「参与 AI 知识库项目，负责一些需求分析和文档工作。」</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>「这段在面试里怎么答」：按 STAR 说 60 秒 + 补一句「每个数字出处我都留着」</Text>
+            </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#2563EB' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#2563EB' }}>反例 / 风险动作</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>反面案例：五个动词零决策</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>90 秒计时，点 1 人念改写</Text>
+            </Box>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

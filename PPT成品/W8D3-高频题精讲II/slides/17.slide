@@ -1,29 +1,30 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D3</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>17 / 20</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>反问题与压力题</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ flex: 1, gap: 18, marginTop: 16 }}>
-    <Box style={{ flexDirection: 'row', gap: 24 }}>
-      <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '18px 26px', gap: 6 }}>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>反问 = 送分题</Text>
-        <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>问岗位产出：这个人进来先做什么、怎么算做好</Text>
-      </Box>
-      <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '18px 26px', gap: 6 }}>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>压力题 = 不接情绪，只给证据</Text>
-        <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5 }}>不辩解、不激动，用事实和数字回应</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Image src="assets/strategy-table.svg" style={{ width: 660, height: 385, objectFit: 'contain' }} />
-      <Text style={{ fontSize: 14, color: '#64748B', marginTop: 8 }}>题型-应答策略对照表 · 本页看后两行：反问题 / 压力题</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>数据题模板二：异动分析</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>先拆样本结构 → 再查指标口径 → 最后下结论</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>先查便宜的，再怀疑贵的</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>17 / 36</Text>
+    </Box>
 </Slide>

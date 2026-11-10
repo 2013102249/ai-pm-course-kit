@@ -1,39 +1,42 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W1D2</Text>
-    </Box>
-    <Text style={{ fontSize: 14, color: '#64748B', position: 'absolute', right: 60, bottom: 34 }}>11 / 16</Text>
-    <Box style={{ gap: 18 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>第三阶段：RLHF = 满意度回访</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flex: 1, justifyContent: 'center', gap: 18 }}>
-        <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '14px 24px', alignSelf: 'flex-start' }}>
-            <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>满意度回访：同一个问题出多个回答，让人来排序</Text>
-        </Box>
-        <Box style={{ flexDirection: 'row', gap: 24 }}>
-            <Box style={{ flex: 1, background: '#FFFFFF', border: '1.5px solid #16A34A', borderRadius: 14, padding: '22px 26px', gap: 10 }}>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-                    <Box style={{ width: 30, height: 30, background: '#16A34A', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-                    </Box>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#16A34A' }}>有用的回答</Text>
-                </Box>
-                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.6 }}>直接给方案、给步骤，<br />站在提问者的场景里解决问题</Text>
-            </Box>
-            <Box style={{ flex: 1, background: '#FFFFFF', border: '1.5px solid #CBD5E1', borderRadius: 14, padding: '22px 26px', gap: 10 }}>
-                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-                    <Box style={{ width: 30, height: 30, background: '#94A3B8', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-                    </Box>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#64748B' }}>正确的废话</Text>
-                </Box>
-                <Text style={{ fontSize: 17, color: '#64748B', lineHeight: 1.6 }}>每句都对但没有用，<br />「建议根据实际情况综合考虑」</Text>
-            </Box>
-        </Box>
-        <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '16px 24px' }}>
-            <Text style={{ fontSize: 18, color: '#1E1B4B' }}>千万次排序之后，模型的「脾气」被塑造成型——<span style={{ fontWeight: 'bold', color: '#2563EB' }}>这是对齐的产物，不是天生的</span></Text>
-        </Box>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>你的主战场在两端</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>模型只能选、改不动</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>提示词组装 × 输出后处理是产品经理的活</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>划两端：用手同时框住两块</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>周三提示词课展开</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

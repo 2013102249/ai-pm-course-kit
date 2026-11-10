@@ -1,56 +1,56 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 18</Text>
-  </Box>
-  <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 16, width: '100%' }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>案例对比：DAU vs 采纳型北极星</Text>
-    <Box style={{ background: '#7C3AED', borderRadius: 11, padding: '4px 14px' }}>
-      <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>教学示例</Text>
-    </Box>
-  </Box>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 26 }} />
-  <Box style={{ width: '100%', border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
-    <Table
-      style={{ width: '100%', height: 316 }}
-      defaultTextStyle={{ fontSize: 17, textAlign: 'left', color: '#1E1B4B' }}
-      defaultCellStyle={{
-        border: {
-          left: { width: 1, color: '#E5E7EB' },
-          right: { width: 1, color: '#E5E7EB' },
-          top: { width: 1, color: '#E5E7EB' },
-          bottom: { width: 1, color: '#E5E7EB' },
-        },
-        padding: '10px 18px',
-      }}
-      cells={[
-        [
-          { text: '三标准', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-          { text: 'DAU（反面教材）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-          { text: '每周生成并被采纳 ≥3 次的用户数（正例）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-        ],
-        [
-          { text: '绑价值', textStyle: { bold: true } },
-          { text: '不绑：打开 App 不等于得到价值，AI 产品打开后甩手走的比例不低', cellStyle: { background: { color: '#FFFFFF' } } },
-          { text: '绑：被采纳即用户拿到了核心价值', cellStyle: { background: { color: '#F5F3FF' } } },
-        ],
-        [
-          { text: '可影响', textStyle: { bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-          { text: '太可影响：推送、签到、每日抽奖都能推高，太容易被廉价手段影响反而失真', cellStyle: { background: { color: '#F5F3FF' } } },
-          { text: '团队动作能直接推动：提升生成质量与采纳', cellStyle: { background: { color: '#FFFFFF' } } },
-        ],
-        [
-          { text: '可拆解', textStyle: { bold: true } },
-          { text: '不可拆：和采纳率、留存都不挂钩，跌了查不出原因', cellStyle: { background: { color: '#FFFFFF' } } },
-          { text: '可拆：生成量、采纳率、习惯用户，出问题能定位到环节', cellStyle: { background: { color: '#F5F3FF' } } },
-        ],
-      ]}
-    />
-  </Box>
-  <Box style={{ width: '100%', background: '#EFF6FF', borderRadius: 10, padding: '16px 24px', marginTop: 24 }}>
-    <Text style={{ fontSize: 19, color: '#1E1B4B' }}>北极星改成「每周采纳 ≥3 次」后，团队动作立刻从<span style={{ fontWeight: 'bold' }}>拉新</span>转向<span style={{ fontWeight: 'bold', color: '#2563EB' }}>留存</span>——新用户采纳率上不去，这个数字就不动；拉来一堆不采纳的用户，数字反而被稀释（教学示例，非真实公司数据）</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>北极星指标三标准</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 1 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>绑价值 / 可影响 / 可拆解，各配自检问句</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 2 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>用三标准逐条拆 DAU（三条全灭）</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>正例教学示例</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>改北极星后动作从拉新转留存</Text>
+            </Box>
+            <Box style={{ width: 281, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>金句</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>北极星一换，全团队的动作跟着换</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

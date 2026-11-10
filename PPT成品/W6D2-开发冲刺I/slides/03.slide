@@ -1,37 +1,42 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, flexDirection: 'column' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D2</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>03 / 8</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三个检查点（到点打卡）</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'column', gap: 28, marginTop: 36 }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28 }}>
-      <Box style={{ width: 190, height: 52, borderRadius: 26, background: '#2563EB', justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>CP1 · 40 min</Text>
-      </Box>
-      <Box style={{ flex: 1, height: 88, background: '#EFF6FF', borderRadius: 10, justifyContent: 'center', paddingLeft: 28, paddingRight: 28 }}>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>第 40 分钟</span>：输入可提交</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28 }}>
-      <Box style={{ width: 190, height: 52, borderRadius: 26, background: '#2563EB', justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>CP2 · 70 min</Text>
-      </Box>
-      <Box style={{ flex: 1, height: 88, background: '#EFF6FF', borderRadius: 10, justifyContent: 'center', paddingLeft: 28, paddingRight: 28 }}>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>第 70 分钟</span>：模型调用通</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 28 }}>
-      <Box style={{ width: 190, height: 52, borderRadius: 26, background: '#2563EB', justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>CP3 · 80 min</Text>
-      </Box>
-      <Box style={{ flex: 1, height: 88, background: '#EFF6FF', borderRadius: 10, justifyContent: 'center', paddingLeft: 28, paddingRight: 28 }}>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold' }}>第 80 分钟</span>：全链路串联 + 日志可见</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>零层入口：先走 00-技术零层</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>完全不了解技术的同学先读 W1-物料/W1D2-大模型原理通识/00-技术零层.md</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>只看生活场景 + 判断题，15 分钟</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>一个名词都不用记</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>先有直觉地图，再进术语精讲</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>03 / 36</Text>
+    </Box>
 </Slide>

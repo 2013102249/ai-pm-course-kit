@@ -1,42 +1,57 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D1</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 12</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>怎么查（上）：产业链与政策</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ marginTop: 26, flexDirection: 'row', gap: 24 }}>
-    <Box style={{ flex: 1, gap: 20 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 26px' }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-          </Box>
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>产业链</Text>
-        </Box>
-        <Text style={{ fontSize: 19, color: '#1E1B4B', marginTop: 14, lineHeight: 1.55 }}>上市公司<span style={{ fontWeight: 'bold' }}>年报与招股书</span>的「行业与业务描述」章节</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '22px 26px' }}>
-        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-          </Box>
-          <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>政策</Text>
-        </Box>
-        <Text style={{ fontSize: 19, color: '#1E1B4B', marginTop: 14, lineHeight: 1.55 }}>政府官网<span style={{ fontWeight: 'bold' }}>原文</span>为准，公众号只当线索</Text>
-      </Box>
-    </Box>
-    <Box style={{ width: 470, alignItems: 'center' }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, background: '#EFF6FF', border: '1px solid #2563EB', borderRadius: 10, padding: '8px 18px' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>当前区块：① 产业链 · ② 政策</Text>
-      </Box>
-      <Image src="assets/industry-framework.svg" style={{ width: 440, height: 345, marginTop: 14 }} />
-      <Text style={{ fontSize: 14, color: '#64748B', marginTop: 8 }}>同图定位：左上 ① 产业链图 · 右上 ② 政策清单</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡页（一）：框架类 4 词</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>行业纵深</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>讲透一个具体问题</Text>
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>六件套</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>六份带来源的产出物</Text>
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>产业链</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>三层 + 星标「我在哪」</Text>
+        </Box>
+        <Box style={{ width: 573, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>上下游</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>价值流向位置，非甲乙方</Text>
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>05 / 36</Text>
+    </Box>
 </Slide>

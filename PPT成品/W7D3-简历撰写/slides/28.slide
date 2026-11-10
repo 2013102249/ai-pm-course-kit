@@ -1,0 +1,63 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 5 节 · 200–250 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>面试题 5–7：关键词 / 通投 / 30 秒</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 572, height: 146, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>要点 1</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>题 5「熟悉 RAG 具体做过什么」：翻成动作 + 评测集验证 + 真实取舍</Text>
+        </Box>
+        <Box style={{ width: 572, height: 146, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>要点 2</Text>
+            </Box>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>题 6「一份通投三岗没回音」：岗位匹配 + ATS/JD + 三版微调</Text>
+        </Box>
+        <Box style={{ width: 572, height: 146, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>要点 3</Text>
+            </Box>
+            <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>题 7「30 秒讲最重要的项目」：STAR + 黄金位理由 + 预埋钩子</Text>
+        </Box>
+        <Box style={{ width: 572, height: 146, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#2563EB' }}>要点 4</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>各给失败答法与失分原因</Text>
+        </Box>
+        <Box style={{ width: 572, height: 146, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8, paddingBottom: 10, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 18, height: 18, borderRadius: 4, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 16, fontWeight: 'bold', color: '#7C3AED' }}>要点 5</Text>
+            </Box>
+            <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.5, marginTop: 10 }}>每题至少一个当日术语</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>28 / 36</Text>
+    </Box>
+</Slide>

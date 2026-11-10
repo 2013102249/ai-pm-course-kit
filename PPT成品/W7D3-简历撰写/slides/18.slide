@@ -1,42 +1,48 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 28, right: 60, fontSize: 14, color: '#64748B' }}>18 / 18</Text>
-    <Box style={{ width: '100%', flexDirection: 'column', gap: 16, marginBottom: 20 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>总结、作业与预告</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ width: '100%', height: 460, flexDirection: 'row', gap: 26 }}>
-        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', gap: 10 }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 18, flexDirection: 'column', gap: 8 }}>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>三句话收束</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.6 }}>① 黄金结构五段，项目经历是占 40% 的黄金位。<br />② 项目描述：一句背景、两条动作、一条数据。<br />③ 关键词只做真实匹配，数字经得起追问。</Text>
-            </Box>
-            <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: 20, flexDirection: 'row', gap: 16, alignItems: 'center' }}>
-                <Box style={{ width: 120, height: 140, background: '#FFFFFF', borderRadius: 8, padding: 6, justifyContent: 'center', alignItems: 'center' }}>
-                    <Image src="assets/resume-checklist.svg" style={{ width: 108, height: 126, objectFit: 'contain' }} />
-                </Box>
-                <Box style={{ flex: 1, flexDirection: 'column', gap: 8 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>今晚作业</Text>
-                    <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.6 }}>① 完成简历 V1 骨架<br />② 对照「简历自检 20 项清单」自查<br />③ 留一份 JD 比对记录</Text>
-                </Box>
-            </Box>
-            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 16 }}>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.6 }}><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>预告：</span>周四 1v1 简历诊断，每人 ≥20 分钟，逐条过你的 V1。</Text>
-            </Box>
-        </Box>
-        <Box style={{ width: 430, height: '100%', flexDirection: 'column', gap: 12 }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 14, padding: 16, justifyContent: 'center', alignItems: 'center' }}>
-                <Image src="assets/resume-structure.svg" style={{ width: 398, height: 262, objectFit: 'contain' }} />
-            </Box>
-            <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '10px 18px', alignSelf: 'flex-start' }}>
-                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>回扣：简历黄金结构</Text>
-            </Box>
-            <Box style={{ flex: 1, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, padding: 20, justifyContent: 'center' }}>
-                <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.6 }}>20 秒产品，别浪费在自我感动上。</Text>
-            </Box>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>边界深化 + 这段在面试里怎么答</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>为什么关键词要放到对应事实旁边：一句话同时过机器与人两关</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>边界：ATS 匹配分只是入场券，不是录用信号</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>常见误解：机器筛过就稳了 / 转行要藏起过去</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>同义词向 JD 靠拢但只改措辞不改事实</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>面试骨架：结论 → 一条成果证据 → 回扣岗位</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>18 / 36</Text>
+    </Box>
 </Slide>

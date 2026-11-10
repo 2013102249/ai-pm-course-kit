@@ -1,58 +1,51 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D4</Text>
-    <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '3px 12px' }}>
-      <Text style={{ fontSize: 12, fontWeight: 'bold', color: '#7C3AED' }}>距路演 1 天</Text>
-    </Box>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>12 / 12</Text>
-  </Box>
-
-  <Box style={{ gap: 16 }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>收尾：路演前验收清单</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-  </Box>
-
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 20, alignItems: 'center' }}>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, padding: '24px 28px', gap: 14 }}>
-      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#7C3AED' }}>测试报告 · 4 条硬标准</Text>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>评测集 50 条全部跑完</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>通过率 ≥90%</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>无 P0 badcase</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>badcase 率不触 30% 熔断线</Text>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, background: '#EFF6FF', borderRadius: 12, padding: '24px 28px', gap: 14 }}>
-      <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#2563EB' }}>试用反馈 · 3 条硬标准</Text>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>真实用户 ≥10 人</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>沉淀 ≥3 条改进</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#16A34A' }}>✓</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B' }}>原声 ≥2 条</Text>
-      </Box>
-    </Box>
-  </Box>
-
-  <Box style={{ background: '#7C3AED', borderRadius: 12, padding: '14px 28px', alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#FFFFFF' }}>今晚 22:00 前提交 · 明早 10:00 补救闭环 · 明天结业路演</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>深化与面试连接（新增）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W6D4</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>12</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>为什么：成本逐层升高</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>边界：RAG 链路才有引用层，纯生成从提示词与输入起步</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>常见误解三条：零 badcase 最棒 / 归因＝填表 / 生成问题就得换模型</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>「这段在面试里怎么答」：60 秒答法雏形</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>12 / 36</Text>
+    </Box>
 </Slide>

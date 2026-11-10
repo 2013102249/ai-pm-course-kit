@@ -1,36 +1,34 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D4</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>07 / 8</Text>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: '100%', gap: 32 }}>
-        <Box style={{ flex: 1, flexDirection: 'column' }}>
-            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>自习区任务：作品集在线化 + 个人品牌起步</Text>
-            <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
-            <Box style={{ flexDirection: 'column', gap: 16, marginTop: 24 }}>
-                <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', gap: 6 }}>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>三种托管方式与选择</Text>
-                    <Text style={{ fontSize: 18, color: '#1E1B4B' }}>GitHub Pages / Vercel / 云存储直链——优先选国内可直接打开的</Text>
-                </Box>
-                <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: '16px 22px', gap: 6 }}>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#2563EB' }}>链接自查四步</Text>
-                    <Text style={{ fontSize: 18, color: '#1E1B4B' }}>手机打开 → 无痕窗口打开 → 换网络打开 → 发同伴互测</Text>
-                </Box>
-                <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', gap: 6 }}>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#7C3AED' }}>品牌平台三选一</Text>
-                    <Text style={{ fontSize: 18, color: '#1E1B4B' }}>公众号 / 知乎 / 小红书——先发出第一条内容</Text>
-                </Box>
-            </Box>
-            <Box style={{ border: '1px solid #E5E7EB', borderRadius: 12, padding: '14px 22px', marginTop: 18 }}>
-                <Text style={{ fontSize: 17, color: '#64748B' }}>候诊时间不清空手机：到自习位桌面领《候诊任务清单》，按清单逐项推进</Text>
-            </Box>
-        </Box>
-        <Box style={{ width: 310, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 14, padding: 12, justifyContent: 'center', alignItems: 'center' }}>
-            <Image src="assets/resume-checklist.svg" style={{ width: 284, height: 331, objectFit: 'contain' }} />
-            <Text style={{ fontSize: 14, color: '#64748B', marginTop: 8, textAlign: 'center' }}>简历自检 20 项清单（海报同款）</Text>
-        </Box>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>诊断五步流程（轮转看板页）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>01</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>通读 2 min → 定位 3 问题 3 min → 改写示范 10 min → 复述确认 3 min → 记录归档 2 min</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>02</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>合计 20 min 为一次完整 1v1 标准动作</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>07 / 36</Text>
+    </Box>
 </Slide>

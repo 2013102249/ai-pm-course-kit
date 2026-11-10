@@ -1,0 +1,49 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 4 节 · 150–200 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>工作坊讲评与打卡</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+        <Box style={{ width: '100%', paddingTop: 26, paddingBottom: 26, paddingLeft: 32, paddingRight: 32, background: 'linear-gradient(120deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 22 }}>
+            <Box style={{ width: 56, height: 56, borderRadius: 28, border: '2px solid rgba(255,255,255,0.6)', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>▶</Text>
+            </Box>
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>本页配合现场工具投屏讲解</Text>
+                <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, marginTop: 8 }}>课件只保留任务口径与观察点，操作过程在真实工具中演示。</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, flexDirection: 'column', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>投屏改话术 1–2 次：收作业 / 匿名 / 三件套检查 / 现场改 / 归还</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>打卡举手统计，营造「第一批发射」</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>心态收尾：教学示例「零回音 → 重写话术 → 后续录用意向」</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>未完成者登记、课后 24 小时落地</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>切回漏斗图 1 分钟提醒填跟进日期</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>24 / 36</Text>
+    </Box>
+</Slide>

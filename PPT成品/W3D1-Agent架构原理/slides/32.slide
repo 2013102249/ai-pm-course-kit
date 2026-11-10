@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>作业 = 把草图升级为正式架构图，周五评审 I 直接用<br />验收四条：四要素 / 接管点 / 步数上限 / 工具清单<br />金句抄 3 句，第八周面试课抽查<br />疑问清单至少 1 条</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>作业：完善架构图 + 金句抄录 · 第 6 节 · 250–300 min</Text>
+    </Box>
+</Slide>

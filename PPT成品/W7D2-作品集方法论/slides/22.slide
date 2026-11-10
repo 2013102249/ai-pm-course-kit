@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 4 节 · 150–200 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>上线自检清单 + 手机逐页自测</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 18 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>手机逐页打开：图不溢出、表不横滚、字号可读</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>外链（PRD / 原型 / MVP）手机浏览器可打开</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>权限：PRD 开评论、弹药库不对外</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>命名统一、每数字可查来源</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>发布链接填进导学案</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>22 / 36</Text>
+    </Box>
+</Slide>

@@ -1,53 +1,65 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W3D5</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 10</Text>
-
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>往届原型问题集锦</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
-
-  <Box style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 20, height: 380 }}>
-    <Box style={{ width: 570, height: 180, background: '#F5F3FF', borderRadius: 14, padding: 26, justifyContent: 'center', gap: 12 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>架构图画成了功能清单</Text>
-      </Box>
-      <Text style={{ fontSize: 17, color: '#64748B' }}>只罗列要做什么，看不出数据从哪来、调什么能力</Text>
-    </Box>
-    <Box style={{ width: 570, height: 180, background: '#EFF6FF', borderRadius: 14, padding: 26, justifyContent: 'center', gap: 12 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>工作流只搭壳没跑通</Text>
-      </Box>
-      <Text style={{ fontSize: 17, color: '#64748B' }}>节点画得漂亮，但端到端一次都没真正执行过</Text>
-    </Box>
-    <Box style={{ width: 570, height: 180, background: '#EFF6FF', borderRadius: 14, padding: 26, justifyContent: 'center', gap: 12 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>知识库 <span style={{ color: '#2563EB' }}>3 份</span>文档撑门面</Text>
-      </Box>
-      <Text style={{ fontSize: 17, color: '#64748B' }}>文档数量够多，但与产品问题对不上，检索不出有效答案</Text>
-    </Box>
-    <Box style={{ width: 570, height: 180, background: '#F5F3FF', borderRadius: 14, padding: 26, justifyContent: 'center', gap: 12 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-        <Box style={{ width: 28, height: 28, background: '#7C3AED', borderRadius: 6, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
-        </Box>
-        <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>迭代计划全写「继续完善」</Text>
-      </Box>
-      <Text style={{ fontSize: 17, color: '#64748B' }}>没有推翻、没有取舍、没有日期，等于没有计划</Text>
-    </Box>
-  </Box>
-
-  <Box style={{ marginTop: 24, height: 72, background: '#7C3AED', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
-    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF' }}>举手自查：你们组中了几条？</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W3D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六节路线图与时间轴</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 16 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 1 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P1–6 · 0–50 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>术语精讲 · 零层入口</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 2 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P7–12 · 50–100 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>核心原理 A</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 3 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P13–18 · 100–150 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>核心原理 B + 案例</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 4 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P19–24 · 150–200 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>实操演练 · 巡场</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 5 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P25–30 · 200–250 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>面试讲解 · 追问防御</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 6 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P31–36 · 250–300 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>复盘 · 归档 · 验收</Text>
+        </Box>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 20, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8 }}>
+            <Text style={{ fontSize: 14, color: '#64748B', lineHeight: 1.6 }}>第 1 节 术语精讲；第 2 节 原理 A；第 3 节 原理 B + 案例；第 4 节 实操；第 5 节 面试；第 6 节 复盘归档验收</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>03 / 36</Text>
+    </Box>
 </Slide>

@@ -1,33 +1,58 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D2</Text>
-    </Box>
-    <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-        <Text style={{ fontSize: 14, color: '#64748B' }}>14 / 20</Text>
-    </Box>
-    <Box style={{ flexDirection: 'column' }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>六步逐步：人群 / 场景 / 痛点</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-        <Box style={{ flexDirection: 'row', gap: 28, marginTop: 24, alignItems: 'flex-start' }}>
-            <Image src="assets/scenario-six-steps.svg" style={{ width: 620, height: 362 }} />
-            <Box style={{ flex: 1, flexDirection: 'column', gap: 16 }}>
-                <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '18px 22px' }}>
-                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>① 人群</Text>
-                    <Text style={{ fontSize: 15, color: '#1E1B4B', marginTop: 6 }}>产出：一类可命名、可触达的人</Text>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E1B4B', marginTop: 4 }}>跑偏：说「所有人」「有需要的人」</Text>
-                </Box>
-                <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '18px 22px' }}>
-                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>② 场景</Text>
-                    <Text style={{ fontSize: 15, color: '#1E1B4B', marginTop: 6 }}>产出：时间、地点、频次的真实情境</Text>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E1B4B', marginTop: 4 }}>跑偏：只讲情境、不讲频次</Text>
-                </Box>
-                <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '18px 22px' }}>
-                    <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>③ 痛点</Text>
-                    <Text style={{ fontSize: 15, color: '#1E1B4B', marginTop: 6 }}>产出：真实问题 + 后果</Text>
-                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E1B4B', marginTop: 4 }}>跑偏：痛点靠猜、与人群错位</Text>
-                </Box>
-            </Box>
-        </Box>
-    </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>六步框架总览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>01</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>人群 → 场景 → 痛点 → 方案 → 指标 → 风险</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>02</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>前三步想清「给谁、在哪、解决什么」</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>03</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>后三步落定「做什么、怎么验收、哪里会出事」</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#2563EB', width: 54 }}>04</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>六步是答题顺序也是检查清单</Text>
+            </Box>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 12, paddingBottom: 12, paddingLeft: 18, paddingRight: 20, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#7C3AED', width: 54 }}>05</Text>
+            <Box style={{ width: 1, height: 34, background: '#E5E7EB' }} />
+            <Box style={{ flex: 1 }}>
+                
+                <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>点评一律先查六步完整性再评内容</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>14 / 36</Text>
+    </Box>
 </Slide>

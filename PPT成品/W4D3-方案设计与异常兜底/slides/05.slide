@@ -1,30 +1,53 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D3</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 30, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>05 / 16</Text>
-  </Box>
-  <Box style={{ flexDirection: 'column', gap: 20, height: '100%' }}>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>三层设计表达</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    <Box style={{ flexDirection: 'column', gap: 18, paddingTop: 6 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F5F3FF', borderRadius: 12, padding: '24px 32px', width: '100%', gap: 28 }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#7C3AED', width: 220 }}>功能结构图</Text>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}>有什么</Text>
-        <Text style={{ fontSize: 16, color: '#64748B', marginLeft: 'auto' }}>列出功能清单，静态视角</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#EFF6FF', borderRadius: 12, padding: '24px 32px', width: '100%', gap: 28 }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#2563EB', width: 220 }}>业务流程图</Text>
-        <Text style={{ fontSize: 20, color: '#1E1B4B' }}>怎么走</Text>
-        <Text style={{ fontSize: 16, color: '#64748B', marginLeft: 'auto' }}>画出主路径，动态视角</Text>
-      </Box>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#7C3AED', borderRadius: 12, padding: '24px 32px', width: '100%', gap: 28 }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF', width: 220 }}>状态机</Text>
-        <Text style={{ fontSize: 20, color: '#FFFFFF' }}>此刻在哪、卡住怎么办</Text>
-        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', marginLeft: 'auto' }}>AI 产品的兜底视角，今天的重点</Text>
-      </Box>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡页② · 界面簇与三态（新增 · 术语卡页）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', height: 458, flexDirection: 'row', gap: 20 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>界面簇</Text>
+                    <Text style={{ fontSize: 14, color: '#64748B', marginTop: 4, lineHeight: 1.4 }}>空态 / 错态 / 加载态 / 用户预期 / 提示文案</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>空态＝设计过的引导，非白屏</Text>
+                    
+                </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>错态＝说人话 + 给出路 + 可恢复，非错误码</Text>
+                    
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>加载态＝进度预期 + 超时出口，非无限转圈</Text>
+                    
+                </Box>
+            </Box>
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>05 / 36</Text>
+    </Box>
 </Slide>

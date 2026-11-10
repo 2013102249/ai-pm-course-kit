@@ -1,35 +1,66 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei', position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W6D3</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 24, left: 60, fontSize: 14, color: '#64748B' }}>W6D3 · 开发冲刺 II</Text>
-  <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>04 / 8</Text>
-
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>走查清单怎么用</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 22 }} />
-
-  <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#7C3AED' }}>22 项</span> · 五组分布，逐组逐项过</Text>
-
-  <Box style={{ flexDirection: 'row', gap: 14, width: '100%', marginTop: 16 }}>
-    {['空态 5', '错态 5', '加载态 4', '文案 4', '一致性 4'].map((label, idx) => (
-      <Box key={idx} style={{ flex: 1, background: '#F5F3FF', borderRadius: 10, border: '1px solid #DDD6FE', padding: '14px 0', alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#7C3AED' }}>{label}</Text>
-      </Box>
-    ))}
-  </Box>
-
-  <Box style={{ flexDirection: 'row', gap: 24, width: '100%', marginTop: 24, height: 262 }}>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, border: '1px solid #DDD6FE', padding: '28px 32px', flexDirection: 'column', gap: 16 }}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>三档打法</Text>
-      <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#16A34A' }}>✓ 通过</span>　达到三态标准，有具体画面</Text>
-      <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#DC2626' }}>✗ 不通过</span>　缺要素或与标准不符</Text>
-      <Text style={{ fontSize: 20, color: '#1E1B4B' }}><span style={{ fontWeight: 'bold', color: '#64748B' }}>N/A 不适用</span>　本项目没有该场景，写明原因</Text>
-    </Box>
-    <Box style={{ width: 460, background: '#EFF6FF', borderRadius: 12, border: '1px solid #BFDBFE', padding: '28px 32px', flexDirection: 'column', gap: 16 }}>
-      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1E1B4B' }}>不通过必填问题记录</Text>
-      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.6 }}>每个 ✗ 项都要落一条问题记录：<br />在哪个画面、出了什么问题</Text>
-      <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.6 }}>问题记录是下一步分级返工的输入，<br />没有记录的 ✗ 等于没查</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W6D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡 ① · 三态层：空态 / 错态 / 加载态</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>空态</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>无数据时给图标 + 人话 + 下一步动作</Text>
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>错态</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>失败时给原因 + 恢复入口 + 输入不丢</Text>
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>加载态</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>等待 ＞1 秒给即时反馈 + 进度感知 + 防重复</Text>
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>各配一句生活类比与面试说法</Text>
+            </Box>
+            
+        </Box>
+        <Box style={{ width: 377, height: 228, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>易混</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>无数据=空、出问题=错、等待=加载</Text>
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>04 / 36</Text>
+    </Box>
 </Slide>

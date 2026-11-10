@@ -1,26 +1,50 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-    <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-        <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W2D3</Text>
-    </Box>
-    <Text style={{ position: 'absolute', bottom: 24, right: 60, fontSize: 14, color: '#64748B' }}>03 / 18</Text>
-    <Box style={{ flexDirection: 'column', gap: 16 }}>
-        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>事故复盘：上线前没人发现它会编</Text>
-        <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    </Box>
-    <Box style={{ flexDirection: 'row', gap: 32, marginTop: 36, alignItems: 'flex-start' }}>
-        <Box style={{ width: 420, flexDirection: 'column', gap: 24 }}>
-            <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 14 }}>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>事故链</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.7 }}>客服 AI 编造<span style={{ fontWeight: 'bold', color: '#7C3AED' }}>「72 小时退款」</span>承诺 → 冲上热搜 → 产品下线整改。</Text>
-            </Box>
-            <Box style={{ background: '#EFF6FF', borderRadius: 12, padding: 24, flexDirection: 'column', gap: 14 }}>
-                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>新视角</Text>
-                <Text style={{ fontSize: 18, color: '#1E1B4B', lineHeight: 1.7 }}>模型能力问题 W1D2 已经讲过——今天换个视角问：<span style={{ fontWeight: 'bold', color: '#2563EB' }}>上线前为什么没人测出来？</span></Text>
-            </Box>
-        </Box>
-        <Box style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Image src="assets/hallucination-case.svg" style={{ width: 560, height: 300, borderRadius: 12, border: '1px solid #E5E7EB' }} />
-        </Box>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W2D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>12 词总览与口径声明</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 573, height: 201, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>12 词分三组</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>卷子类（评测集/badcase/归因）、指标类（准确率/召回率/F1）、流程类（人工标注/基线/回归测试/跑分/样本偏差/验收门槛）</Text>
+        </Box>
+        <Box style={{ width: 573, height: 201, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>本课口径</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#64748B', lineHeight: 1.5, marginTop: 8 }}>准确率 = 查准率 Precision</Text>
+        </Box>
+        <Box style={{ width: 573, height: 201, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>英文缩写首次给全称与中文</Text>
+            </Box>
+            
+        </Box>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 10, paddingBottom: 10, paddingLeft: 18, paddingRight: 18, background: '#F1F5F9', borderRadius: 8 }}>
+            <Text style={{ fontSize: 14, color: '#64748B' }}>每词一句话定义 ≤30 字</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>03 / 36</Text>
+    </Box>
 </Slide>

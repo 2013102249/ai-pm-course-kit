@@ -1,97 +1,51 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D2</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>08 / 18</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>差异三：幻觉控制</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ marginTop: 24, borderRadius: 12, border: '1px solid #E5E7EB', overflow: 'hidden' }}>
-    <Box style={{ flexDirection: 'row', height: 48, background: '#7C3AED' }}>
-      <Box style={{ width: 180, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid rgba(255,255,255,0.25)' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>维度</Text>
-      </Box>
-      <Box style={{ width: 440, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid rgba(255,255,255,0.25)' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>传统 PRD</Text>
-      </Box>
-      <Box style={{ width: 540, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>AI 产品 PRD</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: 56, background: '#FFFFFF' }}>
-      <Box style={{ width: 180, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>评测标准</Text>
-      </Box>
-      <Box style={{ width: 440, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>功能验收（逐条打勾）</Text>
-      </Box>
-      <Box style={{ width: 540, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>效果验收（指标 + 数字 + 来源）</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: 56, background: '#EFF6FF' }}>
-      <Box style={{ width: 180, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>容错兜底</Text>
-      </Box>
-      <Box style={{ width: 440, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>异常提示（请重试）</Text>
-      </Box>
-      <Box style={{ width: 540, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>四级降级（澄清 / 拒答 / 转人工 / 降级）</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: 56, background: '#F5F3FF', border: '2px solid #7C3AED' }}>
-      <Box style={{ width: 178, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #DDD6FE' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#5B21B6' }}>幻觉控制</Text>
-      </Box>
-      <Box style={{ width: 436, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #DDD6FE' }}>
-        <Text style={{ fontSize: 16, color: '#9CA3AF' }}>（不存在此章）</Text>
-      </Box>
-      <Box style={{ width: 534, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#5B21B6' }}>引用来源 + 阈值拒答 + 幻觉率红线</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: 56, background: '#FFFFFF' }}>
-      <Box style={{ width: 180, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>成本预算</Text>
-      </Box>
-      <Box style={{ width: 440, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>服务器粗估</Text>
-      </Box>
-      <Box style={{ width: 540, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>单次调用成本 + 日上限 + 月预算</Text>
-      </Box>
-    </Box>
-    <Box style={{ flexDirection: 'row', height: 56, background: '#EFF6FF' }}>
-      <Box style={{ width: 180, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E1B4B' }}>数据回流</Text>
-      </Box>
-      <Box style={{ width: 440, alignItems: 'center', justifyContent: 'center', borderRight: '1px solid #E5E7EB' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>埋点看数</Text>
-      </Box>
-      <Box style={{ width: 540, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 16, color: '#1E1B4B' }}>badcase 回流评测集闭环</Text>
-      </Box>
-    </Box>
-  </Box>
-  <Box style={{ marginTop: 24, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 12, padding: '18px 28px' }}>
-    <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '10px 22px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#5B21B6' }}>引用来源</Text>
-      </Box>
-      <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#7C3AED' }}>+</Text>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '10px 22px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#5B21B6' }}>阈值拒答</Text>
-      </Box>
-      <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#7C3AED' }}>+</Text>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 10, padding: '10px 22px' }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#5B21B6' }}>幻觉率红线</Text>
-      </Box>
-    </Box>
-    <Text style={{ fontSize: 15, color: '#64748B' }}>传统 PRD 不存在此章</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>研发问你的十一个问题</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ width: 376, height: '100%', padding: 28, justifyContent: 'center', gap: 16, background: 'linear-gradient(150deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12 }}>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, letterSpacing: 2 }}>W1D2</Text>
+            <Text style={{ fontSize: 76, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1 }}>08</Text>
+            <Box style={{ width: 48, height: 3, background: '#FFFFFF', opacity: 0.6, borderRadius: 2 }} />
+            <Text style={{ fontSize: 20, color: '#FFFFFF', lineHeight: 1.5 }}>第 2 节 · 50–100 min</Text>
+            <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, lineHeight: 1.6 }}>本节共 4 个要点<br />讲师按序讲解，学员同步在导学案记录</Text>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>答什么 / 答多好 / 答错怎么办 / 多快</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>PRD 是团队的共识合同不是任务说明书</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#FFFFFF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>写 PRD 痛苦一次性，不写痛苦持续</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 18, background: '#F5F3FF', borderRadius: 8, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.5 }}>AI 里「说不清」的代价是模型替你随便说</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>08 / 36</Text>
+    </Box>
 </Slide>

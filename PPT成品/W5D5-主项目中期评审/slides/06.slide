@@ -1,67 +1,60 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D5</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 26, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>06 / 10</Text>
-  </Box>
-  <Box style={{ height: '100%', flexDirection: 'column', gap: 16 }}>
-    <Text style={{ fontSize: 34, color: '#1E1B4B', fontWeight: 'bold' }}>五问追问示范</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB' }} />
-    <Box style={{ flex: 1, marginTop: 8, border: '1px solid #E5E7EB', borderRadius: 12, overflow: 'hidden' }}>
-      <Table
-        style={{ width: '100%', height: '100%' }}
-        defaultTextStyle={{ fontSize: 16, textAlign: 'left', color: '#1E1B4B' }}
-        defaultCellStyle={{
-          border: {
-            left: { width: 1, color: '#E5E7EB' },
-            right: { width: 1, color: '#E5E7EB' },
-            top: { width: 1, color: '#E5E7EB' },
-            bottom: { width: 1, color: '#E5E7EB' },
-          },
-          padding: 10,
-        }}
-        cells={[
-          [
-            { text: '五问', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '追问链', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '差答案（不及格）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-            { text: '好答案（方向）', textStyle: { bold: true, color: '#FFFFFF', fontSize: 17 }, cellStyle: { background: { color: '#7C3AED' } } },
-          ],
-          [
-            { text: '1 人群边界', textStyle: { bold: true } },
-            { text: '到底是谁？高频场景在哪？' },
-            { text: '「白领都需要」', textStyle: { color: '#64748B' } },
-            { text: '圈出具体人群与场景边界，比例有出处', textStyle: { color: '#2563EB', bold: true } },
-          ],
-          [
-            { text: '2 独特积累', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '凭什么你们做成？', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '「我们更懂用户」', textStyle: { color: '#64748B' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '说清独特积累：别人没有、你们已有的东西', textStyle: { color: '#2563EB', bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '3 样本出处', textStyle: { bold: true } },
-            { text: '数据从哪来？样本多少？' },
-            { text: '「数据是我感觉的」', textStyle: { color: '#64748B' } },
-            { text: '给出样本出处与数量，可被查验', textStyle: { color: '#2563EB', bold: true } },
-          ],
-          [
-            { text: '4 成本可复算', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '成本怎么算出来的？', cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '「应该不贵」', textStyle: { color: '#64748B' }, cellStyle: { background: { color: '#F5F3FF' } } },
-            { text: '列出算式，对方能复算一遍', textStyle: { color: '#16A34A', bold: true }, cellStyle: { background: { color: '#F5F3FF' } } },
-          ],
-          [
-            { text: '5 工时与取舍', textStyle: { bold: true } },
-            { text: '下周真能上线？' },
-            { text: '「加把劲就行」', textStyle: { color: '#64748B' } },
-            { text: '用工时与取舍顺序证明：砍了什么、剩多少', textStyle: { color: '#16A34A', bold: true } },
-          ],
-        ]}
-      />
-    </Box>
-    <Text style={{ fontSize: 16, color: '#64748B' }}>重点看问 1 与问 3 的差答案——「白领都需要」「数据是我感觉的」都过不了关</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W5D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡 C · 视角与证据类 + 四组易混 + 当堂小测</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', height: 458, flexDirection: 'row', gap: 20 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>投资人视角</Text>
+                    <Text style={{ fontSize: 14, color: '#64748B', marginTop: 4, lineHeight: 1.4 }}>五问审「值不值得投」；≠ 用户视角</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>数据备齐</Text>
+                    <Text style={{ fontSize: 14, color: '#64748B', marginTop: 4, lineHeight: 1.4 }}>出处 / 样本量 / 可复算，数据不好看也如实带</Text>
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#7C3AED' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>风险预判</Text>
+                    <Text style={{ fontSize: 14, color: '#64748B', marginTop: 4, lineHeight: 1.4 }}>提前给应对动作；≠ 事后复盘</Text>
+                </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>四组易混辨析对照 + 抢答</Text>
+                    
+                </Box>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 16, paddingRight: 16, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 4, height: 34, borderRadius: 2, background: '#2563EB' }} />
+                <Box style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>当堂术语小测 11 题，≥9 题达标</Text>
+                    
+                </Box>
+            </Box>
+        </Box>
+        </Box>
+        
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>06 / 36</Text>
+    </Box>
 </Slide>

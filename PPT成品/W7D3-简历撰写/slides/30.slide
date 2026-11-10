@@ -1,0 +1,7 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', fontFamily: 'Microsoft YaHei' }}>
+    <Box style={{ width: '100%', height: 600, justifyContent: 'center', gap: 24 }}>
+        <Box style={{ width: 64, height: 5, background: '#FFFFFF', opacity: 0.75, borderRadius: 3 }} />
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.5 }}>抽 2 题、抽追问卡、角色互换、填模拟记录表 ≥4 行<br />评分：Rubric A 10 分制，8 分可进面试<br />补充扣分表：我们 / 无口径 / 逃离 / 超时<br />记录「被问倒的那一层」比答得顺更值钱<br />本日面试金句 3 条</Text>
+        <Text style={{ fontSize: 17, color: '#FFFFFF', opacity: 0.7, letterSpacing: 1 }}>两两模拟 + 评分表 + 本日金句 · 第 5 节 · 200–250 min</Text>
+    </Box>
+</Slide>

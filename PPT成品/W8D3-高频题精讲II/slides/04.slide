@@ -1,34 +1,32 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D3</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>04 / 20</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>五大题型应答地图</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ flex: 1, flexDirection: 'row', alignItems: 'center', gap: 36, marginTop: 20 }}>
-    <Box style={{ width: 280, gap: 22 }}>
-      {['技术', '数据', '行为'].map((t, i) => (
-        <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <Box style={{ width: 14, height: 14, background: '#7C3AED', borderRadius: 7 }} />
-          <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>{t}</Text>
-          {i === 0 && <Text style={{ fontSize: 14, color: '#7C3AED', fontWeight: 'bold' }}>今天攻前三行</Text>}
-        </Box>
-      ))}
-      {['反问', '压力'].map((t, i) => (
-        <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <Box style={{ width: 14, height: 14, background: '#CBD5E1', borderRadius: 7 }} />
-          <Text style={{ fontSize: 24, color: '#64748B' }}>{t}</Text>
-        </Box>
-      ))}
-      <Box style={{ background: '#F5F3FF', borderRadius: 10, padding: '14px 18px', marginTop: 8 }}>
-        <Text style={{ fontSize: 16, color: '#7C3AED', fontWeight: 'bold', lineHeight: 1.5 }}>今天攻前三行：技术、数据、行为</Text>
-      </Box>
-    </Box>
-    <Image src="assets/strategy-table.svg" style={{ flex: 1, height: 480, objectFit: 'contain' }} />
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D3</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>术语卡组 A：题型与理念（上）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 12 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 14 }}>
+        <Box style={{ width: 573, height: 416, paddingTop: 16, paddingBottom: 14, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <Box style={{ width: 22, height: 22, borderRadius: 11, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+                </Box>
+                <Text style={{ flex: 1, fontSize: 17, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.3 }}>技术理解题 / 行为题 / 深度 / 边界</Text>
+            </Box>
+            
+        </Box>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 10, paddingBottom: 10, paddingLeft: 18, paddingRight: 18, background: '#F1F5F9', borderRadius: 8 }}>
+            <Text style={{ fontSize: 14, color: '#64748B' }}>每张卡给一句话定义 + 生活类比 + 易混辨析 + 面试说法</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>04 / 36</Text>
+    </Box>
 </Slide>

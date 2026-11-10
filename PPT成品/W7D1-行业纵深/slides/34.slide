@@ -1,0 +1,42 @@
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 6 节 · 250–300 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>验收页 · 本日作品集积木</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 18 }}>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>一页速写 → 作品集「行业纵深」目录</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>手册六节 → 作品集「行业手册」目录</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #7C3AED', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>术语自测表 + 小测卷 → 作品集「术语」目录</Text>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#FFFFFF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>面试模拟记录表 → W8 问答库素材</Text>
+            </Box>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingTop: 12, paddingBottom: 12, paddingLeft: 14, paddingRight: 14, background: '#F5F3FF', borderRadius: 8, border: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 20, height: 20, borderRadius: 4, border: '2px solid #2563EB', background: '#FFFFFF' }} />
+                <Text style={{ flex: 1, fontSize: 16, color: '#1E1B4B', lineHeight: 1.5 }}>三列：产出物 / 完成度 / 归档位置</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>34 / 36</Text>
+    </Box>
+</Slide>

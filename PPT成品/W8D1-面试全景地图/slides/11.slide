@@ -1,33 +1,42 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60 }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W8D1</Text>
-  </Box>
-  <Text style={{ position: 'absolute', right: 60, bottom: 28, fontSize: 14, color: '#64748B' }}>11 / 18</Text>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>题型① 项目深挖</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14, marginBottom: 24 }} />
-  <Box style={{ flex: 1, flexDirection: 'row', gap: 30, alignItems: 'center' }}>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 14 }}>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>典型问法</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>「这个数据怎么统计的？分母是什么」</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>考察本质</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>验真</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#2563EB', width: 88 }}>答题框架</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>STAR + 追问防御链（周二详讲）</Text>
-      </Box>
-      <Box style={{ background: '#F5F3FF', borderRadius: 12, padding: '16px 22px', flexDirection: 'row', gap: 14, alignItems: 'center' }}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#DC2626', width: 88 }}>高频失误</Text>
-        <Text style={{ fontSize: 18, color: '#1E1B4B', flex: 1 }}>数据张口报不出</Text>
-      </Box>
-      <Box style={{ background: '#7C3AED', borderRadius: 10, padding: '14px 22px', marginTop: 6 }}>
-        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>细节是诚实的，标准答案是可疑的</Text>
-      </Box>
-    </Box>
-    <Image src="assets/question-map.svg" style={{ width: 560, height: 327, objectFit: 'contain' }} />
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>第 3–5 轮：总监面 / 交叉面 / HRD 面</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>总监验判断「为什么这么做」</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>交叉验协作，一票否决分量重</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#F5F3FF', borderRadius: 10, border: '1px solid #EDE9FE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>HRD 确认意愿与薪酬</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 18, paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 24, minHeight: 58, background: '#EFF6FF', borderRadius: 10, border: '1px solid #DBEAFE' }}>
+            <Box style={{ width: 30, height: 30, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+            <Text style={{ flex: 1, fontSize: 20, color: '#1E1B4B', lineHeight: 1.5 }}>不把失败全归外部</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

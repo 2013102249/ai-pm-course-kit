@@ -1,40 +1,65 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: "'Microsoft YaHei', 'PingFang SC', sans-serif", position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D1</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>03 / 12</Text>
-  </Box>
-  <Box>
-    <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>今日任务与产出</Text>
-    <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  </Box>
-  <Box style={{ marginTop: 28, flexDirection: 'row', gap: 24 }}>
-    <Box style={{ width: 620, background: '#F5F3FF', borderRadius: 14, padding: '28px 30px' }}>
-      <Text style={{ fontSize: 16, color: '#7C3AED', fontWeight: 'bold' }}>今日产出</Text>
-      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#1E1B4B', marginTop: 14 }}>《行业纵深手册》个人版 · 六节</Text>
-      <Box style={{ flexDirection: 'row', gap: 10, marginTop: 22, flexWrap: 'wrap' }}>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>产业链</Text></Box>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>政策</Text></Box>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>竞品</Text></Box>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>客户</Text></Box>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>场景</Text></Box>
-        <Box style={{ background: '#FFFFFF', border: '1px solid #DDD6FE', borderRadius: 8, padding: '6px 14px' }}><Text style={{ fontSize: 15, color: '#5B21B6' }}>术语</Text></Box>
-      </Box>
-    </Box>
-    <Box style={{ flex: 1, gap: 18 }}>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 14, padding: '22px 26px' }}>
-        <Text style={{ fontSize: 16, color: '#7C3AED', fontWeight: 'bold' }}>今日完成</Text>
-        <Text style={{ fontSize: 19, color: '#1E1B4B', marginTop: 10, lineHeight: 1.5 }}>前三节初稿 + 连线记录</Text>
-      </Box>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 14, padding: '22px 26px' }}>
-        <Text style={{ fontSize: 16, color: '#7C3AED', fontWeight: 'bold' }}>提交节点</Text>
-        <Text style={{ fontSize: 19, color: '#1E1B4B', marginTop: 10, lineHeight: 1.5 }}>周四诊断课前补全提交</Text>
-      </Box>
-    </Box>
-  </Box>
-  <Box style={{ marginTop: 26, background: '#EFF6FF', border: '1px solid #2563EB', borderRadius: 12, padding: '16px 26px', alignItems: 'center' }}>
-    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>个人版 · 禁止整组交一份</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D1</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 1 节 · 0–50 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>今日任务与产出 · 6 节路线</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', gap: 16 }}>
+        <Box style={{ width: '100%', flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 1 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P1–6 · 0–50 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>术语精讲 · 零层入口</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 2 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P7–12 · 50–100 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>核心原理 A</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 3 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P13–18 · 100–150 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>核心原理 B + 案例</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 4 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P19–24 · 150–200 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>实操演练 · 巡场</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#7C3AED' }}>第 5 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P25–30 · 200–250 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>面试讲解 · 追问防御</Text>
+        </Box>
+            <Box style={{ width: 376, height: 118, padding: 20, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#2563EB' }}>第 6 节</Text>
+                <Text style={{ fontSize: 14, color: '#64748B' }}>P31–36 · 250–300 min</Text>
+            </Box>
+            <Text style={{ fontSize: 16, color: '#1E1B4B', marginTop: 12 }}>复盘 · 归档 · 验收</Text>
+        </Box>
+        </Box>
+        <Box style={{ width: '100%', paddingTop: 14, paddingBottom: 14, paddingLeft: 20, paddingRight: 20, background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 8 }}>
+            <Text style={{ fontSize: 14, color: '#64748B', lineHeight: 1.6 }}>6 节：术语 / 原理 A / 原理 B + 案例 / 实操 / 面试 / 复盘；产出：手册个人版六节 + 一页速写；新增：术语自测表、面试模拟记录表、作品集积木；强调「个人版，禁止整组交一份」</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>03 / 36</Text>
+    </Box>
 </Slide>

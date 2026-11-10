@@ -1,28 +1,49 @@
-<Slide style={{ position: 'relative', width: 1280, height: 720, background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W5D2</Text>
-  </Box>
-  <Text style={{ position: 'absolute', bottom: 32, right: 60, fontSize: 14, color: '#64748B' }}>08 / 16</Text>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>要素② 指标：1 个成功 + 护栏</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18 }} />
-  <Box style={{ flexDirection: 'row', flex: 1, marginTop: 28, gap: 24 }}>
-    <Box style={{ flex: 1, flexDirection: 'column', gap: 20 }}>
-      <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, background: '#FFFFFF', padding: 28, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#7C3AED' }}>成功指标</Text>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>决策需要单一判据</Text>
-        <Text style={{ fontSize: 19, color: '#64748B' }}>选离因果链最近的</Text>
-      </Box>
-      <Box style={{ flex: 1, border: '1px solid #E5E7EB', borderRadius: 12, background: '#FFFFFF', padding: 28, flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#2563EB' }}>护栏指标</Text>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#1E1B4B' }}>防「赢了 A 输了 B」</Text>
-      </Box>
-    </Box>
-    <Box style={{ width: 400, background: '#F5F3FF', borderRadius: 12, padding: 30, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
-      <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#64748B' }}>案例 · 推送</Text>
-      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#16A34A' }}>留存 +2</Text>
-      <Text style={{ fontSize: 32, fontWeight: 'bold', color: '#DC2626' }}>退订 +3</Text>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1E1B4B' }}>赢了 A，输了 B</Text>
-    </Box>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W1D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>AB 实验本质与五步流程 + 四要素总览</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+        <Box style={{ width: '100%', paddingTop: 26, paddingBottom: 26, paddingLeft: 32, paddingRight: 32, background: 'linear-gradient(120deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 22 }}>
+            <Box style={{ width: 56, height: 56, borderRadius: 28, border: '2px solid rgba(255,255,255,0.6)', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>▶</Text>
+            </Box>
+            <Box style={{ flex: 1 }}>
+                <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#FFFFFF' }}>本页配合现场工具投屏讲解</Text>
+                <Text style={{ fontSize: 15, color: '#FFFFFF', opacity: 0.75, marginTop: 8 }}>课件只保留任务口径与观察点，操作过程在真实工具中演示。</Text>
+            </Box>
+        </Box>
+        <Box style={{ width: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, flexDirection: 'column', gap: 10 }}>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>本质：对照 + 随机，同一时间锁死其他变量</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>为什么不能「今天 A 版明天 B 版」</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>五步：假设→设计→灰度→全量→决策（回环）</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>四要素总览：假设 / 指标 / 样本量 / 周期</Text>
+        </Box>
+            <Box style={{ flexDirection: 'row', gap: 12, alignItems: 'flex-start' }}>
+            <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+            <Text style={{ flex: 1, fontSize: 17, color: '#1E1B4B', lineHeight: 1.55 }}>灰度是最容易漏的一步</Text>
+        </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>08 / 36</Text>
+    </Box>
 </Slide>

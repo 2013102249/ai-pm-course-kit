@@ -1,54 +1,65 @@
 <Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 2 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W7D2</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>R：必须有数字</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 16 }} />
-  <Box style={{ flexDirection: 'row', gap: 16, marginTop: 22, height: 86 }}>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
-      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>S</Text>
-      <Text style={{ fontSize: 16, color: '#64748B' }}>一句话</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
-      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>T</Text>
-      <Text style={{ fontSize: 16, color: '#64748B' }}>可量化</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#F5F3FF', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
-      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#7C3AED' }}>A</Text>
-      <Text style={{ fontSize: 16, color: '#64748B' }}>写决策</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#7C3AED', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
-      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>R</Text>
-      <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.9)' }}>有数字</Text>
-    </Box>
-  </Box>
-  <Box style={{ flexDirection: 'row', gap: 24, marginTop: 20, height: 210 }}>
-    <Box style={{ flex: 1, background: '#FEF2F2', borderRadius: 14, padding: 24 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-        <Box style={{ width: 32, height: 32, borderRadius: 16, background: '#DC2626', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>✕</Text>
-        </Box>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#DC2626' }}>反例</Text>
-      </Box>
-      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.8, marginTop: 22 }}>「效果显著，广受好评」</Text>
-    </Box>
-    <Box style={{ flex: 1, background: '#ECFDF5', borderRadius: 14, padding: 24 }}>
-      <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-        <Box style={{ width: 32, height: 32, borderRadius: 16, background: '#059669', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#FFFFFF' }}>✓</Text>
-        </Box>
-        <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#059669' }}>正例</Text>
-      </Box>
-      <Text style={{ fontSize: 20, color: '#1E1B4B', lineHeight: 1.8, marginTop: 22 }}>「<span style={{ fontWeight: 'bold' }}>71%→90%</span>（上线两周，12 人评测）」</Text>
-    </Box>
-  </Box>
-  <Box style={{ background: '#7C3AED', borderRadius: 10, marginTop: 18, height: 84, alignItems: 'center', justifyContent: 'center' }}>
-    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#FFFFFF' }}>一票否决的是造假，不是数字小</Text>
-    <Text style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', marginTop: 6 }}>数字不好看也能写：配归因 + 迭代计划</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 24, right: 60, flexDirection: 'row', alignItems: 'center', gap: 18 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>教学示例 · 数字为虚构演示</Text>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>11 / 16</Text>
-  </Box>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W7D2</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 2 节 · 50–100 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>A / R 两道坎 + 边界深化</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
+        <Box style={{ width: '100%', height: 470, flexDirection: 'row', gap: 12 }}>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 1 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>A 写决策不写流水账，反例「负责调研、PRD、跟开发、测试验收」</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 2 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>正例两条决策（推翻原假设放弃换模型；延迟换正确率）</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>第 3 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>R 基准→结果 + 时间范围，反例「效果显著，广受好评」</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#2563EB' }}>第 4 步</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>数字不好看也要写，一票否决的是造假不是数字小</Text>
+            </Box>
+            <Box style={{ width: 222, height: 470, paddingTop: 18, paddingBottom: 18, paddingLeft: 18, paddingRight: 18, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                    <Box style={{ width: 26, height: 26, borderRadius: 13, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>05</Text>
+                    </Box>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>深化</Text>
+                </Box>
+                <Text style={{ fontSize: 17, color: '#1E1B4B', lineHeight: 1.55, marginTop: 12 }}>S/T 决定看不看，A/R 决定信不信；STAR 只管一段经历</Text>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>11 / 36</Text>
+    </Box>
 </Slide>

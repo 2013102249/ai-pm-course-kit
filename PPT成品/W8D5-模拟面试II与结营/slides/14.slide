@@ -1,22 +1,54 @@
-<Slide style={{ width: 1280, height: 720, padding: 60, position: 'relative', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', overflow: 'hidden' }}>
-    <Box style={{ position: 'absolute', right: -80, top: -80, width: 320, height: 320, borderRadius: 999, background: 'rgba(255,255,255,0.06)' }} />
-    <Box style={{ position: 'absolute', left: -60, bottom: -120, width: 280, height: 280, borderRadius: 999, background: 'rgba(255,255,255,0.05)' }} />
-    <Box style={{ position: 'absolute', left: 100, top: 0, width: 1080, height: 720, flexDirection: 'column', justifyContent: 'center', gap: 34 }}>
-        <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.75)', letterSpacing: 4 }}>校友机制与 3 个月追踪</Text>
-        <Box style={{ flexDirection: 'row', gap: 16 }}>
-            <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '12px 24px' }}>
-                <Text style={{ fontSize: 18, color: '#FFFFFF' }}>校友群长期保留</Text>
-            </Box>
-            <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '12px 24px' }}>
-                <Text style={{ fontSize: 18, color: '#FFFFFF' }}>内推持续开放</Text>
-            </Box>
-            <Box style={{ background: 'rgba(255,255,255,0.12)', borderRadius: 10, padding: '12px 24px' }}>
-                <Text style={{ fontSize: 18, color: '#FFFFFF' }}>资源包每年更新</Text>
-            </Box>
-        </Box>
-        <Text style={{ fontSize: 18, color: 'rgba(255,255,255,0.85)' }}>每周五漏斗周报：投递 → 面试 → offer</Text>
-        <Box style={{ width: 64, height: 3, background: 'rgba(255,255,255,0.45)', borderRadius: 2, marginTop: 20 }} />
-        <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.4 }}>「谈薪谈的是未来，不是过去」</Text>
-        <Text style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)' }}>—— W8D5 结营寄语</Text>
-    </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W8D5</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>谈薪反面案例（案例页）</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>01</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>「零基础学员」先报数 → 被压慌 → 当场松口</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>02</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>三个术语没分清</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#7C3AED', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>03</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#7C3AED', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>失分原因</Text>
+        </Box>
+        <Box style={{ width: 376, height: 227, padding: 22, justifyContent: 'space-between', background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Box style={{ width: 26, height: 26, borderRadius: 6, background: '#2563EB', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#FFFFFF' }}>04</Text>
+            </Box>
+                <Box style={{ width: 40, height: 2, background: '#2563EB', opacity: 0.35 }} />
+            </Box>
+            <Text style={{ fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>对照纠正话术</Text>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>14 / 36</Text>
+    </Box>
 </Slide>

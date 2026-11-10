@@ -1,39 +1,50 @@
-<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 60, position: 'relative' }}>
-  <Box style={{ position: 'absolute', top: 24, left: 60, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-    <Box style={{ width: 8, height: 24, background: '#7C3AED', borderRadius: 4 }} />
-    <Text style={{ fontSize: 14, color: '#64748B' }}>AI 产品经理实战训练营 · W4D4</Text>
-  </Box>
-  <Box style={{ position: 'absolute', bottom: 20, right: 60 }}>
-    <Text style={{ fontSize: 14, color: '#64748B' }}>13 / 18</Text>
-  </Box>
-  <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B' }}>护栏指标：防止把指标做歪</Text>
-  <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 18, marginBottom: 26 }} />
-  <Box style={{ flexDirection: 'row', gap: 24, width: '100%', alignItems: 'flex-start' }}>
-    <Box style={{ width: 576, flexDirection: 'column', gap: 14 }}>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 10, padding: '14px 22px' }}>
-        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>北极星盯采纳 <span style={{ color: '#7C3AED' }}>↔</span> 护栏盯重试率</Text>
-        <Text style={{ fontSize: 17, color: '#64748B', marginTop: 6, lineHeight: 1.5 }}>采纳率涨了五个点、重试次数翻倍 = 单次质量其实在降</Text>
-      </Box>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 10, padding: '14px 22px' }}>
-        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>北极星盯增长 <span style={{ color: '#7C3AED' }}>↔</span> 护栏盯幻觉率 + 单次成本</Text>
-        <Text style={{ fontSize: 17, color: '#64748B', marginTop: 6, lineHeight: 1.5 }}>新用户涌入若让幻觉率和成本失控，增长就是烧钱买口碑恶化</Text>
-      </Box>
-      <Box style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: 10, padding: '14px 22px' }}>
-        <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#1E1B4B' }}>北极星盯留存 <span style={{ color: '#7C3AED' }}>↔</span> 护栏盯推送退订率</Text>
-        <Text style={{ fontSize: 17, color: '#64748B', marginTop: 6, lineHeight: 1.5 }}>留存如果是靠弹窗弹回来的，退订率会先告诉你真相</Text>
-      </Box>
-    </Box>
-    <Box style={{ width: 560, flexDirection: 'column' }}>
-      <Box style={{ width: 560, height: 336, borderRadius: 8, border: '1px solid #E5E7EB', overflow: 'hidden' }}>
-        <Image src="assets/metrics-system.svg" style={{ width: 560, height: 336, objectFit: 'contain' }} />
-      </Box>
-      <Box style={{ width: 560, background: '#F5F3FF', border: '2px solid #7C3AED', borderRadius: 8, padding: '12px 18px', marginTop: 12, flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Box style={{ width: 10, height: 10, background: '#7C3AED', borderRadius: 5 }} />
-        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#7C3AED' }}>护栏亮起：重试率 · 单次成本 · 幻觉率抽检 · 推送退订率</Text>
-      </Box>
-    </Box>
-  </Box>
-  <Box style={{ width: '100%', background: 'linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)', borderRadius: 10, padding: '18px 28px', marginTop: 22 }}>
-    <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF' }}>北极星决定船往哪开，护栏防止把船开翻</Text>
-  </Box>
+<Slide style={{ width: 1280, height: 720, padding: 60, background: '#FFFFFF', fontFamily: 'Microsoft YaHei' }}>
+        <Box style={{ width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: 20, marginTop: -36 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Box style={{ width: 8, height: 20, background: '#7C3AED', borderRadius: 4 }} />
+            <Text style={{ fontSize: 13, color: '#64748B', letterSpacing: 1 }}>AI 产品经理实战训练营 · W4D4</Text>
+        </Box>
+        <Text style={{ fontSize: 13, color: '#64748B' }}>第 3 节 · 100–150 min</Text>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 16 }}>
+        <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#1E1B4B', lineHeight: 1.2 }}>双案例：DAU vs 采纳型北极星</Text>
+        <Box style={{ width: '100%', height: 1, background: '#E5E7EB', marginTop: 14 }} />
+    </Box>
+    <Box style={{ width: '100%', height: 470, marginTop: 24, flexDirection: 'row', gap: 24 }}>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#F5F3FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#7C3AED' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#7C3AED' }}>正例 / 可行路径</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>正面案例：改「每周生成并被采纳 ≥3 次用户数」后动作转留存</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#7C3AED', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>北极星定义三零件：核心行为 / 质量门槛 / 频次阈值</Text>
+            </Box>
+            </Box>
+        </Box>
+        <Box style={{ flex: 1, height: '100%', padding: 24, background: '#EFF6FF', borderRadius: 10, border: '1px solid #E5E7EB' }}>
+            <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 10, paddingBottom: 12, borderBottom: '1px solid #E5E7EB' }}>
+                <Box style={{ width: 10, height: 10, borderRadius: 5, background: '#2563EB' }} />
+                <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#2563EB' }}>反例 / 风险动作</Text>
+            </Box>
+            <Box style={{ flex: 1, flexDirection: 'column', justifyContent: 'center' }}>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>反面案例：DAU 三标准逐条拆 + 堆九个指标、口径两页对不上</Text>
+            </Box>
+                <Box style={{ flexDirection: 'row', gap: 10, paddingTop: 10, paddingBottom: 10 }}>
+                <Box style={{ width: 6, height: 6, borderRadius: 3, background: '#2563EB', marginTop: 9 }} />
+                <Text style={{ flex: 1, fontSize: 19, color: '#1E1B4B', lineHeight: 1.55 }}>宣布主项目看板要求</Text>
+            </Box>
+            </Box>
+        </Box>
+    </Box>
+        <Box style={{ width: '100%', marginTop: 'auto', marginBottom: -18, flexDirection: 'row', justifyContent: 'flex-end' }}>
+        <Text style={{ fontSize: 13, color: '#94A3B8' }}>13 / 36</Text>
+    </Box>
 </Slide>
