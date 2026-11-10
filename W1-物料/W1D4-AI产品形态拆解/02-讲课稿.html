@@ -547,6 +547,24 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li>Agent 和工作流看「步骤谁拆」，Copilot 和 Agent 看「建议还是执行」。</li>
 <li>先问步骤谁来拆，再谈用哪个模型。</li>
 </ol>
+<hr />
+<h2>补充素材</h2>
+<h3>理论知识手册 · 生图产品化决策</h3>
+<ul>
+<li><strong>关键结论</strong>：「文生图 = 无中生有，适合不需要一致性的场景；垫图 = 以图为锚，适合角色必须稳定的场景」，产品经理要分清什么时候用哪种。</li>
+<li><strong>关键结论</strong>：「用户想的和生图模型需要的是完全不同的语言」——用户不会写生图 Prompt、生图模型无法理解模糊意图、每个生图模型的方言不同；解法是用 LLM 把人话翻译成生图语言。</li>
+<li><strong>关键结论</strong>：「纯靠文字无法锁定一个角色的视觉身份」；靠的是每次生图都带上<strong>角色参考表（Character Reference Sheet）</strong>，锚定脸型 &amp; 体型 / 表情风格 / 穿搭风格。</li>
+<li><strong>关键结论</strong>：「用户不关心哪个模型挂了，他只关心：图到底能不能出来？」；降级链的产品逻辑是优先级排序 + 白名单、探活机制、垫图降级，背后的模型超时 / 限流 / 顶上对用户完全透明。</li>
+<li><strong>关键结论</strong>：「调通 API ≠ 功能上线」；调通生图 API 只花一天，还做了三个月的产品化工作，「这张清单展示那 90% 的工作量」。</li>
+</ul>
+<table>
+<thead><tr><th>维度</th><th>生图产品化清单项</th></tr></thead>
+<tbody>
+<tr><td>进度反馈</td><td>生成进度反馈、失败重试机制、结果预览与选择、历史记录</td></tr>
+<tr><td>参考图 + Prompt 优化</td><td>Prompt 优化（LLM 翻译）、角色一致性、尺寸适配、质量兜底</td></tr>
+<tr><td>模型会挂、会慢、会贵</td><td>模型降级链、超时与重试、成本控制、结果持久化</td></tr>
+<tr><td>内容安全和隐私</td><td>输入内容审核、输出内容审核、版权风险控制、隐私保护</td></tr>
+</tbody></table>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

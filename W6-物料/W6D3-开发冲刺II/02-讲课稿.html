@@ -418,6 +418,104 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <tr><td>术语又串了（新增）</td><td>「回到状态机：无数据是空态、出问题才是错态、等待是加载态。先判触发场景，再翻术语卡。」</td></tr>
 <tr><td>两两模拟冷场（新增）</td><td>「面试官别客气，按追问链 L1、L2 连着追；候选人记住四段结构，先给带术语的结论。」</td></tr>
 </tbody></table>
+<hr />
+<h2>补充素材</h2>
+<h3>6 个实战项目 · 项目 3 ｜ AI 图片生成平台</h3>
+<table>
+<thead><tr><th>字段</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>项目标识 slug</td><td>image-platform</td></tr>
+<tr><td>难度 / 阶段</td><td>进阶 ／ 阶段 4-6</td></tr>
+<tr><td>标签</td><td>AI 图片生成、多模态、积分系统</td></tr>
+<tr><td>训练重点</td><td>生图流程、风格参数、任务队列、成本控制</td></tr>
+<tr><td>能力训练 skills</td><td>多模态产品、商业化、异步任务设计</td></tr>
+</tbody></table>
+<p><strong>项目背景</strong></p>
+<p>教程原文场景：一家电商团队需要快速生成商品主图、活动海报和社媒配图，但设计资源有限，风格和审核标准不稳定。生图结果不可控、版权边界不清、高频生成成本高、历史版本难管理，是主要矛盾。</p>
+<p>站点卡片补充背景：内容团队需要快速生成营销图、社媒配图和电商素材，但缺少稳定模板和成本管理。</p>
+<p><strong>目标</strong></p>
+<ul>
+<li>项目目标（goal）：设计文生图、图生图、模板系统、生成记录、积分消耗和商业化定价。</li>
+<li>目标用户（5 类）：商家运营、设计师、内容审核员、增长运营、平台管理员。</li>
+<li>量化目标：适用本文 2.2 节 10 条通用指标；项目侧重点是单次生成成本、任务成功率与模板命中率。</li>
+</ul>
+<p><strong>核心任务</strong></p>
+<table>
+<thead><tr><th>维度</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>关键痛点</td><td>提示词门槛高；生成结果不可控；素材版权边界不清；高频生成成本高；历史版本难管理</td></tr>
+<tr><td>核心功能</td><td>文生图、图生图、模板广场、参数面板、生成队列、积分体系、素材库</td></tr>
+<tr><td>AI 能力</td><td>视觉 Prompt、风格模板、图像生成、结果筛选、安全审核</td></tr>
+<tr><td>技术协作</td><td>异步任务、存储 CDN、积分扣减、生成失败补偿、版权风险提示</td></tr>
+<tr><td>主流程</td><td>选择模板 → 填写主题与风格 → 调整尺寸与参数 → 生成并挑选 → 编辑或重试 → 保存到素材库</td></tr>
+<tr><td>作品集产出</td><td>生图产品方案、模板体系、积分规则、定价页、生成体验评估</td></tr>
+</tbody></table>
+<p><strong>实践步骤（按教程作业与检查清单归纳）</strong></p>
+<ol>
+<li>通读教程与阶段 6 第 3 课，梳理「模板 → 参数 → 队列 → 生成 → 挑选 → 素材库」异步链路。</li>
+<li>为 5 类角色定义任务与审核职责，尤其内容审核员的版权与安全审核节点。</li>
+<li>设计模板广场与视觉 Prompt 结构：主题、风格、尺寸、负面约束、示例图。</li>
+<li>定义生成队列状态、失败补偿与积分扣减规则，明确扣费时机与重试策略。</li>
+<li>设计成本模型：单次生成成本、套餐权益、限额与降级，输出定价页方案。</li>
+<li>列技术协作清单，重点确认异步任务、CDN 存储、审核回调、日志与成本统计。</li>
+<li>建立 7 类指标与 8 项风险边界，突出素材版权、内容安全与成本失控。</li>
+<li>输出 3000 字以上方案与 3 张图（生图流程、架构、积分与定价），整理作品集。</li>
+</ol>
+<p><strong>相关资源链接</strong></p>
+<ul>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/course/stage-06-real-projects/03-ai-image-platform-project.md">阶段 6 第 3 课：AI 图片平台项目</a></li>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/commercialization-template.md">AI 产品商业化方案模板</a> ｜ <a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/metrics-design-template.md">AI 产品指标设计模板</a> ｜ <a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/prompt-design-template.md">Prompt 设计模板</a></li>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/tree/main/public/images/generated/projects/image-platform">8 张项目插图目录</a></li>
+</ul>
+<hr />
+<h3>6 个实战项目 · 项目 4 ｜ AI 智能客服系统</h3>
+<table>
+<thead><tr><th>字段</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>项目标识 slug</td><td>customer-service</td></tr>
+<tr><td>难度 / 阶段</td><td>进阶 ／ 阶段 4-6</td></tr>
+<tr><td>标签</td><td>智能客服、RAG、人工转接</td></tr>
+<tr><td>训练重点</td><td>意图识别、人工转接、质检评估、服务指标</td></tr>
+<tr><td>能力训练 skills</td><td>场景拆解、AI 兜底、数据指标</td></tr>
+</tbody></table>
+<p><strong>项目背景</strong></p>
+<p>教程原文场景：一家在线教育公司每天收到大量课程咨询、退款、发票和学习进度问题，客服重复劳动多且质检压力大。答案口径不一致、转人工不及时、主管缺少质量报表，是核心痛点。</p>
+<p>站点卡片补充背景：客服团队重复问题占比高，人工响应慢，希望 AI 先解决常见问题并在复杂场景转人工。</p>
+<p><strong>目标</strong></p>
+<ul>
+<li>项目目标（goal）：掌握客服场景、意图识别、知识库调用、人工转接和命中率统计。</li>
+<li>目标用户（5 类）：潜在客户、付费学员、一线客服、客服主管、运营管理员。</li>
+<li>量化目标：适用本文 2.2 节 10 条通用指标；项目侧重点是意图命中率、转人工率与满意度。</li>
+</ul>
+<p><strong>核心任务</strong></p>
+<table>
+<thead><tr><th>维度</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>关键痛点</td><td>重复咨询多；答案口径不一致；人工转接不及时；客服主管缺少质量报表</td></tr>
+<tr><td>核心功能</td><td>多渠道接入、意图识别、知识命中、人工转接、满意度评价、客服报表</td></tr>
+<tr><td>AI 能力</td><td>意图分类、RAG、置信度判断、对话摘要、质检分析</td></tr>
+<tr><td>技术协作</td><td>会话路由、客服系统集成、权限与审计、命中率统计、人工接管状态</td></tr>
+<tr><td>主流程</td><td>用户发起咨询 → AI 判断意图 → 检索知识并回答 → 低置信度转人工 → 记录会话与评价 → 主管复盘优化</td></tr>
+<tr><td>作品集产出</td><td>客服场景地图、转人工规则、指标看板、质检流程、上线迭代计划</td></tr>
+</tbody></table>
+<p><strong>实践步骤（按教程作业与检查清单归纳）</strong></p>
+<ol>
+<li>通读教程与阶段 6 第 4 课，盘点课程咨询、退款、发票、学习进度 4 类高频意图。</li>
+<li>输出客服场景地图：意图分类、兜底类别、置信度阈值与人工接管条件。</li>
+<li>定义答案口径与知识来源，设计引用、满意度评价与会话摘要规则。</li>
+<li>写清人工转接触发条件、接管状态机、超时与失败提示，补齐异常分支。</li>
+<li>设计质检流程与客服报表：命中率、转人工率、满意度、平均处理时长。</li>
+<li>列技术协作清单，重点确认多渠道会话路由、客服系统集成、权限与审计日志。</li>
+<li>建立 7 类指标与 8 项风险边界，突出误答、越权与用户误解风险。</li>
+<li>输出 3000 字以上方案与 3 张图（场景地图、转人工流程、指标看板），沉淀作品集。</li>
+</ol>
+<p><strong>相关资源链接</strong></p>
+<ul>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/course/stage-06-real-projects/04-ai-customer-service-project.md">阶段 6 第 4 课：AI 智能客服项目</a></li>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/metrics-design-template.md">AI 产品指标设计模板</a> ｜ <a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/model-evaluation-template.md">AI 产品模型评估模板</a> ｜ <a href="https://github.com/AliceDel66/ai-pm-roadmap/blob/main/content/templates/prd-template.md">PRD 文档模板</a></li>
+<li><a href="https://github.com/AliceDel66/ai-pm-roadmap/tree/main/public/images/generated/projects/customer-service">8 张项目插图目录</a></li>
+</ul>
+<hr />
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
