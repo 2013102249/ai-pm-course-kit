@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">作品集积木归档 · 8 件产出物</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 6 节（250–300 min）清点 8 件产出、统一命名、定归档位置，10 min 当堂完成</text>
+<rect x="40" y="116" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="116" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="40" y="138" width="265" height="12" fill="#F1EBFD"/>
+<text x="56" y="139" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">01</text>
+<text x="86" y="139" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">岗位地图</text>
+<text x="56" y="178" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="56" y="198" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">01-岗位地图-v2.pdf</text>
+<text x="56" y="226" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="56" y="246" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/00-认知</text>
+<rect x="325" y="116" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="325" y="116" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="325" y="138" width="265" height="12" fill="#F1EBFD"/>
+<text x="341" y="139" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">02</text>
+<text x="371" y="139" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">模型横评</text>
+<text x="341" y="178" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="341" y="198" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">02-模型横评-2026Q4.xlsx</text>
+<text x="341" y="226" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="341" y="246" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/01-选型</text>
+<rect x="610" y="116" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="610" y="116" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="610" y="138" width="265" height="12" fill="#F1EBFD"/>
+<text x="626" y="139" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">03</text>
+<text x="656" y="139" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">需求验证</text>
+<text x="626" y="178" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="626" y="198" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">03-需求验证-访谈纪要.md</text>
+<text x="626" y="226" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="626" y="246" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/02-需求</text>
+<rect x="895" y="116" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="895" y="116" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="895" y="138" width="265" height="12" fill="#F1EBFD"/>
+<text x="911" y="139" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">04</text>
+<text x="941" y="139" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">PRD</text>
+<text x="911" y="178" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="911" y="198" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">04-PRD-知识库问答-v3.pdf</text>
+<text x="911" y="226" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="911" y="246" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/03-方案</text>
+<rect x="40" y="292" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="292" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="40" y="314" width="265" height="12" fill="#F1EBFD"/>
+<text x="56" y="315" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">05</text>
+<text x="86" y="315" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">原型</text>
+<text x="56" y="354" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="56" y="374" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">05-原型-figma链接.txt</text>
+<text x="56" y="402" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="56" y="422" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/03-方案</text>
+<rect x="325" y="292" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="325" y="292" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="325" y="314" width="265" height="12" fill="#F1EBFD"/>
+<text x="341" y="315" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">06</text>
+<text x="371" y="315" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">评测报告</text>
+<text x="341" y="354" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="341" y="374" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">06-评测-50条badcase.md</text>
+<text x="341" y="402" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="341" y="422" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/04-验证</text>
+<rect x="610" y="292" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="610" y="292" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="610" y="314" width="265" height="12" fill="#F1EBFD"/>
+<text x="626" y="315" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">07</text>
+<text x="656" y="315" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">数据看板</text>
+<text x="626" y="354" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="626" y="374" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">07-指标-北极星与护栏.png</text>
+<text x="626" y="402" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="626" y="422" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/04-验证</text>
+<rect x="895" y="292" width="265" height="156" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="895" y="292" width="265" height="34" rx="12" fill="#F1EBFD"/>
+<rect x="895" y="314" width="265" height="12" fill="#F1EBFD"/>
+<text x="911" y="315" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">08</text>
+<text x="941" y="315" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">路演稿</text>
+<text x="911" y="354" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">文件名</text>
+<text x="911" y="374" text-anchor="start" font-size="10.5" font-weight="400" fill="#4A4560">08-路演-3分钟逐字稿.md</text>
+<text x="911" y="402" text-anchor="start" font-size="9.5" font-weight="700" fill="#7A7590">归档</text>
+<text x="911" y="422" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">作品集/05-表达</text>
+<rect x="40" y="480" width="1120" height="104" rx="12" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="64" y="512" text-anchor="start" font-size="13.5" font-weight="700" fill="#1D4ED8">命名规范（三条，评审只看这三条）</text>
+<text x="64" y="540" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">① 序号 + 主题 + 版本号：01-岗位地图-v2　② 日期只写在内容里，不写进文件名　③ 同一件产出只留一个最新版，旧版进「历史」子目录</text>
+<text x="64" y="564" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">归档位置：飞书云空间「作品集」固定五个子目录，面试前把链接改成「任何人可看」并贴进简历二维码。</text>
+<text x="40" y="632" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">清点口径：8 件齐 = 作品集可用；缺 1–2 件 → 当堂登记补交时间（不晚于 W7D1）；缺 3 件以上 → 进入一对一补强名单。</text>
+<text x="40" y="664" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">与 W7D2 作品集方法论一致：积木先齐，再谈包装。缺件的人不要先做美化，先把产出补齐。</text>
+</svg>

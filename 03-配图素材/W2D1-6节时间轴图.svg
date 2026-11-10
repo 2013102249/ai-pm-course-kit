@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="480" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">6 节时间轴 · 300 分钟（6 × 50 min）</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">开场投屏一次，每节切换回切 30 秒：让学员知道「现在第几节、这节要交什么」</text>
+<rect x="40.0" y="110" width="181.66666666666666" height="196" rx="12" fill="#F7F3FE" stroke="#7C3AED" stroke-width="1.6" stroke-opacity="1"/>
+<text x="54.0" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#7C3AED">第 1 节</text>
+<text x="54.0" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">0–50 min</text>
+<text x="54.0" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">术语精讲</text>
+<text x="54.0" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">本节产出</text>
+<text x="54.0" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">· 术语自测表</text>
+<rect x="227.66666666666666" y="110" width="181.66666666666666" height="196" rx="12" fill="#EFE6FD" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.25"/>
+<text x="241.66666666666666" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#7C3AED">第 2 节</text>
+<text x="241.66666666666666" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">50–100 min</text>
+<text x="241.66666666666666" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">原理讲授 A</text>
+<text x="241.66666666666666" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">本节产出</text>
+<text x="241.66666666666666" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">· 原理框架图</text>
+<line x1="224.66666666666666" y1="110" x2="224.66666666666666" y2="306" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="415.3333333333333" y="110" width="181.66666666666666" height="196" rx="12" fill="#E5D5FC" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.25"/>
+<text x="429.3333333333333" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#7C3AED">第 3 节</text>
+<text x="429.3333333333333" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">100–150 min</text>
+<text x="429.3333333333333" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">原理 B + 案例</text>
+<text x="429.3333333333333" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">本节产出</text>
+<text x="429.3333333333333" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">· 案例与辨析</text>
+<line x1="412.3333333333333" y1="110" x2="412.3333333333333" y2="306" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="603.0" y="110" width="181.66666666666666" height="196" rx="12" fill="#D9C0FA" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.25"/>
+<text x="617.0" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#7C3AED">第 4 节</text>
+<text x="617.0" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">150–200 min</text>
+<text x="617.0" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">实操演练</text>
+<text x="617.0" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">本节产出</text>
+<text x="617.0" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">· 实操产出</text>
+<line x1="600.0" y1="110" x2="600.0" y2="306" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="790.6666666666666" y="110" width="181.66666666666666" height="196" rx="12" fill="#CBAAF7" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.25"/>
+<text x="804.6666666666666" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#FFFFFF">第 5 节</text>
+<text x="804.6666666666666" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#EFE6FD">200–250 min</text>
+<text x="804.6666666666666" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#FFFFFF">面试讲解</text>
+<text x="804.6666666666666" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#EFE6FD">本节产出</text>
+<text x="804.6666666666666" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#FFFFFF">· 面试速记卡</text>
+<line x1="787.6666666666666" y1="110" x2="787.6666666666666" y2="306" stroke="#E8E5F1" stroke-width="1"/>
+<rect x="978.3333333333333" y="110" width="181.66666666666666" height="196" rx="12" fill="#BC8FF4" stroke="#7C3AED" stroke-width="0.6" stroke-opacity="0.25"/>
+<text x="992.3333333333333" y="138" text-anchor="start" font-size="13" font-weight="700" fill="#FFFFFF">第 6 节</text>
+<text x="992.3333333333333" y="160" text-anchor="start" font-size="11" font-weight="400" fill="#EFE6FD">250–300 min</text>
+<text x="992.3333333333333" y="196" text-anchor="start" font-size="15" font-weight="700" fill="#FFFFFF">复盘 · 验收</text>
+<text x="992.3333333333333" y="222" text-anchor="start" font-size="10.5" font-weight="700" fill="#EFE6FD">本节产出</text>
+<text x="992.3333333333333" y="244" text-anchor="start" font-size="11" font-weight="400" fill="#FFFFFF">· 验收归档</text>
+<line x1="975.3333333333333" y1="110" x2="975.3333333333333" y2="306" stroke="#E8E5F1" stroke-width="1"/>
+<circle cx="412.3333333333333" cy="330" r="4" fill="#2563EB"/>
+<text x="422.3333333333333" y="335" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">休息 10 min（不计入 300 分钟）</text>
+<circle cx="787.6666666666666" cy="330" r="4" fill="#2563EB"/>
+<text x="797.6666666666666" y="335" text-anchor="start" font-size="10.5" font-weight="400" fill="#2563EB">休息 10 min（不计入 300 分钟）</text>
+<line x1="40" y1="372" x2="1160" y2="372" stroke="#E8E5F1" stroke-width="1"/>
+<text x="40" y="398" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">进度口诀：</text>
+<text x="112" y="398" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">第 1 节建词表 → 第 2 节立框架 → 第 3 节看案例 → 第 4 节动手做 → 第 5 节能开口 → 第 6 节可验收</text>
+<text x="40" y="428" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">通用版：适用于未单独制图的课次；单日专用版见 W3D5-六节时间轴.svg / W8D3-6节时间轴图.svg</text>
+</svg>

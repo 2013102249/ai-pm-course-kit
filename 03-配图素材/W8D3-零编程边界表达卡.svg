@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 770" width="1200" height="770" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="770" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">零编程学员的边界表达卡</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 2 节、第 5 节常驻投屏，累计 15 min｜三句话解决「我不会写代码，凭什么做 AI 产品经理」</text>
+<rect x="40" y="108" width="1120" height="172" rx="14" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="108" width="6" height="172" rx="3" fill="#7C3AED"/>
+<text x="68" y="142" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">01</text>
+<text x="100" y="142" text-anchor="start" font-size="16" font-weight="700" fill="#221E33">定口径、定边界、定验收</text>
+<rect x="68" y="156" width="520" height="46" rx="8" fill="#F1EBFD"/>
+<text x="84" y="186" text-anchor="start" font-size="14.5" font-weight="700" fill="#5B21B6">我不写代码，但我定义什么叫「对」</text>
+<text x="68" y="228" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">把「效果好」翻译成可验收的条件：准确率多少、哪些场景必须拒答、异常态怎么兜底。</text>
+<text x="68" y="256" text-anchor="start" font-size="10.8" font-weight="400" fill="#7A7590">反例：「这块技术我不懂，听研发的。」→ 面试官判定：没有产品判断。</text>
+<rect x="40" y="298" width="1120" height="172" rx="14" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="298" width="6" height="172" rx="3" fill="#7C3AED"/>
+<text x="68" y="332" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">02</text>
+<text x="100" y="332" text-anchor="start" font-size="16" font-weight="700" fill="#221E33">先说做不到什么</text>
+<rect x="68" y="346" width="520" height="46" rx="8" fill="#F1EBFD"/>
+<text x="84" y="376" text-anchor="start" font-size="14.5" font-weight="700" fill="#5B21B6">先划边界，再谈方案</text>
+<text x="68" y="418" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">开口先讲模型能力边界与失败模式，再给方案。承认边界不是减分，是可信度的来源。</text>
+<text x="68" y="446" text-anchor="start" font-size="10.8" font-weight="400" fill="#7A7590">反例：把模型说成万能。→ 一句追问「那它什么时候会错」就崩。</text>
+<rect x="40" y="488" width="1120" height="172" rx="14" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="488" width="6" height="172" rx="3" fill="#7C3AED"/>
+<text x="68" y="522" text-anchor="start" font-size="12" font-weight="700" fill="#7C3AED">03</text>
+<text x="100" y="522" text-anchor="start" font-size="16" font-weight="700" fill="#221E33">不知道 + 我怎么查</text>
+<rect x="68" y="536" width="520" height="46" rx="8" fill="#F1EBFD"/>
+<text x="84" y="566" text-anchor="start" font-size="14.5" font-weight="700" fill="#5B21B6">承认不知道，同时给出查证路径</text>
+<text x="68" y="608" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">「这个我没做过，我的判断是 X，验证方式是 Y」——把未知变成一次可执行的动作。</text>
+<text x="68" y="636" text-anchor="start" font-size="10.8" font-weight="400" fill="#7A7590">反例：硬编一个答案。→ 追问两层就露馅，且暴露不诚实。</text>
+<text x="40" y="710" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">为什么这三句有效：面试官考的不是 coding，是「你能不能和技术同学把边界谈清楚」。三句话分别对应口径、边界、验证，正好是 AI 产品经理的三项硬功。</text>
+<text x="40" y="736" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">用法：第 2 节讲原理前挂出一次（2 min），第 5 节每题作答前回扣一次（每题 10 秒）；学员把三句抄在导学案首页。</text>
+</svg>

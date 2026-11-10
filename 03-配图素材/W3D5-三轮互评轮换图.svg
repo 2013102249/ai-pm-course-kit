@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="780" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">三轮互评轮换与单轮时间条</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 4 节（150–200 min）任务说明投屏 8 min，配合计时器主屏｜3 轮 × 换对手 / 换主讲</text>
+<text x="40" y="110" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">轮换矩阵：每轮换对手 + 换主讲，同一份原型被 3 组不同视角审过</text>
+<rect x="300" y="128" width="250" height="40" rx="8" fill="#F1EBFD"/>
+<text x="425.0" y="154" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">桌 1 主讲</text>
+<rect x="560" y="128" width="250" height="40" rx="8" fill="#F1EBFD"/>
+<text x="685.0" y="154" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">桌 2 主讲</text>
+<rect x="820" y="128" width="250" height="40" rx="8" fill="#F1EBFD"/>
+<text x="945.0" y="154" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">桌 3 主讲</text>
+<rect x="40" y="176" width="250" height="52" rx="8" fill="#F7F6FB"/>
+<text x="56" y="208" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">第 1 轮</text>
+<rect x="300" y="176" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="425.0" y="208" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">A 讲 → B 评</text>
+<rect x="560" y="176" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="685.0" y="208" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">B 讲 → C 评</text>
+<rect x="820" y="176" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="945.0" y="208" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">C 讲 → A 评</text>
+<rect x="40" y="236" width="250" height="52" rx="8" fill="#F7F6FB"/>
+<text x="56" y="268" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">第 2 轮</text>
+<rect x="300" y="236" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="425.0" y="268" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">B 讲 → A 评</text>
+<rect x="560" y="236" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="685.0" y="268" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">C 讲 → B 评</text>
+<rect x="820" y="236" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="945.0" y="268" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">A 讲 → C 评</text>
+<rect x="40" y="296" width="250" height="52" rx="8" fill="#F7F6FB"/>
+<text x="56" y="328" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">第 3 轮</text>
+<rect x="300" y="296" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="425.0" y="328" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">C 讲 → A 评</text>
+<rect x="560" y="296" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="685.0" y="328" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">A 讲 → B 评</text>
+<rect x="820" y="296" width="250" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1"/>
+<text x="945.0" y="328" text-anchor="middle" font-size="12.5" font-weight="400" fill="#4A4560">B 讲 → C 评</text>
+<text x="40" y="388" text-anchor="start" font-size="13" font-weight="700" fill="#221E33">单轮 11 min 分段（共 3 轮 + 1 轮补评 = 44 min）</text>
+<rect x="40" y="404" width="302.45454545454544" height="58" rx="8" fill="#7C3AED"/>
+<text x="191.22727272727272" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">演示</text>
+<text x="191.22727272727272" y="450" text-anchor="middle" font-size="11" font-weight="400" fill="#FFFFFF">3 min</text>
+<rect x="345.45454545454544" y="404" width="404.27272727272725" height="58" rx="8" fill="#5B21B6"/>
+<text x="547.590909090909" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">质询</text>
+<text x="547.590909090909" y="450" text-anchor="middle" font-size="11" font-weight="400" fill="#FFFFFF">4 min</text>
+<rect x="752.7272727272727" y="404" width="302.45454545454544" height="58" rx="8" fill="#2563EB"/>
+<text x="903.9545454545455" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">点评</text>
+<text x="903.9545454545455" y="450" text-anchor="middle" font-size="11" font-weight="400" fill="#FFFFFF">3 min</text>
+<rect x="1058.1818181818182" y="404" width="98.81818181818181" height="58" rx="8" fill="#D9D5E8"/>
+<text x="1107.5909090909092" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#221E33">轮换</text>
+<text x="1107.5909090909092" y="450" text-anchor="middle" font-size="11" font-weight="400" fill="#221E33">1 min</text>
+<rect x="40" y="492" width="1120" height="96" rx="12" fill="#FDF2E3" stroke="#F5D9A8" stroke-width="1.3"/>
+<text x="64" y="524" text-anchor="start" font-size="15" font-weight="700" fill="#8A5A10">全员满分 = 评审失败</text>
+<text x="64" y="552" text-anchor="start" font-size="11.5" font-weight="400" fill="#8A5A10">第 4 节历史上每届都会出现「互相吹捧、人人 4 分」。判定规则：同组三人分值极差 &lt; 1 分，该轮判为无效，重评一次。</text>
+<text x="64" y="574" text-anchor="start" font-size="11.5" font-weight="400" fill="#8A5A10">理由：评审训练的是「找问题并说清楚」的能力，不是社交。第 5 节模拟面试官会当场验证——评不出来的人，答不出来。</text>
+<rect x="40" y="612" width="356" height="96" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<text x="60" y="642" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">换对手</text>
+<text x="60" y="668" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">每轮同桌换人，避免熟人之间不敢提硬问题</text>
+<rect x="416" y="612" width="356" height="96" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<text x="436" y="642" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">换主讲</text>
+<text x="436" y="668" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">每人主讲 1 次，讲的人才知道自己哪句话站不住</text>
+<rect x="792" y="612" width="356" height="96" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<text x="812" y="642" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">留记录</text>
+<text x="812" y="668" text-anchor="start" font-size="11" font-weight="400" fill="#7A7590">每轮一页记录纸：1 个亮点 + 2 个必改，第 6 节收齐归档</text>
+<text x="40" y="744" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">与 01-教案第 4 节时间拆分一致：任务说明 8 min + 3 轮 33 min + 补评 11 min + 收束 8 min。</text>
+</svg>

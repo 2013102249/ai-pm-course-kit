@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 810" width="1200" height="810" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="810" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">正 / 反案例对照 · 高频题精讲 II</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 2 节 RAG 正反案例、第 3 节指标设计与小说版 STAR，累计 10 min</text>
+<text x="40" y="130" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">案例 1 · RAG 原理题</text>
+<rect x="40" y="142" width="548" height="106" rx="10" fill="#FAFAFC" stroke="#D8D4E4" stroke-width="1.3"/>
+<text x="60" y="168" text-anchor="start" font-size="12.5" font-weight="700" fill="#5A5570">背术语版（反例）</text>
+<text x="60" y="194" text-anchor="start" font-size="11" font-weight="400" fill="#5A5570">检索、重排、Embedding、向量库全背一遍，40 秒没说完</text>
+<rect x="612" y="142" width="548" height="106" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.3"/>
+<text x="632" y="168" text-anchor="start" font-size="12.5" font-weight="700" fill="#5B21B6">讲链路版（正例）</text>
+<text x="632" y="194" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">两条链路 + 一句话定位：「给模型开卷考试，答案必须能点回原文」</text>
+<text x="40" y="288" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">案例 2 · 指标设计题</text>
+<rect x="40" y="300" width="548" height="106" rx="10" fill="#FAFAFC" stroke="#D8D4E4" stroke-width="1.3"/>
+<text x="60" y="326" text-anchor="start" font-size="12.5" font-weight="700" fill="#5A5570">堆指标版（反例）</text>
+<text x="60" y="352" text-anchor="start" font-size="11" font-weight="400" fill="#5A5570">列 8 个指标：DAU、留存、NPS、满意度……没有口径没有优先级</text>
+<rect x="612" y="300" width="548" height="106" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.3"/>
+<text x="632" y="326" text-anchor="start" font-size="12.5" font-weight="700" fill="#5B21B6">定口径版（正例）</text>
+<text x="632" y="352" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">1 个北极星 + 2 个护栏指标，每个都写清分子分母与统计窗口</text>
+<text x="40" y="446" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">案例 3 · 行为题 STAR</text>
+<rect x="40" y="458" width="548" height="106" rx="10" fill="#FAFAFC" stroke="#D8D4E4" stroke-width="1.3"/>
+<text x="60" y="484" text-anchor="start" font-size="12.5" font-weight="700" fill="#5A5570">小说版（反例）</text>
+<text x="60" y="510" text-anchor="start" font-size="11" font-weight="400" fill="#5A5570">「我们团队做了个项目，效果很好」——无角色、无口径、无数字</text>
+<rect x="612" y="458" width="548" height="106" rx="10" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.3"/>
+<text x="632" y="484" text-anchor="start" font-size="12.5" font-weight="700" fill="#5B21B6">证据版（正例）</text>
+<text x="632" y="510" text-anchor="start" font-size="11" font-weight="400" fill="#4A4560">我在什么处境 → 我做了什么判断 → 结果多少（有口径）→ 复盘学到了什么</text>
+<rect x="40" y="600" width="1120" height="92" rx="12" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="64" y="632" text-anchor="start" font-size="13.5" font-weight="700" fill="#1D4ED8">判分口径：面试官不数你说了几个名词，只数你说了几个「可被验证的判断」</text>
+<text x="64" y="660" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">同一道题，反例讲 40 秒仍在铺垫，正例 20 秒给出结构、60 秒给证据——差别不在知识量，在有没有先给结论。</text>
+<text x="40" y="736" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">用法：第 2 节先放反例让学员挑毛病（2 min），再对照正例改写（3 min）；第 3 节 STAR 部分复用同一版式，学员当场重写自己的项目描述。</text>
+</svg>

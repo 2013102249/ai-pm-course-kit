@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 810" width="1200" height="810" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="810" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">面试评分表与 P3 归档 / 验收示意</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 5 节（200–250 min）模拟判分 10 min + 第 6 节（250–300 min）积木归档与当堂验收 20 min</text>
+<text x="40" y="112" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">上半 · 面试模拟评分表（5 个踩分点，各 2 分）</text>
+<rect x="40" y="128" width="1120" height="38" rx="6" fill="#F7F6FB"/>
+<text x="60" y="152" text-anchor="start" font-size="11.5" font-weight="700" fill="#7A7590">踩分点</text>
+<text x="300" y="152" text-anchor="start" font-size="11.5" font-weight="700" fill="#7A7590">合格表现（评委勾选）</text>
+<text x="1050" y="152" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7A7590">得分</text>
+<rect x="40" y="166" width="1120" height="44" fill="#FFFFFF"/>
+<text x="60" y="194" text-anchor="start" font-size="12.5" font-weight="700" fill="#221E33">① 结论先行</text>
+<text x="300" y="194" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">开口 15 秒内给出判断，不铺垫背景</text>
+<rect x="1018" y="176" width="64" height="24" rx="6" fill="#F1EBFD"/>
+<text x="1050" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="#5B21B6">2 / 2</text>
+<rect x="40" y="210" width="1120" height="44" fill="#FBFAFD"/>
+<text x="60" y="238" text-anchor="start" font-size="12.5" font-weight="700" fill="#221E33">② 边界清楚</text>
+<text x="300" y="238" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">说清哪些我定、哪些需要研发/业务拍板</text>
+<rect x="1018" y="220" width="64" height="24" rx="6" fill="#F1EBFD"/>
+<text x="1050" y="237" text-anchor="middle" font-size="11" font-weight="700" fill="#5B21B6">2 / 2</text>
+<rect x="40" y="254" width="1120" height="44" fill="#FFFFFF"/>
+<text x="60" y="282" text-anchor="start" font-size="12.5" font-weight="700" fill="#221E33">③ 依据可溯源</text>
+<text x="300" y="282" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">数字标来源，判断标依据，不用「我觉得」</text>
+<rect x="1018" y="264" width="64" height="24" rx="6" fill="#F1EBFD"/>
+<text x="1050" y="281" text-anchor="middle" font-size="11" font-weight="700" fill="#5B21B6">2 / 2</text>
+<rect x="40" y="298" width="1120" height="44" fill="#FBFAFD"/>
+<text x="60" y="326" text-anchor="start" font-size="12.5" font-weight="700" fill="#221E33">④ 有退路</text>
+<text x="300" y="326" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">主方案外给降级或兜底方案</text>
+<rect x="1018" y="308" width="64" height="24" rx="6" fill="#F1EBFD"/>
+<text x="1050" y="325" text-anchor="middle" font-size="11" font-weight="700" fill="#5B21B6">2 / 2</text>
+<rect x="40" y="342" width="1120" height="44" fill="#FFFFFF"/>
+<text x="60" y="370" text-anchor="start" font-size="12.5" font-weight="700" fill="#221E33">⑤ 收口闭环</text>
+<text x="300" y="370" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">给出下一步动作与验证方式</text>
+<rect x="1018" y="352" width="64" height="24" rx="6" fill="#F1EBFD"/>
+<text x="1050" y="369" text-anchor="middle" font-size="11" font-weight="700" fill="#5B21B6">2 / 2</text>
+<text x="40" y="404" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">合格线：总分 ≥ 8 分（10 分制）；踩分点 ② 与 ⑤ 为硬门槛，缺一不及格——因为面试官最常追问的正是「谁拍板」和「怎么验证」。</text>
+<text x="40" y="446" text-anchor="start" font-size="13.5" font-weight="700" fill="#7C3AED">下半 · P3 归档四项（第 6 节前 10 min）</text>
+<rect x="40" y="464" width="548" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="58" y="480" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<path d="M63 491 L67 495 L75 485" fill="none" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="496" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">原型文件（Figma 链接 + 版本号）</text>
+<rect x="40" y="524" width="548" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="58" y="540" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<path d="M63 551 L67 555 L75 545" fill="none" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="556" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">评审记录（3 轮 × 每组 1 页）</text>
+<rect x="40" y="584" width="548" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="58" y="600" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<path d="M63 611 L67 615 L75 605" fill="none" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="616" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">定稿说明（改了什么、为什么）</text>
+<rect x="40" y="644" width="548" height="52" rx="8" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="58" y="660" width="20" height="20" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+<path d="M63 671 L67 675 L75 665" fill="none" stroke="#7C3AED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="676" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">验收清单（对照 V1.5 逐项打勾）</text>
+<text x="612" y="446" text-anchor="start" font-size="13.5" font-weight="700" fill="#2563EB">V1.5 验收四大项（第 6 节后 10 min）</text>
+<rect x="612" y="464" width="548" height="52" rx="8" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="632" y="496" text-anchor="start" font-size="13" font-weight="700" fill="#1D4ED8">功能</text>
+<text x="692" y="496" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">主流程跑通，异常态有兜底</text>
+<rect x="612" y="524" width="548" height="52" rx="8" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="632" y="556" text-anchor="start" font-size="13" font-weight="700" fill="#1D4ED8">结构</text>
+<text x="692" y="556" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">信息层级与真实产品一致</text>
+<rect x="612" y="584" width="548" height="52" rx="8" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="632" y="616" text-anchor="start" font-size="13" font-weight="700" fill="#1D4ED8">证据</text>
+<text x="692" y="616" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">每个判断有来源或实测</text>
+<rect x="612" y="644" width="548" height="52" rx="8" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="632" y="676" text-anchor="start" font-size="13" font-weight="700" fill="#1D4ED8">可讲</text>
+<text x="692" y="676" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">3 分钟讲完，不超时</text>
+<text x="40" y="764" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">未通过处理：任一项未过 → 当堂登记返工项与截止时间，第 5 周周一课前补交；不占用正课时段。</text>
+</svg>

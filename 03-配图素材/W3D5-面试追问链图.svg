@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" width="1200" height="790" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="790" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">面试追问链 · 题 1「原型被推翻怎么办」</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 5 节（200–250 min）题型拆解 15 min｜A5 打印版单页 1 题，两两模拟时面试官手持</text>
+<rect x="40" y="108" width="540" height="96" rx="12" fill="#F1EBFD" stroke="#7C3AED" stroke-width="1.5"/>
+<rect x="58" y="122" width="62" height="22" rx="11" fill="#7C3AED"/>
+<text x="89" y="137" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">行为题</text>
+<text x="132" y="138" text-anchor="start" font-size="10.5" font-weight="400" fill="#7C3AED">3 层追问 / 每题 90 秒</text>
+<text x="58" y="172" text-anchor="start" font-size="13.5" font-weight="700" fill="#221E33">题 1 · 评审会上研发说「你的原型根本做不了」，你怎么接？</text>
+<text x="58" y="192" text-anchor="start" font-size="10.5" font-weight="400" fill="#7A7590">根节点：题目 + 题型标签（行为 / 项目深挖 / 场景设计 / 技术理解）</text>
+<line x1="310" y1="204" x2="310" y2="242" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="40" y="246" width="540" height="104" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="246" width="4" height="104" fill="#7C3AED"/>
+<text x="62" y="272" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">第 1 层追问</text>
+<text x="62" y="298" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">推翻的是功能，还是你的假设？</text>
+<text x="62" y="324" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">应答要点：先复述对方结论 + 确认推翻范围——是技术不可行，还是成本不划算。</text>
+<line x1="310" y1="350" x2="310" y2="370" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="40" y="374" width="540" height="104" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="374" width="4" height="104" fill="#2563EB"/>
+<text x="62" y="400" text-anchor="start" font-size="10.5" font-weight="700" fill="#2563EB">第 2 层追问</text>
+<text x="62" y="426" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">谁拍板？依据是什么？</text>
+<text x="62" y="452" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">应答要点：点名决策人（技术负责人 / 业务方）+ 数据或合规依据；不替别人做决定。</text>
+<line x1="310" y1="478" x2="310" y2="498" stroke="#A5A1B8" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="40" y="502" width="540" height="104" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<rect x="40" y="502" width="4" height="104" fill="#7C3AED"/>
+<text x="62" y="528" text-anchor="start" font-size="10.5" font-weight="700" fill="#7C3AED">第 3 层追问</text>
+<text x="62" y="554" text-anchor="start" font-size="15" font-weight="700" fill="#221E33">重来一次，哪一步能早发现？</text>
+<text x="62" y="580" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">应答要点：评审前置到原型阶段；用「可验证假设」替代「功能清单」。</text>
+<rect x="620" y="108" width="540" height="250" rx="12" fill="#FFFFFF" stroke="#C9C2DE" stroke-width="1.3"/>
+<text x="640" y="136" text-anchor="start" font-size="13" font-weight="700" fill="#7C3AED">四条踩分点（评委逐项打勾）</text>
+<rect x="642" y="154" width="15" height="15" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="668" y="168" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">先说结论，再讲过程——不铺垫、不诉苦</text>
+<rect x="642" y="200" width="15" height="15" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="668" y="214" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">主动划边界：哪些我定、哪些研发定</text>
+<rect x="642" y="246" width="15" height="15" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="668" y="260" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">给可验证的动作，不给「加强沟通」</text>
+<rect x="642" y="292" width="15" height="15" rx="3" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="668" y="306" text-anchor="start" font-size="12" font-weight="400" fill="#4A4560">收口一句：下次我用什么方式提前发现</text>
+<rect x="620" y="378" width="540" height="214" rx="12" fill="#E8EFFD" stroke="#BFD4F5" stroke-width="1.3"/>
+<text x="640" y="406" text-anchor="start" font-size="13" font-weight="700" fill="#1D4ED8">失败答法（现场最常听到，直接扣分）</text>
+<text x="642" y="436" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">✕「我回去再和研发沟通一下」——没决策，等于没答</text>
+<text x="642" y="472" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">✕「这是研发的问题」——甩锅，面试官立刻追问责任边界</text>
+<text x="642" y="508" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">✕「那就按研发说的改」——无判断，暴露没有产品主张</text>
+<text x="642" y="544" text-anchor="start" font-size="11.5" font-weight="400" fill="#1D4ED8">✕ 长篇讲流程，始终不回答「谁拍板」</text>
+<text x="40" y="736" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">用法：第 5 节投屏讲解 → 印成追问卡 → 两两模拟时面试官按卡逐层追问 → 第 6 节验收抽 1 题复述。</text>
+</svg>

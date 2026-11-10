@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="40" y="30" width="4" height="24" fill="#7C3AED"/>
+<text x="54" y="49" font-size="21" font-weight="700" fill="#221E33">正 / 反案例对照 · 原型评审 I</text>
+<text x="54" y="72" font-size="12.5" fill="#7A7590">第 2 节（50–100 min）正面案例 + 第 3 节（100–150 min）往届问题集锦反面案例，各 8–10 min</text>
+<rect x="40" y="108" width="548" height="592" rx="14" fill="#FAFAFC" stroke="#D8D4E4" stroke-width="1.3"/>
+<rect x="40" y="108" width="548" height="46" rx="14" fill="#EFEDF4"/>
+<text x="62" y="137" text-anchor="start" font-size="14" font-weight="700" fill="#4A4560">反面四病（往届高频，按三维逐项扣分）</text>
+<rect x="62" y="174" width="504" height="112" rx="10" fill="#FFFFFF" stroke="#E2DEEE" stroke-width="1.3"/>
+<text x="84" y="204" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">① 功能清单</text>
+<text x="84" y="230" text-anchor="start" font-size="11.5" font-weight="400" fill="#5A5570">把原型做成需求列表：有页、有按钮、没有决策</text>
+<rect x="486" y="188" width="60" height="24" rx="12" fill="#F3F1F7"/>
+<text x="516" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#7A7590">扣 1 分</text>
+<text x="84" y="262" text-anchor="start" font-size="10.5" font-weight="400" fill="#7A7590">结构分 → 1</text>
+<rect x="62" y="298" width="504" height="112" rx="10" fill="#FFFFFF" stroke="#E2DEEE" stroke-width="1.3"/>
+<text x="84" y="328" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">② 只搭壳</text>
+<text x="84" y="354" text-anchor="start" font-size="11.5" font-weight="400" fill="#5A5570">界面漂亮，一问「异常态怎么办」就空白</text>
+<rect x="486" y="312" width="60" height="24" rx="12" fill="#F3F1F7"/>
+<text x="516" y="328" text-anchor="middle" font-size="10" font-weight="700" fill="#7A7590">扣 1 分</text>
+<text x="84" y="386" text-anchor="start" font-size="10.5" font-weight="400" fill="#7A7590">可行性 → 1</text>
+<rect x="62" y="422" width="504" height="112" rx="10" fill="#FFFFFF" stroke="#E2DEEE" stroke-width="1.3"/>
+<text x="84" y="452" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">③ 凑数文档</text>
+<text x="84" y="478" text-anchor="start" font-size="11.5" font-weight="400" fill="#5A5570">文档 20 页，关键判断一处没有</text>
+<rect x="486" y="436" width="60" height="24" rx="12" fill="#F3F1F7"/>
+<text x="516" y="452" text-anchor="middle" font-size="10" font-weight="700" fill="#7A7590">扣 1 分</text>
+<text x="84" y="510" text-anchor="start" font-size="10.5" font-weight="400" fill="#7A7590">决策价值 → 1</text>
+<rect x="62" y="546" width="504" height="112" rx="10" fill="#FFFFFF" stroke="#E2DEEE" stroke-width="1.3"/>
+<text x="84" y="576" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">④ 继续完善</text>
+<text x="84" y="602" text-anchor="start" font-size="11.5" font-weight="400" fill="#5A5570">被质询就说「下周补」，当场不闭环</text>
+<rect x="486" y="560" width="60" height="24" rx="12" fill="#F3F1F7"/>
+<text x="516" y="576" text-anchor="middle" font-size="10" font-weight="700" fill="#7A7590">扣 1 分</text>
+<text x="84" y="634" text-anchor="start" font-size="10.5" font-weight="400" fill="#7A7590">边界与验收 → 1</text>
+<rect x="612" y="108" width="548" height="592" rx="14" fill="#F1EBFD" stroke="#DDD2F7" stroke-width="1.3"/>
+<rect x="612" y="108" width="548" height="46" rx="14" fill="#E5D8FB"/>
+<text x="634" y="137" text-anchor="start" font-size="14" font-weight="700" fill="#5B21B6">正例：三问齐全 + 兜底溯源（结构 / 可行 / 决策三档全 4 分）</text>
+<circle cx="644" cy="196" r="9" fill="#7C3AED"/>
+<text x="644" y="201" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">✓</text>
+<text x="668" y="202" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">① 这一版验证什么假设</text>
+<text x="668" y="228" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">不是「做完什么功能」，而是「哪个判断要被证实」</text>
+<circle cx="644" cy="292" r="9" fill="#7C3AED"/>
+<text x="644" y="297" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">✓</text>
+<text x="668" y="298" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">② 如果假设不成立，退路是什么</text>
+<text x="668" y="324" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">降级方案写在同一页，评审现场可当场改口径</text>
+<circle cx="644" cy="388" r="9" fill="#7C3AED"/>
+<text x="644" y="393" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">✓</text>
+<text x="668" y="394" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">③ 谁在什么时间点拍板</text>
+<text x="668" y="420" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">决策人、依据、截止时间三要素齐全</text>
+<circle cx="644" cy="484" r="9" fill="#7C3AED"/>
+<text x="644" y="489" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">✓</text>
+<text x="668" y="490" text-anchor="start" font-size="14" font-weight="700" fill="#221E33">④ 每个结论都能溯源</text>
+<text x="668" y="516" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">数字标来源页，判断标依据，不留「我觉得」</text>
+<rect x="634" y="560" width="504" height="116" rx="12" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.4"/>
+<text x="654" y="590" text-anchor="start" font-size="14" font-weight="700" fill="#5B21B6">三维得分：结构 4 / 可行 4 / 决策 4</text>
+<text x="654" y="618" text-anchor="start" font-size="11.5" font-weight="400" fill="#4A4560">评委共识口径：不是「做得多好」，而是「判断能不能被检验」</text>
+<text x="654" y="644" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">同一版式打印 A4，三档分值手写勾选，第 4 节互评直接复用</text>
+<text x="40" y="740" text-anchor="start" font-size="11.5" font-weight="400" fill="#7A7590">讲法：先放反面四病让学员找问题（3 min）→ 再对照正例逐条回填（4 min）→ 收口一句「评审评的是判断，不是勤奋」。</text>
+</svg>
