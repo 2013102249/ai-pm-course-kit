@@ -547,6 +547,126 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li>自检：教程内含 <strong>32 项检查清单</strong>，覆盖真实业务问题、5 类目标用户、量化目标、MVP 取舍、页面状态、异常分支、Prompt 版本管理、权限与日志、指标定义、风险边界、迭代与作品集等。</li>
 </ul>
 <hr />
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ul>
+<li>写出立项书 10 要素模板，并填满主项目初稿。</li>
+<li>用 100 分评审评分表自评，指出最弱的 2 个维度。</li>
+<li>画出团队 RACI 与 5 个里程碑对照表，说清每个里程碑的交付物。</li>
+</ul>
+<h3>核心概念</h3>
+<p>结论前置：立项不是「写个想法」，而是把「价值假设、边界、指标、风险」写成可被评审签字的产品契约。</p>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>作用</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>立项书</td><td>10 要素的项目契约</td><td>对齐范围与验收</td><td>不是需求清单</td></tr>
+<tr><td>价值假设</td><td>「若做到 X，则用户获得 Y」的可证伪句</td><td>让项目可被验证或推翻</td><td>不是愿景口号</td></tr>
+<tr><td>范围 / 不做什么</td><td>明确边界与排除项</td><td>防范围蔓延</td><td>「不做什么」比「做什么」更关键</td></tr>
+<tr><td>北极星指标</td><td>唯一衡量价值的核心指标</td><td>收敛团队取舍</td><td>不是「一堆指标」</td></tr>
+<tr><td>RACI</td><td>谁执行/担责/协商/知会</td><td>消除责任真空</td><td>不是组织架构图</td></tr>
+<tr><td>里程碑</td><td>带交付物的阶段关口</td><td>阶段验收</td><td>与排期任务不同</td></tr>
+<tr><td>MVP</td><td>最小可验证闭环</td><td>用最短路径验假设</td><td>不是「半成品」</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<p><strong>框架 A：立项书 10 要素模板</strong></p>
+<table>
+<thead><tr><th>#</th><th>要素</th><th>要写什么</th><th>常见漏项</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>问题</td><td>谁、在什么场景、卡在哪</td><td>把「想做」当「问题」</td></tr>
+<tr><td>2</td><td>用户</td><td>目标用户与关键角色</td><td>用户泛化</td></tr>
+<tr><td>3</td><td>场景</td><td>高频、可描述的具体链路</td><td>只写宏大场景</td></tr>
+<tr><td>4</td><td>价值假设</td><td>可证伪的「若…则…」</td><td>无法验证</td></tr>
+<tr><td>5</td><td>范围</td><td>本期做什么、做到哪</td><td>边界模糊</td></tr>
+<tr><td>6</td><td>不做什么</td><td>明确排除项与理由</td><td>整栏留空</td></tr>
+<tr><td>7</td><td>指标</td><td>北极星指标 + 评测指标 + 护栏指标</td><td>只有「体验变好」</td></tr>
+<tr><td>8</td><td>风险</td><td>模型边界、合规、数据、供应商</td><td>只写技术风险</td></tr>
+<tr><td>9</td><td>资源</td><td>人、数据、评测集、环境</td><td>漏评测集与合规时间</td></tr>
+<tr><td>10</td><td>排期</td><td>对齐 5 个里程碑</td><td>与里程碑脱节</td></tr>
+</tbody></table>
+<p><strong>框架 B：评审 100 分评分表（维度、权重、分值与评分要点均为教学假设）</strong></p>
+<table>
+<thead><tr><th>维度</th><th>权重/分值</th><th>评分要点</th></tr></thead>
+<tbody>
+<tr><td>问题真实性与用户清晰</td><td>15</td><td>有具体用户、具体卡点，非臆想</td></tr>
+<tr><td>场景与链路</td><td>15</td><td>高频链路可描述、可拆解</td></tr>
+<tr><td>价值假设可验证</td><td>15</td><td>「若…则…」可证伪、可测</td></tr>
+<tr><td>范围与「不做什么」</td><td>10</td><td>边界明确、排除项有理由</td></tr>
+<tr><td>指标体系</td><td>15</td><td>北极星 + 评测指标 + 护栏指标齐全</td></tr>
+<tr><td>合规与安全预判</td><td>10</td><td>引用 W2D4 两份 Checklist</td></tr>
+<tr><td>技术可行性与选型</td><td>10</td><td>引用 W2D1 矩阵与决策树</td></tr>
+<tr><td>排期与资源</td><td>5</td><td>对齐 5 里程碑、评测集已排期</td></tr>
+<tr><td>表达与答辩</td><td>5</td><td>结论前置、证据可查</td></tr>
+<tr><td>合计</td><td>100</td><td>≥60 通过、&lt;60 返工（阈值为教学假设）</td></tr>
+</tbody></table>
+<p><strong>框架 C：团队 RACI</strong></p>
+<table>
+<thead><tr><th>任务</th><th>AI PM</th><th>算法/工程</th><th>法务/合规</th><th>业务方</th><th>讲师/评审</th></tr></thead>
+<tbody>
+<tr><td>立项书撰写</td><td>A/R</td><td>C</td><td>C</td><td>C</td><td>I</td></tr>
+<tr><td>指标与评测集</td><td>A/R</td><td>C</td><td>I</td><td>C</td><td>I</td></tr>
+<tr><td>合规预判</td><td>A</td><td>C</td><td>R</td><td>I</td><td>C</td></tr>
+<tr><td>原型与 PRD</td><td>A</td><td>R</td><td>C</td><td>C</td><td>I</td></tr>
+<tr><td>里程碑评审</td><td>R</td><td>C</td><td>C</td><td>C</td><td>A</td></tr>
+</tbody></table>
+<p><strong>框架 D：5 个里程碑对照表（交付物清单）</strong></p>
+<table>
+<thead><tr><th>里程碑</th><th>节点</th><th>核心交付物</th><th>验收方式</th></tr></thead>
+<tbody>
+<tr><td>① 立项</td><td>W2D5</td><td>立项书 10 要素、100 分自评表、RACI、风险清单</td><td>立项评审会</td></tr>
+<tr><td>② 原型</td><td>W3D5</td><td>可点击原型、核心链路演示、选型结论</td><td>原型评审 I</td></tr>
+<tr><td>③ PRD</td><td>W4D5</td><td>PRD、异常兜底、指标体系、评测集 v1</td><td>PRD 评审大会</td></tr>
+<tr><td>④ 中期</td><td>W5D5</td><td>MVP 核心链路、离线评测报告、增长/实验计划</td><td>主项目中期评审</td></tr>
+<tr><td>⑤ 结业</td><td>W6D5</td><td>可试用版本、上线自查 Checklist、结业路演</td><td>主项目结业路演</td></tr>
+</tbody></table>
+<h3>案例拆解</h3>
+<p>场景：学员主项目「制度问答助手」立项答辩，被问「上线后怎么证明有价值」。</p>
+<p>决策：把 <a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a> 的可观测与优化循环思路写进立项书「指标」栏，确保北极星指标上线后可测；把 <a href="https://github.com/confident-ai/deepeval">R08 confident-ai/deepeval</a> 的评测集思路写进「资源/排期」栏，将「评测集 v1」列为里程碑 ③ 交付物，避免 W2D3 成果与项目脱节。</p>
+<p>结果：定性看，评审从「听想法」变成「查契约」，指标与证据在立项期就被锁定。</p>
+<p>可迁移点：立项书里凡写「变好」，都要对应一个可观测口径和一份评测交付物。</p>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>两个立项书对比：一个空泛、一个可验收</td></tr>
+<tr><td>讲授</td><td>10 要素 + 100 分表 + RACI + 里程碑</td></tr>
+<tr><td>演示</td><td>现场给一份立项书打分</td></tr>
+<tr><td>练习</td><td>分组填 10 要素并互评</td></tr>
+<tr><td>总结</td><td>宣布里程碑 ① 通过标准</td></tr>
+</tbody></table>
+<p>（课时分配为教学假设。）板书建议：中间画「①→⑤」时间轴，每个节点下挂交付物；左侧贴 100 分表。生活类比：立项像装修前先定平面图和预算——先说清哪面墙不砸、钱花在哪、验收看什么，再让工人进场，否则改一次就是砸一次。</p>
+<h3>练习与讨论题</h3>
+<ul>
+<li>个人 1：为你的主项目填满立项书 10 要素，重点写「不做什么」。</li>
+<li>个人 2：用 100 分表自评，指出最弱 2 个维度与补强动作（教学假设）。</li>
+<li>小组：用 RACI 判断「评测集谁担责」，并对照里程碑表检查有没有交付物悬空。</li>
+</ul>
+<p>评分 rubric（分值为教学假设）：10 要素齐全 30 分、价值假设可验证 25 分、指标与评测可测 25 分、RACI 与里程碑对齐 20 分。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>立项书写得越厚越容易过吗？</strong> 结论：不是。评委查的是「价值假设可证伪」和「不做什么」，不是页数。</li>
+<li><strong>指标是不是越多越好？</strong> 结论：不是。一个北极星指标 + 评测指标 + 护栏指标足够，多了会失去取舍力。</li>
+<li><strong>里程碑 ① 没想清楚能先开工吗？</strong> 结论：不能。评测集与合规预判必须在立项期排期，否则后面全是返工。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>立项书</td><td>Project Charter</td><td>10 要素的项目契约</td><td>非需求清单</td></tr>
+<tr><td>价值假设</td><td>Value Hypothesis</td><td>可证伪的「若…则…」</td><td>非愿景口号</td></tr>
+<tr><td>北极星指标</td><td>North Star Metric</td><td>唯一核心价值指标</td><td>非一堆指标</td></tr>
+<tr><td>RACI</td><td>RACI</td><td>执行/担责/协商/知会</td><td>非组织架构</td></tr>
+<tr><td>里程碑</td><td>Milestone</td><td>带交付物的阶段关口</td><td>非排期任务</td></tr>
+<tr><td>MVP</td><td>MVP</td><td>最小可验证闭环</td><td>非半成品</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a>：看可观测与优化循环，解决「指标上线后怎么测」。</li>
+<li><a href="https://github.com/confident-ai/deepeval">R08 confident-ai/deepeval</a>：看评测集组织方式，解决「评测集怎么进交付物清单」。</li>
+<li><a href="https://github.com/dair-ai/Prompt-Engineering-Guide">R02 dair-ai/Prompt-Engineering-Guide</a>：看提示词基线章节，解决「MVP 起步最小闭环」的边界。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>立项像装修前定平面图和预算——先说清哪面墙不砸、钱花在哪、验收看什么，再让人进场，否则改一次就是砸一次。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

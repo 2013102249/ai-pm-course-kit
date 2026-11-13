@@ -239,15 +239,13 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 </ul>
 <h4>1.2 专项拆解：准确率 / 精确率 / 召回率 / 通过率（本日难点三）</h4>
 <p>把这四句话抄进导学案，这是今天最容易在面试翻车的地方：</p>
-<p>```</p>
-<p>池塘里：目标鱼 100 条（＝真正相关的资料）</p>
-<p>一网下去：捞上 70 条目标鱼 + 30 条杂鱼（＝100 条检索结果）</p>
-<p>召回率 Recall = 70 / 100 = 70% → 该捞的捞回多少（漏了 30 条）</p>
-<p>精确率 Precision = 70 / 100 = 70% → 捞上来的里有多少是要的（混了 30 条杂鱼）</p>
-<p>网眼放大 → 召回↑、精确↓；网眼收紧 → 精确↑、召回↓（此消彼长）</p>
-<p>准确率 Accuracy = 整体判对 / 全部判断（另一套口径，别和上面混）</p>
-<p>通过率 = 所有维度 ≥4 分且未标 badcase（本工具自定义，不等于以上任何一个）</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">池塘里：目标鱼 100 条（＝真正相关的资料）
+一网下去：捞上 70 条目标鱼 + 30 条杂鱼（＝100 条检索结果）
+召回率 Recall = 70 / 100 = 70% → 该捞的捞回多少（漏了 30 条）
+精确率 Precision = 70 / 100 = 70% → 捞上来的里有多少是要的（混了 30 条杂鱼）
+网眼放大 → 召回↑、精确↓；网眼收紧 → 精确↑、召回↓（此消彼长）
+准确率 Accuracy = 整体判对 / 全部判断（另一套口径，别和上面混）
+通过率 = 所有维度 ≥4 分且未标 badcase（本工具自定义，不等于以上任何一个）</pre>
 <p>再挂回 badcase 归因法那段要讲的检索层：<strong>「资料里有，却没捞到」＝ 召回率低；「捞回来一堆无关内容、答非所问」＝ 精确率低。</strong> 同一层排查，两个词，两套修法。这就是术语不是背书、是排查工具的意思。</p>
 <p>现在回答我：用户问「A 模块和 B 模块的区别」，模型只答了 A，B 的资料在库里却没被捞到——这是召回率问题还是精确率问题？对，召回率问题，漏捞。那如果捞回来五条全是不相干的政策，一条没对上呢？——精确率问题，误捞。</p>
 <h4>1.3 零层入口</h4>
@@ -338,17 +336,15 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <p>第四句金句，也是今天最重要的一句，我放慢语速说两遍：<strong>10 个真实用户胜过 100 条自嗨功能。</strong> 再一遍——<strong>10 个真实用户胜过 100 条自嗨功能。</strong> 自嗨功能是你们在宿舍里撸着袖子想象出来的刚需，真实用户是拿真问题来撞你产品的人。撞出来的坑，才是护城河的地基。</p>
 <h4>3.4 样本偏差、灰度与验收标准（本节深化二）</h4>
 <p>把三个判据收成一条上线纪律，这是面试讲解那部分的高频追问区：</p>
-<p>```</p>
-<p>评测集 ≥50 条（够量，且不偏：覆盖核心链路 + 边界 case + 交叉复核）</p>
-<p>↓ 跑分</p>
-<p>badcase 率 ≤30% 警戒线（教学示例口径）→ 超线暂缓上线，先修归因占比最高的一类</p>
-<p>↓ 归因修复 + 回归测试</p>
-<p>上线双条件：通过率 ≥90% 且无 P0 级 badcase</p>
-<p>↓ 灰度（先放小流量，盯 badcase 率与 P0）</p>
-<p>真实用户试用 ≥10 人（定性原声，不是跑分的替代品）</p>
-<p>↓ 反馈闭环</p>
-<p>P0 当天修 + 回归 ｜ P1 写进版本排期 ｜ P2 记录不占资源 → 回到下一轮评测集</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">评测集 ≥50 条（够量，且不偏：覆盖核心链路 + 边界 case + 交叉复核）
+↓ 跑分
+badcase 率 ≤30% 警戒线（教学示例口径）→ 超线暂缓上线，先修归因占比最高的一类
+↓ 归因修复 + 回归测试
+上线双条件：通过率 ≥90% 且无 P0 级 badcase
+↓ 灰度（先放小流量，盯 badcase 率与 P0）
+真实用户试用 ≥10 人（定性原声，不是跑分的替代品）
+↓ 反馈闭环
+P0 当天修 + 回归 ｜ P1 写进版本排期 ｜ P2 记录不占资源 → 回到下一轮评测集</pre>
 <p><strong>边界要点</strong>：灰度和用户试用不能互相替代——一个看线上数据回流，一个看定性原声；验收标准和警戒线也不能混——一个是终点线，一个是路上熔断。这条链路里任何一步被跳过，明天路演「你怎么验证的」就答不完整。</p>
 <h4>3.5 这段在面试里怎么答</h4>
 <p>「我验证效果分两条线：定量用评测集跑分，读出通过率、badcase 率、雷达凹点，但我不看数字就上线，而是把凹点对回 badcase 归因表补根因；定性用 ≥10 位真实用户试用，按用户画像、使用场景、原声引用、问题分级四要素登记，原声照抄。能不能上线我给判据：通过率 ≥90% 且无 P0、badcase 率不过警戒线、每条修复都有回归记录，之后先灰度再放量。所有数字我都声明是教学示例或来自我自己采集的评测集，不编造真实跑分和真实用户数据。」完整追问链见面试讲解那部分的第 1、4、5 题。</p>
@@ -576,6 +572,111 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li><strong>关键结论</strong>：审美管好看，交互管好用，心理学管感受，上线前按顺序过，谁也不替谁；「好看管第一眼，好用管接下来的每一天」。</li>
 </ul>
 <hr />
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：验收回答「做没做完」，试用回答「能不能用」，两者都不能由 AI 自己说了算；结论必须由清单和真实用户给出。</p></blockquote>
+<ol>
+<li>写出《验收清单》五类检查项，逐项给出通过判据。</li>
+<li>写出 5 人真实用户试用脚本（教学假设），含任务、观察点、访谈问题三件套。</li>
+<li>用反馈分级表把试用反馈排进修复优先级。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论前置：<strong>验收 = 逐条判定 + 留下记录。</strong> 「跑通了」只是主观感觉，可复跑的用例与可查的记录才是证据。</p></blockquote>
+<table>
+<thead><tr><th>五类检查</th><th>查什么</th><th>通过判据</th><th>谁负责</th></tr></thead>
+<tbody>
+<tr><td>功能测试</td><td>主路径与任务验收标准</td><td>逐条通过，无阻断项</td><td>PM 判定</td></tr>
+<tr><td>评测集回归</td><td>固定用例集输出质量</td><td>改动前后质量不回退</td><td>PM 复跑（沿用 W2）</td></tr>
+<tr><td>异常与边界</td><td>空/超长/超时/断网/重复提交</td><td>不白屏、提示可读可行动</td><td>PM 设计，AI 实现</td></tr>
+<tr><td>安全与隐私</td><td>密钥、越权、日志脱敏</td><td>无密钥回显、测试数据用完即删</td><td>PM 自检</td></tr>
+<tr><td>性能与成本</td><td>首字返回时间、调用成本</td><td>落在约定阈值内（教学假设）</td><td>PM 记录</td></tr>
+</tbody></table>
+<blockquote><p>功能测试查「通不通」，评测集回归查「稳不稳」，两者互补；评测集与验收线沿用 W2 体系，本章只做落地复用，不重复讲原理。</p></blockquote>
+<h3>方法框架</h3>
+<blockquote><p>以下三份模板按主题补入，可直接复制；人数、条数、阈值均为教学假设。</p></blockquote>
+<p><strong>《验收清单》模板</strong></p>
+<table>
+<thead><tr><th>类别</th><th>检查项</th><th>通过判据</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td>功能测试</td><td>主路径按拆解表逐条复跑</td><td>每条标准通过</td><td>✓ / ✗</td></tr>
+<tr><td>评测集回归</td><td>固定用例集（教学假设：≥ 20 条）复跑</td><td>质量不回退</td><td>✓ / ✗</td></tr>
+<tr><td>异常与边界</td><td>空/超长/超时/断网/重复提交 5 类</td><td>不白屏、提示可行动</td><td>✓ / ✗</td></tr>
+<tr><td>安全与隐私</td><td>密钥不回显、不越权、日志脱敏</td><td>逐项核对通过</td><td>✓ / ✗</td></tr>
+<tr><td>性能与成本</td><td>首字返回时间、调用成本</td><td>在阈值内（教学假设）</td><td>✓ / ✗</td></tr>
+</tbody></table>
+<p><strong>《5 人真实用户试用脚本》模板（5 人）</strong></p>
+<table>
+<thead><tr><th>阶段</th><th>任务（不解释用法）</th><th>观察点</th><th>访谈问题</th><th>记录</th></tr></thead>
+<tbody>
+<tr><td>开场</td><td>「请用产品完成一次<strong>核心任务</strong>」</td><td>找不找得到入口、有无犹豫</td><td>「你以为点这里会发生什么？」</td><td>原话速记</td></tr>
+<tr><td>任务 1</td><td>走完主路径</td><td>哪步停顿最久、是否回退</td><td>「刚才哪一步最不确定？」</td><td>卡点 + 时间点</td></tr>
+<tr><td>任务 2</td><td>故意给一次会出错的输入</td><td>是否看懂提示、找到重试</td><td>「提示告诉你该怎么办了吗？」</td><td>是否自助恢复</td></tr>
+<tr><td>任务 3</td><td>换小屏或空输入再试</td><td>布局可读吗、空状态给下一步吗</td><td>「如果收费你还会用吗？」</td><td>意愿与理由</td></tr>
+<tr><td>收尾</td><td>自由试用</td><td>自发行为、额外提问</td><td>「只能改一处，你改哪？」</td><td>一条最重要意见</td></tr>
+</tbody></table>
+<p>访谈规则：不解释、不引导、不替用户操作。</p>
+<p><strong>《反馈分级与修复优先级表》</strong></p>
+<table>
+<thead><tr><th>等级</th><th>判定</th><th>示例</th><th>处理动作</th><th>时限（教学假设）</th></tr></thead>
+<tbody>
+<tr><td>P0</td><td>阻断主路径或涉安全隐私</td><td>提交后白屏、密钥回显</td><td>立即修，复跑全部用例</td><td>当天</td></tr>
+<tr><td>P1</td><td>多数人卡住</td><td>错误提示看不懂</td><td>本版必改，改完回归</td><td>路演前</td></tr>
+<tr><td>P2</td><td>体验瑕疵，可绕过</td><td>移动端字号偏小</td><td>记入「以后再说」</td><td>下一版</td></tr>
+<tr><td>P3</td><td>愿望清单</td><td>「要能导出就更好了」</td><td>只记录，不进本版</td><td>不排期</td></tr>
+</tbody></table>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a></td><td>不知跑得稳不稳、花了多少 → 把追踪、评测与成本放一起看 → 验收从「感觉」变「可查记录」 → <strong>性能与成本验收要有记录</strong></td></tr>
+<tr><td><a href="https://github.com/promptfoo/promptfoo">R10 promptfoo/promptfoo</a></td><td>改提示词怕改坏老用例 → 用声明式用例集回归 → 一处改动全量复跑 → <strong>回归基本姿势（W2，只借这一条）</strong></td></tr>
+</tbody></table>
+<blockquote><p><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a> 的运行日志可作为试用阶段「用户卡在哪一步」的旁证，属 W3/W6 资源，不替代用户访谈。</p></blockquote>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>讲师动作</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>展示「AI 说已完成但用户第一步就卡住」</td><td>让学员说出缺哪类证据</td></tr>
+<tr><td>讲授</td><td>五类验收 + 三份模板</td><td>强调记录 &gt; 感觉</td></tr>
+<tr><td>演示</td><td>跑一次评测集回归并填验收清单</td><td>边跑边念通过判据</td></tr>
+<tr><td>练习</td><td>两两模拟试用脚本中的一个阶段</td><td>抓诱导式提问</td></tr>
+<tr><td>总结</td><td>反馈分级如何进路演「数据」段</td><td>收束到证据可复用</td></tr>
+</tbody></table>
+<p>板书建议：左「做完了吗（验收清单）」、右「能用吗（5 人试用）」，中间标「不由 AI 判定」。讲师提示：只用真实观察，不编数据。常见误区：把「已完成」当验收；只测成功态；按「谁提的」排优先级。</p>
+<p>生活类比：<strong>新车交付前的试驾</strong>——功能测试是把每个按钮按一遍，评测集回归是同一段路再开一遍听有没有异响，5 人试用是换 5 个不同身材的人来开，看谁够不着后视镜。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考答案要点 / 评分 rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>填《验收清单》，五类齐全且给出通过判据</td><td>判据可判定、含边界与安全隐私、有结果列</td></tr>
+<tr><td>个人</td><td>写 5 人试用脚本，含三件套</td><td>任务不解释用法、观察点可看、问题不诱导</td></tr>
+<tr><td>小组</td><td>把 5 条反馈（教学假设）排进 P0–P3</td><td>按影响面与频率排；P0 含主路径或安全隐私</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：AI 说「已完成」不算验收。</strong> 判定权在 PM，依据是可复跑的用例。</li>
+<li><strong>结论：功能测试与评测集回归都要做。</strong> 一个查通不通，一个查稳不稳。</li>
+<li><strong>结论：5 人试用（教学假设）看「卡在哪」。</strong> 行为观察比打分更定位问题。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>验收标准</td><td>Acceptance Criteria</td><td>可判定通过与否的完成定义</td><td>与需求描述混淆</td></tr>
+<tr><td>功能测试</td><td>Functional Test</td><td>验证功能按预期运行</td><td>与评测集回归混淆</td></tr>
+<tr><td>评测集回归</td><td>Eval Set Regression</td><td>固定用例集验证质量不回退</td><td>与训练集混淆</td></tr>
+<tr><td>边界用例</td><td>Edge Case</td><td>空、超长、超时等极端输入</td><td>与常规用例混淆</td></tr>
+<tr><td>反馈分级</td><td>Triage</td><td>按影响面与频率排修复优先级</td><td>与按提问人排混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看追踪、评测与成本视图，解决「验收怎么留记录」。</li>
+<li><a href="https://github.com/promptfoo/promptfoo">R10 promptfoo/promptfoo</a>：看声明式用例集，解决「改动后复跑老用例」（W2，跨章少量复用）。</li>
+<li><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a>：看运行日志，解决「用户卡在哪一步」的旁证。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：验收像考完试对答案、试用像请人真做一遍菜——自己说「应该好吃」不算数，得让别人夹一筷子，皱眉的地方就是下一版要改的火候。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

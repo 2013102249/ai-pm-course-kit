@@ -519,6 +519,91 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <p>先说需求收敛，大家记住四段：一句愿望，到输入是什么，到输出长什么样，再到什么算对。要是停在第一段，就没法验收，不知道什么样的输出算成功，自然也不知道该不该改 Prompt。再说三档动手任务：写四行需求、用五个真实输入去试它、划一条人机分界线；重点是看它在哪一类输入上开始胡说，交接点长什么样，而且「必须是写下来的字」、必须能被检查。</p>
 <p>这里要注意几条关键结论：「同一个 Loop 支撑 N 种场景，差异不在代码，在产品决策」；「水面之下，是产品经理需要做的 100 个决策……就是聊天套壳和真正的 Agent 产品之间的距离」；「从 Demo 到产品，多的不是一个功能，是八个维度的思考」。再往下是人机知识边界四象限，你们挨个对：共识区，像写邮件、周报，大胆用；高危探索区，可以探索，但绝不能直接采信；盲区，比如公司内部文档、项目上下文、行业 know-how，做法是把背景信息粘贴进对话；未知区，也就是未公开信息，直接放弃。每次用 AI 之前，先想一个问题：这个答案，我能验证吗？</p>
 <p>最后还有几句要记牢：「AI 需要原料才能干活」「上下文决定输出质量」；「知道不做什么，比知道做什么更重要」；「三轮内解决问题是高手，能在第三轮停住不继续磨，是顶级高手」。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：模型一定会出错，产品设计的价值是<strong>让出错时不崩、不骗、可追溯</strong>。</p></blockquote>
+<ol>
+<li>列出至少 7 类异常，并说明各自触发条件。</li>
+<li>写出「异常—触发条件—用户可见表现—兜底策略—埋点」五列对照表。</li>
+<li>设计置信度分档展示与 4 条用户告知话术。</li>
+</ol>
+<h3>核心概念</h3>
+<p><strong>结论：兜底不是「报错」，是把用户从失败链路里接住并给一条能走的路。</strong></p>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>异常清单</td><td>先枚举模型、工具、权限的失败方式</td><td>只想到「超时」一种</td></tr>
+<tr><td>降级策略</td><td>换模型 / 转规则 / 转人工三条备用路径</td><td>与「重试」混淆</td></tr>
+<tr><td>置信度展示</td><td>分档提示，不做正确性承诺</td><td>把分数当准确率对外说</td></tr>
+<tr><td>可追溯</td><td>每次兜底都要能被埋点回算</td><td>兜底了却没留痕</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<blockquote><p>以下异常清单、五列表、降级与话术模板为按 W4D3 主题补入的教学内容。</p></blockquote>
+<p><strong>框架 1｜异常清单（7 类）</strong>：模型超时、模型拒答、幻觉（编造事实）、无答案（检索不到）、工具/接口调用失败、越权（访问不该看的数据）、重复调用（连点或循环）。</p>
+<p><strong>框架 2｜异常—触发条件—用户可见表现—兜底策略—埋点对照表</strong></p>
+<table>
+<thead><tr><th>异常</th><th>触发条件</th><th>用户可见表现</th><th>兜底策略</th><th>埋点</th></tr></thead>
+<tbody>
+<tr><td>模型超时</td><td>单次调用超过 P95 上限（教学假设）</td><td>一直转圈、无结果</td><td>重试一次，仍超时换备用模型，再转规则</td><td><code>model_timeout</code>、<code>fallback_type</code>、<code>latency_ms</code></td></tr>
+<tr><td>模型拒答</td><td>触发安全或内容策略</td><td>得到「无法回答」</td><td>给边界说明 + 人工复核入口，不编答案</td><td><code>model_refusal</code>、<code>topic_tag</code></td></tr>
+<tr><td>幻觉</td><td>含无来源事实、抽检不通过</td><td>看起来对但不可信</td><td>强制附引用；无来源则标「仅供参考」</td><td><code>is_hallucination</code>、<code>has_citation</code></td></tr>
+<tr><td>无答案</td><td>召回为空或相似度低于阈值</td><td>答非所问或空白</td><td>明说「未找到依据」，给转人工入口</td><td><code>no_answer</code>、<code>retrieval_hit</code></td></tr>
+<tr><td>工具失败</td><td>外部接口报错</td><td>功能半途中断</td><td>幂等重试 + 转规则，标「部分结果」</td><td><code>tool_error</code>、<code>retry_count</code></td></tr>
+<tr><td>越权</td><td>命中非授权数据或角色</td><td>出现不该看的内容</td><td>立即拦截、返回无权限、记安全事件</td><td><code>permission_denied</code>、<code>risk_level</code></td></tr>
+<tr><td>重复调用</td><td>同会话短时相同请求多次</td><td>重复扣费、答案刷屏</td><td>请求去重 + 结果复用 + 按钮置灰</td><td><code>duplicate_request</code>、<code>dedup_hit</code></td></tr>
+</tbody></table>
+<p><strong>框架 3｜降级顺序与置信度展示</strong></p>
+<p>降级顺序：① 可重试则幂等重试一次（限一次，防雪崩）；② 仍失败按「换模型 → 转规则 → 转人工」逐级下探；③ 每降一级都给可见表现与埋点。置信度分档（教学假设）：高（≥ 0.8）正常展示并附来源；中（0.5–0.8）附「建议核对」角标；低（&lt; 0.5）不给结论，给「我不确定 + 转人工」。阈值须写入 PRD 第 7 章并纳入评测。<strong>用户告知话术 4 条模板</strong>（教学话术，非任何企业真实文案）：① 超时：「这次想得久了一点，我已换一条更快的路径，结果马上到」；② 无答案：「没有找到可靠依据，先不猜，你可以让我转给人工」；③ 疑似幻觉：「这条只能给到参考信息，已附出处，请核对后再用」；④ 越权：「这部分内容你暂无权限查看，已为你挡下并记录」。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/openai/openai-cookbook">R27 openai/openai-cookbook</a></td><td>接口偶发超时导致整页空白 → 把超时、重试、备用路径写成工程范式并回填 PRD → 用户始终看得到一条可走的路 → <strong>兜底策略要由工程范式校验</strong></td></tr>
+<tr><td><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a></td><td>兜底发生了但复盘查不到 → 每次调用与降级都打追踪字段 → 幻觉率、接管率可回算 → <strong>兜底与埋点必须同设计</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>演示一次「答错还答得很自信」的翻车片段</td></tr>
+<tr><td>讲授</td><td>7 类异常 + 三级降级 + 置信度分档</td></tr>
+<tr><td>演示</td><td>现场填五列表的「幻觉」一行并写话术</td></tr>
+<tr><td>练习</td><td>各组给「合同问答助手」填满 7 行</td></tr>
+<tr><td>总结</td><td>收束：没埋点的兜底等于没做</td></tr>
+</tbody></table>
+<p>板书：画主链路，右侧并列三条备用通道，每个岔口标埋点名。生活类比：<strong>后厨主厨忙不过来时，先上凉菜垫着、再请店长出来招呼，绝不能让客人干坐着等</strong>——兜底就是那盘先上的凉菜。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>为「越权」一行写满五列</td><td>触发条件可判定 3 分、表现不泄露信息 3 分、埋点可回算 4 分</td></tr>
+<tr><td>个人</td><td>写 4 条用户告知话术</td><td>每条含「发生了什么 + 现在怎么办」各 2.5 分</td></tr>
+<tr><td>小组</td><td>为「重复调用」设计去重与降级并互评</td><td>有幂等/去重 4 分、有按钮态 3 分、有埋点 3 分</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：重试最多一次，且要幂等。</strong> 无限重试会把小故障放大成雪崩。</li>
+<li><strong>结论：置信度只做提示，不做承诺。</strong> 低分档不给结论，直接转人工。</li>
+<li><strong>结论：越权必须记录安全事件。</strong> 可对照 <a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications">R12 OWASP/www-project-top-10-for-large-language-model-applications</a> 自检。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>降级策略</td><td>Fallback</td><td>主链路失败切备用链路</td><td>与「重试」混淆</td></tr>
+<tr><td>置信度</td><td>Confidence Score</td><td>答案可靠性的自评分</td><td>与准确率混淆</td></tr>
+<tr><td>幂等</td><td>Idempotency</td><td>重复请求不产生额外副作用</td><td>与「去重」混淆</td></tr>
+<tr><td>人工接管</td><td>Human Handoff</td><td>把会话转给人工处理</td><td>与客服入口混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/openai/openai-cookbook">R27 openai/openai-cookbook</a>：看错误处理与重试示例，解决「降级工程上是否做得到」。</li>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看调用追踪字段，解决「兜底埋点怎么设计」。</li>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications">R12 OWASP/www-project-top-10-for-large-language-model-applications</a>：看风险清单，解决「越权与内容安全该兜哪些」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：做兜底像给家里备手电筒——不是指望天天停电，而是真停电那一刻，你不用摸黑找开关。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

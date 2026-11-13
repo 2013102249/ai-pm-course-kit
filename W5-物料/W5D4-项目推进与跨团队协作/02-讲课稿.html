@@ -443,6 +443,113 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>入行 100 问 · 88. 团队没人懂 AI，我怎么带团队往前走？</h3>
 <p>恭喜，这正是 AI 产品经理价值最大的时候，也是最容易把自己累死的时候。策略是"建机制，不当超人"：把 AI 相关的关键机制建起来——评估集怎么维护、badcase 怎么流转、提示词怎么版本管理——机制建好后，普通人按流程也能做出六十分的效果，你不用每件事亲自下场。</p>
 <p>团队认知同步用"实战带教"最快：拉着工程和业务一起判 20 道题、一起拆一次 badcase，比让他们看十篇科普有用。对外争取资源时说人话：跟老板别讲技术参数，讲"这个版本上线后，客服每单处理时间预计从 8 分钟降到 5 分钟"。还要经营你的信息渠道：模型更新、行业动态，每周固定花两小时过一遍，浓缩成一页纸分享给团队——你成为团队的信息入口，话语权自然就有了。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>用 RACI 表为算法、工程、数据、法务、运营、销售六类角色分配主项目关键任务。</li>
+<li>写出周会模板、风险看板字段、变更单模板三件套。</li>
+<li>判断需求变更与模型版本变更各走什么流程，说出 escalating 触发条件。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论：AI 项目推进的难点不是「排期」，而是「变化」——需求会变、模型版本会变、效果会波动；治理的核心是把每次变化关进可追溯的流程。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>RACI</td><td>R 执行 / A 担责 / C 商议 / I 知会</td><td>与「谁干得多谁负责」混淆</td></tr>
+<tr><td>沟通节奏</td><td>日站会、周会、评审的固定节拍</td><td>与「有事才开会」混淆</td></tr>
+<tr><td>需求变更</td><td>冻结后对范围的改动</td><td>与口头微调混淆</td></tr>
+<tr><td>模型版本管理</td><td>版本/提示词/参数的基线锁定与切换</td><td>与存档备份混淆</td></tr>
+<tr><td>escalating</td><td>超阈值时按路径升级决策</td><td>与「告状」混淆</td></tr>
+</tbody></table>
+<p>六类角色天然职责（结论前置）：算法对效果、工程对可用与回滚、数据对口径可信、法务对合规放行、运营对用户反馈、销售对客户预期、AI PM 对最终担责 A 负责。</p>
+<h3>方法框架</h3>
+<p><strong>框架一：六角色 RACI 表（每项任务唯一 A）</strong></p>
+<table>
+<thead><tr><th>关键任务</th><th>AI PM</th><th>算法</th><th>工程</th><th>数据</th><th>法务</th><th>运营</th><th>销售</th></tr></thead>
+<tbody>
+<tr><td>提示词与评测集迭代</td><td>A</td><td>R</td><td>C</td><td>C</td><td>I</td><td>C</td><td>I</td></tr>
+<tr><td>模型选型 / 版本升级</td><td>A</td><td>R</td><td>R</td><td>C</td><td>C</td><td>I</td><td>I</td></tr>
+<tr><td>埋点、指标口径与看板</td><td>A</td><td>C</td><td>R</td><td>R</td><td>I</td><td>C</td><td>I</td></tr>
+<tr><td>成本表与定价护栏</td><td>A</td><td>C</td><td>C</td><td>R</td><td>I</td><td>C</td><td>C</td></tr>
+<tr><td>合规审查与上线放行</td><td>A</td><td>I</td><td>C</td><td>C</td><td>R</td><td>I</td><td>C</td></tr>
+<tr><td>开关、灰度与回滚</td><td>C</td><td>C</td><td>A/R</td><td>I</td><td>I</td><td>C</td><td>I</td></tr>
+<tr><td>用户反馈与客户预期回流</td><td>A</td><td>C</td><td>I</td><td>C</td><td>I</td><td>R</td><td>R</td></tr>
+</tbody></table>
+<p><strong>框架二：沟通节奏表</strong></p>
+<table>
+<thead><tr><th>节拍</th><th>频次（教学假设）</th><th>参与人</th><th>输入</th><th>输出</th></tr></thead>
+<tbody>
+<tr><td>日站会</td><td>每工作日晨会</td><td>核心执行</td><td>昨日阻塞</td><td>今日行动项</td></tr>
+<tr><td>周会</td><td>每周 1 次</td><td>六角色 + PM</td><td>指标/成本快照</td><td>决策与行动项</td></tr>
+<tr><td>变更评审</td><td>触发即开</td><td>受影响方</td><td>变更单</td><td>批准/驳回</td></tr>
+<tr><td>里程碑评审</td><td>W5D5</td><td>全员 + 导师</td><td>交付物</td><td>评分与裁剪结论</td></tr>
+</tbody></table>
+<p><strong>框架三：协作三件套模板</strong></p>
+<table>
+<thead><tr><th>模板</th><th>字段清单</th></tr></thead>
+<tbody>
+<tr><td>周会模板</td><td>上周完成 / 本周目标 / 北极星与护栏快照 / 成本快照 / 风险与阻塞 / 待决事项 / 行动项（Owner + 截止）</td></tr>
+<tr><td>风险看板字段</td><td>风险 ID / 描述 / 概率 / 影响 / 等级 / Owner / 触发信号 / 应对措施 / 升级路径 / 状态 / 更新时间</td></tr>
+<tr><td>变更单模板</td><td>变更 ID / 类型（需求/模型版本/定价） / 提出人 / 原文与新文 / 影响范围（指标/成本/评测/排期） / 回归评测要求 / 审批 / 开关与回滚 / 生效时间</td></tr>
+</tbody></table>
+<p><strong>框架四：两类变更流程与 escalating 触发条件</strong></p>
+<ul>
+<li>需求变更：提单 → 评影响范围 → 审批 → 更新 PRD 与验收线 → 回归评测 → 生效。</li>
+<li>模型版本变更：提单 → 网关固定候选版本 → 评测集回归 → 灰度开关放量 → 保留回滚。</li>
+<li>触发条件（阈值为「教学假设」）：护栏破线、单次成本超阈值、评测回归不通过、法务未放行、里程碑受阻超约定天数。升级路径固定「Owner → AI PM → 项目赞助人/导师」，且必须带「证据 + 影响 + 建议选项」三件套，不空手升级。</li>
+</ul>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/Flagsmith/flagsmith">R29 Flagsmith/flagsmith</a></td><td>想升级模型又怕出问题 → 把版本做成远程配置开关，变更单 + 灰度 + 回滚绑定 → 升级可切换可回退 → <strong>版本治理要可切换、可回滚、可追溯</strong></td></tr>
+<tr><td><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a></td><td>各端各自升级、线上版本混乱 → 统一网关集中管理版本与路由 → 消除版本混用 → <strong>集中式配置是跨团队协作的技术底座</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<blockquote><p>课堂节奏可按班级调整。</p></blockquote>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>抛「算法顺手升了模型、线上指标全乱」的假想事故</td></tr>
+<tr><td>讲授</td><td>RACI 六角色 + 两类变更流程 + 升级机制</td></tr>
+<tr><td>演示</td><td>填一张变更单并角色扮演一次周会</td></tr>
+<tr><td>练习</td><td>各组填 RACI 挑错、设计风险看板</td></tr>
+<tr><td>总结</td><td>收束：变化必须留痕</td></tr>
+</tbody></table>
+<p>板书：左画 RACI 矩阵、右画「变更单 → 评测 → 开关 → 回滚」流水线，红笔标「唯一 A」。生活类比：<strong>推进项目像装修房子</strong>——水电、泥瓦、木工各有工长（RACI），想改一根水管就得填变更单，否则厨房和卫生间迟早对不上；工长拿不准的事得按规矩找业主拍板（escalating）。讲师提示：升级不是告状，是把决策交给能担责的人。常见误区：一个任务设两个 A；口头改需求不留痕；把版本当小事绕过回归。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>为「模型版本升级」填变更单，含影响范围与回归要求</td><td>字段齐全 4 分、影响含评测/成本 3 分、有回滚与开关 3 分</td></tr>
+<tr><td>个人</td><td>在 RACI 表中找出 2 处「缺 A / 多 A」并修正</td><td>定位准确 4 分、修正后唯一 A 3 分、说明理由 3 分</td></tr>
+<tr><td>小组</td><td>设计 5 条风险看板记录与 2 条升级触发条件，角色扮演周会</td><td>字段齐全 4 分、触发可判定 3 分、周会有决策与行动项 3 分</td></tr>
+</tbody></table>
+<p>参考要点：版本变更影响范围须写「指标口径是否变、单次成本是否变、评测集是否需回归、排期是否受影响」；触发条件写成可判定句（阈值为教学假设）；周会产物必须有决策事项与行动项 Owner + 截止。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：算法「顺手升了一下」也必须补变更单。</strong> 不补就无法回归评测、无法归因波动。</li>
+<li><strong>结论：一个任务只能有一个 A。</strong> 多个 A 等于没人最终拍板。</li>
+<li><strong>结论：护栏破线、合规未放行、里程碑受阻就该升级。</strong> 带证据、影响与建议选项三件套。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>RACI</td><td>RACI</td><td>执行/担责/商议/知会角色矩阵</td><td>与任务分工表混淆</td></tr>
+<tr><td>变更单</td><td>Change Request</td><td>冻结后改动的审批与影响记录</td><td>与会议纪要混淆</td></tr>
+<tr><td>escalating</td><td>Escalation</td><td>超阈值按路径升级决策</td><td>与「告状」混淆</td></tr>
+<tr><td>风险看板</td><td>Risk Board</td><td>概率/影响/Owner/触发信号可视清单</td><td>与问题列表混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/Flagsmith/flagsmith">R29 Flagsmith/flagsmith</a>：看 Feature Flag 与远程配置，解决「灰度与回滚落地」。</li>
+<li><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a>：看统一网关与可观测，解决「版本集中治理」。</li>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看调用追踪与评分，解决「周会指标快照的数据来源」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：带 AI 项目就像带一场装修——工长各管一摊不稀奇，稀奇的是每改一根水管都留得下那张变更单，这样装到一半，谁都不用靠记忆猜「这根管子当初为什么拐了个弯」。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

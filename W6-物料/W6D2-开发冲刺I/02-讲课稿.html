@@ -658,6 +658,105 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li><a href="https://github.com/AliceDel66/ai-pm-roadmap/tree/main/public/images/generated/projects/knowledge-rag">8 张项目插图目录</a></li>
 </ul>
 <hr />
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：冲刺 I 只做一件事——让一条主路径从输入到结果真实跑通；功能做得多不算进度，主路径断了就是零。</p></blockquote>
+<ol>
+<li>写出「最小闭环」一句话定义，画出主路径四段。</li>
+<li>写出任务拆解表（四列齐全，≥ 6 行，教学假设）。</li>
+<li>判断每日站会三问与版本回滚的触发条件。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论前置：<strong>最小闭环 = 一条主路径跑通即可。</strong> 先接通「输入 → 处理 → 输出 → 兜底」四段，其余功能进「以后再说」清单。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>最小闭环</td><td>只保留一条可验证主路径</td><td>不是只做界面，后端到结果都要通</td></tr>
+<tr><td>主路径</td><td>达成核心价值的最短路线</td><td>与功能列表混淆</td></tr>
+<tr><td>任务拆解表</td><td>任务/验收标准/依赖/优先级四列</td><td>缺验收标准就无法判定</td></tr>
+<tr><td>依赖</td><td>任务之间的先后关系</td><td>与「想先做哪个」混淆</td></tr>
+<tr><td>优先级</td><td>按是否卡住主路径排序</td><td>与「哪个更好玩」混淆</td></tr>
+<tr><td>版本与回滚</td><td>每步留可退回的存档</td><td>与重做一遍混淆</td></tr>
+</tbody></table>
+<blockquote><p>最小闭环三层收敛：范围层（砍到一条路径）→ 链路层（四段真实可跑）→ 验收层（每段一条通过判据）。三层缺一不算闭环。</p></blockquote>
+<h3>方法框架</h3>
+<blockquote><p>以下拆解表、站会节奏与回滚规则按主题补入，可直接套用；示例项目与行数为教学假设。</p></blockquote>
+<p><strong>任务拆解表模板（示例为教学假设）</strong></p>
+<table>
+<thead><tr><th>任务</th><th>验收标准（可判定）</th><th>依赖</th><th>优先级</th></tr></thead>
+<tbody>
+<tr><td>搭页面骨架</td><td>打开页面能看到输入框与结果区</td><td>无</td><td>P0</td></tr>
+<tr><td>接通模型调用</td><td>输入固定样例能返回非空结果</td><td>页面骨架</td><td>P0</td></tr>
+<tr><td>主路径贯通</td><td>输入 → 处理 → 结果展示全程无中断</td><td>模型调用</td><td>P0</td></tr>
+<tr><td>失败兜底</td><td>调用失败时显示可读提示且不白屏</td><td>主路径</td><td>P0</td></tr>
+<tr><td>结果可复制</td><td>一键复制，提示「已复制」</td><td>结果展示</td><td>P1</td></tr>
+<tr><td>冒烟脚本</td><td>一条命令跑通主路径并输出结果</td><td>全部</td><td>P1</td></tr>
+</tbody></table>
+<p><strong>每日站会节奏</strong></p>
+<table>
+<thead><tr><th>三问</th><th>要说清</th><th>产出</th></tr></thead>
+<tbody>
+<tr><td>昨天完成了什么</td><td>对照验收标准说通过/不通过</td><td>已通过任务清单</td></tr>
+<tr><td>今天做什么</td><td>只报 1–2 个任务并说明依赖</td><td>当日任务清单</td></tr>
+<tr><td>卡在哪</td><td>卡点是规格、依赖还是环境</td><td>待解卡点 + 责任人</td></tr>
+</tbody></table>
+<p><strong>版本与回滚规则</strong></p>
+<ol>
+<li>一个任务一次提交，提交信息写任务编号与验收结论。2. 主路径跑通时打版本标签，作为可演示基线。3. 触发回滚：主路径中断、老用例回归不通过、约定文件被绕过。4. 回滚动作：退回上一个可用标签 → 记录原因 → 写回约定文件或任务清单 → 重新下发。</li>
+</ol>
+<p>拆解方法参照 <a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a>：<strong>验收标准列必须先写</strong>，否则「做完」没有判据；链路搭建参照 <a href="https://github.com/datawhalechina/llm-universe">R37 datawhalechina/llm-universe</a> 的中文 MVP 实战与 <a href="https://github.com/langgenius/dify">R15 langgenius/dify</a> 的可视化编排，先跑通再优化。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a></td><td>PRD 很长无从下手 → 拆成逐条可验收条目驱动自主开发 → 每轮有可判定产出 → <strong>先写验收标准，再排开发顺序</strong></td></tr>
+<tr><td><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a></td><td>零基础想尽快看到东西 → 用可视化编排先搭通「输入 → 编排 → 输出」 → 主路径当天可演示 → <strong>先跑通再优化，别先造轮子</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>讲师动作</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>展示「做了 8 个功能但主路径断了」的半成品</td><td>让学员判断算不算做完</td></tr>
+<tr><td>讲授</td><td>最小闭环 + 三层收敛 + 拆解表</td><td>强调验收标准列</td></tr>
+<tr><td>演示</td><td>把一条 PRD 拆成 6 行任务表</td><td>边写边问「怎么判定」</td></tr>
+<tr><td>练习</td><td>各组填自己项目的拆解表</td><td>抓不可判定的验收标准</td></tr>
+<tr><td>总结</td><td>站会三问与回滚触发条件</td><td>收束到留可退回存档</td></tr>
+</tbody></table>
+<p>板书建议：横轴画「输入 → 处理 → 输出 → 兜底」四段，每段写一条判据；右侧列「以后再说」清单。常见误区：按兴趣排优先级；把「页面能打开」当闭环；不留版本标签。</p>
+<p>生活类比：<strong>搬家第一天</strong>只求「床能睡、灯能亮、水能烧」——先把日子过起来，书柜怎么摆留到第二天；第一晚睡不了觉，装修再漂亮也没用。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考答案要点 / 评分 rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>写最小闭环一句话定义并画四段主路径</td><td>含「一条主路径 + 可验证」；四段齐全；有通过判据</td></tr>
+<tr><td>个人</td><td>填任务拆解表，四列齐全且 ≥ 6 行（教学假设）</td><td>验收可判定、依赖顺序正确、P0 均卡主路径</td></tr>
+<tr><td>小组</td><td>情景：站会有人说「昨天差不多做完了」。指出问题并改写</td><td>答「不可判定」；改写为「任务 X 按标准通过/不通过 + 证据」</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：先做一条主路径，不做功能全集。</strong> 一周只够把闭环跑通，其余进「以后再说」。</li>
+<li><strong>结论：验收标准必须可判定。</strong> 「能用」「差不多」不算标准，要写「输入 X 得到 Y」。</li>
+<li><strong>结论：每个任务都要留可退回的存档。</strong> 没有版本标签，出问题只能重做，回滚无从谈起。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>最小闭环</td><td>Happy Path</td><td>输入到结果跑通的主链路</td><td>与功能全集混淆</td></tr>
+<tr><td>任务拆解表</td><td>Task Breakdown</td><td>任务/验收/依赖/优先级四列</td><td>与待办清单混淆</td></tr>
+<tr><td>依赖</td><td>Dependency</td><td>任务之间的先后约束</td><td>与优先级混淆</td></tr>
+<tr><td>回滚</td><td>Rollback</td><td>退回上一个可用版本</td><td>与重做混淆</td></tr>
+<tr><td>每日站会</td><td>Daily Standup</td><td>三问同步进度的短会</td><td>与汇报会混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a>：看 PRD 条目转可验收任务，解决「拆解表怎么列」。</li>
+<li><a href="https://github.com/datawhalechina/llm-universe">R37 datawhalechina/llm-universe</a>：看中文 MVP 搭建章节，解决「零基础怎么接链路」。</li>
+<li><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a>：看可视化编排运行过程，解决「先跑通再优化」的参照物。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：核心链路像先给新家通水通电——灯亮了、水来了才算能住人；窗帘选什么颜色，那是搬进去以后才操心的事。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

@@ -625,6 +625,128 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <p>再讲一个概念，叫 ROI 门槛。大公司立项都得过 ROI 门槛，而这道门槛，恰恰帮你挡掉了最强的竞争对手。</p>
 <p>接着是新创业公式：先找买单的人，再用 AI 把东西做出来。稀缺已经从"能不能做"变成了"有没有人买"，标准就两条，真实高频痛点，加上付费意愿强。大家记住，验证的目标是有人愿意付钱，不是有人说好；AI 是效率放大器，不是方向发现器。</p>
 <p>最后几个判断也要记住：技术本身不再是护城河，Vibe Coding 之后门槛趋近于零；要在某一个细分场景里成为唯一解；还有，极致是维度的深度，不是功能的数量。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>说出 5 种商业化模式与各自定价单位，为主项目选一种并写明理由。</li>
+<li>按「教学假设」逐行算出单次成本、日成本、月成本、毛利与盈亏平衡人数。</li>
+<li>写出降本 5 条杠杆，判断每条对成本、质量、体验的副作用。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论：AI 产品不能照抄「卖 License」，因为成本随用量线性增长；定价单位必须对齐「成本发生的单位」，否则卖得越多亏得越多。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>订阅</td><td>按周期收固定费</td><td>与「不限量」混淆</td></tr>
+<tr><td>按量</td><td>按调用/Token/次数计费</td><td>与看不懂的账单混淆</td></tr>
+<tr><td>定价单位</td><td>收费依据的计量单位</td><td>与成本单位脱节</td></tr>
+<tr><td>毛利</td><td>收入减变动成本</td><td>与净利混淆</td></tr>
+<tr><td>盈亏平衡</td><td>贡献覆盖固定成本的最小业务量</td><td>与毛利率高混淆</td></tr>
+</tbody></table>
+<p>五种模式对比（选择依据，非行业基准）：</p>
+<table>
+<thead><tr><th>模式</th><th>收费依据</th><th>定价单位</th><th>成本风险</th><th>适用情形</th></tr></thead>
+<tbody>
+<tr><td>订阅</td><td>周期</td><td>人/月</td><td>重度用户拉高成本</td><td>频次可预期</td></tr>
+<tr><td>按量</td><td>用量</td><td>千 Token / 次</td><td>成本可对齐</td><td>用量差异大</td></tr>
+<tr><td>席位</td><td>账号数</td><td>席/月</td><td>与用量弱相关</td><td>组织采购</td></tr>
+<tr><td>项目制</td><td>交付物</td><td>项目</td><td>后期成本失控</td><td>一次性交付</td></tr>
+<tr><td>增值</td><td>高级能力</td><td>功能/额度</td><td>免费层也要护栏</td><td>先验证再转化</td></tr>
+</tbody></table>
+<p>定价单位三原则：① 对齐成本单位；② 用户可预期；③ 可设上限与告警。</p>
+<h3>方法框架</h3>
+<p><strong>框架一：商业模式选择四步</strong></p>
+<ol>
+<li>判断成本随什么变量增长；2. 判断用户能否预估用量；3. 选能对齐变量的定价单位；4. 配一条用量护栏。</li>
+</ol>
+<p>模板：模式选择表「成本变量 / 可预估性 / 定价单位 / 护栏 / 选择理由」。</p>
+<p><strong>框架二：Token 成本核算五步法（逐行可复算）</strong></p>
+<blockquote><p>下表数字全部为「教学假设」，不代表任何真实厂商报价或企业经营数据；为简化，另假设每个日活用户每日均活跃、且全部为付费用户（教学假设）。</p></blockquote>
+<table>
+<thead><tr><th>序号</th><th>教学假设项</th><th>取值</th></tr></thead>
+<tbody>
+<tr><td>①</td><td>日活用户 DAU</td><td>1,000 人</td></tr>
+<tr><td>②</td><td>人均每日对话数</td><td>4 次</td></tr>
+<tr><td>③</td><td>每次输入 / 输出 Token</td><td>800 / 400</td></tr>
+<tr><td>④</td><td>输入 / 输出单价</td><td>0.01 / 0.03 元每千 Token</td></tr>
+<tr><td>⑤</td><td>每月天数</td><td>30 天</td></tr>
+<tr><td>⑥</td><td>定价</td><td>20 元每人每月</td></tr>
+<tr><td>⑦</td><td>固定成本（人力、服务器等）</td><td>30,000 元每月</td></tr>
+</tbody></table>
+<p>计算过程（每步给公式与代入）：</p>
+<ol>
+<li>单次输入 = 800 ÷ 1000 × 0.01 = <strong>0.008 元</strong>；单次输出 = 400 ÷ 1000 × 0.03 = <strong>0.012 元</strong></li>
+<li>单次对话成本 = 0.008 + 0.012 = <strong>0.020 元</strong></li>
+<li>日对话数 = 1,000 × 4 = <strong>4,000 次</strong>；日成本 = 4,000 × 0.020 = <strong>80 元</strong></li>
+<li>月成本 = 80 × 30 = <strong>2,400 元</strong>；月收入 = 1,000 × 20 = <strong>20,000 元</strong></li>
+<li>毛利 = 20,000 − 2,400 = <strong>17,600 元</strong>（毛利率 17,600 ÷ 20,000 = <strong>88%</strong>）；经营结果 = 17,600 − 30,000 = <strong>−12,400 元（亏损）</strong></li>
+<li>每人月变动成本 = 2,400 ÷ 1,000 = <strong>2.4 元</strong>；单位贡献 = 20 − 2.4 = <strong>17.6 元每人每月</strong></li>
+<li>盈亏平衡付费用户数 = 30,000 ÷ 17.6 = 1,704.5…，<strong>向上取整 1,705 人</strong></li>
+<li>复算校验：1,705 × 17.6 = 30,008 元 ≥ 30,000 元；1,704 × 17.6 = 29,990.4 元 &lt; 30,000 元，故 1,705 人为最小达标数。</li>
+</ol>
+<p>结论前置：毛利率 88% 看着健康，扣掉固定成本仍亏损——<strong>「毛利高」不等于「能回本」，必须算到盈亏平衡量</strong>；单位贡献才是每个用户用来分摊固定钱的部分。</p>
+<p><strong>框架三：降本五杠杆与副作用</strong></p>
+<table>
+<thead><tr><th>杠杆</th><th>怎么做</th><th>副作用</th><th>建议护栏</th></tr></thead>
+<tbody>
+<tr><td>缓存</td><td>重复问答不重复调模型</td><td>答案过时</td><td>命中率、新鲜度</td></tr>
+<tr><td>路由</td><td>简单问题走小模型</td><td>判错伤质量</td><td>路由准确率、回归分</td></tr>
+<tr><td>小模型</td><td>能小则小</td><td>复杂任务效果下降</td><td>有效回答率</td></tr>
+<tr><td>上下文压缩</td><td>裁剪/摘要历史</td><td>可能丢关键信息</td><td>任务完成率</td></tr>
+<tr><td>限流</td><td>按用户/时段配额</td><td>影响高峰体验</td><td>超时率、复访率</td></tr>
+</tbody></table>
+<p>复算示例（教学假设）：缓存命中率 20% 时，有效调用 = 4,000 × (1 − 0.20) = 3,200 次，日成本 = 3,200 × 0.020 = 64 元，月成本 = 64 × 30 = 1,920 元，较 2,400 元省 480 元。降本须同步核对有效回答率护栏，否则省了钱、丢了留存。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/BerriAI/litellm">R32 BerriAI/litellm</a></td><td>多模型混用算不清账 → 统一网关记录模型/Token/花费 → 成本可按用户归集 → <strong>成本核算的前提是先有一本可观测的调用账</strong></td></tr>
+<tr><td><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a></td><td>只知总账单 → 追踪把成本归到会话与用户维度 → 支撑定价单位设计 → <strong>定价单位必须能在账本里被聚合出来</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<blockquote><p>课堂节奏可按班级调整。</p></blockquote>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>抛「毛利率 88% 却还亏钱」的假想表</td></tr>
+<tr><td>讲授</td><td>五模式对比 + 定价单位三原则</td></tr>
+<tr><td>演示</td><td>逐行代入五步法，算到 1,705 人并复算校验</td></tr>
+<tr><td>练习</td><td>改一组假设重算，填降本副作用表</td></tr>
+<tr><td>总结</td><td>收束：定价单位对齐成本单位</td></tr>
+</tbody></table>
+<p>板书：五步公式写成五行，逐行代入；右下角写「毛利 ≠ 回本」。生活类比：<strong>算成本像开奶茶店</strong>——每杯都有料钱（变动成本），房租是固定成本；盈亏平衡就是「每天至少卖多少杯才够抵房租」，只盯一杯赚多少、不数杯数，月底一定对不上账。讲师提示：数字全为教学假设。常见误区：只算 Token 单价；忘记输出 Token 更贵；漏算固定成本。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>人均对话改为 6 次（其余不变），重算月成本与盈亏平衡人数</td><td>日 6,000 次、日成本 120 元、月成本 3,600 元、每人变动 3.6 元、单位贡献 16.4 元、盈亏平衡 1,830 人</td></tr>
+<tr><td>个人</td><td>给降本五杠杆各写 1 条副作用与 1 个护栏</td><td>五条齐全 5 分、副作用不空泛 3 分、护栏可采集 2 分</td></tr>
+<tr><td>小组</td><td>为主项目选模式与定价单位，说明为何对冲成本风险</td><td>单位对齐成本 4 分、用户可预期 3 分、配了护栏 3 分</td></tr>
+</tbody></table>
+<p>参考要点（重算校验）：1,000 × 6 = 6,000 次；6,000 × 0.020 = 120 元；120 × 30 = 3,600 元；3,600 ÷ 1,000 = 3.6 元；20 − 3.6 = 16.4 元；30,000 ÷ 16.4 = 1,829.27… → 1,830 人（1,830 × 16.4 = 30,012 ≥ 30,000；1,829 × 16.4 = 29,995.6 &lt; 30,000）。用量升、定价不变，单位贡献被摊薄、门槛抬高，故需配额护栏。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：按 Token 还是按次收费，先看成本单位能否被用户理解。</strong> 可用「次数 + 额度」折中。</li>
+<li><strong>结论：毛利率高不代表安全。</strong> 固定成本一扣可能仍亏损。</li>
+<li><strong>结论：降本会伤留存，每条杠杆都要配护栏。</strong></li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>Token</td><td>Token</td><td>模型输入/输出的计费单位</td><td>与「字数」混淆</td></tr>
+<tr><td>定价单位</td><td>Pricing Unit</td><td>收费依据的计量单位</td><td>与成本单位脱节</td></tr>
+<tr><td>盈亏平衡</td><td>Break-even</td><td>贡献覆盖固定成本的最小业务量</td><td>与毛利率混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/BerriAI/litellm">R32 BerriAI/litellm</a>：看成本追踪与多模型记账，解决「调用账本怎么建」。</li>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看追踪与成本视图，解决「成本怎么按用户归集」。</li>
+<li><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a>：看成本/质量权衡，解决「降本杠杆落地」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：算 AI 的账就像开那家奶茶店——别只顾说「一杯赚头挺大」，得数清每天卖多少杯才够抵房租，否则杯子卖得越多，料钱和房租一起追着你跑。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

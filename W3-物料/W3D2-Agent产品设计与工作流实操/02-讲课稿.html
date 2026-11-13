@@ -508,6 +508,110 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <ul>
 <li><strong>框架 / 模型</strong>：四种优化策略——关键词触发（过滤）、模型路由（分级处理）、语义缓存、精准切块（Chunking 策略）；最佳实践：建立检索命中率评测、引用来源强制显示、定期清洗知识库；「RAG ≠ 全量检索」。</li>
 </ul>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>写出工具契约四要素并填出一张契约卡。</li>
+<li>按 6 步实操流程搭出含人工确认点、可中断恢复的工作流。</li>
+<li>判断在哪三个位置必须写日志，并为每个失败给出兜底动作。</li>
+</ol>
+<h3>核心概念</h3>
+<p>结论前置：Agent 产品设计不是「让模型更聪明」，而是「把不确定性关进契约、状态与兜底里」。六要点按「先拆、再约、再记、再刹车」递进。</p>
+<p>六要点表（要点 / 结论 / 交付物）：</p>
+<table>
+<thead><tr><th>要点</th><th>结论</th><th>交付物</th></tr></thead>
+<tbody>
+<tr><td>任务分解</td><td>拆成可独立失败的步骤</td><td>步骤清单</td></tr>
+<tr><td>工具契约</td><td>写清输入、输出、失败、权限</td><td>契约卡</td></tr>
+<tr><td>状态与中断恢复</td><td>每步存状态，可续跑或回滚</td><td>状态字段表</td></tr>
+<tr><td>人工确认点</td><td>高代价动作前暂停</td><td>确认点清单</td></tr>
+<tr><td>可观测与日志</td><td>记录谁何时调了什么</td><td>日志字段表</td></tr>
+<tr><td>失败兜底</td><td>每个失败都有去向</td><td>兜底映射表</td></tr>
+</tbody></table>
+<p>工具契约四要素表（要素 / 要写什么 / 反例）：</p>
+<table>
+<thead><tr><th>要素</th><th>要写什么</th><th>反例</th></tr></thead>
+<tbody>
+<tr><td>输入</td><td>字段名、类型、必填、取值范围</td><td>只写传一个 query</td></tr>
+<tr><td>输出</td><td>成功与空结果结构</td><td>只写返回 JSON</td></tr>
+<tr><td>失败</td><td>超时、限流、越权、无数据四类码</td><td>只写报错</td></tr>
+<tr><td>权限</td><td>谁能调、能读哪些、能否写删</td><td>共用一把钥匙</td></tr>
+</tbody></table>
+<p>结论：先有步骤才有约定，有约定才有状态，有状态才谈得上刹车。工具契约像插座与插头——接口、电压、保险丝、谁有权合闸，四样缺一就烧设备。</p>
+<h3>方法框架</h3>
+<p>结论前置：本讲给出「工作流画布字段表」与 6 步实操流程两套模板。为大纲「工作流实操」的展开模板。</p>
+<p>工作流画布字段表：</p>
+<table>
+<thead><tr><th>字段</th><th>含义</th><th>填写要求</th><th>示例（（教学假设））</th></tr></thead>
+<tbody>
+<tr><td>节点 ID</td><td>唯一标识</td><td>全局不重复</td><td>N03</td></tr>
+<tr><td>节点类型</td><td>开始 / 模型 / 工具 / 判断 / 人工 / 结束</td><td>六选一</td><td>工具</td></tr>
+<tr><td>输入映射</td><td>上游字段</td><td>写「来源节点.字段」</td><td>N02.summary</td></tr>
+<tr><td>输出映射</td><td>产出给谁</td><td>写目标字段</td><td>N04.draft</td></tr>
+<tr><td>工具契约 ID</td><td>引用的契约卡编号</td><td>必填</td><td>TC-02</td></tr>
+<tr><td>成功出口</td><td>下一节点</td><td>单一</td><td>N04</td></tr>
+<tr><td>失败出口</td><td>兜底节点</td><td>必填，不得空</td><td>N09 转人工</td></tr>
+<tr><td>确认点</td><td>是否暂停待人</td><td>是 / 否 + 角色</td><td>是 / 业务主管</td></tr>
+<tr><td>状态快照</td><td>是否存断点</td><td>是 / 否</td><td>是</td></tr>
+<tr><td>日志级别</td><td>记录粒度</td><td>简要 / 详细</td><td>详细</td></tr>
+<tr><td>超时与重试</td><td>上限值</td><td>标（教学假设）</td><td>10 秒 / 2 次</td></tr>
+</tbody></table>
+<p>结论：这张表就是 AI PM 交给工程的需求；「失败出口不得空」最常被漏掉。</p>
+<p>6 步实操流程：</p>
+<ol>
+<li>写目标与验收口径：说明「什么算做完」，列 1 条成功与 1 条失败样例。</li>
+<li>拆步骤画骨架：拆成 5–8 个节点，只连成功出口。</li>
+<li>为每个工具节点填契约卡：补齐四要素。</li>
+<li>补三条横向设计：高代价节点加确认点、全部节点加状态快照、失败出口连兜底；<a href="https://github.com/langchain-ai/langgraph">R16 langchain-ai/langgraph</a> 的状态检查点正是「可续跑」的实现。</li>
+<li>配可观测：定义日志字段（时间戳、节点 ID、输入输出摘要、Token 用量、耗时、结果码），定留存与可见角色。</li>
+<li>用评测样例走一遍：跑通正常路径、超时、越权各 1 条，确认都有去向，再冻结画布进入里程碑 ②。</li>
+</ol>
+<p>模板——契约卡：工具名 / 契约 ID / 输入 / 输出 / 失败四类 / 权限 / 负责人 / 版本号。</p>
+<h3>案例拆解</h3>
+<p>案例一：<a href="https://github.com/langgenius/dify">R15 langgenius/dify</a>。场景：一下午做出「报名信息抽取 + 自动回复」演示。决策：用可视化画布承载节点、分支与失败出口，确认点做成显式节点。结果（定性）：评审讨论「确认点该不该前移」，而非翻代码。可迁移点：把「刹车」画进图里，最易被认可。</p>
+<p>案例二：<a href="https://github.com/shaxiu/XianyuAutoAgent">R40 shaxiu/XianyuAutoAgent</a>。场景：客服议价与承诺属高代价动作。决策：多专家协同加上下文感知，议价类输出保留人工约束。结果（定性）：上下文不丢、越界动作被拦住。可迁移点：越贴近交易，越要把确认点与兜底前置；<a href="https://github.com/datawhalechina/llm-universe">R37 datawhalechina/llm-universe</a> 中文实战可照着搭最小链路，验证第 6 步样例。</p>
+<h3>课堂讲解要点</h3>
+<p>课堂节奏：</p>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>快递中转分拣讲状态与中断</td></tr>
+<tr><td>讲授</td><td>六要点、契约四要素、画布字段表</td></tr>
+<tr><td>演示</td><td>按 6 步搭链路，制造超时看兜底</td></tr>
+<tr><td>练习</td><td>填契约卡，标 3 个日志位置</td></tr>
+<tr><td>总结</td><td>收口：不确定性靠契约与兜底关住</td></tr>
+</tbody></table>
+<p>板书：画 6 节点链，红三角标确认点、虚线标失败出口。</p>
+<p>生活类比：办家宴——先列菜单（分解），跟帮工说清「拿什么、交什么、做坏了怎么办、谁能开燃气」（契约），每道菜做到哪步记便签（状态），上桌前尝一口（确认点），烧糊了有备选菜（兜底）。</p>
+<h3>练习与讨论题</h3>
+<p>个人练习 1：为「查询订单」填四要素契约卡。要点：四类失败齐全、权限区分读写、输出含空结果，共 4 分。</p>
+<p>个人练习 2：给 5 节点链路标 1 个确认点与 3 个日志位置。要点：确认点在高代价节点、日志覆盖输入输出与结果码，共 3 分。</p>
+<p>小组研讨 3：设计「工具超时 + 上游无数据」同时发生的兜底顺序与文案。rubric：兜底有去向 2 分、文案不推责不编造 2 分、有转人工 2 分、记日志 1 分、结论明确 1 分，共 8 分。</p>
+<h3>常见问题</h3>
+<ol>
+<li>Q：工具契约工程写 API 文档就行？A：不是，AI PM 必须定义失败四类与权限，这两项决定兜底与合规边界。</li>
+<li>Q：确认点越多越安全？A：不是，过多会把 L1 拖成人工流程，按失败代价布点即可。</li>
+<li>Q：日志记详细有隐私风险吗？A：会，AI PM 要定义「摘要不记原文、可见角色、留存期限」，延续 W2 合规要求。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>工具契约</td><td>Tool Contract</td><td>输入、输出、失败、权限四要素</td><td>不等于 API 文档</td></tr>
+<tr><td>中断恢复</td><td>Checkpoint / Resume</td><td>存断点后续跑或回滚</td><td>不等于报错重试</td></tr>
+<tr><td>人工确认点</td><td>Human-in-the-loop</td><td>强制暂停待确认的节点</td><td>不等于事后抽检</td></tr>
+<tr><td>失败兜底</td><td>Fallback</td><td>每个失败对应的明确去向</td><td>不等于提示稍后再试</td></tr>
+<tr><td>可观测</td><td>Observability</td><td>通过日志还原一次完整调用</td><td>不等于看控制台打印</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a>：看画布节点与分支配置，解决「流程怎么讲给非算法同事」。</li>
+<li><a href="https://github.com/langchain-ai/langgraph">R16 langchain-ai/langgraph</a>：看状态与检查点，解决「中断后从哪续跑」。</li>
+<li><a href="https://github.com/datawhalechina/llm-universe">R37 datawhalechina/llm-universe</a>：看最小链路搭建，解决「无代码基础怎么落地」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>搭工作流就像组织一次家宴：菜谱、分工、尝味、备用菜都写清楚了，就算临时有人手忙脚乱，这桌饭也照样能端上桌。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

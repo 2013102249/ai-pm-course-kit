@@ -488,6 +488,101 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li><strong>框架 / 模型</strong>：<strong>备案与 ICP 证分工</strong>——「备案管能不能开门，ICP 证管能不能收钱」；ICP 备案是网站能在国内被访问的前提（域名 + 国内服务器，上线之前完成），ICP 证是合法向用户收费的执照。</li>
 <li><strong>关键结论</strong>：出海合规的判断标准是「<strong>向谁提供服务，不是服务器在哪</strong>」；「省下的是几周流程，赌上的是整个产品的存续」。</li>
 </ul>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ul>
+<li>说出国内岗 6 类合规义务，并做定性区分。</li>
+<li>用「上线前合规 Checklist」完成一次逐项自查。</li>
+<li>写出「红队测试清单」，覆盖主要攻击面与预期兜底。</li>
+</ul>
+<h3>核心概念</h3>
+<p>结论前置：合规决定「能不能上线」，是产品范围的一部分，不是上线前一天补的材料；本章只做定性描述。</p>
+<table>
+<thead><tr><th>义务</th><th>一句话定性</th><th>PM 要落到哪</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>内容安全</td><td>输出不得含违法违规与有害信息</td><td>护栏、拒答、兜底话术</td><td>与「数据安全」不同</td></tr>
+<tr><td>数据安全与个人信息</td><td>收集、存储、使用、出境需合法合规、最小必要</td><td>脱敏、授权、留存期限</td><td>个人信息处理严于一般数据</td></tr>
+<tr><td>算法/大模型备案</td><td>面向公众的服务需履行申报义务</td><td>立项期预留材料与时间</td><td>与「技术评测通过」不是一回事</td></tr>
+<tr><td>生成合成内容标识</td><td>对生成内容加显式/隐式标识</td><td>输出层加标识与说明</td><td>不是水印美化</td></tr>
+<tr><td>训练数据与版权</td><td>语料来源合法、授权可追溯</td><td>数据来源台账</td><td>与「能爬到」不同</td></tr>
+<tr><td>供应商责任划分</td><td>明确模型方/应用方各自义务</td><td>合同、SLA、事故响应</td><td>不是「用了 API 就全甩给供应商」</td></tr>
+</tbody></table>
+<p>涉及法规仅列名称：《生成式人工智能服务管理暂行办法》《个人信息保护法》《数据安全法》《网络安全法》，不写条款号、不编链接。</p>
+<h3>方法框架</h3>
+<p><strong>上线前合规 Checklist（定性，通过标准为「有证据可查」）</strong></p>
+<table>
+<thead><tr><th>#</th><th>检查项</th><th>责任方</th><th>通过标准</th><th>证据留存</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>内容安全护栏与兜底话术</td><td>工程/AI PM</td><td>有规则、有拒答、有演练</td><td>护栏配置 + 演练记录</td></tr>
+<tr><td>2</td><td>个人信息最小必要与脱敏</td><td>法务/合规</td><td>收集有授权、展示已脱敏</td><td>数据清单 + 脱敏说明</td></tr>
+<tr><td>3</td><td>数据存储、留存与出境口径</td><td>法务/合规</td><td>口径明确、可追溯</td><td>数据流图</td></tr>
+<tr><td>4</td><td>算法/大模型备案材料</td><td>AI PM/法务</td><td>已申报或已列计划</td><td>申报回执/计划</td></tr>
+<tr><td>5</td><td>生成合成内容标识</td><td>工程</td><td>显式标识可见、隐式可验</td><td>截图样例</td></tr>
+<tr><td>6</td><td>训练数据与语料授权台账</td><td>AI PM</td><td>来源合法、可追溯</td><td>台账</td></tr>
+<tr><td>7</td><td>供应商责任与事故响应</td><td>业务/法务</td><td>合同与 SLA 明确</td><td>合同条款</td></tr>
+<tr><td>8</td><td>上线后投诉与申诉通道</td><td>业务</td><td>通道可用、有人值守</td><td>流程说明</td></tr>
+</tbody></table>
+<p>隐私落地查 <a href="https://github.com/international-explore/awesome-privacy-chinese">R13 international-explore/awesome-privacy-chinese</a>，条文检索查 <a href="https://github.com/XiaomingX/awesome-chinese-law">R14 XiaomingX/awesome-chinese-law</a>。</p>
+<p><strong>红队测试清单（定性）</strong></p>
+<table>
+<thead><tr><th>攻击面</th><th>测试手法</th><th>预期兜底</th></tr></thead>
+<tbody>
+<tr><td>提示词注入/越权</td><td>诱导忽略上文、索取系统提示</td><td>不执行、不泄露、给兜底</td></tr>
+<tr><td>有害与违规内容</td><td>变体、谐音、多轮绕行</td><td>拦截或安全拒答</td></tr>
+<tr><td>个人信息套取</td><td>诱导输出他人信息</td><td>不输出、脱敏</td></tr>
+<tr><td>事实编造/伪造引用</td><td>要求编造条款、链接</td><td>拒答并说明无从查证</td></tr>
+<tr><td>超长/超窗输入</td><td>灌入超长文本</td><td>截断、限流、不崩</td></tr>
+<tr><td>工具越权调用</td><td>诱导调用非授权接口</td><td>权限校验、失败兜底</td></tr>
+</tbody></table>
+<p>定性原则：只记录「是否触发、是否兜住、证据在哪」，不写通过率、不编比例。</p>
+<h3>案例拆解</h3>
+<p>场景：面向公众的问答功能上线评审，法务要求「先过安全」。</p>
+<p>决策：按 <a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications">R12 OWASP/www-project-top-10-for-large-language-model-applications</a> 的十大风险列攻击面，用 <a href="https://github.com/NVIDIA-NeMo/Guardrails">R11 NVIDIA-NeMo/Guardrails</a> 把拒答与兜底写成可编程护栏。</p>
+<p>结果：定性看，安全从「上线后救火」前移为「设计期检查项」，两份清单成为评审签字依据。</p>
+<p>可迁移点：把法务语言翻译成「检查项 + 证据留存」，PM 才真正管得住上线。</p>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>一个「输出未标识/未兜底」的定性案例</td></tr>
+<tr><td>讲授</td><td>6 类义务逐条定性</td></tr>
+<tr><td>演示</td><td>现场填 Checklist、跑一轮红队话术</td></tr>
+<tr><td>练习</td><td>分组互测并写兜底</td></tr>
+<tr><td>总结</td><td>回扣「合规是范围」</td></tr>
+</tbody></table>
+<p>（课时分配为教学假设。）板书建议：左列「6 类义务」，右列「Checklist 8 项 + 红队 6 面」，中间写「只定性、不写比例」。生活类比：合规像食品上市前的检疫和标签——检疫决定能不能卖，标签告诉顾客这是什么、谁负责，缺一样都不能上架。</p>
+<h3>练习与讨论题</h3>
+<ul>
+<li>个人 1：用 Checklist 给某问答功能逐项打「有/无证据」，列出最缺的 3 项。</li>
+<li>个人 2：为「诱导套取他人信息」写一条红队话术与预期兜底。</li>
+<li>小组：讨论「用了第三方模型 API，责任是不是全在供应商」，用责任划分表给结论。</li>
+</ul>
+<p>评分 rubric（分值为教学假设）：6 类义务覆盖 30 分、Checklist 证据意识 30 分、红队攻击面覆盖 25 分、定性不编数据 15 分。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>合规是不是法务的事？</strong> 结论：不是。PM 决定范围与输出形态，必须把义务翻译成产品检查项。</li>
+<li><strong>只做定性、不写通过率会不会太虚？</strong> 结论：不会。本章禁止编造备案通过率等未校验数据，「有/无证据」才是可验收的。</li>
+<li><strong>加了护栏是不是就安全了？</strong> 结论：不是。护栏需配合红队演练、权限校验与上线后申诉通道持续验证。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>内容安全</td><td>Content Safety</td><td>拦截违法违规与有害输出</td><td>与「数据安全」不同</td></tr>
+<tr><td>护栏</td><td>Guardrails</td><td>输入输出的可编程拦截规则</td><td>非模型内建</td></tr>
+<tr><td>备案</td><td>Filing / Registration</td><td>上线前合规申报义务</td><td>非技术评测</td></tr>
+<tr><td>生成合成内容标识</td><td>AIGC Labeling</td><td>显式/隐式标识生成内容</td><td>非水印美化</td></tr>
+<tr><td>红队测试</td><td>Red Teaming</td><td>模拟攻击找失效边界</td><td>非常规功能测试</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications">R12 OWASP/www-project-top-10-for-large-language-model-applications</a>：看十大风险清单，解决「攻击面从哪列」。</li>
+<li><a href="https://github.com/international-explore/awesome-privacy-chinese">R13 international-explore/awesome-privacy-chinese</a>：看隐私合规资料索引，解决「个人信息怎么落地」。</li>
+<li><a href="https://github.com/XiaomingX/awesome-chinese-law">R14 XiaomingX/awesome-chinese-law</a>：看法规与标准知识库，解决「条文去哪检索」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>合规像食品上市前的检疫和标签——检疫决定能不能卖，标签写清是什么、谁负责，缺一样都别想上架。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

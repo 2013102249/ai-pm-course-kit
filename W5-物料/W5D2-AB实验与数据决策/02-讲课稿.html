@@ -491,6 +491,117 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li>证据不足，不等于证明无效。（必背 2）</li>
 <li>数据告诉我「能不能」，决策还要回答「值不值」。（必背 3）</li>
 </ol>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>写出 AB 实验六步完整流程，为每步说出一个交付物。</li>
+<li>用实验设计表模板写出含主指标、护栏、分组、样本量判断与决策规则的方案。</li>
+<li>判断 AI 产品实验的 4 类特殊坑并给出防控，用决策树处理「结果不显著」。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论：AB 实验的本质是「用可控对照，把『我觉得』变成『数据说』」；AI 产品第一要务是保证两组除被测变量外全都一样。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>实验假设</td><td>可证伪的「改 X 使 Y 变好」</td><td>与目标混淆</td></tr>
+<tr><td>主指标</td><td>判定成败的唯一核心指标</td><td>与护栏混淆</td></tr>
+<tr><td>护栏指标</td><td>不许牺牲的底线（成本/超时/合规）</td><td>与过程指标混淆</td></tr>
+<tr><td>显著性</td><td>差异是否只是随机波动</td><td>与效果大小混淆</td></tr>
+<tr><td>置信区间</td><td>真实差异大概率落入的范围</td><td>与点估计混淆</td></tr>
+</tbody></table>
+<p>显著性与置信区间只做定性解释，不给具体统计数值结论：显著性回答「差异会不会只是运气」，置信区间回答「真实差异落在哪一段」；<strong>区间跨过「无差异」线即方向未定，不能宣布输赢</strong>。样本量只讲概念：差异越小、波动越大，所需观测越多，宁可多攒也别提前下结论。</p>
+<h3>方法框架</h3>
+<p><strong>框架一：AB 实验六步闭环</strong></p>
+<table>
+<thead><tr><th>步骤</th><th>做什么</th><th>交付物</th><th>AI 注意点</th></tr></thead>
+<tbody>
+<tr><td>1 假设</td><td>写「改 X 使 Y 变好」</td><td>假设卡</td><td>一次只改一个变量</td></tr>
+<tr><td>2 指标护栏</td><td>定 1 主指标 + 若干护栏</td><td>指标清单</td><td>护栏含单次成本</td></tr>
+<tr><td>3 分组样本量</td><td>随机分流，定性判断够不够</td><td>分流方案</td><td>冻结版本与参数</td></tr>
+<tr><td>4 判读</td><td>定性看显著性与置信区间</td><td>结果说明</td><td>不偷看、不改口径</td></tr>
+<tr><td>5 决策</td><td>按预设规则全量或保留</td><td>决策记录</td><td>先看护栏</td></tr>
+<tr><td>6 回滚</td><td>开关一键恢复</td><td>回滚预案</td><td>开实验前备好</td></tr>
+</tbody></table>
+<p><strong>框架二：实验设计表模板（直接套用）</strong></p>
+<table>
+<thead><tr><th>字段</th><th>填写要求</th></tr></thead>
+<tbody>
+<tr><td>实验名 / Owner</td><td>编号 + 最终担责人</td></tr>
+<tr><td>假设</td><td>可证伪的一句话</td></tr>
+<tr><td>主指标</td><td>1 个，写清口径</td></tr>
+<tr><td>护栏指标</td><td>单次成本、超时率、合规命中</td></tr>
+<tr><td>分组与流量</td><td>比例、随机单位（教学示例）</td></tr>
+<tr><td>样本量依据</td><td>差异小/波动大则需更多观测</td></tr>
+<tr><td>模型版本冻结</td><td>版本、提示词版本、温度类参数</td></tr>
+<tr><td>缓存策略</td><td>是否禁用缓存、防污染</td></tr>
+<tr><td>观测周期</td><td>起止与最小观测量（教学假设）</td></tr>
+<tr><td>决策规则</td><td>向好/向差/不显著各怎么做</td></tr>
+<tr><td>回滚开关</td><td>Feature Flag 名称与责任人</td></tr>
+</tbody></table>
+<p><strong>框架三：AI 产品实验四类特殊坑与防控</strong></p>
+<table>
+<thead><tr><th>坑</th><th>表现</th><th>防控</th></tr></thead>
+<tbody>
+<tr><td>输出波动</td><td>同输入不同质，噪声淹没差异</td><td>冻结参数、足够观测、按会话聚合</td></tr>
+<tr><td>缓存污染</td><td>命中旧结果，组间不纯</td><td>禁用/分桶缓存，记录命中率</td></tr>
+<tr><td>模型版本混用</td><td>途中升级，差异归不了因</td><td>网关固定版本 + 变更单审批</td></tr>
+<tr><td>成本护栏</td><td>主指标变好但成本翻倍</td><td>成本设护栏，破线即否决</td></tr>
+</tbody></table>
+<p><strong>框架四：「结果不显著怎么办」决策树</strong></p>
+<ol>
+<li>显著向好且护栏未破 → 按规则全量；2. 显著向差或护栏破线 → 立即回滚；3. 不显著 → 依次问：① 观测不足？继续攒、不提前下结论；② 护栏触发？立即回滚；③ 指标太钝？换代理指标或缩小假设重做；④ 确实持平？选成本更低/链路更简者胜出，把省钱记为收益。全程不给具体统计数值结论。</li>
+</ol>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/growthbook/growthbook">R28 growthbook/growthbook</a></td><td>验证新提示词又怕成本失控 → 主指标、护栏、决策规则并列配置并冻结版本 → 结论可判可回滚 → <strong>把指标 + 护栏 + 决策管在一处</strong></td></tr>
+<tr><td><a href="https://github.com/Flagsmith/flagsmith">R29 Flagsmith/flagsmith</a></td><td>实验变差需止损 → 用 Feature Flag 灰度与一键回滚 → 无需发版即恢复 → <strong>回滚能力必须在实验开始前就绪</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<blockquote><p>课堂节奏可按班级调整。</p></blockquote>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>抛「改了提示词，感觉变好了」让学员质疑</td></tr>
+<tr><td>讲授</td><td>六步闭环 + 显著性定性解释</td></tr>
+<tr><td>演示</td><td>填实验设计表、走一遍决策树</td></tr>
+<tr><td>练习</td><td>为「换小模型省钱」写假设与护栏</td></tr>
+<tr><td>总结</td><td>收束：先冻结变量再谈显著</td></tr>
+</tbody></table>
+<p>板书：左写六步流程、右画决策树四分支，红笔圈「版本冻结」。生活类比：<strong>做实验像请两桌客人盲测同一锅汤，只改盐量</strong>——火候、食材、碗都得一样，否则分不清客人夸的是盐还是火，正对应版本混用与缓存污染。讲师提示：统计只讲「方向确不确定」，不报数值结论。常见误区：途中换版本；只看主指标不看成本护栏；不显著就反复偷看数据。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>把「换小模型省钱」写成假设 + 主指标 + 2 护栏</td><td>假设可证伪 4 分、主指标单一 3 分、护栏含成本 3 分</td></tr>
+<tr><td>个人</td><td>用模板填含版本冻结与缓存策略的设计表</td><td>字段齐全 4 分、冻结明确 3 分、规则可执行 3 分</td></tr>
+<tr><td>小组</td><td>对「结果不显著」列三种分支</td><td>分支齐全 4 分、不提前下结论 3 分、含成本胜出 3 分</td></tr>
+</tbody></table>
+<p>参考要点：护栏至少含单次成本与 P95 超时率；省钱实验主指标应是「质量不降」类指标，成本放护栏；不显著时严禁反复偷看，应转入观测不足 / 指标太钝 / 确实持平三分支。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：不显著不等于「没效果」。</strong> 只说明证据不足以区分。</li>
+<li><strong>结论：输出每次不一样，实验照样能做。</strong> 把波动当噪声：冻结参数、按会话聚合、攒够观测。</li>
+<li><strong>结论：不能一边跑一边换模型。</strong> 版本一变就无法归因。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>A/B 实验</td><td>A/B Test</td><td>随机对照验证改动</td><td>与灰度混淆</td></tr>
+<tr><td>护栏指标</td><td>Guardrail Metric</td><td>不许牺牲的底线指标</td><td>与主指标混淆</td></tr>
+<tr><td>置信区间</td><td>Confidence Interval</td><td>真实差异落入的范围</td><td>与点估计混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/growthbook/growthbook">R28 growthbook/growthbook</a>：看实验设计与决策流程，解决「合规实验怎么配」。</li>
+<li><a href="https://github.com/Flagsmith/flagsmith">R29 Flagsmith/flagsmith</a>：看 Feature Flag 与远程配置，解决「灰度与回滚」。</li>
+<li><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a>：看统一网关与可观测，解决「版本混用与缓存污染」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：做 AB 实验就像那锅只改盐量的盲测汤——先把火候、食材和碗都钉死，客人的一句「好喝」才算数，否则夸的到底是谁，谁也说不清。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

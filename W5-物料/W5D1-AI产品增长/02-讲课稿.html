@@ -545,6 +545,112 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>入行 100 问 · 100. 做完一个产品，怎么沉淀下次还能用的东西？</h3>
 <p>项目收尾时，把过程中可复用的部分拆出来，分三类归档。方法论类：这个产品的评估集结构、badcase 分类框架、提示词管理模式、上线检查清单——这些东西换个项目稍改就能用，是你个人最值钱的积累。资产类：通用工具脚本（数据清洗、批量测试）、常见场景的提示词模板、踩坑记录（什么情况会答错、怎么排查）——让 AI 帮你把项目里散落的这些整理成文档，记清适用条件，下次遇到新项目先跑一遍验证再复用。</p>
 <p>边界类：分清哪些能带走、哪些不能——客户的业务数据和专有内容按约定处理，不能改个名字就出现在下个作品里；公司环境里做的资产按公司制度归属。最后给自己写一份复盘：当初的判断哪些对了哪些错了、如果重来会怎么做。产品会下线，但"做出正确判断的能力"会跟着你进入下一个产品——这才是这个职业真正的复利。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>画出增长飞轮 5 环，逐一写出每环的输入与输出。</li>
+<li>说出 AI 产品与传统软件增长的两点关键差异，各举一例。</li>
+<li>写出 AI 版 AARRR 改写表，画一棵带成本护栏的三层指标树。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论：AI 产品增长不是「拉新越多越好」，而是「在单次调用成本可控的前提下，把一次价值验证做成可复用的使用频次」。飞轮是环、AARRR 是漏斗、指标树把两者翻译成可采集字段。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>为何改写</th></tr></thead>
+<tbody>
+<tr><td>价值验证</td><td>用户第一次感到「真帮到我了」</td><td>首体验不稳就没有后续</td></tr>
+<tr><td>使用频次</td><td>单位时间有效完成任务次数</td><td>每次调用有边际成本</td></tr>
+<tr><td>数据反馈</td><td>调用的输入/输出/评分/成本回流</td><td>优化的唯一燃料</td></tr>
+<tr><td>模型/体验优化</td><td>针对最伤留存的失败改进</td><td>靠反馈定位而非猜</td></tr>
+<tr><td>口碑</td><td>稳定答对后才放大的分享</td><td>不稳时放大等于放大失望</td></tr>
+</tbody></table>
+<p>五环依次为「价值验证 → 使用频次 → 数据反馈 → 模型/体验优化 → 口碑」，每环各配 1 个采集字段（首答采纳、会话数、调用评分、回归分、推荐来源），缺任一环即飞轮断。</p>
+<p>两点差异（结论前置）：</p>
+<table>
+<thead><tr><th>维度</th><th>传统软件</th><th>AI 产品</th><th>对增长的含义</th></tr></thead>
+<tbody>
+<tr><td>复制成本</td><td>近乎为零</td><td>每次调用有边际成本</td><td>增长必须挂成本护栏</td></tr>
+<tr><td>结果确定性</td><td>输入同则输出同</td><td>效果会波动</td><td>留存看有效回答率</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<p><strong>框架一：飞轮启动五步 + 自检清单</strong></p>
+<ol>
+<li>定「一次就算成功」的可判定条件；2. 找自然复现的高频场景；3. 接通调用账本；4. 只修最伤留存的一类失败；5. 稳定后再引导分享。</li>
+</ol>
+<p>模板：五环各写 1 条输入、1 条输出、1 个采集字段；缺任一环即判「飞轮断」，先补环再投流量。</p>
+<p><strong>框架二：AI 版 AARRR 改写表</strong></p>
+<p>结论：五环节口径换成「有效回答」，每环节补一条成本护栏。</p>
+<table>
+<thead><tr><th>原环节</th><th>AI 改写</th><th>指标（教学示例）</th><th>成本护栏</th></tr></thead>
+<tbody>
+<tr><td>Acquisition</td><td>带来有真实任务的用户</td><td>首任务发起率</td><td>试用调用上限</td></tr>
+<tr><td>Activation</td><td>首次答对而非注册</td><td>首答采纳率</td><td>单次会话 Token 上限</td></tr>
+<tr><td>Retention</td><td>按有效回答率</td><td>有效回答率、复访率</td><td>人均日成本不破线</td></tr>
+<tr><td>Revenue</td><td>收入覆盖变动成本</td><td>单位贡献</td><td>毛利率下限（教学假设）</td></tr>
+<tr><td>Referral</td><td>稳定达标后才放大</td><td>推荐来源占比</td><td>推荐调用成本可归集</td></tr>
+</tbody></table>
+<p><strong>框架三：三层增长指标树</strong></p>
+<p>模板：「北极星（1）→ 驱动分支（频次/质量/成本）→ 可采集叶子」，最后强制加护栏行。</p>
+<table>
+<thead><tr><th>层级</th><th>指标</th><th>口径</th></tr></thead>
+<tbody>
+<tr><td>北极星</td><td>周有效任务完成数</td><td>被采纳且未重问的任务数</td></tr>
+<tr><td>分支·频次</td><td>人均有效对话数</td><td>有效会话 ÷ 活跃用户</td></tr>
+<tr><td>分支·质量</td><td>有效回答率</td><td>采纳回答 ÷ 总回答</td></tr>
+<tr><td>分支·成本</td><td>单次任务成本</td><td>调用成本 ÷ 完成任务数</td></tr>
+<tr><td>护栏（强制）</td><td>人均日成本、P95 超时率</td><td>任一破线即停止放量</td></tr>
+</tbody></table>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a></td><td>只有浏览、看不出用没用成 → 把每次模型调用定为一等事件 → 频次可下钻 → <strong>把「调用」而非「点击」当一等增长事件</strong></td></tr>
+<tr><td><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a></td><td>反馈只靠前端埋点 → 调用追踪串起输入/输出/耗时/评分/成本 → 反馈有样本 → <strong>反馈环要靠可观测数据</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<blockquote><p>课堂节奏可按班级调整。</p></blockquote>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>展示「DAU 涨、留存跌」的假想看板找矛盾</td></tr>
+<tr><td>讲授</td><td>飞轮五环 + 两点差异 + AI 版 AARRR</td></tr>
+<tr><td>演示</td><td>画三层指标树并补护栏行</td></tr>
+<tr><td>练习</td><td>各组画主项目飞轮、标断环</td></tr>
+<tr><td>总结</td><td>收束：先补断环再谈拉新</td></tr>
+</tbody></table>
+<p>板书：左画飞轮五环、右写「边际成本 / 效果不确定」。生活类比：<strong>增长像开一家现做现卖的面馆</strong>——每多卖一碗就多一份食材钱，客人来不来全看这碗口味稳不稳，不能只数进门人数，还得数几碗吃光、几碗被退。讲师提示：反复追问「这次算不算帮上忙」。常见误区：把 DAU 当北极星；忽略成本拉新；效果不稳就放大口碑。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>画主项目飞轮并标最可能断的一环</td><td>五环齐全 4 分、每环有输入/输出/字段 3 分、断环有理由 3 分</td></tr>
+<tr><td>个人</td><td>把 AARRR 改写为 AI 版，每环配 1 指标 + 1 护栏</td><td>口径正确 4 分、指标可采集 3 分、护栏对齐成本 3 分</td></tr>
+<tr><td>小组</td><td>为「会议纪要助手」画三层指标树并标护栏</td><td>北极星唯一 4 分、三分支齐全 3 分、护栏不缺失 3 分</td></tr>
+</tbody></table>
+<p>参考要点：北极星选结果指标；留存用有效回答率；护栏至少含人均日成本；断环最常见在「数据反馈」——调用账本没接通。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：增长期也不能先不管成本。</strong> 护栏要在放量前设好。</li>
+<li><strong>结论：效果不确定时用有效回答率做留存代理。</strong> 打开率反映不了答得稳不稳。</li>
+<li><strong>结论：飞轮转不起来先推价值验证环。</strong> 第一次没帮上忙，后面四环都空转。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>增长飞轮</td><td>Growth Flywheel</td><td>五环自增强闭环</td><td>与拉新漏斗混淆</td></tr>
+<tr><td>边际成本</td><td>Marginal Cost</td><td>每多一次调用新增的花费</td><td>与固定成本混淆</td></tr>
+<tr><td>北极星指标</td><td>North Star Metric</td><td>唯一代表核心价值的结果指标</td><td>与 DAU 混淆</td></tr>
+<tr><td>指标树</td><td>Metric Tree</td><td>北极星逐层拆到可采集指标</td><td>与指标清单混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a>：看事件模型与漏斗，解决「指标怎么采集」。</li>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看调用追踪与评分，解决「反馈从哪来」。</li>
+<li><a href="https://github.com/tensorzero/tensorzero">R30 tensorzero/tensorzero</a>：看优化循环，解决「反馈如何回流成改进」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：做 AI 增长像经营那家现做现卖的面馆——别只顾在门口吆喝拉人，先保证每碗都稳定好吃、还算得清料钱，客人自然会把朋友带来。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

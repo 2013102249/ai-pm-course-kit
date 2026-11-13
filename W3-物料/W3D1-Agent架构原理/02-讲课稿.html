@@ -547,6 +547,102 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 </ul>
 <h3>理论知识手册 · 多 Agent、权限与责任</h3>
 <p>大家先看多 Agent 怎么分工：主 Agent 拆任务，子 Agent 各司其职，最后汇总交付；只读任务并行加速，写入任务串行保安全。这里要注意，如果同时有两个写入 Agent，可能互相覆盖代码，所以原则是「可逆操作自动化，不可逆操作要确认」。对你们的能力要求是，能回答「什么时候需要多 Agent？」，能核算子 Agent 的 Token 成本，还能回答责任问题。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>说出 Agent 四大件职责，各举 1 个产品侧例子。</li>
+<li>画出 ReAct 循环 6 个编号步骤，标出「观察」回到「推理」的回路。</li>
+<li>判断场景该选 L0–L3 哪级自主度，写出可控性、成本、失败代价三项理由。</li>
+</ol>
+<h3>核心概念</h3>
+<p>结论前置：Agent 与固定工作流的唯一分界是「谁决定下一步」——人画死步骤是工作流，模型临场决定是 Agent。四大件是最小结构，缺一件只算带工具调用的聊天。</p>
+<p>四大件表（组件 / 职责 / AI PM 要拍板的事 / 生活类比）：</p>
+<table>
+<thead><tr><th>组件</th><th>职责</th><th>AI PM 要拍板的事</th><th>生活类比</th></tr></thead>
+<tbody>
+<tr><td>规划 Planning</td><td>把目标拆成步骤</td><td>拆几层、能否改目标</td><td>厨师定顺序</td></tr>
+<tr><td>记忆 Memory</td><td>保留跨轮次上下文</td><td>记什么、记多久、谁清除</td><td>记住客人忌口</td></tr>
+<tr><td>工具 Tool</td><td>调外部能力取数或执行</td><td>能调哪些、权限多大</td><td>冰箱灶台</td></tr>
+<tr><td>反思 Reflection</td><td>检查结果决定是否重试</td><td>重试几次、何时转人工</td><td>尝一口补盐</td></tr>
+</tbody></table>
+<p>Agent 与工作流对比表：</p>
+<table>
+<thead><tr><th>维度</th><th>固定工作流</th><th>Agent</th></tr></thead>
+<tbody>
+<tr><td>下一步由谁定</td><td>人</td><td>模型自主选</td></tr>
+<tr><td>路径</td><td>可穷举</td><td>不可穷举</td></tr>
+<tr><td>可控性</td><td>高</td><td>随自主度下降</td></tr>
+<tr><td>成本</td><td>可预估</td><td>步数不定，须设上限</td></tr>
+<tr><td>典型失败</td><td>分支没覆盖</td><td>空转、越权调用</td></tr>
+</tbody></table>
+<p>结论：流程能画死就别放权，放权必须配日志与人工确认点。</p>
+<h3>方法框架</h3>
+<p>结论前置：本讲给出两套可直接套用的模板——ReAct 编号循环与自主度决策表。</p>
+<p>框架 A：ReAct 循环 6 步：</p>
+<ol>
+<li>接收目标与上下文：明确要达成什么、有哪些约束。</li>
+<li>推理 Reason：判断离目标还差什么，定「下一步做什么」。</li>
+<li>行动 Act：按工具契约调一个工具，或提问补信息。</li>
+<li>观察 Observe：读取返回或回答，写入记忆。</li>
+<li>反思 Reflect：判断是否推进，未推进则记原因并决定是否重试。</li>
+<li>终止或回到第 2 步：达成目标、达步数上限、触发确认点时停止。</li>
+</ol>
+<p>产品护栏：第 6 步须设最大步数与单步超时（（教学假设）如 8 步、10 秒），上线前按评测集标定；这两项是 AI PM 交付物。</p>
+<p>框架 B：自主度等级产品决策表：</p>
+<table>
+<thead><tr><th>等级</th><th>定义</th><th>谁决定下一步</th><th>可控性</th><th>成本</th><th>失败代价适用</th><th>典型场景</th></tr></thead>
+<tbody>
+<tr><td>L0</td><td>固定流程</td><td>人</td><td>最高</td><td>最低可预估</td><td>不可逆、涉及钱与承诺</td><td>报销审批、合同人工签发</td></tr>
+<tr><td>L1</td><td>固定流程 + 模型填槽</td><td>人画骨架</td><td>高</td><td>低</td><td>可补偿</td><td>客服问答、表单抽取</td></tr>
+<tr><td>L2</td><td>有限自主 + 确认点</td><td>模型选分支，关键动作暂停</td><td>中</td><td>中，需日志</td><td>中等、可回滚</td><td>数据分析、议价初稿</td></tr>
+<tr><td>L3</td><td>自主规划</td><td>模型全程决定</td><td>低</td><td>高且步数不定</td><td>低、允许试错</td><td>探索式调研、沙箱实验</td></tr>
+</tbody></table>
+<p>结论：等级由「失败代价 × 路径可穷举性」决定，L3 只适用于错了也没关系且有人兜底的场景。</p>
+<p>模板——自主度定级卡：场景 / 代价分级 / 路径可穷举性 / 等级 / 确认点 / 步数上限 / 定级人。</p>
+<h3>案例拆解</h3>
+<p>案例一：<a href="https://github.com/langchain-ai/langgraph">R16 langchain-ai/langgraph</a>。场景：多步任务中途失败需回节点重跑。决策：用有状态、可回滚的图保存每步状态。结果（定性）：评审可指着节点说「失败就回这里」。可迁移点：可控性靠状态显式化。</p>
+<p>案例二：<a href="https://github.com/xindoo/agentic-design-patterns">R17 xindoo/agentic-design-patterns</a>。场景：团队想复用成熟套路。决策：把常见结构整理为模式（规划、路由、反思、多智能体）按场景选型。结果（定性）：评审从「能不能做」变成「用哪个模式、代价是什么」。可迁移点：模式化让 AI PM 与工程有共同语言；<a href="https://github.com/bojieli/ai-agent-book">R18 bojieli/ai-agent-book</a> 按章代码可作中文底本。</p>
+<h3>课堂讲解要点</h3>
+<p>课堂节奏：</p>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>跟团游与自驾游，引出自主度</td></tr>
+<tr><td>讲授</td><td>四大件、工作流对比、L0–L3 表</td></tr>
+<tr><td>演示</td><td>把 L3 设想逐步「收」到 L1</td></tr>
+<tr><td>练习</td><td>给主项目定级写三项理由</td></tr>
+<tr><td>总结</td><td>收口到「谁决定下一步」</td></tr>
+</tbody></table>
+<p>板书：左画四大件环，右画 L0→L3 箭头，中间写「失败代价 ↑ 则自主度 ↓」。</p>
+<p>生活类比：Agent 像「带助理的厨师」——规划是定顺序，记忆是记住客人忌口，工具是冰箱灶台，反思是尝一口补盐；工作流是照 SOP 不能改菜谱的流水线。</p>
+<h3>练习与讨论题</h3>
+<p>个人练习 1：把「自动生成周报」拆 5 步，标注代价并定级。要点：对外发送属不可逆，定 L0 加人工签发；抽取可定 L1；须明确到等级。</p>
+<p>个人练习 2：画 ReAct 6 步回路并标最大循环步数。要点：回路闭合、有终止条件、上限标（教学假设）且需评测标定。</p>
+<p>小组研讨 3：辩论「客服该不该上 L3」。rubric：三项维度全覆盖 3 分、有佐证 2 分、给出折中等级 2 分、结论明确 1 分，共 8 分。</p>
+<h3>常见问题</h3>
+<ol>
+<li>Q：四大件哪个最易漏？A：反思——多数原型只有规划与工具，没有自检与重试上限，一出错就空转。</li>
+<li>Q：ReAct 会无限循环吗？A：会，产品必须设最大步数、单步超时与人工确认点，这三件是 AI PM 交付物。</li>
+<li>Q：L3 最该追求吗？A：不是，L3 只适合失败代价低且允许试错的场景，生产系统里 L0、L1 是多数。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>智能体</td><td>Agent</td><td>自主规划并调工具达成目标的系统</td><td>区别在自主决定下一步</td></tr>
+<tr><td>推理行动交替</td><td>ReAct</td><td>Reason、Act、Observe 交替循环</td><td>与链式调用不同</td></tr>
+<tr><td>自主度</td><td>Autonomy Level</td><td>L0–L3 的放权刻度</td><td>与模型能力无关</td></tr>
+<tr><td>有状态图</td><td>Stateful Graph</td><td>保存状态、可回滚的流程结构</td><td>不等于普通流程图</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/langchain-ai/langgraph">R16 langchain-ai/langgraph</a>：看状态与检查点，解决「中断恢复怎么产品化」。</li>
+<li><a href="https://github.com/xindoo/agentic-design-patterns">R17 xindoo/agentic-design-patterns</a>：看模式目录，解决「团队没有共同语言」。</li>
+<li><a href="https://github.com/bojieli/ai-agent-book">R18 bojieli/ai-agent-book</a>：看规划与工具循环，解决「四大件在工程里长什么样」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>给 Agent 放权就像教新手厨师独立掌勺——菜谱背得再熟，也得先让他照着 SOP 做一道菜开始，别一上来就把整间厨房交给他。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

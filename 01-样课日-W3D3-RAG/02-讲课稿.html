@@ -528,6 +528,120 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <tr><td>SVG</td><td>Scalable Vector Graphics</td><td>可缩放矢量图形</td></tr>
 <tr><td>HTML</td><td>HyperText Markup Language</td><td>超文本标记语言</td></tr>
 </tbody></table>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>画出 RAG 九步全链路，为每步写出 1 个失败信号。</li>
+<li>写出知识库产品 PRD 必备字段清单，判断无答案策略怎么写。</li>
+<li>判断向量检索、GraphRAG、Agentic RAG 各适用哪类问题。</li>
+</ol>
+<h3>核心概念</h3>
+<p>结论前置：RAG 的产品价值不是「让模型知道更多」，而是「让每个答案都能指回证据，且没证据时敢说不知道」。护城河在解析、切片、溯源与评测。</p>
+<p>RAG 九步全链路表（步骤 / 做什么 / AI PM 拍板 / 失败信号）：</p>
+<table>
+<thead><tr><th>步骤</th><th>做什么</th><th>AI PM 拍板</th><th>失败信号</th></tr></thead>
+<tbody>
+<tr><td>1 接入</td><td>收拢来源与格式</td><td>允许哪些来源</td><td>来源缺失、格式不支持</td></tr>
+<tr><td>2 解析</td><td>从 PDF、扫描件、表格抽结构</td><td>表格图片要不要 OCR</td><td>乱码、表格错行</td></tr>
+<tr><td>3 切片</td><td>按语义切片段</td><td>切片大小与重叠</td><td>答案被切断</td></tr>
+<tr><td>4 向量化</td><td>转可检索表示</td><td>用哪套表示</td><td>更新后未同步</td></tr>
+<tr><td>5 召回</td><td>粗筛候选</td><td>召回几条</td><td>相关片段没进候选</td></tr>
+<tr><td>6 重排</td><td>精排顺序</td><td>重排阈值</td><td>最相关排后面</td></tr>
+<tr><td>7 生成</td><td>据证据写答案</td><td>提示词与上下文拼装</td><td>脱离证据发挥</td></tr>
+<tr><td>8 引用溯源</td><td>标注文档与片段位置</td><td>引用粒度、能否回查</td><td>有答案无出处</td></tr>
+<tr><td>9 评测</td><td>测命中与忠实度</td><td>评测样例与合格线</td><td>只测能不能答</td></tr>
+</tbody></table>
+<p>结论：第 2、3、8、9 步是产品护城河，第 5 至 7 步偏工程调参。</p>
+<p>知识库产品功能边界表（功能 / 必须做 / 明确不做）：</p>
+<table>
+<thead><tr><th>功能</th><th>必须做</th><th>明确不做</th></tr></thead>
+<tbody>
+<tr><td>权限</td><td>按空间角色隔离，检索随权限过滤</td><td>不做绕过权限的全局检索</td></tr>
+<tr><td>更新</td><td>增量更新并标更新时间</td><td>不承诺改了立即全量生效</td></tr>
+<tr><td>版本</td><td>保留历史、可回滚、标所用版本</td><td>不承诺跨版本答案一致</td></tr>
+<tr><td>命中率</td><td>用评测集给可复核口径</td><td>不拿单次演示当命中率</td></tr>
+<tr><td>无答案策略</td><td>证据不足时拒答，给转人工与补录</td><td>不允许编一段看似合理的话</td></tr>
+</tbody></table>
+<p>「无答案策略」大纲未单列，属知识库产品化必需补充设计。</p>
+<h3>方法框架</h3>
+<p>结论前置：本讲给出链路落地、检索对比、PRD 字段三套模板。</p>
+<p>框架 A：RAG 链路落地 5 步：</p>
+<ol>
+<li>定来源清单与权限矩阵。</li>
+<li>挑 20–30 条（教学假设）评测样例，含「应有答案、应有出处、应拒答」三类。</li>
+<li>逐段调解析与切片，用「答案是否被切断」验收。</li>
+<li>定召回条数与重排阈值，跑评测集看命中。</li>
+<li>冻结「引用粒度 + 拒答文案 + 转人工入口」三件。</li>
+</ol>
+<p>框架 B：三类检索对比表：</p>
+<table>
+<thead><tr><th>方案</th><th>擅长</th><th>不擅长</th><th>成本</th><th>适用场景</th></tr></thead>
+<tbody>
+<tr><td>向量检索</td><td>逐条事实、语义匹配</td><td>跨文档全局归纳</td><td>低</td><td>制度条款、产品手册查询</td></tr>
+<tr><td>GraphRAG</td><td>全局问题、关系归纳</td><td>单条精确查证、频繁更新</td><td>高，需建图维护</td><td>年报综述、多文档主题梳理</td></tr>
+<tr><td>Agentic RAG</td><td>多轮检索、跨库选路</td><td>简单一问一答</td><td>最高且步数不定</td><td>复杂调研、跨库取证</td></tr>
+</tbody></table>
+<p>结论：三者是补位不是替代。默认从向量检索起步，出现「全局归纳」才上 GraphRAG，出现「检索策略需判断」才上 Agentic RAG。</p>
+<p>框架 C：知识库产品 PRD 必备字段清单：</p>
+<table>
+<thead><tr><th>#</th><th>字段</th><th>验收口径</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>来源与格式白名单</td><td>允许类型与大小上限（（教学假设））</td></tr>
+<tr><td>2</td><td>权限矩阵</td><td>空间 / 角色 × 可读 / 可写 / 可管理</td></tr>
+<tr><td>3</td><td>解析与切片配置</td><td>表格是否 OCR、切片大小与重叠</td></tr>
+<tr><td>4</td><td>更新与版本策略</td><td>增量频率、版本标识、回滚入口</td></tr>
+<tr><td>5</td><td>召回与重排参数</td><td>召回条数、重排阈值</td></tr>
+<tr><td>6</td><td>引用溯源粒度</td><td>到文档 / 片段 / 页码</td></tr>
+<tr><td>7</td><td>无答案策略</td><td>拒答文案 + 转人工 + 补录入动线</td></tr>
+<tr><td>8</td><td>命中率口径与评测集</td><td>样例数量、合格线、复测周期</td></tr>
+<tr><td>9</td><td>日志与可见角色</td><td>谁问了、命中哪条、是否拒答</td></tr>
+<tr><td>10</td><td>成本口径</td><td>Token 与存储估算（（教学假设））</td></tr>
+</tbody></table>
+<h3>案例拆解</h3>
+<p>案例一：<a href="https://github.com/infiniflow/ragflow">R19 infiniflow/ragflow</a>。场景：文档格式杂、答案需点回原文。决策：解析与切片可配置，强制保留溯源。结果（定性）：无答案时明确回「知识库未覆盖」。可迁移点：解析质量与溯源可信决定口碑。</p>
+<p>案例二：<a href="https://github.com/microsoft/graphrag">R20 microsoft/graphrag</a>。场景：用户问「这批文档共几类问题」而非某条款。决策：用知识图谱做全局归纳，而非加大召回。结果（定性）：能给出跨文档结构化归纳。可迁移点：先识别问题类型再选方案；<a href="https://github.com/NirDiamant/RAG_Techniques">R21 NirDiamant/RAG_Techniques</a> Notebook 可当演示素材，<a href="https://github.com/Mintplex-Labs/anything-llm">R22 Mintplex-Labs/anything-llm</a> 拆解知识库边界，<a href="https://github.com/Meirtz/Awesome-Context-Engineering">R04 Meirtz/Awesome-Context-Engineering</a> 补齐「证据如何拼进上下文」。</p>
+<h3>课堂讲解要点</h3>
+<p>课堂节奏：</p>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>开卷考试类比：为何更要标出处</td></tr>
+<tr><td>讲授</td><td>九步链路、功能边界、三类检索</td></tr>
+<tr><td>演示</td><td>同一问题用逐条查找与全局归纳各问一遍</td></tr>
+<tr><td>练习</td><td>写 PRD 字段清单，设计 3 条样例</td></tr>
+<tr><td>总结</td><td>收口到「有据可查 + 敢说不知道」</td></tr>
+</tbody></table>
+<p>板书：横向画九步链路，在第 8、9 步画圈。</p>
+<p>生活类比：RAG 是「开卷考试」——翻目录找页码（召回）、划重点（重排）、写清引用哪页（溯源）、翻不到就写「资料未覆盖」（无答案策略）、考完用标准答案核对（评测）。</p>
+<h3>练习与讨论题</h3>
+<p>个人练习 1：为「差旅制度问答」写 3 条评测样例，含 1 条应拒答。要点：含应有出处、有应拒答、不编造条款，共 3 分。</p>
+<p>个人练习 2：填 PRD 清单中「权限矩阵」与「无答案策略」。要点：权限随检索过滤、拒答带转人工与补录，共 4 分。</p>
+<p>小组研讨 3：给定 3 个问题分别匹配三类检索。rubric：匹配正确 3 分、说出被否方案代价 3 分、结论明确 2 分，共 8 分。</p>
+<h3>常见问题</h3>
+<ol>
+<li>Q：命中率低先调什么？A：先查解析与切片，再看召回条数，最后才动模型——多数「答不准」是证据没进来。</li>
+<li>Q：知识库要做版本吗？A：要，答案必须标所用版本，否则制度更新后旧答案成合规风险。</li>
+<li>Q：GraphRAG 该默认上吗？A：不是，建图维护成本高，只有全局归纳类问题才值得。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>检索增强生成</td><td>RAG</td><td>先检索证据再据证据生成</td><td>不等于微调</td></tr>
+<tr><td>切片</td><td>Chunking</td><td>切成语义完整片段</td><td>不等于按字数硬切</td></tr>
+<tr><td>召回 / 重排</td><td>Retrieval / Rerank</td><td>粗筛 / 精排</td><td>找得到与排得准不同</td></tr>
+<tr><td>引用溯源</td><td>Citation / Grounding</td><td>标注可回查出处</td><td>不等于附网址</td></tr>
+<tr><td>无答案策略</td><td>Abstention</td><td>证据不足时明确拒答</td><td>不等于换个说法再答</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/infiniflow/ragflow">R19 infiniflow/ragflow</a>：看解析、切片、召回评测，解决「九步链路怎么验」。</li>
+<li><a href="https://github.com/microsoft/graphrag">R20 microsoft/graphrag</a>：看全局归纳设计，解决「何时不该只靠向量检索」。</li>
+<li><a href="https://github.com/NirDiamant/RAG_Techniques">R21 NirDiamant/RAG_Techniques</a>：看逐项 Notebook，解决「课堂演示与作业素材」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>做 RAG 像带学生开卷考试：重点从来不是让他背下整本书，而是教会他翻到对的那一页、写清引用，翻不到就坦白说不知道。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

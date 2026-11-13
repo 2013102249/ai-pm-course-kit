@@ -567,6 +567,84 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <tr><td>模型会挂、会慢、会贵</td><td>模型降级链、超时与重试、成本控制、结果持久化</td></tr>
 <tr><td>内容安全和隐私</td><td>输入内容审核、输出内容审核、版权风险控制、隐私保护</td></tr>
 </tbody></table>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>用分类框架对比 Chat / Copilot / Agent / 嵌入式 AI / AI 原生应用五类形态。</li>
+<li>用「产品拆解六层」拆解一个 Chat 类与一个 RAG / Agent 类产品，输出对照表。</li>
+<li>说出形态选择如何影响确定性要求与成本结构。</li>
+</ol>
+<h3>核心概念</h3>
+<p>结论前置：分类看三件事——交互范式、确定性要求、成本结构；主动权在谁手里，决定产品该怎么写兜底。lobe-chat 类对话前端产品在本节仅作 Chat 形态的定性举例，不作编号引用。</p>
+<table>
+<thead><tr><th>形态</th><th>交互范式</th><th>价值主张</th><th>确定性要求</th><th>成本结构</th></tr></thead>
+<tbody>
+<tr><td>Chat</td><td>用户主导、一问一答</td><td>低门槛获取答案</td><td>中，答错可追问</td><td>单次调用为主</td></tr>
+<tr><td>Copilot</td><td>人主机辅、嵌入现有流程</td><td>提效、不打断习惯</td><td>高，错会污染主流程</td><td>高频调用，需控延迟</td></tr>
+<tr><td>Agent</td><td>机主人审、多步自主</td><td>替人完成整段任务</td><td>最高，须可回滚可审计</td><td>多轮 + 工具调用，成本最高</td></tr>
+<tr><td>嵌入式 AI</td><td>无感、藏在原功能里</td><td>老功能悄悄变聪明</td><td>高但可降级</td><td>调用分散，按量计费</td></tr>
+<tr><td>AI 原生应用</td><td>无 AI 即不成立</td><td>全新体验与工作流</td><td>因场景而异</td><td>以模型为核心成本项</td></tr>
+</tbody></table>
+<p>一句话判断：主动权越交给模型，确定性要求与成本就越高，兜底越要写厚。</p>
+<h3>方法框架</h3>
+<p><strong>产品拆解六层示范</strong>（结论前置：把两个产品放同一张表，差异一眼可见）：</p>
+<table>
+<thead><tr><th>六层</th><th>Chat 类（lobe-chat 类，定性举例）</th><th>RAG / Agent 类（<a href="https://github.com/langgenius/dify">R15 langgenius/dify</a> 与 <a href="https://github.com/infiniflow/ragflow">R19 infiniflow/ragflow</a>，跨章少量复用）</th></tr></thead>
+<tbody>
+<tr><td>用户</td><td>通用问答者，付费者常即使用者</td><td>企业知识管理员 / 业务操作员</td></tr>
+<tr><td>场景</td><td>临时提问、探索式查询</td><td>从固定知识库取据、按流程办事</td></tr>
+<tr><td>输入</td><td>一句话 + 少量历史对话</td><td>文档 / 问题 + 检索片段 + 工作流配置</td></tr>
+<tr><td>处理</td><td>直接请求模型生成</td><td>先解析切片召回，再编排生成与工具调用</td></tr>
+<tr><td>输出</td><td>一段文本，答错靠追问</td><td>带出处的答案或流程结果，可审计可回滚</td></tr>
+<tr><td>度量</td><td>满意度、追问率</td><td>召回命中率、答案有据率、任务完成率</td></tr>
+</tbody></table>
+<p>结论前置：Chat 的复杂度在「体验」，RAG / Agent 的复杂度在「信息供给与流程约束」；这正是 D3 上下文工程的落地形态。</p>
+<h3>案例拆解</h3>
+<p><strong><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a></strong>：场景是模型输出不稳、难直接上生产；决策是把模型能力封装成可视化编排的 Agent 与工作流；结果是把不确定性关进可控流程。可迁移点：Agent 形态的产品价值不在「更聪明」，而在「可回滚、可审计」。</p>
+<p><strong><a href="https://github.com/infiniflow/ragflow">R19 infiniflow/ragflow</a></strong>：场景是知识散落在文档里、直接问模型会编；决策是先把文档解析、切片、召回评测做扎实；结果是答案有据可查。可迁移点：RAG 产品的第一决策是「信息怎么进上下文」，不是「用哪个模型」。</p>
+<h3>课堂讲解要点</h3>
+<p>结论前置：本讲用「同一需求做成五种形态」让学员看见成本与兜底的差异；</p>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>板书</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>现场给一个需求，问「做成哪种」</td><td>五形态</td></tr>
+<tr><td>讲授</td><td>五形态对比表</td><td>四列对比</td></tr>
+<tr><td>演示</td><td>六层拆解两个产品</td><td>六层对照表</td></tr>
+<tr><td>练习</td><td>小组拆解一款常见 AI 功能</td><td>六层卡</td></tr>
+<tr><td>总结</td><td>「主动权 = 成本」定调</td><td>一句话类比</td></tr>
+</tbody></table>
+<p>生活类比：Chat 像「问路窗口」，Copilot 像「副驾提醒」，Agent 像「代驾把你送到家」，嵌入式 AI 像「藏在洗衣机里的水位感应」，AI 原生应用像「为自驾重新设计的车」——越往后，越要给它装刹车和保险。常见误区：把所有带对话框的产品都叫 Chat，忽略 Copilot 与 Agent 的兜底责任差异。</p>
+<h3>练习与讨论题</h3>
+<ul>
+<li>个人练习 1：把「会议纪要整理」分别设计成 Copilot 与 Agent 版，写出兜底差异。参考要点：Agent 版须写可回滚、可审计、失败重试。</li>
+<li>个人练习 2：用六层拆解一款你常用的 AI 功能并填卡。参考要点：六层无遗漏，度量层须给具体指标名。</li>
+<li>小组研讨：为什么 Agent 的成本结构高于 Chat。评分 rubric：答出多轮 + 工具调用 + 兜底审计 ≥2 项 3 分、结论前置 1 分。</li>
+</ul>
+<h3>常见问题</h3>
+<ol>
+<li><strong>Q：lobe-chat 类产品和 Agent 怎么分？</strong> 看主动权：前者用户一步步问，后者系统自己规划多步；本节仅把前者作 Chat 形态的定性举例。</li>
+<li><strong>Q：嵌入式 AI 算不算「真 AI 产品」？</strong> 算。它的产品难点恰是「无感且可降级」，对确定性要求反而更高。</li>
+<li><strong>Q：形态选错会怎样？</strong> 会用错兜底与预算：把 Agent 当 Chat 做，上线后必在成本与错责上翻车。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文 / 缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>Chat</td><td>Chat</td><td>用户主导的一问一答形态</td><td>不等于所有对话框产品</td></tr>
+<tr><td>Copilot</td><td>Copilot</td><td>嵌入流程、人主机辅</td><td>与 Agent 的主动权不同</td></tr>
+<tr><td>Agent</td><td>Agent</td><td>自主规划并调用工具的多步系统</td><td>不等于聊天机器人</td></tr>
+<tr><td>嵌入式 AI</td><td>Embedded AI</td><td>藏在原功能里的无感智能</td><td>不等于独立 App</td></tr>
+<tr><td>RAG</td><td>RAG</td><td>先检索再生成的架构</td><td>不等于微调</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><strong><a href="https://github.com/liyupi/ai-guide">R05 liyupi/ai-guide</a></strong>：看 Prompt / RAG / Agent 索引，解决「中文语境下形态怎么归类」。</li>
+<li><strong><a href="https://github.com/langgenius/dify">R15 langgenius/dify</a></strong>：看可视化编排与工作流（跨章复用），解决「Agent 形态怎么拆」。</li>
+<li><strong><a href="https://github.com/infiniflow/ragflow">R19 infiniflow/ragflow</a></strong>：看文档解析、切片与召回（跨章复用），解决「RAG 形态怎么拆」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>选形态像选交通工具：去楼下买盐骑共享单车就够，跨城办事才需要订车票配保险，选重了贵、选轻了到不了。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

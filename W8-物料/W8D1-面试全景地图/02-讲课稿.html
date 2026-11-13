@@ -567,6 +567,124 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>面试高频问题框架 · 我的核心思考</h3>
 <p>先说我的核心思考。AI 确实很厉害，它能私人定制化地解决我们工作流程里的很多问题，也能满足各种个性化需求；但是这里要注意，如果要做一款能产生公司利润的商品，AI 解决的依然只是局部问题。一款能赚钱的商业产品，本质上要回答的那几个问题，从来没有变过：第一，痛点是否足够痛，用户真的愿意花钱解决吗；第二，解决方式是否正确，我们的方案真的能解决问题吗；第三，如何产生稳定交付，能不能规模化、标准化地交付给客户；第四，如何获客，客户从哪里来；第五，如何做 Marketing，怎么让市场接受我们的产品。所以我给出的判断是：AI 只是优化了交付环节中的部分工作流，但商业产品的本质问题，依然需要你们产品经理来解决。</p>
 <p>回到面试这个话题，我认为在 AI 元年和传统时代一样，Marketing 始终非常关键，而 Marketing 的核心就是如何讲好一个产品故事。这个故事讲得好不好，直接决定了投资人是否愿意投你、市场是否认可你、消费者是否愿意为你买单。这就是为什么我们把「如何讲好一个产品故事」放在了「核心本质」这个位置。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：第一步不是背题，是<strong>先画地图再上路</strong>——知道走哪几关、每关问什么、手上有哪些牌。</p></blockquote>
+<ol>
+<li>说出 6 段流程与每段核心考察点。</li>
+<li>画出「流程 × 题型 × 维度 × 材料」四张表。</li>
+<li>判断 8 周产出各支撑哪类题，输出盘点清单。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论前置：<strong>面试是「按地图出示证据」，不是被随机抽查。</strong> 6 段流程是最大公约数，5 类题型是采样方式。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>展开</th></tr></thead>
+<tbody>
+<tr><td>6 段流程</td><td>简历筛选→业务面→技术面→交叉面→HR 面→谈薪</td><td>每段只看一类证据</td></tr>
+<tr><td>5 类题型</td><td>项目深挖 / 场景设计 / 技术与数据 / 行为与协作 / 压力追问</td><td>同一项目被五种问法切</td></tr>
+<tr><td>证据链</td><td>说「我做过」要能指出文件名</td><td>8 周产出 ↔ 回答</td></tr>
+<tr><td>转岗优势</td><td>原行业的用户视角与质量敏感度</td><td>不是短板，是长板迁移</td></tr>
+</tbody></table>
+<blockquote><p>流程与题型地图（大纲未覆盖，按主题补入）。</p></blockquote>
+<table>
+<thead><tr><th>流程段</th><th>核心问题</th><th>出示的证据</th><th>常见误区</th></tr></thead>
+<tbody>
+<tr><td>简历筛选</td><td>值不值得约</td><td>W7 简历 + 作品集</td><td>堆关键词</td></tr>
+<tr><td>业务面</td><td>会不会做产品判断</td><td>W4 PRD + W6 主项目</td><td>只讲功能</td></tr>
+<tr><td>技术面</td><td>懂不懂边界</td><td>W2 评测集 + W5 实验</td><td>硬背公式</td></tr>
+<tr><td>交叉面</td><td>好不好合作</td><td>W5 推进复盘</td><td>把冲突讲成别人的问题</td></tr>
+<tr><td>HR 面</td><td>动机与稳定性</td><td>转岗叙事 + 规划</td><td>说「逃离原行业」</td></tr>
+<tr><td>谈薪</td><td>条件能否对齐</td><td>区间与替代项清单</td><td>先报孤点数字</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th>题型</th><th>典型问法（教学模拟题）</th><th>主出现段</th><th>8 周证据</th></tr></thead>
+<tbody>
+<tr><td>项目深挖</td><td>「讲讲主项目」</td><td>业务面 / 交叉面</td><td>W6 MVP、W4 PRD</td></tr>
+<tr><td>场景设计</td><td>「给目标设计 AI 方案」</td><td>业务面</td><td>W1 提示词、W3 RAG</td></tr>
+<tr><td>技术与数据</td><td>「评测集怎么设计」</td><td>技术面</td><td>W2 评测、W4 SQL</td></tr>
+<tr><td>行为与协作</td><td>「讲一次冲突」</td><td>交叉面 / HR 面</td><td>W5 复盘</td></tr>
+<tr><td>压力追问</td><td>「这数据不对吧」</td><td>各段皆可能</td><td>全部产出</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<blockquote><p>四步、权重表与盘点按主题补入；权重为<strong>教学建议</strong>，非企业标准，仅用于分配练习精力。</p></blockquote>
+<p><strong>准备四步</strong>：列 6 段流程 → 拆 5 类题型 → 用维度表自评最弱项 → 把 8 周产出映射到题型。</p>
+<p><strong>评估维度与权重表（教学建议）</strong></p>
+<table>
+<thead><tr><th>维度</th><th>权重</th><th>观测点</th><th>对应题型</th></tr></thead>
+<tbody>
+<tr><td>项目深挖与结果</td><td>25</td><td>决策与结果可讲清</td><td>项目深挖</td></tr>
+<tr><td>场景设计与判断</td><td>25</td><td>先定成功再选方案</td><td>场景设计</td></tr>
+<tr><td>技术与数据素养</td><td>20</td><td>指标讲成决策</td><td>技术与数据</td></tr>
+<tr><td>行为与协作</td><td>15</td><td>STAR 落到动作</td><td>行为与协作</td></tr>
+<tr><td>表达与抗压</td><td>15</td><td>结论前置、追问不慌</td><td>压力追问</td></tr>
+</tbody></table>
+<p><strong>准备清单</strong>：□ 短版 / 长版两版讲稿 □ 20 题答题卡 □ 评测集与 PRD □ 8 周文件清单 □ 复盘表 □ 谈薪话术 □ 岗位信息表。</p>
+<p><strong>8 周材料盘点表</strong></p>
+<table>
+<thead><tr><th>周次</th><th>关键产出</th><th>支撑题型</th><th>现场出示</th></tr></thead>
+<tbody>
+<tr><td>W1</td><td>提示词与上下文作业</td><td>场景 / 技术</td><td>讲信息怎么组织</td></tr>
+<tr><td>W2</td><td>评测集与选型结论</td><td>技术与数据</td><td>讲达标线怎么定</td></tr>
+<tr><td>W3</td><td>Agent / RAG 原型</td><td>项目 / 场景</td><td>讲为什么先 RAG</td></tr>
+<tr><td>W4</td><td>PRD + SQL 指标表</td><td>项目 / 技术</td><td>讲成功怎么定义</td></tr>
+<tr><td>W5</td><td>A/B 实验与成本核算</td><td>技术与数据</td><td>讲不显著怎么办</td></tr>
+<tr><td>W6</td><td>主项目 MVP + 路演</td><td>项目深挖（主证据）</td><td>讲决策—结果—复盘</td></tr>
+<tr><td>W7</td><td>简历 + 作品集 + 投递</td><td>全题型入口</td><td>讲一页纸索引</td></tr>
+<tr><td>W8</td><td>答题卡 + 模拟复盘</td><td>全题型</td><td>讲被问倒过什么</td></tr>
+</tbody></table>
+<p>清单化思路见 <a href="https://github.com/jwasham/coding-interview-university">R41 jwasham/coding-interview-university</a> 的「按天清单 + 知识地图」；维度锚点见 <a href="https://github.com/RefoundAI/lenny-skills">R06 RefoundAI/lenny-skills</a> 的技能清单。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/jwasham/coding-interview-university">R41 jwasham/coding-interview-university</a></td><td>准备无从下手 → 拆成按天清单并配地图 → 动作不遗漏（定性） → <strong>用清单替代到处找题</strong></td></tr>
+<tr><td><a href="https://github.com/RefoundAI/lenny-skills">R06 RefoundAI/lenny-skills</a></td><td>自评无标准 → 列成可勾选项 → 自评有锚点（定性） → <strong>先有维度表，再谈补哪块</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>讲师动作</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>凭感觉说「面试问什么」</td><td>贴成乱序墙</td></tr>
+<tr><td>讲授</td><td>6 段 + 5 类 + 权重表</td><td>只讲地图</td></tr>
+<tr><td>演示</td><td>把 W6 产出填进盘点表</td><td>边填边念文件在哪</td></tr>
+<tr><td>练习</td><td>各填四表并互查缺口</td><td>抓「讲不出」的格子</td></tr>
+<tr><td>总结</td><td>标出全班最弱维度</td><td>明确 D2/D3 补哪类题</td></tr>
+</tbody></table>
+<p>板书：左侧 6 段竖流程，右侧 5 类题型，中间箭头连「8 周产出」。常见误区：权重表当企业标准；只盘作品集不盘复盘；忽略谈薪也是一段。</p>
+<p>生活类比：<strong>自驾游</strong>——流程是导航，题型是关卡，产出是后备箱备件；没地图上路，第一个岔路口就慌。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考答案要点 / 评分 rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>画 6 段流程图并标最弱一段</td><td>六段齐全、弱项有依据</td></tr>
+<tr><td>个人</td><td>填盘点表，找 ≥3 处缺口</td><td>每周有产出、题型、出示方式</td></tr>
+<tr><td>小组</td><td>用权重表互评最该补的维度</td><td>动作具体到题号或文件</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：6 段不是每家都一样，但是最大公约数。</strong> 顺序会变，按地图准备不会漏。</li>
+<li><strong>结论：权重表不能照搬给企业看。</strong> 它是分配自己练习时间的教学建议。</li>
+<li><strong>结论：没有业务面经验也能答。</strong> 用原行业的用户与流程理解迁移，讲判断不讲资历。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>面试全景地图</td><td>Interview Map</td><td>流程×题型×维度×材料四表</td><td>与题库混淆</td></tr>
+<tr><td>交叉面</td><td>Cross Interview</td><td>协作方考一致性</td><td>与加面混淆</td></tr>
+<tr><td>题型地图</td><td>Question Taxonomy</td><td>5 类问法与出现段</td><td>与随机题混淆</td></tr>
+<tr><td>证据链</td><td>Evidence Chain</td><td>产出与回答可追溯</td><td>与作品集混淆</td></tr>
+<tr><td>评估维度</td><td>Rubric Dimension</td><td>打分的能力项</td><td>与企业标准混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/jwasham/coding-interview-university">R41 jwasham/coding-interview-university</a>：看清单与知识地图结构，解决「准备无地图」。</li>
+<li><a href="https://github.com/RefoundAI/lenny-skills">R06 RefoundAI/lenny-skills</a>：看技能清单分类，解决「自评无锚点」。</li>
+<li><a href="https://github.com/resumejob/awesome-resume">R39 resumejob/awesome-resume</a>：看简历模板栏目，解决「材料怎么出示」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：地图不是用来背的，是用来在岔路口不慌的——今晚先清点好后备箱，明天才敢上路。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

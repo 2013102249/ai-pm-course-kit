@@ -523,6 +523,107 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>入行 100 问 · 76. 模型升级了，产品要做哪些事？</h3>
 <p>模型厂商发布新版本，不要第一时间跟着升级，把升级当成一个正式项目来管。第一步，看变更说明：能力提升了什么、已知问题是什么、价格变没变、旧版本什么时候下线。第二步，拿你的评估集跑一遍新模型，对比分数：整体效果、分场景效果、badcase 类型有没有变化、单次成本涨没涨。第三步，小范围灰度：拿一部分真实流量对比新旧版本，观察真实用户反馈。</p>
 <p>评估通过再全量切换，切换时间选在有人值守的时段，留好一键回退的能力。特别提醒两件事：一是行为变化——新模型可能突然变得更"话痨"或格式变了，下游解析会出问题；二是不要默认升级就能解决老问题——把之前的老 badcase 拿到新模型上专门复测一遍。模型是产品的地基，换地基要在停工的窗口做，不能边盖楼边换。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：AI PRD 与传统 PRD 的差别不是「多写几页」，而是<strong>必须写死不确定性</strong>：模型、提示词、知识库、评测集、兜底、成本都要变成可验收条款。</p></blockquote>
+<ol>
+<li>画出差异表，至少列出 6 项差异。</li>
+<li>写出完整 12 章目录，逐章说明「写什么、颗粒度、常见错误」。</li>
+<li>结合模板资源，写出主项目 PRD 前 3 章初稿。</li>
+</ol>
+<h3>核心概念</h3>
+<p><strong>结论：传统 PRD 描述「确定的功能」，AI PRD 描述「带概率的能力 + 出错时怎么办」。</strong></p>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>不确定性条款</td><td>把概率行为写成可验收边界</td><td>当成普通输入输出写</td></tr>
+<tr><td>评测集与验收线</td><td>每个 AI 能力挂一组固定用例与通过线</td><td>与「上线后再看」混淆</td></tr>
+<tr><td>提示词与上下文</td><td>是 PRD 一等章节，不是研发细节</td><td>塞进附录或不写</td></tr>
+<tr><td>非目标</td><td>本版明确不做的能力边界</td><td>与「二期再说」混淆</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<blockquote><p>以下差异表与 12 章目录模板为按 W4D2 主题补入的教学内容。</p></blockquote>
+<p><strong>框架 1｜AI PRD 与传统 PRD 差异表</strong></p>
+<table>
+<thead><tr><th>维度</th><th>传统 PRD</th><th>AI 产品 PRD</th></tr></thead>
+<tbody>
+<tr><td>输出确定性</td><td>输入相同则输出相同</td><td>同输入可能不同，需写容差</td></tr>
+<tr><td>验收方式</td><td>功能点通过即完成</td><td>评测集达线才算完成</td></tr>
+<tr><td>核心章节</td><td>流程、交互、字段</td><td>追加模型/提示词/上下文/知识库</td></tr>
+<tr><td>失败描述</td><td>只写异常报错</td><td>必须写降级链路与告知话术</td></tr>
+<tr><td>性能口径</td><td>响应时间</td><td>追加 P95 延迟与 Token 成本/次</td></tr>
+<tr><td>合规范围</td><td>权限与隐私</td><td>追加内容安全、越权、幻觉风险</td></tr>
+<tr><td>变更触发</td><td>需求变更</td><td>模型/提示词一改即需回归评测</td></tr>
+</tbody></table>
+<p><strong>框架 2｜12 章 PRD 目录模板（写什么 / 颗粒度 / 常见错误）</strong></p>
+<table>
+<thead><tr><th>章节</th><th>写什么</th><th>写到什么颗粒度</th><th>常见错误</th></tr></thead>
+<tbody>
+<tr><td>1 背景</td><td>用户问题与现状证据</td><td>引用访谈结论与四层编号</td><td>写行业趋势、不写证据</td></tr>
+<tr><td>2 目标与非目标</td><td>本版要达成与明确不做</td><td>目标可量化，非目标逐条列</td><td>只写目标、漏非目标</td></tr>
+<tr><td>3 用户与场景</td><td>角色、任务、触发时机</td><td>每场景一条「入口—动作—出口」</td><td>用画像代替场景</td></tr>
+<tr><td>4 流程</td><td>主链路与分支</td><td>每步输入、输出、负责人</td><td>只画理想路径</td></tr>
+<tr><td>5 模型与提示词</td><td>选型、提示词版本、参数</td><td>提示词原文入档并带版本号</td><td>只写「用大模型」</td></tr>
+<tr><td>6 上下文与知识库</td><td>检索范围、切片、更新频率</td><td>字段级定义与召回口径</td><td>与模型章节混写</td></tr>
+<tr><td>7 评测集与验收线</td><td>固定用例、评分标准、通过线</td><td>每条用例有期望输出与判定规则</td><td>写「回答更准」</td></tr>
+<tr><td>8 异常与兜底</td><td>异常清单与降级路径</td><td>关联 D3 五列表</td><td>只写「提示错误」</td></tr>
+<tr><td>9 成本与性能</td><td>Token 成本/次、P95 延迟上限</td><td>给出上限值与超限动作</td><td>认为上线后才管</td></tr>
+<tr><td>10 合规与隐私</td><td>数据留存、脱敏、内容安全</td><td>逐条对应自检清单</td><td>只写「符合法规」</td></tr>
+<tr><td>11 埋点与指标</td><td>事件名、属性、口径</td><td>字段级定义，关联 D4 指标树</td><td>指标先于事件定义</td></tr>
+<tr><td>12 排期与依赖</td><td>里程碑、外部依赖、风险</td><td>任务可验收、依赖有责任人</td><td>只写日期不写交付物</td></tr>
+</tbody></table>
+<p><strong>框架 3｜写作顺序</strong>：先 2（边界）→ 3（对象）→ 4（链路）→ 5/6（能力）→ 7（完成标准）→ 8/9/10/11（约束）→ 12（排期）；第 1 章最后补，避免用背景代替结论。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/KhazP/vibe-coding-prompt-template">R24 KhazP/vibe-coding-prompt-template</a></td><td>写 PRD 常漏「非目标」「验收线」 → 把 PRD 做成固定字段模板、逐字段必填 → 12 章一次成型 → <strong>模板即 Checklist</strong>，用结构保不漏章</td></tr>
+<tr><td><a href="https://github.com/openai/openai-cookbook">R27 openai/openai-cookbook</a></td><td>PRD 写「秒级、绝不答错」 → 用官方示例核对能力边界后改写验收线 → 条款工程可兑现 → <strong>验收线要有可运行范式背书</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>对比两份 PRD：一份只写功能，一份写全 12 章</td></tr>
+<tr><td>讲授</td><td>差异表逐项讲，重点讲「不确定性」</td></tr>
+<tr><td>演示</td><td>把第 7 章「回答更准」改写成可判定验收线</td></tr>
+<tr><td>练习</td><td>各组写主项目前 3 章，互查非目标</td></tr>
+<tr><td>总结</td><td>收束：没有验收线的 PRD 不能进评审</td></tr>
+</tbody></table>
+<p>板书：中间画 12 章目录树，红笔圈出最常漏的 2、7、11 章。生活类比：<strong>传统 PRD 像家常菜谱写「盐少许」，AI PRD 必须写「盐 3 克、火候 4 分钟、咸了怎么补救」</strong>——不写死颗粒度，每个厨师做出来的都不是同一道菜。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>列出 6 项差异并各配一句说明</td><td>6 项齐全 6 分、说明指向验收或兜底 4 分</td></tr>
+<tr><td>个人</td><td>把「回答更准」改写为可判定验收线</td><td>含固定用例 4 分、通过线 3 分、判定规则 3 分（数字标注教学假设）</td></tr>
+<tr><td>小组</td><td>互评彼此 12 章目录，标出最易漏三章及补法</td><td>指出 2/7/11 章 6 分、补法可执行 4 分</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：提示词必须进正文并带版本号。</strong> 它是能力定义，不是研发私货。</li>
+<li><strong>结论：验收线要「可判定」，不要「更智能」。</strong> 写成用例数加通过线加判定规则。</li>
+<li><strong>结论：非目标不是客气话。</strong> 它是评审时挡住范围膨胀的唯一依据。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>产品需求文档</td><td>PRD</td><td>唯一共识的需求文档</td><td>与技术方案混淆</td></tr>
+<tr><td>非目标</td><td>Non-goals</td><td>本版明确不做的范围</td><td>与二期规划混淆</td></tr>
+<tr><td>评测集</td><td>Eval Set</td><td>固定输入加期望输出</td><td>与线上日志混淆</td></tr>
+<tr><td>验收线</td><td>Acceptance Criteria</td><td>可判定通过与否的量化条件</td><td>与目标混淆</td></tr>
+<tr><td>提示词版本</td><td>Prompt Version</td><td>提示词原文的版本标识</td><td>与模型版本混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/KhazP/vibe-coding-prompt-template">R24 KhazP/vibe-coding-prompt-template</a>：看 PRD 与技术方案模板的字段划分，解决「12 章该写什么」。</li>
+<li><a href="https://github.com/openai/openai-cookbook">R27 openai/openai-cookbook</a>：看 API 示例与工程范式，解决「验收线是否可行」的校验。</li>
+<li><a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a>：看「PRD 条目驱动任务」，解决「写到可验收颗粒度」的问题。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：写 AI PRD 像写快递保价单——不光写「寄什么」，还得写「丢了怎么赔」，不肯写赔付条款的单子，没人敢签收。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

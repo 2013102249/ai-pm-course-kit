@@ -286,44 +286,36 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <p>SQL 就四个关键字：SELECT、WHERE、GROUP BY、JOIN。我们把它做成四关，一关一个字，闯过一关你就能读懂一类的活。</p>
 <p><strong>第一关，SELECT——选列。</strong></p>
 <p>SELECT 管的是「要哪些列」，业务上回答「这次要看哪几列」。看屏幕：</p>
-<p>```sql</p>
-<p>SELECT gen_id, is_accepted, cost_yuan FROM gen_records;</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">SELECT gen_id, is_accepted, cost_yuan FROM gen_records;</pre>
 <p>FROM 后面是表名，SELECT 后面是你要的列，逗号隔开。星号表示全要。跑一下——十三条记录，三列。这就是一条完整的 SQL。产品经理日常百分之四十的取数需求，读懂一个 SELECT 就够了。</p>
 <p><strong>第二关，WHERE——筛行。</strong></p>
 <p>SELECT 管列，WHERE 管行，业务上回答「只看哪一部分数据」。这里要提醒一句：<strong>分母从这里开始变</strong>——你一旦加了 WHERE，算出来的比率就只针对筛出来的那部分，口径注释必须跟着改。我只看没被采纳的：</p>
-<p>```sql</p>
-<p>SELECT * FROM gen_records</p>
-<p>WHERE is_accepted = 0;</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">SELECT * FROM gen_records
+WHERE is_accepted = 0;</pre>
 <p>注意三个细节：等号是一个等号，不是两个；字符串要加引号；多个条件用 AND、OR 连接。我加一个日期条件，只看九月三号之后的未采纳记录——WHERE is_accepted = 0 AND gen_date 大于等于单引号 2026-09-03 单引号。跑一下，四条。现在你已经在做「切片」了：从全量数据里切出你关心的那一块。</p>
 <p>学员现在做导学案练习 1：查 2026 年 9 月 3 号当天的生成记录，输出 gen_id、user_id、is_accepted 三列。电脑 / 平板同学跑一遍，手机同学读懂这条查询、口头说出它筛的是哪天后打勾。开始。</p>
 <p>大部分同学写出来了。标准写法：SELECT gen_id, user_id, is_accepted FROM gen_records WHERE gen_date 等于单引号 2026-09-03。有人把列名和条件里的日期搞混了——记住，SELECT 后面是列，WHERE 后面是条件，日期是条件，不是列。</p>
 <p><strong>第三关，GROUP BY——分组。</strong></p>
 <p>前两关你只能「看」，第三关开始你就能「算」了。问题：每个用户一共生成了几次、被采纳了几次？这里正好用上讲术语那段术语 10 的辨析——GROUP BY 是分组、定维度，COUNT / SUM 是聚合、算每组的值，先分组后聚合。</p>
-<p>```sql</p>
-<p>SELECT user_id,</p>
-<p>COUNT(*) AS gen_cnt,</p>
-<p>SUM(is_accepted) AS acc_cnt</p>
-<p>FROM gen_records</p>
-<p>GROUP BY user_id;</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">SELECT user_id,
+COUNT(*) AS gen_cnt,
+SUM(is_accepted) AS acc_cnt
+FROM gen_records
+GROUP BY user_id;</pre>
 <p>GROUP BY user_id 的意思是：按用户分组，每组算一遍。COUNT 星号数行数，SUM 求和——这里有个巧思，is_accepted 是 0 和 1，求和正好等于采纳次数。AS 是起别名，看板上列名直接用别名，养成习惯，这正是术语 10 面试说法里那句。</p>
 <p>SELECT 和 WHERE 各管什么？快速抢答。</p>
 <p>对，SELECT 管列，WHERE 管行，GROUP BY 管组。三关口诀：先筛行，再分组，后选列。学员做练习 2：统计每个用户的生成次数和采纳次数，只留生成三次以上的。提示：加上 HAVING COUNT 星号大于等于三。HAVING 是分组后的过滤，WHERE 是分组前的过滤，这个区分面试也考。开始。</p>
 <p>好，跑出来的同学会看到：只有 user_id 3 满足，生成三次、采纳两次。顺便看一眼全员分布，八个用户里有六个生成次数不超过两次——注意，这本身就是一个留存预警信号，数据会自己说话。</p>
 <p><strong>第四关，JOIN——连表。</strong></p>
 <p>最后的大招。前面所有分析都只有 gen_records 一张表，但我现在问：<strong>哪个渠道的用户质量最高？</strong> 渠道在 users 表，采纳在 gen_records 表，两张表必须连起来。业务上回答的是「跨表的两个事实怎么对上号」。</p>
-<p>```sql</p>
-<p>SELECT u.channel,</p>
-<p>COUNT(*) AS gen_cnt,</p>
-<p>SUM(g.is_accepted) AS acc_cnt,</p>
-<p>ROUND(SUM(g.is_accepted) <em> 1.0 / COUNT(</em>), 2) AS acc_rate</p>
-<p>FROM gen_records g</p>
-<p>JOIN users u ON g.user_id = u.user_id</p>
-<p>GROUP BY u.channel</p>
-<p>ORDER BY acc_rate DESC;</p>
-<p>```</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">SELECT u.channel,
+COUNT(*) AS gen_cnt,
+SUM(g.is_accepted) AS acc_cnt,
+ROUND(SUM(g.is_accepted) * 1.0 / COUNT(*), 2) AS acc_rate
+FROM gen_records g
+JOIN users u ON g.user_id = u.user_id
+GROUP BY u.channel
+ORDER BY acc_rate DESC;</pre>
 <p>逐个拆：FROM gen_records g，给表起短名字 g；JOIN users u，把用户表连进来；ON g.user_id = u.user_id，连接条件——两边靠 user_id 对上号；最后 GROUP BY 渠道，ORDER BY 按采纳率降序。注意这条查询算的正是采纳率，分母是「每个渠道的生成次数」COUNT 星号，分子是 SUM is_accepted——把讲术语那段的对照表第一格对上了。</p>
 <p>跑之前，我故意先跑一个错误版本给大家抓 bug：</p>
 <p>看，采纳率全是 0。为什么？</p>
@@ -523,6 +515,171 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <li>凡是率，先问分子是谁、分母是谁。</li>
 <li>先给结构，再给口径，再切片，再动作。</li>
 </ol>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：指标的作用不是「好看」，而是<strong>让「这个 AI 产品值不值得继续做」变成一道能算的题</strong>。</p></blockquote>
+<ol>
+<li>画出「北极星 + 四层 + AI 五专有」指标树，说明每层回答什么问题。</li>
+<li>读懂 events 表字段定义，说明每个字段支撑哪个指标。</li>
+<li>写出 4 段 SQL，并逐段写出「产品怎么读这个数」。</li>
+</ol>
+<h3>核心概念</h3>
+<p><strong>结论：先定事件与口径，再写 SQL；SQL 只是把已经想清楚的问题算出来。</strong></p>
+<table>
+<thead><tr><th>层</th><th>回答什么问题</th><th>示例指标</th></tr></thead>
+<tbody>
+<tr><td>北极星指标</td><td>核心价值有没有长</td><td>每周成功解决的会话数（教学假设口径）</td></tr>
+<tr><td>输入指标</td><td>来了多少量</td><td>提问数、DAU</td></tr>
+<tr><td>过程指标</td><td>链路走不走得通</td><td>答案展示率、命中率</td></tr>
+<tr><td>结果指标</td><td>价值达没达成</td><td>标记有用率、次日留存</td></tr>
+<tr><td>护栏指标</td><td>有没有为增长牺牲底线</td><td>幻觉率、人工接管率、P95 延迟、Token 成本/次</td></tr>
+</tbody></table>
+<p>AI 特有五指标（口径均为教学假设定义）：<strong>命中率</strong>（检索到可用依据的会话占比）、<strong>幻觉率</strong>（抽检判为编造的答案占比）、<strong>人工接管率</strong>（转人工会话占比）、<strong>Token 成本/次</strong>（单次调用平均推理花费）、<strong>P95 延迟</strong>（95% 请求在此耗时内完成）。易混点：命中率不等于答对率；幻觉率须靠抽检或评测集，不能由模型自报。</p>
+<h3>方法框架</h3>
+<blockquote><p>以下指标树、表结构与 4 段 SQL 为按 W4D4 主题补入的教学内容。<strong>以下表结构与数据均为教学假设</strong>，仅用于练习，不代表任何真实系统或企业经营数据；示例数字一律标注「教学假设」。</p></blockquote>
+<p><strong>框架 1｜指标树模板</strong>：北极星 → 输入/过程/结果/护栏四层 → 挂 AI 五专有 → 每层指定一个「产品动作」（如护栏超线就降级或限流）。</p>
+<p><strong>框架 2｜events 表字段定义（教学假设，以 MySQL 8.0 语法为例）</strong></p>
+<table>
+<thead><tr><th>字段</th><th>类型</th><th>含义</th><th>支撑的指标</th></tr></thead>
+<tbody>
+<tr><td>event_id</td><td>BIGINT</td><td>事件唯一 ID</td><td>全表去重</td></tr>
+<tr><td>user_id</td><td>VARCHAR(64)</td><td>匿名化用户 ID</td><td>DAU、次日留存</td></tr>
+<tr><td>session_id</td><td>VARCHAR(64)</td><td>会话 ID</td><td>漏斗转化</td></tr>
+<tr><td>event_name</td><td>VARCHAR(32)</td><td><code>query_submit</code> / <code>answer_shown</code> / <code>answer_useful</code> / <code>human_handoff</code></td><td>漏斗、命中率</td></tr>
+<tr><td>event_time</td><td>TIMESTAMP</td><td>事件时间</td><td>按天/分位计算</td></tr>
+<tr><td>model_id</td><td>VARCHAR(32)</td><td>模型标识（教学假设 <code>model_a</code> / <code>model_b</code>）</td><td>分组成本/延迟</td></tr>
+<tr><td>is_ai_answer</td><td>TINYINT</td><td>是否由大模型生成（1 是 / 0 规则或人工）</td><td>降级占比</td></tr>
+<tr><td>is_hallucination</td><td>TINYINT</td><td>抽检是否判为幻觉（1 是 / 0 否）</td><td>幻觉率</td></tr>
+<tr><td>is_handoff</td><td>TINYINT</td><td>是否转人工（1 是 / 0 否）</td><td>人工接管率</td></tr>
+<tr><td>token_in / token_out</td><td>INT</td><td>输入/输出 Token 数</td><td>Token 成本/次</td></tr>
+<tr><td>cost_rmb</td><td>DECIMAL(10,4)</td><td>本次调用成本（教学假设，单位元）</td><td>成本分组</td></tr>
+<tr><td>latency_ms</td><td>INT</td><td>端到端延迟（毫秒）</td><td>P95 延迟</td></tr>
+<tr><td>confidence</td><td>DECIMAL(4,3)</td><td>置信度 0–1</td><td>分档展示</td></tr>
+</tbody></table>
+<p><strong>框架 3｜4 段 SQL（每段含注释与「产品怎么读这个数」）</strong></p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">-- SQL 1【教学假设】目标：按天统计日活跃用户数（DAU）
+-- 口径：当天发起过 query_submit 的去重用户数
+SELECT DATE(event_time)       AS dt,
+       COUNT(DISTINCT user_id) AS dau
+FROM events
+WHERE event_name = 'query_submit'
+GROUP BY DATE(event_time)
+ORDER BY dt;</pre>
+<p><strong>产品怎么读这个数</strong>：DAU 回答「有多少人真的来用」，看趋势不看单日；若 DAU 平稳但北极星（成功解决会话数）下滑，说明「人来了却没办成事」，应查过程指标而非拉新。</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">-- SQL 2【教学假设】目标：新用户次日留存（D1 Retention）
+-- 口径：首次提问日为 cohort，次日仍发起 query_submit 记为留存
+WITH first_day AS (
+  SELECT user_id, MIN(DATE(event_time)) AS first_dt
+  FROM events
+  WHERE event_name = 'query_submit'
+  GROUP BY user_id
+),
+next_day AS (
+  SELECT DISTINCT f.user_id, f.first_dt
+  FROM first_day f
+  JOIN events e
+    ON e.user_id = f.user_id
+   AND e.event_name = 'query_submit'
+   AND DATE(e.event_time) = DATE_ADD(f.first_dt, INTERVAL 1 DAY)
+)
+SELECT f.first_dt                                     AS cohort_dt,
+       COUNT(DISTINCT f.user_id)                       AS new_users,
+       COUNT(DISTINCT n.user_id)                       AS retained_d1,
+       ROUND(COUNT(DISTINCT n.user_id) * 1.0
+             / NULLIF(COUNT(DISTINCT f.user_id), 0), 3) AS d1_retention
+FROM first_day f
+LEFT JOIN next_day n
+  ON n.user_id = f.user_id AND n.first_dt = f.first_dt
+GROUP BY f.first_dt
+ORDER BY f.first_dt;</pre>
+<p><strong>产品怎么读这个数</strong>：次日留存回答「第一次用完还愿不愿意回来」。留存低常见根因不是功能少，而是首次就遇到幻觉或答非所问——要回看 D3 兜底与置信度分档，而不是先改界面。</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">-- SQL 3【教学假设】目标：主链路漏斗 提交问题 → 看到答案 → 标记有用
+-- 口径：以 session_id 去重，逐步骤计数并算逐级转化率
+SELECT
+  COUNT(DISTINCT CASE WHEN event_name = 'query_submit'  THEN session_id END) AS step_submit,
+  COUNT(DISTINCT CASE WHEN event_name = 'answer_shown'  THEN session_id END) AS step_shown,
+  COUNT(DISTINCT CASE WHEN event_name = 'answer_useful' THEN session_id END) AS step_useful,
+  ROUND(
+    COUNT(DISTINCT CASE WHEN event_name='answer_shown' THEN session_id END) * 1.0
+    / NULLIF(COUNT(DISTINCT CASE WHEN event_name='query_submit' THEN session_id END), 0)
+  , 3) AS submit_to_shown,
+  ROUND(
+    COUNT(DISTINCT CASE WHEN event_name='answer_useful' THEN session_id END) * 1.0
+    / NULLIF(COUNT(DISTINCT CASE WHEN event_name='answer_shown' THEN session_id END), 0)
+  , 3) AS shown_to_useful
+FROM events;</pre>
+<p><strong>产品怎么读这个数</strong>：<code>submit_to_shown</code> 掉得多，多半是超时、拒答、无答案——查 D3 异常表；<code>shown_to_useful</code> 掉得多，说明答案给了但不靠谱——查幻觉率与评测集。用 <code>NULLIF</code> 防除零，让报表在空数据日也不报错。</p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">-- SQL 4【教学假设】目标：按模型分组对比成本、P95 延迟、幻觉率、人工接管率
+-- 口径：仅统计 is_ai_answer = 1；P95 用窗口函数按延迟排序取 95% 位置
+WITH ranked AS (
+  SELECT model_id, latency_ms, cost_rmb, is_hallucination, is_handoff,
+         ROW_NUMBER() OVER (PARTITION BY model_id ORDER BY latency_ms) AS rn,
+         COUNT(*)     OVER (PARTITION BY model_id)                      AS cnt
+  FROM events
+  WHERE is_ai_answer = 1
+)
+SELECT model_id,
+       COUNT(*)                                                 AS calls,
+       ROUND(AVG(cost_rmb), 4)                                   AS avg_cost_per_call,
+       ROUND(AVG(latency_ms), 0)                                 AS avg_latency_ms,
+       MAX(CASE WHEN rn &lt;= CEIL(cnt * 0.95) THEN latency_ms END) AS p95_latency_ms,
+       ROUND(AVG(is_hallucination), 3)                            AS hallucination_rate,
+       ROUND(AVG(is_handoff), 3)                                  AS handoff_rate
+FROM ranked
+GROUP BY model_id
+ORDER BY avg_cost_per_call;</pre>
+<p><strong>产品怎么读这个数</strong>：这是「换不换模型」的决策依据——便宜但 P95 延迟高、幻觉率高的模型未必真省；护栏指标任一超线，就按 D3 顺序把流量切走。<code>MAX(CASE WHEN rn &lt;= CEIL(cnt*0.95) ...)</code> 之所以是 P95，是因为 <code>rn</code> 已按延迟升序排好，取前 95% 里最大的延迟值即为分位点。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a></td><td>想看漏斗却无会话维度 → 先定事件名与属性，再定义指标 → 漏斗、留存、实验共用一套事件模型 → <strong>PRD 第 11 章必须倒推埋点</strong></td></tr>
+<tr><td><a href="https://github.com/datawhalechina/wonderful-sql">R26 datawhalechina/wonderful-sql</a></td><td>看得懂指标、写不出 SQL → 按「分组 → 去重 → 连接 → 窗口函数」四步练中文习题 → 4 段 SQL 可独立写出 → <strong>先讲产品读法再讲语法</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>问「DAU 涨了，产品算成功吗」，引出护栏指标</td></tr>
+<tr><td>讲授</td><td>指标树四层 + AI 五专有 + events 字段</td></tr>
+<tr><td>演示</td><td>现场跑 SQL 1 与 SQL 4，边跑边念「产品怎么读」</td></tr>
+<tr><td>练习</td><td>各组改写 SQL 3 的漏斗步骤并解释结论</td></tr>
+<tr><td>总结</td><td>收束：每个指标都要挂一个产品动作</td></tr>
+</tbody></table>
+<p>板书：左侧画指标树，右侧写「SQL → 数字 → 决策」三段箭头。生活类比：<strong>看指标像看体检报告——不能只盯体重（结果指标），还得看血压血脂（护栏指标）和每天走了几步（过程指标）</strong>，体重降了但血脂爆表不算健康。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>说明 <code>is_hallucination</code> 与 <code>confidence</code> 各支撑什么、为何不能互替</td><td>口径说清 4 分、置信度非准确率 3 分、说明抽检来源 3 分</td></tr>
+<tr><td>个人</td><td>给 SQL 3 增加一步 <code>human_handoff</code> 并写出转化率</td><td>语法可运行 4 分、防除零 3 分、读法指向兜底 3 分</td></tr>
+<tr><td>小组</td><td>假设 <code>model_b</code> 成本更低但 P95 更高（教学假设），给出选型结论</td><td>同时引用成本与护栏 4 分、给出降级动作 3 分、结论不写「视情况而定」3 分</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：先看护栏再看增长。</strong> 幻觉率或 P95 超线时，DAU 涨得越快风险越大。</li>
+<li><strong>结论：P95 不能换成平均值。</strong> 平均值会把把用户拖走的长尾慢请求藏起来。</li>
+<li><strong>结论：幻觉率靠抽检或评测集，不靠模型自报。</strong> 自报置信度只用于分档展示。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>日活跃用户</td><td>DAU</td><td>当日去重活跃用户数</td><td>与 PV 混淆</td></tr>
+<tr><td>次日留存</td><td>D1 Retention</td><td>首日新增中次日仍活跃比例</td><td>与回访率口径混淆</td></tr>
+<tr><td>漏斗转化</td><td>Funnel Conversion</td><td>主链路逐级转化率</td><td>与单点点击率混淆</td></tr>
+<tr><td>P95 延迟</td><td>P95 Latency</td><td>95% 请求在此耗时内完成</td><td>与平均延迟混淆</td></tr>
+<tr><td>窗口函数</td><td>Window Function</td><td>不折叠行、按分区排序计算</td><td>与 GROUP BY 聚合混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a>：看事件模型、漏斗与留存定义，解决「指标口径怎么定」。</li>
+<li><a href="https://github.com/datawhalechina/wonderful-sql">R26 datawhalechina/wonderful-sql</a>：看分组、连接与窗口函数章节及习题，解决「SQL 怎么写得出来」。</li>
+<li><a href="https://github.com/freeCodeCamp/freeCodeCamp">R42 freeCodeCamp/freeCodeCamp</a>：看数据基础练习，解决零基础学员补前置知识。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：写 SQL 像查水电表——表本身不省电，但哪天数字突然不对，你能第一时间知道是哪儿漏水了。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

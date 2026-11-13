@@ -569,6 +569,90 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>入行 100 问 · 10. 做了几年 AI 产品经理，接下来能往哪走？</h3>
 <p>看你在项目里哪一段越来越拿手。对模型能力和技术边界越来越敏感，可以往平台产品、大模型产品方向走；擅长把 AI 塞进具体行业解决真问题，可以深耕行业解决方案，往业务负责人走；能带着产品和算法两个团队打完整仗，可以往产品负责人、创业方向走。</p>
 <p>AI 产品经理这个头衔本身不会一直稀缺，但"懂 AI 的产品判断力"会一直值钱。把每个项目里的方法论沉淀下来——怎么评估、怎么设计边界、怎么控成本——这些换个行业还能用。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>说出平台型、应用型、模型型、数据型四类 AI PM 的职责边界与核心交付物。</li>
+<li>画出 AI PM 与传统 PM 的差异表，并标出自己最可能的入口岗位。</li>
+<li>写出个人能力迁移表与 8 周学习契约，就业目标落到一线城市可投岗位。</li>
+</ol>
+<h3>核心概念</h3>
+<p>结论前置：AI PM 是「对用大模型解决用户问题并可持续交付负责的人」，不是「会写提示词的人」。岗位类型的划分依据是「你交付什么、对什么指标负责」，不是公司大小。</p>
+<table>
+<thead><tr><th>岗位类型</th><th>核心交付物</th><th>对什么负责</th><th>转岗友好入口</th></tr></thead>
+<tbody>
+<tr><td>平台型</td><td>模型 / 能力平台、编排工具</td><td>稳定性、成本、复用率</td><td>有工程或测试背景者</td></tr>
+<tr><td>应用型</td><td>面向用户的 AI 功能或产品</td><td>用户价值、留存、转化</td><td>UI 设计、运营背景者</td></tr>
+<tr><td>模型型</td><td>模型选型、评测、微调方案</td><td>效果指标、边界定义</td><td>需补技术判断力</td></tr>
+<tr><td>数据型</td><td>数据、知识库、评测集</td><td>数据质量、覆盖度</td><td>软件测试背景者</td></tr>
+</tbody></table>
+<p>与传统 PM 的差异（结论前置：差异集中在「不确定性」和「验收方式」）：</p>
+<table>
+<thead><tr><th>维度</th><th>传统 PM</th><th>AI PM</th></tr></thead>
+<tbody>
+<tr><td>需求确定性</td><td>输入到输出基本可预期</td><td>同输入可能不同输出</td></tr>
+<tr><td>验收方式</td><td>功能通过即验收</td><td>需用评测集与评分规则验收</td></tr>
+<tr><td>异常兜底</td><td>报错页即可</td><td>必须写幻觉、越权、拒答兜底</td></tr>
+<tr><td>成本结构</td><td>主要是研发人力</td><td>每次调用都有 Token 成本</td></tr>
+<tr><td>核心协作</td><td>设计、研发、测试</td><td>增加算法 / 评测 / 合规角色</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<p><strong>职责边界判定三步</strong>：① 先问「这个需求用户价值是什么」——归 AI PM；② 再问「模型能不能稳定做到」——拉算法做可行性判断；③ 最后问「做错了怎么兜底」——写进 PRD 异常章节。三步走完，边界自然清晰。</p>
+<p>跨行业转岗能力迁移表（本章补充项，大纲未单列）：</p>
+<table>
+<thead><tr><th>原岗位</th><th>可迁移能力</th><th>主要缺口</th><th>本周补法</th></tr></thead>
+<tbody>
+<tr><td>UI 设计</td><td>用户视角、交互流程、体验验收</td><td>技术可行性判断、指标定义</td><td>D2 补概念、D4 补形态拆解</td></tr>
+<tr><td>软件测试</td><td>用例设计、边界意识、验收标准</td><td>用户研究、价值判断</td><td>D1 补岗位全景、D5 补定位</td></tr>
+<tr><td>运营</td><td>数据度量、增长意识、内容组织</td><td>模型边界、PRD 结构化</td><td>D2 补原理、D3 补模板</td></tr>
+</tbody></table>
+<p>8 周学习契约模板：目标岗位（一线城市 / 应用型 AI PM）｜每周产出（5 讲各 1 件）｜验收标准（可展示、可讲解决策）｜就业目标（8 周内完成可投递作品集，此为教学假设目标，按个人起点调整）。</p>
+<h3>案例拆解</h3>
+<p><strong><a href="https://github.com/RefoundAI/lenny-skills">R06 RefoundAI/lenny-skills</a></strong>：场景是「产品管理到底要哪些能力」缺乏清单；决策是把一线播客沉淀为 86 项可点选的技能；结果是转岗者能逐项自评。场景 → 决策 → 结果 → 可迁移点：把模糊岗位拆成可勾选能力项，正是本章能力雷达的做法。</p>
+<p><strong><a href="https://github.com/1c7/chinese-independent-developer">R38 1c7/chinese-independent-developer</a></strong>：场景是学员不知道 AI 产品长什么样；决策是用真实项目列表做案例池；结果是可按形态归类观察。可迁移点：先看别人做了什么，再反推自己能做什么，比空想岗位更靠谱。</p>
+<h3>课堂讲解要点</h3>
+<p>结论前置：本讲先定位、后签约，不当堂签契约就等于没开营。可按班级节奏调整。</p>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>板书</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>一线城市岗位画像</td><td>「四类岗位」四象限</td></tr>
+<tr><td>讲授</td><td>职责边界 + 差异表</td><td>差异表 5 行</td></tr>
+<tr><td>演示</td><td>现场填能力迁移表</td><td>迁移表三列</td></tr>
+<tr><td>练习</td><td>写 8 周契约</td><td>契约四栏</td></tr>
+<tr><td>总结</td><td>收契约 + 预告 D2</td><td>一句话类比</td></tr>
+</tbody></table>
+<p>生活类比：转岗像「换个菜系当主厨」——刀工和火候意识（可迁移能力）还在，但得先认清新厨房的灶台和食材（模型边界），不能照搬老菜谱。常见误区：把「以前做过产品」直接等同于「能做 AI PM」，忽略不确定性与评测这两道新门槛。</p>
+<h3>练习与讨论题</h3>
+<ul>
+<li>个人练习 1：填能力迁移表，可迁移能力与缺口各写 ≥3 条。参考要点：须具体到行为，不写「沟通能力强」这类空话。</li>
+<li>个人练习 2：写 8 周学习契约，目标岗位写到「一线城市 / 应用型 AI PM」级别。参考要点：每周产出可展示、可讲解决策。</li>
+<li>小组研讨：四类岗位里哪一类对 UI 设计 / 软件测试 / 运营背景最友好，为什么。评分 rubric：结论明确 2 分、用差异表做依据 2 分、说出至少 1 个缺口 1 分。</li>
+</ul>
+<h3>常见问题</h3>
+<ol>
+<li><strong>Q：转岗第一份该投哪类岗位？</strong> 应用型优先：它最看重用户视角与体验验收，正是设计 / 测试 / 运营背景的迁移优势区。</li>
+<li><strong>Q：平台型是不是更「技术」、更不友好？</strong> 不绝对。有测试背景者对稳定性与用例的理解反而是优势，缺口只是补一层模型常识。</li>
+<li><strong>Q：8 周真能就业吗？</strong> 课程只能保证产出可投递的作品集与面试能力；「8 周内就业」是教学假设目标，须按个人起点与当周招聘信息校准。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文 / 缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>AI 产品经理</td><td>AI PM</td><td>对 AI 用户价值与交付负责</td><td>不等于提示词操作员</td></tr>
+<tr><td>职责边界</td><td>Role Boundary</td><td>谁对哪段结果最终负责</td><td>不等于任务分工</td></tr>
+<tr><td>应用型 PM</td><td>Application PM</td><td>交付面向用户的 AI 功能</td><td>与平台型相对</td></tr>
+<tr><td>能力迁移</td><td>Skill Transfer</td><td>旧岗位能力在新岗位的复用</td><td>不等于「从零开始」</td></tr>
+<tr><td>学习契约</td><td>Learning Contract</td><td>目标 / 产出 / 验收的书面约定</td><td>不等于课程表</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><strong><a href="https://github.com/RefoundAI/lenny-skills">R06 RefoundAI/lenny-skills</a></strong>：看「用户研究 / 策略」类技能项，解决「岗位到底要什么能力」。</li>
+<li><strong><a href="https://github.com/microsoft/generative-ai-for-beginners">R01 microsoft/generative-ai-for-beginners</a></strong>：看课程目录与入门课定位，解决「技术通识从哪起步」。</li>
+<li><strong><a href="https://github.com/1c7/chinese-independent-developer">R38 1c7/chinese-independent-developer</a></strong>：看项目列表分类，解决「AI 产品到底有哪些形态」的直观印象。</li>
+</ul>
+<h3>本讲收尾</h3>
+<p>开营像给新房画户型图：先定哪间归你、哪面墙不能拆，后面八周才不会把力气花在别人的房间里。</p>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

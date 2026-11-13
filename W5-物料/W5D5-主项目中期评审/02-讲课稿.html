@@ -461,6 +461,119 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <tr><td>时间不够、清算被压缩</td><td>「每组只裁决 P0 和争议项，P2 默认成立、课后书面确认，周一晨会补过审。」</td></tr>
 <tr><td>手机 / 平板档掉队</td><td>「用备忘录四行文本写『功能／等级／依据／工时』就行，投屏由同组电脑同学共享，不占用你的现场时间。」</td></tr>
 </tbody></table>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<ol>
+<li>按交付物清单自查主项目中期材料是否齐全（5 类），指出缺项。</li>
+<li>用 100 分评分表给一份中期材料打分，写出扣分依据。</li>
+<li>针对「未达标」用范围裁剪决策框架给出下阶段计划与里程碑 ⑤ 新门槛。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论：中期评审不是「汇报进度」，而是「用证据判断这个项目值不值得继续投、该不该缩小范围」。</p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话定义</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>里程碑 ④</td><td>W5D5 中期评审冻结节点</td><td>与 ③、⑤ 混淆</td></tr>
+<tr><td>交付物</td><td>可勾选、可验收的材料集合</td><td>与 Demo 混淆</td></tr>
+<tr><td>范围裁剪</td><td>保核心链路、砍锦上添花</td><td>与「悄悄不做」混淆</td></tr>
+</tbody></table>
+<p>五类交付物的合格证据（结论前置：没有证据的功能不算完成）：</p>
+<table>
+<thead><tr><th>交付物</th><th>具体内容</th><th>合格证据</th><th>常见缺项</th></tr></thead>
+<tbody>
+<tr><td>已实现功能</td><td>核心链路功能清单</td><td>可演示 + 对应 PRD 条目</td><td>只有截图、无版本号</td></tr>
+<tr><td>评测报告</td><td>评测集、回归分、失败样本</td><td>样本明细 + 版本冻结记录</td><td>只报均分、无失败例</td></tr>
+<tr><td>实验/数据</td><td>AB 实验或留存/漏斗数据</td><td>实验设计表 + 结果说明</td><td>只报「变好了」、无口径</td></tr>
+<tr><td>成本表</td><td>单次/日/月成本与盈亏平衡</td><td>逐行可复算的假设与代入</td><td>漏固定成本、无护栏</td></tr>
+<tr><td>风险与下阶段计划</td><td>风险看板 + 里程碑 ⑤ 计划</td><td>Owner + 触发信号 + 新验收线</td><td>计划无门槛</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<p><strong>框架一：交付物自查清单</strong></p>
+<p>按上表逐项打勾，附「证据文件名 + 版本号 + Owner」；缺任一格即标「待补」，不许口头替代。</p>
+<p><strong>框架二：100 分评分表</strong></p>
+<blockquote><p>分值与通过线均为教学设计（「教学假设」），不对应任何真实评分标准。</p></blockquote>
+<table>
+<thead><tr><th>维度</th><th>分值（教学假设）</th><th>评分要点</th><th>扣分情形</th></tr></thead>
+<tbody>
+<tr><td>功能完成度</td><td>25</td><td>核心链路跑通、与 PRD 对齐</td><td>缺版本号、链路断点</td></tr>
+<tr><td>评测报告质量</td><td>20</td><td>评测集固定、含失败样本</td><td>只报均分、无明细</td></tr>
+<tr><td>实验与数据严谨性</td><td>20</td><td>主指标/护栏/口径齐全</td><td>前后对比冒充实验</td></tr>
+<tr><td>成本核算完整性</td><td>15</td><td>五步可复算、区分毛利与经营结果</td><td>漏固定成本</td></tr>
+<tr><td>风险与下阶段计划</td><td>10</td><td>风险有 Owner 与触发信号</td><td>计划无验收线</td></tr>
+<tr><td>表达与证据链</td><td>10</td><td>结论可回溯到原始数据</td><td>只有结论、无出处</td></tr>
+<tr><td>合计</td><td>100</td><td>通过线 70 分（教学假设）</td><td>低于通过线进入裁剪</td></tr>
+</tbody></table>
+<p><strong>框架三：评审常见问答（结论前置 + 证据要求）</strong></p>
+<table>
+<thead><tr><th>评委问法</th><th>结论前置的回答</th><th>必须出示的证据</th></tr></thead>
+<tbody>
+<tr><td>效果波动怎么解释</td><td>先看版本是否冻结，再看失败类型分布</td><td>评测集样本明细、版本记录</td></tr>
+<tr><td>成本超了怎么办</td><td>先走降本五杠杆并复核护栏</td><td>成本表、护栏快照</td></tr>
+<tr><td>样本不够怎么下结论</td><td>明确说「证据不足」，按不显著决策树处理</td><td>实验设计表、观测量说明</td></tr>
+<tr><td>评测集是否覆盖边界</td><td>边界与异常用例须单列</td><td>评测集用例清单</td></tr>
+<tr><td>凭什么相信下阶段达标</td><td>给出新验收线与里程碑 ⑤ 门槛</td><td>裁剪决策表、计划表</td></tr>
+</tbody></table>
+<p><strong>框架四：「未达标如何裁剪范围」决策框架</strong></p>
+<ol>
+<li>只保「核心价值验证」链路，先砍锦上添花；2. 按「评测得分低 × 成本高」排序优先砍；3. 成本问题先用降本五杠杆救；4. 重设里程碑 ⑤ 目标与门槛；5. 砍掉的进 Backlog 并公示。</li>
+</ol>
+<p>模板（裁剪决策表）：</p>
+<table>
+<thead><tr><th>功能</th><th>价值证据</th><th>实现成本</th><th>评测得分</th><th>决策（保留/裁剪/降级）</th><th>理由</th></tr></thead>
+<tbody>
+<tr><td>教学示例行</td><td>有/无</td><td>高/中/低</td><td>分值（教学假设）</td><td>保留/裁剪/降级</td><td>是否对齐核心链路</td></tr>
+</tbody></table>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a></td><td>证明「用户真在用」却只有口头描述 → 用事件漏斗与留存曲线取证 → 结论可复算 → <strong>数据类交付物必须可复算，截图不算数</strong></td></tr>
+<tr><td><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a></td><td>评测只给均分、追问就答不上 → 附调用样本与评分明细 → 证据链闭合 → <strong>评测报告要能回放每次调用</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<blockquote><p>课堂节奏可按班级调整。</p></blockquote>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>按清单自查、标待补项</td></tr>
+<tr><td>讲授</td><td>100 分表 + 问答 + 裁剪框架</td></tr>
+<tr><td>演示</td><td>模拟评审：陈述与质询</td></tr>
+<tr><td>练习</td><td>打分、扣分依据、裁剪方案</td></tr>
+<tr><td>总结</td><td>收束：定里程碑 ⑤ 门槛</td></tr>
+</tbody></table>
+<p>板书：左写 100 分六维度、右画裁剪决策树，中间圈红「证据链」。生活类比：<strong>中期评审像房子盖到一半请监理来验收</strong>——监理不数砌了多少砖，只看承重墙合不合格、钱够不够封顶；不达标就先减几个房间，而不是硬着头皮往上盖。讲师提示：功能没做完可以过，但核心链路必须有评测与数据。常见误区：用演示代替评测报告；只报好数据；裁剪时偷偷不报。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>用 100 分表给自设中期材料打分，写 3 条扣分依据</td><td>六维度覆盖 4 分、扣分指向证据 3 分、总分可复核 3 分</td></tr>
+<tr><td>个人</td><td>列出自己 5 类交付物的现状与缺项</td><td>五类齐全 4 分、缺项定位准确 3 分、给出补齐动作 3 分</td></tr>
+<tr><td>小组</td><td>对「成本超标 + 评测不达标」出裁剪方案与新门槛</td><td>保核心链路 4 分、先降本再砍功能 3 分、新门槛可验收 3 分</td></tr>
+</tbody></table>
+<p>参考要点：扣分落到「证据缺项」而非「印象不好」；裁剪顺序「先砍锦上添花 → 再降本五杠杆 → 最后才动核心链路」；里程碑 ⑤ 新门槛写成可判定条件（数值为教学假设），同步更新 PRD。</p>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：功能没做完也能过中期。</strong> 前提是核心链路已用评测与数据验证。</li>
+<li><strong>结论：评测分数不高不要掩饰。</strong> 如实列入风险、走裁剪框架。</li>
+<li><strong>结论：裁剪不等于项目失败。</strong> 收敛到能验证价值的最小集，正是 MVP 本意。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>里程碑 ④</td><td>Milestone ④</td><td>W5D5 中期评审冻结节点</td><td>与 ③、⑤ 混淆</td></tr>
+<tr><td>交付物</td><td>Deliverable</td><td>可勾选、可验收的材料集合</td><td>与 Demo 混淆</td></tr>
+<tr><td>范围裁剪</td><td>Scope Cut</td><td>保核心链路、砍非必要功能</td><td>与「悄悄不做」混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/PostHog/posthog">R25 PostHog/posthog</a>：看漏斗与留存，解决「数据类交付物取证」。</li>
+<li><a href="https://github.com/langfuse/langfuse">R31 langfuse/langfuse</a>：看评测与追踪，解决「评测报告证据链」。</li>
+<li><a href="https://github.com/growthbook/growthbook">R28 growthbook/growthbook</a>：看实验报告，解决「实验材料怎么写」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：中期评审就像盖到一半请监理来验房——人家不夸你砖砌得快，只问承重墙稳不稳、钱够不够封顶；该减的房间痛快减掉，比硬撑到封顶再返工，才是真把房子盖成的样子。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

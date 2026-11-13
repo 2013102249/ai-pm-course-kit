@@ -545,6 +545,133 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <h3>入行 100 问 · 46. 刚入职 AI 产品经理，头一个月先摸清哪些事？</h3>
 <p>先把公司的 AI 能力用一遍。拿测试账号把自家产品从头到尾走一遍：能做什么、哪里容易出错、提示词和知识库怎么配置的。再读一遍核心文档：产品定位、目标用户、关键数据、过往的评估报告和 badcase 记录。这两件事做完，你对产品的理解就超过了大多数人。</p>
 <p>然后跟一遍流程：一个需求从哪里来、怎么评审、算法怎么接、效果怎么验收、上线后谁看数据。把团队的协作约定摸清楚——哪些材料能给模型、评估集放在哪、badcase 记录在哪。最后找负责人要一件能独立完成的小事：补几条测试题、整理一份竞品分析、修一个体验问题。尽快完整走一遍，比旁听十次会议有用。</p>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：投递不是「一次性海投」，而是<strong>JD → 证据 → 渠道 → 台账 → 复盘</strong>的可追溯闭环。</p></blockquote>
+<ol>
+<li>填 JD 解析表，把 5 个关键词映射成能力证据。</li>
+<li>写渠道组合与优先级、跟进节奏，建立投递台账。</li>
+<li>用邀约响应模板回一封邀约，说出 6 类陷阱的规避动作。</li>
+</ol>
+<h3>核心概念</h3>
+<blockquote><p>结论前置：<strong>每次投递都要能回答「我用哪条证据对应 JD 哪条要求」；台账是这套回答的记录本。</strong></p></blockquote>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>展开</th></tr></thead>
+<tbody>
+<tr><td>JD 解析</td><td>关键词 → 能力证据</td><td>与读一遍 JD 混</td></tr>
+<tr><td>渠道组合</td><td>按优先级搭配渠道</td><td>与全平台海投混</td></tr>
+<tr><td>投递台账</td><td>每次投递的可追溯记录</td><td>与收藏夹混</td></tr>
+<tr><td>跟进</td><td>按节奏同步状态</td><td>与反复催问混</td></tr>
+<tr><td>邀约响应</td><td>结构化回复面试邀约</td><td>与只回「好的」混</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<blockquote><p>JD 解析表（关键词 → 能力证据）；缺口没闭环先补作品集。</p></blockquote>
+<table>
+<thead><tr><th>JD 关键词</th><th>需要的证据</th><th>证据位置</th><th>缺口动作</th></tr></thead>
+<tbody>
+<tr><td>用户研究 / 需求</td><td>场景 + 非目标</td><td>项目<strong>S</strong>/<strong>2</strong></td><td>补访谈记录</td></tr>
+<tr><td>PRD / 方案设计</td><td>PRD 节选 + 异常状态</td><td><strong>3</strong><strong>5</strong></td><td>补 3 类兜底</td></tr>
+<tr><td>评测 / 模型效果</td><td>评测集 + 指标口径</td><td><strong>4</strong></td><td>补用例表</td></tr>
+<tr><td>数据 / A/B 实验</td><td>指标口径 + 实验结论</td><td><strong>4</strong></td><td>补漏斗定义</td></tr>
+<tr><td>Agent / RAG</td><td>工作流 + 上下文说明</td><td><strong>3</strong></td><td>补链路图</td></tr>
+<tr><td>合规 / 安全</td><td>脱敏 + 人工复核</td><td><strong>5</strong><strong>6</strong></td><td>补脱敏清单</td></tr>
+</tbody></table>
+<blockquote><p>渠道优先级；P0 / P1 先投、复盘后进 P2，不写薪资数字与通过率。</p></blockquote>
+<table>
+<thead><tr><th>优先级</th><th>渠道类型</th><th>为什么</th><th>动作要点</th></tr></thead>
+<tbody>
+<tr><td>P0</td><td>内推 / 熟人推荐</td><td>直达核验</td><td>附定位 + 入口</td></tr>
+<tr><td>P1</td><td>公司官网 / 官方招聘页</td><td>信息最准</td><td>按 JD 改关键词</td></tr>
+<tr><td>P2</td><td>主流招聘平台</td><td>覆盖广、便于记录</td><td>只投高匹配岗位</td></tr>
+<tr><td>P3</td><td>行业社群 / 活动</td><td>补信息与脉</td><td>先看岗位，不群发</td></tr>
+</tbody></table>
+<blockquote><p>投递节奏与跟进表（教学假设；跟进一次、留痕即可）。</p></blockquote>
+<table>
+<thead><tr><th>节点</th><th>动作</th><th>台账记什么</th></tr></thead>
+<tbody>
+<tr><td>T+0</td><td>填解析表、改简历、投递</td><td>岗位、渠道、版本、证据</td></tr>
+<tr><td>T+1</td><td>检查补材料</td><td>补件记录</td></tr>
+<tr><td>T+3</td><td>一次礼貌跟进（教学假设节奏）</td><td>方式与回复</td></tr>
+<tr><td>T+7</td><td>未推进标「本轮结束」</td><td>原因、下一步</td></tr>
+<tr><td>每周</td><td>复盘哪类关键词命中多</td><td>迭代动作</td></tr>
+</tbody></table>
+<p><strong>面试邀约响应模板（教学假设占位）</strong></p>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">【主题】回复：面试邀约 - [岗位名] - [姓名]（教学假设占位）
+感谢邀约。
+1. 确认：岗位 [岗位名]、时间 [时段] 可参加，形式 [线上 / 现场]。
+2. 材料：简历与作品集入口见 [路径]（教学假设占位）。
+3. 需确认：关注方向、是否需演示、面试安排。
+4. 变更：可配合 [备选时段]。
+[姓名] / [联系方式]</pre>
+<blockquote><p>方括号为填写位，示例为教学假设，不含真实联系方式。</p></blockquote>
+<blockquote><p>防坑清单（6 类，不写薪资数字与通过率）。</p></blockquote>
+<table>
+<thead><tr><th>陷阱</th><th>典型话术</th><th>规避动作</th></tr></thead>
+<tbody>
+<tr><td>「包过 / 保 offer」</td><td>承诺结果、先收费</td><td>拒绝，不进台账</td></tr>
+<tr><td>模糊岗位</td><td>只说「AI 相关」</td><td>先要书面 JD</td></tr>
+<tr><td>要作品「免费试用」</td><td>索取完整方案 / 源码</td><td>只给脱敏摘要</td></tr>
+<tr><td>索取个人信息</td><td>提前要证件、密钥</td><td>按 GB/T 35273 最小化</td></tr>
+<tr><td>假借面试收作业</td><td>要求做完整商业方案</td><td>给思路摘要，标教学假设</td></tr>
+<tr><td>口头承诺</td><td>待遇只口说</td><td>以书面为准，不编薪资数字</td></tr>
+</tbody></table>
+<p>结论：凡「结果承诺、模糊职责、索取材料与信息」信号出现，先核验再继续。</p>
+<blockquote><p>投递台账字段模板（可直接复制，示例值为教学假设）。</p></blockquote>
+<pre style="background:#F6F4FC;border:1px solid #E9E5F5;border-radius:8px;padding:12px 14px;overflow:auto;line-height:1.6;font-size:.92em;">| 编号 | 投递日期 | 公司 / 岗位 | 赛道 | 渠道(P0-P3) | 简历版本 | JD关键词 | 对应证据位置 | 状态 | 跟进节点 | 对方反馈 | 下一步动作 | 复盘备注 |</pre>
+<p>字段说明：编号唯一；版本用于复盘；证据位置指向作品集段落；状态用「已投 / 补件 / 跟进 / 面试 / 结束」；每周按「卡在哪列」迭代。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>案例与引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/resumejob/awesome-resume">R39 resumejob/awesome-resume</a></td><td>一份简历投不同岗位、口径不一 → 备多版本并记版本号 → 每次投递可追溯 → <strong>「简历版本」字段是复盘前提</strong></td></tr>
+<tr><td><a href="https://github.com/1c7/chinese-independent-developer">R38 1c7/chinese-independent-developer</a></td><td>岗位要「真实场景经验」但选题悬空 → 从项目池补可复现小场景 → 证据映射有落点 → <strong>缺口先回作品集补，不靠改措辞</strong></td></tr>
+</tbody></table>
+<blockquote><p><a href="https://github.com/jwasham/coding-interview-university">R41 jwasham/coding-interview-university</a> 说明：投递收口即 W8 面试起点（W8，跨章少量复用）。</p></blockquote>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th><th>讲师动作</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>对比「投完就等」与「台账可复盘」</td><td>找差在哪一列</td></tr>
+<tr><td>讲授</td><td>JD 解析表 + 渠道优先级 + 防坑清单</td><td>不写薪资数字与通过率</td></tr>
+<tr><td>演示</td><td>把一条 JD 填进解析表并回邀约模板</td><td>边填边念证据位置</td></tr>
+<tr><td>练习</td><td>组建台账、填 ≥ 3 条记录（教学假设）</td><td>抓「对应证据位置」空白</td></tr>
+<tr><td>总结</td><td>预告 W8 面试全景</td><td>收束到闭环</td></tr>
+</tbody></table>
+<p>板书：左「JD 关键词」→ 中「证据映射」→ 右「台账 + 复盘」。误区：全平台海投；只回「好的」；台账只记公司名；编薪资数字与通过率；用「视情况而定」收尾。</p>
+<p>生活类比：<strong>寄快递</strong>——不是把同一包裹抄二十个地址丢出去，而是每单写清收件人、内容物、单号，隔天查物流；有单号的人才追得回、也复盘得出哪家慢。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考答案要点 / 评分 rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>选 1 条 JD 填解析表，5 个关键词各配 1 条证据</td><td>映射具体、缺口动作可执行</td></tr>
+<tr><td>个人</td><td>建台账并填 ≥ 3 条记录（教学假设）</td><td>字段齐全、有下一步动作</td></tr>
+<tr><td>小组</td><td>情景：对方索要完整方案源码，是否继续</td><td>答「属免费试用陷阱，只给脱敏摘要与演示」</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：先解析 JD 再投。</strong> 没做关键词 → 证据映射的投递不进台账。</li>
+<li><strong>结论：跟进一次、留痕即可。</strong> 反复催问不如把复盘做扎实。</li>
+<li><strong>结论：课堂不写薪资数字与通过率。</strong> 以对方书面说明为准，编造即失真。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>职位描述</td><td>JD</td><td>岗位职责与任职要求</td><td>与公司介绍混淆</td></tr>
+<tr><td>渠道组合</td><td>Channel Mix</td><td>多类渠道优先级搭配</td><td>与全平台海投混淆</td></tr>
+<tr><td>投递台账</td><td>Application Tracker</td><td>每次投递的可追溯记录</td><td>与收藏夹混淆</td></tr>
+<tr><td>跟进</td><td>Follow-up</td><td>按节奏同步状态</td><td>与反复催问混淆</td></tr>
+<tr><td>邀约响应</td><td>Invitation Reply</td><td>结构化回复面试邀约</td><td>与只回「好的」混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/resumejob/awesome-resume">R39 resumejob/awesome-resume</a>：看模板与版本管理例句，解决「多版本简历怎么记」。</li>
+<li><a href="https://github.com/1c7/chinese-independent-developer">R38 1c7/chinese-independent-developer</a>：看真实项目场景，解决「JD 缺口怎么补证据」。</li>
+<li><a href="https://github.com/jwasham/coding-interview-university">R41 jwasham/coding-interview-university</a>：看系统化面试准备清单（W8，跨章少量复用），解决「邀约之后准备什么」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：投递像钓鱼——不是把网撒得越宽越好，而是每下一竿都记清用了什么饵、几点收线、哪片水域有动静；记得下笔记的人，下一竿才钓得准。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');

@@ -439,6 +439,119 @@ hr { border:none; border-top:1px dashed var(--line); margin:26px 0; }
 <tr><td>学员对裁定不服</td><td>「裁定记录表上会留痕。有异议的，把你的依据写进修订要求备注，周一 12:00 前找我复核。」</td></tr>
 <tr><td>手机档学员掉队</td><td>「走纸质替代：记录表手写、质疑清单群接龙、看投屏计时器，设备不降低评审标准。」</td></tr>
 </tbody></table>
+<h2>知识库课件补充</h2>
+<blockquote><p>来源：AI 产品经理培训中文知识库（github.com/2013102249/ai-pm-knowledge-base，校验日 2026-11-13）· 课件原文照录，保留表格与问答结构，供课堂讲授与课后查阅；提示词模板代码块内保留原有方括号字段标记，属提示词工程常见写法，照抄使用。</p></blockquote>
+<h3>学习目标</h3>
+<blockquote><p>结论前置：评审不是「看文档写得漂不漂亮」，而是<strong>用同一把尺子判定这份 PRD 能不能开工</strong>。</p></blockquote>
+<ol>
+<li>说出评审角色分工与 5 步流程，写出评审 Checklist。</li>
+<li>用 100 分评分表打分，逐项写出扣分理由。</li>
+<li>把 10 条驳回意见转成修改动作，给出评审后版本管理规则。</li>
+</ol>
+<h3>核心概念</h3>
+<p><strong>结论：里程碑 ③ 的交付物是「一份冻结的 PRD + 一套可回算的验收证据」，不是一份 PPT。</strong></p>
+<table>
+<thead><tr><th>概念</th><th>一句话结论</th><th>易混淆点</th></tr></thead>
+<tbody>
+<tr><td>评审角色</td><td>谁提问、谁拍板、谁背口径先定</td><td>全员泛泛而谈</td></tr>
+<tr><td>Checklist</td><td>把「能不能开工」拆成可勾选条目</td><td>与评分表混为一物</td></tr>
+<tr><td>100 分评分表</td><td>加权判定是否通过，给明确通过线</td><td>只给评语不给分</td></tr>
+<tr><td>版本管理</td><td>评审后冻结，改动走变更流程</td><td>评审完继续随手改</td></tr>
+</tbody></table>
+<h3>方法框架</h3>
+<blockquote><p>以下流程、Checklist、评分表、驳回清单与版本规则为按 W4D5 主题补入的教学内容，用于落实里程碑 ③ 的交付物清单与评分表要求。</p></blockquote>
+<p><strong>框架 1｜评审角色与 5 步流程</strong></p>
+<table>
+<thead><tr><th>角色</th><th>职责</th><th>关注点</th></tr></thead>
+<tbody>
+<tr><td>AI PM 学员（主讲）</td><td>陈述与答辩</td><td>六问是否答得上</td></tr>
+<tr><td>导师/评审组</td><td>主持、拍板、打分</td><td>验收线是否可判定</td></tr>
+<tr><td>研发代表</td><td>可行性把关</td><td>模型/提示词/降级能否实现</td></tr>
+<tr><td>数据代表</td><td>口径把关</td><td>埋点与指标能否回算</td></tr>
+<tr><td>QA/合规代表</td><td>底线把关</td><td>越权、隐私、幻觉护栏</td></tr>
+</tbody></table>
+<p>流程：① 会前 1 天冻结版本并分发 → ② 主讲按六问陈述 → ③ 按 Checklist 逐条过 → ④ 依 100 分表独立打分并合议 → ⑤ 当场形成「驳回意见 → 修改动作 → 责任人 → 目标版本」清单。</p>
+<p><strong>框架 2｜评审 Checklist</strong>：需求侧（四层表、判据卡、非目标）；规格侧（12 章齐全、提示词带版本、验收线可判定）；兜底侧（7 类异常五列齐全、告知话术）；度量侧（events 字段、指标树、4 段 SQL 读法）；约束侧（成本/性能上限、合规自检、排期依赖有责任人）。</p>
+<p><strong>框架 3｜100 分评分表（教学评分设计，通过线 70 分）</strong></p>
+<table>
+<thead><tr><th>维度</th><th>分值</th><th>评分要点</th></tr></thead>
+<tbody>
+<tr><td>需求与用户研究证据</td><td>15</td><td>四层表、10 条访谈、判据卡齐全</td></tr>
+<tr><td>AI 必要性论证</td><td>10</td><td>两问结论明确，不过判据敢写不做</td></tr>
+<tr><td>PRD 完整性与颗粒度</td><td>20</td><td>12 章齐全，每章可开工</td></tr>
+<tr><td>评测集与验收线</td><td>15</td><td>固定用例、通过线、判定规则</td></tr>
+<tr><td>异常与兜底</td><td>15</td><td>7 类五列表 + 降级 + 话术</td></tr>
+<tr><td>指标与埋点</td><td>10</td><td>events 字段、指标树、4 段 SQL</td></tr>
+<tr><td>成本/性能/合规</td><td>10</td><td>有上限值与自检清单</td></tr>
+<tr><td>表达与答辩</td><td>5</td><td>结论前置、不写「视情况而定」</td></tr>
+<tr><td><strong>合计</strong></td><td><strong>100</strong></td><td>70 分及以上通过，低于则限期修改复审</td></tr>
+</tbody></table>
+<p><strong>框架 4｜常见 10 条驳回意见与修改动作</strong></p>
+<table>
+<thead><tr><th>#</th><th>驳回意见</th><th>修改动作</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>没有非目标，范围会膨胀</td><td>补第 2 章非目标，逐条列明不做</td></tr>
+<tr><td>2</td><td>验收线写「更准」，不可判定</td><td>改为评测集条数 + 通过线 + 判定规则</td></tr>
+<tr><td>3</td><td>提示词没进正文、没版本号</td><td>补第 5 章提示词原文与版本标识</td></tr>
+<tr><td>4</td><td>没写 AI 必要性，疑似为 AI 而 AI</td><td>补判据卡两问结论，不过则改方案</td></tr>
+<tr><td>5</td><td>异常只写「提示错误」</td><td>补 7 类五列表与三级降级</td></tr>
+<tr><td>6</td><td>幻觉无护栏指标</td><td>补幻觉率口径与抽检办法</td></tr>
+<tr><td>7</td><td>埋点字段缺失，指标算不出</td><td>补 events 字段定义并倒推指标</td></tr>
+<tr><td>8</td><td>只写平均延迟，没写 P95</td><td>补 P95 上限与超限动作</td></tr>
+<tr><td>9</td><td>合规只写「符合法规」</td><td>逐条对应自检清单并留证据</td></tr>
+<tr><td>10</td><td>排期只有日期没有交付物</td><td>改成可验收任务 + 责任人 + 依赖</td></tr>
+</tbody></table>
+<p><strong>框架 5｜评审后版本管理</strong>：版本号 <code>v0.x</code> 草稿 → <code>v0.9</code> 评审版 → <code>v1.0</code> 冻结版；<code>v1.0</code> 后改动须走变更单（改什么、为什么、影响哪些验收线与埋点、谁批准）；维护变更日志（版本 / 日期 / 变更点 / 关联意见编号 / 批准人）；意见逐条闭环到「已修改 / 已复审 / 已关闭」。里程碑 ③ 交付物清单：① PRD 正文（12 章，<code>v1.0</code>）；② 需求四层表与判据卡；③ 评测集与验收线；④ 异常—兜底—埋点表；⑤ 指标树与 4 段 SQL；⑥ 100 分评分表（含扣分理由）；⑦ 变更日志与意见闭环表。</p>
+<h3>案例拆解</h3>
+<table>
+<thead><tr><th>引用</th><th>场景 → 决策 → 结果 → 可迁移点</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a></td><td>评审后 PRD 仍像散文、开发不知从哪开工 → 把每条 PRD 拆成可验收任务 → 意见能直接转成修改动作 → <strong>「可验收」是评审通过的硬标准</strong></td></tr>
+<tr><td><a href="https://github.com/KhazP/vibe-coding-prompt-template">R24 KhazP/vibe-coding-prompt-template</a></td><td>多人改文档导致口径不一致 → 用统一模板 + 版本号约束改动 → v1.0 冻结后仍可追溯 → <strong>模板与版本号是版本管理地基</strong></td></tr>
+</tbody></table>
+<h3>课堂讲解要点</h3>
+<table>
+<thead><tr><th>环节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>导入</td><td>公布通过线 70 分与交付物清单</td></tr>
+<tr><td>讲授</td><td>角色、流程、Checklist、100 分表</td></tr>
+<tr><td>演示</td><td>给样例 PRD 打分并念扣分理由</td></tr>
+<tr><td>练习</td><td>各组交叉评审，把 10 条意见转修改动作</td></tr>
+<tr><td>总结</td><td>当场冻结版本、收变更日志</td></tr>
+</tbody></table>
+<p>板书：中间写「六问」，右侧写「Checklist / 评分表 / 变更日志」三栏。生活类比：<strong>PRD 评审像交房验收——带着清单逐条验水电和墙面，不是站在门口说「看着挺好」就签字</strong>，签了字再发现问题就得走变更单了。</p>
+<h3>练习与讨论题</h3>
+<table>
+<thead><tr><th>类型</th><th>题目</th><th>参考要点 / rubric</th></tr></thead>
+<tbody>
+<tr><td>个人</td><td>用 100 分表给样例 PRD 打分并写 5 条扣分理由</td><td>分值合计正确 3 分、理由对应维度 4 分、结论明确通过与否 3 分</td></tr>
+<tr><td>个人</td><td>把「验收线不可判定」写成修改动作</td><td>含动作 3 分、含责任人 3 分、含目标版本 4 分</td></tr>
+<tr><td>小组</td><td>模拟评审：一组陈述、一组驳回、共填变更日志</td><td>流程完整 4 分、意见可闭环 3 分、版本规则正确 3 分</td></tr>
+</tbody></table>
+<h3>常见问题</h3>
+<ol>
+<li><strong>结论：先过 Checklist 再打分。</strong> 条目没齐就打分，分数没有意义。</li>
+<li><strong>结论：驳回意见必须带责任人和目标版本。</strong> 只记问题不闭环，复审还会被驳回。</li>
+<li><strong>结论：v1.0 之后不许随手改。</strong> 改文档就要同步改验收线与埋点，否则 D4 数据对不上。</li>
+</ol>
+<h3>本讲术语</h3>
+<table>
+<thead><tr><th>术语</th><th>英文/缩写</th><th>释义</th><th>易混点</th></tr></thead>
+<tbody>
+<tr><td>里程碑 ③</td><td>Milestone ③</td><td>W4D5 的 PRD 评审冻结节点</td><td>与②原型评审、⑤结业路演混淆</td></tr>
+<tr><td>评审 Checklist</td><td>Review Checklist</td><td>判定能否开工的可勾选条目</td><td>与评分表混淆</td></tr>
+<tr><td>通过线</td><td>Pass Threshold</td><td>评分表判通过的分数下限</td><td>与平均分混淆</td></tr>
+<tr><td>变更单</td><td>Change Request</td><td>冻结后改动的审批记录</td><td>与会议纪要混淆</td></tr>
+<tr><td>版本冻结</td><td>Version Freeze</td><td>评审通过后锁定基线</td><td>与存档备份混淆</td></tr>
+</tbody></table>
+<h3>参考资料</h3>
+<ul>
+<li><a href="https://github.com/snarktank/ralph">R35 snarktank/ralph</a>：看「PRD 条目驱动可验收任务」，解决「评审后怎么把意见落成任务」。</li>
+<li><a href="https://github.com/KhazP/vibe-coding-prompt-template">R24 KhazP/vibe-coding-prompt-template</a>：看模板与结构化字段，解决「多版本文档口径如何统一」。</li>
+<li><a href="https://github.com/OWASP/www-project-top-10-for-large-language-model-applications">R12 OWASP/www-project-top-10-for-large-language-model-applications</a>：看风险清单，解决「合规项评审该勾什么」。</li>
+</ul>
+<h3>本讲收尾</h3>
+<blockquote><p><strong>类比口播</strong>：评审像交卷前对一遍准考证号——不是不信任你写得不好，而是让这份卷子从此有据可查、改哪一笔都留得下痕迹。</p></blockquote>
 <div class="foot">AI 产品经理就业训练营 · 八件套教学物料 · 本页由同名源文件生成</div>
 <script>
 var sb=document.getElementById('sb'),sc=document.getElementById('scrim');
