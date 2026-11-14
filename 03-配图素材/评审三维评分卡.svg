@@ -91,10 +91,15 @@
   <text x="640" y="697" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">3 分</text>
   <text x="980" y="697" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">4–5 分</text>
 
+  <!-- 档位表列边界：维度 40–180｜2 分及以下 180–480｜3 分 480–800｜4–5 分 800–1160
+       描述文字统一按「列左边界 + 16」定位（196 / 496 / 816），维度名在首列居中 -->
+  <!-- 维度列浅紫底，与上方三维度条带呼应 -->
+  <rect x="41" y="709" width="138" height="160" fill="#FAF8FE"/>
+
   <!-- 行 1 · 用户价值档位 -->
   <text x="110" y="740" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">用户价值</text>
-  <text x="56" y="729" font-size="11.5" fill="#221E33">答不清谁在用、解决什么，</text>
-  <text x="56" y="747" font-size="11.5" fill="#221E33">或「所有人都是用户」</text>
+  <text x="196" y="729" font-size="11.5" fill="#221E33">答不清谁在用、解决什么，</text>
+  <text x="196" y="747" font-size="11.5" fill="#221E33">或「所有人都是用户」</text>
   <text x="496" y="729" font-size="11.5" fill="#221E33">人群与问题明确，但答不出</text>
   <text x="496" y="747" font-size="11.5" fill="#221E33">「用户现在怎么解决」</text>
   <text x="816" y="729" font-size="11.5" fill="#221E33">人群具体、问题高频，且能对比</text>
@@ -102,8 +107,8 @@
 
   <!-- 行 2 · 技术可行档位 -->
   <text x="110" y="794" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">技术可行</text>
-  <text x="56" y="783" font-size="11.5" fill="#221E33">数据来源说不清，或架构图无</text>
-  <text x="56" y="801" font-size="11.5" fill="#221E33">四要素标注（画成功能清单）</text>
+  <text x="196" y="783" font-size="11.5" fill="#221E33">数据来源说不清，或架构图无</text>
+  <text x="196" y="801" font-size="11.5" fill="#221E33">四要素标注（画成功能清单）</text>
   <text x="496" y="783" font-size="11.5" fill="#221E33">调用路径清楚（API / 工作流），</text>
   <text x="496" y="801" font-size="11.5" fill="#221E33">但估时缺失或不合理</text>
   <text x="816" y="783" font-size="11.5" fill="#221E33">数据来源、调用能力、估时三者</text>
@@ -111,8 +116,8 @@
 
   <!-- 行 3 · 体验档位 -->
   <text x="110" y="848" text-anchor="middle" font-size="13" font-weight="700" fill="#5B21B6">体验</text>
-  <text x="56" y="837" font-size="11.5" fill="#221E33">无引导无兜底，演示依赖提前</text>
-  <text x="56" y="855" font-size="11.5" fill="#221E33">写死的输入</text>
+  <text x="196" y="837" font-size="11.5" fill="#221E33">无引导无兜底，演示依赖提前</text>
+  <text x="196" y="855" font-size="11.5" fill="#221E33">写死的输入</text>
   <text x="496" y="837" font-size="11.5" fill="#221E33">有引导或兜底之一，但错误路</text>
   <text x="496" y="855" font-size="11.5" fill="#221E33">径未设计</text>
   <text x="816" y="837" font-size="11.5" fill="#221E33">首次使用有引导 / 示例 / 默认值，</text>
