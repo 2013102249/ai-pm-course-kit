@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="130" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="34" font-weight="700" fill="#FFFFFF">面试追问卡 07 · 商业化与成本</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">通用共享卡 · 适配各日两两模拟（2–3 层追问）</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="160" width="1100" height="96" rx="12" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="74" y="196" font-size="14" font-weight="700" fill="#5B21B6">题面</text>
+<text x="74" y="228" font-size="22" font-weight="700" fill="#221E33">这个 AI 产品怎么算账</text>
+<rect x="50" y="282" width="1100" height="118" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="282" width="6" height="118" rx="3" fill="#7C3AED"/>
+<text x="76" y="318" font-size="15" font-weight="700" fill="#5B21B6">第 1 层追问</text>
+<text x="76" y="352" font-size="20" font-weight="700" fill="#221E33">单位成本由哪几项构成？</text>
+<text x="76" y="380" font-size="15" fill="#4A4560">应答要点：先结论 → 踩分点 → 承认边界 → 落到岗位价值；追到第三层不散才算过关。</text>
+<path d="M600,400 L600,422" stroke="#7A7590" stroke-width="2"/>
+<rect x="50" y="422" width="1100" height="118" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="422" width="6" height="118" rx="3" fill="#7C3AED"/>
+<text x="76" y="458" font-size="15" font-weight="700" fill="#5B21B6">第 2 层追问</text>
+<text x="76" y="492" font-size="20" font-weight="700" fill="#221E33">免费和付费的边界怎么划？</text>
+<text x="76" y="520" font-size="15" fill="#4A4560">应答要点：先结论 → 踩分点 → 承认边界 → 落到岗位价值；追到第三层不散才算过关。</text>
+<path d="M600,540 L600,562" stroke="#7A7590" stroke-width="2"/>
+<rect x="50" y="562" width="1100" height="118" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="562" width="6" height="118" rx="3" fill="#2563EB"/>
+<text x="76" y="598" font-size="15" font-weight="700" fill="#2563EB">第 3 层追问</text>
+<text x="76" y="632" font-size="20" font-weight="700" fill="#221E33">量涨十倍时先压哪一项？</text>
+<text x="76" y="660" font-size="15" fill="#4A4560">应答要点：先结论 → 踩分点 → 承认边界 → 落到岗位价值；追到第三层不散才算过关。</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/面试追问卡/追问卡-07.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">与 05-配图清单「面试追问卡」条目对应</text>
+</svg>

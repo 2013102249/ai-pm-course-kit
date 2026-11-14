@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">09-里程碑</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W3D5 · 术语类比卡 · 第 151 张</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#221E33">一句话定义</text>
+<line x1="78" y1="226" x2="578" y2="226" stroke="#E5E7EB"/>
+<text x="78" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">一组可核验的验收条件，不是一个日历日期。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#221E33">生活类比</text>
+<line x1="642" y1="226" x2="1128" y2="226" stroke="#E5E7EB"/>
+<text x="642" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">考驾照的「科目二通过」不是「3 月 12 日」这个日子，而是</text>
+<text x="642" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">倒库、侧方、坡起每一项都达标；日子只是你约考的那天。</text>
+<rect x="50" y="470" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="470" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="497" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="510" font-size="21" font-weight="700" fill="#221E33">易混辨析</text>
+<line x1="78" y1="528" x2="578" y2="528" stroke="#E5E7EB"/>
+<text x="78" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">里程碑 ≠ 截止日。今天说的「里程碑 ②」指的是四条能当场查</text>
+<text x="78" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">的条件：原型可现场演示且能讲清技术链路、架构图体现「用 A</text>
+<text x="78" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">gent 还是工作流」的判断依据、知识库不少于 20 份真实文档</text>
+<text x="78" y="652.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">、迭代计划含推翻项与时间点。也 ≠ 「做完了」——没达标不叫</text>
+<text x="78" y="682.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">失败，叫「迭代计划提前拿到了输入」。</text>
+<rect x="614" y="470" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="470" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="497" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="510" font-size="21" font-weight="700" fill="#221E33">面试说法</text>
+<line x1="642" y1="528" x2="1128" y2="528" stroke="#E5E7EB"/>
+<text x="642" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「我不把里程碑当日期汇报，而是当验收条件逐条核：能演示</text>
+<text x="642" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">、讲得清链路、知识库非空壳、迭代计划有推翻项。」</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/术语卡/W3D5-09-里程碑.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">内容源自 02-讲课稿 · 共 420 张</text>
+</svg>

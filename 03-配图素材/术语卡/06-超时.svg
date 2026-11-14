@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">超时</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W6D2 · 术语类比卡 · 第 275 张</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#221E33">一句话定义</text>
+<line x1="78" y1="226" x2="578" y2="226" stroke="#E5E7EB"/>
+<text x="78" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">主路走不通时，换个方式把事办成。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#221E33">生活类比</text>
+<line x1="642" y1="226" x2="1128" y2="226" stroke="#E5E7EB"/>
+<text x="642" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">常去的面馆今天牛肉卖完了，老板不关门、也不甩一句「今天</text>
+<text x="642" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">没有」，而是给你换一碗「今日替代面」，说明一句「牛肉没</text>
+<text x="642" y="320.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">了，这碗一样管饱」。目标从「吃上牛肉面」降成「吃上饭」</text>
+<text x="642" y="350.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">，但事还是办成了。</text>
+<rect x="50" y="470" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="470" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="497" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="510" font-size="21" font-weight="700" fill="#221E33">易混辨析</text>
+<line x1="78" y1="528" x2="578" y2="528" stroke="#E5E7EB"/>
+<text x="78" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">最容易混的是把它当成「报错」「把功能关掉」或「什么都不给</text>
+<text x="78" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">」。降级一定有兜底产出（替代面、兜底文案、缓存结果），报</text>
+<text x="78" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">错只是说「不行」，关功能是「今天不营业」。另一个坑：拿 M</text>
+<text x="78" y="652.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">ock 假数据冒充降级结果——那不是降级，是造假，验收时一律</text>
+<text x="78" y="682.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">换回真实调用。</text>
+<rect x="614" y="470" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="470" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="497" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="510" font-size="21" font-weight="700" fill="#221E33">面试说法</text>
+<line x1="642" y1="528" x2="1128" y2="528" stroke="#E5E7EB"/>
+<text x="642" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「降级不是报错，是主路挂了还给用户一个有得用的替代结果</text>
+<text x="642" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">；我按超时重试、缓存复用、静态兜底文案三层来设计，并且</text>
+<text x="642" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">明示这是降级结果，绝不伪装成真实输出。」</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/术语卡/06-超时.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">内容源自 02-讲课稿 · 共 420 张</text>
+</svg>

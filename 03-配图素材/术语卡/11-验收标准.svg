@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">验收标准</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W6D2 · 术语类比卡 · 第 280 张</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#221E33">一句话定义</text>
+<line x1="78" y1="226" x2="578" y2="226" stroke="#E5E7EB"/>
+<text x="78" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">可打勾、可判「过 / 不过」的硬条件。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#221E33">生活类比</text>
+<line x1="642" y1="226" x2="1128" y2="226" stroke="#E5E7EB"/>
+<text x="642" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">装修合同末尾那张交房清单——墙面平不平、水龙头漏不漏、每</text>
+<text x="642" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">盏灯亮不亮，逐条打勾才算交付，不靠业主一句「看着还行」</text>
+<text x="642" y="320.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">。考驾照也是一样：倒库、侧方、路考逐项过关才发证，没有</text>
+<text x="642" y="350.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「差不多会开」这一档。</text>
+<rect x="50" y="470" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="470" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="497" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="510" font-size="21" font-weight="700" fill="#221E33">易混辨析</text>
+<line x1="78" y1="528" x2="578" y2="528" stroke="#E5E7EB"/>
+<text x="78" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">最容易混的是把它当成「需求清单」或「主观感觉」。需求清单</text>
+<text x="78" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">写「要做什么」，验收标准写「做到什么算过」；「看着差不多</text>
+<text x="78" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">」不是标准。冲刺日把标准提前公布（5 条硬标准 + 2 条软标</text>
+<text x="78" y="652.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">准），就是为了不让放学时扯皮。</text>
+<rect x="614" y="470" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="470" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="497" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="510" font-size="21" font-weight="700" fill="#221E33">面试说法</text>
+<line x1="642" y1="528" x2="1128" y2="528" stroke="#E5E7EB"/>
+<text x="642" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「验收标准是可打勾的硬条件，产品提前写清、研发与讲师双</text>
+<text x="642" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">确认；我不说『看着差不多』，我说五条硬标准逐项过，缺一</text>
+<text x="642" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">条进补救路径。」</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/术语卡/11-验收标准.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">内容源自 02-讲课稿 · 共 420 张</text>
+</svg>

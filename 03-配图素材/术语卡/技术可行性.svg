@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">技术可行性</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W1D4 · 术语类比卡 · 第 45 张</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#221E33">一句话定义</text>
+<line x1="78" y1="226" x2="578" y2="226" stroke="#E5E7EB"/>
+<text x="78" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">三维拆解里「技术依赖」这一维的判断，指某形态成立的最低技</text>
+<text x="78" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">术条件当下是否满足。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#221E33">生活类比</text>
+<line x1="642" y1="226" x2="1128" y2="226" stroke="#E5E7EB"/>
+<text x="642" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">像做菜前先确认厨房里有没有烤箱——没有就别点需要烘烤的那</text>
+<text x="642" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">道菜。</text>
+<rect x="50" y="470" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="470" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="497" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="510" font-size="21" font-weight="700" fill="#221E33">易混辨析</text>
+<line x1="78" y1="528" x2="578" y2="528" stroke="#E5E7EB"/>
+<text x="78" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">技术可行性 ≠ 技术名词堆砌。学员爱写「依赖 NLP、深度学习</text>
+<text x="78" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">、大模型」——NLP 是 Natural Language Processing（自然</text>
+<text x="78" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">语言处理），这么堆等于没写。正确写法是「这个形态成立的最</text>
+<text x="78" y="652.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">低技术条件」，例如知识库必须写清 RAG 五步与权限机制，Ag</text>
+<text x="78" y="682.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">ent 必须写清可中断与回滚。</text>
+<rect x="614" y="470" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="470" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="497" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="510" font-size="21" font-weight="700" fill="#221E33">面试说法</text>
+<line x1="642" y1="528" x2="1128" y2="528" stroke="#E5E7EB"/>
+<text x="642" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「选形态前我先过一遍技术可行性——这个形态成立的最低条件</text>
+<text x="642" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">，团队现在够不够得着；够不着就先别选它。」</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/术语卡/技术可行性.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">内容源自 02-讲课稿 · 共 420 张</text>
+</svg>

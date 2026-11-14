@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="800" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="140" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">参数</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W1D2 · 术语类比卡 · 第 14 张</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="168" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="168" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="195" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="208" font-size="21" font-weight="700" fill="#221E33">一句话定义</text>
+<line x1="78" y1="226" x2="578" y2="226" stroke="#E5E7EB"/>
+<text x="78" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">模型读过的书在内部留下的分寸刻度。</text>
+<rect x="614" y="168" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="168" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="195" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="208" font-size="21" font-weight="700" fill="#221E33">生活类比</text>
+<line x1="642" y1="226" x2="1128" y2="226" stroke="#E5E7EB"/>
+<text x="642" y="260.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">像一位老厨师手上的「放多少盐」的手感。他做过几万道菜，</text>
+<text x="642" y="290.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">这个分寸不是写在菜谱上的死数字，是练出来的。模型的参数</text>
+<text x="642" y="320.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">就是它读完全城图书馆之后，脑子里留下的那些「哪个词跟哪</text>
+<text x="642" y="350.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">个词常搭在一起」的分寸。</text>
+<rect x="50" y="470" width="550" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="50" y="470" width="5" height="286" rx="2.5" fill="#7C3AED"/>
+<rect x="78" y="497" width="14" height="14" rx="4" fill="#7C3AED"/>
+<text x="102" y="510" font-size="21" font-weight="700" fill="#221E33">易混辨析</text>
+<line x1="78" y1="528" x2="578" y2="528" stroke="#E5E7EB"/>
+<text x="78" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">最容易混的是把参数当成「数据」或「模型这个人」。数据是他</text>
+<text x="78" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">读过的书，模型是这个会接话的人，参数是这个人脑子里的刻度</text>
+<text x="78" y="622.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">——三样东西别搅在一起。另外参数也不是产品经理要拍板的「参</text>
+<text x="78" y="652.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">数配置」（那是 temperature 之类的旋钮），同名不同事，讲</text>
+<text x="78" y="682.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">原理配案例那段会再点一次。</text>
+<rect x="614" y="470" width="536" height="286" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="614" y="470" width="5" height="286" rx="2.5" fill="#2563EB"/>
+<rect x="642" y="497" width="14" height="14" rx="4" fill="#2563EB"/>
+<text x="666" y="510" font-size="21" font-weight="700" fill="#221E33">面试说法</text>
+<line x1="642" y1="528" x2="1128" y2="528" stroke="#E5E7EB"/>
+<text x="642" y="562.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">「参数是训练留在模型内部的分寸，不是数据本身；产品经理</text>
+<text x="642" y="592.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">不调参数、也不该去训模型，我们做的是选型。」</text>
+<line x1="50" y1="752" x2="1150" y2="752" stroke="#E5E7EB"/><text x="50" y="780" font-size="13" fill="#7A7590">03-配图素材/术语卡/02-参数.svg</text><text x="1150" y="780" font-size="13" fill="#7A7590" text-anchor="end">内容源自 02-讲课稿 · 共 420 张</text>
+</svg>

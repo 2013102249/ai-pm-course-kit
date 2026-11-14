@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="760" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="110" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">一页速写六格模板</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W7D1 · 清单表 · 依 05-配图清单 规格生成</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="140" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="162" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="182" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">1</text>
+<text x="120" y="172.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">按《05-配图清单》制图规格逐项对照</text>
+<rect x="50" y="228" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="250" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="270" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">2</text>
+<text x="120" y="260.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">先讲结构，再讲每项的课堂用法</text>
+<rect x="50" y="316" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="338" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="358" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">3</text>
+<text x="120" y="348.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">留白处供学员手写，课后归档进作品集</text>
+<rect x="50" y="404" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="426" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="446" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">4</text>
+<text x="120" y="436.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">品牌色统一：紫主蓝辅、白底深字</text>
+<rect x="50" y="492" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="514" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="534" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">5</text>
+<text x="120" y="524.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">教学示例数据均标注，不代表真实业务</text>
+<rect x="50" y="580" width="1100" height="72" rx="10" fill="#FFFFFF" stroke="#E5E7EB"/>
+<rect x="72" y="602" width="28" height="28" rx="6" fill="none" stroke="#7C3AED" stroke-width="2"/>
+<text x="86" y="622" font-size="16" font-weight="700" fill="#7C3AED" text-anchor="middle">6</text>
+<text x="120" y="612.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#221E33">投屏 8–15 分钟，配合导学案使用</text>
+<line x1="50" y1="692" x2="1150" y2="692" stroke="#E5E7EB"/><text x="50" y="720" font-size="13" fill="#7A7590">03-配图素材/一页速写六格模板.svg</text><text x="1150" y="720" font-size="13" fill="#7A7590" text-anchor="end">内容要点源自 05-配图清单 · 紫 #7C3AED / 蓝 #2563EB</text>
+</svg>

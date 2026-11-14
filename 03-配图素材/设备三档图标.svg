@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="760" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="110" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">设备三档图标</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W6D2 · 要点卡 · 依 05-配图清单 规格生成</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="160" width="345" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="160" width="345" height="8" rx="4" fill="#7C3AED"/>
+<text x="74" y="206" font-size="19" font-weight="700" fill="#221E33">要点 1</text>
+<text x="74" y="250.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">按《05-配图清单》制图规格逐项对照</text>
+<rect x="425" y="160" width="345" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="425" y="160" width="345" height="8" rx="4" fill="#2563EB"/>
+<text x="449" y="206" font-size="19" font-weight="700" fill="#221E33">要点 2</text>
+<text x="449" y="250.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">先讲结构，再讲每项的课堂用法</text>
+<rect x="800" y="160" width="345" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="800" y="160" width="345" height="8" rx="4" fill="#7C3AED"/>
+<text x="824" y="206" font-size="19" font-weight="700" fill="#221E33">要点 3</text>
+<text x="824" y="250.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">留白处供学员手写，课后归档进作品</text>
+<text x="824" y="279.0" text-anchor="start" font-size="17.5" font-weight="400" fill="#4A4560">集</text>
+<rect x="50" y="530" width="1100" height="120" rx="12" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="74" y="578.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#5B21B6">结论前置：先给判断，再给依据与使用边界；本图配合《05-配图清单》逐图讲法脚本使用。</text>
+<line x1="50" y1="692" x2="1150" y2="692" stroke="#E5E7EB"/><text x="50" y="720" font-size="13" fill="#7A7590">03-配图素材/设备三档图标.svg</text><text x="1150" y="720" font-size="13" fill="#7A7590" text-anchor="end">内容要点源自 05-配图清单 · 紫 #7C3AED / 蓝 #2563EB</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="760" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="110" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">异地求职包信息图</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W7D5 · 流程结构 · 依 05-配图清单 规格生成</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="170" width="258" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="170" width="258" height="50" rx="12" fill="#7C3AED" opacity="0.14"/>
+<text x="70" y="203" font-size="18" font-weight="700" fill="#7C3AED">第 1 步 · 要点</text>
+<text x="70" y="252.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">异地求职包信息图 03-配图</text>
+<text x="70" y="280.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">素材/异地求职包信息图.sv</text>
+<text x="70" y="308.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">g 第 3、4 节 01-教案异地</text>
+<text x="70" y="336.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">包要点、03-导学案自检表</text>
+<path d="M312,340 L332,340" stroke="#7A7590" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="338" y="170" width="258" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="338" y="170" width="258" height="50" rx="12" fill="#2563EB" opacity="0.14"/>
+<text x="358" y="203" font-size="18" font-weight="700" fill="#2563EB">第 2 步 · 要点</text>
+<text x="358" y="252.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">按《05-配图清单》制图规</text>
+<text x="358" y="280.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">格逐项对照</text>
+<path d="M600,340 L620,340" stroke="#7A7590" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="626" y="170" width="258" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="626" y="170" width="258" height="50" rx="12" fill="#7C3AED" opacity="0.14"/>
+<text x="646" y="203" font-size="18" font-weight="700" fill="#7C3AED">第 3 步 · 要点</text>
+<text x="646" y="252.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">先讲结构，再讲每项的课堂</text>
+<text x="646" y="280.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">用法</text>
+<path d="M888,340 L908,340" stroke="#7A7590" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="914" y="170" width="258" height="340" rx="12" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="914" y="170" width="258" height="50" rx="12" fill="#2563EB" opacity="0.14"/>
+<text x="934" y="203" font-size="18" font-weight="700" fill="#2563EB">第 4 步 · 要点</text>
+<text x="934" y="252.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">留白处供学员手写，课后归</text>
+<text x="934" y="280.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">档进作品集</text>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A5A1B8"/></marker></defs>
+<rect x="50" y="540" width="1100" height="110" rx="12" fill="#F1EBFD" stroke="#7C3AED"/>
+<text x="74" y="585.0" text-anchor="start" font-size="18.0" font-weight="600" fill="#5B21B6">课堂用法：沿步骤逐段讲解，每步让学员在导学案写下一句产出；收口时回指全图。</text>
+<line x1="50" y1="692" x2="1150" y2="692" stroke="#E5E7EB"/><text x="50" y="720" font-size="13" fill="#7A7590">03-配图素材/异地求职包信息图.svg</text><text x="1150" y="720" font-size="13" fill="#7A7590" text-anchor="end">内容要点源自 05-配图清单 · 紫 #7C3AED / 蓝 #2563EB</text>
+</svg>

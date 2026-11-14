@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1200" height="760" fill="#F8F8FC"/>
+<defs><linearGradient id="hd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+<rect width="1200" height="110" fill="url(#hd)"/>
+<rect x="50" y="34" width="6" height="72" rx="3" fill="#FFFFFF" opacity="0.9"/>
+<text x="78" y="76" font-size="40" font-weight="700" fill="#FFFFFF">正反面案例对照页</text>
+<text x="80" y="112" font-size="18" fill="#FFFFFF" opacity="0.88">W5D5 · 双栏对照 · 依 05-配图清单 规格生成</text>
+<rect x="920" y="34" width="230" height="40" rx="20" fill="#FFFFFF" opacity="0.16"/>
+<text x="1035" y="60" font-size="15" fill="#FFFFFF" text-anchor="middle">AI PM 八周训练营</text>
+<rect x="50" y="140" width="530" height="510" rx="14" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="50" y="140" width="530" height="56" rx="14" fill="#7C3AED" opacity="0.12"/>
+<text x="74" y="176" font-size="20" font-weight="700" fill="#7C3AED">合格做法 / 正面案例</text>
+<circle cx="82" cy="220" r="5" fill="#7C3AED"/>
+<text x="100" y="226.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">正确 P1 三件套 vs 全是 P0 的表 第 2、3 节各 6 min</text>
+<circle cx="82" cy="284" r="5" fill="#7C3AED"/>
+<text x="100" y="290.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">按《05-配图清单》制图规格逐项对照</text>
+<circle cx="82" cy="348" r="5" fill="#7C3AED"/>
+<text x="100" y="354.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">先讲结构，再讲每项的课堂用法</text>
+<rect x="620" y="140" width="530" height="510" rx="14" fill="#FFFFFF" stroke="#C9C2DE"/>
+<rect x="620" y="140" width="530" height="56" rx="14" fill="#2563EB" opacity="0.12"/>
+<text x="644" y="176" font-size="20" font-weight="700" fill="#2563EB">待改进做法 / 对照面</text>
+<circle cx="652" cy="220" r="5" fill="#2563EB"/>
+<text x="670" y="226.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">留白处供学员手写，课后归档进作品集</text>
+<circle cx="652" cy="284" r="5" fill="#2563EB"/>
+<text x="670" y="290.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">品牌色统一：紫主蓝辅、白底深字</text>
+<circle cx="652" cy="348" r="5" fill="#2563EB"/>
+<text x="670" y="354.0" text-anchor="start" font-size="17.0" font-weight="400" fill="#4A4560">教学示例数据均标注，不代表真实业务</text>
+<line x1="50" y1="692" x2="1150" y2="692" stroke="#E5E7EB"/><text x="50" y="720" font-size="13" fill="#7A7590">03-配图素材/正反面案例对照页.svg</text><text x="1150" y="720" font-size="13" fill="#7A7590" text-anchor="end">内容要点源自 05-配图清单 · 紫 #7C3AED / 蓝 #2563EB</text>
+</svg>
